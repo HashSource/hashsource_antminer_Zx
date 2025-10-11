@@ -1,0 +1,67 @@
+ [2020-05-12 07:15:17.001] --- cgpu_init
+ [2020-05-12 07:15:17.019] mmap axi_fpga_addr = 0x0xb6fdd000
+ [2020-05-12 07:15:17.019] axi_fpga_addr data = 0xc513
+ [2020-05-12 07:15:17.019] mmap fpga_mem_addr = 0x0xb5e00000
+ [2020-05-12 07:15:19.059] Start singleBoardTest_Z15_BM1746[676]
+ [2020-05-12 07:15:19.059] --- init_fpga
+ [2020-05-12 07:15:19.220] --- check_chain
+ [2020-05-12 07:15:19.220] check_chain: gChain = 0, gI2c = 0
+ [2020-05-12 07:15:20.356] --- reset_PIC16F1704_pic ok
+
+ [2020-05-12 07:15:20.791] --- jump_from_loader_to_app_PIC16F1704 ok
+
+ [2020-05-12 07:15:20.948] --- heart_beat_PIC16F1704 ok
+
+ [2020-05-12 07:15:21.232] --- enable_PIC16F1704_dc_dc ok
+
+ [2020-05-12 07:15:24.047] asic0 read back voltage = 780
+ [2020-05-12 07:15:26.061] asic1 read back voltage = 780
+ [2020-05-12 07:15:28.075] asic2 read back voltage = 780
+ [2020-05-12 07:15:28.375] uart_init chain=0 baudrate=115200
+ [2020-05-12 07:15:29.375] Don't support current baudrate, set to 115200
+ [2020-05-12 07:15:29.376] Start A New Asic Response.Chain Id:[0]
+ [2020-05-12 07:15:30.376] pcba_runtime_init Done!
+ [2020-05-12 07:15:30.526] bm1744_hashboard_init: Check ASIC number: chain 0 has 3 asic
+ [2020-05-12 07:15:30.526] bm1744_hashboard_init: Expect ASIC number: 3
+ [2020-05-12 07:15:30.526] Set core timeout 84000
+ [2020-05-12 07:15:30.536] Set ticket mask 19
+ [2020-05-12 07:15:30.546] Set frequency 800
+ [2020-05-12 07:15:31.104] --- heart_beat_PIC16F1704 ok
+
+ [2020-05-12 07:15:31.917] ASIC 0 chip temp 50
+ [2020-05-12 07:15:33.268] ASIC 0 pcb temp 41
+ [2020-05-12 07:15:34.668] ASIC 1 chip temp 66
+ [2020-05-12 07:15:36.119] ASIC 1 pcb temp 41
+ [2020-05-12 07:15:37.419] ASIC 2 chip temp 68
+ [2020-05-12 07:15:38.820] ASIC 2 pcb temp 41
+ [2020-05-12 07:15:41.259] --- heart_beat_PIC16F1704 ok
+
+ [2020-05-12 07:15:42.221] ASIC 0 chip temp 73
+ [2020-05-12 07:15:42.384] pattern id 0 receive failed
+ [2020-05-12 07:15:43.521] ASIC 0 pcb temp 45
+ [2020-05-12 07:15:44.821] ASIC 1 chip temp 72
+ [2020-05-12 07:15:46.122] ASIC 1 pcb temp 45
+ [2020-05-12 07:15:47.472] ASIC 2 chip temp 73
+ [2020-05-12 07:15:48.873] ASIC 2 pcb temp 45
+ [2020-05-12 07:15:49.895] pattern id 36 receive failed
+ [2020-05-12 07:15:51.415] --- heart_beat_PIC16F1704 ok
+
+ [2020-05-12 07:15:52.173] ASIC 0 chip temp 77
+ [2020-05-12 07:15:53.574] ASIC 0 pcb temp 49
+ [2020-05-12 07:15:54.974] ASIC 1 chip temp 75
+ [2020-05-12 07:15:56.375] ASIC 1 pcb temp 48
+ [2020-05-12 07:15:57.776] ASIC 2 chip temp 75
+ [2020-05-12 07:15:59.176] ASIC 2 pcb temp 47
+ [2020-05-12 07:16:01.571] --- heart_beat_PIC16F1704 ok
+
+ [2020-05-12 07:16:02.477] ASIC 0 chip temp 80
+ [2020-05-12 07:16:04.671] uart_exit fd=0
+ [2020-05-12 07:16:06.171] pcba_runtime_exit Done!
+ [2020-05-12 07:16:06.171] ---------------------------------result-----------------------------------------------
+ [2020-05-12 07:16:06.171] Sensor OK.
+ [2020-05-12 07:16:06.171] Expect pass rate: 90, real pattern rate: 98.67
+ [2020-05-12 07:16:06.171] Pattern NG.
+ [2020-05-12 07:16:06.172] --------------------------------------------------------------------------------------
+ [2020-05-12 07:16:06.960] --- enable_PIC16F1704_dc_dc ok
+
+ [2020-05-12 07:16:07.461] Test finished

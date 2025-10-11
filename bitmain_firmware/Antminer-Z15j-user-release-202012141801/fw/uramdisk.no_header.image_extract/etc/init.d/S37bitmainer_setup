@@ -1,0 +1,79 @@
+#!/bin/sh
+
+function do_start()
+{
+	check0p3=`cat /etc/mtab | grep "mtdblock2"`
+	if [ ""x = "$check0p3"x ] ; then
+		echo "mounting config"
+		mount -t jffs2 /dev/mtdblock2 /config
+	else
+		echo "can not mount /config"
+	fi
+	
+# No configuration, create it!
+	if [ ! -f /config/cgminer.conf ] ; then
+		cp /etc/cgminer.conf.factory /config/cgminer.conf
+		chown www-data:www-data /config/cgminer.conf
+		chmod 755 /config/cgminer.conf
+	fi
+
+	if [ ! -f /config/network.conf ] ; then
+		cp /etc/network.conf.factory /config/network.conf
+		chown www-data:www-data /config/network.conf
+		chmod 755 /config/network.conf
+	fi
+###########################
+
+
+###########################
+# httpdpasswd
+	if [ ! -f /config/lighttpd-htdigest.user ] ; then
+		cp /etc/lighttpd-htdigest.user /config/lighttpd-htdigest.user
+		chown www-data:www-data /config/lighttpd-htdigest.user
+		chmod 755 /config/lighttpd-htdigest.user
+	fi
+
+    # shadow
+    if [ ! -f /config/shadow ] ; then
+        cp -p /etc/shadow.factory /config/shadow
+        chmod 0400 /config/shadow
+        rm -f /etc/shadow
+        ln -s /config/shadow /etc/shadow
+    else
+        rm -f /etc/shadow
+        ln -s /config/shadow /etc/shadow
+    fi
+
+    #passwd
+    if [ ! -f /config/passwd ];then
+        cp -p /etc/passwd /config/passwd
+        chmod 0644 /config/passwd
+        rm -f /etc/passwd
+        ln -s /config/passwd /etc/passwd
+    else
+        rm -f /etc/passwd
+        ln -s /config/passwd /etc/passwd
+    fi
+    ###########################
+    sync &
+    chmod u+s /sbin/reboot
+	
+}
+
+function do_stop()
+{
+    exit 0
+}
+
+case "$1" in
+    start|"")
+        do_start
+        ;;
+    stop)
+        do_stop
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}" >&2
+        exit 1
+        ;;
+esac

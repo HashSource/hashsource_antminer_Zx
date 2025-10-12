@@ -569,8 +569,8 @@ def get_executables() -> list[Path]:
         if ".so" in f.name:
             continue
 
-        # Check if executable
-        if not (f.stat().st_mode & 0o111):
+        # Check If ELF
+        if not is_elf(f):
             continue
 
         # Check if Bitmain-specific

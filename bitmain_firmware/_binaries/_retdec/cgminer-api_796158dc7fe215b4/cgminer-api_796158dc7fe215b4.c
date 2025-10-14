@@ -26,11 +26,11 @@ struct _IO_FILE {
 };
 
 struct hostent {
-    char * e0;
-    char ** e1;
+    char *e0;
+    char **e1;
     int32_t e2;
     int32_t e3;
-    char ** e4;
+    char **e4;
 };
 
 struct sockaddr {
@@ -47,52 +47,56 @@ int32_t _init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t _start(int32_t i_a1, int32_t i_a2);
 int32_t callapi(int32_t i_a1, int32_t i_a2, int32_t i_a3);
 int32_t display(int32_t i_a1);
-int32_t function_108fc(char * s1, char * s2);
-int32_t function_10908(char * nptr, char ** endptr, int32_t base);
-int32_t function_10914(int32_t fd, int32_t level, int32_t optname, int32_t * optval, int32_t optlen);
-int32_t function_10920(char * format, ...);
-void function_1092c(int32_t * ptr);
-int32_t * function_10938(int32_t * ptr, int32_t size);
-int32_t * function_10944(int32_t * s, int32_t c);
-int32_t function_10950(char * s);
-int32_t * function_1095c(int32_t size);
-int32_t function_10968(int32_t main2, int32_t argc, char ** ubp_av, void (*init)(), void (*fini)(), void (*rtld_fini)());
-char * function_10974(int32_t errnum);
+int32_t function_108fc(char *s1, char *s2);
+int32_t function_10908(char *nptr, char **endptr, int32_t base);
+int32_t function_10914(int32_t fd, int32_t level, int32_t optname,
+                       int32_t *optval, int32_t optlen);
+int32_t function_10920(char *format, ...);
+void function_1092c(int32_t *ptr);
+int32_t *function_10938(int32_t *ptr, int32_t size);
+int32_t *function_10944(int32_t *s, int32_t c);
+int32_t function_10950(char *s);
+int32_t *function_1095c(int32_t size);
+int32_t function_10968(int32_t main2, int32_t argc, char **ubp_av,
+                       void (*init)(), void (*fini)(), void (*rtld_fini)());
+char *function_10974(int32_t errnum);
 void function_10980(void);
-int16_t ** function_1098c(void);
-int32_t function_10998(char * s);
-char * function_109a4(char * s, int32_t c);
-int32_t function_109b0(struct _IO_FILE * stream, char * format, ...);
-int32_t * function_109bc(void);
+int16_t **function_1098c(void);
+int32_t function_10998(char *s);
+char *function_109a4(char *s, int32_t c);
+int32_t function_109b0(struct _IO_FILE *stream, char *format, ...);
+int32_t *function_109bc(void);
 int32_t function_109c8(int32_t domain, int32_t type, int32_t protocol);
-struct hostent * function_109d4(char * name);
+struct hostent *function_109d4(char *name);
 void function_109e0(void);
-int32_t function_109ec(int32_t fd, int32_t * buf, int32_t n, int32_t flags);
+int32_t function_109ec(int32_t fd, int32_t *buf, int32_t n, int32_t flags);
 int32_t function_109f8(int32_t fd);
-int32_t function_10a04(int32_t fd, int32_t * buf, int32_t n, int32_t flags);
-int32_t function_10a10(int32_t fd, struct sockaddr * addr, int32_t len);
+int32_t function_10a04(int32_t fd, int32_t *buf, int32_t n, int32_t flags);
+int32_t function_10a10(int32_t fd, struct sockaddr *addr, int32_t len);
 int32_t function_10bd4(int32_t i_a1, int32_t i_a2);
 int32_t function_10be0(void);
 int32_t function_10c04(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t function_10c60(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4, int32_t i_a5);
+int32_t function_10c60(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4,
+                       int32_t i_a5);
 int32_t function_10c6c(void);
 int32_t function_10c70(int32_t i_a1);
 int32_t unknown_240(void);
 
 // --------------------- Global Variables ---------------------
 
-int32_t i_g1 = -0x1cae0000; // 0x10bf0
-char * p_g2; // 0x112b0
-int32_t i_g3 = 0x10c6d; // 0x21f10
-struct _IO_FILE * p_g4 = NULL; // 0x22078
-int32_t i_g5 = 0; // 0x22080
+int32_t i_g1 = -0x1cae0000;   // 0x10bf0
+char *p_g2;                   // 0x112b0
+int32_t i_g3 = 0x10c6d;       // 0x21f10
+struct _IO_FILE *p_g4 = NULL; // 0x22078
+int32_t i_g5 = 0;             // 0x22080
 int32_t i_g6;
 
 // ------- Dynamically Linked Functions Without Header --------
 
 void __gmon_start__(void);
-int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char ** p_a3, void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
-int32_t * __rawmemchr(int32_t * p_a1, int32_t i_a2);
+int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char **p_a3,
+                          void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
+int32_t *__rawmemchr(int32_t *p_a1, int32_t i_a2);
 
 // ------------------------ Functions -------------------------
 
@@ -103,67 +107,69 @@ int32_t _init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x108fc - 0x10908
-int32_t function_108fc(char * s1, char * s2) {
+int32_t function_108fc(char *s1, char *s2) {
     // 0x108fc
     return strcmp(s1, s2);
 }
 
 // Address range: 0x10908 - 0x10914
-int32_t function_10908(char * nptr, char ** endptr, int32_t base) {
+int32_t function_10908(char *nptr, char **endptr, int32_t base) {
     // 0x10908
     return strtol(nptr, endptr, base);
 }
 
 // Address range: 0x10914 - 0x10920
-int32_t function_10914(int32_t fd, int32_t level, int32_t optname, int32_t * optval, int32_t optlen) {
+int32_t function_10914(int32_t fd, int32_t level, int32_t optname,
+                       int32_t *optval, int32_t optlen) {
     // 0x10914
     return setsockopt(fd, level, optname, optval, optlen);
 }
 
 // Address range: 0x10920 - 0x1092c
-int32_t function_10920(char * format, ...) {
+int32_t function_10920(char *format, ...) {
     // 0x10920
     return printf(format);
 }
 
 // Address range: 0x1092c - 0x10938
-void function_1092c(int32_t * ptr) {
+void function_1092c(int32_t *ptr) {
     // 0x1092c
     free(ptr);
 }
 
 // Address range: 0x10938 - 0x10944
-int32_t * function_10938(int32_t * ptr, int32_t size) {
+int32_t *function_10938(int32_t *ptr, int32_t size) {
     // 0x10938
     return realloc(ptr, size);
 }
 
 // Address range: 0x10944 - 0x10950
-int32_t * function_10944(int32_t * s, int32_t c) {
+int32_t *function_10944(int32_t *s, int32_t c) {
     // 0x10944
     return __rawmemchr(s, c);
 }
 
 // Address range: 0x10950 - 0x1095c
-int32_t function_10950(char * s) {
+int32_t function_10950(char *s) {
     // 0x10950
     return puts(s);
 }
 
 // Address range: 0x1095c - 0x10968
-int32_t * function_1095c(int32_t size) {
+int32_t *function_1095c(int32_t size) {
     // 0x1095c
     return malloc(size);
 }
 
 // Address range: 0x10968 - 0x10974
-int32_t function_10968(int32_t main2, int32_t argc, char ** ubp_av, void (*init)(), void (*fini)(), void (*rtld_fini)()) {
+int32_t function_10968(int32_t main2, int32_t argc, char **ubp_av,
+                       void (*init)(), void (*fini)(), void (*rtld_fini)()) {
     // 0x10968
     return __libc_start_main(main2, argc, ubp_av, init, fini, rtld_fini);
 }
 
 // Address range: 0x10974 - 0x10980
-char * function_10974(int32_t errnum) {
+char *function_10974(int32_t errnum) {
     // 0x10974
     return strerror(errnum);
 }
@@ -175,31 +181,31 @@ void function_10980(void) {
 }
 
 // Address range: 0x1098c - 0x10998
-int16_t ** function_1098c(void) {
+int16_t **function_1098c(void) {
     // 0x1098c
     return __ctype_b_loc();
 }
 
 // Address range: 0x10998 - 0x109a4
-int32_t function_10998(char * s) {
+int32_t function_10998(char *s) {
     // 0x10998
     return strlen(s);
 }
 
 // Address range: 0x109a4 - 0x109b0
-char * function_109a4(char * s, int32_t c) {
+char *function_109a4(char *s, int32_t c) {
     // 0x109a4
     return strchr(s, c);
 }
 
 // Address range: 0x109b0 - 0x109bc
-int32_t function_109b0(struct _IO_FILE * stream, char * format, ...) {
+int32_t function_109b0(struct _IO_FILE *stream, char *format, ...) {
     // 0x109b0
     return fprintf(stream, format);
 }
 
 // Address range: 0x109bc - 0x109c8
-int32_t * function_109bc(void) {
+int32_t *function_109bc(void) {
     // 0x109bc
     return __errno_location();
 }
@@ -211,7 +217,7 @@ int32_t function_109c8(int32_t domain, int32_t type, int32_t protocol) {
 }
 
 // Address range: 0x109d4 - 0x109e0
-struct hostent * function_109d4(char * name) {
+struct hostent *function_109d4(char *name) {
     // 0x109d4
     return gethostbyname(name);
 }
@@ -223,7 +229,7 @@ void function_109e0(void) {
 }
 
 // Address range: 0x109ec - 0x109f8
-int32_t function_109ec(int32_t fd, int32_t * buf, int32_t n, int32_t flags) {
+int32_t function_109ec(int32_t fd, int32_t *buf, int32_t n, int32_t flags) {
     // 0x109ec
     return recv(fd, buf, n, flags);
 }
@@ -235,56 +241,57 @@ int32_t function_109f8(int32_t fd) {
 }
 
 // Address range: 0x10a04 - 0x10a10
-int32_t function_10a04(int32_t fd, int32_t * buf, int32_t n, int32_t flags) {
+int32_t function_10a04(int32_t fd, int32_t *buf, int32_t n, int32_t flags) {
     // 0x10a04
     return send(fd, buf, n, flags);
 }
 
 // Address range: 0x10a10 - 0x10a1c
-int32_t function_10a10(int32_t fd, struct sockaddr * addr, int32_t len) {
+int32_t function_10a10(int32_t fd, struct sockaddr *addr, int32_t len) {
     // 0x10a10
     return connect(fd, addr, len);
 }
 
 // Address range: 0x10a1c - 0x10bb0
-int main(int argc, char ** argv) {
+int main(int argc, char **argv) {
     // 0x10a1c
     if (argc < 2) {
         // 0x10b44
-        return callapi((int32_t)"summary", (int32_t)"127.0.0.1", 4028);
+        return callapi((int32_t) "summary", (int32_t) "127.0.0.1", 4028);
     }
     int32_t i_v1 = (int32_t)argv;
     int32_t i_v2 = *(int32_t *)(i_v1 + 4); // 0x10a28
-    char * p_v3 = (char *)i_v2; // 0x10a34
-    char i_v4; // 0x10ad0
+    char *p_v3 = (char *)i_v2;             // 0x10a34
+    char i_v4;                             // 0x10ad0
     if (*p_v3 == 45) {
         // 0x10ad0
         i_v4 = *(char *)(i_v2 + 1);
         switch (i_v4) {
-            case 63: {
-                // 0x10adc
-                if (*(char *)(i_v2 + 2) == 0) {
-                    // 0x10b68
-                    fprintf(p_g4, "usAge: %s [command [ip/host [port]]]\n", (char *)0x1434);
-                    return 1;
-                }
-                goto lab_0x10ae8;
+        case 63: {
+            // 0x10adc
+            if (*(char *)(i_v2 + 2) == 0) {
+                // 0x10b68
+                fprintf(p_g4, "usAge: %s [command [ip/host [port]]]\n",
+                        (char *)0x1434);
+                return 1;
             }
-            case 104: {
-                // 0x10b5c
-                if (*(char *)(i_v2 + 2) == 0) {
-                    // 0x10b68
-                }
-                goto lab_0x10a40;
+            goto lab_0x10ae8;
+        }
+        case 104: {
+            // 0x10b5c
+            if (*(char *)(i_v2 + 2) == 0) {
+                // 0x10b68
             }
-            default: {
-                goto lab_0x10ae8;
-            }
+            goto lab_0x10a40;
+        }
+        default: {
+            goto lab_0x10ae8;
+        }
         }
     } else {
         goto lab_0x10a40;
     }
-  lab_0x10a40:;
+lab_0x10a40:;
     int32_t i_v5 = 1; // 0x10a54
     if (strcmp(p_v3, "--help") == 0) {
         // 0x10b68
@@ -292,7 +299,7 @@ int main(int argc, char ** argv) {
         return 1;
     }
     goto lab_0x10a5c;
-  lab_0x10ae8:
+lab_0x10ae8:
     // 0x10ae8
     if (strcmp(p_v3, "--help") == 0) {
         // 0x10b68
@@ -310,27 +317,28 @@ int main(int argc, char ** argv) {
             i_v5 = 2;
             if (argc == 2) {
                 // 0x10b44
-                return callapi((int32_t)"summary", (int32_t)"127.0.0.1", 4028);
+                return callapi((int32_t) "summary", (int32_t) "127.0.0.1",
+                               4028);
             }
         }
     }
     goto lab_0x10a5c;
-  lab_0x10a5c:;
-    int32_t i_v6 = 4 * i_v5 + i_v1; // 0x10a5c
+lab_0x10a5c:;
+    int32_t i_v6 = 4 * i_v5 + i_v1;                  // 0x10a5c
     int32_t i_v7 = function_10c70(*(int32_t *)i_v6); // 0x10a64
-    int32_t i_v8 = *(char *)i_v7 == 0 ? (int32_t)"summary" : i_v7;
+    int32_t i_v8 = *(char *)i_v7 == 0 ? (int32_t) "summary" : i_v7;
     if (i_v5 + 1 >= argc) {
         // 0x10b44
-        return callapi(i_v8, (int32_t)"127.0.0.1", 4028);
+        return callapi(i_v8, (int32_t) "127.0.0.1", 4028);
     }
     int32_t i_v9 = function_10c70(*(int32_t *)(i_v6 + 4)); // 0x10a98
-    int32_t i_v10 = *(char *)i_v9 == 0 ? (int32_t)"127.0.0.1" : i_v9;
+    int32_t i_v10 = *(char *)i_v9 == 0 ? (int32_t) "127.0.0.1" : i_v9;
     if (i_v5 + 2 >= argc) {
         // 0x10b44
         return callapi(i_v8, i_v10, 4028);
     }
-    char * p_v11 = (char *)function_10c70(*(int32_t *)(i_v6 + 8)); // 0x10abc
-    int32_t i_v12 = 4028; // 0x10ac4
+    char *p_v11 = (char *)function_10c70(*(int32_t *)(i_v6 + 8)); // 0x10abc
+    int32_t i_v12 = 4028;                                         // 0x10ac4
     if (*p_v11 != 0) {
         // 0x10b8c
         i_v12 = __asm_sxth(strtol(p_v11, NULL, 10));
@@ -343,7 +351,8 @@ int main(int argc, char ** argv) {
 int32_t _start(int32_t i_a1, int32_t i_a2) {
     // 0x10bb0
     int32_t i_v1; // 0x10bb0
-    __libc_start_main(0x10a1c, i_a2, (char **)&i_v1, (void (*)())0x1120d, (void (*)())0x10a1c, (void (*)())i_a1);
+    __libc_start_main(0x10a1c, i_a2, (char **)&i_v1, (void (*)())0x1120d,
+                      (void (*)())0x10a1c, (void (*)())i_a1);
     abort();
     // UNREACHABLE
 }
@@ -356,7 +365,8 @@ int32_t function_10bd4(int32_t i_a1, int32_t i_a2) {
 
 // Address range: 0x10be0 - 0x10bfc
 int32_t function_10be0(void) {
-    int32_t i_v1 = *(int32_t *)((int32_t)&i_g1 + (int32_t)"cket" + 108); // 0x10bec
+    int32_t i_v1 =
+        *(int32_t *)((int32_t)&i_g1 + (int32_t) "cket" + 108); // 0x10bec
     if (i_v1 == 0) {
         int32_t i_v2; // 0x10be0
         return i_v2;
@@ -374,10 +384,10 @@ int32_t function_10c04(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
         return i_a1;
     }
     // 0x10c34
-    int32_t i_v2; // 0x10c04
+    int32_t i_v2;                   // 0x10c04
     int32_t i_v3 = 0x100001 * i_v2; // 0x10c38
-    bool i_v4; // 0x10c04
-    int32_t i_v5; // 0x10c04
+    bool i_v4;                      // 0x10c04
+    int32_t i_v5;                   // 0x10c04
     if (i_v1) {
         // .thread
         i_v5 = i_v1 ? i_v3 : 0;
@@ -403,7 +413,8 @@ int32_t function_10c04(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x10c60 - 0x10c6c
-int32_t function_10c60(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4, int32_t i_a5) {
+int32_t function_10c60(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4,
+                       int32_t i_a5) {
     int32_t i_v1 = i_a1; // 0x10c60
     if (i_a4 == 0) {
         // 0x10c62
@@ -424,10 +435,10 @@ int32_t function_10c6c(void) {
 
 // Address range: 0x10c70 - 0x10ce0
 int32_t function_10c70(int32_t i_a1) {
-    int16_t ** p_v1 = __ctype_b_loc(); // 0x10c78
-    int32_t i_v2 = (int32_t)*p_v1; // 0x10c80
-    uint32_t i_v3 = i_a1; // 0x10c84
-    while ((*(int16_t *)(2 * (int32_t)*(char *)i_v3 + i_v2) & 0x2000) != 0) {
+    int16_t **p_v1 = __ctype_b_loc(); // 0x10c78
+    int32_t i_v2 = (int32_t)*p_v1;    // 0x10c80
+    uint32_t i_v3 = i_a1;             // 0x10c84
+    while ((*(int16_t *)(2 * (int32_t) * (char *)i_v3 + i_v2) & 0x2000) != 0) {
         // 0x10c88
         i_v3++;
     }
@@ -438,7 +449,7 @@ int32_t function_10c70(int32_t i_a1) {
     }
     int32_t i_v5 = i_v4; // 0x10cb8
     i_v5--;
-    char * p_v6 = (char *)i_v5; // 0x10cb8
+    char *p_v6 = (char *)i_v5; // 0x10cb8
     if ((*(int16_t *)(2 * (int32_t)*p_v6 + (int32_t)*p_v1) & 0x2000) != 0) {
         *p_v6 = 0;
     }
@@ -462,18 +473,18 @@ int32_t display(int32_t i_a1) {
         return 0;
     }
     int32_t i_v1 = i_a1; // 0x10cec
-    int32_t i_v2; // 0x10ce0
-    int32_t i_v3; // 0x10ce0
-    int32_t i_v4; // 0x10ce0
-    int32_t i_v5; // 0x10ce0
-    int32_t i_v6; // 0x10ce0
+    int32_t i_v2;        // 0x10ce0
+    int32_t i_v3;        // 0x10ce0
+    int32_t i_v4;        // 0x10ce0
+    int32_t i_v5;        // 0x10ce0
+    int32_t i_v6;        // 0x10ce0
     while (true) {
-      lab_0x10d0c:
+    lab_0x10d0c:
         // 0x10d0c
         i_v4 = i_v1;
-        char * p_v7 = (char *)i_v4; // 0x10d14
-        char * p_v8 = strchr(p_v7, 124); // 0x10d14
-        int32_t i_v9 = (int32_t)p_v8; // 0x10d14
+        char *p_v7 = (char *)i_v4;      // 0x10d14
+        char *p_v8 = strchr(p_v7, 124); // 0x10d14
+        int32_t i_v9 = (int32_t)p_v8;   // 0x10d14
         if (p_v8 == NULL) {
             // 0x10d4c
             i_v3 = i_v9;
@@ -496,18 +507,18 @@ int32_t display(int32_t i_a1) {
             }
         }
     }
-  lab_0x10d44:
+lab_0x10d44:
     // 0x10d44
     return i_v3;
-  lab_0x10d80:;
+lab_0x10d80:;
     // 0x10d80
     int32_t i_v11; // 0x10ce0
     int32_t i_v12 = i_v11;
-    char * p_v13; // 0x10ce0
-    char * p_v14 = strchr(p_v13, 61); // 0x10d88
-    char * p_v15; // 0x10ce0
-    int32_t i_v16; // 0x10ce0
-    int32_t i_v17; // 0x10ce0
+    char *p_v13;                     // 0x10ce0
+    char *p_v14 = strchr(p_v13, 61); // 0x10d88
+    char *p_v15;                     // 0x10ce0
+    int32_t i_v16;                   // 0x10ce0
+    int32_t i_v17;                   // 0x10ce0
     if (p_v14 == NULL) {
         if (i_v17 == 0) {
             // 0x10e60
@@ -535,10 +546,12 @@ int32_t display(int32_t i_a1) {
                 i_v16 = i_v12;
                 goto lab_0x10df4;
             } else {
-                int16_t ** p_v19 = __ctype_b_loc(); // 0x10db0
-                char * p_v20 = (char *)i_v18;
-                int16_t i_v21 = *(int16_t *)(2 * (int32_t)*p_v20 + (int32_t)*p_v19); // 0x10dc8
-                printf("[%s%s] =>\n(\n", p_v13, (i_v21 & 2048) == 0 ? (char *)&p_g2 : p_v20);
+                int16_t **p_v19 = __ctype_b_loc(); // 0x10db0
+                char *p_v20 = (char *)i_v18;
+                int16_t i_v21 = *(int16_t *)(2 * (int32_t)*p_v20 +
+                                             (int32_t)*p_v19); // 0x10dc8
+                printf("[%s%s] =>\n(\n", p_v13,
+                       (i_v21 & 2048) == 0 ? (char *)&p_g2 : p_v20);
                 p_v15 = p_v20;
                 goto lab_0x10ddc;
             }
@@ -555,30 +568,30 @@ int32_t display(int32_t i_a1) {
             }
         }
     }
-  lab_0x10df4:;
-    int32_t i_v22 = i_v16; // 0x10dfc
+lab_0x10df4:;
+    int32_t i_v22 = i_v16;     // 0x10dfc
     int32_t i_v23 = i_v17 + 1; // 0x10dfc
     if (i_v16 == 0) {
         // break -> 0x10e24
         goto lab_0x10e24;
     }
     goto lab_0x10e00;
-  lab_0x10ddc:
+lab_0x10ddc:
     // 0x10ddc
     printf("   [%s] => %s\n", p_v13, p_v15);
     i_v16 = i_v12;
     goto lab_0x10df4;
-  lab_0x10d5c:
+lab_0x10d5c:
     // 0x10d5c
     i_v22 = i_v4;
     i_v23 = 0;
     while (true) {
-      lab_0x10e00:
+    lab_0x10e00:
         // 0x10e00
         i_v17 = i_v23;
         p_v13 = (char *)i_v22;
-        char * p_v24 = strchr(p_v13, 44); // 0x10e08
-        int32_t i_v25 = (int32_t)p_v24; // 0x10e08
+        char *p_v24 = strchr(p_v13, 44); // 0x10e08
+        int32_t i_v25 = (int32_t)p_v24;  // 0x10e08
         if (p_v24 == NULL) {
             // 0x10e14
             i_v11 = i_v25;
@@ -599,12 +612,12 @@ int32_t display(int32_t i_a1) {
             }
         }
     }
-  lab_0x10e24:
+lab_0x10e24:
     // 0x10e24
     i_v2 = puts(")");
     i_v5 = i_v6;
     goto lab_0x10d3c;
-  lab_0x10d3c:
+lab_0x10d3c:
     // 0x10d3c
     i_v1 = i_v5;
     i_v3 = i_v2;
@@ -617,7 +630,7 @@ int32_t display(int32_t i_a1) {
 
 // Address range: 0x10e74 - 0x1120c
 int32_t callapi(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
-    char * p_v1 = (char *)i_a2; // 0x10e8c
+    char *p_v1 = (char *)i_a2; // 0x10e8c
     if (gethostbyname(p_v1) == NULL) {
         // 0x10fd4
         printf("Couldn't get hostname: '%s'\n", p_v1);
@@ -626,7 +639,8 @@ int32_t callapi(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     int32_t i_v2 = socket(AF_INET, SOCK_STREAM, IPPROTO_IP); // 0x10ea4
     if (i_v2 == -1) {
         // 0x10ff4
-        printf("Socket initialisation failed: %s\n", strerror(*__errno_location()));
+        printf("Socket initialisation failed: %s\n",
+               strerror(*__errno_location()));
         return 1;
     }
     // 0x10eb4
@@ -640,22 +654,25 @@ int32_t callapi(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     int32_t i_v4 = 1; // bp-72, 0x10f1c
     if (setsockopt(i_v2, SO_DEBUG, 13, &i_v4, 8) != 0) {
         // 0x1109c
-        printf("cgminer-api, setsocket SO_LINGER failed (%s)\n", strerror(*__errno_location()));
+        printf("cgminer-api, setsocket SO_LINGER failed (%s)\n",
+               strerror(*__errno_location()));
         close(i_v2);
     }
     int32_t i_v5 = 10; // bp-64, 0x10f44
     if (setsockopt(i_v2, SO_DEBUG, 21, &i_v5, 8) != 0) {
         // 0x11074
-        printf("cgminer-api, setsocket SO_SNDTIMEO failed (%s)\n", strerror(*__errno_location()));
+        printf("cgminer-api, setsocket SO_SNDTIMEO failed (%s)\n",
+               strerror(*__errno_location()));
         close(i_v2);
     }
     int32_t i_v6 = setsockopt(i_v2, SO_DEBUG, 20, &i_v5, 8); // 0x10f80
     if (i_v6 != 0) {
         // 0x1104c
-        printf("cgminer-api, setsocket SO_RCVTIMEO failed (%s)\n", strerror(*__errno_location()));
+        printf("cgminer-api, setsocket SO_RCVTIMEO failed (%s)\n",
+               strerror(*__errno_location()));
         close(i_v2);
     }
-    char * p_v7 = (char *)i_a1; // 0x10f90
+    char *p_v7 = (char *)i_a1;                                   // 0x10f90
     int32_t i_v8 = send(i_v2, (int32_t *)i_a1, strlen(p_v7), 0); // 0x10fa4
     if (i_v8 < 1) {
         // 0x110c4
@@ -672,23 +689,23 @@ int32_t callapi(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
         // 0x10fc8
         return i_v6;
     }
-    int32_t * p_v9 = malloc(0x10000); // 0x110ec
-    int32_t i_v10 = 0xffff; // 0x11100
-    int32_t i_v11 = 3; // 0x11100
+    int32_t *p_v9 = malloc(0x10000); // 0x110ec
+    int32_t i_v10 = 0xffff;          // 0x11100
+    int32_t i_v11 = 3;               // 0x11100
     if (p_v9 == NULL) {
         // 0x11178
         printf("cgminer api: OOM (%d)\n", 0x10000);
-      lab_0x10fc8:
+    lab_0x10fc8:
         // 0x10fc8
         return 1;
     }
-    int32_t * p_v12 = p_v9;
+    int32_t *p_v12 = p_v9;
     int32_t i_v13 = 0;
     int32_t i_v14 = (int32_t)p_v12;
-    int32_t i_v15 = i_v13 + i_v14; // 0x11104
+    int32_t i_v15 = i_v13 + i_v14;                           // 0x11104
     int32_t i_v16 = recv(i_v2, (int32_t *)i_v15, 0xffff, 0); // 0x1111c
-    int32_t i_v17; // 0x10e74
-    int32_t i_v18; // 0x10e74
+    int32_t i_v17;                                           // 0x10e74
+    int32_t i_v18;                                           // 0x10e74
     while (i_v16 >= 0) {
         if (i_v16 == 0) {
             // 0x111f0
@@ -712,8 +729,8 @@ int32_t callapi(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
             i_v18 = i_v19 + i_v14;
             goto lab_0x11194;
         }
-        int32_t i_v21 = i_v19 + 0x10000; // 0x11118
-        int32_t * p_v22 = realloc(p_v12, i_v21); // 0x11150
+        int32_t i_v21 = i_v19 + 0x10000;        // 0x11118
+        int32_t *p_v22 = realloc(p_v12, i_v21); // 0x11150
         i_v10 = i_v19 + 0xffff;
         i_v11--;
         if (p_v22 == NULL) {
@@ -732,7 +749,7 @@ int32_t callapi(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     i_v17 = 1;
     i_v18 = i_v15;
     goto lab_0x11194;
-  lab_0x11194:
+lab_0x11194:
     // 0x11194
     *(char *)i_v18 = 0;
     if (i_g5 == 0) {
@@ -751,7 +768,8 @@ int32_t callapi(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
 }
 
 // Address range: 0x1120c - 0x11240
-int32_t __libc_csu_init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t __libc_csu_init(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                        int32_t i_a4) {
     int32_t i_v1 = _init(i_a1, i_a2, i_a3, i_a4); // 0x1121c
     return 0x21f12 - (int32_t)&i_g3 >> 2 == 0 ? i_v1 : i_a1;
 }
@@ -773,4 +791,3 @@ int32_t _fini(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 
 // Detected compiler/packer: gcc (4.4.3)
 // Detected functions: 38
-

@@ -517,6 +517,45 @@ def import_to_ghidra(
             return False
 
 
+def format_c_file(c_file: Path) -> bool:
+    """Format a C file using clang-format.
+
+    Args:
+        c_file: Path to C file to format
+
+    Returns:
+        True if formatting succeeded, False otherwise
+    """
+    if not c_file.exists():
+        logging.warning(f"C file not found for formatting: {c_file}")
+        return False
+
+    try:
+        result = subprocess.run(
+            [
+                "clang-format",
+                "-style={BasedOnStyle: LLVM, IndentWidth: 4}",
+                "-i",
+                str(c_file),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=30,
+            check=False,
+        )
+
+        if result.returncode == 0:
+            logging.debug(f"  Formatted: {c_file.name}")
+            return True
+        else:
+            logging.warning(f"clang-format failed for {c_file.name}: {result.stderr}")
+            return False
+
+    except (subprocess.TimeoutExpired, FileNotFoundError, OSError) as e:
+        logging.warning(f"Could not format {c_file.name}: {e}")
+        return False
+
+
 def decompile_with_retdec(binary_path: Path) -> bool:
     """Decompile a binary using RetDec.
 
@@ -543,6 +582,7 @@ def decompile_with_retdec(binary_path: Path) -> bool:
             f"{TIMEOUT_SECONDS}s",
             str(RETDEC_DECOMPILER),
             str(binary_path),
+            "--cleanup",
             "--backend-var-renamer",
             "hungarian",
             "--backend-keep-library-funcs",
@@ -576,6 +616,8 @@ def decompile_with_retdec(binary_path: Path) -> bool:
                 )
             else:
                 logging.info(f"  RetDec output: {output_file}")
+                # Format the generated C file
+                format_c_file(output_file)
 
             return returncode == 0
 
@@ -778,6 +820,9 @@ def main() -> int:
             logging.info(f"  Decompiling with Ghidra: {exe_path.name}...")
             if import_to_ghidra(exe_path, decompile=True):
                 exe_ok += 1
+                # Format the generated C file
+                ghidra_output = OUTPUT_PATH / f"{exe_path.stem}.c"
+                format_c_file(ghidra_output)
             else:
                 exe_fail += 1
 

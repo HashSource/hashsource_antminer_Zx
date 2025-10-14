@@ -916,7 +916,8 @@ dec_label_pc_11204:                               ; preds = %dec_label_pc_11140
 
 ; uselistorder directives
   uselistorder i32* %stack_var_-116, { 0, 1, 2, 4, 3 }
-  uselistorder i32* (i32*, i32, i32)* @memset, { 3, 2, 1, 0, 5, 4, 6, 7 }
+  uselistorder i8* (i8*, i8*, i32)* @strncpy, { 1, 0, 2 }
+  uselistorder i32* (i32*, i32, i32)* @memset, { 2, 1, 0, 4, 5, 3, 6, 7 }
 }
 
 define i32 @function_1121c(i8* %arg1) local_unnamed_addr {
@@ -1093,7 +1094,7 @@ dec_label_pc_114a4:                               ; preds = %dec_label_pc_112a4
   uselistorder void (i32)* @exit, { 2, 1, 0, 4, 3, 5 }
   uselistorder i32 (i8*)* @function_1121c, { 1, 0 }
   uselistorder i32 (i32)* @function_10f58, { 1, 0 }
-  uselistorder i32 (i8*)* @strlen, { 1, 0, 2, 3, 4 }
+  uselistorder i32 (i8*)* @strlen, { 2, 1, 3, 0, 4 }
   uselistorder i32 (i8*, ...)* @printf, { 10, 8, 7, 9, 11, 5, 4, 3, 2, 1, 6, 0, 12 }
   uselistorder void (i32*)* @free, { 4, 3, 2, 1, 0, 5, 6 }
   uselistorder i32 (i8*)* @puts, { 2, 1, 5, 4, 3, 0, 6 }

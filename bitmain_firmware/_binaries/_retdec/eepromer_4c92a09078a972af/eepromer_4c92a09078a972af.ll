@@ -1142,7 +1142,7 @@ dec_label_pc_9450:                                ; preds = %dec_label_pc_93dc
 ; uselistorder directives
   uselistorder i32 %0, { 1, 0, 2 }
   uselistorder i32 (%_IO_FILE*, i8*, ...)* @fprintf, { 7, 5, 3, 2, 1, 6, 4, 0, 8 }
-  uselistorder i32 (i32, i32, ...)* @ioctl, { 2, 1, 3, 5, 0, 4, 6 }
+  uselistorder i32 (i32, i32, ...)* @ioctl, { 5, 3, 1, 0, 4, 2, 6 }
 }
 
 define i32 @function_9470(i32 %arg1, i32 %arg2) local_unnamed_addr {

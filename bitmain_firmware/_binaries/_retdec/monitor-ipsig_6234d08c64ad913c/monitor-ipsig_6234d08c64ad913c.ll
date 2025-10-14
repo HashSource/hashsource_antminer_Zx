@@ -573,7 +573,7 @@ dec_label_pc_8e38:                                ; preds = %dec_label_pc_8df4
 
 ; uselistorder directives
   uselistorder i8* %9, { 1, 0 }
-  uselistorder i32 (i8*, i8*, ...)* @sprintf, { 2, 1, 0, 3 }
+  uselistorder i32 (i8*, i8*, ...)* @sprintf, { 0, 2, 1, 3 }
   uselistorder i32 (i32)* @close, { 2, 1, 0, 3 }
   uselistorder i32 (i32, i32, ...)* @ioctl, { 2, 1, 0, 3 }
   uselistorder void (i8*)* @perror, { 4, 3, 2, 1, 0, 5 }
@@ -832,7 +832,7 @@ dec_label_pc_943c:                                ; preds = %dec_label_pc_9428, 
 ; uselistorder directives
   uselistorder i32* %stack_var_-120, { 0, 3, 1, 2 }
   uselistorder i8* (i8*, i8*)* @strcat, { 2, 1, 0, 3 }
-  uselistorder i8* (i8*, i8*)* @strcpy, { 4, 3, 2, 1, 0, 5 }
+  uselistorder i8* (i8*, i8*)* @strcpy, { 1, 2, 0, 4, 3, 5 }
   uselistorder i8* (i8*, i8*, i32)* @strncpy, { 1, 0, 2 }
   uselistorder i32* (i32*, i32, i32)* @memset, { 4, 3, 2, 1, 0, 5 }
   uselistorder label %dec_label_pc_933c, { 1, 0 }

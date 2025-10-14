@@ -36,8 +36,8 @@ int32_t unknown_54606(void);
 // --------------------- Global Variables ---------------------
 
 int32_t i_g1 = 0x1040d; // 0x20f10
-int32_t i_g2 = 0; // 0x2101c
-char * p_g3; // 0x21028
+int32_t i_g2 = 0;       // 0x2101c
+char *p_g3;             // 0x21028
 
 // ------------------------ Functions -------------------------
 
@@ -113,7 +113,7 @@ int32_t function_103a4(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4) {
 // Address range: 0x103ce - 0x103ee
 int32_t function_103ce(void) {
     // 0x103ce
-    float64_t f_v1; // 0x103ce
+    float64_t f_v1;  // 0x103ce
     float128_t f_v2; // 0x103ce
     __asm_vaddw_s8(f_v2, f_v1);
     __asm_vaddl_s8(f_v1, f_v1);
@@ -148,7 +148,7 @@ int32_t function_103f4(void) {
     int32_t i_v1; // 0x103f4
     if (*(char *)&p_g3 == 0) {
         // 0x10402
-        int32_t i_v2; // 0x103f4
+        int32_t i_v2;                                       // 0x103f4
         int32_t i_v3 = function_103a4(i_v2, i_v2, i_v2, 0); // 0x10402
         *(char *)&p_g3 = 1;
         i_v1 = i_v3;
@@ -194,4 +194,3 @@ int32_t function_2507e6(void) {
 
 // Detected compiler/packer: gcc (4.4.3)
 // Detected functions: 18
-

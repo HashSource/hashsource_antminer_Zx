@@ -733,7 +733,7 @@ dec_label_pc_8c18:                                ; preds = %dec_label_pc_8ab0
   uselistorder i32 (i32, i32*, i32*)* @function_8dec, { 1, 0 }
   uselistorder i32 ptrtoint ([86 x i8]* @global_var_9db0 to i32), { 1, 2, 0 }
   uselistorder [86 x i8]* @global_var_9db0, { 1, 0 }
-  uselistorder i8* (i8*)* @getenv, { 2, 1, 0, 3, 4 }
+  uselistorder i8* (i8*)* @getenv, { 3, 2, 1, 0, 4 }
   uselistorder i32* @global_var_12208, { 1, 2, 0, 3 }
   uselistorder i32 (i32, i32, i32, i32)* @function_8da8, { 2, 1, 0 }
   uselistorder i32 ptrtoint ([13 x i8]* @global_var_9cc4 to i32), { 3, 0, 4, 1, 2 }
@@ -994,7 +994,7 @@ dec_label_pc_8f74:                                ; preds = %dec_label_pc_8e7c
   uselistorder i32* %r6.1.reg2mem, { 2, 0, 1 }
   uselistorder i32* %r7.1.reg2mem, { 2, 0, 1 }
   uselistorder i32 (i32, %_IO_FILE*)* @_IO_putc, { 1, 0, 2 }
-  uselistorder i32 (i8*, ...)* @printf, { 3, 0, 1, 2, 4 }
+  uselistorder i32 (i8*, ...)* @printf, { 2, 0, 1, 3, 4 }
   uselistorder i32 %arg2, { 0, 2, 1 }
   uselistorder label %dec_label_pc_8f30, { 1, 0 }
   uselistorder label %dec_label_pc_8ed8, { 1, 0 }

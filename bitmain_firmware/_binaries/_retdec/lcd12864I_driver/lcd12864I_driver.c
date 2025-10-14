@@ -9,12 +9,15 @@
 
 // ------------------- Function Prototypes --------------------
 
-int32_t __memzero(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t * p_a4);
-int32_t arm_copy_from_user(int32_t * p_a1, int32_t i_a2, int32_t i_a3);
+int32_t __memzero(int32_t *p_a1, int32_t i_a2, int32_t i_a3, int32_t *p_a4);
+int32_t arm_copy_from_user(int32_t *p_a1, int32_t i_a2, int32_t i_a3);
 int32_t arm_heavy_mb(void);
-int32_t bitmain_asic_close(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t bitmain_asic_ioctl(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t bitmain_asic_open(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
+int32_t bitmain_asic_close(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                           int32_t i_a4);
+int32_t bitmain_asic_ioctl(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                           int32_t i_a4);
+int32_t bitmain_asic_open(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                          int32_t i_a4);
 int32_t bitmain_asic_write(int32_t i_a1, uint32_t i_a2, int32_t i_a3);
 int32_t CheckBusy(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t cleanup_module(void);
@@ -22,12 +25,13 @@ int32_t enable_gpios(int32_t i_a1, int32_t i_a2, int32_t i_a3);
 int32_t hanzi_Disp(int32_t i_a1, int32_t i_a2, int32_t i_a3);
 int32_t init_module(void);
 int32_t ioremap(int32_t i_a1, int32_t i_a2);
-int32_t lcd_display_init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
+int32_t lcd_display_init(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                         int32_t i_a4);
 int32_t Lcd_Fill(int32_t i_a1);
 int32_t lcd_hw_init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t memset(int32_t * p_a1, int32_t i_a2, int32_t * p_a3);
-int32_t misc_register(int32_t * p_a1);
-int32_t printk(char * p_a1, int32_t i_a2);
+int32_t memset(int32_t *p_a1, int32_t i_a2, int32_t *p_a3);
+int32_t misc_register(int32_t *p_a1);
+int32_t printk(char *p_a1, int32_t i_a2);
 int32_t ReceiveByte(void);
 int32_t SendByte(int32_t i_a1);
 int32_t SendCommad(char i_a1);
@@ -43,45 +47,50 @@ int32_t set_sid_direction(int32_t i_a1, int32_t i_a2, int32_t i_a3);
 
 // --------------------- Global Variables ---------------------
 
-int32_t i_g1 = 0x8e92d40; // 0x1
-bool i_g2 = false; // 0x10
-int32_t i_g3 = 0; // 0x1ab0
-int32_t i_g4 = 0; // 0x1ab4
-int32_t i_g5 = 0; // 0x1ab8
-int32_t i_g6 = -0x60fff717; // 0x3
-char i_g7 = 8; // 0x30
-int32_t i_g8 = -0x1a60fff8; // 0x4
-int32_t i_g9 = -0x17427ff8; // 0x40
-int32_t i_g10 = -0x14fff950; // 0x8
-char * p_g11 = "\x01\x30\x46UNCTION_SETTING\n\n"; // 0xb89
-char * p_g12 = "\x01\x30SET_ENTRY_POINT\n\n"; // 0xb9e
-char * p_g13 = "\x01\x30\x44ISPLAY_STATUS\n\n"; // 0xbb2
-char * p_g14 = "\x01\x30\x43LEAR_DISPLAY\n\n"; // 0xbc5
-char * p_g15 = "\x01\x30SET_ADDRESS_BACK\n\n"; // 0xbd7
-char * p_g16 = "\x01\x30SET_DDRAM_ADDRESS\n\n"; // 0xbec
-char * p_g17 = "\x01\x33%s: failed to register device\n"; // 0xc02
-char * p_g18 = "\x01\x33%s: success to register device\n"; // 0xc2f
-char * p_g19 = "\x80\x81\x82\x83\x84\x85\x86\x87\x90\x91\x92\x93\x94\x95\x96\x97\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f\xff"; // 0xd00
-int32_t i_g20 = 255; // 0xd20
+int32_t i_g1 = 0x8e92d40;                                 // 0x1
+bool i_g2 = false;                                        // 0x10
+int32_t i_g3 = 0;                                         // 0x1ab0
+int32_t i_g4 = 0;                                         // 0x1ab4
+int32_t i_g5 = 0;                                         // 0x1ab8
+int32_t i_g6 = -0x60fff717;                               // 0x3
+char i_g7 = 8;                                            // 0x30
+int32_t i_g8 = -0x1a60fff8;                               // 0x4
+int32_t i_g9 = -0x17427ff8;                               // 0x40
+int32_t i_g10 = -0x14fff950;                              // 0x8
+char *p_g11 = "\x01\x30\x46UNCTION_SETTING\n\n";          // 0xb89
+char *p_g12 = "\x01\x30SET_ENTRY_POINT\n\n";              // 0xb9e
+char *p_g13 = "\x01\x30\x44ISPLAY_STATUS\n\n";            // 0xbb2
+char *p_g14 = "\x01\x30\x43LEAR_DISPLAY\n\n";             // 0xbc5
+char *p_g15 = "\x01\x30SET_ADDRESS_BACK\n\n";             // 0xbd7
+char *p_g16 = "\x01\x30SET_DDRAM_ADDRESS\n\n";            // 0xbec
+char *p_g17 = "\x01\x33%s: failed to register device\n";  // 0xc02
+char *p_g18 = "\x01\x33%s: success to register device\n"; // 0xc2f
+char *p_g19 =
+    "\x80\x81\x82\x83\x84\x85\x86\x87\x90\x91\x92\x93\x94\x95\x96\x97\x88\x89"
+    "\x8a\x8b\x8c\x8d\x8e\x8f\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f\xff"; // 0xd00
+int32_t i_g20 = 255;                                                // 0xd20
 
 // ------------------------ Functions -------------------------
 
 // Address range: 0x0 - 0x14
-int32_t bitmain_asic_close(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t bitmain_asic_close(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                           int32_t i_a4) {
     // 0x0
     printk("bitmain lcd closed!\n", i_a2);
     return 0;
 }
 
 // Address range: 0x18 - 0x2c
-int32_t bitmain_asic_open(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t bitmain_asic_open(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                          int32_t i_a4) {
     // 0x18
     printk("bitmain lcd opened!\n", i_a2);
     return 0;
 }
 
 // Address range: 0x30 - 0x44
-int32_t bitmain_asic_ioctl(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t bitmain_asic_ioctl(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                           int32_t i_a4) {
     // 0x30
     printk("bitmain lcd ioctl is not supported!\n", i_a2);
     return 0;
@@ -90,7 +99,7 @@ int32_t bitmain_asic_ioctl(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a
 // Address range: 0x48 - 0x94
 int32_t set_cs_direction(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     int32_t i_v1 = *(int32_t *)i_g3; // 0x54
-    int32_t i_v2 = __asm_dsb(i_a1); // 0x58
+    int32_t i_v2 = __asm_dsb(i_a1);  // 0x58
     __asm_dsb(i_v2);
     int32_t i_v3 = arm_heavy_mb(); // 0x78
     *(int32_t *)i_g3 = i_v2 == 0 ? i_v1 & -0x10001 : i_v1 | 0x10000;
@@ -100,7 +109,7 @@ int32_t set_cs_direction(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
 // Address range: 0x98 - 0xe4
 int32_t set_sclk_direction(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     int32_t i_v1 = *(int32_t *)i_g3; // 0xa4
-    int32_t i_v2 = __asm_dsb(i_a1); // 0xa8
+    int32_t i_v2 = __asm_dsb(i_a1);  // 0xa8
     __asm_dsb(i_v2);
     int32_t i_v3 = arm_heavy_mb(); // 0xc8
     *(int32_t *)i_g3 = i_v2 == 0 ? i_v1 & -0x100001 : i_v1 | 0x100000;
@@ -110,7 +119,7 @@ int32_t set_sclk_direction(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
 // Address range: 0xe8 - 0x134
 int32_t set_sid_direction(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     int32_t i_v1 = *(int32_t *)i_g3; // 0xf4
-    int32_t i_v2 = __asm_dsb(i_a1); // 0xf8
+    int32_t i_v2 = __asm_dsb(i_a1);  // 0xf8
     __asm_dsb(i_v2);
     int32_t i_v3 = arm_heavy_mb(); // 0x118
     *(int32_t *)i_g3 = i_v2 == 0 ? i_v1 & -0x20001 : i_v1 | 0x20000;
@@ -120,7 +129,7 @@ int32_t set_sid_direction(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
 // Address range: 0x138 - 0x184
 int32_t set_reset_direction(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     int32_t i_v1 = *(int32_t *)i_g3; // 0x144
-    int32_t i_v2 = __asm_dsb(i_a1); // 0x148
+    int32_t i_v2 = __asm_dsb(i_a1);  // 0x148
     __asm_dsb(i_v2);
     int32_t i_v3 = arm_heavy_mb(); // 0x168
     *(int32_t *)i_g3 = i_v2 == 0 ? i_v1 & -0x200001 : i_v1 | 0x200000;
@@ -130,7 +139,7 @@ int32_t set_reset_direction(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
 // Address range: 0x188 - 0x1d4
 int32_t set_cs(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     int32_t i_v1 = *(int32_t *)i_g4; // 0x194
-    int32_t i_v2 = __asm_dsb(i_a1); // 0x198
+    int32_t i_v2 = __asm_dsb(i_a1);  // 0x198
     __asm_dsb(i_v2);
     int32_t i_v3 = arm_heavy_mb(); // 0x1b8
     *(int32_t *)i_g4 = i_v2 == 0 ? i_v1 & -0x10001 : i_v1 | 0x10000;
@@ -140,7 +149,7 @@ int32_t set_cs(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
 // Address range: 0x1d8 - 0x224
 int32_t set_sclk(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     int32_t i_v1 = *(int32_t *)i_g4; // 0x1e4
-    int32_t i_v2 = __asm_dsb(i_a1); // 0x1e8
+    int32_t i_v2 = __asm_dsb(i_a1);  // 0x1e8
     __asm_dsb(i_v2);
     int32_t i_v3 = arm_heavy_mb(); // 0x208
     *(int32_t *)i_g4 = i_v2 == 0 ? i_v1 & -0x100001 : i_v1 | 0x100000;
@@ -150,7 +159,7 @@ int32_t set_sclk(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
 // Address range: 0x228 - 0x274
 int32_t set_sid(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     int32_t i_v1 = *(int32_t *)i_g4; // 0x234
-    int32_t i_v2 = __asm_dsb(i_a1); // 0x238
+    int32_t i_v2 = __asm_dsb(i_a1);  // 0x238
     __asm_dsb(i_v2);
     int32_t i_v3 = arm_heavy_mb(); // 0x258
     *(int32_t *)i_g4 = i_v2 == 0 ? i_v1 & -0x20001 : i_v1 | 0x20000;
@@ -160,7 +169,7 @@ int32_t set_sid(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
 // Address range: 0x278 - 0x2c4
 int32_t set_reset(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     int32_t i_v1 = *(int32_t *)i_g4; // 0x284
-    int32_t i_v2 = __asm_dsb(i_a1); // 0x288
+    int32_t i_v2 = __asm_dsb(i_a1);  // 0x288
     __asm_dsb(i_v2);
     int32_t i_v3 = arm_heavy_mb(); // 0x2a8
     *(int32_t *)i_g4 = i_v2 == 0 ? i_v1 & -0x200001 : i_v1 | 0x200000;
@@ -179,7 +188,7 @@ int32_t enable_gpios(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
 // Address range: 0x318 - 0x374
 int32_t SendByte(int32_t i_a1) {
     int32_t i_v1 = 0; // 0x324
-    int32_t i_v2; // 0x318
+    int32_t i_v2;     // 0x318
     set_sclk(0, i_v2, i_v2);
     int32_t i_v3 = __asm_ubfx(i_a1 << i_v1, 7, 1); // 0x334
     i_v1++;
@@ -211,8 +220,8 @@ int32_t ReceiveByte(void) {
     uint32_t i_v3 = __asm_ubfx(*(int32_t *)i_g4, 25, 1) | 0 << i_v2; // 0x3dc
     i_v2++;
     int32_t i_v4 = i_v3 % 256; // 0x400
-    int32_t i_v5 = 0; // 0x400
-    int32_t i_v6 = 0; // 0x400
+    int32_t i_v5 = 0;          // 0x400
+    int32_t i_v6 = 0;          // 0x400
     while (i_v2 != 8) {
         // 0x398
         set_sclk(0, i_v1, i_v1);
@@ -228,7 +237,8 @@ int32_t ReceiveByte(void) {
     set_sclk(1, i_v1, i_v1);
     __asm_dsb(set_sclk(0, i_v1, i_v1));
     int32_t i_v7 = i_v5 + 1; // 0x45c
-    uint32_t i_v8 = (__asm_ubfx(*(int32_t *)i_g4, 25, 1) | i_v6 << i_v5) % 256; // 0x468
+    uint32_t i_v8 =
+        (__asm_ubfx(*(int32_t *)i_g4, 25, 1) | i_v6 << i_v5) % 256; // 0x468
     i_v5 = i_v7;
     i_v6 = i_v8;
     while (i_v7 != 8) {
@@ -312,7 +322,7 @@ int32_t bitmain_asic_write(int32_t i_a1, uint32_t i_a2, int32_t i_a3) {
             goto lab_0x5a0;
         }
     }
-  lab_0x568:
+lab_0x568:
     // 0x568
     __asm_mrc(15, 0, i_v1, 3, 0, 0);
     __asm_mcr(15, 0, i_v1 & -13 | (int32_t)&i_g8, 3, 0, 0);
@@ -324,7 +334,7 @@ int32_t bitmain_asic_write(int32_t i_a1, uint32_t i_a2, int32_t i_a3) {
         return -14;
     }
     goto lab_0x5b8;
-  lab_0x5a0:
+lab_0x5a0:
     if (i_a3 != 0) {
         // 0x5a8
         int32_t i_v10; // bp-8192, 0x524
@@ -333,7 +343,7 @@ int32_t bitmain_asic_write(int32_t i_a1, uint32_t i_a2, int32_t i_a3) {
         return -14;
     }
     goto lab_0x5b8;
-  lab_0x5b8:;
+lab_0x5b8:;
     int32_t i_v5 = 0; // 0x5bc
     SendCommad(*(char *)(i_v5 + (int32_t)&p_g19));
     int32_t i_v6 = (i_v5 << (int32_t)&i_g1) + (int32_t)&i_v3; // 0x5d0
@@ -407,7 +417,8 @@ int32_t lcd_hw_init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x800 - 0x8e8
-int32_t lcd_display_init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t lcd_display_init(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                         int32_t i_a4) {
     // 0x800
     SendCommad((char)&i_g7);
     printk((char *)&p_g11, i_a2);
@@ -431,7 +442,8 @@ int32_t lcd_display_init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4)
 
 // Address range: 0x8fc - 0x930
 int32_t hanzi_Disp(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
-    char i_v1 = *(char *)(i_a2 + (int32_t)&p_g19 + (i_a1 << (uint32_t)(int32_t)&i_g6)); // 0x90c
+    char i_v1 = *(char *)(i_a2 + (int32_t)&p_g19 +
+                          (i_a1 << (uint32_t)(int32_t)&i_g6)); // 0x90c
     SendCommad(i_v1);
     char i_v2 = *(char *)i_a3; // 0x918
     if (i_v2 == 0) {
@@ -457,8 +469,8 @@ int32_t Lcd_Fill(int32_t i_a1) {
     char i_v1 = i_a1;
     int32_t i_v2 = 128;
     int32_t i_v3 = (i_v2 + 8) % 256; // 0x948
-    int32_t i_v4 = 128; // 0x948
-    int32_t i_v5 = i_v2; // 0x94c
+    int32_t i_v4 = 128;              // 0x948
+    int32_t i_v5 = i_v2;             // 0x94c
     SendCommad(54);
     SendCommad((char)i_v4);
     SendCommad((char)i_v5);
@@ -565,11 +577,11 @@ int32_t init_module(void) {
     int32_t i_v3; // 0x9b0
     if (misc_register(&i_g20) == 0) {
         // 0xa10
-        printk((char *)&p_g18, (int32_t)"bitmain-lcd");
+        printk((char *)&p_g18, (int32_t) "bitmain-lcd");
         i_v3 = 0;
     } else {
         // 0x9fc
-        printk((char *)&p_g17, (int32_t)"bitmain-lcd");
+        printk((char *)&p_g17, (int32_t) "bitmain-lcd");
         i_v3 = -1;
     }
     // 0xa1c
@@ -587,4 +599,3 @@ int32_t cleanup_module(void) {
 
 // Detected compiler/packer: gcc (4.8.3)
 // Detected functions: 24
-

@@ -1880,6 +1880,7 @@ dec_label_pc_9c68:                                ; preds = %dec_label_pc_9c4c
 
 ; uselistorder directives
   uselistorder i32 %8, { 0, 2, 1 }
+  uselistorder i32 %1, { 1, 0 }
   uselistorder i32* %0, { 2, 1, 0 }
 }
 
@@ -3116,7 +3117,7 @@ dec_label_pc_acc8:                                ; preds = %dec_label_pc_acb0
   uselistorder i32* %r1.9.reg2mem, { 0, 2, 1 }
   uselistorder i32 (i32, i32, i32, i32)* @function_9868, { 1, 6, 5, 7, 4, 3, 2, 0 }
   uselistorder i8 0, { 3, 4, 5, 2, 8, 6, 7, 1, 9, 0, 10, 11 }
-  uselistorder i32 (i32, %sockaddr*, i32)* @connect, { 1, 0, 2, 3 }
+  uselistorder i32 (i32, %sockaddr*, i32)* @connect, { 2, 0, 1, 3 }
   uselistorder i32 (i32*)* @strlen.22, { 2, 1, 0, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 16, 15 }
   uselistorder i32 (i32)* @function_9c90, { 2, 1, 0 }
   uselistorder i32* @global_var_16004, { 0, 2, 1, 3 }

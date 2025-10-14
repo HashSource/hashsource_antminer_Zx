@@ -1228,7 +1228,7 @@ dec_label_pc_935c:
   unreachable, !insn.addr !256
 
 ; uselistorder directives
-  uselistorder void (i32)* @exit, { 5, 4, 3, 2, 1, 0, 6 }
+  uselistorder void (i32)* @exit, { 4, 3, 2, 1, 0, 5, 6 }
 }
 
 define i32 @function_9388(i32 %arg1) local_unnamed_addr {
@@ -1498,7 +1498,6 @@ dec_label_pc_95ec:                                ; preds = %dec_label_pc_957c
   uselistorder i32 %r5.1.reload, { 2, 3, 4, 1, 0 }
   uselistorder i32* %r5.0.reg2mem, { 4, 3, 2, 5, 0, 1 }
   uselistorder i32* %r5.1.reg2mem, { 2, 0, 1 }
-  uselistorder i32 (i8*, i32, ...)* @open, { 1, 0, 2 }
   uselistorder i32 %arg4, { 2, 1, 0 }
   uselistorder i32 %arg1, { 1, 0, 2, 3 }
   uselistorder label %dec_label_pc_956c, { 1, 0 }
@@ -2008,17 +2007,17 @@ dec_label_pc_988c.backedge:                       ; preds = %dec_label_pc_99c4, 
   uselistorder i32 (i8*, i8*, ...)* @sprintf, { 3, 4, 2, 1, 0, 5 }
   uselistorder i8 46, { 0, 2, 1, 3 }
   uselistorder %dirent* null, { 4, 2, 1, 3, 0 }
-  uselistorder %dirent* (%__dirstream*)* @readdir, { 2, 4, 1, 3, 0, 5 }
+  uselistorder %dirent* (%__dirstream*)* @readdir, { 3, 2, 1, 4, 0, 5 }
   uselistorder %__dirstream* (i8*)* @opendir, { 1, 0, 2 }
   uselistorder i32 (i8*)* @strlen, { 1, 0, 2 }
   uselistorder i32 (%_IO_FILE*)* @fclose, { 3, 2, 1, 0, 4 }
   uselistorder i8* (i8*, i8*)* @strcpy, { 2, 1, 0, 3 }
   uselistorder i32 (i32, i32)* @function_9424, { 1, 0 }
-  uselistorder i32 (i8*, i8*, ...)* @sscanf, { 2, 0, 1, 3 }
+  uselistorder i32 (i8*, i8*, ...)* @sscanf, { 1, 2, 0, 3 }
   uselistorder i8* (i8*, i32)* @strrchr, { 2, 1, 0, 3 }
   uselistorder i32 9, { 2, 3, 1, 0 }
   uselistorder i32 120, { 1, 2, 0 }
-  uselistorder %_IO_FILE* (i8*, i8*)* @fopen, { 3, 2, 1, 0, 4, 5 }
+  uselistorder %_IO_FILE* (i8*, i8*)* @fopen, { 2, 1, 0, 4, 3, 5 }
   uselistorder i8* getelementptr inbounds ([2 x i8], [2 x i8]* @global_var_a688, i32 0, i32 0), { 4, 3, 2, 1, 0 }
   uselistorder i32 8, { 4, 1, 0, 5, 6, 2, 3 }
   uselistorder label %dec_label_pc_988c.backedge, { 6, 5, 4, 1, 2, 0, 3 }
@@ -2180,7 +2179,7 @@ dec_label_pc_9c94:                                ; preds = %dec_label_pc_9bcc
   uselistorder i32* %r3.1.reg2mem, { 3, 1, 0, 2 }
   uselistorder i32* %r6.5.reg2mem, { 3, 1, 0, 2 }
   uselistorder i32 29, { 1, 0, 2 }
-  uselistorder i32 (i32*, i32, i32, %_IO_FILE*)* @fwrite, { 6, 10, 9, 8, 7, 5, 4, 3, 2, 1, 0, 16, 15, 14, 13, 12, 11, 18, 17, 19 }
+  uselistorder i32 (i32*, i32, i32, %_IO_FILE*)* @fwrite, { 18, 9, 8, 7, 6, 5, 14, 13, 12, 11, 10, 4, 3, 2, 1, 0, 17, 16, 15, 19 }
   uselistorder i32 20, { 1, 3, 0, 2, 4, 5 }
   uselistorder i32 16, { 3, 0, 2, 5, 4, 1, 6 }
   uselistorder i32 4, { 13, 7, 6, 9, 8, 10, 11, 12, 0, 1, 2, 14, 3, 4, 15, 5 }
@@ -2212,11 +2211,11 @@ dec_label_pc_9cf8:                                ; preds = %dec_label_pc_9cc8
   ret i32 %9, !insn.addr !544
 
 ; uselistorder directives
-  uselistorder i32 (%_IO_FILE*, i8*, ...)* @fprintf, { 11, 17, 12, 16, 15, 14, 13, 5, 4, 3, 2, 1, 0, 10, 9, 8, 7, 6, 18 }
-  uselistorder i8* (i32)* @strerror, { 2, 3, 1, 0, 4 }
-  uselistorder i32* ()* @__errno_location, { 1, 3, 2, 0, 4 }
+  uselistorder i32 (%_IO_FILE*, i8*, ...)* @fprintf, { 15, 16, 17, 7, 6, 5, 4, 3, 2, 1, 0, 14, 13, 12, 11, 10, 9, 8, 18 }
+  uselistorder i8* (i32)* @strerror, { 3, 2, 1, 0, 4 }
+  uselistorder i32* ()* @__errno_location, { 3, 0, 1, 2, 4 }
   uselistorder %_IO_FILE** @global_var_12848, { 38, 37, 36, 35, 34, 33, 31, 32, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 0, 1 }
-  uselistorder i32 (i32, i32, ...)* @ioctl, { 6, 5, 4, 3, 1, 2, 0, 7 }
+  uselistorder i32 (i32, i32, ...)* @ioctl, { 2, 1, 0, 6, 4, 5, 3, 7 }
 }
 
 define i32 @function_9d38(i32 %arg1) local_unnamed_addr {
@@ -2303,7 +2302,7 @@ dec_label_pc_9dcc:                                ; preds = %dec_label_pc_9db4, 
   uselistorder i8 10, { 2, 3, 0, 1 }
   uselistorder i32 89, { 1, 0 }
   uselistorder i8* null, { 1, 2, 3, 4, 5, 6, 0 }
-  uselistorder i8* (i8*, i32, %_IO_FILE*)* @fgets, { 1, 4, 3, 2, 0, 5 }
+  uselistorder i8* (i8*, i32, %_IO_FILE*)* @fgets, { 2, 1, 4, 3, 0, 5 }
   uselistorder %_IO_FILE** @global_var_12850, { 1, 0 }
   uselistorder i32 %arg1, { 0, 3, 1, 2 }
   uselistorder label %dec_label_pc_9da8, { 2, 0, 1, 4, 3 }

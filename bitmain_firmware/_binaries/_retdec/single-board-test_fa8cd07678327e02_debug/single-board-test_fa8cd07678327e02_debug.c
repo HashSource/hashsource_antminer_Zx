@@ -54,88 +54,98 @@ struct tm {
     int32_t e7;
     int32_t e8;
     int32_t e9;
-    char * e10;
+    char *e10;
 };
 
 // ------------------- Function Prototypes --------------------
 
-int32_t _24_a(int32_t * mutex);
+int32_t _24_a(int32_t *mutex);
 int32_t _24_d(int32_t i_a1);
 int32_t __aeabi_idiv(int32_t i_a1, int32_t i_a2);
 int32_t __aeabi_idiv0(int32_t i_a1, int32_t i_a2);
 int32_t __aeabi_idivmod(int32_t i_a1, int32_t i_a2);
 int32_t __aeabi_uidiv(uint32_t i_a1, uint32_t i_a2, int32_t i_a3);
 int32_t __aeabi_uidivmod(uint32_t i_a1, uint32_t i_a2);
-void __bin2hex(char * s, char * p, uint32_t len);
+void __bin2hex(char *s, char *p, uint32_t len);
 int32_t __bswap_32(int32_t __bsx);
 int32_t __do_global_dtors_aux(void);
 void __libc_csu_fini(void);
-void __libc_csu_init(int32_t argc, char ** argv, char ** envp);
-void _applog(int32_t prio, char * str, bool force);
+void __libc_csu_init(int32_t argc, char **argv, char **envp);
+void _applog(int32_t prio, char *str, bool force);
 int32_t _fini(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t _init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-void _simplelog(int32_t prio, char * str, bool force);
+void _simplelog(int32_t prio, char *str, bool force);
 int32_t _start(int32_t i_a1, int32_t i_a2);
-void add_point(int32_t * point, int32_t MAX_SIZE);
+void add_point(int32_t *point, int32_t MAX_SIZE);
 int32_t add_reg_item(int32_t item);
-void app_config_exit(int32_t * conf);
-int32_t app_config_handle(int32_t * m_conf, char * config_filename);
-int32_t * app_config_init(char * config_filename);
+void app_config_exit(int32_t *conf);
+int32_t app_config_handle(int32_t *m_conf, char *config_filename);
+int32_t *app_config_init(char *config_filename);
 char asic_baud_to_fpga_baud(unsigned char asic_baud);
 int32_t baud2bt8d(uint32_t baud);
-char * bin2hex(char * p, int32_t len);
-char bit_read(char * y, uint32_t x);
+char *bin2hex(char *p, int32_t len);
+char bit_read(char *y, uint32_t x);
 void bitmain_axi_close(void);
 int32_t bitmain_axi_init(void);
-int32_t blake2b(char * out, int32_t * in, int32_t * key, unsigned char outlen, int64_t inlen, char keylen);
-int32_t blake2b_compress(int32_t * S, char * block);
-int32_t blake2b_final(int32_t * S, char * out, unsigned char outlen);
-int32_t blake2b_increment_counter(int32_t * S, int64_t inc);
-int32_t blake2b_init(int32_t * S, unsigned char outlen);
-int32_t blake2b_init0(int32_t * S);
-int32_t blake2b_init_key(int32_t * S, unsigned char outlen, int32_t * key, unsigned char keylen);
-int32_t blake2b_init_param(int32_t * S, int32_t * P);
-int32_t blake2b_is_lastblock(int32_t * S);
-int32_t blake2b_set_lastblock(int32_t * S);
-int32_t blake2b_set_lastnode(int32_t * S);
-int32_t blake2b_update(int32_t * S, char * in, int64_t inlen);
+int32_t blake2b(char *out, int32_t *in, int32_t *key, unsigned char outlen,
+                int64_t inlen, char keylen);
+int32_t blake2b_compress(int32_t *S, char *block);
+int32_t blake2b_final(int32_t *S, char *out, unsigned char outlen);
+int32_t blake2b_increment_counter(int32_t *S, int64_t inc);
+int32_t blake2b_init(int32_t *S, unsigned char outlen);
+int32_t blake2b_init0(int32_t *S);
+int32_t blake2b_init_key(int32_t *S, unsigned char outlen, int32_t *key,
+                         unsigned char keylen);
+int32_t blake2b_init_param(int32_t *S, int32_t *P);
+int32_t blake2b_is_lastblock(int32_t *S);
+int32_t blake2b_set_lastblock(int32_t *S);
+int32_t blake2b_set_lastnode(int32_t *S);
+int32_t blake2b_update(int32_t *S, char *in, int64_t inlen);
 int32_t bm1744_hashboard_init(void);
 void bm174x_chain_inactive(int32_t fd);
 void bm174x_i2c_enable(int32_t fd, char chip_addr);
-int32_t bm174x_i2c_recv(int32_t fd, char chip_addr, unsigned char i2c_dev_addr, char i2c_reg_addr, uint32_t len);
-void bm174x_i2c_send(int32_t fd, char chip_addr, unsigned char i2c_dev_addr, char i2c_reg_addr, char * reg_data, uint32_t len);
+int32_t bm174x_i2c_recv(int32_t fd, char chip_addr, unsigned char i2c_dev_addr,
+                        char i2c_reg_addr, uint32_t len);
+void bm174x_i2c_send(int32_t fd, char chip_addr, unsigned char i2c_dev_addr,
+                     char i2c_reg_addr, char *reg_data, uint32_t len);
 void bm174x_i2c_status(int32_t fd, char chip_addr);
-int32_t bm174x_init_asic(char * args);
-int32_t bm174x_ioctl(int32_t fd, int32_t oper_type, char * param);
-int32_t bm174x_nonce_handle(char * str, int32_t len, int32_t chainid, int32_t addr_interval);
-int32_t bm174x_nonce_integrality(unsigned char chipid, unsigned char nonce_array_id, int32_t chainid);
-int32_t bm174x_pack_ioctl_pkg(char * str, int32_t str_len, uint32_t oper_type, char * param);
-void bm174x_pm_handle(char * str, int32_t len, unsigned char chainid);
-void bm174x_pt_handle(char * str, int32_t len, unsigned char chainid);
-void bm174x_read_register(int32_t fd, int32_t mode, char chip_addr, char reg_addr);
-void bm174x_reg_handle(char * str, int32_t len, char chainid);
-void bm174x_send_work(int32_t fd, char * buf);
+int32_t bm174x_init_asic(char *args);
+int32_t bm174x_ioctl(int32_t fd, int32_t oper_type, char *param);
+int32_t bm174x_nonce_handle(char *str, int32_t len, int32_t chainid,
+                            int32_t addr_interval);
+int32_t bm174x_nonce_integrality(unsigned char chipid,
+                                 unsigned char nonce_array_id, int32_t chainid);
+int32_t bm174x_pack_ioctl_pkg(char *str, int32_t str_len, uint32_t oper_type,
+                              char *param);
+void bm174x_pm_handle(char *str, int32_t len, unsigned char chainid);
+void bm174x_pt_handle(char *str, int32_t len, unsigned char chainid);
+void bm174x_read_register(int32_t fd, int32_t mode, char chip_addr,
+                          char reg_addr);
+void bm174x_reg_handle(char *str, int32_t len, char chainid);
+void bm174x_send_work(int32_t fd, char *buf);
 void bm174x_set_address(int32_t fd, char address);
 void bm174x_set_baud(int32_t fd, int32_t baudrate);
 void bm174x_set_core_timeout(int32_t fd, int32_t timeout);
 void bm174x_set_frequency(int32_t fd, int32_t freq);
 void bm174x_set_io_drive_strength(int32_t fd, int32_t value);
-void bm174x_set_nonce_shift(int32_t fd, uint32_t nonce_shift, int32_t * outer_shift);
+void bm174x_set_nonce_shift(int32_t fd, uint32_t nonce_shift,
+                            int32_t *outer_shift);
 void bm174x_set_pt_ctrl(int32_t fd, uint32_t pt_num, uint32_t pt_en);
 void bm174x_set_pt_result(int32_t fd, uint32_t ptr_grp_num, uint32_t ptr_rd);
 void bm174x_set_ticket_mask(int32_t fd, int32_t tm);
 void bm174x_set_txn_data(int32_t fd, int32_t txn_data);
 void bm174x_set_vmount(int32_t fd, uint32_t vmount);
-void bm174x_write_register(int32_t fd, int32_t mode, char chip_addr, char reg_addr, int32_t reg_data);
+void bm174x_write_register(int32_t fd, int32_t mode, char chip_addr,
+                           char reg_addr, int32_t reg_data);
 int32_t calc_asic_addr_interval(int32_t actual_asic_number);
 int32_t call_weak_fn(void);
 void cgpu_exit(void);
-int32_t cgpu_init(int32_t * runtime);
-void check_asic_num(int32_t * runtime);
+int32_t cgpu_init(int32_t *runtime);
+void check_asic_num(int32_t *runtime);
 int32_t check_chain(void);
 int32_t check_how_many_uart_data_in_fpga(unsigned char which_uart);
-char * check_nonce(char * args);
-char * check_nonce_loop(char * args);
+char *check_nonce(char *args);
+char *check_nonce_loop(char *args);
 void clear_last_test_results(void);
 void clear_nonce_fifo(void);
 int32_t clear_uart_rx_fifo(unsigned char which_chain);
@@ -144,103 +154,112 @@ void close_green_led(void);
 void close_key(void);
 int32_t close_lcd(void);
 void close_red_led(void);
-int32_t compareSR(int32_t * p1, int32_t * p2);
-void compressArray(char * in, int32_t in_len, char * out, uint32_t out_len, uint32_t bit_len, uint32_t byte_pad);
-int16_t CRC16(char * p_data, int16_t w_len);
-int16_t CRC16_v1(char * buffer, int32_t len);
-char CRC5(char * ptr, unsigned char len);
-char CRC5_v1(char * ptr, unsigned char len);
+int32_t compareSR(int32_t *p1, int32_t *p2);
+void compressArray(char *in, int32_t in_len, char *out, uint32_t out_len,
+                   uint32_t bit_len, uint32_t byte_pad);
+int16_t CRC16(char *p_data, int16_t w_len);
+int16_t CRC16_v1(char *buffer, int32_t len);
+char CRC5(char *ptr, unsigned char len);
+char CRC5_v1(char *ptr, unsigned char len);
 int16_t crc_itu_t_byte(int16_t crc, unsigned char data);
 void delay(uint32_t seconds);
 int32_t deregister_tm_clones(void);
-void digestInit(int32_t * S, int32_t n, int32_t k);
+void digestInit(int32_t *S, int32_t n, int32_t k);
 void display_arguments(void);
 void display_single_board_test(void);
-void dump_str(char * fdp, char * func, char * str, int32_t len);
-int32_t enable_PIC16F1704_dc_dc(int32_t which_chain, char which_i2c, char enable);
-void env_init(int32_t * runtime);
-void equihash_init_algo(char * args);
-void equihash_miner_init(int32_t * runtime);
+void dump_str(char *fdp, char *func, char *str, int32_t len);
+int32_t enable_PIC16F1704_dc_dc(int32_t which_chain, char which_i2c,
+                                char enable);
+void env_init(int32_t *runtime);
+void equihash_init_algo(char *args);
+void equihash_miner_init(int32_t *runtime);
 void equihash_miner_join(void);
-void equihash_miner_start(int32_t * runtime);
-void equihash_nonce_submit(char * nonce, char * verify, int32_t fixed_nonce_bytes, char * job_id);
-int32_t equihash_nonce_verify(int32_t * verify_info, int32_t * tm, int32_t shift);
-bool equihash_target_match(char * result_value, char * target);
+void equihash_miner_start(int32_t *runtime);
+void equihash_nonce_submit(char *nonce, char *verify, int32_t fixed_nonce_bytes,
+                           char *job_id);
+int32_t equihash_nonce_verify(int32_t *verify_info, int32_t *tm, int32_t shift);
+bool equihash_target_match(char *result_value, char *target);
 int32_t erase_PIC16F1704_app_flash(int32_t which_i2c, char which_chain);
 int32_t erase_PIC16F1704_flash(int32_t which_i2c, char which_chain);
-void expandArray(char * in, uint32_t in_len, char * out, int32_t out_len, uint32_t bit_len, uint32_t byte_pad);
+void expandArray(char *in, uint32_t in_len, char *out, int32_t out_len,
+                 uint32_t bit_len, uint32_t byte_pad);
 void fan_control(char level);
-void flip32(char * dest_p, int32_t * src_p);
-void flip_swab(char * dest_p, int32_t * src_p, uint32_t length);
+void flip32(char *dest_p, int32_t *src_p);
+void flip_swab(char *dest_p, int32_t *src_p, uint32_t length);
 int32_t frame_dummy(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_105d7c0(void);
-int32_t * function_10f40(int32_t nmemb, int32_t size);
-char * function_10f4c(char * haystack, char * needle);
+int32_t *function_10f40(int32_t nmemb, int32_t size);
+char *function_10f4c(char *haystack, char *needle);
 int32_t function_10f58(int32_t sig);
-int32_t function_10f64(char * s1, char * s2);
-int32_t function_10f70(char * format, ...);
-int32_t function_10f7c(struct _IO_FILE * stream, char * format, ...);
-struct _IO_FILE * function_10f88(char * filename, char * modes);
-int32_t function_10f94(int32_t fd, int32_t * buf, int32_t nbytes);
-int32_t function_10fa0(int32_t * mutex);
-int32_t function_10fac(struct _IO_FILE * stream);
-int32_t * function_10fb8(int32_t * dest, int32_t * src, int32_t n);
-void function_10fc4(int32_t * ptr);
-char * function_10fd0(char * s, int32_t n, struct _IO_FILE * stream);
-int32_t function_10fdc(int32_t * mutex);
+int32_t function_10f64(char *s1, char *s2);
+int32_t function_10f70(char *format, ...);
+int32_t function_10f7c(struct _IO_FILE *stream, char *format, ...);
+struct _IO_FILE *function_10f88(char *filename, char *modes);
+int32_t function_10f94(int32_t fd, int32_t *buf, int32_t nbytes);
+int32_t function_10fa0(int32_t *mutex);
+int32_t function_10fac(struct _IO_FILE *stream);
+int32_t *function_10fb8(int32_t *dest, int32_t *src, int32_t n);
+void function_10fc4(int32_t *ptr);
+char *function_10fd0(char *s, int32_t n, struct _IO_FILE *stream);
+int32_t function_10fdc(int32_t *mutex);
 int32_t function_10fe8(int32_t th);
 int32_t function_10ff4(void);
-int32_t * function_11000(int32_t * dest, int32_t * src, int32_t n);
-int32_t function_1100c(int32_t * mutex, int32_t * mutexattr);
+int32_t *function_11000(int32_t *dest, int32_t *src, int32_t n);
+int32_t function_1100c(int32_t *mutex, int32_t *mutexattr);
 int32_t function_11018(int32_t fd, int32_t offset, int32_t whence);
-int32_t function_11024(int32_t * mutex);
-int32_t function_11030(int32_t * s1, int32_t * s2, int32_t n);
+int32_t function_11024(int32_t *mutex);
+int32_t function_11030(int32_t *s1, int32_t *s2, int32_t n);
 int32_t function_1103c(int32_t seconds);
-int32_t function_11048(int32_t * cond, int32_t * cond_attr);
-int32_t function_11054(int32_t * cond);
-int32_t function_11060(int32_t * ptr, int32_t size, int32_t n, struct _IO_FILE * s);
+int32_t function_11048(int32_t *cond, int32_t *cond_attr);
+int32_t function_11054(int32_t *cond);
+int32_t function_11060(int32_t *ptr, int32_t size, int32_t n,
+                       struct _IO_FILE *s);
 int32_t function_1106c(int32_t useconds);
-char * function_11078(char * dest, char * src);
-int32_t function_11084(struct timeval * tv, struct timezone * tz);
-int32_t function_11090(int32_t * newthread, int32_t * attr, int32_t * (*start_routine)(int32_t *), int32_t * arg);
-int32_t function_1109c(char * s);
-int32_t * function_110a8(int32_t size);
-int32_t function_110b4(int32_t main2, int32_t argc, char ** ubp_av, void (*init)(), void (*fini)(), void (*rtld_fini)());
-char * function_110c0(int32_t errnum);
-struct tm * function_110cc(int32_t * timer);
+char *function_11078(char *dest, char *src);
+int32_t function_11084(struct timeval *tv, struct timezone *tz);
+int32_t function_11090(int32_t *newthread, int32_t *attr,
+                       int32_t *(*start_routine)(int32_t *), int32_t *arg);
+int32_t function_1109c(char *s);
+int32_t *function_110a8(int32_t size);
+int32_t function_110b4(int32_t main2, int32_t argc, char **ubp_av,
+                       void (*init)(), void (*fini)(), void (*rtld_fini)());
+char *function_110c0(int32_t errnum);
+struct tm *function_110cc(int32_t *timer);
 void function_110d8(void);
-int32_t function_110e4(char * file, int32_t oflag, ...);
+int32_t function_110e4(char *file, int32_t oflag, ...);
 void function_110f0(int32_t status);
-int32_t function_110fc(struct _IO_FILE * stream);
-int32_t function_11108(char * nptr, char ** endptr, int32_t base);
-int32_t function_11114(char * s);
-int32_t * function_11120(int32_t * addr, int32_t len, int32_t prot, int32_t flags, int32_t fd, int32_t offset);
-int32_t function_1112c(struct _IO_FILE * stream, char * format, ...);
+int32_t function_110fc(struct _IO_FILE *stream);
+int32_t function_11108(char *nptr, char **endptr, int32_t base);
+int32_t function_11114(char *s);
+int32_t *function_11120(int32_t *addr, int32_t len, int32_t prot, int32_t flags,
+                        int32_t fd, int32_t offset);
+int32_t function_1112c(struct _IO_FILE *stream, char *format, ...);
 int32_t function_11138(int32_t fd, int32_t cmd, ...);
-int32_t * function_11144(void);
-int32_t function_11150(char * s, int32_t maxlen, char * format, ...);
-int32_t function_1115c(char * s, char * format, ...);
+int32_t *function_11144(void);
+int32_t function_11150(char *s, int32_t maxlen, char *format, ...);
+int32_t function_1115c(char *s, char *format, ...);
 int32_t function_11174(int32_t c);
 int32_t function_11180(int32_t th);
-int32_t function_1118c(int32_t fd, int32_t * buf, int32_t n);
-int32_t function_11198(struct _IO_FILE * stream);
-int32_t function_111a4(struct _IO_FILE * stream);
-int32_t function_111b0(int32_t * addr, int32_t len);
-int32_t function_111bc(int32_t th, int32_t ** thread_return);
-int32_t function_111c8(char * s, char * format, ...);
-int32_t function_111d4(char * filename);
-int32_t function_111e0(char * nptr);
-void function_111ec(int32_t * base, int32_t nmemb, int32_t size, int32_t (*compar)(int32_t *, int32_t *));
-int32_t function_111f8(int32_t * cond, int32_t * mutex);
-float64_t function_11204(char * nptr);
+int32_t function_1118c(int32_t fd, int32_t *buf, int32_t n);
+int32_t function_11198(struct _IO_FILE *stream);
+int32_t function_111a4(struct _IO_FILE *stream);
+int32_t function_111b0(int32_t *addr, int32_t len);
+int32_t function_111bc(int32_t th, int32_t **thread_return);
+int32_t function_111c8(char *s, char *format, ...);
+int32_t function_111d4(char *filename);
+int32_t function_111e0(char *nptr);
+void function_111ec(int32_t *base, int32_t nmemb, int32_t size,
+                    int32_t (*compar)(int32_t *, int32_t *));
+int32_t function_111f8(int32_t *cond, int32_t *mutex);
+float64_t function_11204(char *nptr);
 void function_11210(void);
-int32_t function_1121c(struct _IO_FILE * stream, int32_t off, int32_t whence);
+int32_t function_1121c(struct _IO_FILE *stream, int32_t off, int32_t whence);
 int32_t function_11228(int32_t fd);
-int32_t function_11234(char * s1, char * s2, int32_t n);
-int32_t function_11240(int32_t * cond);
+int32_t function_11234(char *s1, char *s2, int32_t n);
+int32_t function_11240(int32_t *cond);
 void function_1124c(void);
 int32_t function_11258(int32_t fd);
-void function_11264(char * assertion, char * file, int32_t line, char * function);
+void function_11264(char *assertion, char *file, int32_t line, char *function);
 int32_t function_138163e(void);
 int32_t function_1a10fe0(void);
 int32_t function_1fd1a46(void);
@@ -264,346 +283,460 @@ int32_t function_ffa1c05c(void);
 int32_t function_ffa1c0e8(void);
 int32_t function_ffa1c176(void);
 int32_t function_ffc51a4a(void);
-void generateHash(int32_t * S, int32_t g, char * hash, uint32_t hashLen);
+void generateHash(int32_t *S, int32_t g, char *hash, uint32_t hashLen);
 int32_t get_BC_write_command(void);
 char get_bt8d_from_baud(int32_t baud);
-void get_current_time(char * dtime);
+void get_current_time(char *dtime);
 int32_t get_fan_speed(void);
-int32_t get_PIC16F1704_freq(int32_t which_chain, char which_i2c, int16_t * freq);
-int32_t get_PIC16F1704_software_version(int32_t which_i2c, char which_chain, char * version);
-int32_t get_PIC16F1704_voltage(int32_t which_i2c, char which_chain, char * voltage);
+int32_t get_PIC16F1704_freq(int32_t which_chain, char which_i2c, int16_t *freq);
+int32_t get_PIC16F1704_software_version(int32_t which_i2c, char which_chain,
+                                        char *version);
+int32_t get_PIC16F1704_voltage(int32_t which_i2c, char which_chain,
+                               char *voltage);
 void get_PIC16F1704_voltage_z9(int32_t i2c, unsigned char chain);
-void get_plldata(int32_t freq, int32_t * vil_data);
-void get_return_nonce(int32_t * buf);
-int32_t getIndices(char * hash, int32_t len, int32_t lenIndices, int32_t cBitLen, char * data, uint32_t maxLen);
+void get_plldata(int32_t freq, int32_t *vil_data);
+void get_return_nonce(int32_t *buf);
+int32_t getIndices(char *hash, int32_t len, int32_t lenIndices, int32_t cBitLen,
+                   char *data, uint32_t maxLen);
 void green_led_off(void);
 void green_led_on(void);
-char * handle_asic_response(char * args);
+char *handle_asic_response(char *args);
 int32_t heart_beat_PIC16F1704(int32_t which_chain, char which_i2c);
-int32_t hex2bin(char * p, char * hexstr, int32_t len);
-char hex2val(char * base, int32_t off);
-void hexdump(char * p, int32_t len);
+int32_t hex2bin(char *p, char *hexstr, int32_t len);
+char hex2val(char *base, int32_t off);
+void hexdump(char *p, int32_t len);
 char i2c_read(int32_t config_data);
 void i2c_write(int32_t config_data);
 void init_fpga(void);
 void init_pcba_args(void);
 int32_t is_asic_pass(int32_t index);
-int32_t is_patten_match(int32_t asic_index, char * nonce, char * sol);
-int32_t ISL_get_voltage(char which_chain, char which_i2c, char i2c_dev_addr, int16_t * voltage);
+int32_t is_patten_match(int32_t asic_index, char *nonce, char *sol);
+int32_t ISL_get_voltage(char which_chain, char which_i2c, char i2c_dev_addr,
+                        int16_t *voltage);
 int32_t ISL_off(char which_chain, char which_i2c, char i2c_dev_addr);
 int32_t ISL_on(char which_chain, char which_i2c, char i2c_dev_addr);
-int32_t ISL_page_enable(char which_chain, char which_i2c, char i2c_dev_addr, char which_page);
-int32_t ISL_read_reg_default(char which_chain, char which_i2c, char i2c_dev_addr);
-int32_t ISL_set_apply_settings(char which_chain, char which_i2c, char i2c_dev_addr);
-int32_t ISL_set_clear_faults(char which_chain, char which_i2c, char i2c_dev_addr);
-int32_t ISL_set_on_off_config(char which_chain, char which_i2c, char i2c_dev_addr, char config);
-int16_t ISL_set_voltage(char which_chain, char which_i2c, char i2c_dev_addr, int16_t voltage);
-int32_t ISL_set_vout_command(char which_chain, char which_i2c, char i2c_dev_addr, int16_t voltage);
-int32_t ISL_set_write_protect(char which_chain, char which_i2c, char i2c_dev_addr, char mode);
-int32_t isZero(char * hash, uint32_t len);
+int32_t ISL_page_enable(char which_chain, char which_i2c, char i2c_dev_addr,
+                        char which_page);
+int32_t ISL_read_reg_default(char which_chain, char which_i2c,
+                             char i2c_dev_addr);
+int32_t ISL_set_apply_settings(char which_chain, char which_i2c,
+                               char i2c_dev_addr);
+int32_t ISL_set_clear_faults(char which_chain, char which_i2c,
+                             char i2c_dev_addr);
+int32_t ISL_set_on_off_config(char which_chain, char which_i2c,
+                              char i2c_dev_addr, char config);
+int16_t ISL_set_voltage(char which_chain, char which_i2c, char i2c_dev_addr,
+                        int16_t voltage);
+int32_t ISL_set_vout_command(char which_chain, char which_i2c,
+                             char i2c_dev_addr, int16_t voltage);
+int32_t ISL_set_write_protect(char which_chain, char which_i2c,
+                              char i2c_dev_addr, char mode);
+int32_t isZero(char *hash, uint32_t len);
 int32_t jump_from_loader_to_app_PIC16F1704(int32_t which_chain, char which_i2c);
-int64_t load64(int32_t * src);
-int32_t makeup_chain_inactive_cmd(char * str, uint32_t str_len);
-int32_t makeup_get_status_cmd(char * str, uint32_t str_len, unsigned char all, char chip_addr, char regaddr);
-int32_t makeup_set_address_cmd(char * str, uint32_t str_len, char chip_addr);
-int32_t makeup_set_config_cmd(char * str, uint32_t str_len, unsigned char all, char chip_addr, char regaddr, int32_t regdata);
-int32_t makeup_work_pkg(char * str, char * work_str);
-char * memrchr(int32_t * s, int32_t c, int32_t n);
+int64_t load64(int32_t *src);
+int32_t makeup_chain_inactive_cmd(char *str, uint32_t str_len);
+int32_t makeup_get_status_cmd(char *str, uint32_t str_len, unsigned char all,
+                              char chip_addr, char regaddr);
+int32_t makeup_set_address_cmd(char *str, uint32_t str_len, char chip_addr);
+int32_t makeup_set_config_cmd(char *str, uint32_t str_len, unsigned char all,
+                              char chip_addr, char regaddr, int32_t regdata);
+int32_t makeup_work_pkg(char *str, char *work_str);
+char *memrchr(int32_t *s, int32_t c, int32_t n);
 int64_t miner_now(void);
-char * mining_mode(char * args);
-void mining_parse_job(char * str, char * target, uint32_t target_len, char * job_id, uint32_t job_id_len, char * header, uint32_t header_len, int32_t * fixed_nonce_bytes);
-void my_log_curses(int32_t prio, char * datetime, char * str, bool force);
-void nonce_fifo_num(int32_t * num);
-char * nonce_scanhash(char * args);
-char * nonce_scanhash_loop(char * args);
-void online_mining(int32_t * runtime);
+char *mining_mode(char *args);
+void mining_parse_job(char *str, char *target, uint32_t target_len,
+                      char *job_id, uint32_t job_id_len, char *header,
+                      uint32_t header_len, int32_t *fixed_nonce_bytes);
+void my_log_curses(int32_t prio, char *datetime, char *str, bool force);
+void nonce_fifo_num(int32_t *num);
+char *nonce_scanhash(char *args);
+char *nonce_scanhash_loop(char *args);
+void online_mining(int32_t *runtime);
 int32_t open_green_led(void);
 int32_t open_key(void);
 int32_t open_lcd(void);
 int32_t open_red_led(void);
-int32_t parse_config_ini_array(char * str, char ** pointer);
+int32_t parse_config_ini_array(char *str, char **pointer);
 void patten_info_destory(void);
 void patten_info_init(void);
-void patten_load(char * root_path);
-int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce);
-int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce);
+void patten_load(char *root_path);
+int32_t pattern_test(int32_t *runtime, int32_t freq, int32_t *nonce);
+int32_t pattern_test_mode2(int32_t *runtime, int32_t freq, int32_t *nonce);
 void pcba_app_manual_test(void);
-void pcba_runtime_exit(int32_t * runtime);
-void pcba_runtime_init(int32_t * runtime);
-int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_addr, int32_t rw_flag, char reg_addr, int32_t len, char * data);
+void pcba_runtime_exit(int32_t *runtime);
+void pcba_runtime_init(int32_t *runtime);
+int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain,
+                                    unsigned char dev_addr, int32_t rw_flag,
+                                    char reg_addr, int32_t len, char *data);
 int32_t PIC1704_update_pic_app_program(int32_t which_i2c, char which_chain);
-char * pic_heart_beat_func(char * arg);
-void pop_nonce(int32_t * nonce_tmp);
-int32_t print_solver_line(char * soln, char * header, int32_t fixed_nonce_bytes, char * job_id);
-void push_nonce(int32_t * nonce_item);
-void randomize(char * p, int32_t l);
-char * read_all_sensor(void);
+char *pic_heart_beat_func(char *arg);
+void pop_nonce(int32_t *nonce_tmp);
+int32_t print_solver_line(char *soln, char *header, int32_t fixed_nonce_bytes,
+                          char *job_id);
+void push_nonce(int32_t *nonce_item);
+void randomize(char *p, int32_t l);
+char *read_all_sensor(void);
 int32_t read_axi_fpga(int32_t address);
-int32_t read_data_from_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, char * buf, unsigned char read_len);
-int32_t read_dc_dc(char * args, char which_i2c, unsigned char i2c_dev_addr, char reg, char * value, uint32_t len);
-int32_t read_hash_id_PIC16F1704(int32_t which_i2c, char which_chain, char * buf);
+int32_t read_data_from_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c,
+                                        char *buf, unsigned char read_len);
+int32_t read_dc_dc(char *args, char which_i2c, unsigned char i2c_dev_addr,
+                   char reg, char *value, uint32_t len);
+int32_t read_hash_id_PIC16F1704(int32_t which_i2c, char which_chain, char *buf);
 int32_t read_key(char value);
-int32_t read_last_line(char * buf, int32_t len, int32_t block);
+int32_t read_last_line(char *buf, int32_t len, int32_t block);
 char read_pic(unsigned char which_i2c, unsigned char which_chain);
-int32_t read_PIC16F1704_flash_data(int32_t which_i2c, char which_chain, char * buf);
-int32_t read_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain, char * flash_addr_h, char * flash_addr_l);
-int32_t read_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * buf, unsigned char buf_len, char * read_back_buf);
-int32_t read_reg_item(int32_t * item, uint32_t ms);
-int32_t read_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain, char * buf);
-int32_t read_uart_data_in_fpga(unsigned char which_uart, char * buf, int32_t length);
+int32_t read_PIC16F1704_flash_data(int32_t which_i2c, char which_chain,
+                                   char *buf);
+int32_t read_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain,
+                                      char *flash_addr_h, char *flash_addr_l);
+int32_t read_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain,
+                                  char *buf, unsigned char buf_len,
+                                  char *read_back_buf);
+int32_t read_reg_item(int32_t *item, uint32_t ms);
+int32_t read_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain,
+                                           char *buf);
+int32_t read_uart_data_in_fpga(unsigned char which_uart, char *buf,
+                               int32_t length);
 void red_led_off(void);
 void red_led_on(void);
-char * reg_list_aging(void);
+char *reg_list_aging(void);
 void reg_list_exit(void);
 void reg_list_init(void);
 int32_t register_tm_clones(void);
 int32_t reset_PIC16F1704_pic(int32_t which_chain, char which_i2c);
 int64_t rotr64(int64_t w, uint32_t c);
-int16_t rt_ringbuffer_data_len(int32_t * rb);
-int32_t rt_ringbuffer_get(int32_t * rb, char * ptr, int16_t length);
-int16_t rt_ringbuffer_get_size(int32_t * rb);
-void rt_ringbuffer_init(int32_t * rb, char * pool, int16_t size, int32_t ringbuffer_type);
-void rt_ringbuffer_lock_destory(int32_t * rb);
-int32_t rt_ringbuffer_prefetch(int32_t * rb, char * ptr, uint16_t length);
-int32_t rt_ringbuffer_put(int32_t * rb, char * ptr, uint16_t length);
-int32_t rt_ringbuffer_put_force(int32_t * rb, char * ptr, uint16_t length);
-int32_t rt_ringbuffer_status(int32_t * rb);
-void runtime_exit(int32_t * runtime);
-void runtime_init(int32_t * runtime);
-char * s_hexdump(int32_t * _a, uint32_t a_len);
+int16_t rt_ringbuffer_data_len(int32_t *rb);
+int32_t rt_ringbuffer_get(int32_t *rb, char *ptr, int16_t length);
+int16_t rt_ringbuffer_get_size(int32_t *rb);
+void rt_ringbuffer_init(int32_t *rb, char *pool, int16_t size,
+                        int32_t ringbuffer_type);
+void rt_ringbuffer_lock_destory(int32_t *rb);
+int32_t rt_ringbuffer_prefetch(int32_t *rb, char *ptr, uint16_t length);
+int32_t rt_ringbuffer_put(int32_t *rb, char *ptr, uint16_t length);
+int32_t rt_ringbuffer_put_force(int32_t *rb, char *ptr, uint16_t length);
+int32_t rt_ringbuffer_status(int32_t *rb);
+void runtime_exit(int32_t *runtime);
+void runtime_init(int32_t *runtime);
+char *s_hexdump(int32_t *_a, uint32_t a_len);
 int32_t save_freq_PIC16F1704(int32_t which_chain, char which_i2c, int16_t freq);
-void secure_zero_memory(char * v, int32_t n);
-int32_t send_data_to_PIC16F1704(int32_t which_i2c, char which_chain, char * buf);
-void set_asic_address(int32_t * runtime, unsigned char chainid);
-void set_BC_command_buffer(int32_t * value);
+void secure_zero_memory(char *v, int32_t n);
+int32_t send_data_to_PIC16F1704(int32_t which_i2c, char which_chain, char *buf);
+void set_asic_address(int32_t *runtime, unsigned char chainid);
+void set_BC_command_buffer(int32_t *value);
 void set_BC_write_command(uint32_t value);
 void set_blocking_mode(int32_t fd, int32_t block);
 void set_fan_speed(int32_t speed);
 void set_fpga_baud(char asic_baud);
-int32_t set_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain, char flash_addr_h, char flash_addr_l);
-int32_t set_PIC16F1704_voltage(int32_t which_chain, char which_i2c, char voltage);
+int32_t set_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain,
+                                     char flash_addr_h, char flash_addr_l);
+int32_t set_PIC16F1704_voltage(int32_t which_chain, char which_i2c,
+                               char voltage);
 void set_PIC16F1704_voltage_z9(int32_t i2c, unsigned char chain, int16_t vol);
-void set_temperature_offset_value(int32_t which_i2c, unsigned char which_chain, char * value);
-void sha2(char * input, int32_t ilen, char * output);
-void sha256(char * message, int32_t len, char * digest);
-void Sha256_Final(int32_t * p, char * digest);
-void sha256_final(int32_t * ctx, char * digest);
-void sha256_init(int32_t * ctx);
-void Sha256_Init(int32_t * p);
-void Sha256_Onestep(char * data, int32_t size, char * digest);
-void sha256_transf(int32_t * ctx, char * message, uint32_t block_nb);
-void Sha256_Transform(int32_t * state, int32_t * data);
-void sha256_update(int32_t * ctx, char * message, uint32_t len);
-void Sha256_Update(int32_t * p, char * data, int32_t size);
-void Sha256_WriteByteBlock(int32_t * p);
-void sha2_finish(int32_t * ctx, char * output);
-void sha2_process(int32_t * ctx, char * data);
-void sha2_starts(int32_t * ctx);
-void sha2_update(int32_t * ctx, char * input, int32_t ilen);
+void set_temperature_offset_value(int32_t which_i2c, unsigned char which_chain,
+                                  char *value);
+void sha2(char *input, int32_t ilen, char *output);
+void sha256(char *message, int32_t len, char *digest);
+void sha256_final(int32_t *ctx, char *digest);
+void Sha256_Final(int32_t *p, char *digest);
+void Sha256_Init(int32_t *p);
+void sha256_init(int32_t *ctx);
+void Sha256_Onestep(char *data, int32_t size, char *digest);
+void sha256_transf(int32_t *ctx, char *message, uint32_t block_nb);
+void Sha256_Transform(int32_t *state, int32_t *data);
+void sha256_update(int32_t *ctx, char *message, uint32_t len);
+void Sha256_Update(int32_t *p, char *data, int32_t size);
+void Sha256_WriteByteBlock(int32_t *p);
+void sha2_finish(int32_t *ctx, char *output);
+void sha2_process(int32_t *ctx, char *data);
+void sha2_starts(int32_t *ctx);
+void sha2_update(int32_t *ctx, char *input, int32_t ilen);
 void show_result(void);
-char * show_stats_func_z15_3chips(void);
+char *show_stats_func_z15_3chips(void);
 void singleboard_pattern_test(void);
 int32_t singleBoardTest_Z15_BM1746(void);
-void sort_pair(int32_t * a, uint32_t len);
-int32_t sortValidator(char * data, char * soln);
+void sort_pair(int32_t *a, uint32_t len);
+int32_t sortValidator(char *data, char *soln);
 void start_read_temp(void);
 void start_single_board_test(void);
 void stop_read_temp(void);
-void store32(char * dst, uint32_t w);
-void store64(char * dst, int64_t w);
-void swab256(char * dest_p, char * src_p);
+void store32(char *dst, uint32_t w);
+void store64(char *dst, int64_t w);
+void swab256(char *dest_p, char *src_p);
 int32_t swab32(int32_t v);
 char swap_bit(unsigned char chr);
-int32_t target_zero_cal(char * target);
-int32_t targetValidator(char * work, char * nonce, char * target);
+int32_t target_zero_cal(char *target);
+int32_t targetValidator(char *work, char *nonce, char *target);
 int32_t uart_exit(int32_t fd);
 int32_t uart_init(int32_t comport, int32_t baud);
-int32_t uart_receive(unsigned char which_uart, char * buf, uint32_t buf_length);
-int32_t uart_send(unsigned char which_uart, char * buf, int32_t length);
-int32_t user_asic_init(int32_t * runtime);
-int32_t user_check_communication(int32_t * runtime);
-void user_i2c_enable(int32_t * runtime, unsigned char chainid);
-int32_t user_i2c_state(int32_t * runtime, int32_t chip_addr);
-int32_t user_read_iic(int32_t * runtime, int32_t chip_addr, char i2c_dev_addr, unsigned char i2c_reg_addr, char * i2c_reg_data, uint32_t len);
-void user_send_work(int32_t * runtime, char * header, uint32_t sno_valid, uint32_t test_patten);
-int32_t v9_key_read(char * command, int32_t len);
+int32_t uart_receive(unsigned char which_uart, char *buf, uint32_t buf_length);
+int32_t uart_send(unsigned char which_uart, char *buf, int32_t length);
+int32_t user_asic_init(int32_t *runtime);
+int32_t user_check_communication(int32_t *runtime);
+void user_i2c_enable(int32_t *runtime, unsigned char chainid);
+int32_t user_i2c_state(int32_t *runtime, int32_t chip_addr);
+int32_t user_read_iic(int32_t *runtime, int32_t chip_addr, char i2c_dev_addr,
+                      unsigned char i2c_reg_addr, char *i2c_reg_data,
+                      uint32_t len);
+void user_send_work(int32_t *runtime, char *header, uint32_t sno_valid,
+                    uint32_t test_patten);
+int32_t v9_key_read(char *command, int32_t len);
 void V9_print_lcd(void);
 void V9_print_lcd_type(int32_t type);
 int32_t vol_init(uint16_t vol);
 void work_list_exit(void);
-void work_list_find(unsigned char workid, char * work);
+void work_list_find(unsigned char workid, char *work);
 void work_list_init(int32_t work_len);
-void work_list_insert(char workid, char * work);
+void work_list_insert(char workid, char *work);
 void write_axi_fpga(int32_t address, int32_t data);
 int32_t write_data_into_PIC16F1704_flash(int32_t which_i2c, char which_chain);
-int32_t write_data_to_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, char * buf, uint32_t buf_len);
-int32_t write_dc_dc(char * args, char which_i2c, unsigned char i2c_dev_addr, char reg, char * data, uint32_t len);
-int32_t write_hash_ID_PIC16F1704(int32_t which_chain, char which_i2c, char * buf);
-void write_lcd(int32_t line, char * buf, int32_t size);
-void write_lcd_no_memset(int32_t line, char * buf, int32_t size);
+int32_t write_data_to_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c,
+                                       char *buf, uint32_t buf_len);
+int32_t write_dc_dc(char *args, char which_i2c, unsigned char i2c_dev_addr,
+                    char reg, char *data, uint32_t len);
+int32_t write_hash_ID_PIC16F1704(int32_t which_chain, char which_i2c,
+                                 char *buf);
+void write_lcd(int32_t line, char *buf, int32_t size);
+void write_lcd_no_memset(int32_t line, char *buf, int32_t size);
 void write_pic(unsigned char which_i2c, char which_chain, unsigned char data);
-int32_t write_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * buf, unsigned char buf_len);
-int32_t write_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain, char * buf);
-void zcashPerson(char * person, int32_t n, int32_t k);
+int32_t write_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain,
+                                   char *buf, unsigned char buf_len);
+int32_t write_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain,
+                                            char *buf);
+void zcashPerson(char *person, int32_t n, int32_t k);
 
 // --------------------- Global Variables ---------------------
 
-// Detected cryptographic pattern: SHA256_Hash_constant_words_K__0x428a2f98_ (32-bit, little endian)
-int32_t K[64] = {0x428a2f98, 0x71374491, -0x4a3f0431, -0x164a245b, 0x3956c25b, 0x59f111f1, -0x6dc07d5c, -0x54e3a12b, -0x27f85568, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, -0x7f214e02, -0x6423f959, -0x3e640e8c, -0x1b64963f, -0x1041b87a, 0xfc19dc6, 0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da, -0x67c1aeae, -0x57ce3993, -0x4ffcd838, -0x40a68039, -0x391ff40d, -0x2a586eb9, 0x6ca6351, 0x14292967, 0x27b70a85, 0x2e1b2138, 0x4d2c6dfc, 0x53380d13, 0x650a7354, 0x766a0abb, -0x7e3d36d2, -0x6d8dd37b, -0x5d40175f, -0x57e599b5, -0x3db47490, -0x3893ae5d, -0x2e6d17e7, -0x2966f9dc, -0xbf1ca7b, 0x106aa070, 0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3, 0x748f82ee, 0x78a5636f, -0x7b3787ec, -0x7338fdf8, -0x6f410006, -0x5baf9315, -0x41065c09, -0x398e870e}; // 0x374d8
-int32_t * app_conf = NULL; // 0x4b7b4
-int32_t * axi_fpga_addr = NULL; // 0x49424
-int32_t baud_BT8D_values = 0x1c200; // 0x47a1c
+// Detected cryptographic pattern: SHA256_Hash_constant_words_K__0x428a2f98_
+// (32-bit, little endian)
+int32_t K[64] = {
+    0x428a2f98,  0x71374491,  -0x4a3f0431, -0x164a245b, 0x3956c25b,
+    0x59f111f1,  -0x6dc07d5c, -0x54e3a12b, -0x27f85568, 0x12835b01,
+    0x243185be,  0x550c7dc3,  0x72be5d74,  -0x7f214e02, -0x6423f959,
+    -0x3e640e8c, -0x1b64963f, -0x1041b87a, 0xfc19dc6,   0x240ca1cc,
+    0x2de92c6f,  0x4a7484aa,  0x5cb0a9dc,  0x76f988da,  -0x67c1aeae,
+    -0x57ce3993, -0x4ffcd838, -0x40a68039, -0x391ff40d, -0x2a586eb9,
+    0x6ca6351,   0x14292967,  0x27b70a85,  0x2e1b2138,  0x4d2c6dfc,
+    0x53380d13,  0x650a7354,  0x766a0abb,  -0x7e3d36d2, -0x6d8dd37b,
+    -0x5d40175f, -0x57e599b5, -0x3db47490, -0x3893ae5d, -0x2e6d17e7,
+    -0x2966f9dc, -0xbf1ca7b,  0x106aa070,  0x19a4c116,  0x1e376c08,
+    0x2748774c,  0x34b0bcb5,  0x391c0cb3,  0x4ed8aa4a,  0x5b9cca4f,
+    0x682e6ff3,  0x748f82ee,  0x78a5636f,  -0x7b3787ec, -0x7338fdf8,
+    -0x6f410006, -0x5baf9315, -0x41065c09, -0x398e870e}; // 0x374d8
+int32_t *app_conf = NULL;                                // 0x4b7b4
+int32_t *axi_fpga_addr = NULL;                           // 0x49424
+int32_t baud_BT8D_values = 0x1c200;                      // 0x47a1c
 // Detected cryptographic pattern: SHA512 (64-bit, little endian)
-int64_t blake2b_IV[8] = {0x6a09e667f3bcc908, -0x4498517a7b3558c5, 0x3c6ef372fe94f82b, -0x5ab00ac5a0e2c90f, 0x510e527fade682d1, -0x64fa9773d4c193e1, 0x1f83d9abfb41bd6b, 0x5be0cd19137e2179}; // 0x371d0
-int32_t cgpu = 0; // 0x4b7c0
-int32_t chain_info = 0; // 0x4b820
-char chip_high = 0; // 0x4948f
-char chip_temp[3]; // 0x49488
-int32_t compare_size = 3; // 0x48150
-int32_t console_lock = 0; // 0x4949c
-// Detected cryptographic pattern: CRC_16_CCITT_poly_0x1021 (16-bit, little endian)
-int16_t crc_itu_t_table[256] = {0, 0x1021, 0x2042, 0x3063, 0x4084, 0x50a5, 0x60c6, 0x70e7, -0x7ef8, -0x6ed7, -0x5eb6, -0x4e95, -0x3e74, -0x2e53, -0x1e32, -3601, 0x1231, 528, 0x3273, 0x2252, 0x52b5, 0x4294, 0x72f7, 0x62d6, -0x6cc7, -0x7ce8, -0x4c85, -0x5ca6, -0x2c43, -0x3c64, -3073, -0x1c22, 0x2462, 0x3443, 1056, 0x1401, 0x64e6, 0x74c7, 0x44a4, 0x5485, -0x5a96, -0x4ab5, -0x7ad8, -0x6af7, -0x1a12, -2609, -0x3a54, -0x2a73, 0x3653, 0x2672, 0x1611, 1584, 0x76d7, 0x66f6, 0x5695, 0x46b4, -0x48a5, -0x5886, -0x68e7, -0x78c8, -2081, -0x1802, -0x2863, -0x3844, 0x48c4, 0x58e5, 0x6886, 0x78a7, 2112, 0x1861, 0x2802, 0x3823, -0x3634, -0x2613, -0x1672, -1617, -0x76b8, -0x6697, -0x56f6, -0x46d5, 0x5af5, 0x4ad4, 0x7ab7, 0x6a96, 0x1a71, 2640, 0x3a33, 0x2a12, -0x2403, -0x3424, -1089, -0x1462, -0x6487, -0x74a8, -0x44c5, -0x54e6, 0x6ca6, 0x7c87, 0x4ce4, 0x5cc5, 0x2c22, 0x3c03, 3168, 0x1c41, -0x1252, -625, -0x3214, -0x2233, -0x52d6, -0x42f5, -0x7298, -0x62b7, 0x7e97, 0x6eb6, 0x5ed5, 0x4ef4, 0x3e13, 0x2e32, 0x1e51, 3696, -97, -0x1042, -0x2023, -0x3004, -0x40e5, -0x50c6, -0x60a7, -0x7088, -0x6e78, -0x7e57, -0x4e36, -0x5e15, -0x2ef4, -0x3ed3, -3762, -0x1e91, 0x1080, 161, 0x30c2, 0x20e3, 0x5004, 0x4025, 0x7046, 0x6067, -0x7c47, -0x6c68, -0x5c05, -0x4c26, -0x3cc3, -0x2ce4, -0x1c81, -3234, 689, 0x1290, 0x22f3, 0x32d2, 0x4235, 0x5214, 0x6277, 0x7256, -0x4a16, -0x5a35, -0x6a58, -0x7a77, -2706, -0x1ab1, -0x2ad4, -0x3af3, 0x34e2, 0x24c3, 0x14a0, 1153, 0x7466, 0x6447, 0x5424, 0x4405, -0x5825, -0x4806, -0x7867, -0x6848, -0x18a1, -2178, -0x38e3, -0x28c4, 0x26d3, 0x36f2, 1681, 0x16b0, 0x6657, 0x7676, 0x4615, 0x5634, -0x26b4, -0x3693, -1778, -0x16d1, -0x6638, -0x7617, -0x4676, -0x5655, 0x5844, 0x4865, 0x7806, 0x6827, 0x18c0, 2273, 0x3882, 0x28a3, -0x3483, -0x24a4, -0x14c1, -1250, -0x7407, -0x6428, -0x5445, -0x4466, 0x4a75, 0x5a54, 0x6a37, 0x7a16, 2801, 0x1ad0, 0x2ab3, 0x3a92, -722, -0x12f1, -0x2294, -0x32b3, -0x4256, -0x5275, -0x6218, -0x7237, 0x7c26, 0x6c07, 0x5c64, 0x4c45, 0x3ca2, 0x2c83, 0x1ce0, 3265, -0x10e1, -194, -0x30a3, -0x2084, -0x5065, -0x4046, -0x7027, -0x6008, 0x6e17, 0x7e36, 0x4e55, 0x5e74, 0x2e93, 0x3eb2, 3793, 0x1ef0}; // 0x372d0
-int32_t fd_fpga = 0; // 0x4b7bc
-int32_t fd_fpga_mem = 0; // 0x4b7b8
-int32_t * fpga_mem_addr = NULL; // 0x49420
-int32_t freq_pll = 16; // 0x47a58
-char gChain = -1; // 0x481b7
-char gI2c = 0; // 0x49478
-int32_t g_nonce = 0; // 0x4a600
-char g_nonce_list[3][1][16][91]; // 0x494f0
-int32_t g_patten = 0; // 0x4b828
-int32_t g_work_info = 0; // 0x4b5e8
-int32_t i_g1 = -0x1cae0000; // 0x112b0
-int32_t i_g3 = 49; // 0x35004
-int32_t i_g4 = 48; // 0x35008
-int32_t i_g5 = 32; // 0x365dc
-char * p_g6 = "\x1b[0;31m%s%s\x1b[0m"; // 0x36be8
-char * p_g7 = "\x1b[1;34m%s%s\x1b[0m"; // 0x36bf8
-char * p_g8; // 0x36c3c
-char * p_g9 = "0123456789abcdef\b\xc9\xbc\xf3g\xe6\tj;\xa7\xca\x84\x85\xaeg\xbb+\xf8\x94\xfer\xf3n<\xf1\x36\x1d_:\xf5O\xa5\xd1\x82\xe6\xad\x7fR\x0eQ\x1fl>+\x8ch\x05\x9bk\xbd\x41\xfb\xab\xd9\x83\x1fy!~\x13\x19\xcd\xe0["; // 0x371c0
-int32_t i_g10 = -0x7fd7febf; // 0x479c0
-int32_t i_g11 = 10; // 0x479c8
-int32_t i_g12 = 0x7003a01; // 0x479cc
-int32_t i_g13 = -1; // 0x479d8
-int32_t i_g14 = 0x2115111; // 0x479dc
-int32_t i_g15 = 0; // 0x479ec
-int32_t i_g16 = 20; // 0x479f8
-int32_t i_g17 = 3; // 0x47a00
-int32_t i_g18 = 0; // 0x47a04
-char * p_g20; // 0x48184
-int32_t i_g21 = 0; // 0x48188
-int32_t i_g22 = 0; // 0x4818c
-int32_t i_g23 = 0; // 0x48190
-char * p_g24; // 0x48194
-char * p_g25; // 0x481a4
-int32_t i_g26 = 0x11168; // 0x481bc
-struct _IO_FILE * p_g27 = NULL; // 0x483e0
-struct _IO_FILE * p_g28 = NULL; // 0x483e8
-struct _IO_FILE * p_g29 = NULL; // 0x483ec
-char * p_g30; // 0x483f0
-int32_t i_g31 = 0; // 0x483f4
-char * p_g32; // 0x483f8
-int32_t i_g33 = 0; // 0x493e0
-int64_t i_g34 = 0; // 0x493f8
-int32_t i_g35 = 0; // 0x493fc
-int32_t i_g36 = 0; // 0x49400
-int32_t i_g37 = 0; // 0x49408
-int32_t i_g38 = 0; // 0x4940c
-int32_t i_g39 = 0; // 0x49410
-int32_t i_g40 = 0; // 0x49414
-int32_t i_g41 = 0; // 0x49418
-int32_t i_g42 = 0; // 0x4941c
-int32_t i_g43 = 0; // 0x494d0
-int32_t i_g44 = 0; // 0x494e8
-int32_t i_g45 = 0; // 0x494ec
-char * p_g46; // 0x4b608
-char * p_g47; // 0x4b708
-int32_t i_g48 = 0; // 0x4b794
-int32_t i_g49 = 0; // 0x4b798
-int32_t i_g50 = 0; // 0x4b7c8
-int32_t i_g51 = 0; // 0x4b7cc
-int32_t i_g52 = 0; // 0x4b7d0
-int32_t i_g53 = 0; // 0x4b7d4
-int32_t i_g54 = 0; // 0x4b7d8
-int32_t i_g55 = 0; // 0x4b7dc
-int32_t i_g56 = 0; // 0x4b7e0
-int32_t i_g57 = 0; // 0x4b7e4
-int32_t i_g58 = 0; // 0x4b7ec
-int32_t i_g59 = 0; // 0x4b7f4
-int32_t i_g60 = 0; // 0x4b80c
-char * p_g61; // 0x4b810
-int32_t i_g62 = 0; // 0x4b81c
-int32_t i_g63 = 0; // 0x4b82c
-int32_t i_g64 = 0; // 0x4b830
-int32_t i_g65 = 0; // 0x4b834
-int32_t i_g66 = 0; // 0x4b838
-int32_t i_g67 = 0; // 0x4b83c
-char * p_g68; // 0x4b840
-char * p_g69; // 0x4b844
-char * p_g70; // 0x4b850
-char * p_g71; // 0x4b854
-char * p_g72; // 0x4b860
-char * p_g73; // 0x4b864
-char * p_g74; // 0x4b870
-char * p_g75; // 0x4b874
-int32_t i_g76 = 0; // 0x4b880
-char * p_g77; // 0x4b884
-int32_t i_g78 = 0; // 0x4b888
-int32_t i_g79 = 0; // 0x4b88c
-int32_t i_g80 = 0; // 0x4b890
-int32_t i_g81 = 0; // 0x4b894
-int32_t i_g82 = 0; // 0x4b898
-int32_t i_g83 = 0; // 0x4b89c
-int32_t i_g84 = 0; // 0x4b8a0
-int32_t i_g85 = 0; // 0x4b8a4
-int32_t i_g86 = 0; // 0x4b8a8
-int32_t i_g87 = 0; // 0x4b8ac
-int32_t i_g88 = 0; // 0x4b8c8
-int32_t i_g89 = 0; // 0x4b8cc
-int32_t i_g90 = 0; // 0x4b8d4
-int32_t i_g91 = 0; // 0x540fd
-int32_t i_g92 = 0; // 0x61a80
-bool i_g93 = false; // 0x70800
-int32_t i_g94 = 0; // 0x7a120
-bool i_g95 = false; // 0xe1000
-int32_t i_g96 = 0; // 0xf4240
-int32_t i_g97 = 0; // 0xf4dd4
-int32_t i_g98 = 0; // 0xf4dd8
-int32_t i_g99 = 0; // 0xf4ddc
-int32_t green_led_fd = 0; // 0x4942c
+int64_t blake2b_IV[8] = {0x6a09e667f3bcc908, -0x4498517a7b3558c5,
+                         0x3c6ef372fe94f82b, -0x5ab00ac5a0e2c90f,
+                         0x510e527fade682d1, -0x64fa9773d4c193e1,
+                         0x1f83d9abfb41bd6b, 0x5be0cd19137e2179}; // 0x371d0
+int32_t cgpu = 0;                                                 // 0x4b7c0
+int32_t chain_info = 0;                                           // 0x4b820
+char chip_high = 0;                                               // 0x4948f
+char chip_temp[3];                                                // 0x49488
+int32_t compare_size = 3;                                         // 0x48150
+int32_t console_lock = 0;                                         // 0x4949c
+// Detected cryptographic pattern: CRC_16_CCITT_poly_0x1021 (16-bit, little
+// endian)
+int16_t crc_itu_t_table[256] = {
+    0,       0x1021,  0x2042,  0x3063,  0x4084,  0x50a5,  0x60c6,
+    0x70e7,  -0x7ef8, -0x6ed7, -0x5eb6, -0x4e95, -0x3e74, -0x2e53,
+    -0x1e32, -3601,   0x1231,  528,     0x3273,  0x2252,  0x52b5,
+    0x4294,  0x72f7,  0x62d6,  -0x6cc7, -0x7ce8, -0x4c85, -0x5ca6,
+    -0x2c43, -0x3c64, -3073,   -0x1c22, 0x2462,  0x3443,  1056,
+    0x1401,  0x64e6,  0x74c7,  0x44a4,  0x5485,  -0x5a96, -0x4ab5,
+    -0x7ad8, -0x6af7, -0x1a12, -2609,   -0x3a54, -0x2a73, 0x3653,
+    0x2672,  0x1611,  1584,    0x76d7,  0x66f6,  0x5695,  0x46b4,
+    -0x48a5, -0x5886, -0x68e7, -0x78c8, -2081,   -0x1802, -0x2863,
+    -0x3844, 0x48c4,  0x58e5,  0x6886,  0x78a7,  2112,    0x1861,
+    0x2802,  0x3823,  -0x3634, -0x2613, -0x1672, -1617,   -0x76b8,
+    -0x6697, -0x56f6, -0x46d5, 0x5af5,  0x4ad4,  0x7ab7,  0x6a96,
+    0x1a71,  2640,    0x3a33,  0x2a12,  -0x2403, -0x3424, -1089,
+    -0x1462, -0x6487, -0x74a8, -0x44c5, -0x54e6, 0x6ca6,  0x7c87,
+    0x4ce4,  0x5cc5,  0x2c22,  0x3c03,  3168,    0x1c41,  -0x1252,
+    -625,    -0x3214, -0x2233, -0x52d6, -0x42f5, -0x7298, -0x62b7,
+    0x7e97,  0x6eb6,  0x5ed5,  0x4ef4,  0x3e13,  0x2e32,  0x1e51,
+    3696,    -97,     -0x1042, -0x2023, -0x3004, -0x40e5, -0x50c6,
+    -0x60a7, -0x7088, -0x6e78, -0x7e57, -0x4e36, -0x5e15, -0x2ef4,
+    -0x3ed3, -3762,   -0x1e91, 0x1080,  161,     0x30c2,  0x20e3,
+    0x5004,  0x4025,  0x7046,  0x6067,  -0x7c47, -0x6c68, -0x5c05,
+    -0x4c26, -0x3cc3, -0x2ce4, -0x1c81, -3234,   689,     0x1290,
+    0x22f3,  0x32d2,  0x4235,  0x5214,  0x6277,  0x7256,  -0x4a16,
+    -0x5a35, -0x6a58, -0x7a77, -2706,   -0x1ab1, -0x2ad4, -0x3af3,
+    0x34e2,  0x24c3,  0x14a0,  1153,    0x7466,  0x6447,  0x5424,
+    0x4405,  -0x5825, -0x4806, -0x7867, -0x6848, -0x18a1, -2178,
+    -0x38e3, -0x28c4, 0x26d3,  0x36f2,  1681,    0x16b0,  0x6657,
+    0x7676,  0x4615,  0x5634,  -0x26b4, -0x3693, -1778,   -0x16d1,
+    -0x6638, -0x7617, -0x4676, -0x5655, 0x5844,  0x4865,  0x7806,
+    0x6827,  0x18c0,  2273,    0x3882,  0x28a3,  -0x3483, -0x24a4,
+    -0x14c1, -1250,   -0x7407, -0x6428, -0x5445, -0x4466, 0x4a75,
+    0x5a54,  0x6a37,  0x7a16,  2801,    0x1ad0,  0x2ab3,  0x3a92,
+    -722,    -0x12f1, -0x2294, -0x32b3, -0x4256, -0x5275, -0x6218,
+    -0x7237, 0x7c26,  0x6c07,  0x5c64,  0x4c45,  0x3ca2,  0x2c83,
+    0x1ce0,  3265,    -0x10e1, -194,    -0x30a3, -0x2084, -0x5065,
+    -0x4046, -0x7027, -0x6008, 0x6e17,  0x7e36,  0x4e55,  0x5e74,
+    0x2e93,  0x3eb2,  3793,    0x1ef0}; // 0x372d0
+int32_t fd_fpga = 0;                    // 0x4b7bc
+int32_t fd_fpga_mem = 0;                // 0x4b7b8
+int32_t *fpga_mem_addr = NULL;          // 0x49420
+int32_t freq_pll = 16;                  // 0x47a58
+char gChain = -1;                       // 0x481b7
+char gI2c = 0;                          // 0x49478
+int32_t g_nonce = 0;                    // 0x4a600
+char g_nonce_list[3][1][16][91];        // 0x494f0
+int32_t g_patten = 0;                   // 0x4b828
+int32_t g_work_info = 0;                // 0x4b5e8
+int32_t i_g1 = -0x1cae0000;             // 0x112b0
+int32_t i_g3 = 49;                      // 0x35004
+int32_t i_g4 = 48;                      // 0x35008
+int32_t i_g5 = 32;                      // 0x365dc
+char *p_g6 = "\x1b[0;31m%s%s\x1b[0m";   // 0x36be8
+char *p_g7 = "\x1b[1;34m%s%s\x1b[0m";   // 0x36bf8
+char *p_g8;                             // 0x36c3c
+char *p_g9 =
+    "0123456789abcdef\b\xc9\xbc\xf3g\xe6\tj;\xa7\xca\x84\x85\xaeg\xbb+"
+    "\xf8\x94\xfer\xf3n<\xf1\x36\x1d_:\xf5O\xa5\xd1\x82\xe6\xad\x7fR\x0eQ\x1fl>"
+    "+\x8ch\x05\x9bk\xbd\x41\xfb\xab\xd9\x83\x1fy!~\x13\x19\xcd\xe0["; // 0x371c0
+int32_t i_g10 = -0x7fd7febf;    // 0x479c0
+int32_t i_g11 = 10;             // 0x479c8
+int32_t i_g12 = 0x7003a01;      // 0x479cc
+int32_t i_g13 = -1;             // 0x479d8
+int32_t i_g14 = 0x2115111;      // 0x479dc
+int32_t i_g15 = 0;              // 0x479ec
+int32_t i_g16 = 20;             // 0x479f8
+int32_t i_g17 = 3;              // 0x47a00
+int32_t i_g18 = 0;              // 0x47a04
+char *p_g20;                    // 0x48184
+int32_t i_g21 = 0;              // 0x48188
+int32_t i_g22 = 0;              // 0x4818c
+int32_t i_g23 = 0;              // 0x48190
+char *p_g24;                    // 0x48194
+char *p_g25;                    // 0x481a4
+int32_t i_g26 = 0x11168;        // 0x481bc
+struct _IO_FILE *p_g27 = NULL;  // 0x483e0
+struct _IO_FILE *p_g28 = NULL;  // 0x483e8
+struct _IO_FILE *p_g29 = NULL;  // 0x483ec
+char *p_g30;                    // 0x483f0
+int32_t i_g31 = 0;              // 0x483f4
+char *p_g32;                    // 0x483f8
+int32_t i_g33 = 0;              // 0x493e0
+int64_t i_g34 = 0;              // 0x493f8
+int32_t i_g35 = 0;              // 0x493fc
+int32_t i_g36 = 0;              // 0x49400
+int32_t i_g37 = 0;              // 0x49408
+int32_t i_g38 = 0;              // 0x4940c
+int32_t i_g39 = 0;              // 0x49410
+int32_t i_g40 = 0;              // 0x49414
+int32_t i_g41 = 0;              // 0x49418
+int32_t i_g42 = 0;              // 0x4941c
+int32_t i_g43 = 0;              // 0x494d0
+int32_t i_g44 = 0;              // 0x494e8
+int32_t i_g45 = 0;              // 0x494ec
+char *p_g46;                    // 0x4b608
+char *p_g47;                    // 0x4b708
+int32_t i_g48 = 0;              // 0x4b794
+int32_t i_g49 = 0;              // 0x4b798
+int32_t i_g50 = 0;              // 0x4b7c8
+int32_t i_g51 = 0;              // 0x4b7cc
+int32_t i_g52 = 0;              // 0x4b7d0
+int32_t i_g53 = 0;              // 0x4b7d4
+int32_t i_g54 = 0;              // 0x4b7d8
+int32_t i_g55 = 0;              // 0x4b7dc
+int32_t i_g56 = 0;              // 0x4b7e0
+int32_t i_g57 = 0;              // 0x4b7e4
+int32_t i_g58 = 0;              // 0x4b7ec
+int32_t i_g59 = 0;              // 0x4b7f4
+int32_t i_g60 = 0;              // 0x4b80c
+char *p_g61;                    // 0x4b810
+int32_t i_g62 = 0;              // 0x4b81c
+int32_t i_g63 = 0;              // 0x4b82c
+int32_t i_g64 = 0;              // 0x4b830
+int32_t i_g65 = 0;              // 0x4b834
+int32_t i_g66 = 0;              // 0x4b838
+int32_t i_g67 = 0;              // 0x4b83c
+char *p_g68;                    // 0x4b840
+char *p_g69;                    // 0x4b844
+char *p_g70;                    // 0x4b850
+char *p_g71;                    // 0x4b854
+char *p_g72;                    // 0x4b860
+char *p_g73;                    // 0x4b864
+char *p_g74;                    // 0x4b870
+char *p_g75;                    // 0x4b874
+int32_t i_g76 = 0;              // 0x4b880
+char *p_g77;                    // 0x4b884
+int32_t i_g78 = 0;              // 0x4b888
+int32_t i_g79 = 0;              // 0x4b88c
+int32_t i_g80 = 0;              // 0x4b890
+int32_t i_g81 = 0;              // 0x4b894
+int32_t i_g82 = 0;              // 0x4b898
+int32_t i_g83 = 0;              // 0x4b89c
+int32_t i_g84 = 0;              // 0x4b8a0
+int32_t i_g85 = 0;              // 0x4b8a4
+int32_t i_g86 = 0;              // 0x4b8a8
+int32_t i_g87 = 0;              // 0x4b8ac
+int32_t i_g88 = 0;              // 0x4b8c8
+int32_t i_g89 = 0;              // 0x4b8cc
+int32_t i_g90 = 0;              // 0x4b8d4
+int32_t i_g91 = 0;              // 0x540fd
+int32_t i_g92 = 0;              // 0x61a80
+bool i_g93 = false;             // 0x70800
+int32_t i_g94 = 0;              // 0x7a120
+bool i_g95 = false;             // 0xe1000
+int32_t i_g96 = 0;              // 0xf4240
+int32_t i_g97 = 0;              // 0xf4dd4
+int32_t i_g98 = 0;              // 0xf4dd8
+int32_t i_g99 = 0;              // 0xf4ddc
+int32_t green_led_fd = 0;       // 0x4942c
 int32_t hardware_exception = 0; // 0x49494
-int32_t hex2bin_tbl[256] = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, -1, -1, -1, -1, -1, -1, -1, 10, 11, 12, 13, 14, 15, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 10, 11, 12, 13, 14, 15, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}; // 0x36dac
-int32_t i2c_mutex = 0; // 0x49430
-char x_g100[2] = " "; // 0x48174
-int32_t nonce_fifo = 0; // 0x4b8c4
-int32_t nonce_mutex = 0; // 0x494b4
-char nonce_test_asic_result[3]; // 0x4b824
-bool opt_debug = false; // 0x4949a
-int32_t opt_log_level = 2; // 0x481b8
-bool opt_log_output = false; // 0x4949b
-bool opt_quiet = false; // 0x49499
-int32_t p_miner = 0; // 0x4b7b0
-int32_t pattern_level = 0; // 0x49484
-int32_t pattern_result = 0; // 0x49480
-char pcb_high = 0; // 0x49490
-char pcb_temp[3]; // 0x4948c
-int32_t read_temp_test_result = 0; // 0x4947c
-int32_t red_led_fd = 0; // 0x49428
-int32_t rs = 0; // 0x494cc
+int32_t hex2bin_tbl[256] = {
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0,  1,  2,  3,  4,  5,  6,  7,  8,
+    9,  -1, -1, -1, -1, -1, -1, -1, 10, 11, 12, 13, 14, 15, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, 10, 11, 12, 13, 14, 15, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1}; // 0x36dac
+int32_t i2c_mutex = 0;                   // 0x49430
+char x_g100[2] = " ";                    // 0x48174
+int32_t nonce_fifo = 0;                  // 0x4b8c4
+int32_t nonce_mutex = 0;                 // 0x494b4
+char nonce_test_asic_result[3];          // 0x4b824
+bool opt_debug = false;                  // 0x4949a
+int32_t opt_log_level = 2;               // 0x481b8
+bool opt_log_output = false;             // 0x4949b
+bool opt_quiet = false;                  // 0x49499
+int32_t p_miner = 0;                     // 0x4b7b0
+int32_t pattern_level = 0;               // 0x49484
+int32_t pattern_result = 0;              // 0x49480
+char pcb_high = 0;                       // 0x49490
+char pcb_temp[3];                        // 0x4948c
+int32_t read_temp_test_result = 0;       // 0x4947c
+int32_t red_led_fd = 0;                  // 0x49428
+int32_t rs = 0;                          // 0x494cc
 // Detected cryptographic pattern: SHA256 (32-bit, little endian)
-int32_t sha256_h0[8] = {0x6a09e667, -0x4498517b, 0x3c6ef372, -0x5ab00ac6, 0x510e527f, -0x64fa9774, 0x1f83d9ab, 0x5be0cd19}; // 0x482c0
-int32_t uart_receive_mutex[1]; // 0x49460
-int32_t uart_send_mutex[1]; // 0x49448
-bool use_syslog = false; // 0x49498
+int32_t sha256_h0[8] = {0x6a09e667,  -0x4498517b, 0x3c6ef372,
+                        -0x5ab00ac6, 0x510e527f,  -0x64fa9774,
+                        0x1f83d9ab,  0x5be0cd19}; // 0x482c0
+int32_t uart_receive_mutex[1];                    // 0x49460
+int32_t uart_send_mutex[1];                       // 0x49448
+bool use_syslog = false;                          // 0x49498
 int32_t i_g101;
 int32_t work_list_info = 0; // 0xf4d84
-int32_t * p_g2 = &i_g91; // 0x346c4
-int32_t * p_g19 = &i_g94; // 0x48148
+int32_t *p_g2 = &i_g91;     // 0x346c4
+int32_t *p_g19 = &i_g94;    // 0x48148
 
 // ------- Dynamically Linked Functions Without Header --------
 
 void __gmon_start__(void);
-int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char ** p_a3, void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
+int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char **p_a3,
+                          void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
 
 // ------------------------ Functions -------------------------
 
@@ -614,19 +747,19 @@ int32_t _init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x10f34 - 0x10f40
-int32_t _24_a(int32_t * mutex) {
+int32_t _24_a(int32_t *mutex) {
     // 0x10f34
     return pthread_mutex_unlock(mutex);
 }
 
 // Address range: 0x10f40 - 0x10f4c
-int32_t * function_10f40(int32_t nmemb, int32_t size) {
+int32_t *function_10f40(int32_t nmemb, int32_t size) {
     // 0x10f40
     return calloc(nmemb, size);
 }
 
 // Address range: 0x10f4c - 0x10f58
-char * function_10f4c(char * haystack, char * needle) {
+char *function_10f4c(char *haystack, char *needle) {
     // 0x10f4c
     return strstr(haystack, needle);
 }
@@ -638,67 +771,67 @@ int32_t function_10f58(int32_t sig) {
 }
 
 // Address range: 0x10f64 - 0x10f70
-int32_t function_10f64(char * s1, char * s2) {
+int32_t function_10f64(char *s1, char *s2) {
     // 0x10f64
     return strcmp(s1, s2);
 }
 
 // Address range: 0x10f70 - 0x10f7c
-int32_t function_10f70(char * format, ...) {
+int32_t function_10f70(char *format, ...) {
     // 0x10f70
     return printf(format);
 }
 
 // Address range: 0x10f7c - 0x10f88
-int32_t function_10f7c(struct _IO_FILE * stream, char * format, ...) {
+int32_t function_10f7c(struct _IO_FILE *stream, char *format, ...) {
     // 0x10f7c
     return fscanf(stream, format);
 }
 
 // Address range: 0x10f88 - 0x10f94
-struct _IO_FILE * function_10f88(char * filename, char * modes) {
+struct _IO_FILE *function_10f88(char *filename, char *modes) {
     // 0x10f88
     return fopen(filename, modes);
 }
 
 // Address range: 0x10f94 - 0x10fa0
-int32_t function_10f94(int32_t fd, int32_t * buf, int32_t nbytes) {
+int32_t function_10f94(int32_t fd, int32_t *buf, int32_t nbytes) {
     // 0x10f94
     return read(fd, buf, nbytes);
 }
 
 // Address range: 0x10fa0 - 0x10fac
-int32_t function_10fa0(int32_t * mutex) {
+int32_t function_10fa0(int32_t *mutex) {
     // 0x10fa0
     return pthread_mutex_destroy(mutex);
 }
 
 // Address range: 0x10fac - 0x10fb8
-int32_t function_10fac(struct _IO_FILE * stream) {
+int32_t function_10fac(struct _IO_FILE *stream) {
     // 0x10fac
     return fflush(stream);
 }
 
 // Address range: 0x10fb8 - 0x10fc4
-int32_t * function_10fb8(int32_t * dest, int32_t * src, int32_t n) {
+int32_t *function_10fb8(int32_t *dest, int32_t *src, int32_t n) {
     // 0x10fb8
     return memmove(dest, src, n);
 }
 
 // Address range: 0x10fc4 - 0x10fd0
-void function_10fc4(int32_t * ptr) {
+void function_10fc4(int32_t *ptr) {
     // 0x10fc4
     free(ptr);
 }
 
 // Address range: 0x10fd0 - 0x10fdc
-char * function_10fd0(char * s, int32_t n, struct _IO_FILE * stream) {
+char *function_10fd0(char *s, int32_t n, struct _IO_FILE *stream) {
     // 0x10fd0
     return fgets(s, n, stream);
 }
 
 // Address range: 0x10fdc - 0x10fe8
-int32_t function_10fdc(int32_t * mutex) {
+int32_t function_10fdc(int32_t *mutex) {
     // 0x10fdc
     return pthread_mutex_lock(mutex);
 }
@@ -716,13 +849,13 @@ int32_t function_10ff4(void) {
 }
 
 // Address range: 0x11000 - 0x1100c
-int32_t * function_11000(int32_t * dest, int32_t * src, int32_t n) {
+int32_t *function_11000(int32_t *dest, int32_t *src, int32_t n) {
     // 0x11000
     return memcpy(dest, src, n);
 }
 
 // Address range: 0x1100c - 0x11018
-int32_t function_1100c(int32_t * mutex, int32_t * mutexattr) {
+int32_t function_1100c(int32_t *mutex, int32_t *mutexattr) {
     // 0x1100c
     return pthread_mutex_init(mutex, mutexattr);
 }
@@ -734,13 +867,13 @@ int32_t function_11018(int32_t fd, int32_t offset, int32_t whence) {
 }
 
 // Address range: 0x11024 - 0x11030
-int32_t function_11024(int32_t * mutex) {
+int32_t function_11024(int32_t *mutex) {
     // 0x11024
     return pthread_mutex_trylock(mutex);
 }
 
 // Address range: 0x11030 - 0x1103c
-int32_t function_11030(int32_t * s1, int32_t * s2, int32_t n) {
+int32_t function_11030(int32_t *s1, int32_t *s2, int32_t n) {
     // 0x11030
     return memcmp(s1, s2, n);
 }
@@ -752,19 +885,20 @@ int32_t function_1103c(int32_t seconds) {
 }
 
 // Address range: 0x11048 - 0x11054
-int32_t function_11048(int32_t * cond, int32_t * cond_attr) {
+int32_t function_11048(int32_t *cond, int32_t *cond_attr) {
     // 0x11048
     return pthread_cond_init(cond, cond_attr);
 }
 
 // Address range: 0x11054 - 0x11060
-int32_t function_11054(int32_t * cond) {
+int32_t function_11054(int32_t *cond) {
     // 0x11054
     return pthread_cond_destroy(cond);
 }
 
 // Address range: 0x11060 - 0x1106c
-int32_t function_11060(int32_t * ptr, int32_t size, int32_t n, struct _IO_FILE * s) {
+int32_t function_11060(int32_t *ptr, int32_t size, int32_t n,
+                       struct _IO_FILE *s) {
     // 0x11060
     return fwrite(ptr, size, n, s);
 }
@@ -776,49 +910,51 @@ int32_t function_1106c(int32_t useconds) {
 }
 
 // Address range: 0x11078 - 0x11084
-char * function_11078(char * dest, char * src) {
+char *function_11078(char *dest, char *src) {
     // 0x11078
     return strcpy(dest, src);
 }
 
 // Address range: 0x11084 - 0x11090
-int32_t function_11084(struct timeval * tv, struct timezone * tz) {
+int32_t function_11084(struct timeval *tv, struct timezone *tz) {
     // 0x11084
     return gettimeofday(tv, tz);
 }
 
 // Address range: 0x11090 - 0x1109c
-int32_t function_11090(int32_t * newthread, int32_t * attr, int32_t * (*start_routine)(int32_t *), int32_t * arg) {
+int32_t function_11090(int32_t *newthread, int32_t *attr,
+                       int32_t *(*start_routine)(int32_t *), int32_t *arg) {
     // 0x11090
     return pthread_create(newthread, attr, start_routine, arg);
 }
 
 // Address range: 0x1109c - 0x110a8
-int32_t function_1109c(char * s) {
+int32_t function_1109c(char *s) {
     // 0x1109c
     return puts(s);
 }
 
 // Address range: 0x110a8 - 0x110b4
-int32_t * function_110a8(int32_t size) {
+int32_t *function_110a8(int32_t size) {
     // 0x110a8
     return malloc(size);
 }
 
 // Address range: 0x110b4 - 0x110c0
-int32_t function_110b4(int32_t main2, int32_t argc, char ** ubp_av, void (*init)(), void (*fini)(), void (*rtld_fini)()) {
+int32_t function_110b4(int32_t main2, int32_t argc, char **ubp_av,
+                       void (*init)(), void (*fini)(), void (*rtld_fini)()) {
     // 0x110b4
     return __libc_start_main(main2, argc, ubp_av, init, fini, rtld_fini);
 }
 
 // Address range: 0x110c0 - 0x110cc
-char * function_110c0(int32_t errnum) {
+char *function_110c0(int32_t errnum) {
     // 0x110c0
     return strerror(errnum);
 }
 
 // Address range: 0x110cc - 0x110d8
-struct tm * function_110cc(int32_t * timer) {
+struct tm *function_110cc(int32_t *timer) {
     // 0x110cc
     return localtime(timer);
 }
@@ -830,7 +966,7 @@ void function_110d8(void) {
 }
 
 // Address range: 0x110e4 - 0x110f0
-int32_t function_110e4(char * file, int32_t oflag, ...) {
+int32_t function_110e4(char *file, int32_t oflag, ...) {
     // 0x110e4
     return open(file, oflag);
 }
@@ -842,31 +978,32 @@ void function_110f0(int32_t status) {
 }
 
 // Address range: 0x110fc - 0x11108
-int32_t function_110fc(struct _IO_FILE * stream) {
+int32_t function_110fc(struct _IO_FILE *stream) {
     // 0x110fc
     return feof(stream);
 }
 
 // Address range: 0x11108 - 0x11114
-int32_t function_11108(char * nptr, char ** endptr, int32_t base) {
+int32_t function_11108(char *nptr, char **endptr, int32_t base) {
     // 0x11108
     return strtoul(nptr, endptr, base);
 }
 
 // Address range: 0x11114 - 0x11120
-int32_t function_11114(char * s) {
+int32_t function_11114(char *s) {
     // 0x11114
     return strlen(s);
 }
 
 // Address range: 0x11120 - 0x1112c
-int32_t * function_11120(int32_t * addr, int32_t len, int32_t prot, int32_t flags, int32_t fd, int32_t offset) {
+int32_t *function_11120(int32_t *addr, int32_t len, int32_t prot, int32_t flags,
+                        int32_t fd, int32_t offset) {
     // 0x11120
     return mmap(addr, len, prot, flags, fd, offset);
 }
 
 // Address range: 0x1112c - 0x11138
-int32_t function_1112c(struct _IO_FILE * stream, char * format, ...) {
+int32_t function_1112c(struct _IO_FILE *stream, char *format, ...) {
     // 0x1112c
     return fprintf(stream, format);
 }
@@ -878,19 +1015,19 @@ int32_t function_11138(int32_t fd, int32_t cmd, ...) {
 }
 
 // Address range: 0x11144 - 0x11150
-int32_t * function_11144(void) {
+int32_t *function_11144(void) {
     // 0x11144
     return __errno_location();
 }
 
 // Address range: 0x11150 - 0x1115c
-int32_t function_11150(char * s, int32_t maxlen, char * format, ...) {
+int32_t function_11150(char *s, int32_t maxlen, char *format, ...) {
     // 0x11150
     return snprintf(s, maxlen, format);
 }
 
 // Address range: 0x1115c - 0x11168
-int32_t function_1115c(char * s, char * format, ...) {
+int32_t function_1115c(char *s, char *format, ...) {
     // 0x1115c
     return sscanf(s, format);
 }
@@ -908,67 +1045,68 @@ int32_t function_11180(int32_t th) {
 }
 
 // Address range: 0x1118c - 0x11198
-int32_t function_1118c(int32_t fd, int32_t * buf, int32_t n) {
+int32_t function_1118c(int32_t fd, int32_t *buf, int32_t n) {
     // 0x1118c
     return write(fd, buf, n);
 }
 
 // Address range: 0x11198 - 0x111a4
-int32_t function_11198(struct _IO_FILE * stream) {
+int32_t function_11198(struct _IO_FILE *stream) {
     // 0x11198
     return fileno(stream);
 }
 
 // Address range: 0x111a4 - 0x111b0
-int32_t function_111a4(struct _IO_FILE * stream) {
+int32_t function_111a4(struct _IO_FILE *stream) {
     // 0x111a4
     return fclose(stream);
 }
 
 // Address range: 0x111b0 - 0x111bc
-int32_t function_111b0(int32_t * addr, int32_t len) {
+int32_t function_111b0(int32_t *addr, int32_t len) {
     // 0x111b0
     return munmap(addr, len);
 }
 
 // Address range: 0x111bc - 0x111c8
-int32_t function_111bc(int32_t th, int32_t ** thread_return) {
+int32_t function_111bc(int32_t th, int32_t **thread_return) {
     // 0x111bc
     return pthread_join(th, thread_return);
 }
 
 // Address range: 0x111c8 - 0x111d4
-int32_t function_111c8(char * s, char * format, ...) {
+int32_t function_111c8(char *s, char *format, ...) {
     // 0x111c8
     return sprintf(s, format);
 }
 
 // Address range: 0x111d4 - 0x111e0
-int32_t function_111d4(char * filename) {
+int32_t function_111d4(char *filename) {
     // 0x111d4
     return remove(filename);
 }
 
 // Address range: 0x111e0 - 0x111ec
-int32_t function_111e0(char * nptr) {
+int32_t function_111e0(char *nptr) {
     // 0x111e0
     return atoi(nptr);
 }
 
 // Address range: 0x111ec - 0x111f8
-void function_111ec(int32_t * base, int32_t nmemb, int32_t size, int32_t (*compar)(int32_t *, int32_t *)) {
+void function_111ec(int32_t *base, int32_t nmemb, int32_t size,
+                    int32_t (*compar)(int32_t *, int32_t *)) {
     // 0x111ec
     qsort(base, nmemb, size, compar);
 }
 
 // Address range: 0x111f8 - 0x11204
-int32_t function_111f8(int32_t * cond, int32_t * mutex) {
+int32_t function_111f8(int32_t *cond, int32_t *mutex) {
     // 0x111f8
     return pthread_cond_wait(cond, mutex);
 }
 
 // Address range: 0x11204 - 0x11210
-float64_t function_11204(char * nptr) {
+float64_t function_11204(char *nptr) {
     // 0x11204
     return atof(nptr);
 }
@@ -980,7 +1118,7 @@ void function_11210(void) {
 }
 
 // Address range: 0x1121c - 0x11228
-int32_t function_1121c(struct _IO_FILE * stream, int32_t off, int32_t whence) {
+int32_t function_1121c(struct _IO_FILE *stream, int32_t off, int32_t whence) {
     // 0x1121c
     return fseek(stream, off, whence);
 }
@@ -992,13 +1130,13 @@ int32_t function_11228(int32_t fd) {
 }
 
 // Address range: 0x11234 - 0x11240
-int32_t function_11234(char * s1, char * s2, int32_t n) {
+int32_t function_11234(char *s1, char *s2, int32_t n) {
     // 0x11234
     return strncmp(s1, s2, n);
 }
 
 // Address range: 0x11240 - 0x1124c
-int32_t function_11240(int32_t * cond) {
+int32_t function_11240(int32_t *cond) {
     // 0x11240
     return pthread_cond_signal(cond);
 }
@@ -1016,7 +1154,7 @@ int32_t function_11258(int32_t fd) {
 }
 
 // Address range: 0x11264 - 0x11270
-void function_11264(char * assertion, char * file, int32_t line, char * function) {
+void function_11264(char *assertion, char *file, int32_t line, char *function) {
     // 0x11264
     __assert_fail(assertion, file, line, function);
 }
@@ -1025,7 +1163,8 @@ void function_11264(char * assertion, char * file, int32_t line, char * function
 int32_t _start(int32_t i_a1, int32_t i_a2) {
     // 0x11270
     int32_t i_v1; // 0x11270
-    __libc_start_main(0x174cd, i_a2, (char **)&i_v1, (void (*)())0x33e75, (void (*)())0x174cd, (void (*)())i_a1);
+    __libc_start_main(0x174cd, i_a2, (char **)&i_v1, (void (*)())0x33e75,
+                      (void (*)())0x174cd, (void (*)())i_a1);
     abort();
     // UNREACHABLE
 }
@@ -1038,7 +1177,8 @@ int32_t _24_d(int32_t i_a1) {
 
 // Address range: 0x112a0 - 0x112bc
 int32_t call_weak_fn(void) {
-    int32_t i_v1 = *(int32_t *)((int32_t)&i_g1 + (int32_t)&i_g5 + 288); // 0x112ac
+    int32_t i_v1 =
+        *(int32_t *)((int32_t)&i_g1 + (int32_t)&i_g5 + 288); // 0x112ac
     if (i_v1 == 0) {
         int32_t i_v2; // 0x112a0
         return i_v2;
@@ -1079,20 +1219,21 @@ int32_t frame_dummy(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     return register_tm_clones();
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11350 - 0x1149e
-// Line range:    64 - 80
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11350 - 0x1149e Line range:    64 - 80
 char get_bt8d_from_baud(int32_t baud) {
-    int32_t i_v1 = 0; // 0x11410
+    int32_t i_v1 = 0;         // 0x11410
     int32_t i_v2 = 12 * i_v1; // 0x1137c
-    char i_v3; // 0x11350
-    char * p_v4; // bp-1048, 0x11350
+    char i_v3;                // 0x11350
+    char *p_v4;               // bp-1048, 0x11350
     while (*(int32_t *)(i_v2 + (int32_t)&baud_BT8D_values) != baud) {
         // 0x1140c
         i_v1++;
         if (i_v1 >= 5) {
             // 0x1142e
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 3) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 ==
+                opt_log_level < 3) {
                 // 0x11486
                 i_v3 = get_bt8d_from_baud(0x1c200);
                 return i_v3;
@@ -1107,23 +1248,24 @@ char get_bt8d_from_baud(int32_t baud) {
         }
         i_v2 = 12 * i_v1;
     }
-    char * p_v5 = (char *)(i_v2 + (int32_t)&baud_BT8D_values + 4);
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 3) {
+    char *p_v5 = (char *)(i_v2 + (int32_t)&baud_BT8D_values + 4);
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 3) {
         // 0x113b4
         snprintf((char *)&p_v4, 1024, "get bt8d %d\n", (int32_t)*p_v5);
         _applog(3, (char *)&p_v4, false);
     }
     // 0x113f0
     i_v3 = *p_v5;
-  lab_0x11494:
+lab_0x11494:
     // 0x11494
     return i_v3;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x114a0 - 0x11502
-// Line range:    215 - 228
-void get_plldata(int32_t freq, int32_t * vil_data) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x114a0 - 0x11502 Line range:    215 - 228
+void get_plldata(int32_t freq, int32_t *vil_data) {
     int32_t i_v1 = (int32_t)vil_data;
     int32_t i_v2 = 0;
     int32_t i_v3 = 16 * i_v2;
@@ -1147,40 +1289,45 @@ void get_plldata(int32_t freq, int32_t * vil_data) {
     i_v6 = i_v2;
     i_v4 = __asm_nop(freq, i_v1, freq, freq);
     goto lab_0x114d6_2;
-  lab_0x114d6_2:;
-    int32_t i_v7 = i_v6 == 110 ? (int32_t)&freq_pll + 76 : i_v5 + (int32_t)&freq_pll + 12; // 0x114ee
-    int32_t i_v8 = *(int32_t *)i_v7; // 0x114f0
+lab_0x114d6_2:;
+    int32_t i_v7 = i_v6 == 110 ? (int32_t)&freq_pll + 76
+                               : i_v5 + (int32_t)&freq_pll + 12; // 0x114ee
+    int32_t i_v8 = *(int32_t *)i_v7;                             // 0x114f0
     *vil_data = i_v8;
     __asm_nop(i_v4, i_v1, i_v8, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11504 - 0x11568
-// Line range:    231 - 244
-int32_t makeup_work_pkg(char * str, char * work_str) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11504 - 0x11568 Line range:    231 - 244
+int32_t makeup_work_pkg(char *str, char *work_str) {
     int32_t i_v1 = (int32_t)work_str; // 0x11512
-    char * p_v2 = (char *)(i_v1 + 2); // 0x11514
+    char *p_v2 = (char *)(i_v1 + 2);  // 0x11514
     *p_v2 = (char)__asm_bfi((int32_t)*p_v2, 1, 5, 3);
     *work_str = 85;
     *(char *)(i_v1 + 1) = -86;
     uint32_t i_v3 = (int32_t)CRC16_v1(p_v2, 142); // 0x11532
-    int32_t i_v4 = __asm_sxth(__asm_sxth(i_v3 / 256 % 256) | __asm_sxth(256 * i_v3 & 0xffff00)); // 0x1154a
+    int32_t i_v4 = __asm_sxth(__asm_sxth(i_v3 / 256 % 256) |
+                              __asm_sxth(256 * i_v3 & 0xffff00)); // 0x1154a
     *(int16_t *)(i_v1 + 144) = (int16_t)i_v4;
     memcpy((int32_t *)str, (int32_t *)work_str, 146);
     return 146;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11568 - 0x11682
-// Line range:    246 - 268
-int32_t makeup_set_address_cmd(char * str, uint32_t str_len, char chip_addr) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11568 - 0x11682 Line range:    246 - 268
+int32_t makeup_set_address_cmd(char *str, uint32_t str_len, char chip_addr) {
     // 0x11568
     if (str_len >= 6 != str_len != 6) {
         // 0x1158a
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 0) {
             // 0x115b4
             int32_t i_v1; // bp-1040, 0x11568
-            snprintf((char *)&i_v1, 1024, "%s input param error: str length = %u\n", "makeup_set_address_cmd", 7);
+            snprintf((char *)&i_v1, 1024,
+                     "%s input param error: str length = %u\n",
+                     "makeup_set_address_cmd", 7);
             _applog(0, (char *)&i_v1, false);
         }
         // 0x11678
@@ -1189,14 +1336,16 @@ int32_t makeup_set_address_cmd(char * str, uint32_t str_len, char chip_addr) {
     // 0x115e8
     int32_t set_address_cmd; // bp-16, 0x11568
     memset(&set_address_cmd, 0, 5);
-    int32_t i_v2 = 0x1000000 * __asm_bfi(set_address_cmd % 256, 2, 5, 3) >> 24; // 0x11600
+    int32_t i_v2 =
+        0x1000000 * __asm_bfi(set_address_cmd % 256, 2, 5, 3) >> 24; // 0x11600
     set_address_cmd = i_v2;
     int32_t i_v3 = 0x1000000 * __asm_bfc(i_v2 % 256, 4, 1) >> 24; // 0x1160c
     set_address_cmd = i_v3;
     set_address_cmd = 0x1000000 * __asm_bfc(i_v3 % 256, 0, 4) >> 24;
     unsigned char i_v4 = CRC5_v1((char *)&set_address_cmd, 32); // 0x11632
-    char i_v5; // 0x11568
-    int32_t i_v6 = __asm_bfi((int32_t)(unsigned char)i_v5, (int32_t)(i_v4 % 32), 0, 5); // 0x11642
+    char i_v5;                                                  // 0x11568
+    int32_t i_v6 = __asm_bfi((int32_t)(unsigned char)i_v5, (int32_t)(i_v4 % 32),
+                             0, 5); // 0x11642
     *str = 85;
     int32_t i_v7 = (int32_t)str; // 0x11658
     *(char *)(i_v7 + 1) = -86;
@@ -1206,17 +1355,21 @@ int32_t makeup_set_address_cmd(char * str, uint32_t str_len, char chip_addr) {
     return 7;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11684 - 0x117ce
-// Line range:    270 - 294
-int32_t makeup_set_config_cmd(char * str, uint32_t str_len, unsigned char all, char chip_addr, char regaddr, int32_t regdata) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11684 - 0x117ce Line range:    270 - 294
+int32_t makeup_set_config_cmd(char *str, uint32_t str_len, unsigned char all,
+                              char chip_addr, char regaddr, int32_t regdata) {
     // 0x11684
     if (str_len >= 10 != str_len != 10) {
         // 0x116ae
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 0) {
             // 0x116d8
             int32_t i_v1; // bp-1056, 0x11684
-            snprintf((char *)&i_v1, 1024, "%s input param error: str length = %u\n", "makeup_set_config_cmd", 11);
+            snprintf((char *)&i_v1, 1024,
+                     "%s input param error: str length = %u\n",
+                     "makeup_set_config_cmd", 11);
             _applog(0, (char *)&i_v1, false);
         }
         // 0x117c4
@@ -1225,15 +1378,19 @@ int32_t makeup_set_config_cmd(char * str, uint32_t str_len, unsigned char all, c
     // 0x1170c
     int32_t set_config_cmd; // bp-28, 0x11684
     memset(&set_config_cmd, 0, 9);
-    int32_t i_v2 = 0x1000000 * __asm_bfi(set_config_cmd % 256, 2, 5, 3) >> 24; // 0x11724
+    int32_t i_v2 =
+        0x1000000 * __asm_bfi(set_config_cmd % 256, 2, 5, 3) >> 24; // 0x11724
     set_config_cmd = i_v2;
-    int32_t i_v3 = 0x1000000 * __asm_bfi(i_v2 % 256, (int32_t)(all % 2), 4, 1) >> 24; // 0x1173a
+    int32_t i_v3 =
+        0x1000000 * __asm_bfi(i_v2 % 256, (int32_t)(all % 2), 4, 1) >>
+        24; // 0x1173a
     set_config_cmd = i_v3;
     set_config_cmd = 0x1000000 * __asm_bfi(i_v3 % 256, 1, 0, 4) >> 24;
-    int32_t i_v4 = llvm_bswap_i32(regdata); // 0x11766
+    int32_t i_v4 = llvm_bswap_i32(regdata);                    // 0x11766
     unsigned char i_v5 = CRC5_v1((char *)&set_config_cmd, 64); // 0x1177c
-    char i_v6; // 0x11684
-    int32_t i_v7 = __asm_bfi((int32_t)(unsigned char)i_v6, (int32_t)(i_v5 % 32), 0, 5); // 0x1178c
+    char i_v6;                                                 // 0x11684
+    int32_t i_v7 = __asm_bfi((int32_t)(unsigned char)i_v6, (int32_t)(i_v5 % 32),
+                             0, 5); // 0x1178c
     *str = 85;
     int32_t i_v8 = (int32_t)str; // 0x117a2
     *(char *)(i_v8 + 1) = -86;
@@ -1244,17 +1401,21 @@ int32_t makeup_set_config_cmd(char * str, uint32_t str_len, unsigned char all, c
     return 11;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x117d0 - 0x11906
-// Line range:    296 - 318
-int32_t makeup_get_status_cmd(char * str, uint32_t str_len, unsigned char all, char chip_addr, char regaddr) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x117d0 - 0x11906 Line range:    296 - 318
+int32_t makeup_get_status_cmd(char *str, uint32_t str_len, unsigned char all,
+                              char chip_addr, char regaddr) {
     // 0x117d0
     if (str_len >= 6 != str_len != 6) {
         // 0x117fa
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 0) {
             // 0x11824
             int32_t i_v1; // bp-1048, 0x117d0
-            snprintf((char *)&i_v1, 1024, "%s input param error: str length = %u\n", "makeup_get_status_cmd", 7);
+            snprintf((char *)&i_v1, 1024,
+                     "%s input param error: str length = %u\n",
+                     "makeup_get_status_cmd", 7);
             _applog(0, (char *)&i_v1, false);
         }
         // 0x118fc
@@ -1263,14 +1424,18 @@ int32_t makeup_get_status_cmd(char * str, uint32_t str_len, unsigned char all, c
     // 0x11858
     int32_t get_status_cmd; // bp-24, 0x117d0
     memset(&get_status_cmd, 0, 5);
-    int32_t i_v2 = 0x1000000 * __asm_bfi(get_status_cmd % 256, 2, 5, 3) >> 24; // 0x11870
+    int32_t i_v2 =
+        0x1000000 * __asm_bfi(get_status_cmd % 256, 2, 5, 3) >> 24; // 0x11870
     get_status_cmd = i_v2;
-    int32_t i_v3 = 0x1000000 * __asm_bfi(i_v2 % 256, (int32_t)(all % 2), 4, 1) >> 24; // 0x11886
+    int32_t i_v3 =
+        0x1000000 * __asm_bfi(i_v2 % 256, (int32_t)(all % 2), 4, 1) >>
+        24; // 0x11886
     get_status_cmd = i_v3;
     get_status_cmd = 0x1000000 * __asm_bfi(i_v3 % 256, 2, 0, 4) >> 24;
     unsigned char i_v4 = CRC5_v1((char *)&get_status_cmd, 32); // 0x118b6
-    char i_v5; // 0x117d0
-    int32_t i_v6 = __asm_bfi((int32_t)(unsigned char)i_v5, (int32_t)(i_v4 % 32), 0, 5); // 0x118c6
+    char i_v5;                                                 // 0x117d0
+    int32_t i_v6 = __asm_bfi((int32_t)(unsigned char)i_v5, (int32_t)(i_v4 % 32),
+                             0, 5); // 0x118c6
     *str = 85;
     int32_t i_v7 = (int32_t)str; // 0x118dc
     *(char *)(i_v7 + 1) = -86;
@@ -1280,17 +1445,20 @@ int32_t makeup_get_status_cmd(char * str, uint32_t str_len, unsigned char all, c
     return 7;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11908 - 0x11a0c
-// Line range:    320 - 340
-int32_t makeup_chain_inactive_cmd(char * str, uint32_t str_len) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11908 - 0x11a0c Line range:    320 - 340
+int32_t makeup_chain_inactive_cmd(char *str, uint32_t str_len) {
     // 0x11908
     if (str_len >= 6 != str_len != 6) {
         // 0x11920
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 0) {
             // 0x1194a
             int32_t i_v1; // bp-1040, 0x11908
-            snprintf((char *)&i_v1, 1024, "%s input param error: str length = %u\n", "makeup_chain_inactive_cmd", 7);
+            snprintf((char *)&i_v1, 1024,
+                     "%s input param error: str length = %u\n",
+                     "makeup_chain_inactive_cmd", 7);
             _applog(0, (char *)&i_v1, false);
         }
         // 0x11a02
@@ -1299,12 +1467,14 @@ int32_t makeup_chain_inactive_cmd(char * str, uint32_t str_len) {
     // 0x1197e
     int32_t chain_inactive_cmd; // bp-16, 0x11908
     memset(&chain_inactive_cmd, 0, 5);
-    int32_t i_v2 = (char)__asm_bfi(chain_inactive_cmd % 256, 2, 5, 3) | 16; // 0x119a2
+    int32_t i_v2 =
+        (char)__asm_bfi(chain_inactive_cmd % 256, 2, 5, 3) | 16; // 0x119a2
     chain_inactive_cmd = i_v2;
     chain_inactive_cmd = 0x1000000 * __asm_bfi(i_v2 % 256, 3, 0, 4) >> 24;
     unsigned char i_v3 = CRC5_v1((char *)&chain_inactive_cmd, 32); // 0x119c2
-    char i_v4; // 0x11908
-    int32_t i_v5 = __asm_bfi((int32_t)(unsigned char)i_v4, (int32_t)(i_v3 % 32), 0, 5); // 0x119d2
+    char i_v4;                                                     // 0x11908
+    int32_t i_v5 = __asm_bfi((int32_t)(unsigned char)i_v4, (int32_t)(i_v3 % 32),
+                             0, 5); // 0x119d2
     *str = 85;
     int32_t i_v6 = (int32_t)str; // 0x119e4
     *(char *)(i_v6 + 1) = -86;
@@ -1314,16 +1484,17 @@ int32_t makeup_chain_inactive_cmd(char * str, uint32_t str_len) {
     return 7;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11a0c - 0x11b68
-// Line range:    342 - 377
-int32_t bm174x_pack_ioctl_pkg(char * str, int32_t str_len, uint32_t oper_type, char * param) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11a0c - 0x11b68 Line range:    342 - 377
+int32_t bm174x_pack_ioctl_pkg(char *str, int32_t str_len, uint32_t oper_type,
+                              char *param) {
     // 0x11a0c
-    int32_t i_v1; // bp-1064, 0x11a0c
+    int32_t i_v1;         // bp-1064, 0x11a0c
     int32_t i_v2 = &i_v1; // 0x11a1a
     i_v1 = str_len;
     int32_t i_v3 = oper_type; // bp-1068, 0x11a22
-    char * p_v4 = param; // bp-1072, 0x11a26
+    char *p_v4 = param;       // bp-1072, 0x11a26
     if (oper_type >= 4 != oper_type != 4) {
         // 0x11a30
         __asm_adr(4);
@@ -1348,7 +1519,7 @@ int32_t bm174x_pack_ioctl_pkg(char * str, int32_t str_len, uint32_t oper_type, c
     } else {
         goto lab_0x11b34;
     }
-  lab_0x11b34:;
+lab_0x11b34:;
     // 0x11b34
     int32_t i_v9; // bp-1056, 0x11a0c
     snprintf((char *)&i_v9, 1024, "unknow ioctl type %d\n", oper_type);
@@ -1359,21 +1530,21 @@ int32_t bm174x_pack_ioctl_pkg(char * str, int32_t str_len, uint32_t oper_type, c
     i_v7 = 0;
     i_v8 = i_v10;
     goto lab_0x11b5a;
-  lab_0x11b5a:
+lab_0x11b5a:
     // 0x11b5a
     __asm_nop(i_v5, i_v6, i_v7, i_v8);
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11b68 - 0x11bda
-// Line range:    379 - 387
-int32_t bm174x_ioctl(int32_t fd, int32_t oper_type, char * param) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11b68 - 0x11bda Line range:    379 - 387
+int32_t bm174x_ioctl(int32_t fd, int32_t oper_type, char *param) {
     char str[300]; // bp-312, 0x11b68
     // 0x11b68
     memset((int32_t *)&str, 0, 300);
     int32_t i_v1 = bm174x_pack_ioctl_pkg(str, 300, oper_type, param); // 0x11ba2
-    int32_t i_v2 = i_v1; // 0x11bb0
+    int32_t i_v2 = i_v1;                                              // 0x11bb0
     if (i_v1 >= 0) {
         // 0x11bb8
         i_v2 = uart_send((char)fd, str, i_v1);
@@ -1382,31 +1553,34 @@ int32_t bm174x_ioctl(int32_t fd, int32_t oper_type, char * param) {
     return i_v2;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11bdc - 0x11c1a
-// Line range:    389 - 398
-void bm174x_read_register(int32_t fd, int32_t mode, char chip_addr, char reg_addr) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11bdc - 0x11c1a Line range:    389 - 398
+void bm174x_read_register(int32_t fd, int32_t mode, char chip_addr,
+                          char reg_addr) {
     int32_t item = chip_addr; // bp-16, 0x11bfa
-    int32_t i_v1 = &item; // 0x11c04
+    int32_t i_v1 = &item;     // 0x11c04
     __asm_nop(bm174x_ioctl(fd, 0, (char *)&item), 0, i_v1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11c1c - 0x11c5a
-// Line range:    400 - 409
-void bm174x_write_register(int32_t fd, int32_t mode, char chip_addr, char reg_addr, int32_t reg_data) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11c1c - 0x11c5a Line range:    400 - 409
+void bm174x_write_register(int32_t fd, int32_t mode, char chip_addr,
+                           char reg_addr, int32_t reg_data) {
     int32_t item = chip_addr; // bp-16, 0x11c3a
-    int32_t i_v1 = &item; // 0x11c44
+    int32_t i_v1 = &item;     // 0x11c44
     __asm_nop(bm174x_ioctl(fd, 1, (char *)&item), 1, i_v1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11c5c - 0x11cfc
-// Line range:    411 - 422
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11c5c - 0x11cfc Line range:    411 - 422
 void bm174x_set_ticket_mask(int32_t fd, int32_t tm) {
     int32_t i_v1 = fd; // bp-1044, 0x11c66
     i_v1 = fd;
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x11c96
         int32_t i_v2; // bp-1040, 0x11c5c
         snprintf((char *)&i_v2, 1024, "Set ticket mask %u\n", tm);
@@ -1418,14 +1592,15 @@ void bm174x_set_ticket_mask(int32_t fd, int32_t tm) {
     __asm_nop(i_v3, 1, (int32_t)&item, (int32_t)&i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11cfc - 0x11db0
-// Line range:    424 - 438
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11cfc - 0x11db0 Line range:    424 - 438
 void bm174x_set_frequency(int32_t fd, int32_t freq) {
-    int32_t i_v1 = fd; // bp-1052, 0x11d06
+    int32_t i_v1 = fd;     // bp-1052, 0x11d06
     int32_t pll_value = 0; // bp-12, 0x11d0e
     i_v1 = fd;
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x11d3c
         int32_t i_v2; // bp-1044, 0x11cfc
         snprintf((char *)&i_v2, 1024, "Set frequency %u\n", freq);
@@ -1439,9 +1614,9 @@ void bm174x_set_frequency(int32_t fd, int32_t freq) {
     __asm_nop(i_v3, 1, (int32_t)&item, (int32_t)&i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11db0 - 0x11dec
-// Line range:    440 - 450
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11db0 - 0x11dec Line range:    440 - 450
 void bm174x_set_io_drive_strength(int32_t fd, int32_t value) {
     int32_t item = 0; // bp-16, 0x11dbc
     i_g14 = value;
@@ -1449,43 +1624,45 @@ void bm174x_set_io_drive_strength(int32_t fd, int32_t value) {
     __asm_nop(bm174x_ioctl(fd, 1, (char *)&item), 1, i_v1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11dec - 0x11e4c
-// Line range:    452 - 467
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11dec - 0x11e4c Line range:    452 - 467
 void bm174x_set_baud(int32_t fd, int32_t baudrate) {
     // 0x11dec
     char i_v1; // 0x11dec
-    __asm_bfi((int32_t)(unsigned char)i_v1, (int32_t)(get_bt8d_from_baud(baudrate) % 32), 0, 5);
-    int32_t item = 0; // bp-20, 0x11e1c
+    __asm_bfi((int32_t)(unsigned char)i_v1,
+              (int32_t)(get_bt8d_from_baud(baudrate) % 32), 0, 5);
+    int32_t item = 0;     // bp-20, 0x11e1c
     int32_t i_v2 = &item; // 0x11e36
     __asm_nop(bm174x_ioctl(fd, 1, (char *)&item), 1, i_v2, i_v2);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11e4c - 0x11e66
-// Line range:    469 - 472
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11e4c - 0x11e66 Line range:    469 - 472
 void bm174x_chain_inactive(int32_t fd) {
     // 0x11e4c
     int32_t i_v1; // 0x11e4c
     __asm_nop(bm174x_ioctl(fd, 4, NULL), 4, 0, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11e68 - 0x11e88
-// Line range:    474 - 477
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11e68 - 0x11e88 Line range:    474 - 477
 void bm174x_set_address(int32_t fd, char address) {
-    char i_v1 = address; // bp-13, 0x11e72
+    char i_v1 = address;  // bp-13, 0x11e72
     int32_t i_v2 = &i_v1; // 0x11e74
     __asm_nop(bm174x_ioctl(fd, 3, &i_v1), 3, i_v2, i_v2);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11e88 - 0x11f28
-// Line range:    479 - 491
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11e88 - 0x11f28 Line range:    479 - 491
 void bm174x_set_core_timeout(int32_t fd, int32_t timeout) {
     int32_t i_v1 = fd; // bp-1044, 0x11e92
     i_v1 = fd;
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x11ec2
         int32_t i_v2; // bp-1040, 0x11e88
         snprintf((char *)&i_v2, 1024, "Set core timeout %u\n", timeout);
@@ -1497,9 +1674,9 @@ void bm174x_set_core_timeout(int32_t fd, int32_t timeout) {
     __asm_nop(i_v3, 1, (int32_t)&item, (int32_t)&i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11f28 - 0x11f64
-// Line range:    493 - 504
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11f28 - 0x11f64 Line range:    493 - 504
 void bm174x_set_txn_data(int32_t fd, int32_t txn_data) {
     int32_t item = 0; // bp-16, 0x11f34
     i_g17 = txn_data;
@@ -1507,82 +1684,87 @@ void bm174x_set_txn_data(int32_t fd, int32_t txn_data) {
     __asm_nop(bm174x_ioctl(fd, 1, (char *)&item), 1, i_v1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11f64 - 0x11fba
-// Line range:    506 - 521
-void bm174x_set_nonce_shift(int32_t fd, uint32_t nonce_shift, int32_t * outer_shift) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11f64 - 0x11fba Line range:    506 - 521
+void bm174x_set_nonce_shift(int32_t fd, uint32_t nonce_shift,
+                            int32_t *outer_shift) {
     // 0x11f64
     __asm_bfi((uint32_t)i_g16 % 256, nonce_shift % 32, 0, 5);
-    int32_t item = 0; // bp-20, 0x11f90
+    int32_t item = 0;                                  // bp-20, 0x11f90
     int32_t i_v1 = bm174x_ioctl(fd, 1, (char *)&item); // 0x11fa8
     *outer_shift = nonce_shift;
     __asm_nop(i_v1, 1, nonce_shift, (int32_t)outer_shift);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x11fbc - 0x12016
-// Line range:    523 - 538
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x11fbc - 0x12016 Line range:    523 - 538
 void bm174x_set_vmount(int32_t fd, uint32_t vmount) {
     int32_t item = 0; // bp-20, 0x11fe6
-    i_g15 = 0x1000000 * __asm_bfi((uint32_t)i_g15 % 256, vmount % 8, 0, 3) >> 24;
+    i_g15 =
+        0x1000000 * __asm_bfi((uint32_t)i_g15 % 256, vmount % 8, 0, 3) >> 24;
     int32_t i_v1 = &item; // 0x12000
     __asm_nop(bm174x_ioctl(fd, 1, (char *)&item), 1, i_v1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x12018 - 0x1207a
-// Line range:    540 - 555
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x12018 - 0x1207a Line range:    540 - 555
 void bm174x_set_pt_ctrl(int32_t fd, uint32_t pt_num, uint32_t pt_en) {
     // 0x12018
     __asm_bfi(i_g18 % 256, pt_en % 2, 0, 1);
     int16_t i_v1; // 0x12018
-    __asm_bfi((int32_t)(uint16_t)i_v1, __asm_ubfx(pt_num % 0x10000, 0, 11) % 0x10000, 0, 11);
-    int32_t item = 0; // bp-20, 0x12056
+    __asm_bfi((int32_t)(uint16_t)i_v1,
+              __asm_ubfx(pt_num % 0x10000, 0, 11) % 0x10000, 0, 11);
+    int32_t item = 0;     // bp-20, 0x12056
     int32_t i_v2 = &item; // 0x12064
     __asm_nop(bm174x_ioctl(fd, 1, (char *)&item), 1, i_v2, i_v2);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x1207c - 0x120d2
-// Line range:    557 - 571
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x1207c - 0x120d2 Line range:    557 - 571
 void bm174x_set_pt_result(int32_t fd, uint32_t ptr_grp_num, uint32_t ptr_rd) {
     // 0x1207c
     int32_t i_v1; // 0x1207c
     __asm_bfi(i_v1 % 256, ptr_rd % 2, 0, 1);
     char i_v2; // 0x1207c
     __asm_bfi((int32_t)(unsigned char)i_v2, ptr_grp_num % 16, 0, 4);
-    int32_t item = 0; // bp-20, 0x120ae
+    int32_t item = 0;     // bp-20, 0x120ae
     int32_t i_v3 = &item; // 0x120bc
     __asm_nop(bm174x_ioctl(fd, 1, (char *)&item), 1, i_v3, i_v3);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x120d4 - 0x12122
-// Line range:    573 - 588
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x120d4 - 0x12122 Line range:    573 - 588
 void bm174x_i2c_enable(int32_t fd, char chip_addr) {
     int32_t item = chip_addr; // bp-20, 0x120fe
-    int32_t i_v1 = &item; // 0x1210c
+    int32_t i_v1 = &item;     // 0x1210c
     __asm_nop(bm174x_ioctl(fd, 1, (char *)&item), 1, i_v1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x12124 - 0x12158
-// Line range:    590 - 598
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x12124 - 0x12158 Line range:    590 - 598
 void bm174x_i2c_status(int32_t fd, char chip_addr) {
     int32_t item = chip_addr; // bp-16, 0x1213c
-    int32_t i_v1 = &item; // 0x12142
+    int32_t i_v1 = &item;     // 0x12142
     __asm_nop(bm174x_ioctl(fd, 0, (char *)&item), 0, i_v1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x12158 - 0x12214
-// Line range:    600 - 632
-int32_t bm174x_i2c_recv(int32_t fd, char chip_addr, unsigned char i2c_dev_addr, char i2c_reg_addr, uint32_t len) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x12158 - 0x12214 Line range:    600 - 632
+int32_t bm174x_i2c_recv(int32_t fd, char chip_addr, unsigned char i2c_dev_addr,
+                        char i2c_reg_addr, uint32_t len) {
     // 0x12158
     char i_v1; // 0x12158
-    __asm_bfi(__asm_bfc((int32_t)(unsigned char)i_v1, 0, 1) % 256, (int32_t)(i2c_dev_addr % 128), 1, 7);
+    __asm_bfi(__asm_bfc((int32_t)(unsigned char)i_v1, 0, 1) % 256,
+              (int32_t)(i2c_dev_addr % 128), 1, 7);
     int32_t i_v2 = chip_addr; // 0x121a4
-    int32_t item = i_v2; // bp-24, 0x121a4
+    int32_t item = i_v2;      // bp-24, 0x121a4
     bm174x_ioctl(fd, 1, (char *)&item);
     usleep(0x30d40);
     for (int32_t i_v3 = 0; i_v3 < len; i_v3++) {
@@ -1595,10 +1777,11 @@ int32_t bm174x_i2c_recv(int32_t fd, char chip_addr, unsigned char i2c_dev_addr, 
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x12214 - 0x122a2
-// Line range:    634 - 654
-void bm174x_i2c_send(int32_t fd, char chip_addr, unsigned char i2c_dev_addr, char i2c_reg_addr, char * reg_data, uint32_t len) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x12214 - 0x122a2 Line range:    634 - 654
+void bm174x_i2c_send(int32_t fd, char chip_addr, unsigned char i2c_dev_addr,
+                     char i2c_reg_addr, char *reg_data, uint32_t len) {
     // 0x12214
     if (len <= 0) {
         // 0x1229a
@@ -1606,16 +1789,18 @@ void bm174x_i2c_send(int32_t fd, char chip_addr, unsigned char i2c_dev_addr, cha
         return;
     }
     int32_t i_v1 = 0; // 0x1228e
-    char i_v2; // 0x12214
-    int32_t i_v3 = __asm_bfi((int32_t)(i_v2 | 1), (int32_t)(i2c_dev_addr % 128), 1, 7); // 0x1225a
-    char i_v4 = chip_addr; // bp-24, 0x12270
+    char i_v2;        // 0x12214
+    int32_t i_v3 = __asm_bfi((int32_t)(i_v2 | 1), (int32_t)(i2c_dev_addr % 128),
+                             1, 7);            // 0x1225a
+    char i_v4 = chip_addr;                     // bp-24, 0x12270
     int32_t i_v5 = bm174x_ioctl(fd, 1, &i_v4); // 0x12288
     i_v1++;
     i_v2 = i_v3;
     int32_t i_v6 = i_v5; // 0x12298
     while (i_v1 < len) {
         // 0x12234
-        i_v3 = __asm_bfi((int32_t)(i_v2 | 1), (int32_t)(i2c_dev_addr % 128), 1, 7);
+        i_v3 =
+            __asm_bfi((int32_t)(i_v2 | 1), (int32_t)(i2c_dev_addr % 128), 1, 7);
         i_v4 = chip_addr;
         i_v5 = bm174x_ioctl(fd, 1, &i_v4);
         i_v1++;
@@ -1626,28 +1811,29 @@ void bm174x_i2c_send(int32_t fd, char chip_addr, unsigned char i2c_dev_addr, cha
     __asm_nop(i_v6, 1, len, len);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x122a4 - 0x122c0
-// Line range:    656 - 659
-void bm174x_send_work(int32_t fd, char * buf) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x122a4 - 0x122c0 Line range:    656 - 659
+void bm174x_send_work(int32_t fd, char *buf) {
     // 0x122a4
     int32_t i_v1; // 0x122a4
     __asm_nop(bm174x_ioctl(fd, 2, buf), 2, (int32_t)buf, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x122c0 - 0x12408
-// Line range:    661 - 670
-void bm174x_pm_handle(char * str, int32_t len, unsigned char chainid) {
-    int32_t i_v1 = (int32_t)str; // 0x122e6
-    int32_t i_v2 = 8 * len + 232 & 248 | 3; // 0x122f8
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x122c0 - 0x12408 Line range:    661 - 670
+void bm174x_pm_handle(char *str, int32_t len, unsigned char chainid) {
+    int32_t i_v1 = (int32_t)str;                         // 0x122e6
+    int32_t i_v2 = 8 * len + 232 & 248 | 3;              // 0x122f8
     char i_v3 = CRC5_v1((char *)(i_v1 + 2), (char)i_v2); // 0x12300
-    int32_t i_v4 = i_v3; // 0x12300
-    int32_t i_v5 = __asm_ubfx((int32_t)*(char *)(i_v1 + 8), 0, 5) % 256; // 0x12314
+    int32_t i_v4 = i_v3;                                 // 0x12300
+    int32_t i_v5 =
+        __asm_ubfx((int32_t) * (char *)(i_v1 + 8), 0, 5) % 256; // 0x12314
     char i_v6 = *(char *)&use_syslog;
     char i_v7 = *(char *)&opt_log_output;
-    int32_t i_v8; // 0x122c0
-    int32_t i_v9; // 0x122c0
+    int32_t i_v8;  // 0x122c0
+    int32_t i_v9;  // 0x122c0
     int32_t i_v10; // 0x122c0
     int32_t i_v11; // 0x122c0
     if (i_v4 % 256 == i_v5) {
@@ -1681,14 +1867,16 @@ void bm174x_pm_handle(char * str, int32_t len, unsigned char chainid) {
             goto lab_0x1234a;
         }
     }
-  lab_0x123ac:;
+lab_0x123ac:;
     unsigned char i_v12 = *(char *)(i_v1 + 7); // 0x123b0
     unsigned char i_v13 = *(char *)(i_v1 + 3); // 0x123b8
     unsigned char i_v14 = *(char *)(i_v1 + 4); // 0x123c0
     unsigned char i_v15 = *(char *)(i_v1 + 5); // 0x123c8
     unsigned char i_v16 = *(char *)(i_v1 + 6); // 0x123d0
-    int32_t i_v17; // bp-1048, 0x122c0
-    snprintf((char *)&i_v17, 1024, "pmonitor[%02x] %02x %02x %02x %02x\n", (int32_t)i_v12, (int32_t)i_v13, (int32_t)i_v14, (int32_t)i_v15, (int32_t)i_v16);
+    int32_t i_v17;                             // bp-1048, 0x122c0
+    snprintf((char *)&i_v17, 1024, "pmonitor[%02x] %02x %02x %02x %02x\n",
+             (int32_t)i_v12, (int32_t)i_v13, (int32_t)i_v14, (int32_t)i_v15,
+             (int32_t)i_v16);
     int32_t i_v18 = &i_v17; // 0x123f0
     _applog(2, (char *)&i_v17, false);
     i_v8 = &i_g101;
@@ -1696,9 +1884,10 @@ void bm174x_pm_handle(char * str, int32_t len, unsigned char chainid) {
     i_v10 = 0;
     i_v11 = i_v18;
     goto lab_0x123fe;
-  lab_0x1234a:
+lab_0x1234a:
     // 0x1234a
-    snprintf((char *)&i_v17, 1024, "%s chain%d CRC error crc = %02x\n", "bm174x_pm_handle", (int32_t)chainid, (int32_t)i_v3);
+    snprintf((char *)&i_v17, 1024, "%s chain%d CRC error crc = %02x\n",
+             "bm174x_pm_handle", (int32_t)chainid, (int32_t)i_v3);
     int32_t i_v19 = &i_v17; // 0x12372
     _applog(0, (char *)&i_v17, false);
     i_v8 = &i_g101;
@@ -1706,42 +1895,44 @@ void bm174x_pm_handle(char * str, int32_t len, unsigned char chainid) {
     i_v10 = 0;
     i_v11 = i_v19;
     goto lab_0x123fe;
-  lab_0x123fe:
+lab_0x123fe:
     // 0x123fe
     __asm_nop(i_v8, i_v9, i_v10, i_v11);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x12408 - 0x125a4
-// Line range:    672 - 692
-void bm174x_pt_handle(char * str, int32_t len, unsigned char chainid) {
-    int32_t i_v1 = (int32_t)str; // 0x1242e
-    int32_t i_v2 = len - 4; // 0x12438
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x12408 - 0x125a4 Line range:    672 - 692
+void bm174x_pt_handle(char *str, int32_t len, unsigned char chainid) {
+    int32_t i_v1 = (int32_t)str;                       // 0x1242e
+    int32_t i_v2 = len - 4;                            // 0x12438
     int32_t i_v3 = CRC16_v1((char *)(i_v1 + 2), i_v2); // 0x1243e
-    uint32_t i_v4 = __asm_sxth(__asm_sxth(i_v3 / 256 % 256) | __asm_sxth(256 * i_v3 & 0xffff00)); // 0x1245c
-    uint16_t i_v5 = *(int16_t *)(i_v1 + 1028); // 0x12466
-    int32_t i_v6 = i_v4 % 0x10000; // 0x1246c
-    int32_t i_v7; // 0x12408
-    int32_t i_v8; // 0x12408
-    int32_t i_v9; // 0x12408
-    int32_t i_v10; // 0x12408
-    int32_t i_v11; // 0x12408
-    int32_t i_v12; // 0x12408
-    int32_t i_v13; // 0x12408
-    int32_t i_v14; // 0x12408
+    uint32_t i_v4 = __asm_sxth(__asm_sxth(i_v3 / 256 % 256) |
+                               __asm_sxth(256 * i_v3 & 0xffff00)); // 0x1245c
+    uint16_t i_v5 = *(int16_t *)(i_v1 + 1028);                     // 0x12466
+    int32_t i_v6 = i_v4 % 0x10000;                                 // 0x1246c
+    int32_t i_v7;                                                  // 0x12408
+    int32_t i_v8;                                                  // 0x12408
+    int32_t i_v9;                                                  // 0x12408
+    int32_t i_v10;                                                 // 0x12408
+    int32_t i_v11;                                                 // 0x12408
+    int32_t i_v12;                                                 // 0x12408
+    int32_t i_v13;                                                 // 0x12408
+    int32_t i_v14;                                                 // 0x12408
     if (i_v5 == (int16_t)i_v4) {
-        struct _IO_FILE * p_v15 = fopen("./pattern_result.txt", "a+"); // 0x124f2
+        struct _IO_FILE *p_v15 = fopen("./pattern_result.txt", "a+"); // 0x124f2
         if (p_v15 != NULL) {
             for (int32_t i_v16 = 0; i_v16 < 128; i_v16++) {
                 // 0x12560
-                dump_str((char *)p_v15, NULL, (char *)(i_v1 + 4 + 8 * i_v16), 8);
+                dump_str((char *)p_v15, NULL, (char *)(i_v1 + 4 + 8 * i_v16),
+                         8);
             }
         }
         // 0x12502
         if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0) {
             // 0x1251e
             i_v8 = (int32_t)p_v15;
-            i_v10 = (int32_t)"a+";
+            i_v10 = (int32_t) "a+";
             i_v12 = i_v6;
             i_v14 = opt_log_level;
             if (opt_log_level < 2) {
@@ -1769,18 +1960,20 @@ void bm174x_pt_handle(char * str, int32_t len, unsigned char chainid) {
             goto lab_0x1249e;
         }
     }
-  lab_0x1252c:;
-    char * p_v17 = (char *)0x6e65706f; // bp-1056, 0x1253e
-    int32_t i_v18 = (int32_t)&p_v17; // 0x12548
+lab_0x1252c:;
+    char *p_v17 = (char *)0x6e65706f; // bp-1056, 0x1253e
+    int32_t i_v18 = (int32_t)&p_v17;  // 0x12548
     _applog(2, (char *)&p_v17, false);
     i_v8 = &i_g101;
     i_v10 = i_v18;
     i_v12 = 0;
     i_v14 = i_v18;
     goto lab_0x1259a;
-  lab_0x1249e:
+lab_0x1249e:
     // 0x1249e
-    snprintf((char *)&p_v17, 1024, "%s chainid=%d cal crc = %04x, chip crc = %04x\n", "bm174x_pt_handle", (int32_t)chainid, i_v6, (int32_t)i_v5);
+    snprintf((char *)&p_v17, 1024,
+             "%s chainid=%d cal crc = %04x, chip crc = %04x\n",
+             "bm174x_pt_handle", (int32_t)chainid, i_v6, (int32_t)i_v5);
     int32_t i_v19 = (int32_t)&p_v17; // 0x124d2
     _applog(2, (char *)&p_v17, false);
     i_v7 = &i_g101;
@@ -1788,35 +1981,37 @@ void bm174x_pt_handle(char * str, int32_t len, unsigned char chainid) {
     i_v11 = 0;
     i_v13 = i_v19;
     goto lab_0x12596;
-  lab_0x1259a:
+lab_0x1259a:
     // 0x1259a
     __asm_nop(i_v8, i_v10, i_v12, i_v14);
-  lab_0x12596:
+lab_0x12596:
     // 0x12596
     __asm_nop(i_v7, i_v9, i_v11, i_v13);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x125a4 - 0x126c0
-// Line range:    694 - 713
-void bm174x_reg_handle(char * str, int32_t len, char chainid) {
-    int32_t i_v1 = (int32_t)str; // 0x125ca
-    int32_t i_v2 = 8 * len + 232 & 248 | 3; // 0x125dc
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x125a4 - 0x126c0 Line range:    694 - 713
+void bm174x_reg_handle(char *str, int32_t len, char chainid) {
+    int32_t i_v1 = (int32_t)str;                            // 0x125ca
+    int32_t i_v2 = 8 * len + 232 & 248 | 3;                 // 0x125dc
     int32_t i_v3 = CRC5_v1((char *)(i_v1 + 2), (char)i_v2); // 0x125e4
-    int32_t i_v4 = __asm_ubfx((int32_t)*(char *)(i_v1 + 8), 0, 5) % 256; // 0x125f8
-    int32_t i_v5; // 0x125a4
-    int32_t i_v6; // 0x125a4
-    int32_t i_v7; // 0x125a4
-    int32_t i_v8; // 0x125a4
+    int32_t i_v4 =
+        __asm_ubfx((int32_t) * (char *)(i_v1 + 8), 0, 5) % 256; // 0x125f8
+    int32_t i_v5;                                               // 0x125a4
+    int32_t i_v6;                                               // 0x125a4
+    int32_t i_v7;                                               // 0x125a4
+    int32_t i_v8;                                               // 0x125a4
     if (i_v3 % 256 == i_v4) {
-        int32_t i_v9 = chainid; // 0x1260e
-        int32_t new_item = i_v9; // bp-28, 0x1260e
+        int32_t i_v9 = chainid;                    // 0x1260e
+        int32_t new_item = i_v9;                   // bp-28, 0x1260e
         unsigned char i_v10 = *(char *)(i_v1 + 3); // 0x1262a
         unsigned char i_v11 = *(char *)(i_v1 + 4); // 0x12632
         unsigned char i_v12 = *(char *)(i_v1 + 5); // 0x1263c
         unsigned char i_v13 = *(char *)(i_v1 + 6); // 0x12646
         i_v5 = add_reg_item(i_v9);
-        i_v6 = 0x10000 * (int32_t)i_v11 | 0x1000000 * (int32_t)i_v10 | 256 * (int32_t)i_v12 | (int32_t)i_v13;
+        i_v6 = 0x10000 * (int32_t)i_v11 | 0x1000000 * (int32_t)i_v10 |
+               256 * (int32_t)i_v12 | (int32_t)i_v13;
         i_v7 = 3;
         i_v8 = &new_item;
         goto lab_0x126b6;
@@ -1837,13 +2032,14 @@ void bm174x_reg_handle(char * str, int32_t len, char chainid) {
             goto lab_0x12686;
         }
     }
-  lab_0x126b6:
+lab_0x126b6:
     // 0x126b6
     __asm_nop(i_v5, i_v6, i_v7, i_v8);
-  lab_0x12686:;
+lab_0x12686:;
     // 0x12686
     int32_t i_v14; // bp-1052, 0x125a4
-    snprintf((char *)&i_v14, 1024, "%s CRC error crc = %02x\n", "bm174x_reg_handle", i_v3);
+    snprintf((char *)&i_v14, 1024, "%s CRC error crc = %02x\n",
+             "bm174x_reg_handle", i_v3);
     int32_t i_v15 = &i_v14; // 0x126a8
     _applog(0, (char *)&i_v14, false);
     i_v5 = &i_g101;
@@ -1853,18 +2049,21 @@ void bm174x_reg_handle(char * str, int32_t len, char chainid) {
     goto lab_0x126b6;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x126c0 - 0x12f92
-// Line range:    715 - 776
-int32_t bm174x_nonce_integrality(unsigned char chipid, unsigned char nonce_array_id, int32_t chainid) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x126c0 - 0x12f92 Line range:    715 - 776
+int32_t bm174x_nonce_integrality(unsigned char chipid,
+                                 unsigned char nonce_array_id,
+                                 int32_t chainid) {
     int32_t i_v1 = chipid;
     int32_t i_v2 = nonce_array_id;
     int32_t i_v3 = 1456 * (i_v2 + i_v1);
     int32_t i_v4 = 0; // 0x1285a
     int32_t i_v5 = 91 * i_v4 + i_v3;
-    int16_t i_v6 = CRC16_v1((char *)(i_v5 + (int32_t)&g_nonce_list), 89); // 0x1271a
-    int16_t i_v7 = i_v6; // bp-34, 0x12720
-    int32_t i_v8 = __asm_sxth(256 * (int32_t)i_v6); // 0x1272a
+    int16_t i_v6 =
+        CRC16_v1((char *)(i_v5 + (int32_t)&g_nonce_list), 89); // 0x1271a
+    int16_t i_v7 = i_v6;                                       // bp-34, 0x12720
+    int32_t i_v8 = __asm_sxth(256 * (int32_t)i_v6);            // 0x1272a
     i_v7 = __asm_sxth(__asm_sxth((int32_t)(i_v7 / 256)) | i_v8);
     int32_t i_v9 = i_v5 + (int32_t)&g_nonce_list + 89;
     int32_t i_v10; // 0x126c0
@@ -1890,20 +2089,25 @@ int32_t bm174x_nonce_integrality(unsigned char chipid, unsigned char nonce_array
         i_v9 = i_v5 + (int32_t)&g_nonce_list + 89;
     }
     int32_t i_v14 = -1; // 0x12792
-    int32_t i_v15; // bp-1060, 0x126c0
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+    int32_t i_v15;      // bp-1060, 0x126c0
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 0) {
         unsigned char i_v16 = *(char *)i_v9; // 0x127e8
-        unsigned char i_v17 = *(char *)(i_v5 + (int32_t)&g_nonce_list + 90); // 0x1281e
-        snprintf((char *)&i_v15, 1024, "%s CRC error. cal-crc=%x, chip-crc=%02x%02x\n", "bm174x_nonce_integrality", (int32_t)i_v7, (int32_t)i_v16, (int32_t)i_v17);
+        unsigned char i_v17 =
+            *(char *)(i_v5 + (int32_t)&g_nonce_list + 90); // 0x1281e
+        snprintf((char *)&i_v15, 1024,
+                 "%s CRC error. cal-crc=%x, chip-crc=%02x%02x\n",
+                 "bm174x_nonce_integrality", (int32_t)i_v7, (int32_t)i_v16,
+                 (int32_t)i_v17);
         _applog(0, (char *)&i_v15, false);
         i_v14 = -1;
     }
     // 0x12f88
     return i_v14;
-  lab_0x12872:;
+lab_0x12872:;
     int32_t i_v18 = i_v12;
     unsigned char i_v19 = *(char *)(i_v13 + 91 * i_v18); // 0x128a2
-    int32_t i_v20; // 0x126c0
+    int32_t i_v20;                                       // 0x126c0
     if (i_v18 == (int32_t)(i_v19 % 16)) {
         int32_t i_v21 = i_v18 + 1; // 0x1290a
         i_v12 = i_v21;
@@ -1917,21 +2121,25 @@ int32_t bm174x_nonce_integrality(unsigned char chipid, unsigned char nonce_array
     } else {
         // 0x128b0
         i_v14 = -1;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 ==
+            opt_log_level < 0) {
             return i_v14;
         } else {
             // 0x128da
-            snprintf((char *)&i_v15, 1024, "nonce is not continous i=%d\n", i_v18);
+            snprintf((char *)&i_v15, 1024, "nonce is not continous i=%d\n",
+                     i_v18);
             _applog(0, (char *)&i_v15, false);
             i_v14 = -1;
             return i_v14;
         }
     }
-  lab_0x12920:;
+lab_0x12920:;
     int32_t i_v22 = 91 * i_v20; // 0x12936
-    unsigned char i_v23 = *(char *)(i_v3 + (int32_t)&g_nonce_list + 1 + i_v22); // 0x12952
-    unsigned char i_v24 = *(char *)(i_v3 + (int32_t)&g_nonce_list + 92 + i_v22); // 0x12988
-    int32_t i_v25; // 0x126c0
+    unsigned char i_v23 =
+        *(char *)(i_v3 + (int32_t)&g_nonce_list + 1 + i_v22); // 0x12952
+    unsigned char i_v24 =
+        *(char *)(i_v3 + (int32_t)&g_nonce_list + 92 + i_v22); // 0x12988
+    int32_t i_v25;                                             // 0x126c0
     if (i_v23 == i_v24) {
         int32_t i_v26 = i_v20 + 1; // 0x12a54
         i_v20 = i_v26;
@@ -1945,21 +2153,26 @@ int32_t bm174x_nonce_integrality(unsigned char chipid, unsigned char nonce_array
     } else {
         // 0x1298e
         i_v14 = -1;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 ==
+            opt_log_level < 0) {
             return i_v14;
         } else {
             // 0x129b8
-            snprintf((char *)&i_v15, 1024, "chip_addr is different %02x != %02x\n", (int32_t)i_v23, (int32_t)i_v24);
+            snprintf((char *)&i_v15, 1024,
+                     "chip_addr is different %02x != %02x\n", (int32_t)i_v23,
+                     (int32_t)i_v24);
             _applog(0, (char *)&i_v15, false);
             i_v14 = -1;
             return i_v14;
         }
     }
-  lab_0x12a6c:;
+lab_0x12a6c:;
     int32_t i_v27 = 91 * i_v25; // 0x12a82
-    unsigned char i_v28 = *(char *)(i_v3 + (int32_t)&g_nonce_list + 2 + i_v27); // 0x12a9e
-    unsigned char i_v29 = *(char *)(i_v3 + (int32_t)&g_nonce_list + 93 + i_v27); // 0x12ad4
-    int32_t i_v30; // 0x126c0
+    unsigned char i_v28 =
+        *(char *)(i_v3 + (int32_t)&g_nonce_list + 2 + i_v27); // 0x12a9e
+    unsigned char i_v29 =
+        *(char *)(i_v3 + (int32_t)&g_nonce_list + 93 + i_v27); // 0x12ad4
+    int32_t i_v30;                                             // 0x126c0
     if (i_v28 == i_v29) {
         int32_t i_v31 = i_v25 + 1; // 0x12ba0
         i_v25 = i_v31;
@@ -1973,24 +2186,28 @@ int32_t bm174x_nonce_integrality(unsigned char chipid, unsigned char nonce_array
     } else {
         // 0x12ada
         i_v14 = -1;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 ==
+            opt_log_level < 0) {
             return i_v14;
         } else {
             // 0x12b04
-            snprintf((char *)&i_v15, 1024, "workID is different %02x != %02x\n", (int32_t)i_v28, (int32_t)i_v29);
+            snprintf((char *)&i_v15, 1024, "workID is different %02x != %02x\n",
+                     (int32_t)i_v28, (int32_t)i_v29);
             _applog(0, (char *)&i_v15, false);
             i_v14 = -1;
             return i_v14;
         }
     }
-  lab_0x12bb8:;
+lab_0x12bb8:;
     int32_t i_v32 = 91 * i_v30; // 0x12bce
-    unsigned char i_v33 = *(char *)(i_v3 + (int32_t)&g_nonce_list + 3 + i_v32); // 0x12bea
-    unsigned char i_v34 = *(char *)(i_v3 + (int32_t)&g_nonce_list + 94 + i_v32); // 0x12c20
-    int32_t i_v35; // 0x126c0
-    int32_t i_v36; // 0x126c0
-    int32_t i_v37; // 0x12d12
-    int32_t i_v38; // 0x12d50
+    unsigned char i_v33 =
+        *(char *)(i_v3 + (int32_t)&g_nonce_list + 3 + i_v32); // 0x12bea
+    unsigned char i_v34 =
+        *(char *)(i_v3 + (int32_t)&g_nonce_list + 94 + i_v32); // 0x12c20
+    int32_t i_v35;                                             // 0x126c0
+    int32_t i_v36;                                             // 0x126c0
+    int32_t i_v37;                                             // 0x12d12
+    int32_t i_v38;                                             // 0x12d50
     if (i_v33 == i_v34) {
         int32_t i_v39 = i_v30 + 1; // 0x12cf4
         i_v30 = i_v39;
@@ -2007,54 +2224,67 @@ int32_t bm174x_nonce_integrality(unsigned char chipid, unsigned char nonce_array
     } else {
         // 0x12c26
         i_v14 = -1;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 ==
+            opt_log_level < 0) {
             return i_v14;
         } else {
             // 0x12c50
-            snprintf((char *)&i_v15, 1024, "nonceID is different %02x != %02x chipid=%d\n", (int32_t)i_v33, (int32_t)i_v34, i_v1);
+            snprintf((char *)&i_v15, 1024,
+                     "nonceID is different %02x != %02x chipid=%d\n",
+                     (int32_t)i_v33, (int32_t)i_v34, i_v1);
             _applog(0, (char *)&i_v15, false);
             i_v14 = -1;
             return i_v14;
         }
     }
-  lab_0x12d2c:
+lab_0x12d2c:
     // 0x12d2c
     memcpy((int32_t *)i_v35, (int32_t *)(i_v38 + 91 * i_v36), 85);
     int32_t i_v40 = i_v35 + 85; // 0x12d6e
-    int32_t i_v41 = i_v36 + 1; // 0x12d78
+    int32_t i_v41 = i_v36 + 1;  // 0x12d78
     i_v36 = i_v41;
     i_v35 = i_v40;
     if (i_v41 < 15) {
         goto lab_0x12d2c;
     } else {
         // 0x12d86
-        memcpy((int32_t *)i_v40, (int32_t *)(i_v11 + (int32_t)&g_nonce_list + 1369), 69);
-        memcpy((int32_t *)(i_v37 + (int32_t)&g_nonce + 1352), (int32_t *)(i_v11 + (int32_t)&g_nonce_list + 1450), 4);
-        char i_v42 = *(char *)(i_v11 + (int32_t)&g_nonce_list + 1366); // 0x12e22
+        memcpy((int32_t *)i_v40,
+               (int32_t *)(i_v11 + (int32_t)&g_nonce_list + 1369), 69);
+        memcpy((int32_t *)(i_v37 + (int32_t)&g_nonce + 1352),
+               (int32_t *)(i_v11 + (int32_t)&g_nonce_list + 1450), 4);
+        char i_v42 =
+            *(char *)(i_v11 + (int32_t)&g_nonce_list + 1366); // 0x12e22
         *(char *)(i_v37 + (int32_t)&g_nonce + 1344) = i_v42;
-        char i_v43 = *(char *)(i_v11 + (int32_t)&g_nonce_list + 1367); // 0x12e68
+        char i_v43 =
+            *(char *)(i_v11 + (int32_t)&g_nonce_list + 1367); // 0x12e68
         *(char *)(i_v37 + (int32_t)&g_nonce + 1345) = i_v43;
-        char i_v44 = *(char *)(i_v11 + (int32_t)&g_nonce_list + 1368); // 0x12eae
+        char i_v44 =
+            *(char *)(i_v11 + (int32_t)&g_nonce_list + 1368); // 0x12eae
         *(char *)(i_v37 + (int32_t)&g_nonce + 1346) = i_v44;
-        char i_v45 = *(char *)(i_v11 + (int32_t)&g_nonce_list + 1441); // 0x12ef4
+        char i_v45 =
+            *(char *)(i_v11 + (int32_t)&g_nonce_list + 1441); // 0x12ef4
         *(char *)(i_v37 + (int32_t)&g_nonce + 1347) = i_v45;
-        memcpy((int32_t *)(i_v37 + (int32_t)&g_nonce + 1348), (int32_t *)(i_v11 + (int32_t)&g_nonce_list + 1442), 4);
+        memcpy((int32_t *)(i_v37 + (int32_t)&g_nonce + 1348),
+               (int32_t *)(i_v11 + (int32_t)&g_nonce_list + 1442), 4);
         *(char *)(i_v37 + (int32_t)&g_nonce + 1356) = (char)chainid;
         i_v14 = 0;
         return i_v14;
     }
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x12f94 - 0x13104
-// Line range:    778 - 804
-int32_t bm174x_nonce_handle(char * str, int32_t len, int32_t chainid, int32_t addr_interval) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x12f94 - 0x13104 Line range:    778 - 804
+int32_t bm174x_nonce_handle(char *str, int32_t len, int32_t chainid,
+                            int32_t addr_interval) {
     int32_t i_v1 = (int32_t)str; // 0x12fb4
-    int32_t i_v2 = i_v1 + 2; // 0x12fb6
+    int32_t i_v2 = i_v1 + 2;     // 0x12fb6
     unsigned char i_v3 = *(char *)i_v2 % 16;
-    int32_t i_v4 = (int32_t)*(char *)(i_v1 + 3) / addr_interval; // 0x12fd8
-    uint32_t i_v5 = i_v4 % 256; // 0x12ffa
-    memcpy((int32_t *)(91 * (int32_t)i_v3 + (int32_t)&g_nonce_list + 1456 * i_v5), (int32_t *)i_v2, len - 2);
+    int32_t i_v4 = (int32_t) * (char *)(i_v1 + 3) / addr_interval; // 0x12fd8
+    uint32_t i_v5 = i_v4 % 256;                                    // 0x12ffa
+    memcpy(
+        (int32_t *)(91 * (int32_t)i_v3 + (int32_t)&g_nonce_list + 1456 * i_v5),
+        (int32_t *)i_v2, len - 2);
     if (i_v3 != 15) {
         // 0x130fa
         return 1;
@@ -2067,21 +2297,23 @@ int32_t bm174x_nonce_handle(char * str, int32_t len, int32_t chainid, int32_t ad
         return 0;
     }
     // 0x1306c
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 1) {
         int32_t i_v6 = i_g31; // 0x1309e
         i_g31 = i_v6 + 1;
         int32_t i_v7; // bp-1052, 0x12f94
-        snprintf((char *)&i_v7, 1024, "receive a error nonce. total = %u\n", i_v6);
+        snprintf((char *)&i_v7, 1024, "receive a error nonce. total = %u\n",
+                 i_v6);
         _applog(1, (char *)&i_v7, false);
     }
     // 0x130fa
     return -1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c
-// Address range: 0x13104 - 0x1328e
-// Line range:    806 - 843
-int32_t bm174x_init_asic(char * args) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-driver.c Address
+// range: 0x13104 - 0x1328e Line range:    806 - 843
+int32_t bm174x_init_asic(char *args) {
     int32_t i_v1 = (int32_t)args; // 0x13110
     *(int32_t *)(i_v1 + 144) = 16;
     *(int32_t *)(i_v1 + 148) = 93;
@@ -2115,9 +2347,9 @@ int32_t bm174x_init_asic(char * args) {
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x13290 - 0x1331c
-// Line range:    20 - 28
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x13290 - 0x1331c Line range:    20 - 28
 void delay(uint32_t seconds) {
     // 0x13290
     int32_t i_v1; // 0x13290
@@ -2127,25 +2359,29 @@ void delay(uint32_t seconds) {
         return;
     }
     int32_t i_v2 = 1;
-    int32_t i_v3; // 0x13290
+    int32_t i_v3;        // 0x13290
     int32_t i_v4 = i_v3; // 0x132b0
-    int32_t i_v5; // bp-1036, 0x13290
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    int32_t i_v5;        // bp-1036, 0x13290
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x132ce
-        snprintf((char *)&i_v5, 1024, "remain %d seconds......\n", seconds - i_v2);
+        snprintf((char *)&i_v5, 1024, "remain %d seconds......\n",
+                 seconds - i_v2);
         _applog(2, (char *)&i_v5, false);
         i_v4 = &i_v5;
     }
     int32_t i_v6 = i_v2 + 1; // 0x13310
-    int32_t i_v7 = i_v2; // 0x13310
+    int32_t i_v7 = i_v2;     // 0x13310
     int32_t i_v8 = sleep(1); // 0x13310
     i_v1 = i_v4;
     while (i_v2 < seconds) {
         // 0x132a4
         i_v2 = i_v6;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x132ce
-            snprintf((char *)&i_v5, 1024, "remain %d seconds......\n", seconds - i_v2);
+            snprintf((char *)&i_v5, 1024, "remain %d seconds......\n",
+                     seconds - i_v2);
             _applog(2, (char *)&i_v5, false);
             i_v4 = &i_v5;
         }
@@ -2159,26 +2395,26 @@ void delay(uint32_t seconds) {
     __asm_nop(i_v8, i_v1, seconds, i_v7);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x1331c - 0x133ee
-// Line range:    30 - 49
-void check_asic_num(int32_t * runtime) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x1331c - 0x133ee Line range:    30 - 49
+void check_asic_num(int32_t *runtime) {
     int32_t i_v1 = (int32_t)runtime;
-    int32_t * p_v2 = (int32_t *)(i_v1 + 1772); // 0x1332c
+    int32_t *p_v2 = (int32_t *)(i_v1 + 1772); // 0x1332c
     int32_t i_v3 = *p_v2;
     int32_t item_r = 0x1000000 * i_v3 >> 24; // bp-32, 0x13352
     int32_t i_v4 = i_v1 + 16;
     *(int32_t *)(144 * *p_v2 + i_v4) = 0;
-    int32_t i_v5 = 0; // 0x133e4
+    int32_t i_v5 = 0;                               // 0x133e4
     int32_t i_v6 = *(int32_t *)(144 * i_v3 + i_v1); // 0x133e4
-    int32_t i_v7 = i_v1; // 0x133e4
-    int32_t i_v8 = 0; // 0x133e4
-    int32_t i_v9 = i_g50; // 0x133e4
+    int32_t i_v7 = i_v1;                            // 0x133e4
+    int32_t i_v8 = 0;                               // 0x133e4
+    int32_t i_v9 = i_g50;                           // 0x133e4
     if (i_g50 > 0) {
         int32_t i_v10 = read_reg_item(&item_r, 500); // 0x1339c
-        int32_t i_v11 = i_v10; // 0x133a4
-        int32_t i_v12 = 500; // 0x133a4
-        int32_t * p_v13; // 0x133ba
+        int32_t i_v11 = i_v10;                       // 0x133a4
+        int32_t i_v12 = 500;                         // 0x133a4
+        int32_t *p_v13;                              // 0x133ba
         if (i_v10 >= 1) {
             // 0x133a6
             p_v13 = (int32_t *)(144 * *p_v2 + i_v4);
@@ -2216,25 +2452,25 @@ void check_asic_num(int32_t * runtime) {
     __asm_nop(i_v6, i_v7, i_v9, i_v8);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x133f0 - 0x1346e
-// Line range:    51 - 58
-void set_asic_address(int32_t * runtime, unsigned char chainid) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x133f0 - 0x1346e Line range:    51 - 58
+void set_asic_address(int32_t *runtime, unsigned char chainid) {
     int32_t i_v1 = (int32_t)runtime;
     int32_t i_v2 = 144 * (int32_t)chainid + i_v1; // 0x1340e
-    int32_t * p_v3 = (int32_t *)i_v2; // 0x13410
-    int32_t i_v4 = *p_v3; // 0x13410
-    int32_t * p_v5 = (int32_t *)(i_v2 + 20); // 0x1345e
-    uint32_t i_v6 = *p_v5; // 0x1345e
+    int32_t *p_v3 = (int32_t *)i_v2;              // 0x13410
+    int32_t i_v4 = *p_v3;                         // 0x13410
+    int32_t *p_v5 = (int32_t *)(i_v2 + 20);       // 0x1345e
+    uint32_t i_v6 = *p_v5;                        // 0x1345e
     if (i_v6 <= 0) {
         // 0x13466
         __asm_nop(i_v4, i_v1, i_v6, 0);
         return;
     }
-    int32_t * p_v7 = (int32_t *)(i_v1 + 1776); // 0x13434
+    int32_t *p_v7 = (int32_t *)(i_v1 + 1776); // 0x13434
     __asm_smulbb(*p_v7 % 256, 0);
     uint32_t i_v8 = *p_v5; // 0x1345e
-    int32_t i_v9 = 1; // 0x13464
+    int32_t i_v9 = 1;      // 0x13464
     if (i_v8 <= 1) {
         // 0x13466
         __asm_nop(i_v4, i_v1, i_v8, 1);
@@ -2243,8 +2479,8 @@ void set_asic_address(int32_t * runtime, unsigned char chainid) {
     __asm_smulbb(*p_v7 % 256, i_v9 % 256);
     i_v9++;
     uint32_t i_v10 = *p_v5; // 0x1345e
-    int32_t i_v11 = i_v9; // 0x13464
-    int32_t i_v12 = i_v10; // 0x13464
+    int32_t i_v11 = i_v9;   // 0x13464
+    int32_t i_v12 = i_v10;  // 0x13464
     while (i_v10 > i_v9) {
         // 0x1341c
         __asm_smulbb(*p_v7 % 256, i_v9 % 256);
@@ -2257,20 +2493,20 @@ void set_asic_address(int32_t * runtime, unsigned char chainid) {
     __asm_nop(*p_v3, i_v1, i_v12, i_v11);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x13470 - 0x135ae
-// Line range:    60 - 103
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x13470 - 0x135ae Line range:    60 - 103
 int32_t calc_asic_addr_interval(int32_t actual_asic_number) {
     // 0x13470
     switch (actual_asic_number) {
-        case 1: {
-            // 0x135a4
-            return 256;
-        }
-        case 2: {
-            // 0x135a4
-            return 128;
-        }
+    case 1: {
+        // 0x135a4
+        return 256;
+    }
+    case 2: {
+        // 0x135a4
+        return 128;
+    }
     }
     // 0x134a2
     if (actual_asic_number <= 4) {
@@ -2308,23 +2544,26 @@ int32_t calc_asic_addr_interval(int32_t actual_asic_number) {
         return -1;
     }
     // 0x13540
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 4) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 4) {
         // 0x1356a
         int32_t i_v1; // bp-1036, 0x13470
-        snprintf((char *)&i_v1, 1024, "actual_asic_number = %d, but it is error\n", actual_asic_number);
+        snprintf((char *)&i_v1, 1024,
+                 "actual_asic_number = %d, but it is error\n",
+                 actual_asic_number);
         _applog(4, (char *)&i_v1, false);
     }
     // 0x135a4
     return -1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x135b0 - 0x13618
-// Line range:    105 - 111
-void user_i2c_enable(int32_t * runtime, unsigned char chainid) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x135b0 - 0x13618 Line range:    105 - 111
+void user_i2c_enable(int32_t *runtime, unsigned char chainid) {
     int32_t i_v1 = (int32_t)runtime;
-    int32_t * p_v2 = (int32_t *)(i_v1 + 1772); // 0x135f6
-    int32_t i_v3 = i_v1 + 20; // 0x13604
+    int32_t *p_v2 = (int32_t *)(i_v1 + 1772);         // 0x135f6
+    int32_t i_v3 = i_v1 + 20;                         // 0x13604
     uint32_t i_v4 = *(int32_t *)(144 * *p_v2 + i_v3); // 0x13608
     if (i_v4 <= 0) {
         // 0x13610
@@ -2334,10 +2573,10 @@ void user_i2c_enable(int32_t * runtime, unsigned char chainid) {
     int32_t i_v5 = 0; // 0x135f0
     __asm_smulbb(*(int32_t *)(i_v1 + 1776) % 256, i_v5 % 256);
     i_v5++;
-    uint32_t i_v6 = *(int32_t *)(144 * *p_v2 + i_v3); // 0x13608
+    uint32_t i_v6 = *(int32_t *)(144 * *p_v2 + i_v3);           // 0x13608
     int32_t i_v7 = *(int32_t *)(144 * (int32_t)chainid + i_v1); // 0x1360e
-    int32_t i_v8 = i_v5; // 0x1360e
-    int32_t i_v9 = i_v6; // 0x1360e
+    int32_t i_v8 = i_v5;                                        // 0x1360e
+    int32_t i_v9 = i_v6;                                        // 0x1360e
     while (i_v6 > i_v5) {
         // 0x135c2
         __asm_smulbb(*(int32_t *)(i_v1 + 1776) % 256, i_v5 % 256);
@@ -2351,20 +2590,22 @@ void user_i2c_enable(int32_t * runtime, unsigned char chainid) {
     __asm_nop(i_v7, i_v1, i_v9, i_v8);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x13618 - 0x13778
-// Line range:    113 - 144
-int32_t user_i2c_state(int32_t * runtime, int32_t chip_addr) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x13618 - 0x13778 Line range:    113 - 144
+int32_t user_i2c_state(int32_t *runtime, int32_t chip_addr) {
     int32_t i_v1 = 3;
     int32_t i_v2 = 0; // bp-36, 0x13668
     i_v2 = 0x1000000 * *(int32_t *)((int32_t)runtime + 1772) >> 24;
     uint32_t i_v3 = read_reg_item(&i_v2, 1000); // 0x13696
     while (i_v3 < 0) {
         // 0x136a0
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 1) {
             // 0x136ca
             int32_t i_v4; // bp-1060, 0x13618
-            snprintf((char *)&i_v4, 1024, "chipaddr %02x - i2c no-response\n", chip_addr);
+            snprintf((char *)&i_v4, 1024, "chipaddr %02x - i2c no-response\n",
+                     chip_addr);
             _applog(1, (char *)&i_v4, false);
         }
         // 0x1374a
@@ -2383,16 +2624,19 @@ int32_t user_i2c_state(int32_t * runtime, int32_t chip_addr) {
     return i_v1 < 1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x13778 - 0x139b4
-// Line range:    146 - 183
-int32_t user_read_iic(int32_t * runtime, int32_t chip_addr, char i2c_dev_addr, unsigned char i2c_reg_addr, char * i2c_reg_data, uint32_t len) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x13778 - 0x139b4 Line range:    146 - 183
+int32_t user_read_iic(int32_t *runtime, int32_t chip_addr, char i2c_dev_addr,
+                      unsigned char i2c_reg_addr, char *i2c_reg_data,
+                      uint32_t len) {
     int32_t i_v1 = (int32_t)runtime;
     int32_t i_v2 = *(int32_t *)(i_v1 + 1772); // 0x137a4
-    char * p_v3; // bp-1068, 0x13778
+    char *p_v3;                               // bp-1068, 0x13778
     if (user_i2c_state(runtime, chip_addr) != 0) {
         // 0x137dc
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x13806
             p_v3 = (char *)0x20633269;
             _applog(2, (char *)&p_v3, false);
@@ -2402,9 +2646,12 @@ int32_t user_read_iic(int32_t * runtime, int32_t chip_addr, char i2c_dev_addr, u
     }
     if (*(int32_t *)(144 * i_v2 + i_v1) != 0) {
         // 0x13948
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 1) {
             // 0x13972
-            snprintf((char *)&p_v3, 1024, "Read i2c failed chipaddr=%02x, i2c-regaddr=%02x\n", chip_addr, (int32_t)i2c_reg_addr);
+            snprintf((char *)&p_v3, 1024,
+                     "Read i2c failed chipaddr=%02x, i2c-regaddr=%02x\n",
+                     chip_addr, (int32_t)i2c_reg_addr);
             _applog(1, (char *)&p_v3, false);
         }
         // 0x139aa
@@ -2424,9 +2671,13 @@ int32_t user_read_iic(int32_t * runtime, int32_t chip_addr, char i2c_dev_addr, u
     } else {
         // 0x138cc
         i_v6 = 1;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 1) {
             // 0x138f6
-            snprintf((char *)&p_v3, 1024, "Read i2c failed chipaddr=%02x, i2c-regaddr=%02x i2c-regdata=%08x\n", chip_addr, (int32_t)i2c_reg_addr, 0);
+            snprintf((char *)&p_v3, 1024,
+                     "Read i2c failed chipaddr=%02x, i2c-regaddr=%02x "
+                     "i2c-regdata=%08x\n",
+                     chip_addr, (int32_t)i2c_reg_addr, 0);
             _applog(1, (char *)&p_v3, false);
             i_v6 = 1;
         }
@@ -2442,9 +2693,13 @@ int32_t user_read_iic(int32_t * runtime, int32_t chip_addr, char i2c_dev_addr, u
         } else {
             // 0x138cc
             i_v6 = 1;
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 1) {
                 // 0x138f6
-                snprintf((char *)&p_v3, 1024, "Read i2c failed chipaddr=%02x, i2c-regaddr=%02x i2c-regdata=%08x\n", chip_addr, (int32_t)i2c_reg_addr, 0);
+                snprintf((char *)&p_v3, 1024,
+                         "Read i2c failed chipaddr=%02x, i2c-regaddr=%02x "
+                         "i2c-regdata=%08x\n",
+                         chip_addr, (int32_t)i2c_reg_addr, 0);
                 _applog(1, (char *)&p_v3, false);
                 i_v6 = 1;
             }
@@ -2456,30 +2711,33 @@ int32_t user_read_iic(int32_t * runtime, int32_t chip_addr, char i2c_dev_addr, u
     return i_v6;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x139b4 - 0x13a5a
-// Line range:    185 - 197
-void user_send_work(int32_t * runtime, char * header, uint32_t sno_valid, uint32_t test_patten) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x139b4 - 0x13a5a Line range:    185 - 197
+void user_send_work(int32_t *runtime, char *header, uint32_t sno_valid,
+                    uint32_t test_patten) {
     int32_t i_v1 = (int32_t)runtime;
     int32_t work; // bp-168, 0x139b4
     memset(&work, 0, 146);
     char i_v2; // 0x139b4
-    __asm_bfi(__asm_bfi((int32_t)i_v2, sno_valid % 2, 4, 1) % 256, test_patten % 2, 0, 1);
-    char * p_v3 = (char *)(i_v1 + 2820); // 0x13a00
-    char i_v4 = *p_v3; // 0x13a00
+    __asm_bfi(__asm_bfi((int32_t)i_v2, sno_valid % 2, 4, 1) % 256,
+              test_patten % 2, 0, 1);
+    char *p_v3 = (char *)(i_v1 + 2820); // 0x13a00
+    char i_v4 = *p_v3;                  // 0x13a00
     *p_v3 = i_v4 + 1;
     int32_t i_v5; // bp-164, 0x139b4
     memcpy(&i_v5, (int32_t *)header, 140);
     work_list_insert(i_v4, (char *)&i_v5);
-    int32_t i_v6 = *(int32_t *)(144 * *(int32_t *)(i_v1 + 1772) + i_v1); // 0x13a46
-    int32_t i_v7 = &work; // 0x13a48
+    int32_t i_v6 =
+        *(int32_t *)(144 * *(int32_t *)(i_v1 + 1772) + i_v1); // 0x13a46
+    int32_t i_v7 = &work;                                     // 0x13a48
     __asm_nop(i_v6, i_v7, i_v7, i_v6);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x13a5c - 0x13b48
-// Line range:    199 - 213
-void online_mining(int32_t * runtime) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x13a5c - 0x13b48 Line range:    199 - 213
+void online_mining(int32_t *runtime) {
     // 0x13a5c
     usleep(0x186a0);
     usleep(0x186a0);
@@ -2491,10 +2749,10 @@ void online_mining(int32_t * runtime) {
     __asm_nop((int32_t)&i_g101, 0, i_v1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x13b48 - 0x14200
-// Line range:    215 - 325
-int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x13b48 - 0x14200 Line range:    215 - 325
+int32_t pattern_test(int32_t *runtime, int32_t freq, int32_t *nonce) {
     char header_bin[140]; // bp-200, 0x13b48
     // 0x13b48
     remove("./pattern_result.txt");
@@ -2505,19 +2763,25 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
     usleep(0x186a0);
     usleep(0x186a0);
     memset((int32_t *)&header_bin, 0, 140);
-    hex2bin(header_bin, "010203042cb3d32b0b61304401cbe540448a4cacd7e98421a850503e2f0d102f1d3454151484151215484aa0ca1932037525e2eb9a22d3d3ff1502b320f8d9ca56377f56494b2cacf3377482ccd34188c1b25e04187ccf70af6e2244c3c96e5e2e3a6015d32fe451ad000e771eccb5c5e3d6beb470359446494d25e15f87df87c3119ebd9ca813a400000000", 140);
+    hex2bin(header_bin,
+            "010203042cb3d32b0b61304401cbe540448a4cacd7e98421a850503e2f0d102f1d"
+            "3454151484151215484aa0ca1932037525e2eb9a22d3d3ff1502b320f8d9ca5637"
+            "7f56494b2cacf3377482ccd34188c1b25e04187ccf70af6e2244c3c96e5e2e3a60"
+            "15d32fe451ad000e771eccb5c5e3d6beb470359446494d25e15f87df87c3119ebd"
+            "9ca813a400000000",
+            140);
     user_send_work(runtime, header_bin, 0, 0);
     sleep(3);
     int32_t item = 0; // bp-60, 0x13d16
-    int16_t i_v1; // 0x13b48
+    int16_t i_v1;     // 0x13b48
     int32_t i_v2 = (uint16_t)i_v1;
-    char * p_v3; // bp-1268, 0x13b48
+    char *p_v3; // bp-1268, 0x13b48
     int32_t i_v4 = (int32_t)&p_v3;
     int32_t i_v5 = 0;
-    int32_t i_v6; // 0x13b48
-    int32_t i_v7; // 0x13b48
-    int32_t i_v8; // 0x13b48
-    int32_t i_v9; // 0x13b48
+    int32_t i_v6;  // 0x13b48
+    int32_t i_v7;  // 0x13b48
+    int32_t i_v8;  // 0x13b48
+    int32_t i_v9;  // 0x13b48
     int32_t i_v10; // 0x13d60
     while (true) {
         // 0x13d2e
@@ -2526,7 +2790,8 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
         if (i_v10 < 1) {
             // 0x13e52
             i_v11 = 500;
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 0) {
                 // 0x13e7c
                 p_v3 = (char *)0x5f474552;
                 _applog(0, (char *)&p_v3, false);
@@ -2543,9 +2808,13 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
             if (*(char *)&opt_debug != 0) {
                 // 0x13df0
                 i_v11 = 500;
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 4) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 4) {
                     uint32_t i_v12 = __asm_ubfx(i_v2, 0, 12); // 0x13e1e
-                    snprintf((char *)&p_v3, 1024, "REG_PT_RESULT cur num = %d < 0x800, check again\n", i_v12 % 0x10000);
+                    snprintf(
+                        (char *)&p_v3, 1024,
+                        "REG_PT_RESULT cur num = %d < 0x800, check again\n",
+                        i_v12 % 0x10000);
                     _applog(4, (char *)&p_v3, false);
                     i_v11 = i_v4;
                 }
@@ -2591,16 +2860,17 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
         _applog(2, (char *)&p_v3, false);
         goto lab_0x13f2e;
     }
-  lab_0x13f2e:
+lab_0x13f2e:
     // 0x13f2e
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 0) {
         // 0x13f58
         p_v3 = (char *)0x74746170;
         _applog(0, (char *)&p_v3, false);
     }
     // 0x13f8e
     usleep(0x30d40);
-    int32_t i_v14 = 1; // 0x13fd0
+    int32_t i_v14 = 1;     // 0x13fd0
     int32_t i_v15 = i_v14; // 0x13fdc
     while (i_v14 < 16) {
         // 0x13f96
@@ -2609,28 +2879,29 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
         i_v15 = i_v14;
     }
     int32_t i_v16 = 1; // 0x13fea
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x14008
         p_v3 = (char *)0x706d6f43;
         _applog(2, (char *)&p_v3, false);
         i_v16 = 0;
     }
-    struct _IO_FILE * p_v17 = fopen("./pattern_result.txt", "r"); // 0x14046
-    int32_t i_v18; // 0x13b48
-    int32_t i_v19; // 0x13b48
-    int32_t i_v20; // 0x13b48
-    int32_t i_v21; // 0x13b48
-    int32_t i_v22; // 0x13b48
-    int32_t i_v23; // 0x13b48
-    int32_t i_v24; // 0x13b48
-    int32_t i_v25; // 0x13b48
-    int32_t i_v26; // 0x13b48
+    struct _IO_FILE *p_v17 = fopen("./pattern_result.txt", "r"); // 0x14046
+    int32_t i_v18;                                               // 0x13b48
+    int32_t i_v19;                                               // 0x13b48
+    int32_t i_v20;                                               // 0x13b48
+    int32_t i_v21;                                               // 0x13b48
+    int32_t i_v22;                                               // 0x13b48
+    int32_t i_v23;                                               // 0x13b48
+    int32_t i_v24;                                               // 0x13b48
+    int32_t i_v25;                                               // 0x13b48
+    int32_t i_v26;                                               // 0x13b48
     if (p_v17 == NULL) {
         // 0x14056
         if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0) {
             // 0x14072
             i_v19 = (int32_t)p_v17;
-            i_v21 = (int32_t)"r";
+            i_v21 = (int32_t) "r";
             i_v23 = i_v16;
             i_v25 = opt_log_level;
             if (opt_log_level < 0) {
@@ -2642,13 +2913,13 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
             goto lab_0x14082;
         }
     } else {
-        struct _IO_FILE * p_v27 = fopen("./pattern_golden.txt", "r"); // 0x140be
+        struct _IO_FILE *p_v27 = fopen("./pattern_golden.txt", "r"); // 0x140be
         if (p_v27 == NULL) {
             // 0x140ce
             if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0) {
                 // 0x140ea
                 i_v20 = (int32_t)p_v27;
-                i_v22 = (int32_t)"r";
+                i_v22 = (int32_t) "r";
                 i_v24 = i_v16;
                 i_v26 = opt_log_level;
                 if (opt_log_level < 0) {
@@ -2674,8 +2945,9 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
                         if (feof(p_v27) == 0) {
                             int32_t i_v31 = 0; // bp-244, 0x1415a
                             fgets((char *)&i_v31, 1024, p_v27);
-                            int32_t i_v32 = strncmp((char *)&i_v31, (char *)&i_v30, 16); // 0x14182
-                            uint32_t i_v33; // 0x14190
+                            int32_t i_v32 = strncmp(
+                                (char *)&i_v31, (char *)&i_v30, 16); // 0x14182
+                            uint32_t i_v33;                          // 0x14190
                             if (i_v32 == 0) {
                                 // 0x1418c
                                 i_v33 = i_v31;
@@ -2688,7 +2960,8 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
                                 // 0x14154
                                 i_v31 = 0;
                                 fgets((char *)&i_v31, 1024, p_v27);
-                                i_v32 = strncmp((char *)&i_v31, (char *)&i_v30, 16);
+                                i_v32 =
+                                    strncmp((char *)&i_v31, (char *)&i_v30, 16);
                                 if (i_v32 == 0) {
                                     // 0x1418c
                                     i_v33 = i_v31;
@@ -2705,7 +2978,7 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
                             goto lab_0x141d2;
                         }
                     }
-                  lab_0x14196:;
+                lab_0x14196:;
                     int32_t i_v34 = i_v29 + 1; // 0x1419a
                     i_v28 = i_v34;
                     if (feof(p_v17) != 0) {
@@ -2714,14 +2987,14 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
                     }
                 }
             }
-          lab_0x141d2:
+        lab_0x141d2:
             // 0x141d2
             fclose(p_v27);
             i_v18 = 0;
             goto lab_0x141e2;
         }
     }
-  lab_0x14082:
+lab_0x14082:
     // 0x14082
     p_v3 = (char *)0x6e65706f;
     _applog(0, (char *)&p_v3, false);
@@ -2730,13 +3003,13 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
     i_v23 = 0;
     i_v25 = i_v4;
     goto lab_0x141da;
-  lab_0x141da:
+lab_0x141da:
     // 0x141da
     __asm_nop(i_v19, i_v21, i_v23, i_v25);
     // 0x141ea
     *nonce = 0;
     return 0;
-  lab_0x140f8:
+lab_0x140f8:
     // 0x140f8
     p_v3 = (char *)0x6e65706f;
     _applog(0, (char *)&p_v3, false);
@@ -2745,20 +3018,20 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
     i_v24 = 0;
     i_v26 = i_v4;
     goto lab_0x141da_2;
-  lab_0x141e2:
+lab_0x141e2:
     // 0x141e2
     fclose(p_v17);
     int32_t i_v35 = i_v18; // 0x141e6
-  lab_0x141ea:
+lab_0x141ea:
     // 0x141ea
     *nonce = i_v35;
     return 0;
-  lab_0x141da_2:
+lab_0x141da_2:
     // 0x141da
     __asm_nop(i_v20, i_v22, i_v24, i_v26);
     i_v18 = 0;
     goto lab_0x141e2;
-  lab_0x13f00:
+lab_0x13f00:
     // 0x13f00
     p_v3 = (char *)0x74746170;
     _applog(2, (char *)&p_v3, false);
@@ -2767,17 +3040,17 @@ int32_t pattern_test(int32_t * runtime, int32_t freq, int32_t * nonce) {
     i_v8 = 0;
     i_v9 = i_v4;
     goto lab_0x141da_3;
-  lab_0x141da_3:
+lab_0x141da_3:
     // 0x141da
     __asm_nop(i_v6, i_v7, i_v8, i_v9);
     i_v35 = 0;
     goto lab_0x141ea;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x14200 - 0x14608
-// Line range:    327 - 394
-int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x14200 - 0x14608 Line range:    327 - 394
+int32_t pattern_test_mode2(int32_t *runtime, int32_t freq, int32_t *nonce) {
     // 0x14200
     clear_last_test_results();
     usleep(0x186a0);
@@ -2794,21 +3067,21 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
     int32_t i_v1 = i_g65 + i_g64 + i_g66; // 0x1432e
     int32_t i_v2 = 0;
     int32_t i_v3 = g_patten; // 0x145bc
-    int32_t i_v4 = i_g63; // 0x145bc
-    int32_t i_v5 = i_g63; // 0x145bc
-    int32_t i_v6; // 0x14200
-    int32_t i_v7; // 0x14200
-    int32_t i_v8; // 0x14200
-    int32_t i_v9; // 0x145b4
-    int32_t i_v10; // 0x14200
-    int32_t i_v11; // bp-1076, 0x14200
-    int32_t i_v12; // 0x14200
-    uint32_t i_v13; // 0x14200
-    int32_t i_v14; // 0x14200
-    int32_t i_v15; // 0x14200
-    char * p_v16; // 0x14430
-    int32_t i_v17; // 0x145a6
-    char i_v18; // 0x144e2
+    int32_t i_v4 = i_g63;    // 0x145bc
+    int32_t i_v5 = i_g63;    // 0x145bc
+    int32_t i_v6;            // 0x14200
+    int32_t i_v7;            // 0x14200
+    int32_t i_v8;            // 0x14200
+    int32_t i_v9;            // 0x145b4
+    int32_t i_v10;           // 0x14200
+    int32_t i_v11;           // bp-1076, 0x14200
+    int32_t i_v12;           // 0x14200
+    uint32_t i_v13;          // 0x14200
+    int32_t i_v14;           // 0x14200
+    int32_t i_v15;           // 0x14200
+    char *p_v16;             // 0x14430
+    int32_t i_v17;           // 0x145a6
+    char i_v18;              // 0x144e2
     if (i_g63 > 0) {
         // 0x1458e
         i_v10 = i_g67;
@@ -2818,7 +3091,9 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                 // 0x14360
                 i_v15 = 0;
                 pthread_mutex_lock(&i_g87);
-                p_g77 = (char *)(((i_g63 * i_v2 + i_v14) * i_g67 + i_v15) * i_v1 + i_g76);
+                p_g77 =
+                    (char *)(((i_g63 * i_v2 + i_v14) * i_g67 + i_v15) * i_v1 +
+                             i_g76);
                 i_g78 = i_v2;
                 i_g79 = i_v14;
                 i_g80 = i_v15;
@@ -2829,7 +3104,8 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                 i_v12 = 0;
                 usleep(0xc350);
                 pthread_mutex_lock(&i_g87);
-                i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 + i_g80);
+                i_v18 =
+                    *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 + i_g80);
                 pthread_mutex_unlock(&i_g87);
                 while (i_v18 != 1) {
                     // 0x144f6
@@ -2837,18 +3113,21 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                     i_v12 = i_v13 + 1;
                     if (i_v13 >= i_g90 / 50) {
                         // 0x14510
-                        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
+                        if ((*(char *)&opt_log_output | *(char *)&use_syslog) ==
+                            0 == opt_log_level < 2) {
                             goto lab_0x14560;
                         } else {
                             // 0x1453a
-                            snprintf((char *)&i_v11, 1024, "pattern id %d receive failed\n", i_v15);
+                            snprintf((char *)&i_v11, 1024,
+                                     "pattern id %d receive failed\n", i_v15);
                             _applog(2, (char *)&i_v11, false);
                             goto lab_0x14560;
                         }
                     }
                     usleep(0xc350);
                     pthread_mutex_lock(&i_g87);
-                    i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 + i_g80);
+                    i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 +
+                                      i_g80);
                     pthread_mutex_unlock(&i_g87);
                 }
                 goto lab_0x14584;
@@ -2869,7 +3148,9 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                     // 0x14360
                     i_v15 = 0;
                     pthread_mutex_lock(&i_g87);
-                    p_g77 = (char *)(((i_g63 * i_v2 + i_v14) * i_g67 + i_v15) * i_v1 + i_g76);
+                    p_g77 = (char *)(((i_g63 * i_v2 + i_v14) * i_g67 + i_v15) *
+                                         i_v1 +
+                                     i_g76);
                     i_g78 = i_v2;
                     i_g79 = i_v14;
                     i_g80 = i_v15;
@@ -2880,7 +3161,8 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                     i_v12 = 0;
                     usleep(0xc350);
                     pthread_mutex_lock(&i_g87);
-                    i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 + i_g80);
+                    i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 +
+                                      i_g80);
                     pthread_mutex_unlock(&i_g87);
                     while (i_v18 != 1) {
                         // 0x144f6
@@ -2888,18 +3170,23 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                         i_v12 = i_v13 + 1;
                         if (i_v13 >= i_g90 / 50) {
                             // 0x14510
-                            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
+                            if ((*(char *)&opt_log_output |
+                                 *(char *)&use_syslog) == 0 ==
+                                opt_log_level < 2) {
                                 goto lab_0x14560;
                             } else {
                                 // 0x1453a
-                                snprintf((char *)&i_v11, 1024, "pattern id %d receive failed\n", i_v15);
+                                snprintf((char *)&i_v11, 1024,
+                                         "pattern id %d receive failed\n",
+                                         i_v15);
                                 _applog(2, (char *)&i_v11, false);
                                 goto lab_0x14560;
                             }
                         }
                         usleep(0xc350);
                         pthread_mutex_lock(&i_g87);
-                        i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 + i_g80);
+                        i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) +
+                                          i_g81 + i_g80);
                         pthread_mutex_unlock(&i_g87);
                     }
                     goto lab_0x14584;
@@ -2935,7 +3222,9 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                     // 0x14360
                     i_v15 = 0;
                     pthread_mutex_lock(&i_g87);
-                    p_g77 = (char *)(((i_g63 * i_v2 + i_v14) * i_g67 + i_v15) * i_v1 + i_g76);
+                    p_g77 = (char *)(((i_g63 * i_v2 + i_v14) * i_g67 + i_v15) *
+                                         i_v1 +
+                                     i_g76);
                     i_g78 = i_v2;
                     i_g79 = i_v14;
                     i_g80 = i_v15;
@@ -2946,7 +3235,8 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                     i_v12 = 0;
                     usleep(0xc350);
                     pthread_mutex_lock(&i_g87);
-                    i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 + i_g80);
+                    i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 +
+                                      i_g80);
                     pthread_mutex_unlock(&i_g87);
                     while (i_v18 != 1) {
                         // 0x144f6
@@ -2954,18 +3244,23 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                         i_v12 = i_v13 + 1;
                         if (i_v13 >= i_g90 / 50) {
                             // 0x14510
-                            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
+                            if ((*(char *)&opt_log_output |
+                                 *(char *)&use_syslog) == 0 ==
+                                opt_log_level < 2) {
                                 goto lab_0x14560;
                             } else {
                                 // 0x1453a
-                                snprintf((char *)&i_v11, 1024, "pattern id %d receive failed\n", i_v15);
+                                snprintf((char *)&i_v11, 1024,
+                                         "pattern id %d receive failed\n",
+                                         i_v15);
                                 _applog(2, (char *)&i_v11, false);
                                 goto lab_0x14560;
                             }
                         }
                         usleep(0xc350);
                         pthread_mutex_lock(&i_g87);
-                        i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 + i_g80);
+                        i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) +
+                                          i_g81 + i_g80);
                         pthread_mutex_unlock(&i_g87);
                     }
                     goto lab_0x14584;
@@ -2986,7 +3281,10 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                         // 0x14360
                         i_v15 = 0;
                         pthread_mutex_lock(&i_g87);
-                        p_g77 = (char *)(((i_g63 * i_v2 + i_v14) * i_g67 + i_v15) * i_v1 + i_g76);
+                        p_g77 =
+                            (char *)(((i_g63 * i_v2 + i_v14) * i_g67 + i_v15) *
+                                         i_v1 +
+                                     i_g76);
                         i_g78 = i_v2;
                         i_g79 = i_v14;
                         i_g80 = i_v15;
@@ -2997,7 +3295,8 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                         i_v12 = 0;
                         usleep(0xc350);
                         pthread_mutex_lock(&i_g87);
-                        i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 + i_g80);
+                        i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) +
+                                          i_g81 + i_g80);
                         pthread_mutex_unlock(&i_g87);
                         while (i_v18 != 1) {
                             // 0x144f6
@@ -3005,18 +3304,23 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
                             i_v12 = i_v13 + 1;
                             if (i_v13 >= i_g90 / 50) {
                                 // 0x14510
-                                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
+                                if ((*(char *)&opt_log_output |
+                                     *(char *)&use_syslog) == 0 ==
+                                    opt_log_level < 2) {
                                     goto lab_0x14560;
                                 } else {
                                     // 0x1453a
-                                    snprintf((char *)&i_v11, 1024, "pattern id %d receive failed\n", i_v15);
+                                    snprintf((char *)&i_v11, 1024,
+                                             "pattern id %d receive failed\n",
+                                             i_v15);
                                     _applog(2, (char *)&i_v11, false);
                                     goto lab_0x14560;
                                 }
                             }
                             usleep(0xc350);
                             pthread_mutex_lock(&i_g87);
-                            i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 + i_g80);
+                            i_v18 = *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) +
+                                              i_g81 + i_g80);
                             pthread_mutex_unlock(&i_g87);
                         }
                         goto lab_0x14584;
@@ -3042,37 +3346,39 @@ int32_t pattern_test_mode2(int32_t * runtime, int32_t freq, int32_t * nonce) {
     i_g86 = 0;
     *nonce = i_g82;
     return 0;
-  lab_0x14584:;
+lab_0x14584:;
     int32_t i_v22 = i_v15 + 1; // 0x14588
     if (i_g67 <= i_v22) {
         // break -> 0x1458e
         goto lab_0x1458e;
     }
     goto lab_0x14360;
-  lab_0x14560:
+lab_0x14560:
     // 0x14560
     dump_str((char *)p_g27, NULL, p_g77, i_g64);
     goto lab_0x14584;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x1460c - 0x147e2
-// Line range:    396 - 427
-int32_t user_asic_init(int32_t * runtime) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x1460c - 0x147e2 Line range:    396 - 427
+int32_t user_asic_init(int32_t *runtime) {
     int32_t i_v1 = (int32_t)runtime;
     int32_t i_v2 = *(int32_t *)(i_v1 + 1772); // 0x1461c
     int32_t i_v3 = 144 * i_v2 + i_v1;
     int32_t i_v4 = 3; // 0x14626
     check_asic_num(runtime);
     int32_t i_v5 = *(int32_t *)(i_v3 + 16); // 0x14646
-    int32_t i_v6; // 0x1460c
+    int32_t i_v6;                           // 0x1460c
     while (i_v5 <= 0) {
         int32_t i_v7 = i_v4;
         sleep(1);
-        char * p_v8; // bp-1048, 0x1460c
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        char *p_v8; // bp-1048, 0x1460c
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1467c
-            snprintf((char *)&p_v8, 1024, "check again check_times = %d\n", i_v7);
+            snprintf((char *)&p_v8, 1024, "check again check_times = %d\n",
+                     i_v7);
             _applog(2, (char *)&p_v8, false);
         }
         // 0x146a2
@@ -3080,7 +3386,8 @@ int32_t user_asic_init(int32_t * runtime) {
         if (i_v4 == 0) {
             // 0x146c0
             i_v6 = -1;
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 0) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 ==
+                opt_log_level < 0) {
                 return i_v6;
             } else {
                 // 0x146ea
@@ -3095,14 +3402,14 @@ int32_t user_asic_init(int32_t * runtime) {
     }
     // 0x1471e
     __asm_nop((int32_t)&i_g101, i_v1, i_v2, i_v5);
-    int32_t * p_v9 = (int32_t *)(i_v1 + 2808); // 0x14724
+    int32_t *p_v9 = (int32_t *)(i_v1 + 2808); // 0x14724
     *p_v9 = 0;
-    int32_t * p_v10 = (int32_t *)(i_v1 + 2812); // 0x1472c
+    int32_t *p_v10 = (int32_t *)(i_v1 + 2812); // 0x1472c
     if (*p_v10 != 0x1c200) {
         // 0x14736
         sleep(1);
         sleep(1);
-        int32_t * p_v11 = (int32_t *)i_v3; // 0x1477e
+        int32_t *p_v11 = (int32_t *)i_v3; // 0x1477e
         uart_exit(*p_v11);
         sleep(1);
         *p_v11 = uart_init(*(int32_t *)(i_v3 + 4), *p_v10);
@@ -3111,25 +3418,28 @@ int32_t user_asic_init(int32_t * runtime) {
     // 0x147cc
     *p_v9 = 1;
     i_v6 = 0;
-  lab_0x147d8:
+lab_0x147d8:
     // 0x147d8
     return i_v6;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x147e4 - 0x148fe
-// Line range:    429 - 456
-int32_t user_check_communication(int32_t * runtime) {
-    int32_t item = 0x1000000 * *(int32_t *)((int32_t)runtime + 1772) >> 24; // bp-44, 0x1481a
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x147e4 - 0x148fe Line range:    429 - 456
+int32_t user_check_communication(int32_t *runtime) {
+    int32_t item = 0x1000000 * *(int32_t *)((int32_t)runtime + 1772) >>
+                   24; // bp-44, 0x1481a
     int32_t i_v1 = 0;
     uint32_t i_v2 = read_reg_item(&item, 500); // 0x14868
-    int32_t i_v3 = i_v1; // 0x14870
+    int32_t i_v3 = i_v1;                       // 0x14870
     while (i_v2 < 0) {
         // 0x14872
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1489c
             int32_t i_v4; // bp-1068, 0x147e4
-            snprintf((char *)&i_v4, 1024, "%s  failed %d\n", "user_check_communication", i_v1);
+            snprintf((char *)&i_v4, 1024, "%s  failed %d\n",
+                     "user_check_communication", i_v1);
             _applog(2, (char *)&i_v4, false);
         }
         // 0x148cc
@@ -3148,10 +3458,10 @@ int32_t user_check_communication(int32_t * runtime) {
     return i_v3;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c
-// Address range: 0x14900 - 0x14a30
-// Line range:    458 - 479
-void env_init(int32_t * runtime) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/bm174x-user.c Address
+// range: 0x14900 - 0x14a30 Line range:    458 - 479
+void env_init(int32_t *runtime) {
     int32_t i_v1 = (int32_t)runtime;
     strcpy((char *)(i_v1 + 1708), (char *)&fd_fpga_mem);
     *(int32_t *)(i_v1 + 1776) = calc_asic_addr_interval(i_g50);
@@ -3161,9 +3471,9 @@ void env_init(int32_t * runtime) {
         int32_t i_v3 = 4 * i_v2; // 0x14962
         *(int32_t *)(i_v1 + 1780 + i_v3) = *(int32_t *)(i_g56 + i_v3);
     }
-    int32_t * p_v4 = (int32_t *)(i_v1 + 2840); // 0x1499c
+    int32_t *p_v4 = (int32_t *)(i_v1 + 2840); // 0x1499c
     *p_v4 = i_g55;
-    int32_t i_v5 = 0; // 0x149fa
+    int32_t i_v5 = 0;    // 0x149fa
     int32_t i_v6 = i_v1; // 0x149fa
     if (i_g55 > 0) {
         int32_t i_v7 = 144 * i_v5 + i_v1; // 0x149c6
@@ -3189,17 +3499,20 @@ void env_init(int32_t * runtime) {
     __asm_nop((int32_t)&i_g101, i_v6, 20, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x14a30 - 0x14c42
 // Line range:    43 - 65
-void randomize(char * p, int32_t l) {
+void randomize(char *p, int32_t l) {
     int32_t i_v1 = open("/dev/urandom", O_RDONLY); // 0x14a52
-    int32_t i_v2; // bp-1044, 0x14a30
+    int32_t i_v2;                                  // bp-1044, 0x14a30
     if (i_v1 == -1) {
         // 0x14a64
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 0) {
             int32_t i_v3 = *__errno_location(); // 0x14a94
-            snprintf((char *)&i_v2, 1024, "open %s: %s\n", "/dev/urandom", strerror(i_v3));
+            snprintf((char *)&i_v2, 1024, "open %s: %s\n", "/dev/urandom",
+                     strerror(i_v3));
             _applog(0, (char *)&i_v2, false);
         }
         // 0x14ac6
@@ -3209,9 +3522,11 @@ void randomize(char * p, int32_t l) {
     int32_t i_v4 = read(i_v1, (int32_t *)p, l); // 0x14ad8
     if (i_v4 == -1) {
         // 0x14aea
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 0) {
             int32_t i_v5 = *__errno_location(); // 0x14b1a
-            snprintf((char *)&i_v2, 1024, "read %s: %s\n", "/dev/urandom", strerror(i_v5));
+            snprintf((char *)&i_v2, 1024, "read %s: %s\n", "/dev/urandom",
+                     strerror(i_v5));
             _applog(0, (char *)&i_v2, false);
         }
         // 0x14b4c
@@ -3220,9 +3535,11 @@ void randomize(char * p, int32_t l) {
     }
     if (i_v4 != l) {
         // 0x14b5e
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 0) {
             // 0x14b88
-            snprintf((char *)&i_v2, 1024, "%s: short read %d bytes out of %d\n", "/dev/urandom", i_v4, l);
+            snprintf((char *)&i_v2, 1024, "%s: short read %d bytes out of %d\n",
+                     "/dev/urandom", i_v4, l);
             _applog(0, (char *)&i_v2, false);
         }
         // 0x14bba
@@ -3236,9 +3553,11 @@ void randomize(char * p, int32_t l) {
         return;
     }
     // 0x14bd0
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 0) {
         int32_t i_v7 = *__errno_location(); // 0x14c00
-        snprintf((char *)&i_v2, 1024, "close %s: %s\n", "/dev/urandom", strerror(i_v7));
+        snprintf((char *)&i_v2, 1024, "close %s: %s\n", "/dev/urandom",
+                 strerror(i_v7));
         _applog(0, (char *)&i_v2, false);
     }
     // 0x14c32
@@ -3246,17 +3565,20 @@ void randomize(char * p, int32_t l) {
     // UNREACHABLE
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x14c44 - 0x14d68
 // Line range:    67 - 79
 void set_blocking_mode(int32_t fd, int32_t block) {
     int32_t i_v1 = fcntl(fd, F_GETFL); // 0x14c5a
-    int32_t i_v2; // bp-1036, 0x14c44
+    int32_t i_v2;                      // bp-1036, 0x14c44
     if (i_v1 == -1) {
         // 0x14c6c
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 0) {
             // 0x14c96
-            snprintf((char *)&i_v2, 1024, "fcntl F_GETFL: %s\n", strerror(*__errno_location()));
+            snprintf((char *)&i_v2, 1024, "fcntl F_GETFL: %s\n",
+                     strerror(*__errno_location()));
             _applog(0, (char *)&i_v2, false);
         }
         // 0x14cc8
@@ -3270,9 +3592,11 @@ void set_blocking_mode(int32_t fd, int32_t block) {
         return;
     }
     // 0x14cfc
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 0) {
         // 0x14d26
-        snprintf((char *)&i_v2, 1024, "fcntl F_SETFL: %s\n", strerror(*__errno_location()));
+        snprintf((char *)&i_v2, 1024, "fcntl F_SETFL: %s\n",
+                 strerror(*__errno_location()));
         _applog(0, (char *)&i_v2, false);
     }
     // 0x14d58
@@ -3280,10 +3604,11 @@ void set_blocking_mode(int32_t fd, int32_t block) {
     // UNREACHABLE
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x14d68 - 0x14e38
 // Line range:    81 - 89
-char hex2val(char * base, int32_t off) {
+char hex2val(char *base, int32_t off) {
     unsigned char i_v1 = *(char *)((int32_t)base + off); // 0x14d82
     if (i_v1 != 47 && i_v1 >= 47) {
         if (i_v1 >= 57 != i_v1 != 57) {
@@ -3304,20 +3629,23 @@ char hex2val(char * base, int32_t off) {
         }
     }
     // 0x14dd6
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 0) {
         // 0x14e00
         int32_t i_v2; // bp-1036, 0x14d68
-        snprintf((char *)&i_v2, 1024, "Invalid hex char at offset %zd: ...%c...\n", (int64_t)off);
+        snprintf((char *)&i_v2, 1024,
+                 "Invalid hex char at offset %zd: ...%c...\n", (int64_t)off);
         _applog(0, (char *)&i_v2, false);
     }
     // 0x14e2e
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x14e38 - 0x14ea8
 // Line range:    91 - 100
-char * s_hexdump(int32_t * _a, uint32_t a_len) {
+char *s_hexdump(int32_t *_a, uint32_t a_len) {
     // 0x14e38
     if (a_len == 0) {
         // 0x14e88
@@ -3342,10 +3670,11 @@ char * s_hexdump(int32_t * _a, uint32_t a_len) {
     return (char *)&p_g32;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x14ea8 - 0x15078
 // Line range:    110 - 159
-void hexdump(char * p, int32_t len) {
+void hexdump(char *p, int32_t len) {
     char line[1]; // bp-52, 0x14ea8
     char x_v1[1]; // 0x14ef6
     int32_t i_v2 = (int32_t)p;
@@ -3353,12 +3682,12 @@ void hexdump(char * p, int32_t len) {
     x_v1[0] = (char)(int32_t)&i_v3 - 80;
     line = x_v1;
     int32_t i_v4 = i_v2; // 0x15068
-    int32_t i_v5 = 80; // 0x15068
-    int32_t i_v6 = 0; // 0x15068
+    int32_t i_v5 = 80;   // 0x15068
+    int32_t i_v6 = 0;    // 0x15068
     i_v3 = 0;
-    int32_t i_v7; // 0x14ea8
-    int32_t i_v8; // 0x14ea8
-    int32_t i_v9; // 0x14ea8
+    int32_t i_v7;  // 0x14ea8
+    int32_t i_v8;  // 0x14ea8
+    int32_t i_v9;  // 0x14ea8
     int32_t i_v10; // 0x14ea8
     int32_t i_v11; // 0x14ea8
     if (len != 0) {
@@ -3366,7 +3695,7 @@ void hexdump(char * p, int32_t len) {
         i_v9 = 0;
         i_v7 = i_v2;
         while (true) {
-          lab_0x14f52:
+        lab_0x14f52:
             // 0x14f52
             i_v8 = i_v7;
             i_v10 = i_v9;
@@ -3374,26 +3703,26 @@ void hexdump(char * p, int32_t len) {
             while (true) {
                 int32_t i_v13 = i_v12;
                 switch ((int31_t)i_v13) {
-                    case 60: {
+                case 60: {
+                }
+                case 77: {
+                    // 0x14f1e
+                    *(char *)(*(int32_t *)&line + i_v13) = 124;
+                    // break -> 0x14f4c
+                    break;
+                }
+                default: {
+                    char *p_v14 = (char *)(*(int32_t *)&line + i_v13);
+                    if (i_v13 == 78) {
+                        // 0x14f36
+                        *p_v14 = 0;
+                    } else {
+                        // 0x14f42
+                        *p_v14 = 32;
                     }
-                    case 77: {
-                        // 0x14f1e
-                        *(char *)(*(int32_t *)&line + i_v13) = 124;
-                        // break -> 0x14f4c
-                        break;
-                    }
-                    default: {
-                        char * p_v14 = (char *)(*(int32_t *)&line + i_v13);
-                        if (i_v13 == 78) {
-                            // 0x14f36
-                            *p_v14 = 0;
-                        } else {
-                            // 0x14f42
-                            *p_v14 = 32;
-                        }
-                        // break -> 0x14f4c
-                        break;
-                    }
+                    // break -> 0x14f4c
+                    break;
+                }
                 }
                 // 0x14f4c
                 i_v12 = i_v13 + 1;
@@ -3405,11 +3734,12 @@ void hexdump(char * p, int32_t len) {
             goto lab_0x15038;
         }
     }
-  lab_0x1506c:
+lab_0x1506c:
     // 0x1506c
     __asm_nop(i_v4, i_v5, i_v6, i_v3);
-  lab_0x14f5e:;
-    unsigned char i_v15 = *(char *)((i_v10 >> 28 - 4 * i_v11) % 16 + (int32_t)"0123456789abcdef"); // 0x14f84
+lab_0x14f5e:;
+    unsigned char i_v15 = *(char *)((i_v10 >> 28 - 4 * i_v11) % 16 +
+                                    (int32_t) "0123456789abcdef"); // 0x14f84
     *(char *)(*(int32_t *)&line + i_v11) = i_v15;
     int32_t i_v16 = i_v11 + 1; // 0x14f92
     i_v11 = i_v16;
@@ -3418,19 +3748,21 @@ void hexdump(char * p, int32_t len) {
     } else {
         goto lab_0x14f5e;
     }
-  lab_0x15038:;
+lab_0x15038:;
     int32_t i_v17 = i_v10; // 0x14fbe
     int32_t i_v18 = i_v15; // 0x14fbe
     int32_t i_v19 = i_v10; // 0x14fbe
-    int32_t i_v20 = i_v3; // 0x14fbe
+    int32_t i_v20 = i_v3;  // 0x14fbe
     if (i_v10 < i_v3) {
         uint32_t i_v21 = 0;
         unsigned char i_v22 = *(char *)(i_v17 + i_v2); // 0x14fca
-        uint32_t i_v23 = (int32_t)i_v22; // 0x14fca
-        int32_t i_v24 = i_v21 / 8 + 11 + 3 * i_v21; // 0x14fd8
-        char i_v25 = *(char *)(i_v23 / 16 + (int32_t)"0123456789abcdef"); // 0x14fea
+        uint32_t i_v23 = (int32_t)i_v22;               // 0x14fca
+        int32_t i_v24 = i_v21 / 8 + 11 + 3 * i_v21;    // 0x14fd8
+        char i_v25 =
+            *(char *)(i_v23 / 16 + (int32_t) "0123456789abcdef"); // 0x14fea
         *(char *)(*(int32_t *)&line + i_v24) = i_v25;
-        char i_v26 = *(char *)(i_v23 % 16 + (int32_t)"0123456789abcdef"); // 0x1500c
+        char i_v26 =
+            *(char *)(i_v23 % 16 + (int32_t) "0123456789abcdef"); // 0x1500c
         *(char *)(i_v24 + 1 + *(int32_t *)&line) = i_v26;
         int32_t i_v27 = 46; // 0x15020
         if (i_v22 != 31 && i_v22 >= 31) {
@@ -3455,9 +3787,9 @@ void hexdump(char * p, int32_t len) {
             i_v22 = *(char *)(i_v17 + i_v2);
             i_v23 = (int32_t)i_v22;
             i_v24 = i_v21 / 8 + 11 + 3 * i_v21;
-            i_v25 = *(char *)(i_v23 / 16 + (int32_t)"0123456789abcdef");
+            i_v25 = *(char *)(i_v23 / 16 + (int32_t) "0123456789abcdef");
             *(char *)(*(int32_t *)&line + i_v24) = i_v25;
-            i_v26 = *(char *)(i_v23 % 16 + (int32_t)"0123456789abcdef");
+            i_v26 = *(char *)(i_v23 % 16 + (int32_t) "0123456789abcdef");
             *(char *)(i_v24 + 1 + *(int32_t *)&line) = i_v26;
             i_v27 = 46;
             if (i_v22 != 31 && i_v22 >= 31) {
@@ -3471,12 +3803,12 @@ void hexdump(char * p, int32_t len) {
             i_v30 = i_v21 + 1;
         }
     } else {
-      lab_0x15040:
+    lab_0x15040:
         // 0x15040
         __asm_nop(i_v8, i_v18, i_v19, i_v20);
     }
     int32_t i_v33 = fprintf(p_g27, (char *)0x346c0); // 0x15058
-    int32_t i_v34 = i_v10 + 16; // 0x1505e
+    int32_t i_v34 = i_v10 + 16;                      // 0x1505e
     i_v9 = i_v34;
     i_v7 = i_v33;
     i_v4 = i_v33;
@@ -3489,10 +3821,12 @@ void hexdump(char * p, int32_t len) {
     goto lab_0x14f52;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x15078 - 0x151a6
 // Line range:    214 - 237
-int32_t print_solver_line(char * soln, char * header, int32_t fixed_nonce_bytes, char * job_id) {
+int32_t print_solver_line(char *soln, char *header, int32_t fixed_nonce_bytes,
+                          char *job_id) {
     char buffer[1487]; // bp-1508, 0x15078
     // 0x15078
     memcpy((int32_t *)&buffer, (int32_t *)header, 140);
@@ -3500,28 +3834,31 @@ int32_t print_solver_line(char * soln, char * header, int32_t fixed_nonce_bytes,
     memcpy((int32_t *)(i_v1 + 140), (int32_t *)&p_g2, 3);
     memcpy((int32_t *)(i_v1 + 143), (int32_t *)soln, 1344);
     printf("sol: %s ", job_id);
-    int32_t i_v2 = (int32_t)header; // 0x150f8
+    int32_t i_v2 = (int32_t)header;             // 0x150f8
     unsigned char i_v3 = *(char *)(i_v2 + 100); // 0x15104
     unsigned char i_v4 = *(char *)(i_v2 + 101); // 0x1510e
     unsigned char i_v5 = *(char *)(i_v2 + 102); // 0x15118
     unsigned char i_v6 = *(char *)(i_v2 + 103); // 0x15122
-    printf("%02x%02x%02x%02x ", (int32_t)i_v3, (int32_t)i_v4, (int32_t)i_v5, (int32_t)i_v6);
-    printf("%s ", s_hexdump((int32_t *)(fixed_nonce_bytes + 108 + i_v2), 32 - fixed_nonce_bytes));
+    printf("%02x%02x%02x%02x ", (int32_t)i_v3, (int32_t)i_v4, (int32_t)i_v5,
+           (int32_t)i_v6);
+    printf("%s ", s_hexdump((int32_t *)(fixed_nonce_bytes + 108 + i_v2),
+                            32 - fixed_nonce_bytes));
     int32_t i_v7; // bp-1365, 0x15078
     printf("%s%s\n", "fd4005", s_hexdump(&i_v7, 1344));
     fflush(p_g29);
     return 1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x151a8 - 0x151ee
 // Line range:    239 - 248
-char * memrchr(int32_t * s, int32_t c, int32_t n) {
-    uint32_t i_v1 = (int32_t)s; // 0x151b8
+char *memrchr(int32_t *s, int32_t c, int32_t n) {
+    uint32_t i_v1 = (int32_t)s;                      // 0x151b8
     uint32_t i_v2 = (int32_t)(char *)(i_v1 + n) - 1; // 0x151d4
-    char * p_v3 = NULL; // 0x151de
+    char *p_v3 = NULL;                               // 0x151de
     while (i_v2 >= i_v1) {
-        char * p_v4 = (char *)i_v2; // 0x151d6
+        char *p_v4 = (char *)i_v2; // 0x151d6
         p_v3 = p_v4;
         if ((int32_t)*p_v4 == c) {
             // break -> 0x151e2
@@ -3534,99 +3871,109 @@ char * memrchr(int32_t * s, int32_t c, int32_t n) {
     return p_v3;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x151f0 - 0x15496
 // Line range:    260 - 304
-int32_t read_last_line(char * buf, int32_t len, int32_t block) {
+int32_t read_last_line(char *buf, int32_t len, int32_t block) {
     // 0x151f0
     set_blocking_mode(0, block);
     int32_t i_v1 = (int32_t)buf; // 0x1521c
-    int32_t i_v2; // bp-1044, 0x151f0
+    int32_t i_v2;                // bp-1044, 0x151f0
     int32_t i_v3 = &i_v2;
     int32_t i_v4 = 0; // 0x15214
-    int32_t i_v5; // 0x151f0
-    int32_t i_v6; // 0x151f0
-    int32_t i_v7; // 0x151f0
-    int32_t i_v8; // 0x15234
+    int32_t i_v5;     // 0x151f0
+    int32_t i_v6;     // 0x151f0
+    int32_t i_v7;     // 0x151f0
+    int32_t i_v8;     // 0x15234
     while (true) {
-      lab_0x15218_2:
+    lab_0x15218_2:
         // 0x15218
         i_v5 = i_v4;
         int32_t i_v9 = i_v5 + i_v1; // 0x15222
         int32_t i_v10 = len - i_v5; // 0x1522e
         while (true) {
-          lab_0x15218:
+        lab_0x15218:
             // 0x15218
             i_v8 = read(0, (int32_t *)i_v9, i_v10);
             i_v6 = i_v8;
             i_v7 = i_v9;
             switch (i_v8) {
-                case -1: {
-                    int32_t * p_v11 = __errno_location(); // 0x15246
-                    if (*p_v11 == 4) {
-                        // 0x153d0
-                        __asm_nop((int32_t)p_v11, i_v9, i_v10, 4);
-                    } else {
-                        // 0x1525e
-                        if (*__errno_location() != 11) {
-                            int32_t * p_v12 = __errno_location(); // 0x1526a
-                            if (*p_v12 != 11) {
-                                // 0x152f2
-                                i_v6 = (int32_t)p_v12;
-                                i_v7 = i_v9;
-                                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 0) {
-                                    goto lab_0x153ac;
-                                } else {
-                                    // 0x1531c
-                                    snprintf((char *)&i_v2, 1024, "read stdin: %s\n", strerror(*__errno_location()));
-                                    _applog(0, (char *)&i_v2, false);
-                                    i_v6 = &i_g101;
-                                    i_v7 = i_v3;
-                                    goto lab_0x153ac;
-                                }
+            case -1: {
+                int32_t *p_v11 = __errno_location(); // 0x15246
+                if (*p_v11 == 4) {
+                    // 0x153d0
+                    __asm_nop((int32_t)p_v11, i_v9, i_v10, 4);
+                } else {
+                    // 0x1525e
+                    if (*__errno_location() != 11) {
+                        int32_t *p_v12 = __errno_location(); // 0x1526a
+                        if (*p_v12 != 11) {
+                            // 0x152f2
+                            i_v6 = (int32_t)p_v12;
+                            i_v7 = i_v9;
+                            if ((*(char *)&opt_log_output |
+                                 *(char *)&use_syslog) == 0 ==
+                                opt_log_level < 0) {
+                                goto lab_0x153ac;
+                            } else {
+                                // 0x1531c
+                                snprintf((char *)&i_v2, 1024,
+                                         "read stdin: %s\n",
+                                         strerror(*__errno_location()));
+                                _applog(0, (char *)&i_v2, false);
+                                i_v6 = &i_g101;
+                                i_v7 = i_v3;
+                                goto lab_0x153ac;
                             }
                         }
-                        // 0x15276
-                        if (i_v5 == 0) {
-                            // 0x1548c
-                            return 0;
-                        }
-                        // 0x15282
-                        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
-                            int32_t i_v13 = *__errno_location(); // 0x152b2
-                            snprintf((char *)&i_v2, 1024, "strange: a partial line was read %s\n", strerror(i_v13));
-                            _applog(1, (char *)&i_v2, false);
-                        }
-                        // 0x152de
-                        set_blocking_mode(0, 1);
                     }
-                    goto lab_0x15218;
-                }
-                case 0: {
-                    // 0x15358
-                    i_v6 = 0;
-                    i_v7 = i_v9;
-                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
-                        // 0x15382
-                        snprintf((char *)&i_v2, 1024, "%s EOF on stdin\n", "read_last_line");
-                        _applog(0, (char *)&i_v2, false);
-                        i_v6 = &i_g101;
-                        i_v7 = i_v3;
+                    // 0x15276
+                    if (i_v5 == 0) {
+                        // 0x1548c
+                        return 0;
                     }
-                    goto lab_0x153ac;
+                    // 0x15282
+                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) ==
+                        0 != opt_log_level < 1) {
+                        int32_t i_v13 = *__errno_location(); // 0x152b2
+                        snprintf((char *)&i_v2, 1024,
+                                 "strange: a partial line was read %s\n",
+                                 strerror(i_v13));
+                        _applog(1, (char *)&i_v2, false);
+                    }
+                    // 0x152de
+                    set_blocking_mode(0, 1);
                 }
-                default: {
-                    goto lab_0x153ac;
+                goto lab_0x15218;
+            }
+            case 0: {
+                // 0x15358
+                i_v6 = 0;
+                i_v7 = i_v9;
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 0) {
+                    // 0x15382
+                    snprintf((char *)&i_v2, 1024, "%s EOF on stdin\n",
+                             "read_last_line");
+                    _applog(0, (char *)&i_v2, false);
+                    i_v6 = &i_g101;
+                    i_v7 = i_v3;
                 }
+                goto lab_0x153ac;
+            }
+            default: {
+                goto lab_0x153ac;
+            }
             }
         }
         goto lab_0x153ac;
     }
-  lab_0x153d4:
+lab_0x153d4:
     // 0x153d4
     __asm_nop(i_v6, i_v7, i_v1, 10);
-    int32_t i_v14; // 0x153be
-    char * p_v15 = memrchr((int32_t *)buf, 10, i_v14); // 0x153e4
+    int32_t i_v14;                                    // 0x153be
+    char *p_v15 = memrchr((int32_t *)buf, 10, i_v14); // 0x153e4
     if (p_v15 == NULL) {
         // 0x15478
         *(char *)(i_v1 - 1 + i_v4) = 0;
@@ -3634,19 +3981,21 @@ int32_t read_last_line(char * buf, int32_t len, int32_t block) {
         return 1;
     }
     // 0x153f4
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 1) {
         // 0x1541e
-        snprintf((char *)&i_v2, 1024, "%s strange: more than 1 line was read\n", "read_last_line");
+        snprintf((char *)&i_v2, 1024, "%s strange: more than 1 line was read\n",
+                 "read_last_line");
         _applog(1, (char *)&i_v2, false);
     }
-    int32_t i_v16 = (int32_t)p_v15; // 0x15448
+    int32_t i_v16 = (int32_t)p_v15;           // 0x15448
     int32_t i_v17 = i_v4 + i_v1 + -1 - i_v16; // 0x1545e
     memmove((int32_t *)buf, (int32_t *)(i_v16 + 1), i_v17);
     // 0x15478
     *(char *)(i_v1 - 1 + i_v17) = 0;
     // 0x1548c
     return 1;
-  lab_0x153ac:
+lab_0x153ac:
     // 0x153ac
     i_v4 = i_v8 + i_v5;
     i_v14 = i_v4 - 1;
@@ -3657,14 +4006,17 @@ int32_t read_last_line(char * buf, int32_t len, int32_t block) {
     goto lab_0x15218_2;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x15498 - 0x15826
 // Line range:    328 - 369
-void mining_parse_job(char * str, char * target, uint32_t target_len, char * job_id, uint32_t job_id_len, char * header, uint32_t header_len, int32_t * fixed_nonce_bytes) {
+void mining_parse_job(char *str, char *target, uint32_t target_len,
+                      char *job_id, uint32_t job_id_len, char *header,
+                      uint32_t header_len, int32_t *fixed_nonce_bytes) {
     int32_t i_v1 = 0; // 0x1551a
     if (target_len != 0) {
-        int32_t i_v2 = 0; // 0x15500
-        int32_t i_v3 = 0; // 0x1550a
+        int32_t i_v2 = 0;               // 0x15500
+        int32_t i_v3 = 0;               // 0x1550a
         char i_v4 = hex2val(str, i_v3); // 0x154d8
         *(char *)(i_v2 + (int32_t)target) = 16 * i_v4 + hex2val(str, i_v3 | 1);
         i_v2++;
@@ -3673,7 +4025,8 @@ void mining_parse_job(char * str, char * target, uint32_t target_len, char * job
         while (i_v2 < target_len) {
             // 0x154c2
             i_v4 = hex2val(str, i_v3);
-            *(char *)(i_v2 + (int32_t)target) = 16 * i_v4 + hex2val(str, i_v3 | 1);
+            *(char *)(i_v2 + (int32_t)target) =
+                16 * i_v4 + hex2val(str, i_v3 | 1);
             i_v2++;
             i_v3 += 2;
             i_v1 = i_v3;
@@ -3682,15 +4035,16 @@ void mining_parse_job(char * str, char * target, uint32_t target_len, char * job
     int32_t i_v5 = (int32_t)str; // 0x15520
     if (*(char *)(i_v1 + i_v5) != 32) {
         // 0x1552e
-        __assert_fail("str[str_i] == ' '", "bm174x/equihash-miner.c", 338, "mining_parse_job");
+        __assert_fail("str[str_i] == ' '", "bm174x/equihash-miner.c", 338,
+                      "mining_parse_job");
     }
     int32_t i_v6 = i_v1 | 1; // 0x15552
-    int32_t i_v7 = i_v6; // 0x15598
-    int32_t i_v8 = 0; // 0x15598
-    bool i_v9 = false; // 0x15598
+    int32_t i_v7 = i_v6;     // 0x15598
+    int32_t i_v8 = 0;        // 0x15598
+    bool i_v9 = false;       // 0x15598
     if (job_id_len != 0) {
-        int32_t i_v10 = 0; // 0x1557e
-        int32_t i_v11 = i_v6; // 0x15588
+        int32_t i_v10 = 0;                    // 0x1557e
+        int32_t i_v11 = i_v6;                 // 0x15588
         char i_v12 = *(char *)(i_v11 + i_v5); // 0x155a6
         i_v7 = i_v11;
         i_v8 = i_v10;
@@ -3716,25 +4070,28 @@ void mining_parse_job(char * str, char * target, uint32_t target_len, char * job
     // 0x155ac
     if (*(char *)(i_v7 + i_v5) != 32) {
         // 0x155be
-        __assert_fail("str[str_i] == ' '", "bm174x/equihash-miner.c", 344, "mining_parse_job");
+        __assert_fail("str[str_i] == ' '", "bm174x/equihash-miner.c", 344,
+                      "mining_parse_job");
     }
     if (!i_v9) {
         // 0x155ea
-        __assert_fail("i < job_id_len", "bm174x/equihash-miner.c", 345, "mining_parse_job");
+        __assert_fail("i < job_id_len", "bm174x/equihash-miner.c", 345,
+                      "mining_parse_job");
     }
     // 0x1560a
     *(char *)(i_v8 + (int32_t)job_id) = 0;
     int32_t i_v13 = i_v7 + 1; // 0x1561c
-    int32_t i_v14 = i_v13; // 0x15680
-    int32_t i_v15 = 0; // 0x15680
+    int32_t i_v14 = i_v13;    // 0x15680
+    int32_t i_v15 = 0;        // 0x15680
     if (header_len != 0) {
-        int32_t i_v16 = 0; // 0x15666
+        int32_t i_v16 = 0;     // 0x15666
         int32_t i_v17 = i_v13; // 0x15670
         i_v14 = i_v17;
         i_v15 = i_v16;
         while (*(char *)(i_v17 + i_v5) != 32) {
             char i_v18 = hex2val(str, i_v17); // 0x1563e
-            *(char *)(i_v16 + (int32_t)header) = 16 * i_v18 + hex2val(str, i_v17 + 1);
+            *(char *)(i_v16 + (int32_t)header) =
+                16 * i_v18 + hex2val(str, i_v17 + 1);
             i_v16++;
             i_v17 += 2;
             i_v14 = i_v17;
@@ -3750,7 +4107,8 @@ void mining_parse_job(char * str, char * target, uint32_t target_len, char * job
     // 0x15694
     if (*(char *)(i_v14 + i_v5) != 32) {
         // 0x156a6
-        __assert_fail("str[str_i] == ' '", "bm174x/equihash-miner.c", 352, "mining_parse_job");
+        __assert_fail("str[str_i] == ' '", "bm174x/equihash-miner.c", 352,
+                      "mining_parse_job");
     }
     int32_t i_v19 = i_v14 + 1; // 0x156ca
     int32_t i_v20 = -i_v15;
@@ -3764,7 +4122,7 @@ void mining_parse_job(char * str, char * target, uint32_t target_len, char * job
         i_v22 = i_v15;
         i_v23 = i_v20;
         if (*(char *)(i_v19 + i_v5) != 0) {
-            char i_v24 = hex2val(str, i_v19); // 0x156ee
+            char i_v24 = hex2val(str, i_v19);     // 0x156ee
             char i_v25 = hex2val(str, i_v19 + 1); // 0x15706
             *(char *)(i_v15 + (int32_t)header) = 16 * i_v24 + i_v25;
             int32_t i_v26 = i_v15 + 1; // 0x15716
@@ -3799,15 +4157,18 @@ void mining_parse_job(char * str, char * target, uint32_t target_len, char * job
     // 0x15752
     if (*(char *)(i_v21 + i_v5) != 0) {
         // 0x15764
-        __assert_fail("!str[str_i]", "bm174x/equihash-miner.c", 363, "mining_parse_job");
+        __assert_fail("!str[str_i]", "bm174x/equihash-miner.c", 363,
+                      "mining_parse_job");
     }
     // 0x15784
     if (*(char *)&opt_debug != 0) {
         // 0x15792
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 4) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 4) {
             // 0x157bc
             int32_t i_v30; // bp-1048, 0x15498
-            snprintf((char *)&i_v30, 1024, "Randomizing %d bytes in nonce\n", header_len - 12 + i_v23);
+            snprintf((char *)&i_v30, 1024, "Randomizing %d bytes in nonce\n",
+                     header_len - 12 + i_v23);
             _applog(4, (char *)&i_v30, false);
         }
     }
@@ -3818,10 +4179,11 @@ void mining_parse_job(char * str, char * target, uint32_t target_len, char * job
     __asm_nop((int32_t)memset((int32_t *)i_v33, 0, 12), 0, 12, i_v33);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x15828 - 0x1590a
 // Line range:    371 - 394
-char * mining_mode(char * args) {
+char *mining_mode(char *args) {
     char line[4096]; // bp-4128, 0x15828
     // 0x15828
     puts("SILENTARMY mining mode ready");
@@ -3833,14 +4195,16 @@ char * mining_mode(char * args) {
         if (read_last_line(line, 0x1000, 1) != 0) {
             // 0x158c0
             pthread_mutex_lock(&i_g49);
-            mining_parse_job(line, (char *)&g_work_info, 32, (char *)&p_g46, 256, (char *)&p_g47, 140, &i_g48);
+            mining_parse_job(line, (char *)&g_work_info, 32, (char *)&p_g46,
+                             256, (char *)&p_g47, 140, &i_g48);
             user_send_work((int32_t *)args, (char *)&p_g47, 0, 0);
             pthread_mutex_unlock(&i_g49);
         }
     }
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x1591c - 0x15992
 // Line range:    400 - 405
 int64_t miner_now(void) {
@@ -3851,15 +4215,18 @@ int64_t miner_now(void) {
     return 0xf4240 * tv + i_v1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x15994 - 0x15b0c
 // Line range:    407 - 425
-void equihash_nonce_submit(char * nonce, char * verify, int32_t fixed_nonce_bytes, char * job_id) {
-    uint64_t i_v1 = i_g34; // 0x159b8
+void equihash_nonce_submit(char *nonce, char *verify, int32_t fixed_nonce_bytes,
+                           char *job_id) {
+    uint64_t i_v1 = i_g34;             // 0x159b8
     int32_t i_v2 = i_v1 / 0x100000000; // 0x159b8
     *(int32_t *)&i_g34 = i_v2 + 1;
     i_g35 = (int32_t)(i_v2 == -1) + (int32_t)i_v1;
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 3) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 3) {
         int32_t i_v3 = i_g36; // 0x15a00
         i_g36 = i_v3 + 1;
         int32_t i_v4; // bp-1048, 0x15994
@@ -3869,33 +4236,36 @@ void equihash_nonce_submit(char * nonce, char * verify, int32_t fixed_nonce_byte
     // 0x15a32
     print_solver_line(nonce, verify, fixed_nonce_bytes, job_id);
     uint64_t i_v5 = *(int64_t *)&i_g37; // 0x15a52
-    int32_t i_v6 = i_v5 / 0x100000000; // 0x15a52
-    int32_t i_v7 = i_v6 + 1; // 0x15a56
+    int32_t i_v6 = i_v5 / 0x100000000;  // 0x15a52
+    int32_t i_v7 = i_v6 + 1;            // 0x15a56
     i_g37 = i_v7;
     i_g38 = (int32_t)(i_v6 == -1) + (int32_t)i_v5;
     int32_t i_v8 = miner_now(); // 0x15a68
     i_g39 = i_v8;
     i_g40 = i_v7;
-    uint64_t i_v9 = *(int64_t *)&i_g39; // 0x15a84
-    int32_t i_v10 = i_v9; // 0x15a84
-    uint64_t i_v11 = *(int64_t *)&i_g41; // 0x15a90
-    uint64_t i_v12 = *(int64_t *)&p_g19; // 0x15a9c
-    uint32_t i_v13 = (int32_t)(i_v12 / 0x100000000); // 0x15a9c
+    uint64_t i_v9 = *(int64_t *)&i_g39;                      // 0x15a84
+    int32_t i_v10 = i_v9;                                    // 0x15a84
+    uint64_t i_v11 = *(int64_t *)&i_g41;                     // 0x15a90
+    uint64_t i_v12 = *(int64_t *)&p_g19;                     // 0x15a9c
+    uint32_t i_v13 = (int32_t)(i_v12 / 0x100000000);         // 0x15a9c
     uint32_t i_v14 = i_v13 + (int32_t)(i_v11 / 0x100000000); // 0x15aa0
-    uint32_t i_v15 = (int32_t)i_v12 + (int32_t)i_v11 + (int32_t)(i_v14 < i_v13); // 0x15aa2
-    int32_t i_v16 = i_v8; // 0x15aa8
+    uint32_t i_v15 =
+        (int32_t)i_v12 + (int32_t)i_v11 + (int32_t)(i_v14 < i_v13); // 0x15aa2
+    int32_t i_v16 = i_v8;                                           // 0x15aa8
     if (i_v15 == i_v10) {
         i_v16 = __asm_it();
     }
     int32_t i_v17 = i_v16; // 0x15aac
     int32_t i_v18 = i_v10; // 0x15aac
     int32_t i_v19 = i_v14; // 0x15aac
-    if (i_v15 == i_v10 ? i_v14 < (int32_t)(i_v9 / 0x100000000) : i_v15 < i_v10) {
+    if (i_v15 == i_v10 ? i_v14 < (int32_t)(i_v9 / 0x100000000)
+                       : i_v15 < i_v10) {
         uint64_t i_v20 = *(int64_t *)&i_g39; // 0x15ab6
         i_g41 = i_v20 / 0x100000000;
         i_g42 = i_v20;
         i_v18 = i_g34 / 0x100000000;
-        printf("status: %lld %lld\n", (int64_t)i_v18, 0x100000000 * i_g34 >> 32);
+        printf("status: %lld %lld\n", (int64_t)i_v18,
+               0x100000000 * i_g34 >> 32);
         i_v17 = fflush(p_g29);
         i_v19 = (int32_t)p_g29;
     }
@@ -3903,21 +4273,24 @@ void equihash_nonce_submit(char * nonce, char * verify, int32_t fixed_nonce_byte
     __asm_nop(i_v17, i_v18, i_v18, i_v19);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x15b0c - 0x15b2e
 // Line range:    427 - 430
-void equihash_miner_init(int32_t * runtime) {
+void equihash_miner_init(int32_t *runtime) {
     int32_t i_v1 = (int32_t)runtime;
     *(int32_t *)(i_v1 + 2944) = 0x15995;
     int32_t i_v2; // 0x15b0c
     __asm_nop(i_v1, i_v2, i_v1, 0x15995);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x15b30 - 0x15c16
 // Line range:    432 - 439
-void equihash_miner_start(int32_t * runtime) {
-    int32_t i_v1 = pthread_create(&p_miner, NULL, (int32_t * (*)(int32_t *))0x15829, runtime); // 0x15b52
+void equihash_miner_start(int32_t *runtime) {
+    int32_t i_v1 = pthread_create(
+        &p_miner, NULL, (int32_t * (*)(int32_t *))0x15829, runtime); // 0x15b52
     char i_v2 = *(char *)&use_syslog;
     char i_v3 = *(char *)&opt_log_output;
     int32_t i_v4; // 0x15b30
@@ -3955,16 +4328,16 @@ void equihash_miner_start(int32_t * runtime) {
             goto lab_0x15b86;
         }
     }
-  lab_0x15bdc:;
-    char * p_v8 = (char *)0x61657263; // bp-1040, 0x15bee
-    int32_t i_v9 = (int32_t)&p_v8; // 0x15bfe
+lab_0x15bdc:;
+    char *p_v8 = (char *)0x61657263; // bp-1040, 0x15bee
+    int32_t i_v9 = (int32_t)&p_v8;   // 0x15bfe
     _applog(0, (char *)&p_v8, false);
     i_v4 = &i_g101;
     i_v5 = i_v9;
     i_v6 = 0;
     i_v7 = i_v9;
     goto lab_0x15c0c;
-  lab_0x15b86:
+lab_0x15b86:
     // 0x15b86
     p_v8 = (char *)0x61657263;
     int32_t i_v10 = (int32_t)&p_v8; // 0x15ba2
@@ -3974,21 +4347,23 @@ void equihash_miner_start(int32_t * runtime) {
     i_v6 = 0;
     i_v7 = i_v10;
     goto lab_0x15c0c;
-  lab_0x15c0c:
+lab_0x15c0c:
     // 0x15c0c
     __asm_nop(i_v4, i_v5, i_v6, i_v7);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-miner.c
 // Address range: 0x15c18 - 0x15c32
 // Line range:    441 - 444
 void equihash_miner_join(void) {
     int32_t i_v1 = p_miner; // 0x15c24
-    int32_t i_v2; // 0x15c18
+    int32_t i_v2;           // 0x15c18
     __asm_nop(pthread_join(i_v1, NULL), 0, i_v2, i_v1);
 }
 
-// From module:   /opt/bitmain_toolchains/xilinx/gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include/bits/byteswap.h
+// From module:
+// /opt/bitmain_toolchains/xilinx/gcc-linaro-5.5.0-2017.10-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include/bits/byteswap.h
 // Address range: 0x15c34 - 0x15c4c
 // Line range:    44 - 47
 int32_t __bswap_32(int32_t __bsx) {
@@ -3996,28 +4371,33 @@ int32_t __bswap_32(int32_t __bsx) {
     return llvm_bswap_i32(__bsx);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x15c4c - 0x15daa
 // Line range:    16 - 56
-void compressArray(char * in, int32_t in_len, char * out, uint32_t out_len, uint32_t bit_len, uint32_t byte_pad) {
+void compressArray(char *in, int32_t in_len, char *out, uint32_t out_len,
+                   uint32_t bit_len, uint32_t byte_pad) {
     if (bit_len >= 7 != bit_len != 7) {
         // 0x15c60
-        __assert_fail("bit_len >= 8", "bm174x/equihash-verify.c", 20, "compressArray");
+        __assert_fail("bit_len >= 8", "bm174x/equihash-verify.c", 20,
+                      "compressArray");
     }
     uint32_t i_v1 = bit_len + 7; // 0x15c80
     if (i_v1 != 32 && i_v1 >= 32) {
         // 0x15c86
-        __assert_fail("8 * sizeof(uint32_t) >= 7 + bit_len", "bm174x/equihash-verify.c", 21, "compressArray");
+        __assert_fail("8 * sizeof(uint32_t) >= 7 + bit_len",
+                      "bm174x/equihash-verify.c", 21, "compressArray");
     }
     uint32_t i_v2 = i_v1 / 8 + byte_pad; // 0x15cac
-    int32_t i_v3 = 8 * i_v2; // 0x15cba
-    int32_t i_v4 = out_len; // 0x15ccc
-    int32_t i_v5 = i_v3; // 0x15ccc
+    int32_t i_v3 = 8 * i_v2;             // 0x15cba
+    int32_t i_v4 = out_len;              // 0x15ccc
+    int32_t i_v5 = i_v3;                 // 0x15ccc
     if (bit_len * in_len / i_v3 != out_len) {
         // 0x15cce
-        __assert_fail("out_len == bit_len * in_len / (8 * in_width)", "bm174x/equihash-verify.c", 24, "compressArray");
+        __assert_fail("out_len == bit_len * in_len / (8 * in_width)",
+                      "bm174x/equihash-verify.c", 24, "compressArray");
         i_v4 = &i_g101;
-        i_v5 = (int32_t)"bm174x/equihash-verify.c";
+        i_v5 = (int32_t) "bm174x/equihash-verify.c";
     }
     // 0x15cec
     if (out_len == 0) {
@@ -4032,11 +4412,11 @@ void compressArray(char * in, int32_t in_len, char * out, uint32_t out_len, uint
     int32_t i_v10 = i_v7; // 0x15d0e
     int32_t i_v11 = i_v8; // 0x15d0e
     int32_t i_v12 = i_v9; // 0x15d0e
-    unsigned char i_v13; // 0x15d2a
-    uint32_t i_v14; // 0x15d3a
-    int32_t i_v15; // 0x15d5a
-    int32_t i_v16; // 0x15d60
-    int32_t i_v17; // 0x15d14
+    unsigned char i_v13;  // 0x15d2a
+    uint32_t i_v14;       // 0x15d3a
+    int32_t i_v15;        // 0x15d5a
+    int32_t i_v16;        // 0x15d60
+    int32_t i_v17;        // 0x15d14
     if (i_v7 >= 7 != i_v7 != 7) {
         // 0x15d10
         i_v17 = i_v8 << bit_len;
@@ -4054,7 +4434,8 @@ void compressArray(char * in, int32_t in_len, char * out, uint32_t out_len, uint
                 // 0x15d20
                 i_v13 = *(char *)(i_v9 + (int32_t)in + i_v16);
                 i_v14 = 8 * (i_v2 - i_v16) - 8;
-                i_v15 |= (-1 - (-1 << bit_len) >> i_v14 & (int32_t)i_v13) << i_v14;
+                i_v15 |= (-1 - (-1 << bit_len) >> i_v14 & (int32_t)i_v13)
+                         << i_v14;
                 i_v16++;
                 i_v11 = i_v15;
             }
@@ -4068,7 +4449,7 @@ void compressArray(char * in, int32_t in_len, char * out, uint32_t out_len, uint
     *(char *)(i_v6 + (int32_t)out) = (char)(i_v18 >> i_v19);
     i_v6++;
     int32_t i_v20 = i_v18; // 0x15da0
-    int32_t i_v21 = i_v6; // 0x15da0
+    int32_t i_v21 = i_v6;  // 0x15da0
     while (i_v6 < out_len) {
         // 0x15d0a
         i_v7 = i_v19;
@@ -4087,14 +4468,16 @@ void compressArray(char * in, int32_t in_len, char * out, uint32_t out_len, uint
                 i_v15 = i_v17;
                 i_v13 = *(char *)(i_v9 + (int32_t)in + i_v16);
                 i_v14 = 8 * (i_v2 - i_v16) - 8;
-                i_v15 |= (-1 - (-1 << bit_len) >> i_v14 & (int32_t)i_v13) << i_v14;
+                i_v15 |= (-1 - (-1 << bit_len) >> i_v14 & (int32_t)i_v13)
+                         << i_v14;
                 i_v16++;
                 i_v11 = i_v15;
                 while (i_v2 > i_v16) {
                     // 0x15d20
                     i_v13 = *(char *)(i_v9 + (int32_t)in + i_v16);
                     i_v14 = 8 * (i_v2 - i_v16) - 8;
-                    i_v15 |= (-1 - (-1 << bit_len) >> i_v14 & (int32_t)i_v13) << i_v14;
+                    i_v15 |= (-1 - (-1 << bit_len) >> i_v14 & (int32_t)i_v13)
+                             << i_v14;
                     i_v16++;
                     i_v11 = i_v15;
                 }
@@ -4116,27 +4499,32 @@ void compressArray(char * in, int32_t in_len, char * out, uint32_t out_len, uint
     __asm_nop(i_v4, i_v20, i_v21, out_len);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x15dac - 0x15f22
 // Line range:    58 - 103
-void expandArray(char * in, uint32_t in_len, char * out, int32_t out_len, uint32_t bit_len, uint32_t byte_pad) {
+void expandArray(char *in, uint32_t in_len, char *out, int32_t out_len,
+                 uint32_t bit_len, uint32_t byte_pad) {
     if (bit_len >= 7 != bit_len != 7) {
         // 0x15dc0
-        __assert_fail("bit_len >= 8", "bm174x/equihash-verify.c", 62, "expandArray");
+        __assert_fail("bit_len >= 8", "bm174x/equihash-verify.c", 62,
+                      "expandArray");
     }
     uint32_t i_v1 = bit_len + 7; // 0x15de0
     if (i_v1 != 32 && i_v1 >= 32) {
         // 0x15de6
-        __assert_fail("8 * sizeof(uint32_t) >= 7 + bit_len", "bm174x/equihash-verify.c", 63, "expandArray");
+        __assert_fail("8 * sizeof(uint32_t) >= 7 + bit_len",
+                      "bm174x/equihash-verify.c", 63, "expandArray");
     }
     uint32_t i_v2 = i_v1 / 8 + byte_pad; // 0x15e0c
-    int32_t i_v3 = out_len; // 0x15e2a
-    int32_t i_v4 = bit_len; // 0x15e2a
+    int32_t i_v3 = out_len;              // 0x15e2a
+    int32_t i_v4 = bit_len;              // 0x15e2a
     if (8 * in_len * i_v2 / bit_len != out_len) {
         // 0x15e2c
-        __assert_fail("out_len == 8 * out_width * in_len / bit_len", "bm174x/equihash-verify.c", 66, "expandArray");
+        __assert_fail("out_len == 8 * out_width * in_len / bit_len",
+                      "bm174x/equihash-verify.c", 66, "expandArray");
         i_v3 = &i_g101;
-        i_v4 = (int32_t)"bm174x/equihash-verify.c";
+        i_v4 = (int32_t) "bm174x/equihash-verify.c";
     }
     // 0x15e4a
     if (in_len == 0) {
@@ -4145,20 +4533,20 @@ void expandArray(char * in, uint32_t in_len, char * out, int32_t out_len, uint32
         return;
     }
     int32_t i_v5 = -1 - (-1 << bit_len); // 0x15e52
-    int32_t i_v6 = (int32_t)in; // 0x15e6c
+    int32_t i_v6 = (int32_t)in;          // 0x15e6c
     int32_t i_v7 = (int32_t)out;
     int32_t i_v8 = 0; // 0x15f0e
     int32_t i_v9 = 0; // 0x15e74
     int32_t i_v10 = 0;
-    i_v9 = 256 * i_v9 | (int32_t)*(char *)(i_v8 + i_v6);
-    int32_t i_v11 = 8; // 0x15e7a
+    i_v9 = 256 * i_v9 | (int32_t) * (char *)(i_v8 + i_v6);
+    int32_t i_v11 = 8;     // 0x15e7a
     int32_t i_v12 = i_v11; // 0x15e84
     int32_t i_v13 = i_v10; // 0x15e84
-    int32_t i_v14 = i_v3; // 0x15e84
-    int32_t i_v15 = i_v6; // 0x15e84
-    int32_t i_v16; // 0x15e8a
-    uint32_t i_v17; // 0x15ecc
-    uint32_t i_v18; // 0x15ed4
+    int32_t i_v14 = i_v3;  // 0x15e84
+    int32_t i_v15 = i_v6;  // 0x15e84
+    int32_t i_v16;         // 0x15e8a
+    uint32_t i_v17;        // 0x15ecc
+    uint32_t i_v18;        // 0x15ed4
     if (i_v11 >= bit_len) {
         for (int32_t i_v19 = 0; i_v19 < byte_pad; i_v19++) {
             // 0x15e94
@@ -4187,17 +4575,17 @@ void expandArray(char * in, uint32_t in_len, char * out, int32_t out_len, uint32
     i_v8++;
     int32_t i_v22 = i_v21; // 0x15f18
     int32_t i_v23 = i_v15; // 0x15f18
-    int32_t i_v24 = i_v8; // 0x15f18
+    int32_t i_v24 = i_v8;  // 0x15f18
     while (i_v8 < in_len) {
         // 0x15e68
         i_v10 = i_v13;
         int32_t i_v25 = i_v21;
-        i_v9 = 256 * i_v9 | (int32_t)*(char *)(i_v8 + i_v6);
+        i_v9 = 256 * i_v9 | (int32_t) * (char *)(i_v8 + i_v6);
         i_v11 = i_v12 + 8;
         i_v12 = i_v11;
         i_v13 = i_v10;
         int32_t i_v26 = i_v25; // 0x15e84
-        int32_t i_v27 = i_v6; // 0x15e84
+        int32_t i_v27 = i_v6;  // 0x15e84
         if (i_v11 >= bit_len) {
             for (int32_t i_v19 = 0; i_v19 < byte_pad; i_v19++) {
                 // 0x15e94
@@ -4212,7 +4600,8 @@ void expandArray(char * in, uint32_t in_len, char * out, int32_t out_len, uint32
                     // 0x15eb6
                     i_v17 = 8 * (i_v2 - i_v20) - 8;
                     i_v18 = i_v9 >> i_v17 + i_v16;
-                    *(char *)(i_v10 + i_v7 + i_v20) = (char)(i_v18 & i_v5 >> i_v17);
+                    *(char *)(i_v10 + i_v7 + i_v20) =
+                        (char)(i_v18 & i_v5 >> i_v17);
                 }
                 // 0x15efc
                 i_v14 = i_v5;
@@ -4235,16 +4624,19 @@ void expandArray(char * in, uint32_t in_len, char * out, int32_t out_len, uint32
     __asm_nop(i_v22, i_v23, i_v24, in_len);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x15f24 - 0x15faa
 // Line range:    105 - 116
-int32_t getIndices(char * hash, int32_t len, int32_t lenIndices, int32_t cBitLen, char * data, uint32_t maxLen) {
+int32_t getIndices(char *hash, int32_t len, int32_t lenIndices, int32_t cBitLen,
+                   char *data, uint32_t maxLen) {
     uint32_t i_v1 = cBitLen + 8; // 0x15f34
     if (i_v1 != 39 && i_v1 >= 39) {
         // 0x15f3a
-        __assert_fail("((cBitLen + 1) + 7) / 8 <= sizeof(uint32_t)", "bm174x/equihash-verify.c", 108, "getIndices");
+        __assert_fail("((cBitLen + 1) + 7) / 8 <= sizeof(uint32_t)",
+                      "bm174x/equihash-verify.c", 108, "getIndices");
     }
-    int32_t i_v2 = cBitLen + 1; // 0x15f5a
+    int32_t i_v2 = cBitLen + 1;            // 0x15f5a
     int32_t i_v3 = i_v2 * lenIndices / 32; // 0x15f62
     if (i_v3 != maxLen && i_v3 >= maxLen) {
         // 0x15fa2
@@ -4253,16 +4645,18 @@ int32_t getIndices(char * hash, int32_t len, int32_t lenIndices, int32_t cBitLen
     // 0x15f80
     if (data != NULL) {
         // 0x15f86
-        compressArray((char *)((int32_t)hash + len), lenIndices, data, i_v3, i_v2, 4 - i_v1 / 8);
+        compressArray((char *)((int32_t)hash + len), lenIndices, data, i_v3,
+                      i_v2, 4 - i_v1 / 8);
     }
     // 0x15fa2
     return i_v3;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x15fac - 0x15fe8
 // Line range:    117 - 126
-int32_t isZero(char * hash, uint32_t len) {
+int32_t isZero(char *hash, uint32_t len) {
     // 0x15fac
     if (len == 0) {
         // 0x15fdc
@@ -4284,53 +4678,56 @@ int32_t isZero(char * hash, uint32_t len) {
     return i_v2;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x15fe8 - 0x16054
 // Line range:    128 - 135
-void generateHash(int32_t * S, int32_t g, char * hash, uint32_t hashLen) {
-    char * p_v1 = hash; // bp-396, 0x15ffc
-    int32_t le_g = g; // bp-20, 0x16008
-    int32_t digest; // bp-384, 0x15fe8
+void generateHash(int32_t *S, int32_t g, char *hash, uint32_t hashLen) {
+    char *p_v1 = hash; // bp-396, 0x15ffc
+    int32_t le_g = g;  // bp-20, 0x16008
+    int32_t digest;    // bp-384, 0x15fe8
     memcpy(&digest, S, 360);
     blake2b_update(&digest, (char *)&le_g, 4);
     int32_t i_v2 = blake2b_final(&digest, hash, (char)hashLen); // 0x16046
     __asm_nop(i_v2, (int32_t)hash, hashLen % 256, (int32_t)&p_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x16054 - 0x1607c
 // Line range:    137 - 140
-int32_t compareSR(int32_t * p1, int32_t * p2) {
+int32_t compareSR(int32_t *p1, int32_t *p2) {
     // 0x16054
     return memcmp(p1, p2, compare_size);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x1607c - 0x1611e
 // Line range:    163 - 178
-void sort_pair(int32_t * a, uint32_t len) {
+void sort_pair(int32_t *a, uint32_t len) {
     int32_t i_v1 = (int32_t)a;
     int32_t i_v2 = 4 * len + i_v1; // 0x1608c
-    int32_t i_v3 = 0; // 0x1610e
+    int32_t i_v3 = 0;              // 0x1610e
     if (len == 0) {
         // 0x16114
         return;
     }
     int32_t i_v4 = 0; // 0x1610e
-    int32_t * p_v5; // 0x1607c
-    int32_t i_v6; // 0x1607c
-    int32_t i_v7; // 0x1607c
-    int32_t * p_v8; // 0x1607c
-    uint32_t i_v9; // 0x160a8
-    uint32_t i_v10; // 0x160b2
+    int32_t *p_v5;    // 0x1607c
+    int32_t i_v6;     // 0x1607c
+    int32_t i_v7;     // 0x1607c
+    int32_t *p_v8;    // 0x1607c
+    uint32_t i_v9;    // 0x160a8
+    uint32_t i_v10;   // 0x160b2
     while (true) {
-      lab_0x1609a_2:;
+    lab_0x1609a_2:;
         int32_t i_v11 = 4 * i_v3;
         p_v8 = (int32_t *)(i_v11 + i_v1);
         if (i_v4 == 0) {
             // 0x160a0
             i_v9 = *p_v8;
-            int32_t * p_v12 = (int32_t *)(i_v11 + i_v2);
+            int32_t *p_v12 = (int32_t *)(i_v11 + i_v2);
             i_v10 = *p_v12;
             i_v6 = i_v10;
             i_v7 = i_v9;
@@ -4347,7 +4744,7 @@ void sort_pair(int32_t * a, uint32_t len) {
                 goto lab_0x160b8;
             }
         } else {
-            int32_t * p_v13 = (int32_t *)(i_v11 + i_v2); // 0x160d8
+            int32_t *p_v13 = (int32_t *)(i_v11 + i_v2); // 0x160d8
             i_v6 = *p_v13;
             i_v7 = *p_v8;
             p_v5 = p_v13;
@@ -4356,13 +4753,13 @@ void sort_pair(int32_t * a, uint32_t len) {
     }
     // 0x16112
     __asm_nop(i_v1, i_v2, i_v9, i_v10);
-  lab_0x160b8:
+lab_0x160b8:
     // 0x160b8
     *p_v8 = i_v6;
     *p_v5 = i_v7;
     i_v4 = 1;
     goto lab_0x16102;
-  lab_0x16102:
+lab_0x16102:
     // 0x16102
     i_v3++;
     if (i_v3 >= len) {
@@ -4372,56 +4769,58 @@ void sort_pair(int32_t * a, uint32_t len) {
     goto lab_0x1609a_2;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x16120 - 0x170f4
 // Line range:    183 - 335
-int32_t sortValidator(char * data, char * soln) {
-    int32_t indices[512]; // bp-2204, 0x16120
+int32_t sortValidator(char *data, char *soln) {
+    int32_t indices[512];      // bp-2204, 0x16120
     int32_t real_indices[512]; // bp-4316, 0x16120
-    char tmp_data[1344]; // bp-5660, 0x16120
-    char tmp_hash[30]; // bp-2268, 0x16120
-    char x_v1[30]; // 0x1709a
-    char vHash[30]; // bp-2236, 0x16120
+    char tmp_data[1344];       // bp-5660, 0x16120
+    char tmp_hash[30];         // bp-2268, 0x16120
+    char x_v1[30];             // 0x1709a
+    char vHash[30];            // bp-2236, 0x16120
     int32_t i_v2 = (int32_t)data;
     uint32_t i_v3 = *(int32_t *)(i_v2 + 4); // 0x1616c
-    int32_t i_v4 = i_v3 + 1; // 0x16198
-    int32_t i_v5 = i_v2 / i_v4; // 0x161a6
-    int32_t i_v6 = i_v5 + 7; // 0x161c0
+    int32_t i_v4 = i_v3 + 1;                // 0x16198
+    int32_t i_v5 = i_v2 / i_v4;             // 0x161a6
+    int32_t i_v6 = i_v5 + 7;                // 0x161c0
     if (i_v6 < 0) {
         __asm_ite();
     }
-    int32_t i_v7 = 512 / i_v2; // 0x1620a
+    int32_t i_v7 = 512 / i_v2;  // 0x1620a
     int32_t i_v8 = i_v7 * i_v2; // 0x16226
     if (i_v8 < 0) {
         __asm_ite();
     }
-    int32_t i_v9 = i_v5 + 1; // 0x1625e
+    int32_t i_v9 = i_v5 + 1;      // 0x1625e
     int32_t i_v10 = i_v9 << i_v3; // 0x1626a
     if (i_v10 < 0) {
         __asm_ite();
     }
-    int32_t * p_v11 = (int32_t *)*(int32_t *)(i_v2 + 8); // 0x1618c
+    int32_t *p_v11 = (int32_t *)*(int32_t *)(i_v2 + 8);            // 0x1618c
     uint32_t i_v12 = ((i_v6 >= 0 ? i_v6 : i_v5 + 14) >> 3) * i_v4; // 0x161ee
-    int32_t i_v13 = (i_v8 >= 0 ? i_v8 : i_v8 + 7) >> 3; // 0x16234
+    int32_t i_v13 = (i_v8 >= 0 ? i_v8 : i_v8 + 7) >> 3;            // 0x16234
     compare_size = 3;
-    expandArray(soln, (i_v10 >= 0 ? i_v10 : i_v10 + 7) >> 3, (char *)&indices, 2048, i_v9, 1);
+    expandArray(soln, (i_v10 >= 0 ? i_v10 : i_v10 + 7) >> 3, (char *)&indices,
+                2048, i_v9, 1);
     memset((int32_t *)&vHash, 0, 30);
-    int32_t * p_v14 = malloc(0x4400); // 0x16308
-    int32_t * p_v15 = malloc(0x4400); // 0x16318
+    int32_t *p_v14 = malloc(0x4400); // 0x16308
+    int32_t *p_v15 = malloc(0x4400); // 0x16318
     memset((int32_t *)&tmp_hash, 0, 30);
     int32_t i_v16 = (int32_t)&indices;
     int32_t i_v17 = 0; // 0x163e6
-    int32_t i_v18; // 0x16120
-    int32_t i_v19; // bp-5780, 0x16120
-    int32_t i_v20; // 0x16120
-    int32_t i_v21; // 0x16120
-    int32_t i_v22; // 0x16120
-    int32_t i_v23; // 0x16120
-    int32_t i_v24; // 0x16120
-    char * p_v25; // 0x16120
-    char * p_v26; // 0x16120
+    int32_t i_v18;     // 0x16120
+    int32_t i_v19;     // bp-5780, 0x16120
+    int32_t i_v20;     // 0x16120
+    int32_t i_v21;     // 0x16120
+    int32_t i_v22;     // 0x16120
+    int32_t i_v23;     // 0x16120
+    int32_t i_v24;     // 0x16120
+    char *p_v25;       // 0x16120
+    char *p_v26;       // 0x16120
     while (true) {
-        int32_t * p_v27 = (int32_t *)(4 * i_v17 + i_v16);
+        int32_t *p_v27 = (int32_t *)(4 * i_v17 + i_v16);
         int32_t i_v28 = i_v17;
         i_v28++;
         while (i_v28 < 512) {
@@ -4447,14 +4846,14 @@ int32_t sortValidator(char * data, char * soln) {
             goto lab_0x16418;
         }
     }
-  lab_0x170c6:
+lab_0x170c6:
     // 0x170c6
     free((int32_t *)p_v25);
     free((int32_t *)p_v26);
     return i_v18;
-  lab_0x16418:;
-    int32_t * p_v29 = (int32_t *)(4 * i_v20 + i_v16); // 0x16426
-    int32_t i_v30 = __bswap_32(*p_v29); // 0x1642c
+lab_0x16418:;
+    int32_t *p_v29 = (int32_t *)(4 * i_v20 + i_v16); // 0x16426
+    int32_t i_v30 = __bswap_32(*p_v29);              // 0x1642c
     generateHash(p_v11, i_v30 / i_v7, (char *)&i_v19, i_v13);
     int32_t i_v31 = i_v30 % i_v7 * i_v2; // 0x16496
     if (i_v31 < 0) {
@@ -4463,7 +4862,7 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_dec_label_pc_unknown;
     }
-  lab_dec_label_pc_unknown:;
+lab_dec_label_pc_unknown:;
     int32_t i_v32 = ((i_v31 >= 0 ? i_v31 : i_v31 + 7) >> 3) + i_v21; // 0x164be
     if (data < NULL) {
         i_v32 = __asm_ite();
@@ -4471,7 +4870,7 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_dec_label_pc_unknown_2;
     }
-  lab_dec_label_pc_unknown_2:;
+lab_dec_label_pc_unknown_2:;
     int32_t i_v33; // bp-5692, 0x16120
     expandArray((char *)i_v32, i_v22, (char *)&i_v33, i_v12, i_v5, 0);
     int32_t i_v34 = 0; // 0x16566
@@ -4480,7 +4879,7 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_0x164fc;
     }
-  lab_0x16568:;
+lab_0x16568:;
     int32_t i_v35 = i_v20 * i_v24 + (int32_t)p_v14;
     memcpy((int32_t *)i_v35, &i_v33, i_v12);
     memcpy((int32_t *)(i_v35 + i_v12), p_v29, 4);
@@ -4489,9 +4888,9 @@ int32_t sortValidator(char * data, char * soln) {
     int32_t i_v37; // 0x16120
     int32_t i_v38; // 0x16120
     int32_t i_v39; // 0x16120
-    char * p_v40; // 0x16120
+    char *p_v40;   // 0x16120
     int32_t i_v41; // 0x16120
-    char * p_v42; // 0x16120
+    char *p_v42;   // 0x16120
     if (i_v36 < 512) {
         goto lab_0x16418;
     } else {
@@ -4513,8 +4912,8 @@ int32_t sortValidator(char * data, char * soln) {
             goto lab_0x16672;
         }
     }
-  lab_0x164fc:;
-    char * p_v44 = (char *)(i_v34 + i_v23); // 0x1650c
+lab_0x164fc:;
+    char *p_v44 = (char *)(i_v34 + i_v23);           // 0x1650c
     char i_v45 = *(char *)(i_v34 + (int32_t)&i_v33); // 0x16520
     *p_v44 = i_v45 ^ *p_v44;
     int32_t i_v46 = i_v34 + 1; // 0x16544
@@ -4524,13 +4923,14 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_0x16568;
     }
-  lab_0x16672:;
-    char * p_v47 = p_v40;
+lab_0x16672:;
+    char *p_v47 = p_v40;
     int32_t i_v48 = i_v37;
     uint32_t i_v49 = i_v41;
-    char * p_v50 = p_v42;
+    char *p_v50 = p_v42;
     int32_t i_v51 = i_v48 + i_v12; // 0x16686
-    qsort((int32_t *)p_v47, i_v49, i_v51, (int32_t (*)(int32_t *, int32_t *))0x16055);
+    qsort((int32_t *)p_v47, i_v49, i_v51,
+          (int32_t(*)(int32_t *, int32_t *))0x16055);
     int32_t i_v52; // 0x16120
     int32_t i_v53; // 0x16120
     int32_t i_v54; // 0x16120
@@ -4552,7 +4952,7 @@ int32_t sortValidator(char * data, char * soln) {
         i_v57 = 0;
         goto lab_0x16764_2;
     }
-  lab_0x16908:
+lab_0x16908:
     // 0x16908
     compare_size += 3;
     int32_t i_v59 = i_v38 + 1; // 0x16986
@@ -4573,7 +4973,7 @@ int32_t sortValidator(char * data, char * soln) {
         i_v60 = 0;
         goto lab_0x169b0;
     }
-  lab_0x16764_2:;
+lab_0x16764_2:;
     int32_t i_v63 = i_v53 * i_v51;
     int32_t i_v64 = (i_v53 | 1) * i_v51;
     int32_t i_v65 = 0; // 0x1677a
@@ -4582,7 +4982,7 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_0x166c8;
     }
-  lab_0x1677c:;
+lab_0x1677c:;
     int32_t i_v66 = i_v53 / 2 * (i_v55 + i_v12) + (int32_t)p_v50;
     memcpy((int32_t *)i_v66, (int32_t *)&tmp_hash, i_v12);
     int32_t i_v67 = i_v66 + i_v12;
@@ -4599,7 +4999,7 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_0x16908;
     }
-  lab_0x166c8:;
+lab_0x166c8:;
     int32_t i_v70 = i_v65 + i_v54;
     char i_v71 = *(char *)(i_v70 + i_v64); // 0x16734
     *(char *)(i_v65 + i_v39) = i_v71 ^ *(char *)(i_v70 + i_v63);
@@ -4610,9 +5010,10 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_0x1677c;
     }
-  lab_0x169b0:;
+lab_0x169b0:;
     int32_t i_v73 = 4 * i_v60; // 0x169ba
-    *(int32_t *)(i_v73 + i_v62) = __bswap_32(*(int32_t *)(i_v12 + i_v61 + i_v73));
+    *(int32_t *)(i_v73 + i_v62) =
+        __bswap_32(*(int32_t *)(i_v12 + i_v61 + i_v73));
     int32_t i_v74 = i_v60 + 1; // 0x169fa
     i_v60 = i_v74;
     int32_t i_v75 = 0; // 0x16a14
@@ -4621,10 +5022,10 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_0x16a82;
     }
-  lab_0x16a82:;
+lab_0x16a82:;
     int32_t i_v76 = 0; // 0x16120
     goto lab_0x16a32;
-  lab_0x16a32:
+lab_0x16a32:
     // 0x16a32
     sort_pair((int32_t *)(4 * i_v76 + i_v62), 1 << i_v75);
     int32_t i_v77 = i_v76 + (2 << i_v75); // 0x16a76
@@ -4643,10 +5044,10 @@ int32_t sortValidator(char * data, char * soln) {
             goto lab_0x16ade;
         }
     }
-  lab_0x16ade:;
-    int32_t * p_v80 = (int32_t *)(4 * i_v78 + i_v62); // 0x16aee
-    int32_t i_v81 = *p_v80; // 0x16aee
-    int32_t i_v82 = i_v81; // bp-5728, 0x16afa
+lab_0x16ade:;
+    int32_t *p_v80 = (int32_t *)(4 * i_v78 + i_v62); // 0x16aee
+    int32_t i_v81 = *p_v80;                          // 0x16aee
+    int32_t i_v82 = i_v81;                           // bp-5728, 0x16afa
     generateHash(p_v11, i_v81 / i_v7, (char *)&i_v19, i_v13);
     int32_t i_v83 = i_v82 % i_v7 * i_v2; // 0x16b54
     if (i_v83 < 0) {
@@ -4655,7 +5056,7 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_dec_label_pc_unknown_3;
     }
-  lab_dec_label_pc_unknown_3:;
+lab_dec_label_pc_unknown_3:;
     int32_t i_v84 = ((i_v83 >= 0 ? i_v83 : i_v83 + 7) >> 3) + i_v21; // 0x16b7c
     if (data < NULL) {
         i_v84 = __asm_ite();
@@ -4663,7 +5064,7 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_0x16cc4_2;
     }
-  lab_0x16cc4_2:;
+lab_0x16cc4_2:;
     // 0x16cc4
     int32_t i_v85; // bp-5724, 0x16120
     expandArray((char *)i_v84, i_v22, (char *)&i_v85, i_v12, i_v5, 0);
@@ -4674,24 +5075,24 @@ int32_t sortValidator(char * data, char * soln) {
     free((int32_t *)bin2hex((char *)i_v86, 34));
     int32_t i_v87 = i_v78 + 1; // 0x16cb8
     i_v78 = i_v87;
-    int32_t i_v88 = 0; // 0x16cda
-    char * p_v89 = p_v47; // 0x16cda
+    int32_t i_v88 = 0;   // 0x16cda
+    char *p_v89 = p_v47; // 0x16cda
     int32_t i_v90 = 512; // 0x16cda
-    int32_t i_v91 = 4; // 0x16cda
-    char * p_v92 = p_v50; // 0x16cda
+    int32_t i_v91 = 4;   // 0x16cda
+    char *p_v92 = p_v50; // 0x16cda
     if (i_v87 < 512) {
         goto lab_0x16ade;
     } else {
         goto lab_0x16f46;
     }
-  lab_0x16f46:;
-    char * p_v93 = p_v92;
+lab_0x16f46:;
+    char *p_v93 = p_v92;
     int32_t i_v94 = i_v91;
     uint32_t i_v95 = i_v90;
-    char * p_v96 = p_v89;
-    int32_t i_v97; // 0x16120
-    int32_t i_v98; // 0x16120
-    int32_t i_v99; // 0x16120
+    char *p_v96 = p_v89;
+    int32_t i_v97;  // 0x16120
+    int32_t i_v98;  // 0x16120
+    int32_t i_v99;  // 0x16120
     int32_t i_v100; // 0x16120
     int32_t i_v101; // 0x16120
     int32_t i_v102; // 0x16120
@@ -4712,7 +5113,7 @@ int32_t sortValidator(char * data, char * soln) {
         i_v103 = 0;
         goto lab_0x16da0_2;
     }
-  lab_0x16f60:
+lab_0x16f60:
     // 0x16f60
     compare_size += 3;
     int32_t i_v105 = i_v88 + 1; // 0x16fde
@@ -4736,7 +5137,7 @@ int32_t sortValidator(char * data, char * soln) {
         p_v26 = p_v93;
         goto lab_0x170c6;
     }
-  lab_0x16da0_2:;
+lab_0x16da0_2:;
     int32_t i_v107 = i_v98 * i_v99;
     int32_t i_v108 = (i_v98 | 1) * i_v99;
     int32_t i_v109 = 0; // 0x16db2
@@ -4745,14 +5146,14 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_0x16d10;
     }
-  lab_0x16db4:;
+lab_0x16db4:;
     int32_t i_v110 = i_v98 / 2 * (i_v101 + i_v12) + (int32_t)p_v96;
     memcpy((int32_t *)i_v110, (int32_t *)&tmp_hash, i_v12);
     int32_t i_v111 = i_v110 + i_v12;
     memcpy((int32_t *)i_v111, (int32_t *)(i_v107 + i_v102), i_v94);
     memcpy((int32_t *)(i_v111 + i_v94), (int32_t *)(i_v108 + i_v102), i_v94);
     int32_t i_v112 = i_v103 + 1; // 0x16f24
-    int32_t i_v113 = i_v98 + 2; // 0x16f3a
+    int32_t i_v113 = i_v98 + 2;  // 0x16f3a
     i_v98 = i_v113;
     i_v103 = i_v112;
     i_v97 = i_v101;
@@ -4762,7 +5163,7 @@ int32_t sortValidator(char * data, char * soln) {
     } else {
         goto lab_0x16f60;
     }
-  lab_0x16d10:;
+lab_0x16d10:;
     int32_t i_v114 = i_v109 + i_v100;
     char i_v115 = *(char *)(i_v114 + i_v108); // 0x16d7c
     *(char *)(i_v109 + i_v39) = i_v115 ^ *(char *)(i_v114 + i_v107);
@@ -4775,22 +5176,25 @@ int32_t sortValidator(char * data, char * soln) {
     }
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x170f4 - 0x17128
 // Line range:    337 - 342
-void zcashPerson(char * person, int32_t n, int32_t k) {
+void zcashPerson(char *person, int32_t n, int32_t k) {
     int32_t i_v1 = (int32_t)person;
-    int32_t * p_v2 = memcpy((int32_t *)person, (int32_t *)"ZcashPoW", 8); // 0x1710c
+    int32_t *p_v2 =
+        memcpy((int32_t *)person, (int32_t *)"ZcashPoW", 8); // 0x1710c
     *(int32_t *)(i_v1 + 8) = n;
     int32_t i_v3 = i_v1 + 12; // 0x1711a
     *(int32_t *)i_v3 = k;
-    __asm_nop((int32_t)p_v2, (int32_t)"ZcashPoW", k, i_v3);
+    __asm_nop((int32_t)p_v2, (int32_t) "ZcashPoW", k, i_v3);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x17128 - 0x17192
 // Line range:    344 - 354
-void digestInit(int32_t * S, int32_t n, int32_t k) {
+void digestInit(int32_t *S, int32_t n, int32_t k) {
     // 0x17128
     int32_t P; // bp-72, 0x17128
     memset(&P, 0, 64);
@@ -4805,10 +5209,11 @@ void digestInit(int32_t * S, int32_t n, int32_t k) {
     __asm_nop(blake2b_init_param(S, &P), i_v3, k, i_v3);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x17194 - 0x17228
 // Line range:    356 - 377
-int32_t target_zero_cal(char * target) {
+int32_t target_zero_cal(char *target) {
     char tmphash[32]; // bp-56, 0x17194
     // 0x17194
     memset((int32_t *)&tmphash, 0, 32);
@@ -4875,19 +5280,20 @@ int32_t target_zero_cal(char * target) {
         i_v3 = i_v9;
         i_v6 = i_v7;
     }
-  lab_0x17220:
+lab_0x17220:
     // 0x17220
     return i_v6;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x17228 - 0x17286
 // Line range:    379 - 394
-bool equihash_target_match(char * result_value, char * target) {
+bool equihash_target_match(char *result_value, char *target) {
     int32_t i_v1 = 31;
     unsigned char i_v2 = *(char *)(i_v1 + (int32_t)result_value); // 0x17242
-    unsigned char i_v3 = *(char *)(i_v1 + (int32_t)target); // 0x1724a
-    bool i_v4 = true; // 0x1724e
+    unsigned char i_v3 = *(char *)(i_v1 + (int32_t)target);       // 0x1724a
+    bool i_v4 = true;                                             // 0x1724e
     while (i_v2 >= i_v3) {
         // 0x17254
         i_v4 = false;
@@ -4910,12 +5316,13 @@ bool equihash_target_match(char * result_value, char * target) {
     return i_v4;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x17288 - 0x1737a
 // Line range:    396 - 413
-int32_t targetValidator(char * work, char * nonce, char * target) {
+int32_t targetValidator(char *work, char *nonce, char *target) {
     char input[1487]; // bp-1508, 0x17288
-    char output[32]; // bp-1572, 0x17288
+    char output[32];  // bp-1572, 0x17288
     char tmphash[32]; // bp-1540, 0x17288
     // 0x17288
     memset((int32_t *)&input, 0, 1487);
@@ -4930,28 +5337,32 @@ int32_t targetValidator(char * work, char * nonce, char * target) {
     return target_zero_cal(output);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x1737c - 0x17464
 // Line range:    415 - 426
-int32_t equihash_nonce_verify(int32_t * verify_info, int32_t * tm, int32_t shift) {
+int32_t equihash_nonce_verify(int32_t *verify_info, int32_t *tm,
+                              int32_t shift) {
     int32_t i_v1 = (int32_t)verify_info;
-    int32_t * p_v2 = (int32_t *)(i_v1 + 1520); // 0x17398
+    int32_t *p_v2 = (int32_t *)(i_v1 + 1520); // 0x17398
     int32_t i_v3 = *(int32_t *)(i_v1 + 1524); // 0x173be
-    memcpy((int32_t *)(i_v1 - 4 - shift + *p_v2), (int32_t *)(i_v1 + 140), i_v3);
+    memcpy((int32_t *)(i_v1 - 4 - shift + *p_v2), (int32_t *)(i_v1 + 140),
+           i_v3);
     int32_t valData = 200; // bp-396, 0x173ce
-    int32_t digest; // bp-384, 0x1737c
+    int32_t digest;        // bp-384, 0x1737c
     digestInit(&digest, 200, 9);
     blake2b_update(&digest, (char *)verify_info, (int64_t)*p_v2);
-    char * p_v4 = (char *)(i_v1 + 144); // 0x17422
+    char *p_v4 = (char *)(i_v1 + 144);                    // 0x17422
     int32_t i_v5 = sortValidator((char *)&valData, p_v4); // 0x17422
     *tm = targetValidator((char *)verify_info, p_v4, (char *)(i_v1 + 1488));
     return i_v5;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/equihash-verify.c
 // Address range: 0x17464 - 0x174ba
 // Line range:    428 - 439
-void equihash_init_algo(char * args) {
+void equihash_init_algo(char *args) {
     int32_t i_v1 = (int32_t)args;
     *(int32_t *)(i_v1 + 1692) = 140;
     *(int32_t *)(i_v1 + 1696) = 4;
@@ -4963,35 +5374,36 @@ void equihash_init_algo(char * args) {
     __asm_nop(i_v1, i_v2, i_v1, 0x1737d);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/pcba.c
-// Address range: 0x174bc - 0x174ca
-// Line range:    22 - 25
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/pcba.c Address
+// range: 0x174bc - 0x174ca Line range:    22 - 25
 void pcba_app_manual_test(void) {
     // 0x174bc
     int32_t i_v1; // 0x174bc
     __asm_nop(i_v1, i_v1, i_v1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/pcba.c
-// Address range: 0x174cc - 0x176b4
-// Line range:    27 - 68
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/pcba.c Address
+// range: 0x174cc - 0x176b4 Line range:    27 - 68
 int main() {
     char command[64]; // bp-88, 0x174cc
     // 0x174cc
     memset((int32_t *)&command, 0, 64);
-    int32_t * p_v1 = app_config_init("/mnt/card/Config.ini"); // 0x174ea
+    int32_t *p_v1 = app_config_init("/mnt/card/Config.ini"); // 0x174ea
     *(int32_t *)&app_conf = (int32_t)p_v1;
-    int32_t * p_v2 = calloc(2964, 1); // 0x17500
+    int32_t *p_v2 = calloc(2964, 1); // 0x17500
     env_init(p_v2);
     if (app_conf == NULL) {
         // 0x176aa
         return -1;
     }
     // 0x17526
-    char * p_v3; // bp-1112, 0x174cc
+    char *p_v3; // bp-1112, 0x174cc
     if (cgpu_init(p_v2) < 0) {
         // 0x17534
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1755e
             p_v3 = (char *)0x75706763;
             _applog(2, (char *)&p_v3, false);
@@ -5036,7 +5448,7 @@ int main() {
     if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0) {
         // 0x1762e
         i_v6 = i_v4;
-        i_v7 = (int32_t)"button";
+        i_v7 = (int32_t) "button";
         i_v8 = 64;
         i_v9 = opt_log_level;
         if (opt_log_level < 2) {
@@ -5047,7 +5459,7 @@ int main() {
     } else {
         goto lab_0x1763c;
     }
-  lab_0x1763c:
+lab_0x1763c:
     // 0x1763c
     p_v3 = (char *)0x61656c70;
     int32_t i_v10 = (int32_t)&p_v3; // 0x1765a
@@ -5057,7 +5469,7 @@ int main() {
     i_v8 = 0;
     i_v9 = i_v10;
     goto lab_0x1768a;
-  lab_0x1768a:
+lab_0x1768a:
     // 0x1768a
     __asm_nop(i_v6, i_v7, i_v8, i_v9);
     free(p_v2);
@@ -5067,28 +5479,29 @@ int main() {
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/crc.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/crc.c
 // Address range: 0x176b4 - 0x177d4
 // Line range:    55 - 114
-char CRC5(char * ptr, unsigned char len) {
-    char crcin[5]; // bp-20, 0x176b4
+char CRC5(char *ptr, unsigned char len) {
+    char crcin[5];  // bp-20, 0x176b4
     char crcout[5]; // bp-28, 0x176b4
-    char x_v1[5]; // 0x1771e
-    char x_v2[5]; // 0x17768
+    char x_v1[5];   // 0x1771e
+    char x_v2[5];   // 0x17768
     // 0x176b4
     crcin = {1, 0, 0, 0, 0};
     crcout = {1, 0, 0, 0, 0};
     char i_v3 = 16; // 0x1777a
-    char i_v4; // 0x176b4
+    char i_v4;      // 0x176b4
     if (len != 0) {
-        char i_v5 = 0; // 0x17770
-        char i_v6 = 0; // 0x176b4
+        char i_v5 = 0;    // 0x17770
+        char i_v6 = 0;    // 0x176b4
         char i_v7 = -128; // 0x176b4
         x_v1[0] = 1 ^ (char)((*ptr & i_v7) != 0);
         crcout = x_v1;
         char i_v8 = i_v7 / 2; // 0x1774c
         char i_v9 = i_v6 + 1; // 0x1774c
-        char * p_v10 = ptr; // 0x1774c
+        char *p_v10 = ptr;    // 0x1774c
         if (i_v6 == 7) {
             // 0x1774e
             i_v8 = -128;
@@ -5102,7 +5515,7 @@ char CRC5(char * ptr, unsigned char len) {
         i_v6 = i_v9;
         i_v7 = i_v8;
         while (i_v5 < len) {
-            char * p_v11 = p_v10;
+            char *p_v11 = p_v10;
             x_v1[0] = 1 ^ (char)((*p_v11 & i_v7) != 0);
             crcout = x_v1;
             i_v8 = i_v7 / 2;
@@ -5130,28 +5543,127 @@ char CRC5(char * ptr, unsigned char len) {
     return (i_v4 == 0 ? i_v14 : i_v14 | 2) | (char)(crcin[0] != 0);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/crc.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/crc.c
 // Address range: 0x177d4 - 0x17844
 // Line range:    116 - 128
-int16_t CRC16(char * p_data, int16_t w_len) {
-    int16_t i_v1 = w_len; // 0x17826
-    char * p_v2 = p_data; // 0x17826
+int16_t CRC16(char *p_data, int16_t w_len) {
+    int16_t i_v1 = w_len;  // 0x17826
+    char *p_v2 = p_data;   // 0x17826
     int32_t i_v3 = 0xff00; // 0x17826
-    int32_t i_v4 = 255; // 0x17826
+    int32_t i_v4 = 255;    // 0x17826
     if (w_len != 0) {
         i_v1--;
         int32_t i_v5 = (int32_t)(*p_v2 ^ -1); // 0x177f8
-        char i_v6 = *(char *)(i_v5 + (int32_t)"\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@"); // 0x17808
+        char i_v6 =
+            *(char *)(i_v5 +
+                      (int32_t) "\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@"
+                                "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                "@"); // 0x17808
         char i_v7 = i_v6 ^ -1;
-        unsigned char i_v8 = *(char *)(i_v5 + (int32_t)"\x00\xc0\xc1\x01\xc3\x03\x02\xc2\xc6\x06\a\xc7\x05\xc5\xc4\x04\xcc\f\r\xcd\x0f\xcf\xce\x0e\n\xca\xcb\v\xc9\t\b\xc8\xd8\x18\x19\xd9\x1b\xdb\xda\x1a\x1e\xde\xdf\x1f\xdd\x1d\x1c\xdc\x14\xd4\xd5\x15\xd7\x17\x16\xd6\xd2\x12\x13\xd3\x11\xd1\xd0\x10\xf0\x30\x31\xf1\x33\xf3\xf2\x32\x36\xf6\xf7\x37\xf5\x35\x34\xf4<\xfc\xfd=\xff?>\xfe\xfa:;\xfb\x39\xf9\xf8\x38(\xe8\xe9)\xeb+*\xea\xee./\xef-\xed\xec,\xe4$%\xe5'\xe7\xe6&\"\xe2\xe3#\xe1! \xe0\xa0`a\xa1\x63\xa3\xa2\x62\x66\xa6\xa7g\xa5\x65\x64\xa4l\xac\xadm\xafon\xae\xaajk\xabi\xa9\xa8hx\xb8\xb9y\xbb{z\xba\xbe~\x7f\xbf}\xbd\xbc|\xb4tu\xb5w\xb7\xb6vr\xb2\xb3s\xb1qp\xb0P\x90\x91Q\x93SR\x92\x96VW\x97U\x95\x94T\x9c\\]\x9d_\x9f\x9e^Z\x9a\x9b[\x99YX\x98\x88HI\x89K\x8b\x8aJN\x8e\x8fO\x8dML\x8c\x44\x84\x85\x45\x87GF\x86\x82\x42\x43\x83\x41\x81\x80@"); // 0x1781a
+        unsigned char i_v8 = *(
+            char
+                *)(i_v5 +
+                   (int32_t) "\x00\xc0\xc1\x01\xc3\x03\x02\xc2\xc6\x06\a\xc7"
+                             "\x05\xc5\xc4\x04\xcc\f\r\xcd\x0f\xcf\xce\x0e\n"
+                             "\xca\xcb\v\xc9\t\b\xc8\xd8\x18\x19\xd9\x1b\xdb"
+                             "\xda\x1a\x1e\xde\xdf\x1f\xdd\x1d\x1c\xdc\x14\xd4"
+                             "\xd5\x15\xd7\x17\x16\xd6\xd2\x12\x13\xd3\x11\xd1"
+                             "\xd0\x10\xf0\x30\x31\xf1\x33\xf3\xf2\x32\x36\xf6"
+                             "\xf7\x37\xf5\x35\x34\xf4<\xfc\xfd=\xff?>\xfe\xfa:"
+                             ";\xfb\x39\xf9\xf8\x38(\xe8\xe9)\xeb+*\xea\xee./"
+                             "\xef-\xed\xec,\xe4$%\xe5'\xe7\xe6&\"\xe2\xe3#"
+                             "\xe1! "
+                             "\xe0\xa0`"
+                             "a\xa1\x63\xa3\xa2\x62\x66\xa6\xa7g\xa5\x65\x64"
+                             "\xa4l\xac\xadm\xafon\xae\xaajk\xabi\xa9\xa8hx\xb8"
+                             "\xb9y\xbb{z\xba\xbe~\x7f\xbf}\xbd\xbc|"
+                             "\xb4tu\xb5w\xb7\xb6vr\xb2\xb3s\xb1qp\xb0P\x90\x91"
+                             "Q\x93SR\x92\x96VW\x97U\x95\x94T\x9c\\]\x9d_"
+                             "\x9f\x9e^Z\x9a\x9b["
+                             "\x99YX\x98\x88HI\x89K\x8b\x8aJN\x8e\x8fO\x8dML"
+                             "\x8c\x44\x84\x85\x45\x87GF\x86\x82\x42\x43\x83"
+                             "\x41\x81\x80@"); // 0x1781a
         p_v2 = (char *)((int32_t)p_v2 + 1);
         while (i_v1 != 0) {
             // 0x177ee
             i_v1--;
             i_v5 = (int32_t)(*p_v2 ^ i_v7);
-            i_v6 = *(char *)(i_v5 + (int32_t)"\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81@");
+            i_v6 = *(
+                char *)(i_v5 +
+                        (int32_t) "\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                  "@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                  "@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                  "@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                  "@\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                  "@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                  "@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                  "@\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                  "@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                  "@\x01\xc0\x80\x41\x00\xc1\x81@\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                  "@\x00\xc1\x81@\x01\xc0\x80\x41\x00\xc1\x81@"
+                                  "\x01\xc0\x80\x41\x01\xc0\x80\x41\x00\xc1\x81"
+                                  "@");
             i_v7 = i_v6 ^ i_v8;
-            i_v8 = *(char *)(i_v5 + (int32_t)"\x00\xc0\xc1\x01\xc3\x03\x02\xc2\xc6\x06\a\xc7\x05\xc5\xc4\x04\xcc\f\r\xcd\x0f\xcf\xce\x0e\n\xca\xcb\v\xc9\t\b\xc8\xd8\x18\x19\xd9\x1b\xdb\xda\x1a\x1e\xde\xdf\x1f\xdd\x1d\x1c\xdc\x14\xd4\xd5\x15\xd7\x17\x16\xd6\xd2\x12\x13\xd3\x11\xd1\xd0\x10\xf0\x30\x31\xf1\x33\xf3\xf2\x32\x36\xf6\xf7\x37\xf5\x35\x34\xf4<\xfc\xfd=\xff?>\xfe\xfa:;\xfb\x39\xf9\xf8\x38(\xe8\xe9)\xeb+*\xea\xee./\xef-\xed\xec,\xe4$%\xe5'\xe7\xe6&\"\xe2\xe3#\xe1! \xe0\xa0`a\xa1\x63\xa3\xa2\x62\x66\xa6\xa7g\xa5\x65\x64\xa4l\xac\xadm\xafon\xae\xaajk\xabi\xa9\xa8hx\xb8\xb9y\xbb{z\xba\xbe~\x7f\xbf}\xbd\xbc|\xb4tu\xb5w\xb7\xb6vr\xb2\xb3s\xb1qp\xb0P\x90\x91Q\x93SR\x92\x96VW\x97U\x95\x94T\x9c\\]\x9d_\x9f\x9e^Z\x9a\x9b[\x99YX\x98\x88HI\x89K\x8b\x8aJN\x8e\x8fO\x8dML\x8c\x44\x84\x85\x45\x87GF\x86\x82\x42\x43\x83\x41\x81\x80@");
+            i_v8 = *(
+                char
+                    *)(i_v5 +
+                       (int32_t) "\x00\xc0\xc1\x01\xc3\x03\x02\xc2\xc6\x06\a"
+                                 "\xc7\x05\xc5\xc4\x04\xcc\f\r\xcd\x0f\xcf\xce"
+                                 "\x0e\n\xca\xcb\v\xc9\t\b\xc8\xd8\x18\x19\xd9"
+                                 "\x1b\xdb\xda\x1a\x1e\xde\xdf\x1f\xdd\x1d\x1c"
+                                 "\xdc\x14\xd4\xd5\x15\xd7\x17\x16\xd6\xd2\x12"
+                                 "\x13\xd3\x11\xd1\xd0\x10\xf0\x30\x31\xf1\x33"
+                                 "\xf3\xf2\x32\x36\xf6\xf7\x37\xf5\x35\x34\xf4<"
+                                 "\xfc\xfd=\xff?>\xfe\xfa:;"
+                                 "\xfb\x39\xf9\xf8\x38(\xe8\xe9)\xeb+*\xea\xee."
+                                 "/\xef-\xed\xec,\xe4$%\xe5'\xe7\xe6&"
+                                 "\"\xe2\xe3#\xe1! "
+                                 "\xe0\xa0`"
+                                 "a\xa1\x63\xa3\xa2\x62\x66\xa6\xa7g\xa5\x65"
+                                 "\x64\xa4l\xac\xadm\xafon\xae\xaajk\xabi\xa9"
+                                 "\xa8hx\xb8\xb9y\xbb{z\xba\xbe~\x7f\xbf}"
+                                 "\xbd\xbc|"
+                                 "\xb4tu\xb5w\xb7\xb6vr\xb2\xb3s\xb1qp\xb0P\x90"
+                                 "\x91Q\x93SR\x92\x96VW\x97U\x95\x94T\x9c\\]"
+                                 "\x9d_\x9f\x9e^Z\x9a\x9b["
+                                 "\x99YX\x98\x88HI\x89K\x8b\x8aJN\x8e\x8fO\x8dM"
+                                 "L\x8c\x44\x84\x85\x45\x87GF\x86\x82\x42\x43"
+                                 "\x83\x41\x81\x80@");
             p_v2 = (char *)((int32_t)p_v2 + 1);
         }
         // 0x1781e
@@ -5162,7 +5674,8 @@ int16_t CRC16(char * p_data, int16_t w_len) {
     return __asm_sxth(__asm_sxth(i_v4) | i_v9);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
 // Address range: 0x17844 - 0x17b82
 // Line range:    27 - 67
 int32_t bitmain_axi_init(void) {
@@ -5171,15 +5684,17 @@ int32_t bitmain_axi_init(void) {
     int32_t i_v2; // bp-1040, 0x17844
     if (i_v1 < 0) {
         // 0x1787a
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x178a4
-            snprintf((char *)&i_v2, 1024, "/dev/axi_fpga_dev open failed. fd = %d\n", i_v1);
+            snprintf((char *)&i_v2, 1024,
+                     "/dev/axi_fpga_dev open failed. fd = %d\n", i_v1);
             _applog(2, (char *)&i_v2, false);
         }
         // 0x17b78
         return -1;
     }
-    int32_t * p_v3 = mmap(NULL, 0x1200, 3, 1, i_v1, 0); // 0x178ec
+    int32_t *p_v3 = mmap(NULL, 0x1200, 3, 1, i_v1, 0); // 0x178ec
     *(int32_t *)&axi_fpga_addr = (int32_t)p_v3;
     char i_v4 = *(char *)&use_syslog;
     char i_v5 = *(char *)&opt_log_output;
@@ -5187,7 +5702,8 @@ int32_t bitmain_axi_init(void) {
         // 0x1790a
         if ((i_v5 || i_v4) == 0 != opt_log_level < 2) {
             // 0x17934
-            snprintf((char *)&i_v2, 1024, "mmap axi_fpga_addr failed. axi_fpga_addr = 0x%p\n", NULL);
+            snprintf((char *)&i_v2, 1024,
+                     "mmap axi_fpga_addr failed. axi_fpga_addr = 0x%p\n", NULL);
             _applog(2, (char *)&i_v2, false);
         }
         // 0x17b78
@@ -5203,22 +5719,25 @@ int32_t bitmain_axi_init(void) {
     // 0x179b4
     if (i_v6 != opt_log_level < 2) {
         // 0x179f0
-        snprintf((char *)&i_v2, 1024, "axi_fpga_addr data = 0x%x\n", (int32_t)axi_fpga_addr % 0x10000);
+        snprintf((char *)&i_v2, 1024, "axi_fpga_addr data = 0x%x\n",
+                 (int32_t)axi_fpga_addr % 0x10000);
         _applog(2, (char *)&i_v2, false);
     }
     int32_t i_v7 = open("/dev/fpga_mem", O_RDWR); // 0x17a1c
     fd_fpga_mem = i_v7;
     if (i_v7 < 0) {
         // 0x17a3a
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x17a64
-            snprintf((char *)&i_v2, 1024, "/dev/fpga_mem open failed. fd_fpga_mem = %d\n", i_v7);
+            snprintf((char *)&i_v2, 1024,
+                     "/dev/fpga_mem open failed. fd_fpga_mem = %d\n", i_v7);
             _applog(2, (char *)&i_v2, false);
         }
         // 0x17b78
         return -1;
     }
-    int32_t * p_v8 = mmap(NULL, 0x1000000, 3, 1, i_v7, 0); // 0x17aac
+    int32_t *p_v8 = mmap(NULL, 0x1000000, 3, 1, i_v7, 0); // 0x17aac
     *(int32_t *)&fpga_mem_addr = (int32_t)p_v8;
     char i_v9 = *(char *)&use_syslog;
     char i_v10 = *(char *)&opt_log_output;
@@ -5228,7 +5747,8 @@ int32_t bitmain_axi_init(void) {
         i_v11 = -1;
         if ((i_v10 || i_v9) == 0 != opt_log_level < 2) {
             // 0x17af4
-            snprintf((char *)&i_v2, 1024, "mmap fpga_mem_addr failed. fpga_mem_addr = 0x%p\n", NULL);
+            snprintf((char *)&i_v2, 1024,
+                     "mmap fpga_mem_addr failed. fpga_mem_addr = 0x%p\n", NULL);
             _applog(2, (char *)&i_v2, false);
             i_v11 = -1;
         }
@@ -5246,14 +5766,16 @@ int32_t bitmain_axi_init(void) {
     return i_v11;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
 // Address range: 0x17b84 - 0x17cdc
 // Line range:    69 - 89
 void bitmain_axi_close(void) {
     // 0x17b84
     int32_t i_v1; // 0x17b84
-    char * p_v2; // bp-1044, 0x17b84
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    char *p_v2;   // bp-1044, 0x17b84
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x17bbc
         snprintf((char *)&p_v2, 1024, "--- %s\n", "bitmain_axi_close");
         _applog(2, (char *)&p_v2, false);
@@ -5263,7 +5785,8 @@ void bitmain_axi_close(void) {
     if (munmap(axi_fpga_addr, 0x1200) < 0) {
         // 0x17c02
         i_v3 = i_v1;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x17c2c
             p_v2 = (char *)0x6d6e756d;
             _applog(2, (char *)&p_v2, false);
@@ -5271,12 +5794,13 @@ void bitmain_axi_close(void) {
         }
     }
     int32_t i_v4 = 0x1000000; // 0x17c68
-    int32_t i_v5 = i_v3; // 0x17c68
+    int32_t i_v5 = i_v3;      // 0x17c68
     if (munmap(fpga_mem_addr, 0x1000000) < 0) {
         // 0x17c6a
         i_v4 = 0x1000000;
         i_v5 = i_v3;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x17c94
             p_v2 = (char *)0x6d6e756d;
             _applog(2, (char *)&p_v2, false);
@@ -5290,7 +5814,8 @@ void bitmain_axi_close(void) {
     __asm_nop(close(i_v6), i_v4, i_v5, i_v6);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
 // Address range: 0x17cdc - 0x17d0c
 // Line range:    91 - 96
 int32_t read_axi_fpga(int32_t address) {
@@ -5298,7 +5823,8 @@ int32_t read_axi_fpga(int32_t address) {
     return *(int32_t *)(4 * address + (int32_t)axi_fpga_addr);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
 // Address range: 0x17d0c - 0x17d36
 // Line range:    98 - 101
 void write_axi_fpga(int32_t address, int32_t data) {
@@ -5307,13 +5833,15 @@ void write_axi_fpga(int32_t address, int32_t data) {
     __asm_nop(address, data, data, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
 // Address range: 0x17d38 - 0x17dce
 // Line range:    103 - 115
 void init_fpga(void) {
     // 0x17d38
     int32_t i_v1; // 0x17d38
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x17d72
         int32_t i_v2; // bp-1036, 0x17d38
         snprintf((char *)&i_v2, 1024, "--- %s\n", "init_fpga");
@@ -5330,7 +5858,7 @@ void init_fpga(void) {
     }
     usleep(0x2710);
     int32_t i_v4 = read_axi_fpga(32); // 0x17dae
-    int32_t i_v5 = i_v4; // 0x17db6
+    int32_t i_v5 = i_v4;              // 0x17db6
     while (i_v4 < 0) {
         // 0x17da4
         usleep(0x2710);
@@ -5341,10 +5869,11 @@ void init_fpga(void) {
     __asm_nop(usleep(0x186a0), -0x7fff8000, i_v1, i_v5);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
 // Address range: 0x17dd0 - 0x17dfa
 // Line range:    117 - 121
-void get_return_nonce(int32_t * buf) {
+void get_return_nonce(int32_t *buf) {
     int32_t i_v1 = read_axi_fpga(4); // 0x17dda
     *buf = i_v1;
     int32_t i_v2 = read_axi_fpga(5); // 0x17dea
@@ -5353,10 +5882,11 @@ void get_return_nonce(int32_t * buf) {
     __asm_nop(i_v2, i_v3, i_v1, i_v2);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
 // Address range: 0x17dfc - 0x17e34
 // Line range:    123 - 128
-void set_BC_command_buffer(int32_t * value) {
+void set_BC_command_buffer(int32_t *value) {
     int32_t i_v1 = (int32_t)value;
     write_axi_fpga(49, i_v1);
     write_axi_fpga(50, *(int32_t *)(i_v1 + 4));
@@ -5366,7 +5896,8 @@ void set_BC_command_buffer(int32_t * value) {
     __asm_nop((int32_t)&i_g101, i_v2, i_v3, i_v2);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
 // Address range: 0x17e34 - 0x17e52
 // Line range:    130 - 135
 int32_t get_BC_write_command(void) {
@@ -5374,13 +5905,14 @@ int32_t get_BC_write_command(void) {
     return read_axi_fpga(48);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
 // Address range: 0x17e54 - 0x17f08
 // Line range:    137 - 157
 void set_BC_write_command(uint32_t value) {
     int32_t i_v1 = value; // bp-1044, 0x17e5e
-    char i_v2 = 0; // 0x17e6c
-    int32_t i_v3; // 0x17e54
+    char i_v2 = 0;        // 0x17e6c
+    int32_t i_v3;         // 0x17e54
     if (value >= 0) {
         // 0x17ef4
         write_axi_fpga(48, i_v1);
@@ -5408,11 +5940,11 @@ void set_BC_write_command(uint32_t value) {
             }
         }
     }
-  lab_0x17ef4:
+lab_0x17ef4:
     // 0x17ef4
     write_axi_fpga(48, i_v1);
     __asm_nop((int32_t)&i_g101, i_v1, i_v3, (int32_t)&i_v1);
-  lab_0x17eba:;
+lab_0x17eba:;
     // 0x17eba
     int32_t i_v7; // bp-1036, 0x17e54
     snprintf((char *)&i_v7, 1024, "%s: timeout\n\n", "set_BC_write_command");
@@ -5420,17 +5952,18 @@ void set_BC_write_command(uint32_t value) {
     _applog(2, (char *)&i_v7, false);
     i_v4 = &i_g101;
     int32_t i_v9 = i_v8; // 0x17ee4
-    int32_t i_v10 = 0; // 0x17ee4
+    int32_t i_v10 = 0;   // 0x17ee4
     i_v5 = i_v8;
     goto lab_0x17ef2;
-  lab_0x17ef2:
+lab_0x17ef2:
     // 0x17ef2
     __asm_nop(i_v4, i_v9, i_v10, i_v5);
     i_v3 = i_v10;
     goto lab_0x17ef4;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
 // Address range: 0x17f08 - 0x1800a
 // Line range:    159 - 182
 char asic_baud_to_fpga_baud(unsigned char asic_baud) {
@@ -5440,17 +5973,21 @@ char asic_baud_to_fpga_baud(unsigned char asic_baud) {
         return asic_baud;
     }
     // 0x17fa4
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x17fce
         int32_t i_v1; // bp-1032, 0x17f08
-        snprintf((char *)&i_v1, 1024, "%s: Don't support ASIC baud = %d, error!!!\n", "asic_baud_to_fpga_baud", (int32_t)asic_baud);
+        snprintf((char *)&i_v1, 1024,
+                 "%s: Don't support ASIC baud = %d, error!!!\n",
+                 "asic_baud_to_fpga_baud", (int32_t)asic_baud);
         _applog(2, (char *)&i_v1, false);
     }
     // 0x17ffe
     return 53;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/fpga.c
 // Address range: 0x1800c - 0x18034
 // Line range:    184 - 190
 void set_fpga_baud(char asic_baud) {
@@ -5460,7 +5997,8 @@ void set_fpga_baud(char asic_baud) {
     __asm_nop((int32_t)&i_g101, i_v1, i_v2, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/i2c.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/i2c.c
 // Address range: 0x18034 - 0x180d0
 // Line range:    10 - 24
 void i2c_write(int32_t config_data) {
@@ -5479,7 +6017,8 @@ void i2c_write(int32_t config_data) {
     write_axi_fpga(12, config_data);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/i2c.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/i2c.c
 // Address range: 0x180d0 - 0x18180
 // Line range:    26 - 51
 char i2c_read(int32_t config_data) {
@@ -5496,112 +6035,132 @@ char i2c_read(int32_t config_data) {
     return i_v1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
 // Address range: 0x18180 - 0x181bc
 // Line range:    11 - 16
-int32_t ISL_page_enable(char which_chain, char which_i2c, char i2c_dev_addr, char which_page) {
+int32_t ISL_page_enable(char which_chain, char which_i2c, char i2c_dev_addr,
+                        char which_page) {
     char i_v1 = which_chain; // bp-17, 0x18190
-    char i_v2 = which_page; // bp-20, 0x1819c
+    char i_v2 = which_page;  // bp-20, 0x1819c
     write_dc_dc(&i_v1, which_i2c, i2c_dev_addr, 0, &i_v2, 1);
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
 // Address range: 0x181bc - 0x181f2
 // Line range:    18 - 24
 int32_t ISL_on(char which_chain, char which_i2c, char i2c_dev_addr) {
     char i_v1 = which_chain; // bp-17, 0x181c4
-    char oper = -128; // bp-9, 0x181d0
+    char oper = -128;        // bp-9, 0x181d0
     write_dc_dc(&i_v1, which_i2c, i2c_dev_addr, 1, &oper, 1);
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
 // Address range: 0x181f4 - 0x1822a
 // Line range:    26 - 32
 int32_t ISL_off(char which_chain, char which_i2c, char i2c_dev_addr) {
     char i_v1 = which_chain; // bp-17, 0x181fc
-    char oper = 64; // bp-9, 0x18208
+    char oper = 64;          // bp-9, 0x18208
     write_dc_dc(&i_v1, which_i2c, i2c_dev_addr, 1, &oper, 1);
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
 // Address range: 0x1822c - 0x18268
 // Line range:    34 - 39
-int32_t ISL_set_on_off_config(char which_chain, char which_i2c, char i2c_dev_addr, char config) {
+int32_t ISL_set_on_off_config(char which_chain, char which_i2c,
+                              char i2c_dev_addr, char config) {
     char i_v1 = which_chain; // bp-17, 0x1823c
-    char i_v2 = config; // bp-20, 0x18248
+    char i_v2 = config;      // bp-20, 0x18248
     write_dc_dc(&i_v1, which_i2c, i2c_dev_addr, 2, &i_v2, 1);
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
 // Address range: 0x18268 - 0x1829e
 // Line range:    41 - 47
-int32_t ISL_set_clear_faults(char which_chain, char which_i2c, char i2c_dev_addr) {
+int32_t ISL_set_clear_faults(char which_chain, char which_i2c,
+                             char i2c_dev_addr) {
     char i_v1 = which_chain; // bp-17, 0x18270
-    char clear = 1; // bp-9, 0x1827c
+    char clear = 1;          // bp-9, 0x1827c
     write_dc_dc(&i_v1, which_i2c, i2c_dev_addr, 3, &clear, 1);
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
 // Address range: 0x182a0 - 0x182dc
 // Line range:    49 - 54
-int32_t ISL_set_write_protect(char which_chain, char which_i2c, char i2c_dev_addr, char mode) {
+int32_t ISL_set_write_protect(char which_chain, char which_i2c,
+                              char i2c_dev_addr, char mode) {
     char i_v1 = which_chain; // bp-17, 0x182b0
-    char i_v2 = mode; // bp-20, 0x182bc
+    char i_v2 = mode;        // bp-20, 0x182bc
     write_dc_dc(&i_v1, which_i2c, i2c_dev_addr, 16, &i_v2, 1);
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
 // Address range: 0x182dc - 0x18344
 // Line range:    56 - 65
-int32_t ISL_set_vout_command(char which_chain, char which_i2c, char i2c_dev_addr, int16_t voltage) {
-    char cmd[2]; // bp-20, 0x182dc
+int32_t ISL_set_vout_command(char which_chain, char which_i2c,
+                             char i2c_dev_addr, int16_t voltage) {
+    char cmd[2];  // bp-20, 0x182dc
     char x_v1[2]; // 0x182fe
     uint32_t i_v2 = (int32_t)voltage;
     char i_v3 = which_chain; // bp-25, 0x182ec
     x_v1[0] = voltage;
     cmd = x_v1;
     uint32_t i_v4 = i_v2 % 0x10000; // 0x1830a
-    unsigned char i_v5 = cmd[0]; // 0x1830e
-    printf("uint16 = 0x%04x[%u], cmd0=%02x cmd1=%02x\n", i_v4, i_v4, (int32_t)i_v5, i_v2 / 256 % 256);
+    unsigned char i_v5 = cmd[0];    // 0x1830e
+    printf("uint16 = 0x%04x[%u], cmd0=%02x cmd1=%02x\n", i_v4, i_v4,
+           (int32_t)i_v5, i_v2 / 256 % 256);
     write_dc_dc(&i_v3, which_i2c, i2c_dev_addr, 33, cmd, 2);
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
 // Address range: 0x18344 - 0x1837a
 // Line range:    67 - 73
-int32_t ISL_set_apply_settings(char which_chain, char which_i2c, char i2c_dev_addr) {
+int32_t ISL_set_apply_settings(char which_chain, char which_i2c,
+                               char i2c_dev_addr) {
     char i_v1 = which_chain; // bp-17, 0x1834c
-    char apply = 1; // bp-9, 0x18358
+    char apply = 1;          // bp-9, 0x18358
     write_dc_dc(&i_v1, which_i2c, i2c_dev_addr, -25, &apply, 1);
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
 // Address range: 0x1837c - 0x183d2
 // Line range:    75 - 83
-int32_t ISL_get_voltage(char which_chain, char which_i2c, char i2c_dev_addr, int16_t * voltage) {
-    char vol[2]; // bp-12, 0x1837c
+int32_t ISL_get_voltage(char which_chain, char which_i2c, char i2c_dev_addr,
+                        int16_t *voltage) {
+    char vol[2];             // bp-12, 0x1837c
     char i_v1 = which_chain; // bp-17, 0x18386
     memset((int32_t *)&vol, 0, 2);
     read_dc_dc(&i_v1, which_i2c, i2c_dev_addr, 33, vol, 2);
     int32_t i_v2 = __asm_sxth((int32_t)vol[0]); // 0x183b6
-    char i_v3; // 0x1837c
-    *voltage = (int16_t)__asm_sxth(__asm_sxth(256 * (int32_t)(unsigned char)i_v3) | i_v2);
+    char i_v3;                                  // 0x1837c
+    *voltage = (int16_t)__asm_sxth(
+        __asm_sxth(256 * (int32_t)(unsigned char)i_v3) | i_v2);
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
 // Address range: 0x183d4 - 0x18492
 // Line range:    85 - 97
-int32_t ISL_read_reg_default(char which_chain, char which_i2c, char i2c_dev_addr) {
-    char value[2]; // bp-12, 0x183d4
+int32_t ISL_read_reg_default(char which_chain, char which_i2c,
+                             char i2c_dev_addr) {
+    char value[2];           // bp-12, 0x183d4
     char i_v1 = which_chain; // bp-17, 0x183dc
     value = {0, 0};
     read_dc_dc(&i_v1, which_i2c, i2c_dev_addr, 0, value, 1);
@@ -5614,10 +6173,12 @@ int32_t ISL_read_reg_default(char which_chain, char which_i2c, char i2c_dev_addr
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/isl68127.c
 // Address range: 0x18494 - 0x18566
 // Line range:    99 - 131
-int16_t ISL_set_voltage(char which_chain, char which_i2c, char i2c_dev_addr, int16_t voltage) {
+int16_t ISL_set_voltage(char which_chain, char which_i2c, char i2c_dev_addr,
+                        int16_t voltage) {
     // 0x18494
     puts("begin to read voltage");
     ISL_page_enable(which_chain, which_i2c, i2c_dev_addr, 0);
@@ -5628,7 +6189,7 @@ int16_t ISL_set_voltage(char which_chain, char which_i2c, char i2c_dev_addr, int
     usleep(0x186a0);
     puts("end to read voltage");
     int16_t r_voltage = 0; // bp-20, 0x1851c
-    char i_v1 = 0; // 0x1851c
+    char i_v1 = 0;         // 0x1851c
     usleep(0x186a0);
     ISL_get_voltage(which_chain, which_i2c, i2c_dev_addr, &r_voltage);
     while (i_v1 >= 4 != i_v1 != 4 == r_voltage == 0) {
@@ -5642,7 +6203,8 @@ int16_t ISL_set_voltage(char which_chain, char which_i2c, char i2c_dev_addr, int
     return r_voltage;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/key.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/key.c
 // Address range: 0x18568 - 0x185fa
 // Line range:    11 - 19
 int32_t open_key(void) {
@@ -5653,8 +6215,9 @@ int32_t open_key(void) {
         return i_v1;
     }
     int32_t i_v2 = i_v1; // 0x185a6
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
-        char * p_v3 = (char *)0x6e65706f; // bp-1040, 0x185d4
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
+        char *p_v3 = (char *)0x6e65706f; // bp-1040, 0x185d4
         _applog(2, (char *)&p_v3, false);
         i_v2 = i_g58;
     }
@@ -5662,13 +6225,14 @@ int32_t open_key(void) {
     return i_v2;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/key.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/key.c
 // Address range: 0x185fc - 0x1866c
 // Line range:    21 - 25
 void close_key(void) {
     int32_t i_v1 = close(i_g58); // 0x18610
-    int32_t i_v2; // 0x185fc
-    int32_t i_v3; // 0x185fc
+    int32_t i_v2;                // 0x185fc
+    int32_t i_v3;                // 0x185fc
     if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0) {
         // 0x18630
         i_v2 = i_v1;
@@ -5681,21 +6245,22 @@ void close_key(void) {
     } else {
         goto lab_0x1863e;
     }
-  lab_0x1863e:;
-    char * p_v4 = (char *)0x2079656b; // bp-1040, 0x1864c
-    int32_t i_v5 = (int32_t)&p_v4; // 0x18656
+lab_0x1863e:;
+    char *p_v4 = (char *)0x2079656b; // bp-1040, 0x1864c
+    int32_t i_v5 = (int32_t)&p_v4;   // 0x18656
     _applog(2, (char *)&p_v4, false);
     i_v2 = &i_g101;
     int32_t i_v6 = i_v5; // 0x1865e
-    int32_t i_v7 = 0; // 0x1865e
+    int32_t i_v7 = 0;    // 0x1865e
     i_v3 = i_v5;
     goto lab_0x18662;
-  lab_0x18662:
+lab_0x18662:
     // 0x18662
     __asm_nop(i_v2, i_v6, i_v7, i_v3);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/key.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/key.c
 // Address range: 0x1866c - 0x1871c
 // Line range:    27 - 39
 int32_t read_key(char value) {
@@ -5706,17 +6271,20 @@ int32_t read_key(char value) {
         return 1;
     }
     // 0x186b4
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x186de
         int32_t i_v2; // bp-1036, 0x1866c
-        snprintf((char *)&i_v2, 1024, "%s: can't read out key value\n", "read_key");
+        snprintf((char *)&i_v2, 1024, "%s: can't read out key value\n",
+                 "read_key");
         _applog(2, (char *)&i_v2, false);
     }
     // 0x18712
     return -1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/lcd.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/lcd.c
 // Address range: 0x1871c - 0x187ae
 // Line range:    20 - 28
 int32_t open_lcd(void) {
@@ -5727,8 +6295,9 @@ int32_t open_lcd(void) {
         return i_v1;
     }
     int32_t i_v2 = i_v1; // 0x1875a
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
-        char * p_v3 = (char *)0x6e65706f; // bp-1040, 0x18788
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
+        char *p_v3 = (char *)0x6e65706f; // bp-1040, 0x18788
         _applog(2, (char *)&p_v3, false);
         i_v2 = i_g57;
     }
@@ -5736,14 +6305,15 @@ int32_t open_lcd(void) {
     return i_v2;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/lcd.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/lcd.c
 // Address range: 0x187b0 - 0x1888c
 // Line range:    30 - 43
 int32_t close_lcd(void) {
     int32_t i_v1 = close(i_g57); // 0x187cc
     char i_v2 = *(char *)&use_syslog;
     char i_v3 = *(char *)&opt_log_output;
-    char * p_v4; // bp-1044, 0x187b0
+    char *p_v4; // bp-1044, 0x187b0
     if (i_v1 == 0) {
         if ((i_v3 || i_v2) == 0 != opt_log_level < 2) {
             // 0x18806
@@ -5761,10 +6331,11 @@ int32_t close_lcd(void) {
     return i_v1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/lcd.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/lcd.c
 // Address range: 0x1888c - 0x18a02
 // Line range:    45 - 76
-void write_lcd(int32_t line, char * buf, int32_t size) {
+void write_lcd(int32_t line, char *buf, int32_t size) {
     int32_t i_v1 = (int32_t)buf;
     if (buf == NULL) {
         // 0x189f4
@@ -5784,7 +6355,7 @@ void write_lcd(int32_t line, char * buf, int32_t size) {
             // 0x1892e
             lseek(i_g57, 0, SEEK_SET);
             memset((int32_t *)&x_g100, 32, 64);
-            int32_t i_v2 = 0; // 0x189d6
+            int32_t i_v2 = 0;    // 0x189d6
             int32_t i_v3 = line; // 0x189d6
             if (size == 0) {
                 // 0x189d8
@@ -5820,8 +6391,8 @@ void write_lcd(int32_t line, char * buf, int32_t size) {
         }
     }
     // 0x188d8
-    int32_t i_v8; // 0x1888c
-    int32_t i_v9; // 0x1888c
+    int32_t i_v8;  // 0x1888c
+    int32_t i_v9;  // 0x1888c
     int32_t i_v10; // 0x1888c
     int32_t i_v11; // 0x1888c
     if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0) {
@@ -5838,10 +6409,11 @@ void write_lcd(int32_t line, char * buf, int32_t size) {
     } else {
         goto lab_0x18902;
     }
-  lab_0x18902:;
+lab_0x18902:;
     // 0x18902
     int32_t i_v12; // bp-1036, 0x1888c
-    snprintf((char *)&i_v12, 1024, "%s: write_lcd's arg is overflow\n", "write_lcd");
+    snprintf((char *)&i_v12, 1024, "%s: write_lcd's arg is overflow\n",
+             "write_lcd");
     int32_t i_v13 = &i_v12; // 0x1891e
     _applog(2, (char *)&i_v12, false);
     i_v8 = &i_g101;
@@ -5849,15 +6421,16 @@ void write_lcd(int32_t line, char * buf, int32_t size) {
     i_v10 = 0;
     i_v11 = i_v13;
     goto lab_0x189f8;
-  lab_0x189f8:
+lab_0x189f8:
     // 0x189f8
     __asm_nop(i_v8, i_v9, i_v10, i_v11);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/lcd.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/lcd.c
 // Address range: 0x18a04 - 0x18b54
 // Line range:    78 - 106
-void write_lcd_no_memset(int32_t line, char * buf, int32_t size) {
+void write_lcd_no_memset(int32_t line, char *buf, int32_t size) {
     int32_t i_v1 = (int32_t)buf;
     if (buf == NULL) {
         // 0x18b46
@@ -5874,7 +6447,7 @@ void write_lcd_no_memset(int32_t line, char * buf, int32_t size) {
     }
     if (line >= 3 != line != 3) {
         if (size == 64 || size < 64) {
-            int32_t i_v2 = 0; // 0x18b28
+            int32_t i_v2 = 0;    // 0x18b28
             int32_t i_v3 = line; // 0x18b28
             if (size == 0) {
                 // 0x18b2a
@@ -5910,8 +6483,8 @@ void write_lcd_no_memset(int32_t line, char * buf, int32_t size) {
         }
     }
     // 0x18a50
-    int32_t i_v8; // 0x18a04
-    int32_t i_v9; // 0x18a04
+    int32_t i_v8;  // 0x18a04
+    int32_t i_v9;  // 0x18a04
     int32_t i_v10; // 0x18a04
     int32_t i_v11; // 0x18a04
     if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0) {
@@ -5928,10 +6501,11 @@ void write_lcd_no_memset(int32_t line, char * buf, int32_t size) {
     } else {
         goto lab_0x18a7a;
     }
-  lab_0x18a7a:;
+lab_0x18a7a:;
     // 0x18a7a
     int32_t i_v12; // bp-1036, 0x18a04
-    snprintf((char *)&i_v12, 1024, "%s: write_lcd's arg is overflow\n", "write_lcd_no_memset");
+    snprintf((char *)&i_v12, 1024, "%s: write_lcd's arg is overflow\n",
+             "write_lcd_no_memset");
     int32_t i_v13 = &i_v12; // 0x18a96
     _applog(2, (char *)&i_v12, false);
     i_v8 = &i_g101;
@@ -5939,12 +6513,13 @@ void write_lcd_no_memset(int32_t line, char * buf, int32_t size) {
     i_v10 = 0;
     i_v11 = i_v13;
     goto lab_0x18b4a;
-  lab_0x18b4a:
+lab_0x18b4a:
     // 0x18b4a
     __asm_nop(i_v8, i_v9, i_v10, i_v11);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
 // Address range: 0x18b54 - 0x18bea
 // Line range:    11 - 19
 int32_t open_red_led(void) {
@@ -5955,8 +6530,9 @@ int32_t open_red_led(void) {
         return i_v1;
     }
     int32_t i_v2 = i_v1; // 0x18b92
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
-        char * p_v3 = (char *)0x6e65706f; // bp-1040, 0x18bc0
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
+        char *p_v3 = (char *)0x6e65706f; // bp-1040, 0x18bc0
         _applog(2, (char *)&p_v3, false);
         i_v2 = red_led_fd;
     }
@@ -5964,13 +6540,14 @@ int32_t open_red_led(void) {
     return i_v2;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
 // Address range: 0x18bec - 0x18c62
 // Line range:    21 - 25
 void close_red_led(void) {
     int32_t i_v1 = close(red_led_fd); // 0x18c00
-    int32_t i_v2; // 0x18bec
-    int32_t i_v3; // 0x18bec
+    int32_t i_v2;                     // 0x18bec
+    int32_t i_v3;                     // 0x18bec
     if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0) {
         // 0x18c20
         i_v2 = i_v1;
@@ -5983,21 +6560,22 @@ void close_red_led(void) {
     } else {
         goto lab_0x18c2e;
     }
-  lab_0x18c2e:;
-    char * p_v4 = (char *)0x20646572; // bp-1040, 0x18c3e
-    int32_t i_v5 = (int32_t)&p_v4; // 0x18c4c
+lab_0x18c2e:;
+    char *p_v4 = (char *)0x20646572; // bp-1040, 0x18c3e
+    int32_t i_v5 = (int32_t)&p_v4;   // 0x18c4c
     _applog(2, (char *)&p_v4, false);
     i_v2 = &i_g101;
     int32_t i_v6 = i_v5; // 0x18c54
-    int32_t i_v7 = 0; // 0x18c54
+    int32_t i_v7 = 0;    // 0x18c54
     i_v3 = i_v5;
     goto lab_0x18c58;
-  lab_0x18c58:
+lab_0x18c58:
     // 0x18c58
     __asm_nop(i_v2, i_v6, i_v7, i_v3);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
 // Address range: 0x18c64 - 0x18c86
 // Line range:    27 - 30
 void red_led_on(void) {
@@ -6005,7 +6583,8 @@ void red_led_on(void) {
     __asm_nop(write(i_v1, &i_g3, 1), (int32_t)&i_g3, 1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
 // Address range: 0x18c88 - 0x18caa
 // Line range:    32 - 35
 void red_led_off(void) {
@@ -6013,7 +6592,8 @@ void red_led_off(void) {
     __asm_nop(write(i_v1, &i_g4, 1), (int32_t)&i_g4, 1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
 // Address range: 0x18cac - 0x18d42
 // Line range:    37 - 45
 int32_t open_green_led(void) {
@@ -6024,8 +6604,9 @@ int32_t open_green_led(void) {
         return i_v1;
     }
     int32_t i_v2 = i_v1; // 0x18cea
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
-        char * p_v3 = (char *)0x6e65706f; // bp-1040, 0x18d18
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
+        char *p_v3 = (char *)0x6e65706f; // bp-1040, 0x18d18
         _applog(2, (char *)&p_v3, false);
         i_v2 = green_led_fd;
     }
@@ -6033,13 +6614,14 @@ int32_t open_green_led(void) {
     return i_v2;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
 // Address range: 0x18d44 - 0x18db8
 // Line range:    47 - 51
 void close_green_led(void) {
     int32_t i_v1 = close(green_led_fd); // 0x18d58
-    int32_t i_v2; // 0x18d44
-    int32_t i_v3; // 0x18d44
+    int32_t i_v2;                       // 0x18d44
+    int32_t i_v3;                       // 0x18d44
     if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0) {
         // 0x18d78
         i_v2 = i_v1;
@@ -6052,21 +6634,22 @@ void close_green_led(void) {
     } else {
         goto lab_0x18d86;
     }
-  lab_0x18d86:;
-    char * p_v4 = (char *)0x65657267; // bp-1040, 0x18d96
-    int32_t i_v5 = (int32_t)&p_v4; // 0x18da2
+lab_0x18d86:;
+    char *p_v4 = (char *)0x65657267; // bp-1040, 0x18d96
+    int32_t i_v5 = (int32_t)&p_v4;   // 0x18da2
     _applog(2, (char *)&p_v4, false);
     i_v2 = &i_g101;
     int32_t i_v6 = i_v5; // 0x18daa
-    int32_t i_v7 = 0; // 0x18daa
+    int32_t i_v7 = 0;    // 0x18daa
     i_v3 = i_v5;
     goto lab_0x18dae;
-  lab_0x18dae:
+lab_0x18dae:
     // 0x18dae
     __asm_nop(i_v2, i_v6, i_v7, i_v3);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
 // Address range: 0x18db8 - 0x18dda
 // Line range:    53 - 56
 void green_led_on(void) {
@@ -6074,7 +6657,8 @@ void green_led_on(void) {
     __asm_nop(write(i_v1, &i_g3, 1), (int32_t)&i_g3, 1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/led.c
 // Address range: 0x18ddc - 0x18dfe
 // Line range:    58 - 61
 void green_led_off(void) {
@@ -6082,33 +6666,39 @@ void green_led_off(void) {
     __asm_nop(write(i_v1, &i_g4, 1), (int32_t)&i_g4, 1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x18e00 - 0x18e38
 // Line range:    16 - 23
 void write_pic(unsigned char which_i2c, char which_chain, unsigned char data) {
     int32_t i_v1 = which_chain;
-    int32_t i_v2 = 0x4000000 * (int32_t)which_i2c | 0x10000 * i_v1 & 0x5f0000 | 0xa00000; // 0x18e22
+    int32_t i_v2 = 0x4000000 * (int32_t)which_i2c | 0x10000 * i_v1 & 0x5f0000 |
+                   0xa00000;             // 0x18e22
     int32_t i_v3 = i_v2 | (int32_t)data; // 0x18e26
     i2c_write(i_v3);
     __asm_nop((int32_t)&i_g101, i_v1, i_v2, i_v3);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x18e38 - 0x18e6c
 // Line range:    25 - 32
 char read_pic(unsigned char which_i2c, unsigned char which_chain) {
     // 0x18e38
-    return i2c_read(0x4000000 * (int32_t)which_i2c | 0x10000 * (int32_t)which_chain | 0xa00000);
+    return i2c_read(0x4000000 * (int32_t)which_i2c |
+                    0x10000 * (int32_t)which_chain | 0xa00000);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x18e6c - 0x1907a
 // Line range:    35 - 92
-int32_t write_dc_dc(char * args, char which_i2c, unsigned char i2c_dev_addr, char reg, char * data, uint32_t len) {
-    char crc_data[2]; // bp-32, 0x18e6c
+int32_t write_dc_dc(char *args, char which_i2c, unsigned char i2c_dev_addr,
+                    char reg, char *data, uint32_t len) {
+    char crc_data[2];        // bp-32, 0x18e6c
     char read_back_data[16]; // bp-48, 0x18e6c
-    char send_data[16]; // bp-64, 0x18e6c
-    char x_v1[2]; // 0x18f60
+    char send_data[16];      // bp-64, 0x18e6c
+    char x_v1[2];            // 0x18f60
     // 0x18e6c
     crc_data = {-1, 0};
     read_back_data = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -6128,15 +6718,17 @@ int32_t write_dc_dc(char * args, char which_i2c, unsigned char i2c_dev_addr, cha
         }
     }
     int32_t i_v6 = len + 6; // 0x18f50
-    char i_v7 = 0; // 0x18f56
-    char i_v8 = 0; // 0x18f56
+    char i_v7 = 0;          // 0x18f56
+    char i_v8 = 0;          // 0x18f56
     if (i_v6 > 2) {
         int32_t i_v9 = 2; // 0x18f4a
-        int16_t i_v10 = (int16_t)*(char *)(i_v9 + (int32_t)&send_data); // 0x18f44
+        int16_t i_v10 =
+            (int16_t) * (char *)(i_v9 + (int32_t)&send_data); // 0x18f44
         i_v9++;
         int16_t i_v11 = i_v10; // 0x18f56
         while (i_v6 > i_v9) {
-            unsigned char i_v12 = *(char *)(i_v9 + (int32_t)&send_data); // 0x18f3e
+            unsigned char i_v12 =
+                *(char *)(i_v9 + (int32_t)&send_data); // 0x18f3e
             i_v10 = i_v11 + (int16_t)i_v12;
             i_v9++;
             i_v11 = i_v10;
@@ -6179,20 +6771,26 @@ int32_t write_dc_dc(char * args, char which_i2c, unsigned char i2c_dev_addr, cha
     // 0x1902a
     pthread_mutex_unlock(&i2c_mutex);
     int32_t i_v20 = 0; // 0x1903a
-    char i_v21; // 0x18e6c
+    char i_v21;        // 0x18e6c
     if (i_v21 == 1 != (i_v21 == 50)) {
         unsigned char i_v22 = read_back_data[0]; // 0x19042
-        printf("--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x, read_back_data[2] = 0x%02x, read_back_data[3] = 0x%02x\n\n", "write_dc_dc", (int32_t)i_v22, (int32_t)i_v21, (int32_t)i_v21, (int32_t)i_v21);
+        printf("--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = "
+               "0x%02x, read_back_data[2] = 0x%02x, read_back_data[3] = "
+               "0x%02x\n\n",
+               "write_dc_dc", (int32_t)i_v22, (int32_t)i_v21, (int32_t)i_v21,
+               (int32_t)i_v21);
         i_v20 = -1;
     }
     // 0x19072
     return i_v20;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1907c - 0x19268
 // Line range:    94 - 153
-int32_t read_dc_dc(char * args, char which_i2c, unsigned char i2c_dev_addr, char reg, char * value, uint32_t len) {
+int32_t read_dc_dc(char *args, char which_i2c, unsigned char i2c_dev_addr,
+                   char reg, char *value, uint32_t len) {
     char read_back_data[16]; // bp-48, 0x1907c
     // 0x1907c
     int32_t i_v1; // 0x1907c
@@ -6228,7 +6826,11 @@ int32_t read_dc_dc(char * args, char which_i2c, unsigned char i2c_dev_addr, char
     char i_v9; // 0x1907c
     if (i_v9 == 1 != (i_v9 == 50)) {
         unsigned char i_v10 = read_back_data[0]; // 0x19206
-        printf("--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x, read_back_data[2] = 0x%02x, read_back_data[3] = 0x%02x\n", "read_dc_dc", (int32_t)i_v10, (int32_t)i_v9, (int32_t)i_v9, (int32_t)i_v9);
+        printf(
+            "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = "
+            "0x%02x, read_back_data[2] = 0x%02x, read_back_data[3] = 0x%02x\n",
+            "read_dc_dc", (int32_t)i_v10, (int32_t)i_v9, (int32_t)i_v9,
+            (int32_t)i_v9);
         // 0x19260
         return -1;
     }
@@ -6241,10 +6843,12 @@ int32_t read_dc_dc(char * args, char which_i2c, unsigned char i2c_dev_addr, char
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x19268 - 0x1949a
 // Line range:    155 - 196
-int32_t set_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain, char flash_addr_h, char flash_addr_l) {
+int32_t set_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain,
+                                     char flash_addr_h, char flash_addr_l) {
     char read_back_data[2]; // bp-28, 0x19268
     // 0x19268
     char i_v1; // 0x19268
@@ -6285,7 +6889,8 @@ int32_t set_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain, char f
         i_v13 = 1;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x19464
-            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n", "set_PIC16F1704_flash_pointer");
+            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n",
+                     "set_PIC16F1704_flash_pointer");
             _applog(2, (char *)&i_v12, false);
             i_v13 = 1;
         }
@@ -6294,7 +6899,11 @@ int32_t set_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain, char f
         i_v13 = 0;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x19400
-            snprintf((char *)&i_v12, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x\n\n", "set_PIC16F1704_flash_pointer", (int32_t)i_v9, (int32_t)i_v2);
+            snprintf((char *)&i_v12, 1024,
+                     "--- %s failed! read_back_data[0] = 0x%02x, "
+                     "read_back_data[1] = 0x%02x\n\n",
+                     "set_PIC16F1704_flash_pointer", (int32_t)i_v9,
+                     (int32_t)i_v2);
             _applog(2, (char *)&i_v12, false);
             i_v13 = 0;
         }
@@ -6303,10 +6912,12 @@ int32_t set_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain, char f
     return i_v13;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1949c - 0x19718
 // Line range:    199 - 246
-int32_t send_data_to_PIC16F1704(int32_t which_i2c, char which_chain, char * buf) {
+int32_t send_data_to_PIC16F1704(int32_t which_i2c, char which_chain,
+                                char *buf) {
     char read_back_data[2]; // bp-28, 0x1949c
     // 0x1949c
     char i_v1; // 0x1949c
@@ -6320,7 +6931,7 @@ int32_t send_data_to_PIC16F1704(int32_t which_i2c, char which_chain, char * buf)
     // 0x1958a
     int32_t i_v4; // bp-16, 0x1949c
     int32_t i_v5 = &i_v4;
-    char i_v6 = 0; // 0x19584
+    char i_v6 = 0;       // 0x19584
     int32_t i_v7 = i_v6; // 0x19564
     *(char *)(i_v5 - 32 + i_v7) = *(char *)(i_v7 + (int32_t)buf);
     i_v6++;
@@ -6364,7 +6975,8 @@ int32_t send_data_to_PIC16F1704(int32_t which_i2c, char which_chain, char * buf)
         i_v16 = 1;
         if ((i_v14 || i_v13) == 0 != opt_log_level < 2) {
             // 0x196e2
-            snprintf((char *)&i_v15, 1024, "--- %s ok\n\n", "send_data_to_PIC16F1704");
+            snprintf((char *)&i_v15, 1024, "--- %s ok\n\n",
+                     "send_data_to_PIC16F1704");
             _applog(2, (char *)&i_v15, false);
             i_v16 = 1;
         }
@@ -6373,7 +6985,10 @@ int32_t send_data_to_PIC16F1704(int32_t which_i2c, char which_chain, char * buf)
         i_v16 = 0;
         if ((i_v14 || i_v13) == 0 != opt_log_level < 2) {
             // 0x1967e
-            snprintf((char *)&i_v15, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x\n\n", "send_data_to_PIC16F1704", (int32_t)i_v12, (int32_t)i_v2);
+            snprintf((char *)&i_v15, 1024,
+                     "--- %s failed! read_back_data[0] = 0x%02x, "
+                     "read_back_data[1] = 0x%02x\n\n",
+                     "send_data_to_PIC16F1704", (int32_t)i_v12, (int32_t)i_v2);
             _applog(2, (char *)&i_v15, false);
             i_v16 = 0;
         }
@@ -6382,10 +6997,12 @@ int32_t send_data_to_PIC16F1704(int32_t which_i2c, char which_chain, char * buf)
     return i_v16;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x19718 - 0x19a3a
 // Line range:    250 - 299
-int32_t read_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain, char * flash_addr_h, char * flash_addr_l) {
+int32_t read_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain,
+                                      char *flash_addr_h, char *flash_addr_l) {
     char read_back_data[6]; // bp-40, 0x19718
     // 0x19718
     char i_v1; // 0x19718
@@ -6420,14 +7037,22 @@ int32_t read_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain, char 
     if (i_v1 == 8) {
         // 0x19862
         if (read_back_data[0] == 6) {
-            int32_t i_v10 = i_v1; // 0x198fc
-            int32_t i_v11 = i_v1; // 0x19906
+            int32_t i_v10 = i_v1;               // 0x198fc
+            int32_t i_v11 = i_v1;               // 0x19906
             int32_t i_v12 = i_v11 + 14 + i_v10; // 0x1990c
             if ((i_v12 & 768) == 0 != (i_v2 == (char)i_v12)) {
                 // 0x19932
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x1995c
-                    snprintf((char *)&i_v9, 1024, "--- %s failed! read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, read_back_data[4] = 0x%x, read_back_data[5] = 0x%x\n\n", "read_PIC16F1704_flash_pointer", 6, 8, i_v10, i_v11, 0, (int32_t)i_v2);
+                    snprintf(
+                        (char *)&i_v9, 1024,
+                        "--- %s failed! read_back_data[0] = 0x%x, "
+                        "read_back_data[1] = 0x%x, read_back_data[2] = 0x%x, "
+                        "read_back_data[3] = 0x%x, read_back_data[4] = 0x%x, "
+                        "read_back_data[5] = 0x%x\n\n",
+                        "read_PIC16F1704_flash_pointer", 6, 8, i_v10, i_v11, 0,
+                        (int32_t)i_v2);
                     _applog(2, (char *)&i_v9, false);
                 }
                 // 0x199b0
@@ -6436,12 +7061,17 @@ int32_t read_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain, char 
                 return 0;
             }
             // 0x199b4
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x199f2
-                int32_t i_v13; // 0x19718
+                int32_t i_v13;                         // 0x19718
                 unsigned char i_v14 = *(char *)&i_v13; // 0x199f6
-                unsigned char i_v15 = *(char *)&i_v8; // 0x199fe
-                snprintf((char *)&i_v9, 1024, "--- %s ok! flash_addr_h = 0x%02x, flash_addr_l = 0x%02x\n\n", "read_PIC16F1704_flash_pointer", (int32_t)i_v14, (int32_t)i_v15);
+                unsigned char i_v15 = *(char *)&i_v8;  // 0x199fe
+                snprintf((char *)&i_v9, 1024,
+                         "--- %s ok! flash_addr_h = 0x%02x, flash_addr_l = "
+                         "0x%02x\n\n",
+                         "read_PIC16F1704_flash_pointer", (int32_t)i_v14,
+                         (int32_t)i_v15);
                 _applog(2, (char *)&i_v9, false);
             }
             // 0x19a2e
@@ -6451,9 +7081,15 @@ int32_t read_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain, char 
         }
     }
     // 0x1986a
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         unsigned char i_v16 = read_back_data[0]; // 0x19894
-        snprintf((char *)&i_v9, 1024, "--- %s failed! read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, read_back_data[4] = 0x%x, read_back_data[5] = 0x%x\n\n", "read_PIC16F1704_flash_pointer", (int32_t)i_v16, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v2);
+        snprintf((char *)&i_v9, 1024,
+                 "--- %s failed! read_back_data[0] = 0x%x, read_back_data[1] = "
+                 "0x%x, read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, "
+                 "read_back_data[4] = 0x%x, read_back_data[5] = 0x%x\n\n",
+                 "read_PIC16F1704_flash_pointer", (int32_t)i_v16, (int32_t)i_v1,
+                 (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v2);
         _applog(2, (char *)&i_v9, false);
     }
     // 0x198e8
@@ -6462,15 +7098,18 @@ int32_t read_PIC16F1704_flash_pointer(int32_t which_i2c, char which_chain, char 
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x19a3c - 0x19eca
 // Line range:    301 - 364
-int32_t read_PIC16F1704_flash_data(int32_t which_i2c, char which_chain, char * buf) {
+int32_t read_PIC16F1704_flash_data(int32_t which_i2c, char which_chain,
+                                   char *buf) {
     char read_back_data[20]; // bp-52, 0x19a3c
     // 0x19a3c
     char i_v1; // 0x19a3c
     unsigned char i_v2 = i_v1;
-    read_back_data = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    read_back_data = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                      0,  0, 0, 0, 0, 0, 0, 0, 0, 0};
     pthread_mutex_lock(&i2c_mutex);
     int32_t i_v3; // bp-24, 0x19a3c
     int32_t i_v4 = &i_v3;
@@ -6496,9 +7135,25 @@ int32_t read_PIC16F1704_flash_data(int32_t which_i2c, char which_chain, char * b
     // 0x19b74
     pthread_mutex_unlock(&i2c_mutex);
     int32_t i_v8; // bp-1084, 0x19a3c
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         unsigned char i_v9 = read_back_data[0]; // 0x19baa
-        snprintf((char *)&i_v8, 1024, "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, \t\tread_back_data[4] = 0x%x, read_back_data[5] = 0x%x, read_back_data[6] = 0x%x, read_back_data[7] = 0x%x, \t\tread_back_data[8] = 0x%x, read_back_data[9] = 0x%x, read_back_data[10] = 0x%x, read_back_data[11] = 0x%x, \t\tread_back_data[12] = 0x%x, read_back_data[13] = 0x%x, read_back_data[14] = 0x%x, read_back_data[15] = 0x%x, \t\tread_back_data[16] = 0x%x, read_back_data[17] = 0x%x, read_back_data[18] = 0x%x, read_back_data[19] = 0x%x\n", "read_PIC16F1704_flash_data", (int32_t)i_v9, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v2);
+        snprintf((char *)&i_v8, 1024,
+                 "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, "
+                 "read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, "
+                 "\t\tread_back_data[4] = 0x%x, read_back_data[5] = 0x%x, "
+                 "read_back_data[6] = 0x%x, read_back_data[7] = 0x%x, "
+                 "\t\tread_back_data[8] = 0x%x, read_back_data[9] = 0x%x, "
+                 "read_back_data[10] = 0x%x, read_back_data[11] = 0x%x, "
+                 "\t\tread_back_data[12] = 0x%x, read_back_data[13] = 0x%x, "
+                 "read_back_data[14] = 0x%x, read_back_data[15] = 0x%x, "
+                 "\t\tread_back_data[16] = 0x%x, read_back_data[17] = 0x%x, "
+                 "read_back_data[18] = 0x%x, read_back_data[19] = 0x%x\n",
+                 "read_PIC16F1704_flash_data", (int32_t)i_v9, (int32_t)i_v1,
+                 (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1,
+                 (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1,
+                 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0,
+                 (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v2);
         _applog(2, (char *)&i_v8, false);
     }
     // 0x19c8e
@@ -6506,18 +7161,27 @@ int32_t read_PIC16F1704_flash_data(int32_t which_i2c, char which_chain, char * b
     if (i_v1 == 3) {
         // 0x19ca2
         if (read_back_data[0] == 20) {
-            uint32_t i_v10 = ((int32_t)i_v1 + 23 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1) % 0x10000 + (int32_t)i_v1; // 0x19dae
+            uint32_t i_v10 = ((int32_t)i_v1 + 23 + (int32_t)i_v1 +
+                              (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 +
+                              (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 +
+                              (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1) %
+                                 0x10000 +
+                             (int32_t)i_v1; // 0x19dae
             if (i_v2 == (char)i_v10 != (i_v1 == (char)(i_v10 / 256))) {
                 // 0x19dd4
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x19dfe
-                    snprintf((char *)&i_v8, 1024, "--- %s failed! crc = 0x%04x\n\n", "read_PIC16F1704_flash_data", 0x10000 * i_v10 / 0x10000);
+                    snprintf((char *)&i_v8, 1024,
+                             "--- %s failed! crc = 0x%04x\n\n",
+                             "read_PIC16F1704_flash_data",
+                             0x10000 * i_v10 / 0x10000);
                     _applog(2, (char *)&i_v8, false);
                 }
                 // 0x19ec0
                 return 0;
             }
-            char i_v11 = 0; // 0x19e5c
+            char i_v11 = 0;        // 0x19e5c
             int32_t i_v12 = i_v11; // 0x19e3a
             *(char *)(i_v12 + (int32_t)buf) = *(char *)(i_v4 - 26 + i_v12);
             i_v11++;
@@ -6528,9 +7192,11 @@ int32_t read_PIC16F1704_flash_data(int32_t which_i2c, char which_chain, char * b
                 i_v11++;
             }
             // 0x19e6a
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x19e94
-                snprintf((char *)&i_v8, 1024, "--- %s ok\n\n", "read_PIC16F1704_flash_data");
+                snprintf((char *)&i_v8, 1024, "--- %s ok\n\n",
+                         "read_PIC16F1704_flash_data");
                 _applog(2, (char *)&i_v8, false);
             }
             // 0x19ec0
@@ -6538,16 +7204,19 @@ int32_t read_PIC16F1704_flash_data(int32_t which_i2c, char which_chain, char * b
         }
     }
     // 0x19caa
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x19cd4
-        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n", "read_PIC16F1704_flash_data");
+        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n",
+                 "read_PIC16F1704_flash_data");
         _applog(2, (char *)&i_v8, false);
     }
     // 0x19ec0
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x19ecc - 0x1a0d4
 // Line range:    366 - 407
 int32_t erase_PIC16F1704_flash(int32_t which_i2c, char which_chain) {
@@ -6592,7 +7261,8 @@ int32_t erase_PIC16F1704_flash(int32_t which_i2c, char which_chain) {
         i_v13 = 1;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1a09e
-            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n", "erase_PIC16F1704_flash");
+            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n",
+                     "erase_PIC16F1704_flash");
             _applog(2, (char *)&i_v12, false);
             i_v13 = 1;
         }
@@ -6601,7 +7271,10 @@ int32_t erase_PIC16F1704_flash(int32_t which_i2c, char which_chain) {
         i_v13 = 0;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1a03a
-            snprintf((char *)&i_v12, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x\n\n", "erase_PIC16F1704_flash", (int32_t)i_v9, (int32_t)i_v2);
+            snprintf((char *)&i_v12, 1024,
+                     "--- %s failed! read_back_data[0] = 0x%02x, "
+                     "read_back_data[1] = 0x%02x\n\n",
+                     "erase_PIC16F1704_flash", (int32_t)i_v9, (int32_t)i_v2);
             _applog(2, (char *)&i_v12, false);
             i_v13 = 0;
         }
@@ -6610,7 +7283,8 @@ int32_t erase_PIC16F1704_flash(int32_t which_i2c, char which_chain) {
     return i_v13;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1a0d4 - 0x1a2dc
 // Line range:    409 - 450
 int32_t write_data_into_PIC16F1704_flash(int32_t which_i2c, char which_chain) {
@@ -6655,7 +7329,8 @@ int32_t write_data_into_PIC16F1704_flash(int32_t which_i2c, char which_chain) {
         i_v13 = 1;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1a2a6
-            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n", "write_data_into_PIC16F1704_flash");
+            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n",
+                     "write_data_into_PIC16F1704_flash");
             _applog(2, (char *)&i_v12, false);
             i_v13 = 1;
         }
@@ -6664,7 +7339,11 @@ int32_t write_data_into_PIC16F1704_flash(int32_t which_i2c, char which_chain) {
         i_v13 = 0;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1a242
-            snprintf((char *)&i_v12, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x\n\n", "write_data_into_PIC16F1704_flash", (int32_t)i_v9, (int32_t)i_v2);
+            snprintf((char *)&i_v12, 1024,
+                     "--- %s failed! read_back_data[0] = 0x%02x, "
+                     "read_back_data[1] = 0x%02x\n\n",
+                     "write_data_into_PIC16F1704_flash", (int32_t)i_v9,
+                     (int32_t)i_v2);
             _applog(2, (char *)&i_v12, false);
             i_v13 = 0;
         }
@@ -6673,10 +7352,12 @@ int32_t write_data_into_PIC16F1704_flash(int32_t which_i2c, char which_chain) {
     return i_v13;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1a2dc - 0x1a4e4
 // Line range:    453 - 495
-int32_t jump_from_loader_to_app_PIC16F1704(int32_t which_chain, char which_i2c) {
+int32_t jump_from_loader_to_app_PIC16F1704(int32_t which_chain,
+                                           char which_i2c) {
     char read_back_data[2]; // bp-28, 0x1a2dc
     // 0x1a2dc
     char i_v1; // 0x1a2dc
@@ -6718,7 +7399,8 @@ int32_t jump_from_loader_to_app_PIC16F1704(int32_t which_chain, char which_i2c) 
         i_v13 = 1;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1a4ae
-            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n", "jump_from_loader_to_app_PIC16F1704");
+            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n",
+                     "jump_from_loader_to_app_PIC16F1704");
             _applog(2, (char *)&i_v12, false);
             i_v13 = 1;
         }
@@ -6727,7 +7409,11 @@ int32_t jump_from_loader_to_app_PIC16F1704(int32_t which_chain, char which_i2c) 
         i_v13 = 0;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1a44a
-            snprintf((char *)&i_v12, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x\n\n", "jump_from_loader_to_app_PIC16F1704", (int32_t)i_v9, (int32_t)i_v2);
+            snprintf((char *)&i_v12, 1024,
+                     "--- %s failed! read_back_data[0] = 0x%02x, "
+                     "read_back_data[1] = 0x%02x\n\n",
+                     "jump_from_loader_to_app_PIC16F1704", (int32_t)i_v9,
+                     (int32_t)i_v2);
             _applog(2, (char *)&i_v12, false);
             i_v13 = 0;
         }
@@ -6736,7 +7422,8 @@ int32_t jump_from_loader_to_app_PIC16F1704(int32_t which_chain, char which_i2c) 
     return i_v13;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1a4e4 - 0x1a6ec
 // Line range:    498 - 541
 int32_t reset_PIC16F1704_pic(int32_t which_chain, char which_i2c) {
@@ -6781,7 +7468,8 @@ int32_t reset_PIC16F1704_pic(int32_t which_chain, char which_i2c) {
         i_v13 = 1;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1a6b6
-            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n", "reset_PIC16F1704_pic");
+            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n",
+                     "reset_PIC16F1704_pic");
             _applog(2, (char *)&i_v12, false);
             i_v13 = 1;
         }
@@ -6790,7 +7478,10 @@ int32_t reset_PIC16F1704_pic(int32_t which_chain, char which_i2c) {
         i_v13 = 0;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1a652
-            snprintf((char *)&i_v12, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x\n\n", "reset_PIC16F1704_pic", (int32_t)i_v9, (int32_t)i_v2);
+            snprintf((char *)&i_v12, 1024,
+                     "--- %s failed! read_back_data[0] = 0x%02x, "
+                     "read_back_data[1] = 0x%02x\n\n",
+                     "reset_PIC16F1704_pic", (int32_t)i_v9, (int32_t)i_v2);
             _applog(2, (char *)&i_v12, false);
             i_v13 = 0;
         }
@@ -6799,10 +7490,12 @@ int32_t reset_PIC16F1704_pic(int32_t which_chain, char which_i2c) {
     return i_v13;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1a6ec - 0x1a912
 // Line range:    543 - 585
-int32_t set_PIC16F1704_voltage(int32_t which_chain, char which_i2c, char voltage) {
+int32_t set_PIC16F1704_voltage(int32_t which_chain, char which_i2c,
+                               char voltage) {
     char read_back_data[2]; // bp-28, 0x1a6ec
     // 0x1a6ec
     char i_v1; // 0x1a6ec
@@ -6844,7 +7537,8 @@ int32_t set_PIC16F1704_voltage(int32_t which_chain, char which_i2c, char voltage
         i_v13 = 1;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1a8dc
-            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n", "set_PIC16F1704_voltage");
+            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n",
+                     "set_PIC16F1704_voltage");
             _applog(2, (char *)&i_v12, false);
             i_v13 = 1;
         }
@@ -6853,7 +7547,10 @@ int32_t set_PIC16F1704_voltage(int32_t which_chain, char which_i2c, char voltage
         i_v13 = 0;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1a878
-            snprintf((char *)&i_v12, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x\n\n", "set_PIC16F1704_voltage", (int32_t)i_v9, (int32_t)i_v2);
+            snprintf((char *)&i_v12, 1024,
+                     "--- %s failed! read_back_data[0] = 0x%02x, "
+                     "read_back_data[1] = 0x%02x\n\n",
+                     "set_PIC16F1704_voltage", (int32_t)i_v9, (int32_t)i_v2);
             _applog(2, (char *)&i_v12, false);
             i_v13 = 0;
         }
@@ -6862,10 +7559,12 @@ int32_t set_PIC16F1704_voltage(int32_t which_chain, char which_i2c, char voltage
     return i_v13;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1a914 - 0x1ab9a
 // Line range:    587 - 637
-int32_t write_hash_ID_PIC16F1704(int32_t which_chain, char which_i2c, char * buf) {
+int32_t write_hash_ID_PIC16F1704(int32_t which_chain, char which_i2c,
+                                 char *buf) {
     char read_back_data[2]; // bp-28, 0x1a914
     // 0x1a914
     char i_v1; // 0x1a914
@@ -6879,7 +7578,7 @@ int32_t write_hash_ID_PIC16F1704(int32_t which_chain, char which_i2c, char * buf
     // 0x1aa00
     int32_t i_v4; // bp-16, 0x1a914
     int32_t i_v5 = &i_v4;
-    char i_v6 = 0; // 0x1a9fa
+    char i_v6 = 0;       // 0x1a9fa
     int32_t i_v7 = i_v6; // 0x1a9da
     *(char *)(i_v5 - 28 + i_v7) = *(char *)(i_v7 + (int32_t)buf);
     i_v6++;
@@ -6924,7 +7623,8 @@ int32_t write_hash_ID_PIC16F1704(int32_t which_chain, char which_i2c, char * buf
         i_v16 = 1;
         if ((i_v14 || i_v13) == 0 != opt_log_level < 2) {
             // 0x1ab64
-            snprintf((char *)&i_v15, 1024, "--- %s ok\n\n", "write_hash_ID_PIC16F1704");
+            snprintf((char *)&i_v15, 1024, "--- %s ok\n\n",
+                     "write_hash_ID_PIC16F1704");
             _applog(2, (char *)&i_v15, false);
             i_v16 = 1;
         }
@@ -6933,7 +7633,10 @@ int32_t write_hash_ID_PIC16F1704(int32_t which_chain, char which_i2c, char * buf
         i_v16 = 0;
         if ((i_v14 || i_v13) == 0 != opt_log_level < 2) {
             // 0x1ab00
-            snprintf((char *)&i_v15, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x\n\n", "write_hash_ID_PIC16F1704", (int32_t)i_v12, (int32_t)i_v2);
+            snprintf((char *)&i_v15, 1024,
+                     "--- %s failed! read_back_data[0] = 0x%02x, "
+                     "read_back_data[1] = 0x%02x\n\n",
+                     "write_hash_ID_PIC16F1704", (int32_t)i_v12, (int32_t)i_v2);
             _applog(2, (char *)&i_v15, false);
             i_v16 = 0;
         }
@@ -6942,10 +7645,12 @@ int32_t write_hash_ID_PIC16F1704(int32_t which_chain, char which_i2c, char * buf
     return i_v16;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1ab9c - 0x1afcc
 // Line range:    640 - 700
-int32_t read_hash_id_PIC16F1704(int32_t which_i2c, char which_chain, char * buf) {
+int32_t read_hash_id_PIC16F1704(int32_t which_i2c, char which_chain,
+                                char *buf) {
     char read_back_data[16]; // bp-48, 0x1ab9c
     // 0x1ab9c
     char i_v1; // 0x1ab9c
@@ -6976,26 +7681,46 @@ int32_t read_hash_id_PIC16F1704(int32_t which_i2c, char which_chain, char * buf)
     // 0x1acd2
     pthread_mutex_unlock(&i2c_mutex);
     int32_t i_v8; // bp-1080, 0x1ab9c
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         unsigned char i_v9 = read_back_data[0]; // 0x1ad08
-        snprintf((char *)&i_v8, 1024, "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, read_back_data[2] = 0x%x, read_back_data[3] = 0x%x,\t\tread_back_data[4] = 0x%x, read_back_data[5] = 0x%x, read_back_data[6] = 0x%x, read_back_data[7] = 0x%x,\t\tread_back_data[8] = 0x%x, read_back_data[9] = 0x%x, read_back_data[10] = 0x%x, read_back_data[11] = 0x%x,\t\tread_back_data[12] = 0x%x, read_back_data[13] = 0x%x, read_back_data[14] = 0x%x, read_back_data[15] = 0x%x\n", "read_hash_id_PIC16F1704", (int32_t)i_v9, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v2);
+        snprintf((char *)&i_v8, 1024,
+                 "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, "
+                 "read_back_data[2] = 0x%x, read_back_data[3] = "
+                 "0x%x,\t\tread_back_data[4] = 0x%x, read_back_data[5] = 0x%x, "
+                 "read_back_data[6] = 0x%x, read_back_data[7] = "
+                 "0x%x,\t\tread_back_data[8] = 0x%x, read_back_data[9] = 0x%x, "
+                 "read_back_data[10] = 0x%x, read_back_data[11] = "
+                 "0x%x,\t\tread_back_data[12] = 0x%x, read_back_data[13] = "
+                 "0x%x, read_back_data[14] = 0x%x, read_back_data[15] = 0x%x\n",
+                 "read_hash_id_PIC16F1704", (int32_t)i_v9, (int32_t)i_v1,
+                 (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1,
+                 (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1,
+                 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v2);
         _applog(2, (char *)&i_v8, false);
     }
     if (i_v1 == 19) {
         // 0x1adcc
         if (read_back_data[0] == 16) {
-            uint32_t i_v10 = ((int32_t)i_v1 + 35 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1) % 0x10000 + (int32_t)i_v1; // 0x1aeb0
+            uint32_t i_v10 = ((int32_t)i_v1 + 35 + (int32_t)i_v1 +
+                              (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 +
+                              (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1) %
+                                 0x10000 +
+                             (int32_t)i_v1; // 0x1aeb0
             if (i_v2 == (char)i_v10 != (i_v1 == (char)(i_v10 / 256))) {
                 // 0x1aed6
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x1af00
-                    snprintf((char *)&i_v8, 1024, "--- %s failed! crc = 0x%04x\n\n", "read_hash_id_PIC16F1704", 0x10000 * i_v10 / 0x10000);
+                    snprintf(
+                        (char *)&i_v8, 1024, "--- %s failed! crc = 0x%04x\n\n",
+                        "read_hash_id_PIC16F1704", 0x10000 * i_v10 / 0x10000);
                     _applog(2, (char *)&i_v8, false);
                 }
                 // 0x1afc2
                 return 0;
             }
-            char i_v11 = 0; // 0x1af5e
+            char i_v11 = 0;        // 0x1af5e
             int32_t i_v12 = i_v11; // 0x1af3c
             *(char *)(i_v12 + (int32_t)buf) = *(char *)(i_v4 - 22 + i_v12);
             i_v11++;
@@ -7006,9 +7731,11 @@ int32_t read_hash_id_PIC16F1704(int32_t which_i2c, char which_chain, char * buf)
                 i_v11++;
             }
             // 0x1af6c
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x1af96
-                snprintf((char *)&i_v8, 1024, "--- %s ok\n\n", "read_hash_id_PIC16F1704");
+                snprintf((char *)&i_v8, 1024, "--- %s ok\n\n",
+                         "read_hash_id_PIC16F1704");
                 _applog(2, (char *)&i_v8, false);
             }
             // 0x1afc2
@@ -7016,19 +7743,23 @@ int32_t read_hash_id_PIC16F1704(int32_t which_i2c, char which_chain, char * buf)
         }
     }
     // 0x1add4
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1adfe
-        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n", "read_hash_id_PIC16F1704");
+        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n",
+                 "read_hash_id_PIC16F1704");
         _applog(2, (char *)&i_v8, false);
     }
     // 0x1afc2
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1afcc - 0x1b1f2
 // Line range:    702 - 744
-int32_t enable_PIC16F1704_dc_dc(int32_t which_chain, char which_i2c, char enable) {
+int32_t enable_PIC16F1704_dc_dc(int32_t which_chain, char which_i2c,
+                                char enable) {
     char read_back_data[2]; // bp-28, 0x1afcc
     // 0x1afcc
     char i_v1; // 0x1afcc
@@ -7067,7 +7798,10 @@ int32_t enable_PIC16F1704_dc_dc(int32_t which_chain, char which_i2c, char enable
         // 0x1b122
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1b14c
-            snprintf((char *)&i_v12, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x\n\n", "enable_PIC16F1704_dc_dc", (int32_t)i_v9, (int32_t)i_v2);
+            snprintf((char *)&i_v12, 1024,
+                     "--- %s failed! read_back_data[0] = 0x%02x, "
+                     "read_back_data[1] = 0x%02x\n\n",
+                     "enable_PIC16F1704_dc_dc", (int32_t)i_v9, (int32_t)i_v2);
             _applog(2, (char *)&i_v12, false);
         }
         // 0x1b1e8
@@ -7075,7 +7809,8 @@ int32_t enable_PIC16F1704_dc_dc(int32_t which_chain, char which_i2c, char enable
     }
     if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
         // 0x1b1b0
-        snprintf((char *)&i_v12, 1024, "--- %s ok\n\n", "enable_PIC16F1704_dc_dc");
+        snprintf((char *)&i_v12, 1024, "--- %s ok\n\n",
+                 "enable_PIC16F1704_dc_dc");
         _applog(2, (char *)&i_v12, false);
     }
     // 0x1b1da
@@ -7084,7 +7819,8 @@ int32_t enable_PIC16F1704_dc_dc(int32_t which_chain, char which_i2c, char enable
     return 1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1b1f4 - 0x1b3e8
 // Line range:    747 - 786
 int32_t heart_beat_PIC16F1704(int32_t which_chain, char which_i2c) {
@@ -7117,13 +7853,14 @@ int32_t heart_beat_PIC16F1704(int32_t which_chain, char which_i2c) {
     char i_v7 = *(char *)&opt_log_output;
     int32_t i_v8; // bp-1064, 0x1b1f4
     int32_t i_v9; // 0x1b1f4
-    char i_v10; // 0x1b1f4
+    char i_v10;   // 0x1b1f4
     if (i_v10 == 1 == i_v10 == 22) {
         // 0x1b388
         i_v9 = 1;
         if ((i_v7 || i_v6) == 0 != opt_log_level < 2) {
             // 0x1b3b2
-            snprintf((char *)&i_v8, 1024, "--- %s ok\n\n", "heart_beat_PIC16F1704");
+            snprintf((char *)&i_v8, 1024, "--- %s ok\n\n",
+                     "heart_beat_PIC16F1704");
             _applog(2, (char *)&i_v8, false);
             i_v9 = 1;
         }
@@ -7132,7 +7869,8 @@ int32_t heart_beat_PIC16F1704(int32_t which_chain, char which_i2c) {
         i_v9 = 0;
         if ((i_v7 || i_v6) == 0 != opt_log_level < 2) {
             // 0x1b35a
-            snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n", "heart_beat_PIC16F1704");
+            snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n",
+                     "heart_beat_PIC16F1704");
             _applog(2, (char *)&i_v8, false);
             i_v9 = 0;
         }
@@ -7141,23 +7879,27 @@ int32_t heart_beat_PIC16F1704(int32_t which_chain, char which_i2c) {
     return i_v9;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1b3e8 - 0x1b414
 // Line range:    788 - 798
-char * pic_heart_beat_func(char * arg) {
+char *pic_heart_beat_func(char *arg) {
     // 0x1b3e8
     while (true) {
         // 0x1b400
         int32_t i_v1; // 0x1b3e8
-        heart_beat_PIC16F1704((uint32_t)i_v1 % 256, *(char *)((int32_t)arg + 1));
+        heart_beat_PIC16F1704((uint32_t)i_v1 % 256,
+                              *(char *)((int32_t)arg + 1));
         sleep(10);
     }
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1b414 - 0x1b746
 // Line range:    801 - 852
-int32_t get_PIC16F1704_software_version(int32_t which_i2c, char which_chain, char * version) {
+int32_t get_PIC16F1704_software_version(int32_t which_i2c, char which_chain,
+                                        char *version) {
     char read_back_data[5]; // bp-32, 0x1b414
     // 0x1b414
     char i_v1; // 0x1b414
@@ -7189,34 +7931,46 @@ int32_t get_PIC16F1704_software_version(int32_t which_i2c, char which_chain, cha
     pthread_mutex_unlock(&i2c_mutex);
     usleep(0x30d40);
     int32_t i_v8; // bp-1064, 0x1b414
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         unsigned char i_v9 = read_back_data[0]; // 0x1b586
-        snprintf((char *)&i_v8, 1024, "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, read_back_data[4] = 0x%x\n", "get_PIC16F1704_software_version", (int32_t)i_v9, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v2, 0);
+        snprintf((char *)&i_v8, 1024,
+                 "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, "
+                 "read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, "
+                 "read_back_data[4] = 0x%x\n",
+                 "get_PIC16F1704_software_version", (int32_t)i_v9,
+                 (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v2, 0);
         _applog(2, (char *)&i_v8, false);
     }
     if (i_v1 == 23) {
         // 0x1b5da
         if (read_back_data[0] == 5) {
             uint32_t i_v10 = (int32_t)i_v1 + 28; // 0x1b650
-            int32_t i_v11; // 0x1b414
+            int32_t i_v11;                       // 0x1b414
             if (i_v1 == -28 == i_v10 / 256 == (int32_t)i_v2) {
                 // 0x1b6d4
                 *version = -28;
                 i_v11 = 1;
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x1b708
-                    int32_t i_v12; // 0x1b414
+                    int32_t i_v12;                         // 0x1b414
                     unsigned char i_v13 = *(char *)&i_v12; // 0x1b70c
-                    snprintf((char *)&i_v8, 1024, "--- %s ok, version = 0x%02x\n\n", "get_PIC16F1704_software_version", (int32_t)i_v13);
+                    snprintf((char *)&i_v8, 1024,
+                             "--- %s ok, version = 0x%02x\n\n",
+                             "get_PIC16F1704_software_version", (int32_t)i_v13);
                     _applog(2, (char *)&i_v8, false);
                     i_v11 = 1;
                 }
             } else {
                 // 0x1b676
                 i_v11 = 0;
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x1b6a0
-                    snprintf((char *)&i_v8, 1024, "--- %s failed! crc = 0x%04x\n\n", "get_PIC16F1704_software_version", i_v10);
+                    snprintf((char *)&i_v8, 1024,
+                             "--- %s failed! crc = 0x%04x\n\n",
+                             "get_PIC16F1704_software_version", i_v10);
                     _applog(2, (char *)&i_v8, false);
                     i_v11 = 0;
                 }
@@ -7226,25 +7980,31 @@ int32_t get_PIC16F1704_software_version(int32_t which_i2c, char which_chain, cha
         }
     }
     // 0x1b5e2
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1b60c
-        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n", "get_PIC16F1704_software_version");
+        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n",
+                 "get_PIC16F1704_software_version");
         _applog(2, (char *)&i_v8, false);
     }
     // 0x1b73c
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1b748 - 0x1bb64
 // Line range:    860 - 935
-int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_addr, int32_t rw_flag, char reg_addr, int32_t len, char * data) {
+int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain,
+                                    unsigned char dev_addr, int32_t rw_flag,
+                                    char reg_addr, int32_t len, char *data) {
     char recv_data[12]; // bp-80, 0x1b748
     char send_data[32]; // bp-68, 0x1b748
     // 0x1b748
     memset((int32_t *)&send_data, 0, 32);
     recv_data = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    send_data = {85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    send_data = {85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                 0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     __asm_sxtb(__asm_sxtb(rw_flag) | __asm_sxtb(2 * (int32_t)dev_addr));
     int32_t i_v1; // 0x1b748
     int32_t i_v2; // 0x1b748
@@ -7271,11 +8031,11 @@ int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_a
         i_v3 = 5;
         goto lab_0x1b822;
     }
-  lab_0x1b822:;
+lab_0x1b822:;
     int32_t i_v8 = &i_v5;
-    int32_t i_v9 = 0; // 0x1b748
-    int16_t i_v10 = (int16_t)*(char *)(i_v8 - 50 + i_v9); // 0x1b838
-    int32_t i_v11 = i_v9 + 1; // 0x1b842
+    int32_t i_v9 = 0;                                       // 0x1b748
+    int16_t i_v10 = (int16_t) * (char *)(i_v8 - 50 + i_v9); // 0x1b838
+    int32_t i_v11 = i_v9 + 1;                               // 0x1b842
     i_v9 = i_v11;
     int16_t i_v12 = i_v10; // 0x1b852
     i_v2 = i_v3;
@@ -7283,7 +8043,7 @@ int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_a
     i_v4 = i_v10;
     while (i_v11 < i_v3) {
         // 0x1b822
-        i_v10 = i_v12 + (int16_t)*(char *)(i_v8 - 50 + i_v9);
+        i_v10 = i_v12 + (int16_t) * (char *)(i_v8 - 50 + i_v9);
         i_v11 = i_v9 + 1;
         i_v9 = i_v11;
         i_v12 = i_v10;
@@ -7292,21 +8052,23 @@ int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_a
         i_v4 = i_v10;
     }
     goto lab_0x1b854;
-  lab_0x1b854:;
+lab_0x1b854:;
     int32_t i_v13 = i_v2 + 2; // 0x1b858
     *(char *)(i_v1 - 52 + i_v13) = (char)(i_v4 / 256);
     *(char *)(i_v2 - 49 + i_v1) = (char)i_v4;
     pthread_mutex_lock(&i2c_mutex);
     int32_t i_v14 = i_v2 + 4; // 0x1b924
-    int32_t i_v15; // bp-1104, 0x1b748
+    int32_t i_v15;            // bp-1104, 0x1b748
     if (i_v14 > 0) {
         int32_t i_v16 = 0;
-        char * p_v17 = (char *)(i_v16 + (int32_t)&send_data);
+        char *p_v17 = (char *)(i_v16 + (int32_t)&send_data);
         unsigned char i_v18; // 0x1b8cc
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1b8c2
             i_v18 = *p_v17;
-            snprintf((char *)&i_v15, 1024, "write pic i2c[%d] %02x\n", i_v16, (int32_t)i_v18);
+            snprintf((char *)&i_v15, 1024, "write pic i2c[%d] %02x\n", i_v16,
+                     (int32_t)i_v18);
             _applog(2, (char *)&i_v15, false);
         }
         // 0x1b8f6
@@ -7316,10 +8078,12 @@ int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_a
             // 0x1b898
             i_v16 = i_v19;
             p_v17 = (char *)(i_v16 + (int32_t)&send_data);
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x1b8c2
                 i_v18 = *p_v17;
-                snprintf((char *)&i_v15, 1024, "write pic i2c[%d] %02x\n", i_v16, (int32_t)i_v18);
+                snprintf((char *)&i_v15, 1024, "write pic i2c[%d] %02x\n",
+                         i_v16, (int32_t)i_v18);
                 _applog(2, (char *)&i_v15, false);
             }
             // 0x1b8f6
@@ -7336,15 +8100,17 @@ int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_a
         return 0;
     }
     int32_t i_v20 = len + 5; // 0x1b9e0
-    int32_t i_v21; // 0x1b748
+    int32_t i_v21;           // 0x1b748
     if (i_v20 > 0) {
         int32_t i_v22 = (int32_t)&recv_data;
         int32_t i_v23 = 0;
         unsigned char i_v24 = read_pic((char)i2c, chain); // 0x1b95e
         *(char *)(i_v23 + i_v22) = i_v24;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1b99e
-            snprintf((char *)&i_v15, 1024, "read pic i2c[%d] %02x\n", i_v23, (int32_t)i_v24);
+            snprintf((char *)&i_v15, 1024, "read pic i2c[%d] %02x\n", i_v23,
+                     (int32_t)i_v24);
             _applog(2, (char *)&i_v15, false);
         }
         int32_t i_v25 = i_v23 + 1; // 0x1b9d6
@@ -7354,9 +8120,11 @@ int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_a
             i_v23 = i_v25;
             i_v24 = read_pic((char)i2c, chain);
             *(char *)(i_v23 + i_v22) = i_v24;
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x1b99e
-                snprintf((char *)&i_v15, 1024, "read pic i2c[%d] %02x\n", i_v23, (int32_t)i_v24);
+                snprintf((char *)&i_v15, 1024, "read pic i2c[%d] %02x\n", i_v23,
+                         (int32_t)i_v24);
                 _applog(2, (char *)&i_v15, false);
             }
             // 0x1b9d2
@@ -7368,12 +8136,12 @@ int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_a
         i_v21 = (int32_t)&recv_data;
     }
     int32_t i_v26 = len + 3; // 0x1ba18
-    int32_t i_v27 = 0; // 0x1ba20
-    int16_t i_v28 = i_v4; // 0x1ba20
+    int32_t i_v27 = 0;       // 0x1ba20
+    int16_t i_v28 = i_v4;    // 0x1ba20
     if (i_v26 > 0) {
         unsigned char i_v29 = *(char *)(i_v27 + i_v21); // 0x1b9fc
-        int16_t i_v30 = i_v4 + (int16_t)i_v29; // 0x1ba04
-        int32_t i_v31 = i_v27 + 1; // 0x1ba0e
+        int16_t i_v30 = i_v4 + (int16_t)i_v29;          // 0x1ba04
+        int32_t i_v31 = i_v27 + 1;                      // 0x1ba0e
         i_v27 = i_v31;
         int16_t i_v32 = i_v30; // 0x1ba20
         i_v28 = i_v30;
@@ -7390,7 +8158,8 @@ int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_a
     // 0x1ba22
     if (i_v28 != *(int16_t *)(i_v21 + i_v26)) {
         // 0x1ba38
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1ba62
             snprintf((char *)&i_v15, 1024, "crc failed 0x%x\n", (int32_t)i_v28);
             _applog(2, (char *)&i_v15, false);
@@ -7412,12 +8181,14 @@ int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_a
         return 0;
     }
     // 0x1baba
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
-        unsigned char i_v35 = *data; // 0x1bae8
-        int32_t i_v36 = (int32_t)data; // 0x1baec
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
+        unsigned char i_v35 = *data;                // 0x1bae8
+        int32_t i_v36 = (int32_t)data;              // 0x1baec
         unsigned char i_v37 = *(char *)(i_v36 + 1); // 0x1baf2
         unsigned char i_v38 = *(char *)(i_v36 + 2); // 0x1bafc
-        snprintf((char *)&i_v15, 1024, "pic read failed %d %d %d\n", (int32_t)i_v35, (int32_t)i_v37, (int32_t)i_v38);
+        snprintf((char *)&i_v15, 1024, "pic read failed %d %d %d\n",
+                 (int32_t)i_v35, (int32_t)i_v37, (int32_t)i_v38);
         _applog(2, (char *)&i_v15, false);
     }
     // 0x1bb26
@@ -7426,30 +8197,34 @@ int32_t PIC16F1704_i2c_forward_send(int32_t i2c, char chain, unsigned char dev_a
     return -1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1bb64 - 0x1bbda
 // Line range:    940 - 950
 void set_PIC16F1704_voltage_z9(int32_t i2c, unsigned char chain, int16_t vol) {
-    int16_t i_v1 = vol; // bp-24, 0x1bb72
-    int32_t i_v2 = 0; // 0x1bbc8
-    char * p_v3 = (char *)(i_v2 + (int32_t)"PQTU"); // 0x1bb86
+    int16_t i_v1 = vol;                             // bp-24, 0x1bb72
+    int32_t i_v2 = 0;                               // 0x1bbc8
+    char *p_v3 = (char *)(i_v2 + (int32_t) "PQTU"); // 0x1bb86
     PIC16F1704_i2c_forward_send(i2c, chain, *p_v3, 0, 0, 1, NULL);
     unsigned char i_v4 = *p_v3; // 0x1bbac
-    int32_t i_v5 = PIC16F1704_i2c_forward_send(i2c, chain, i_v4, 0, 33, 2, (char *)&i_v1); // 0x1bbc2
+    int32_t i_v5 = PIC16F1704_i2c_forward_send(i2c, chain, i_v4, 0, 33, 2,
+                                               (char *)&i_v1); // 0x1bbc2
     i_v2++;
     while (i_v2 == 3 || i_v2 < 3) {
         // 0x1bb7a
-        p_v3 = (char *)(i_v2 + (int32_t)"PQTU");
+        p_v3 = (char *)(i_v2 + (int32_t) "PQTU");
         PIC16F1704_i2c_forward_send(i2c, chain, *p_v3, 0, 0, 1, NULL);
         i_v4 = *p_v3;
-        i_v5 = PIC16F1704_i2c_forward_send(i2c, chain, i_v4, 0, 33, 2, (char *)&i_v1);
+        i_v5 = PIC16F1704_i2c_forward_send(i2c, chain, i_v4, 0, 33, 2,
+                                           (char *)&i_v1);
         i_v2++;
     }
     // 0x1bbd2
     __asm_nop(i_v5, (int32_t)chain, (int32_t)i_v4, i_v2);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1bbdc - 0x1bd32
 // Line range:    952 - 968
 void get_PIC16F1704_voltage_z9(int32_t i2c, unsigned char chain) {
@@ -7458,17 +8233,18 @@ void get_PIC16F1704_voltage_z9(int32_t i2c, unsigned char chain) {
     int32_t i_v3 = (unsigned char)i_v2;
     int32_t i_v4; // bp-1052, 0x1bbdc
     int32_t i_v5 = &i_v4;
-    int32_t i_v6 = 0; // 0x1bd18
-    int32_t i_v7 = 0; // bp-28, 0x1bbfc
-    char * p_v8 = (char *)(i_v6 + (int32_t)"PQTU"); // 0x1bc10
-    unsigned char i_v9 = *p_v8; // 0x1bc10
-    int32_t i_v10 = i_v9; // 0x1bc10
-    int32_t i_v11 = PIC16F1704_i2c_forward_send(i2c, chain, i_v9, 1, 33, 2, (char *)&i_v7); // 0x1bc2a
+    int32_t i_v6 = 0;                               // 0x1bd18
+    int32_t i_v7 = 0;                               // bp-28, 0x1bbfc
+    char *p_v8 = (char *)(i_v6 + (int32_t) "PQTU"); // 0x1bc10
+    unsigned char i_v9 = *p_v8;                     // 0x1bc10
+    int32_t i_v10 = i_v9;                           // 0x1bc10
+    int32_t i_v11 = PIC16F1704_i2c_forward_send(i2c, chain, i_v9, 1, 33, 2,
+                                                (char *)&i_v7); // 0x1bc2a
     char i_v12 = *(char *)&use_syslog;
     char i_v13 = *(char *)&opt_log_output;
-    int32_t i_v14; // 0x1bbdc
-    int32_t i_v15; // 0x1bbdc
-    int32_t i_v16; // 0x1bbdc
+    int32_t i_v14;       // 0x1bbdc
+    int32_t i_v15;       // 0x1bbdc
+    int32_t i_v16;       // 0x1bbdc
     unsigned char i_v17; // 0x1bc72
     unsigned char i_v18; // 0x1bce0
     if (i_v11 == 0) {
@@ -7479,7 +8255,8 @@ void get_PIC16F1704_voltage_z9(int32_t i2c, unsigned char chain) {
         if ((i_v13 || i_v12) == 0 != opt_log_level < 2) {
             // 0x1bc64
             i_v17 = *p_v8;
-            snprintf((char *)&i_v4, 1024, "read %02x vol success, 0x%02x%02x\n", (int32_t)i_v17, 0x1000000 * i_v7 >> 24, i_v3);
+            snprintf((char *)&i_v4, 1024, "read %02x vol success, 0x%02x%02x\n",
+                     (int32_t)i_v17, 0x1000000 * i_v7 >> 24, i_v3);
             _applog(2, (char *)&i_v4, false);
             i_v14 = &i_g101;
             i_v15 = i_v5;
@@ -7493,7 +8270,8 @@ void get_PIC16F1704_voltage_z9(int32_t i2c, unsigned char chain) {
         if ((i_v13 || i_v12) == 0 != opt_log_level < 2) {
             // 0x1bcd2
             i_v18 = *p_v8;
-            snprintf((char *)&i_v4, 1024, "read %02x vol failed, 0x%02x%02x\n", (int32_t)i_v18, 0x1000000 * i_v7 >> 24, i_v3);
+            snprintf((char *)&i_v4, 1024, "read %02x vol failed, 0x%02x%02x\n",
+                     (int32_t)i_v18, 0x1000000 * i_v7 >> 24, i_v3);
             _applog(2, (char *)&i_v4, false);
             i_v14 = &i_g101;
             i_v15 = i_v5;
@@ -7505,10 +8283,11 @@ void get_PIC16F1704_voltage_z9(int32_t i2c, unsigned char chain) {
     while (i_v6 == 3 || i_v6 < 3) {
         // 0x1bbf6
         i_v7 = 0;
-        p_v8 = (char *)(i_v6 + (int32_t)"PQTU");
+        p_v8 = (char *)(i_v6 + (int32_t) "PQTU");
         i_v9 = *p_v8;
         i_v10 = i_v9;
-        i_v11 = PIC16F1704_i2c_forward_send(i2c, chain, i_v9, 1, 33, 2, (char *)&i_v7);
+        i_v11 = PIC16F1704_i2c_forward_send(i2c, chain, i_v9, 1, 33, 2,
+                                            (char *)&i_v7);
         i_v12 = *(char *)&use_syslog;
         i_v13 = *(char *)&opt_log_output;
         if (i_v11 == 0) {
@@ -7519,7 +8298,9 @@ void get_PIC16F1704_voltage_z9(int32_t i2c, unsigned char chain) {
             if ((i_v13 || i_v12) == 0 != opt_log_level < 2) {
                 // 0x1bc64
                 i_v17 = *p_v8;
-                snprintf((char *)&i_v4, 1024, "read %02x vol success, 0x%02x%02x\n", (int32_t)i_v17, 0x1000000 * i_v7 >> 24, i_v3);
+                snprintf((char *)&i_v4, 1024,
+                         "read %02x vol success, 0x%02x%02x\n", (int32_t)i_v17,
+                         0x1000000 * i_v7 >> 24, i_v3);
                 _applog(2, (char *)&i_v4, false);
                 i_v14 = &i_g101;
                 i_v15 = i_v5;
@@ -7533,7 +8314,9 @@ void get_PIC16F1704_voltage_z9(int32_t i2c, unsigned char chain) {
             if ((i_v13 || i_v12) == 0 != opt_log_level < 2) {
                 // 0x1bcd2
                 i_v18 = *p_v8;
-                snprintf((char *)&i_v4, 1024, "read %02x vol failed, 0x%02x%02x\n", (int32_t)i_v18, 0x1000000 * i_v7 >> 24, i_v3);
+                snprintf((char *)&i_v4, 1024,
+                         "read %02x vol failed, 0x%02x%02x\n", (int32_t)i_v18,
+                         0x1000000 * i_v7 >> 24, i_v3);
                 _applog(2, (char *)&i_v4, false);
                 i_v14 = &i_g101;
                 i_v15 = i_v5;
@@ -7547,10 +8330,12 @@ void get_PIC16F1704_voltage_z9(int32_t i2c, unsigned char chain) {
     __asm_nop(i_v14, i_v15, i_v16, i_v6);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1bd34 - 0x1c05a
 // Line range:    970 - 1019
-int32_t get_PIC16F1704_voltage(int32_t which_i2c, char which_chain, char * voltage) {
+int32_t get_PIC16F1704_voltage(int32_t which_i2c, char which_chain,
+                               char *voltage) {
     char read_back_data[5]; // bp-32, 0x1bd34
     // 0x1bd34
     char i_v1; // 0x1bd34
@@ -7581,34 +8366,46 @@ int32_t get_PIC16F1704_voltage(int32_t which_i2c, char which_chain, char * volta
     // 0x1be64
     pthread_mutex_unlock(&i2c_mutex);
     int32_t i_v8; // bp-1064, 0x1bd34
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         unsigned char i_v9 = read_back_data[0]; // 0x1be9a
-        snprintf((char *)&i_v8, 1024, "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, read_back_data[4] = 0x%x\n", "get_PIC16F1704_voltage", (int32_t)i_v9, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v2, 0);
+        snprintf((char *)&i_v8, 1024,
+                 "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, "
+                 "read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, "
+                 "read_back_data[4] = 0x%x\n",
+                 "get_PIC16F1704_voltage", (int32_t)i_v9, (int32_t)i_v1,
+                 (int32_t)i_v1, (int32_t)i_v2, 0);
         _applog(2, (char *)&i_v8, false);
     }
     if (i_v1 == 24) {
         // 0x1beee
         if (read_back_data[0] == 5) {
             uint32_t i_v10 = (int32_t)i_v1 + 29; // 0x1bf64
-            int32_t i_v11; // 0x1bd34
+            int32_t i_v11;                       // 0x1bd34
             if (i_v1 == -29 == i_v10 / 256 == (int32_t)i_v2) {
                 // 0x1bfe8
                 *voltage = -29;
                 i_v11 = 1;
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x1c01c
-                    int32_t i_v12; // 0x1bd34
+                    int32_t i_v12;                         // 0x1bd34
                     unsigned char i_v13 = *(char *)&i_v12; // 0x1c020
-                    snprintf((char *)&i_v8, 1024, "--- %s ok, voltage = 0x%02x\n\n", "get_PIC16F1704_voltage", (int32_t)i_v13);
+                    snprintf((char *)&i_v8, 1024,
+                             "--- %s ok, voltage = 0x%02x\n\n",
+                             "get_PIC16F1704_voltage", (int32_t)i_v13);
                     _applog(2, (char *)&i_v8, false);
                     i_v11 = 1;
                 }
             } else {
                 // 0x1bf8a
                 i_v11 = 0;
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x1bfb4
-                    snprintf((char *)&i_v8, 1024, "--- %s failed! crc = 0x%04x\n\n", "get_PIC16F1704_voltage", i_v10);
+                    snprintf((char *)&i_v8, 1024,
+                             "--- %s failed! crc = 0x%04x\n\n",
+                             "get_PIC16F1704_voltage", i_v10);
                     _applog(2, (char *)&i_v8, false);
                     i_v11 = 0;
                 }
@@ -7618,19 +8415,23 @@ int32_t get_PIC16F1704_voltage(int32_t which_i2c, char which_chain, char * volta
         }
     }
     // 0x1bef6
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1bf20
-        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n", "get_PIC16F1704_voltage");
+        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n",
+                 "get_PIC16F1704_voltage");
         _applog(2, (char *)&i_v8, false);
     }
     // 0x1c050
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1c05c - 0x1c2e0
 // Line range:    1021 - 1070
-int32_t write_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain, char * buf) {
+int32_t write_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain,
+                                            char *buf) {
     char read_back_data[2]; // bp-28, 0x1c05c
     // 0x1c05c
     char i_v1; // 0x1c05c
@@ -7644,7 +8445,7 @@ int32_t write_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain,
     // 0x1c146
     int32_t i_v4; // bp-16, 0x1c05c
     int32_t i_v5 = &i_v4;
-    char i_v6 = 0; // 0x1c140
+    char i_v6 = 0;       // 0x1c140
     int32_t i_v7 = i_v6; // 0x1c120
     *(char *)(i_v5 - 24 + i_v7) = *(char *)(i_v7 + (int32_t)buf);
     i_v6++;
@@ -7689,7 +8490,8 @@ int32_t write_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain,
         i_v16 = 1;
         if ((i_v14 || i_v13) == 0 != opt_log_level < 2) {
             // 0x1c2aa
-            snprintf((char *)&i_v15, 1024, "--- %s ok\n\n", "write_temperature_offset_PIC16F1704");
+            snprintf((char *)&i_v15, 1024, "--- %s ok\n\n",
+                     "write_temperature_offset_PIC16F1704");
             _applog(2, (char *)&i_v15, false);
             i_v16 = 1;
         }
@@ -7698,7 +8500,11 @@ int32_t write_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain,
         i_v16 = 0;
         if ((i_v14 || i_v13) == 0 != opt_log_level < 2) {
             // 0x1c246
-            snprintf((char *)&i_v15, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x\n\n", "write_temperature_offset_PIC16F1704", (int32_t)i_v12, (int32_t)i_v2);
+            snprintf((char *)&i_v15, 1024,
+                     "--- %s failed! read_back_data[0] = 0x%02x, "
+                     "read_back_data[1] = 0x%02x\n\n",
+                     "write_temperature_offset_PIC16F1704", (int32_t)i_v12,
+                     (int32_t)i_v2);
             _applog(2, (char *)&i_v15, false);
             i_v16 = 0;
         }
@@ -7707,10 +8513,12 @@ int32_t write_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain,
     return i_v16;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1c2e0 - 0x1c6c2
 // Line range:    1073 - 1131
-int32_t read_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain, char * buf) {
+int32_t read_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain,
+                                           char *buf) {
     char read_back_data[12]; // bp-44, 0x1c2e0
     // 0x1c2e0
     char i_v1; // 0x1c2e0
@@ -7741,26 +8549,44 @@ int32_t read_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain, 
     // 0x1c41a
     pthread_mutex_unlock(&i2c_mutex);
     int32_t i_v8; // bp-1076, 0x1c2e0
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         unsigned char i_v9 = read_back_data[0]; // 0x1c450
-        snprintf((char *)&i_v8, 1024, "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, \t\tread_back_data[4] = 0x%x, read_back_data[5] = 0x%x, read_back_data[6] = 0x%x, read_back_data[7] = 0x%x, \t\tread_back_data[8] = 0x%x, read_back_data[9] = 0x%x, read_back_data[10] = 0x%x, read_back_data[11] = 0x%x\n", "read_temperature_offset_PIC16F1704", (int32_t)i_v9, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v2);
+        snprintf((char *)&i_v8, 1024,
+                 "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, "
+                 "read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, "
+                 "\t\tread_back_data[4] = 0x%x, read_back_data[5] = 0x%x, "
+                 "read_back_data[6] = 0x%x, read_back_data[7] = 0x%x, "
+                 "\t\tread_back_data[8] = 0x%x, read_back_data[9] = 0x%x, "
+                 "read_back_data[10] = 0x%x, read_back_data[11] = 0x%x\n",
+                 "read_temperature_offset_PIC16F1704", (int32_t)i_v9,
+                 (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1,
+                 (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v1, (int32_t)i_v1,
+                 (int32_t)i_v2);
         _applog(2, (char *)&i_v8, false);
     }
     if (i_v1 == 35) {
         // 0x1c4ea
         if (read_back_data[0] == 12) {
-            uint32_t i_v10 = ((int32_t)i_v1 + 47 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1) % 0x10000 + (int32_t)i_v1; // 0x1c5a6
+            uint32_t i_v10 = ((int32_t)i_v1 + 47 + (int32_t)i_v1 +
+                              (int32_t)i_v1 + (int32_t)i_v1 + (int32_t)i_v1) %
+                                 0x10000 +
+                             (int32_t)i_v1; // 0x1c5a6
             if (i_v2 == (char)i_v10 != (i_v1 == (char)(i_v10 / 256))) {
                 // 0x1c5cc
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x1c5f6
-                    snprintf((char *)&i_v8, 1024, "--- %s failed! crc = 0x%04x\n\n", "read_temperature_offset_PIC16F1704", 0x10000 * i_v10 / 0x10000);
+                    snprintf((char *)&i_v8, 1024,
+                             "--- %s failed! crc = 0x%04x\n\n",
+                             "read_temperature_offset_PIC16F1704",
+                             0x10000 * i_v10 / 0x10000);
                     _applog(2, (char *)&i_v8, false);
                 }
                 // 0x1c6b8
                 return 0;
             }
-            char i_v11 = 0; // 0x1c654
+            char i_v11 = 0;        // 0x1c654
             int32_t i_v12 = i_v11; // 0x1c632
             *(char *)(i_v12 + (int32_t)buf) = *(char *)(i_v4 - 18 + i_v12);
             i_v11++;
@@ -7771,9 +8597,11 @@ int32_t read_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain, 
                 i_v11++;
             }
             // 0x1c662
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x1c68c
-                snprintf((char *)&i_v8, 1024, "--- %s ok\n\n", "read_temperature_offset_PIC16F1704");
+                snprintf((char *)&i_v8, 1024, "--- %s ok\n\n",
+                         "read_temperature_offset_PIC16F1704");
                 _applog(2, (char *)&i_v8, false);
             }
             // 0x1c6b8
@@ -7781,25 +8609,30 @@ int32_t read_temperature_offset_PIC16F1704(int32_t which_i2c, char which_chain, 
         }
     }
     // 0x1c4f2
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1c51c
-        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n", "read_temperature_offset_PIC16F1704");
+        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n",
+                 "read_temperature_offset_PIC16F1704");
         _applog(2, (char *)&i_v8, false);
     }
     // 0x1c6b8
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1c6c4 - 0x1c7cc
 // Line range:    1133 - 1151
 int32_t erase_PIC16F1704_app_flash(int32_t which_i2c, char which_chain) {
     // 0x1c6c4
     set_PIC16F1704_flash_pointer(which_i2c, which_chain, 6, 0);
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1c764
         int32_t i_v1; // bp-1048, 0x1c6c4
-        snprintf((char *)&i_v1, 1024, "%s: erase_loop = %d\n", "erase_PIC16F1704_app_flash", 76);
+        snprintf((char *)&i_v1, 1024, "%s: erase_loop = %d\n",
+                 "erase_PIC16F1704_app_flash", 76);
         _applog(2, (char *)&i_v1, false);
     }
     for (int32_t i_v2 = 0; i_v2 < 76; i_v2++) {
@@ -7810,30 +8643,36 @@ int32_t erase_PIC16F1704_app_flash(int32_t which_i2c, char which_chain) {
     return 1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1c7cc - 0x1cdf4
 // Line range:    1154 - 1231
 int32_t PIC1704_update_pic_app_program(int32_t which_i2c, char which_chain) {
-    char buf[16]; // bp-5064, 0x1c7cc
-    char data_read[5]; // bp-5048, 0x1c7cc
+    char buf[16];            // bp-5064, 0x1c7cc
+    char data_read[5];       // bp-5048, 0x1c7cc
     char program_data[5000]; // bp-5040, 0x1c7cc
-    char x_v1[16]; // 0x1cca0
+    char x_v1[16];           // 0x1cca0
     // 0x1c7cc
     memset((int32_t *)&program_data, 0, 0x1388);
     data_read = {0, 0, 0, 0, 0};
     buf = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    char * p_v2; // bp-6088, 0x1c7cc
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    char *p_v2; // bp-6088, 0x1c7cc
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1c8a0
         p_v2 = (char *)0x202d2d2d;
         _applog(2, (char *)&p_v2, false);
     }
-    struct _IO_FILE * p_v3 = fopen("/mnt/card/pic16f1704_app.txt", "r"); // 0x1c8de
+    struct _IO_FILE *p_v3 =
+        fopen("/mnt/card/pic16f1704_app.txt", "r"); // 0x1c8de
     if (p_v3 == NULL) {
         // 0x1c8fa
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1c924
-            snprintf((char *)&p_v2, 1024, "%s: open pic16f1704_app.txt failed\n", "PIC1704_update_pic_app_program");
+            snprintf((char *)&p_v2, 1024,
+                     "%s: open pic16f1704_app.txt failed\n",
+                     "PIC1704_update_pic_app_program");
             _applog(2, (char *)&p_v2, false);
         }
         // 0x1cdea
@@ -7842,7 +8681,8 @@ int32_t PIC1704_update_pic_app_program(int32_t which_i2c, char which_chain) {
     // 0x1c956
     fseek(p_v3, 0, SEEK_SET);
     memset((int32_t *)&program_data, 0, 0x1388);
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1c9e0
         snprintf((char *)&p_v2, 1024, "pic_flash_length = %d\n", 2432);
         _applog(2, (char *)&p_v2, false);
@@ -7852,7 +8692,7 @@ int32_t PIC1704_update_pic_app_program(int32_t which_i2c, char which_chain) {
         // 0x1ca1e
         fgets(data_read, 1023, p_v3);
         uint32_t i_v6 = strtoul(data_read, NULL, 16); // 0x1ca44
-        int32_t i_v7 = 2 * i_v5; // 0x1ca5c
+        int32_t i_v7 = 2 * i_v5;                      // 0x1ca5c
         *(char *)(i_v7 + i_v4) = (char)(i_v6 / 256);
         *(char *)((i_v7 | 1) + i_v4) = (char)i_v6;
     }
@@ -7860,9 +8700,11 @@ int32_t PIC1704_update_pic_app_program(int32_t which_i2c, char which_chain) {
     fclose(p_v3);
     if (reset_PIC16F1704_pic(which_i2c, which_chain) == 0) {
         // 0x1cafc
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1cb26
-            snprintf((char *)&p_v2, 1024, "!!! %s: reset pic error!\n\n", "PIC1704_update_pic_app_program");
+            snprintf((char *)&p_v2, 1024, "!!! %s: reset pic error!\n\n",
+                     "PIC1704_update_pic_app_program");
             _applog(2, (char *)&p_v2, false);
         }
         // 0x1cdea
@@ -7871,9 +8713,11 @@ int32_t PIC1704_update_pic_app_program(int32_t which_i2c, char which_chain) {
     // 0x1cb58
     if (erase_PIC16F1704_app_flash(which_i2c, which_chain) == 0) {
         // 0x1cb86
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1cbb0
-            snprintf((char *)&p_v2, 1024, "!!! %s: erase flash error!\n\n", "PIC1704_update_pic_app_program");
+            snprintf((char *)&p_v2, 1024, "!!! %s: erase flash error!\n\n",
+                     "PIC1704_update_pic_app_program");
             _applog(2, (char *)&p_v2, false);
         }
         // 0x1cdea
@@ -7882,9 +8726,12 @@ int32_t PIC1704_update_pic_app_program(int32_t which_i2c, char which_chain) {
     // 0x1cbe2
     if (set_PIC16F1704_flash_pointer(which_i2c, which_chain, 6, 0) == 0) {
         // 0x1cc12
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1cc3c
-            snprintf((char *)&p_v2, 1024, "!!! %s: set flash pointer error!\n\n", "PIC1704_update_pic_app_program");
+            snprintf((char *)&p_v2, 1024,
+                     "!!! %s: set flash pointer error!\n\n",
+                     "PIC1704_update_pic_app_program");
             _applog(2, (char *)&p_v2, false);
         }
         // 0x1cdea
@@ -7893,7 +8740,8 @@ int32_t PIC1704_update_pic_app_program(int32_t which_i2c, char which_chain) {
     int32_t i_v8 = 0;
     x_v1[0] = (char)*(int32_t *)(16 * i_v8 + i_v4);
     buf = x_v1;
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1cccc
         snprintf((char *)&p_v2, 1024, "send pic program time: %d\n", i_v8);
         _applog(2, (char *)&p_v2, false);
@@ -7907,7 +8755,8 @@ int32_t PIC1704_update_pic_app_program(int32_t which_i2c, char which_chain) {
         i_v8 = i_v9;
         x_v1[0] = (char)*(int32_t *)(16 * i_v8 + i_v4);
         buf = x_v1;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1cccc
             snprintf((char *)&p_v2, 1024, "send pic program time: %d\n", i_v8);
             _applog(2, (char *)&p_v2, false);
@@ -7923,19 +8772,23 @@ int32_t PIC1704_update_pic_app_program(int32_t which_i2c, char which_chain) {
         return 1;
     }
     // 0x1cd8c
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1cdb6
-        snprintf((char *)&p_v2, 1024, "!!! %s: reset pic error!\n\n", "PIC1704_update_pic_app_program");
+        snprintf((char *)&p_v2, 1024, "!!! %s: reset pic error!\n\n",
+                 "PIC1704_update_pic_app_program");
         _applog(2, (char *)&p_v2, false);
     }
     // 0x1cdea
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1cdf4 - 0x1d036
 // Line range:    1233 - 1276
-int32_t save_freq_PIC16F1704(int32_t which_chain, char which_i2c, int16_t freq) {
+int32_t save_freq_PIC16F1704(int32_t which_chain, char which_i2c,
+                             int16_t freq) {
     char read_back_data[2]; // bp-28, 0x1cdf4
     // 0x1cdf4
     char i_v1; // 0x1cdf4
@@ -7977,7 +8830,8 @@ int32_t save_freq_PIC16F1704(int32_t which_chain, char which_i2c, int16_t freq) 
         i_v13 = 1;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1d000
-            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n", "save_freq_PIC16F1704");
+            snprintf((char *)&i_v12, 1024, "--- %s ok\n\n",
+                     "save_freq_PIC16F1704");
             _applog(2, (char *)&i_v12, false);
             i_v13 = 1;
         }
@@ -7986,7 +8840,10 @@ int32_t save_freq_PIC16F1704(int32_t which_chain, char which_i2c, int16_t freq) 
         i_v13 = 0;
         if ((i_v11 || i_v10) == 0 != opt_log_level < 2) {
             // 0x1cf9c
-            snprintf((char *)&i_v12, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x\n\n", "save_freq_PIC16F1704", (int32_t)i_v9, (int32_t)i_v2);
+            snprintf((char *)&i_v12, 1024,
+                     "--- %s failed! read_back_data[0] = 0x%02x, "
+                     "read_back_data[1] = 0x%02x\n\n",
+                     "save_freq_PIC16F1704", (int32_t)i_v9, (int32_t)i_v2);
             _applog(2, (char *)&i_v12, false);
             i_v13 = 0;
         }
@@ -7995,10 +8852,12 @@ int32_t save_freq_PIC16F1704(int32_t which_chain, char which_i2c, int16_t freq) 
     return i_v13;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1d038 - 0x1d38c
 // Line range:    1278 - 1330
-int32_t get_PIC16F1704_freq(int32_t which_chain, char which_i2c, int16_t * freq) {
+int32_t get_PIC16F1704_freq(int32_t which_chain, char which_i2c,
+                            int16_t *freq) {
     char read_back_data[6]; // bp-40, 0x1d038
     // 0x1d038
     char i_v1; // 0x1d038
@@ -8030,36 +8889,48 @@ int32_t get_PIC16F1704_freq(int32_t which_chain, char which_i2c, int16_t * freq)
     pthread_mutex_unlock(&i2c_mutex);
     usleep(0x30d40);
     int32_t i_v8; // bp-1072, 0x1d038
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         unsigned char i_v9 = read_back_data[0]; // 0x1d1aa
-        snprintf((char *)&i_v8, 1024, "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, read_back_data[4] = 0x%x, read_back_data[5] = 0x%x\n", "get_PIC16F1704_freq", (int32_t)i_v9, (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v2);
+        snprintf((char *)&i_v8, 1024,
+                 "--- %s: read_back_data[0] = 0x%x, read_back_data[1] = 0x%x, "
+                 "read_back_data[2] = 0x%x, read_back_data[3] = 0x%x, "
+                 "read_back_data[4] = 0x%x, read_back_data[5] = 0x%x\n",
+                 "get_PIC16F1704_freq", (int32_t)i_v9, (int32_t)i_v1,
+                 (int32_t)i_v1, (int32_t)i_v1, 0, (int32_t)i_v2);
         _applog(2, (char *)&i_v8, false);
     }
     if (i_v1 == 37) {
         // 0x1d206
         if (read_back_data[0] == 6) {
-            int32_t i_v10 = i_v1; // 0x1d276
-            int32_t i_v11 = i_v1; // 0x1d280
+            int32_t i_v10 = i_v1;               // 0x1d276
+            int32_t i_v11 = i_v1;               // 0x1d280
             int32_t i_v12 = i_v11 + 43 + i_v10; // 0x1d286
-            int32_t i_v13; // 0x1d038
+            int32_t i_v13;                      // 0x1d038
             if ((i_v12 & 768) == 0 == i_v2 == (char)i_v12) {
                 // 0x1d30a
-                *freq = (int16_t)__asm_sxth(__asm_sxth(i_v11) | __asm_sxth(256 * i_v10));
+                *freq = (int16_t)__asm_sxth(__asm_sxth(i_v11) |
+                                            __asm_sxth(256 * i_v10));
                 i_v13 = 1;
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x1d34e
-                    int32_t i_v14; // 0x1d038
+                    int32_t i_v14;                      // 0x1d038
                     int16_t i_v15 = *(int16_t *)&i_v14; // 0x1d352
-                    snprintf((char *)&i_v8, 1024, "--- %s ok, freq = %d\n\n", "get_PIC16F1704_freq", (int32_t)i_v15);
+                    snprintf((char *)&i_v8, 1024, "--- %s ok, freq = %d\n\n",
+                             "get_PIC16F1704_freq", (int32_t)i_v15);
                     _applog(2, (char *)&i_v8, false);
                     i_v13 = 1;
                 }
             } else {
                 // 0x1d2ac
                 i_v13 = 0;
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x1d2d6
-                    snprintf((char *)&i_v8, 1024, "--- %s failed! crc = 0x%04x\n\n", "get_PIC16F1704_freq", i_v12);
+                    snprintf((char *)&i_v8, 1024,
+                             "--- %s failed! crc = 0x%04x\n\n",
+                             "get_PIC16F1704_freq", i_v12);
                     _applog(2, (char *)&i_v8, false);
                     i_v13 = 0;
                 }
@@ -8069,25 +8940,31 @@ int32_t get_PIC16F1704_freq(int32_t which_chain, char which_i2c, int16_t * freq)
         }
     }
     // 0x1d20e
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1d238
-        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n", "get_PIC16F1704_freq");
+        snprintf((char *)&i_v8, 1024, "--- %s failed!\n\n",
+                 "get_PIC16F1704_freq");
         _applog(2, (char *)&i_v8, false);
     }
     // 0x1d382
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1d38c - 0x1d424
 // Line range:    1332 - 1337
-void set_temperature_offset_value(int32_t which_i2c, unsigned char which_chain, char * value) {
+void set_temperature_offset_value(int32_t which_i2c, unsigned char which_chain,
+                                  char *value) {
     int32_t i_v1 = which_i2c; // bp-1036, 0x1d398
     i_v1 = which_i2c;
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1d3d0
         int32_t i_v2; // bp-1032, 0x1d38c
-        snprintf((char *)&i_v2, 1024, "--- %s\n", "set_temperature_offset_value");
+        snprintf((char *)&i_v2, 1024, "--- %s\n",
+                 "set_temperature_offset_value");
         _applog(2, (char *)&i_v2, false);
     }
     // 0x1d3fa
@@ -8096,30 +8973,33 @@ void set_temperature_offset_value(int32_t which_i2c, unsigned char which_chain, 
     __asm_nop(i_v3, (int32_t)which_chain, (int32_t)value, (int32_t)&i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1d424 - 0x1d7b6
 // Line range:    1339 - 1392
-int32_t write_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * buf, unsigned char buf_len) {
-    char crc_data[2]; // bp-24, 0x1d424
+int32_t write_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain,
+                                   char *buf, unsigned char buf_len) {
+    char crc_data[2];       // bp-24, 0x1d424
     char read_back_data[5]; // bp-32, 0x1d424
-    char send_data[100]; // bp-132, 0x1d424
-    char x_v1[2]; // 0x1d528
+    char send_data[100];    // bp-132, 0x1d424
+    char x_v1[2];           // 0x1d528
     // 0x1d424
     crc_data = {-1, 0};
     read_back_data = {-1, 0, 0, 0, 0};
     memset((int32_t *)&send_data, 0, 100);
     int32_t i_v2; // bp-1156, 0x1d424
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1d4b0
         snprintf((char *)&i_v2, 1024, "--- %s\n", "write_PIC16F1705_iic_slave");
         _applog(2, (char *)&i_v2, false);
     }
-    unsigned char i_v3 = buf_len + 4; // 0x1d450
+    unsigned char i_v3 = buf_len + 4;  // 0x1d450
     int16_t i_v4 = (int16_t)i_v3 + 38; // 0x1d4e0
-    int16_t i_v5 = i_v4; // 0x1d51c
+    int16_t i_v5 = i_v4;               // 0x1d51c
     if (buf_len != 0) {
-        char i_v6 = 0; // 0x1d50a
-        int16_t i_v7 = i_v4; // 0x1d500
+        char i_v6 = 0;                                                // 0x1d50a
+        int16_t i_v7 = i_v4;                                          // 0x1d500
         unsigned char i_v8 = *(char *)((int32_t)i_v6 + (int32_t)buf); // 0x1d4f8
         i_v7 += (int16_t)i_v8;
         i_v6++;
@@ -8135,13 +9015,21 @@ int32_t write_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * b
     // 0x1d51e
     x_v1[0] = i_v5 / 256;
     crc_data = x_v1;
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         unsigned char i_v9 = crc_data[0]; // 0x1d560
-        snprintf((char *)&i_v2, 1024, "--- %s: crc_data[0] = 0x%x, crc_data[1] = 0x%x\n", "write_PIC16F1705_iic_slave", (int32_t)i_v9, (int32_t)(i_v5 % 256));
+        snprintf((char *)&i_v2, 1024,
+                 "--- %s: crc_data[0] = 0x%x, crc_data[1] = 0x%x\n",
+                 "write_PIC16F1705_iic_slave", (int32_t)i_v9,
+                 (int32_t)(i_v5 % 256));
         _applog(2, (char *)&i_v2, false);
     }
     // 0x1d596
-    send_data = {85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    send_data = {85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                 0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                 0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                 0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                 0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int32_t i_v10; // 0x1d424
     int32_t i_v11; // bp-16, 0x1d424
     if (buf_len == 0) {
@@ -8149,7 +9037,7 @@ int32_t write_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * b
         i_v10 = &i_v11;
     } else {
         int32_t i_v12 = &i_v11;
-        char i_v13 = 0; // 0x1d5d8
+        char i_v13 = 0;        // 0x1d5d8
         int32_t i_v14 = i_v13; // 0x1d5b8
         *(char *)(i_v12 - 112 + i_v14) = *(char *)(i_v14 + (int32_t)buf);
         i_v13++;
@@ -8193,13 +9081,14 @@ int32_t write_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * b
     char i_v20 = *(char *)&use_syslog;
     char i_v21 = *(char *)&opt_log_output;
     int32_t i_v22; // 0x1d424
-    char i_v23; // 0x1d424
+    char i_v23;    // 0x1d424
     if (i_v23 == 1 == i_v23 == 38) {
         // 0x1d756
         i_v22 = 1;
         if ((i_v21 || i_v20) == 0 != opt_log_level < 2) {
             // 0x1d780
-            snprintf((char *)&i_v2, 1024, "--- %s ok\n\n", "write_PIC16F1705_iic_slave");
+            snprintf((char *)&i_v2, 1024, "--- %s ok\n\n",
+                     "write_PIC16F1705_iic_slave");
             _applog(2, (char *)&i_v2, false);
             i_v22 = 1;
         }
@@ -8208,7 +9097,13 @@ int32_t write_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * b
         i_v22 = 0;
         if ((i_v21 || i_v20) == 0 != opt_log_level < 2) {
             unsigned char i_v24 = read_back_data[0]; // 0x1d706
-            snprintf((char *)&i_v2, 1024, "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x, read_back_data[2] = 0x%02x, read_back_data[3] = 0x%02x, read_back_data[4] = 0x%02x\n\n", "write_PIC16F1705_iic_slave", (int32_t)i_v24, (int32_t)i_v23, (int32_t)i_v23, (int32_t)(unsigned char)i_v23, 0);
+            snprintf(
+                (char *)&i_v2, 1024,
+                "--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] "
+                "= 0x%02x, read_back_data[2] = 0x%02x, read_back_data[3] = "
+                "0x%02x, read_back_data[4] = 0x%02x\n\n",
+                "write_PIC16F1705_iic_slave", (int32_t)i_v24, (int32_t)i_v23,
+                (int32_t)i_v23, (int32_t)(unsigned char)i_v23, 0);
             _applog(2, (char *)&i_v2, false);
             i_v22 = 0;
         }
@@ -8217,31 +9112,40 @@ int32_t write_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * b
     return i_v22;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1d7b8 - 0x1db70
 // Line range:    1394 - 1449
-int32_t read_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * buf, unsigned char buf_len, char * read_back_buf) {
-    char crc_data[2]; // bp-24, 0x1d7b8
+int32_t read_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain,
+                                  char *buf, unsigned char buf_len,
+                                  char *read_back_buf) {
+    char crc_data[2];         // bp-24, 0x1d7b8
     char read_back_data[100]; // bp-124, 0x1d7b8
-    char send_data[100]; // bp-224, 0x1d7b8
-    char x_v1[2]; // 0x1d8c0
+    char send_data[100];      // bp-224, 0x1d7b8
+    char x_v1[2];             // 0x1d8c0
     // 0x1d7b8
     crc_data = {-1, 0};
     memset((int32_t *)&read_back_data, 0, 100);
-    read_back_data = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    read_back_data = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                      0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                      0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                      0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                      0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                      0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     memset((int32_t *)&send_data, 0, 100);
     int32_t i_v2; // bp-1248, 0x1d7b8
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1d848
         snprintf((char *)&i_v2, 1024, "--- %s\n", "read_PIC16F1705_iic_slave");
         _applog(2, (char *)&i_v2, false);
     }
-    unsigned char i_v3 = buf_len + 4; // 0x1d7e4
+    unsigned char i_v3 = buf_len + 4;  // 0x1d7e4
     int16_t i_v4 = (int16_t)i_v3 + 38; // 0x1d878
-    int16_t i_v5 = i_v4; // 0x1d8b4
+    int16_t i_v5 = i_v4;               // 0x1d8b4
     if (buf_len != 0) {
-        char i_v6 = 0; // 0x1d8a2
-        int16_t i_v7 = i_v4; // 0x1d898
+        char i_v6 = 0;                                                // 0x1d8a2
+        int16_t i_v7 = i_v4;                                          // 0x1d898
         unsigned char i_v8 = *(char *)((int32_t)i_v6 + (int32_t)buf); // 0x1d890
         i_v7 += (int16_t)i_v8;
         i_v6++;
@@ -8257,13 +9161,21 @@ int32_t read_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * bu
     // 0x1d8b6
     x_v1[0] = i_v5 / 256;
     crc_data = x_v1;
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         char i_v9 = crc_data[0]; // 0x1d8f8
-        snprintf((char *)&i_v2, 1024, "--- %s: crc_data[0] = 0x%x, crc_data[1] = 0x%x\n", "read_PIC16F1705_iic_slave", (int32_t)i_v9, (int32_t)(i_v5 % 256));
+        snprintf((char *)&i_v2, 1024,
+                 "--- %s: crc_data[0] = 0x%x, crc_data[1] = 0x%x\n",
+                 "read_PIC16F1705_iic_slave", (int32_t)i_v9,
+                 (int32_t)(i_v5 % 256));
         _applog(2, (char *)&i_v2, false);
     }
     // 0x1d92e
-    send_data = {85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    send_data = {85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                 0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                 0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                 0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                 0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int32_t i_v10; // 0x1d7b8
     int32_t i_v11; // bp-16, 0x1d7b8
     if (buf_len == 0) {
@@ -8271,7 +9183,7 @@ int32_t read_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * bu
         i_v10 = &i_v11;
     } else {
         int32_t i_v12 = &i_v11;
-        char i_v13 = 0; // 0x1d970
+        char i_v13 = 0;        // 0x1d970
         int32_t i_v14 = i_v13; // 0x1d950
         *(char *)(i_v12 - 204 + i_v14) = *(char *)(i_v14 + (int32_t)buf);
         i_v13++;
@@ -8301,7 +9213,7 @@ int32_t read_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * bu
     }
     // 0x1d9fe
     usleep(0x30d40);
-    char * p_v19 = (char *)((int32_t)buf + 2); // 0x1da4e
+    char *p_v19 = (char *)((int32_t)buf + 2); // 0x1da4e
     int32_t i_v20 = i_v10 - 108;
     char i_v21 = 0; // 0x1da3e
     *(char *)i_v20 = read_pic(i_v16, which_chain);
@@ -8319,9 +9231,11 @@ int32_t read_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * bu
     char i_v23; // 0x1d7b8
     if (i_v23 == 1 == i_v23 == 38) {
         // 0x1db10
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1db3a
-            snprintf((char *)&i_v2, 1024, "--- %s ok\n\n", "read_PIC16F1705_iic_slave");
+            snprintf((char *)&i_v2, 1024, "--- %s ok\n\n",
+                     "read_PIC16F1705_iic_slave");
             _applog(2, (char *)&i_v2, false);
         }
         // 0x1db66
@@ -8329,21 +9243,28 @@ int32_t read_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * bu
     }
     char i_v24 = 0;
     unsigned char i_v25; // 0x1dabe
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1dab0
         i_v25 = *(char *)i_v20;
-        snprintf((char *)&i_v2, 1024, "--- %s failed! read_back_data[%d] = 0x%02x\n\n", "read_PIC16F1705_iic_slave", (int32_t)i_v24, (int32_t)i_v25);
+        snprintf((char *)&i_v2, 1024,
+                 "--- %s failed! read_back_data[%d] = 0x%02x\n\n",
+                 "read_PIC16F1705_iic_slave", (int32_t)i_v24, (int32_t)i_v25);
         _applog(2, (char *)&i_v2, false);
     }
     char i_v26 = i_v24 + 1; // 0x1daf4
-    int32_t i_v27 = i_v26; // 0x1dafa
+    int32_t i_v27 = i_v26;  // 0x1dafa
     while ((int32_t)*p_v19 + 3 > i_v27) {
         // 0x1da86
         i_v24 = i_v26;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1dab0
             i_v25 = *(char *)(i_v27 + i_v20);
-            snprintf((char *)&i_v2, 1024, "--- %s failed! read_back_data[%d] = 0x%02x\n\n", "read_PIC16F1705_iic_slave", (int32_t)i_v24, (int32_t)i_v25);
+            snprintf((char *)&i_v2, 1024,
+                     "--- %s failed! read_back_data[%d] = 0x%02x\n\n",
+                     "read_PIC16F1705_iic_slave", (int32_t)i_v24,
+                     (int32_t)i_v25);
             _applog(2, (char *)&i_v2, false);
         }
         // 0x1daf0
@@ -8354,13 +9275,15 @@ int32_t read_PIC16F1705_iic_slave(int32_t which_i2c, char which_chain, char * bu
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1db70 - 0x1df86
 // Line range:    1453 - 1516
-int32_t write_data_to_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, char * buf, uint32_t buf_len) {
-    char crc_data[2]; // bp-28, 0x1db70
+int32_t write_data_to_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c,
+                                       char *buf, uint32_t buf_len) {
+    char crc_data[2];       // bp-28, 0x1db70
     char read_back_data[5]; // bp-36, 0x1db70
-    char x_v1[2]; // 0x1dc82
+    char x_v1[2];           // 0x1dc82
     // 0x1db70
     char i_v2; // 0x1db70
     unsigned char i_v3 = i_v2;
@@ -8369,25 +9292,27 @@ int32_t write_data_to_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, c
     int32_t i_v4; // bp-1072, 0x1db70
     if (*(char *)&opt_debug != 0) {
         // 0x1dbce
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 4) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 4) {
             // 0x1dbf8
-            snprintf((char *)&i_v4, 1024, "\n--- %s\n", "write_data_to_PIC16F1704_flash");
+            snprintf((char *)&i_v4, 1024, "\n--- %s\n",
+                     "write_data_to_PIC16F1704_flash");
             _applog(4, (char *)&i_v4, false);
         }
     }
-    int32_t i_v5 = buf_len + 6; // 0x1dc2e
+    int32_t i_v5 = buf_len + 6;                    // 0x1dc2e
     int16_t i_v6 = (int16_t)(i_v5 + buf_len) + 51; // 0x1dc3e
-    int16_t i_v7 = i_v6; // 0x1dc76
+    int16_t i_v7 = i_v6;                           // 0x1dc76
     if (buf_len > 0) {
-        char i_v8 = 0; // 0x1dc66
+        char i_v8 = 0;       // 0x1dc66
         int16_t i_v9 = i_v6; // 0x1dc5c
-        i_v9 += (int16_t)*(char *)(int32_t)buf;
+        i_v9 += (int16_t) * (char *)(int32_t)buf;
         i_v8++;
         int32_t i_v10 = i_v8; // 0x1dc6c
         i_v7 = i_v9;
         while (i_v10 < buf_len) {
             // 0x1dc4a
-            i_v9 += (int16_t)*(char *)(i_v10 + (int32_t)buf);
+            i_v9 += (int16_t) * (char *)(i_v10 + (int32_t)buf);
             i_v8++;
             i_v10 = i_v8;
             i_v7 = i_v9;
@@ -8397,28 +9322,32 @@ int32_t write_data_to_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, c
     x_v1[0] = i_v7 / 256;
     crc_data = x_v1;
     unsigned char i_v11 = crc_data[0];
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1dcba
-        snprintf((char *)&i_v4, 1024, "--- %s: crc_data[0] = 0x%x, crc_data[1] = 0x%x\n", "write_data_to_PIC16F1704_flash", (int32_t)i_v11, (int32_t)(i_v7 % 256));
+        snprintf((char *)&i_v4, 1024,
+                 "--- %s: crc_data[0] = 0x%x, crc_data[1] = 0x%x\n",
+                 "write_data_to_PIC16F1704_flash", (int32_t)i_v11,
+                 (int32_t)(i_v7 % 256));
         _applog(2, (char *)&i_v4, false);
     }
     // 0x1dcf0
     int32_t i_v12; // bp-42, 0x1db70
     memcpy(&i_v12, (int32_t *)buf, buf_len);
-    int32_t i_v13; // bp-16, 0x1db70
+    int32_t i_v13;          // bp-16, 0x1db70
     int32_t i_v14 = &i_v13; // 0x1dd42
     int32_t i_v15 = i_v14 - 32;
     *(char *)(i_v15 + i_v5) = i_v11;
     *(char *)(buf_len - 25 + i_v14) = (char)i_v7;
     int32_t i_v16 = buf_len + 8; // 0x1dd96
-    char i_v17 = 0; // 0x1dd9a
+    char i_v17 = 0;              // 0x1dd9a
     if (i_v16 > 0) {
-        printf("%02x ", (int32_t)*(char *)i_v15);
+        printf("%02x ", (int32_t) * (char *)i_v15);
         i_v17++;
         int32_t i_v18 = i_v17; // 0x1dd8e
         while (i_v16 > i_v18) {
             // 0x1dd68
-            printf("%02x ", (int32_t)*(char *)(i_v18 + i_v15));
+            printf("%02x ", (int32_t) * (char *)(i_v18 + i_v15));
             i_v17++;
             i_v18 = i_v17;
         }
@@ -8455,11 +9384,11 @@ int32_t write_data_to_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, c
     pthread_mutex_unlock(&i2c_mutex);
     usleep(0x30d40);
     char i_v25 = 0; // 0x1de90
-    printf("%02x ", (int32_t)*(char *)(i_v23 + (int32_t)i_v25));
+    printf("%02x ", (int32_t) * (char *)(i_v23 + (int32_t)i_v25));
     i_v25++;
     while (i_v25 == 4 || i_v25 < 4) {
         // 0x1de70
-        printf("%02x ", (int32_t)*(char *)(i_v23 + (int32_t)i_v25));
+        printf("%02x ", (int32_t) * (char *)(i_v23 + (int32_t)i_v25));
         i_v25++;
     }
     // 0x1de9e
@@ -8473,7 +9402,8 @@ int32_t write_data_to_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, c
         i_v29 = 1;
         if ((i_v28 || i_v27) == 0 != opt_log_level < 2) {
             // 0x1df50
-            snprintf((char *)&i_v4, 1024, "\n--- %s ok\n\n", "write_data_to_PIC16F1704_flash");
+            snprintf((char *)&i_v4, 1024, "\n--- %s ok\n\n",
+                     "write_data_to_PIC16F1704_flash");
             _applog(2, (char *)&i_v4, false);
             i_v29 = 1;
         }
@@ -8482,7 +9412,12 @@ int32_t write_data_to_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, c
         i_v29 = 0;
         if ((i_v28 || i_v27) == 0 != opt_log_level < 0) {
             // 0x1dee6
-            snprintf((char *)&i_v4, 1024, "\n--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x, read_back_data[2] = 0x%02x\n\n", "write_data_to_PIC16F1704_flash", (int32_t)i_v26, (int32_t)i_v2, (int32_t)i_v3);
+            snprintf(
+                (char *)&i_v4, 1024,
+                "\n--- %s failed! read_back_data[0] = 0x%02x, "
+                "read_back_data[1] = 0x%02x, read_back_data[2] = 0x%02x\n\n",
+                "write_data_to_PIC16F1704_flash", (int32_t)i_v26, (int32_t)i_v2,
+                (int32_t)i_v3);
             _applog(0, (char *)&i_v4, false);
             i_v29 = 0;
         }
@@ -8491,24 +9426,30 @@ int32_t write_data_to_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, c
     return i_v29;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pic.c
 // Address range: 0x1df88 - 0x1e3fe
 // Line range:    1518 - 1588
-int32_t read_data_from_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, char * buf, unsigned char read_len) {
-    char crc_data[2]; // bp-24, 0x1df88
+int32_t read_data_from_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c,
+                                        char *buf, unsigned char read_len) {
+    char crc_data[2];        // bp-24, 0x1df88
     char read_back_data[40]; // bp-64, 0x1df88
-    char x_v1[2]; // 0x1e050
+    char x_v1[2];            // 0x1e050
     // 0x1df88
     char i_v2; // 0x1df88
     unsigned char i_v3 = i_v2;
     crc_data = {-1, 0};
     memset((int32_t *)&read_back_data, 0, 40);
-    read_back_data = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    read_back_data = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                      0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                      0,  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     bool i_v4 = true; // 0x1dfe8
-    int32_t i_v5; // bp-1096, 0x1df88
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    int32_t i_v5;     // bp-1096, 0x1df88
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1e006
-        snprintf((char *)&i_v5, 1024, "\n--- %s\n", "read_data_from_PIC16F1704_flash");
+        snprintf((char *)&i_v5, 1024, "\n--- %s\n",
+                 "read_data_from_PIC16F1704_flash");
         _applog(2, (char *)&i_v5, false);
         i_v4 = (*(char *)&opt_log_output | *(char *)&use_syslog) == 0;
     }
@@ -8517,7 +9458,10 @@ int32_t read_data_from_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, 
     crc_data = x_v1;
     if (i_v4 != opt_log_level < 2) {
         unsigned char i_v7 = crc_data[0]; // 0x1e088
-        snprintf((char *)&i_v5, 1024, "--- %s: crc_data[0] = 0x%x, crc_data[1] = 0x%x\n", "read_data_from_PIC16F1704_flash", (int32_t)i_v7, (int32_t)(read_len + 58));
+        snprintf((char *)&i_v5, 1024,
+                 "--- %s: crc_data[0] = 0x%x, crc_data[1] = 0x%x\n",
+                 "read_data_from_PIC16F1704_flash", (int32_t)i_v7,
+                 (int32_t)(read_len + 58));
         _applog(2, (char *)&i_v5, false);
     }
     // 0x1e0be
@@ -8525,11 +9469,11 @@ int32_t read_data_from_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, 
     int32_t i_v9 = &i_v8;
     int32_t i_v10 = i_v9 - 56;
     char i_v11 = 0; // 0x1e11e
-    printf("%02x ", (int32_t)*(char *)(i_v10 + (int32_t)i_v11));
+    printf("%02x ", (int32_t) * (char *)(i_v10 + (int32_t)i_v11));
     i_v11++;
     while (i_v11 == 7 || i_v11 < 7) {
         // 0x1e0fe
-        printf("%02x ", (int32_t)*(char *)(i_v10 + (int32_t)i_v11));
+        printf("%02x ", (int32_t) * (char *)(i_v10 + (int32_t)i_v11));
         i_v11++;
     }
     // 0x1e12c
@@ -8563,12 +9507,12 @@ int32_t read_data_from_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, 
     pthread_mutex_unlock(&i2c_mutex);
     usleep(0x30d40);
     char i_v19 = 0; // 0x1e212
-    printf("%02x ", (int32_t)*(char *)i_v16);
+    printf("%02x ", (int32_t) * (char *)i_v16);
     i_v19++;
     int32_t i_v20 = i_v19; // 0x1e218
     while (i_v15 > i_v20) {
         // 0x1e1f2
-        printf("%02x ", (int32_t)*(char *)(i_v20 + i_v16));
+        printf("%02x ", (int32_t) * (char *)(i_v20 + i_v16));
         i_v19++;
         i_v20 = i_v19;
     }
@@ -8577,29 +9521,32 @@ int32_t read_data_from_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, 
     if (i_v2 == 52) {
         // 0x1e234
         if (i_v3 == 1 == i_v15 == (int32_t)read_back_data[0]) {
-            uint32_t i_v21 = i_v6 + 3; // 0x1e2f0
-            char i_v22 = 0; // 0x1e2e2
-            int16_t i_v23 = (int16_t)*(char *)i_v16; // 0x1e2d8
+            uint32_t i_v21 = i_v6 + 3;                 // 0x1e2f0
+            char i_v22 = 0;                            // 0x1e2e2
+            int16_t i_v23 = (int16_t) * (char *)i_v16; // 0x1e2d8
             i_v22++;
             int32_t i_v24 = i_v22; // 0x1e2e8
             int16_t i_v25 = i_v23; // 0x1e2f4
             while (i_v21 > i_v24) {
                 // 0x1e2c4
-                i_v23 = i_v25 + (int16_t)*(char *)(i_v24 + i_v16);
+                i_v23 = i_v25 + (int16_t) * (char *)(i_v24 + i_v16);
                 i_v22++;
                 i_v24 = i_v22;
                 i_v25 = i_v23;
             }
             // 0x1e2f6
-            if ((int32_t)(i_v23 / 256) == (int32_t)*(char *)(i_v16 + i_v21)) {
+            if ((int32_t)(i_v23 / 256) == (int32_t) * (char *)(i_v16 + i_v21)) {
                 // 0x1e314
-                if ((int32_t)(i_v23 % 256) == (int32_t)*(char *)(i_v6 - 44 + i_v9)) {
+                if ((int32_t)(i_v23 % 256) ==
+                    (int32_t) * (char *)(i_v6 - 44 + i_v9)) {
                     // 0x1e38c
                     int32_t i_v26; // bp-61, 0x1df88
                     memcpy((int32_t *)buf, &i_v26, i_v6);
-                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) ==
+                        0 != opt_log_level < 2) {
                         // 0x1e3c8
-                        snprintf((char *)&i_v5, 1024, "\n--- %s ok\n\n", "read_data_from_PIC16F1704_flash");
+                        snprintf((char *)&i_v5, 1024, "\n--- %s ok\n\n",
+                                 "read_data_from_PIC16F1704_flash");
                         _applog(2, (char *)&i_v5, false);
                     }
                     // 0x1e3f4
@@ -8607,9 +9554,12 @@ int32_t read_data_from_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, 
                 }
             }
             // 0x1e32e
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 0) {
                 // 0x1e358
-                snprintf((char *)&i_v5, 1024, "\n--- %s failed! crc = 0x%04x\n\n", "read_data_from_PIC16F1704_flash", (int32_t)i_v23);
+                snprintf((char *)&i_v5, 1024,
+                         "\n--- %s failed! crc = 0x%04x\n\n",
+                         "read_data_from_PIC16F1704_flash", (int32_t)i_v23);
                 _applog(0, (char *)&i_v5, false);
             }
             // 0x1e3f4
@@ -8617,16 +9567,22 @@ int32_t read_data_from_PIC16F1704_flash(int32_t which_chain, int32_t which_i2c, 
         }
     }
     // 0x1e24c
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 0) {
         unsigned char i_v27 = read_back_data[0]; // 0x1e276
-        snprintf((char *)&i_v5, 1024, "\n--- %s failed! read_back_data[0] = 0x%02x, read_back_data[1] = 0x%02x, read_back_data[2] = 0x%02x\n\n", "read_data_from_PIC16F1704_flash", (int32_t)i_v27, (int32_t)i_v2, (int32_t)i_v3);
+        snprintf((char *)&i_v5, 1024,
+                 "\n--- %s failed! read_back_data[0] = 0x%02x, "
+                 "read_back_data[1] = 0x%02x, read_back_data[2] = 0x%02x\n\n",
+                 "read_data_from_PIC16F1704_flash", (int32_t)i_v27,
+                 (int32_t)i_v2, (int32_t)i_v3);
         _applog(0, (char *)&i_v5, false);
     }
     // 0x1e3f4
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pwm.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pwm.c
 // Address range: 0x1e400 - 0x1e410
 // Line range:    6 - 9
 int32_t get_fan_speed(void) {
@@ -8634,7 +9590,8 @@ int32_t get_fan_speed(void) {
     return read_axi_fpga(1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pwm.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pwm.c
 // Address range: 0x1e410 - 0x1e428
 // Line range:    11 - 14
 void set_fan_speed(int32_t speed) {
@@ -8644,7 +9601,8 @@ void set_fan_speed(int32_t speed) {
     __asm_nop((int32_t)&i_g101, speed, i_v1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pwm.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/pwm.c
 // Address range: 0x1e428 - 0x1e4ec
 // Line range:    16 - 71
 void fan_control(char level) {
@@ -8662,27 +9620,32 @@ void fan_control(char level) {
     __asm_nop((int32_t)&i_g101, i_v3, i_v3, 0x640000);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
 // Address range: 0x1e4ec - 0x1e570
 // Line range:    22 - 26
 int32_t uart_init(int32_t comport, int32_t baud) {
     // 0x1e4ec
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1e526
         int32_t i_v1; // bp-1032, 0x1e4ec
-        snprintf((char *)&i_v1, 1024, "%s chain=%d baudrate=%d\n", "uart_init", comport, baud);
+        snprintf((char *)&i_v1, 1024, "%s chain=%d baudrate=%d\n", "uart_init",
+                 comport, baud);
         _applog(2, (char *)&i_v1, false);
     }
     // 0x1e55c
     return gChain;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
 // Address range: 0x1e570 - 0x1e5e2
 // Line range:    27 - 31
 int32_t uart_exit(int32_t fd) {
     // 0x1e570
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1e5a6
         int32_t i_v1; // bp-1032, 0x1e570
         snprintf((char *)&i_v1, 1024, "%s fd=%d\n", "uart_exit", fd);
@@ -8692,7 +9655,8 @@ int32_t uart_exit(int32_t fd) {
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
 // Address range: 0x1e5e4 - 0x1e738
 // Line range:    33 - 71
 int32_t check_how_many_uart_data_in_fpga(unsigned char which_uart) {
@@ -8702,66 +9666,78 @@ int32_t check_how_many_uart_data_in_fpga(unsigned char which_uart) {
         return which_uart;
     }
     // 0x1e6d2
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1e6fc
         int32_t i_v1; // bp-1032, 0x1e5e4
-        snprintf((char *)&i_v1, 1024, "%s: The uart%d is not supported!!!\n", "check_how_many_uart_data_in_fpga", (int32_t)which_uart);
+        snprintf((char *)&i_v1, 1024, "%s: The uart%d is not supported!!!\n",
+                 "check_how_many_uart_data_in_fpga", (int32_t)which_uart);
         _applog(2, (char *)&i_v1, false);
     }
     // 0x1e72c
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
 // Address range: 0x1e738 - 0x1eade
 // Line range:    73 - 182
-int32_t read_uart_data_in_fpga(unsigned char which_uart, char * buf, int32_t length) {
+int32_t read_uart_data_in_fpga(unsigned char which_uart, char *buf,
+                               int32_t length) {
     if (which_uart >= 9 != which_uart != 9) {
         // 0x1e786
         __asm_adr(4);
         return which_uart;
     }
     // 0x1e868
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1e892
         int32_t i_v1; // bp-1060, 0x1e738
-        snprintf((char *)&i_v1, 1024, "%s: The uart%d is not supported!!!\n", "read_uart_data_in_fpga", (int32_t)which_uart);
+        snprintf((char *)&i_v1, 1024, "%s: The uart%d is not supported!!!\n",
+                 "read_uart_data_in_fpga", (int32_t)which_uart);
         _applog(2, (char *)&i_v1, false);
     }
     // 0x1e8c4
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
 // Address range: 0x1eae0 - 0x1f080
 // Line range:    184 - 360
-int32_t uart_send(unsigned char which_uart, char * buf, int32_t length) {
+int32_t uart_send(unsigned char which_uart, char *buf, int32_t length) {
     char send_buf[512]; // bp-560, 0x1eae0
     // 0x1eae0
     memset((int32_t *)&send_buf, 0, 512);
     int32_t i_v1 = which_uart;
-    int32_t i_v2 = pthread_mutex_lock((int32_t *)(24 * i_v1 + (int32_t)&uart_send_mutex)); // 0x1eb64
+    int32_t i_v2 = pthread_mutex_lock(
+        (int32_t *)(24 * i_v1 + (int32_t)&uart_send_mutex)); // 0x1eb64
     if (which_uart >= 9 != which_uart != 9) {
         // 0x1eb74
         __asm_adr(4);
         return i_v2;
     }
     // 0x1ece4
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1ed0e
         int32_t i_v3; // bp-1584, 0x1eae0
-        snprintf((char *)&i_v3, 1024, "%s: The uart%d is not supported!!!\n", "uart_send", i_v1);
+        snprintf((char *)&i_v3, 1024, "%s: The uart%d is not supported!!!\n",
+                 "uart_send", i_v1);
         _applog(2, (char *)&i_v3, false);
     }
     // 0x1ed40
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
 // Address range: 0x1f080 - 0x1f110
 // Line range:    362 - 385
-int32_t uart_receive(unsigned char which_uart, char * buf, uint32_t buf_length) {
-    int32_t * p_v1 = (int32_t *)(24 * (int32_t)which_uart + (int32_t)&uart_receive_mutex); // 0x1f0ac
+int32_t uart_receive(unsigned char which_uart, char *buf, uint32_t buf_length) {
+    int32_t *p_v1 = (int32_t *)(24 * (int32_t)which_uart +
+                                (int32_t)&uart_receive_mutex); // 0x1f0ac
     pthread_mutex_lock(p_v1);
     uint32_t i_v2 = check_how_many_uart_data_in_fpga(which_uart); // 0x1f0b4
     if (i_v2 >= buf_length) {
@@ -8779,29 +9755,34 @@ int32_t uart_receive(unsigned char which_uart, char * buf, uint32_t buf_length) 
     return i_v4;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
 // Address range: 0x1f110 - 0x1f540
 // Line range:    387 - 497
 int32_t clear_uart_send_fifo(unsigned char which_chain) {
     // 0x1f110
     int32_t i_v1; // bp-1056, 0x1f110
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1f166
         snprintf((char *)&i_v1, 1024, "--- %s\n", "clear_uart_send_fifo");
         _applog(2, (char *)&i_v1, false);
     }
     int32_t i_v2 = which_chain;
-    int32_t * p_v3 = (int32_t *)(24 * i_v2 + (int32_t)&uart_send_mutex); // 0x1f1a8
-    int32_t i_v4 = pthread_mutex_lock(p_v3); // 0x1f1a8
+    int32_t *p_v3 =
+        (int32_t *)(24 * i_v2 + (int32_t)&uart_send_mutex); // 0x1f1a8
+    int32_t i_v4 = pthread_mutex_lock(p_v3);                // 0x1f1a8
     if (which_chain >= 9 != which_chain != 9) {
         // 0x1f1b6
         __asm_adr(4);
         return i_v4;
     }
     // 0x1f324
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1f34e
-        snprintf((char *)&i_v1, 1024, "%s: The uart%d is not supported!!!\n", "clear_uart_send_fifo", i_v2);
+        snprintf((char *)&i_v1, 1024, "%s: The uart%d is not supported!!!\n",
+                 "clear_uart_send_fifo", i_v2);
         _applog(2, (char *)&i_v1, false);
     }
     // 0x1f37e
@@ -8809,19 +9790,22 @@ int32_t clear_uart_send_fifo(unsigned char which_chain) {
     return 1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
 // Address range: 0x1f540 - 0x1f7a4
 // Line range:    499 - 543
 int32_t clear_uart_rx_fifo(unsigned char which_chain) {
     // 0x1f540
     int32_t i_v1; // bp-1044, 0x1f540
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1f58a
         snprintf((char *)&i_v1, 1024, "--- %s\n", "clear_uart_rx_fifo");
         _applog(2, (char *)&i_v1, false);
     }
     int32_t i_v2 = which_chain;
-    int32_t * p_v3 = (int32_t *)(24 * i_v2 + (int32_t)&uart_receive_mutex); // 0x1f5cc
+    int32_t *p_v3 =
+        (int32_t *)(24 * i_v2 + (int32_t)&uart_receive_mutex); // 0x1f5cc
     pthread_mutex_lock(p_v3);
     int32_t i_v4 = check_how_many_uart_data_in_fpga(which_chain); // 0x1f5d6
     if (i_v4 == 0) {
@@ -8830,12 +9814,14 @@ int32_t clear_uart_rx_fifo(unsigned char which_chain) {
         // 0x1f79a
         return 0;
     }
-    int32_t * p_v5 = malloc(i_v4); // 0x1f60a
+    int32_t *p_v5 = malloc(i_v4); // 0x1f60a
     if (p_v5 == NULL) {
         // 0x1f61c
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1f646
-            snprintf((char *)&i_v1, 1024, "%s: uart%d malloc buffer error\n", "clear_uart_rx_fifo", i_v2);
+            snprintf((char *)&i_v1, 1024, "%s: uart%d malloc buffer error\n",
+                     "clear_uart_rx_fifo", i_v2);
             _applog(2, (char *)&i_v1, false);
         }
         // 0x1f676
@@ -8844,7 +9830,8 @@ int32_t clear_uart_rx_fifo(unsigned char which_chain) {
         // 0x1f79a
         return 1;
     }
-    int32_t i_v6 = read_uart_data_in_fpga(which_chain, (char *)p_v5, i_v4); // 0x1f6b6
+    int32_t i_v6 =
+        read_uart_data_in_fpga(which_chain, (char *)p_v5, i_v4); // 0x1f6b6
     if (i_v6 == i_v4) {
         // 0x1f766
         free(p_v5);
@@ -8854,9 +9841,12 @@ int32_t clear_uart_rx_fifo(unsigned char which_chain) {
         return 1;
     }
     // 0x1f6ca
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1f6f4
-        snprintf((char *)&i_v1, 1024, "%s: uart%d clear rx fifo error. nbytes = %d, len = %d\n", "clear_uart_rx_fifo", i_v2, i_v4, i_v6);
+        snprintf((char *)&i_v1, 1024,
+                 "%s: uart%d clear rx fifo error. nbytes = %d, len = %d\n",
+                 "clear_uart_rx_fifo", i_v2, i_v4, i_v6);
         _applog(2, (char *)&i_v1, false);
     }
     // 0x1f730
@@ -8867,7 +9857,8 @@ int32_t clear_uart_rx_fifo(unsigned char which_chain) {
     return 1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/uart.c
 // Address range: 0x1f7a4 - 0x1f826
 // Line range:    545 - 576
 int32_t baud2bt8d(uint32_t baud) {
@@ -8890,29 +9881,32 @@ int32_t baud2bt8d(uint32_t baud) {
     } else {
         // 0x1f7cc
         switch (baud) {
-            case 0x16e360: {
-                // 0x1f81e
-                return 1;
-            }
-            case 0x2dc6c0: {
-                // 0x1f81e
-                return 0;
-            }
+        case 0x16e360: {
+            // 0x1f81e
+            return 1;
+        }
+        case 0x2dc6c0: {
+            // 0x1f81e
+            return 0;
+        }
         }
     }
     // 0x1f802
-    printf("%s: the baud is not recommand value, so use 115200 baud\n", "baud2bt8d");
+    printf("%s: the baud is not recommand value, so use 115200 baud\n",
+           "baud2bt8d");
     // 0x1f81e
     return -1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x1f828 - 0x1faca
 // Line range:    69 - 124
-int32_t cgpu_init(int32_t * runtime) {
+int32_t cgpu_init(int32_t *runtime) {
     // 0x1f828
     int32_t i_v1; // bp-1036, 0x1f828
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1f864
         snprintf((char *)&i_v1, 1024, "--- %s\n", "cgpu_init");
         _applog(2, (char *)&i_v1, false);
@@ -8920,22 +9914,22 @@ int32_t cgpu_init(int32_t * runtime) {
     // 0x1f88e
     memset(&cgpu, 0, 96);
     int32_t i_v2 = open_lcd(); // 0x1f89e
-    int32_t i_v3; // 0x1f828
-    int32_t i_v4; // 0x1f828
-    int32_t i_v5; // 0x1f828
-    int32_t i_v6; // 0x1f828
-    int32_t i_v7; // 0x1f828
-    int32_t i_v8; // 0x1f828
-    int32_t i_v9; // 0x1f828
-    int32_t i_v10; // 0x1f828
-    int32_t i_v11; // 0x1f828
-    int32_t i_v12; // 0x1f828
-    int32_t i_v13; // 0x1f828
-    int32_t i_v14; // 0x1f828
-    int32_t i_v15; // 0x1f828
-    int32_t i_v16; // 0x1f828
-    int32_t i_v17; // 0x1f828
-    int32_t i_v18; // 0x1f828
+    int32_t i_v3;              // 0x1f828
+    int32_t i_v4;              // 0x1f828
+    int32_t i_v5;              // 0x1f828
+    int32_t i_v6;              // 0x1f828
+    int32_t i_v7;              // 0x1f828
+    int32_t i_v8;              // 0x1f828
+    int32_t i_v9;              // 0x1f828
+    int32_t i_v10;             // 0x1f828
+    int32_t i_v11;             // 0x1f828
+    int32_t i_v12;             // 0x1f828
+    int32_t i_v13;             // 0x1f828
+    int32_t i_v14;             // 0x1f828
+    int32_t i_v15;             // 0x1f828
+    int32_t i_v16;             // 0x1f828
+    int32_t i_v17;             // 0x1f828
+    int32_t i_v18;             // 0x1f828
     if (i_v2 > 0) {
         // 0x1f906
         memset((int32_t *)&x_g100, 32, 64);
@@ -8959,7 +9953,8 @@ int32_t cgpu_init(int32_t * runtime) {
                     goto lab_0x1faa8;
                 } else {
                     // 0x1fa0e
-                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0) {
+                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) ==
+                        0) {
                         // 0x1fa2a
                         i_v3 = i_v21;
                         i_v7 = (int32_t)&x_g100;
@@ -9025,9 +10020,10 @@ int32_t cgpu_init(int32_t * runtime) {
             goto lab_0x1f8da;
         }
     }
-  lab_0x1f8da:
+lab_0x1f8da:
     // 0x1f8da
-    snprintf((char *)&i_v1, 1024, "!!! %s: open lcd driver error\n", "cgpu_init");
+    snprintf((char *)&i_v1, 1024, "!!! %s: open lcd driver error\n",
+             "cgpu_init");
     int32_t i_v23 = &i_v1; // 0x1f8f6
     _applog(2, (char *)&i_v1, false);
     i_v6 = &i_g101;
@@ -9035,9 +10031,10 @@ int32_t cgpu_init(int32_t * runtime) {
     i_v14 = 0;
     i_v18 = i_v23;
     goto lab_0x1fab6;
-  lab_0x1f96c:
+lab_0x1f96c:
     // 0x1f96c
-    snprintf((char *)&i_v1, 1024, "!!! %s: open start key error\n", "cgpu_init");
+    snprintf((char *)&i_v1, 1024, "!!! %s: open start key error\n",
+             "cgpu_init");
     int32_t i_v26 = &i_v1; // 0x1f988
     _applog(2, (char *)&i_v1, false);
     i_v5 = &i_g101;
@@ -9045,14 +10042,14 @@ int32_t cgpu_init(int32_t * runtime) {
     i_v13 = 0;
     i_v17 = i_v26;
     goto lab_0x1faae;
-  lab_0x1fab6:
+lab_0x1fab6:
     // 0x1fab6
     __asm_nop(i_v6, i_v10, i_v14, i_v18);
     // 0x1fab8
     close_lcd();
     // 0x1fac0
     return -1;
-  lab_0x1f9d2:
+lab_0x1f9d2:
     // 0x1f9d2
     snprintf((char *)&i_v1, 1024, "!!! %s: open red led error\n", "cgpu_init");
     int32_t i_v24 = &i_v1; // 0x1f9ee
@@ -9062,7 +10059,7 @@ int32_t cgpu_init(int32_t * runtime) {
     i_v12 = 0;
     i_v16 = i_v24;
     goto lab_0x1faa6;
-  lab_0x1faae:
+lab_0x1faae:
     // 0x1faae
     __asm_nop(i_v5, i_v9, i_v13, i_v17);
     // 0x1fab0
@@ -9071,9 +10068,10 @@ int32_t cgpu_init(int32_t * runtime) {
     close_lcd();
     // 0x1fac0
     return -1;
-  lab_0x1fa38:
+lab_0x1fa38:
     // 0x1fa38
-    snprintf((char *)&i_v1, 1024, "!!! %s: open green led error\n", "cgpu_init");
+    snprintf((char *)&i_v1, 1024, "!!! %s: open green led error\n",
+             "cgpu_init");
     int32_t i_v25 = &i_v1; // 0x1fa54
     _applog(2, (char *)&i_v1, false);
     i_v3 = &i_g101;
@@ -9081,11 +10079,11 @@ int32_t cgpu_init(int32_t * runtime) {
     i_v11 = 0;
     i_v15 = i_v25;
     goto lab_0x1fa9e;
-  lab_0x1faa6:
+lab_0x1faa6:
     // 0x1faa6
     __asm_nop(i_v4, i_v8, i_v12, i_v16);
     goto lab_0x1faa8;
-  lab_0x1faa8:
+lab_0x1faa8:
     // 0x1faa8
     close_red_led();
     // 0x1fab0
@@ -9094,7 +10092,7 @@ int32_t cgpu_init(int32_t * runtime) {
     close_lcd();
     // 0x1fac0
     return -1;
-  lab_0x1fa9e:
+lab_0x1fa9e:
     // 0x1fa9e
     __asm_nop(i_v3, i_v7, i_v11, i_v15);
     // 0x1faa0
@@ -9102,7 +10100,8 @@ int32_t cgpu_init(int32_t * runtime) {
     goto lab_0x1faa8;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x1facc - 0x1faec
 // Line range:    126 - 134
 void cgpu_exit(void) {
@@ -9117,16 +10116,18 @@ void cgpu_exit(void) {
     __asm_nop((int32_t)&i_g101, i_v1, i_v1, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x1faec - 0x1fb28
 // Line range:    136 - 140
-int32_t v9_key_read(char * command, int32_t len) {
+int32_t v9_key_read(char *command, int32_t len) {
     // 0x1faec
     lseek(i_g58, 0, SEEK_SET);
     return read(i_g58, (int32_t *)command, len);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x1fb28 - 0x1fbfa
 // Line range:    142 - 152
 void display_arguments(void) {
@@ -9146,7 +10147,8 @@ void display_arguments(void) {
     __asm_nop(write(i_v4, (int32_t *)&output, 64), (int32_t)&output, 64, i_v4);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x1fbfc - 0x1fc9e
 // Line range:    154 - 169
 void init_pcba_args(void) {
@@ -9165,13 +10167,15 @@ void init_pcba_args(void) {
     __asm_nop(i_v2, i_g62, 0, (int32_t)&chip_high);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x1fca0 - 0x1ff06
 // Line range:    171 - 214
 int32_t check_chain(void) {
     // 0x1fca0
     int32_t i_v1; // bp-1040, 0x1fca0
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1fcde
         snprintf((char *)&i_v1, 1024, "--- %s\n", "check_chain");
         _applog(2, (char *)&i_v1, false);
@@ -9180,35 +10184,38 @@ int32_t check_chain(void) {
     i_g60 = 0;
     uint32_t i_v2 = read_axi_fpga(2); // 0x1fd12
     switch (i_v2) {
-        case 8: {
-        }
-        case 4: {
-        }
-        case 2: {
-        }
-        case 1: {
-            // 0x1fda0
-            *(char *)&chain_info = 0;
-            *(char *)((int32_t)&chain_info + 1) = 0;
-            if (i_v2 % 2 == 0) {
-                // 0x1fed0
-                *(int32_t *)((int32_t)&cgpu + 84) = 0;
-                // 0x1fefc
-                return 0;
-            }
-            // break -> 0x1fdda
-            break;
-        }
-        default: {
-            // 0x1fd3c
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
-                // 0x1fd66
-                snprintf((char *)&i_v1, 1024, "%s: Test zhiju only support 1 plug, but now is 0x%08x\n", "check_chain", 0x1000000 * i_v2 / 0x1000000);
-                _applog(2, (char *)&i_v1, false);
-            }
+    case 8: {
+    }
+    case 4: {
+    }
+    case 2: {
+    }
+    case 1: {
+        // 0x1fda0
+        *(char *)&chain_info = 0;
+        *(char *)((int32_t)&chain_info + 1) = 0;
+        if (i_v2 % 2 == 0) {
+            // 0x1fed0
+            *(int32_t *)((int32_t)&cgpu + 84) = 0;
             // 0x1fefc
-            return -1;
+            return 0;
         }
+        // break -> 0x1fdda
+        break;
+    }
+    default: {
+        // 0x1fd3c
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
+            // 0x1fd66
+            snprintf((char *)&i_v1, 1024,
+                     "%s: Test zhiju only support 1 plug, but now is 0x%08x\n",
+                     "check_chain", 0x1000000 * i_v2 / 0x1000000);
+            _applog(2, (char *)&i_v1, false);
+        }
+        // 0x1fefc
+        return -1;
+    }
     }
     // 0x1fdda
     *(int32_t *)((int32_t)&cgpu + 84) = 1;
@@ -9218,49 +10225,56 @@ int32_t check_chain(void) {
     gI2c = 0;
     *(char *)&chain_info = 0;
     *(char *)((int32_t)&chain_info + 1) = 0;
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x1fe8e
-        snprintf((char *)&i_v1, 1024, "%s: gChain = %d, gI2c = %d\n", "check_chain", (int32_t)gChain, (int32_t)gI2c);
+        snprintf((char *)&i_v1, 1024, "%s: gChain = %d, gI2c = %d\n",
+                 "check_chain", (int32_t)gChain, (int32_t)gI2c);
         _applog(2, (char *)&i_v1, false);
     }
     // 0x1fefc
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x1ff08 - 0x201ca
 // Line range:    216 - 262
-char * read_all_sensor(void) {
-    int32_t * p_v1 = (int32_t *)(i_g62 + 2808); // 0x201b4
+char *read_all_sensor(void) {
+    int32_t *p_v1 = (int32_t *)(i_g62 + 2808); // 0x201b4
     if (*p_v1 == 0) {
         // 0x201be
         return NULL;
     }
-    int32_t * p_v2 = (int32_t *)i_g62; // 0x1ff1a
-    int32_t * p_v3 = (int32_t *)(i_g62 + 2804); // 0x2006a
-    int32_t i_v4 = 0; // 0x20074
-    int32_t i_v5; // bp-1060, 0x1ff08
-    int32_t i_v6; // 0x1ff50
-    char * p_v7; // 0x1ff6a
-    char * p_v8; // 0x1ffec
-    int32_t i_v9; // 0x20060
-    int32_t i_v10; // 0x1ff3e
+    int32_t *p_v2 = (int32_t *)i_g62;          // 0x1ff1a
+    int32_t *p_v3 = (int32_t *)(i_g62 + 2804); // 0x2006a
+    int32_t i_v4 = 0;                          // 0x20074
+    int32_t i_v5;                              // bp-1060, 0x1ff08
+    int32_t i_v6;                              // 0x1ff50
+    char *p_v7;                                // 0x1ff6a
+    char *p_v8;                                // 0x1ffec
+    int32_t i_v9;                              // 0x20060
+    int32_t i_v10;                             // 0x1ff3e
     if (*p_v3 > 0) {
         i_v10 = *(int32_t *)(i_g62 + 1780 + 4 * i_v4);
         i_v6 = *(int32_t *)(i_g62 + 1776) * i_v10;
         p_v7 = (char *)(i_v10 + (int32_t)&chip_temp);
         user_read_iic(p_v2, i_v6, 76, 1, p_v7, 1);
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x1ffa6
-            snprintf((char *)&i_v5, 1024, "ASIC %d chip temp %d\n", i_v10, (int32_t)*p_v7);
+            snprintf((char *)&i_v5, 1024, "ASIC %d chip temp %d\n", i_v10,
+                     (int32_t)*p_v7);
             _applog(2, (char *)&i_v5, false);
         }
         // 0x1ffda
         p_v8 = (char *)(i_v10 + (int32_t)&pcb_temp);
         user_read_iic(p_v2, i_v6, 76, 0, p_v8, 1);
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x20028
-            snprintf((char *)&i_v5, 1024, "ASIC %d pcb temp %d\n", i_v10, (int32_t)*p_v8);
+            snprintf((char *)&i_v5, 1024, "ASIC %d pcb temp %d\n", i_v10,
+                     (int32_t)*p_v8);
             _applog(2, (char *)&i_v5, false);
         }
         // 0x2005c
@@ -9272,17 +10286,21 @@ char * read_all_sensor(void) {
             i_v6 = *(int32_t *)(i_g62 + 1776) * i_v10;
             p_v7 = (char *)(i_v10 + (int32_t)&chip_temp);
             user_read_iic(p_v2, i_v6, 76, 1, p_v7, 1);
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x1ffa6
-                snprintf((char *)&i_v5, 1024, "ASIC %d chip temp %d\n", i_v10, (int32_t)*p_v7);
+                snprintf((char *)&i_v5, 1024, "ASIC %d chip temp %d\n", i_v10,
+                         (int32_t)*p_v7);
                 _applog(2, (char *)&i_v5, false);
             }
             // 0x1ffda
             p_v8 = (char *)(i_v10 + (int32_t)&pcb_temp);
             user_read_iic(p_v2, i_v6, 76, 0, p_v8, 1);
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x20028
-                snprintf((char *)&i_v5, 1024, "ASIC %d pcb temp %d\n", i_v10, (int32_t)*p_v8);
+                snprintf((char *)&i_v5, 1024, "ASIC %d pcb temp %d\n", i_v10,
+                         (int32_t)*p_v8);
                 _applog(2, (char *)&i_v5, false);
             }
             // 0x2005c
@@ -9293,18 +10311,20 @@ char * read_all_sensor(void) {
     int32_t i_v11 = 0; // 0x200ee
     uint32_t i_v12 = 0;
     uint32_t i_v13 = 0;
-    uint32_t i_v14 = (int32_t)*(char *)(i_v11 + (int32_t)&chip_temp); // 0x2009c
+    uint32_t i_v14 =
+        (int32_t) * (char *)(i_v11 + (int32_t)&chip_temp); // 0x2009c
     int32_t i_v15 = i_v13 < i_v14 ? i_v14 : i_v13;
-    uint32_t i_v16 = (int32_t)*(char *)(i_v11 + (int32_t)&pcb_temp); // 0x200ca
+    uint32_t i_v16 =
+        (int32_t) * (char *)(i_v11 + (int32_t)&pcb_temp); // 0x200ca
     int32_t i_v17 = i_v12 < i_v16 ? i_v16 : i_v12;
     i_v11++;
     while (i_v11 < 3) {
         // 0x2008e
         i_v12 = i_v17;
         i_v13 = i_v15;
-        i_v14 = (int32_t)*(char *)(i_v11 + (int32_t)&chip_temp);
+        i_v14 = (int32_t) * (char *)(i_v11 + (int32_t)&chip_temp);
         i_v15 = i_v13 < i_v14 ? i_v14 : i_v13;
-        i_v16 = (int32_t)*(char *)(i_v11 + (int32_t)&pcb_temp);
+        i_v16 = (int32_t) * (char *)(i_v11 + (int32_t)&pcb_temp);
         i_v17 = i_v12 < i_v16 ? i_v16 : i_v12;
         i_v11++;
     }
@@ -9312,13 +10332,15 @@ char * read_all_sensor(void) {
     chip_high = i_v15;
     pcb_high = i_v17;
     int32_t i_v18 = 0; // 0x20136
-    int32_t i_v19; // 0x2013c
+    int32_t i_v19;     // 0x2013c
     if (i_v15 % 256 > g_patten) {
         // 0x20138
         i_v19 = 1;
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x2016c
-            snprintf((char *)&i_v5, 1024, "temperature alarm counter %d\n", i_v19);
+            snprintf((char *)&i_v5, 1024, "temperature alarm counter %d\n",
+                     i_v19);
             _applog(2, (char *)&i_v5, false);
         }
         // 0x2018e
@@ -9339,17 +10361,21 @@ char * read_all_sensor(void) {
             i_v6 = *(int32_t *)(i_g62 + 1776) * i_v10;
             p_v7 = (char *)(i_v10 + (int32_t)&chip_temp);
             user_read_iic(p_v2, i_v6, 76, 1, p_v7, 1);
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x1ffa6
-                snprintf((char *)&i_v5, 1024, "ASIC %d chip temp %d\n", i_v10, (int32_t)*p_v7);
+                snprintf((char *)&i_v5, 1024, "ASIC %d chip temp %d\n", i_v10,
+                         (int32_t)*p_v7);
                 _applog(2, (char *)&i_v5, false);
             }
             // 0x1ffda
             p_v8 = (char *)(i_v10 + (int32_t)&pcb_temp);
             user_read_iic(p_v2, i_v6, 76, 0, p_v8, 1);
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x20028
-                snprintf((char *)&i_v5, 1024, "ASIC %d pcb temp %d\n", i_v10, (int32_t)*p_v8);
+                snprintf((char *)&i_v5, 1024, "ASIC %d pcb temp %d\n", i_v10,
+                         (int32_t)*p_v8);
                 _applog(2, (char *)&i_v5, false);
             }
             // 0x2005c
@@ -9361,17 +10387,21 @@ char * read_all_sensor(void) {
                 i_v6 = *(int32_t *)(i_g62 + 1776) * i_v10;
                 p_v7 = (char *)(i_v10 + (int32_t)&chip_temp);
                 user_read_iic(p_v2, i_v6, 76, 1, p_v7, 1);
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x1ffa6
-                    snprintf((char *)&i_v5, 1024, "ASIC %d chip temp %d\n", i_v10, (int32_t)*p_v7);
+                    snprintf((char *)&i_v5, 1024, "ASIC %d chip temp %d\n",
+                             i_v10, (int32_t)*p_v7);
                     _applog(2, (char *)&i_v5, false);
                 }
                 // 0x1ffda
                 p_v8 = (char *)(i_v10 + (int32_t)&pcb_temp);
                 user_read_iic(p_v2, i_v6, 76, 0, p_v8, 1);
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x20028
-                    snprintf((char *)&i_v5, 1024, "ASIC %d pcb temp %d\n", i_v10, (int32_t)*p_v8);
+                    snprintf((char *)&i_v5, 1024, "ASIC %d pcb temp %d\n",
+                             i_v10, (int32_t)*p_v8);
                     _applog(2, (char *)&i_v5, false);
                 }
                 // 0x2005c
@@ -9383,18 +10413,18 @@ char * read_all_sensor(void) {
         i_v11 = 0;
         i_v12 = 0;
         i_v13 = 0;
-        i_v14 = (int32_t)*(char *)(i_v11 + (int32_t)&chip_temp);
+        i_v14 = (int32_t) * (char *)(i_v11 + (int32_t)&chip_temp);
         i_v15 = i_v13 < i_v14 ? i_v14 : i_v13;
-        i_v16 = (int32_t)*(char *)(i_v11 + (int32_t)&pcb_temp);
+        i_v16 = (int32_t) * (char *)(i_v11 + (int32_t)&pcb_temp);
         i_v17 = i_v12 < i_v16 ? i_v16 : i_v12;
         i_v11++;
         while (i_v11 < 3) {
             // 0x2008e
             i_v12 = i_v17;
             i_v13 = i_v15;
-            i_v14 = (int32_t)*(char *)(i_v11 + (int32_t)&chip_temp);
+            i_v14 = (int32_t) * (char *)(i_v11 + (int32_t)&chip_temp);
             i_v15 = i_v13 < i_v14 ? i_v14 : i_v13;
-            i_v16 = (int32_t)*(char *)(i_v11 + (int32_t)&pcb_temp);
+            i_v16 = (int32_t) * (char *)(i_v11 + (int32_t)&pcb_temp);
             i_v17 = i_v12 < i_v16 ? i_v16 : i_v12;
             i_v11++;
         }
@@ -9405,9 +10435,11 @@ char * read_all_sensor(void) {
         if (i_v15 % 256 > g_patten) {
             // 0x20138
             i_v19 = i_v20 + 1;
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x2016c
-                snprintf((char *)&i_v5, 1024, "temperature alarm counter %d\n", i_v19);
+                snprintf((char *)&i_v5, 1024, "temperature alarm counter %d\n",
+                         i_v19);
                 _applog(2, (char *)&i_v5, false);
             }
             // 0x2018e
@@ -9425,28 +10457,33 @@ char * read_all_sensor(void) {
     return NULL;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x201cc - 0x2020a
 // Line range:    264 - 269
 void start_read_temp(void) {
     // 0x201cc
     user_i2c_enable((int32_t *)i_g62, gChain);
     usleep(0xc350);
-    __asm_nop(pthread_create(&i_g52, NULL, (int32_t * (*)(int32_t *))0x1ff09, NULL), 0, 0x1ff09, 0);
+    __asm_nop(
+        pthread_create(&i_g52, NULL, (int32_t * (*)(int32_t *))0x1ff09, NULL),
+        0, 0x1ff09, 0);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x20210 - 0x2023a
 // Line range:    271 - 275
 void stop_read_temp(void) {
     // 0x20210
     pthread_cancel(i_g52);
     int32_t i_v1 = i_g52; // 0x2022c
-    int32_t i_v2; // 0x20210
+    int32_t i_v2;         // 0x20210
     __asm_nop(pthread_join(i_v1, NULL), 0, i_v2, i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x2023c - 0x208b8
 // Line range:    279 - 336
 void show_result(void) {
@@ -9454,38 +10491,45 @@ void show_result(void) {
     int32_t i_v1; // 0x2023c
     int32_t i_v2; // 0x2023c
     int32_t i_v3; // bp-1052, 0x2023c
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x2027c
-        memcpy(&i_v3, (int32_t *)"---------------------------------result-----------------------------------------------\n", 88);
+        memcpy(&i_v3,
+               (int32_t *)"---------------------------------result-------------"
+                          "----------------------------------\n",
+               88);
         _applog(2, (char *)&i_v3, false);
         i_v1 = &i_g101;
         i_v2 = &i_v3;
     }
     // 0x2029e
     read_temp_test_result = 1;
-    int32_t * p_v4 = (int32_t *)(i_g62 + 2804); // 0x2041e
-    int32_t i_v5 = 1; // 0x20428
-    int32_t i_v6 = i_v1; // 0x20428
-    int32_t i_v7 = i_v2; // 0x20428
+    int32_t *p_v4 = (int32_t *)(i_g62 + 2804); // 0x2041e
+    int32_t i_v5 = 1;                          // 0x20428
+    int32_t i_v6 = i_v1;                       // 0x20428
+    int32_t i_v7 = i_v2;                       // 0x20428
     if (*p_v4 > 0) {
         int32_t i_v8 = i_g62 + 1780;
-        int32_t * p_v9 = (int32_t *)i_v8;
+        int32_t *p_v9 = (int32_t *)i_v8;
         int32_t i_v10 = &i_v3;
-        int32_t i_v11 = 0; // 0x20414
+        int32_t i_v11 = 0;                              // 0x20414
         int32_t i_v12 = *(int32_t *)(4 * i_v11 + i_v8); // 0x202c2
-        int32_t i_v13 = (int32_t)*(char *)(i_v12 + (int32_t)&chip_temp); // 0x202d6
-        int32_t i_v14 = 1; // 0x202e8
-        int32_t i_v15 = i_v1; // 0x202e8
-        int32_t i_v16 = i_v2; // 0x202e8
-        int32_t i_v17; // 0x2023c
-        int32_t i_v18; // 0x2023c
+        int32_t i_v13 =
+            (int32_t) * (char *)(i_v12 + (int32_t)&chip_temp); // 0x202d6
+        int32_t i_v14 = 1;                                     // 0x202e8
+        int32_t i_v15 = i_v1;                                  // 0x202e8
+        int32_t i_v16 = i_v2;                                  // 0x202e8
+        int32_t i_v17;                                         // 0x2023c
+        int32_t i_v18;                                         // 0x2023c
         if (i_g63 > i_v13 || g_patten < i_v13) {
             // 0x2030c
             i_v17 = i_v1;
             i_v18 = i_v2;
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 0) {
                 // 0x20336
-                snprintf((char *)&i_v3, 1024, "Sensor %d CHIP temp wrong!\n", *p_v9 + 1);
+                snprintf((char *)&i_v3, 1024, "Sensor %d CHIP temp wrong!\n",
+                         *p_v9 + 1);
                 _applog(0, (char *)&i_v3, false);
                 i_v17 = &i_g101;
                 i_v18 = i_v10;
@@ -9498,19 +10542,22 @@ void show_result(void) {
         }
         int32_t i_v19 = i_v16;
         int32_t i_v20 = i_v15;
-        int32_t i_v21 = (int32_t)*(char *)(i_v12 + (int32_t)&pcb_temp); // 0x2037a
-        int32_t i_v22 = i_v14; // 0x2038c
-        int32_t i_v23 = i_v20; // 0x2038c
-        int32_t i_v24 = i_v19; // 0x2038c
-        int32_t i_v25; // 0x2023c
-        int32_t i_v26; // 0x2023c
+        int32_t i_v21 =
+            (int32_t) * (char *)(i_v12 + (int32_t)&pcb_temp); // 0x2037a
+        int32_t i_v22 = i_v14;                                // 0x2038c
+        int32_t i_v23 = i_v20;                                // 0x2038c
+        int32_t i_v24 = i_v19;                                // 0x2038c
+        int32_t i_v25;                                        // 0x2023c
+        int32_t i_v26;                                        // 0x2023c
         if (i_g63 > i_v21 || g_patten < i_v21) {
             // 0x203b0
             i_v25 = i_v20;
             i_v26 = i_v19;
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 0) {
                 // 0x203da
-                snprintf((char *)&i_v3, 1024, "Sensor %d PCB temp wrong!\n", *p_v9 + 1);
+                snprintf((char *)&i_v3, 1024, "Sensor %d PCB temp wrong!\n",
+                         *p_v9 + 1);
                 _applog(0, (char *)&i_v3, false);
                 i_v25 = &i_g101;
                 i_v26 = i_v10;
@@ -9532,7 +10579,7 @@ void show_result(void) {
             int32_t i_v30 = i_v28;
             int32_t i_v31 = i_v27;
             i_v12 = *(int32_t *)(4 * i_v11 + i_v8);
-            i_v13 = (int32_t)*(char *)(i_v12 + (int32_t)&chip_temp);
+            i_v13 = (int32_t) * (char *)(i_v12 + (int32_t)&chip_temp);
             i_v14 = i_v29;
             i_v15 = i_v30;
             i_v16 = i_v31;
@@ -9540,9 +10587,11 @@ void show_result(void) {
                 // 0x2030c
                 i_v17 = i_v30;
                 i_v18 = i_v31;
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 0) {
                     // 0x20336
-                    snprintf((char *)&i_v3, 1024, "Sensor %d CHIP temp wrong!\n", *p_v9 + 1);
+                    snprintf((char *)&i_v3, 1024,
+                             "Sensor %d CHIP temp wrong!\n", *p_v9 + 1);
                     _applog(0, (char *)&i_v3, false);
                     i_v17 = &i_g101;
                     i_v18 = i_v10;
@@ -9556,7 +10605,7 @@ void show_result(void) {
             // 0x2036c
             i_v19 = i_v16;
             i_v20 = i_v15;
-            i_v21 = (int32_t)*(char *)(i_v12 + (int32_t)&pcb_temp);
+            i_v21 = (int32_t) * (char *)(i_v12 + (int32_t)&pcb_temp);
             i_v22 = i_v14;
             i_v23 = i_v20;
             i_v24 = i_v19;
@@ -9564,9 +10613,11 @@ void show_result(void) {
                 // 0x203b0
                 i_v25 = i_v20;
                 i_v26 = i_v19;
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 0) {
                     // 0x203da
-                    snprintf((char *)&i_v3, 1024, "Sensor %d PCB temp wrong!\n", *p_v9 + 1);
+                    snprintf((char *)&i_v3, 1024, "Sensor %d PCB temp wrong!\n",
+                             *p_v9 + 1);
                     _applog(0, (char *)&i_v3, false);
                     i_v25 = &i_g101;
                     i_v26 = i_v10;
@@ -9615,7 +10666,8 @@ void show_result(void) {
         }
     }
     // 0x204d0
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x204fa
         __asm_vmul_f32(__asm_vldr(i_g85), __asm_vldr(0x4380f249));
         return;
@@ -9629,7 +10681,8 @@ void show_result(void) {
     }
     // 0x20772
     pattern_level = 1;
-    float32_t f_v37 = __asm_vmul_f32(__asm_vldr(i_g85), __asm_vldr(0x4380f249)); // 0x2078e
+    float32_t f_v37 =
+        __asm_vmul_f32(__asm_vldr(i_g85), __asm_vldr(0x4380f249)); // 0x2078e
     __asm_vcmpe_f32(f_v37, __asm_vcvt_f32_s32(__asm_vmov(i_g65)));
     int32_t i_v38; // 0x2023c
     __asm_vmrs(i_v38, i_v38);
@@ -9639,13 +10692,13 @@ void show_result(void) {
     }
     // 0x207b2
     pattern_result = 1;
-    char i_v39 = *(char *)&use_syslog; // 0x207c6
+    char i_v39 = *(char *)&use_syslog;     // 0x207c6
     char i_v40 = *(char *)&opt_log_output; // 0x207d4
-    char i_v41 = i_v40; // 0x207ca
-    char i_v42 = i_v39; // 0x207ca
-    int32_t i_v43 = i_v34; // 0x207ca
-    int32_t i_v44 = i_v35; // 0x207ca
-    int32_t i_v45 = 1; // 0x207ca
+    char i_v41 = i_v40;                    // 0x207ca
+    char i_v42 = i_v39;                    // 0x207ca
+    int32_t i_v43 = i_v34;                 // 0x207ca
+    int32_t i_v44 = i_v35;                 // 0x207ca
+    int32_t i_v45 = 1;                     // 0x207ca
     if ((i_v40 || i_v39) == 0 != opt_log_level < 2) {
         // 0x207e8
         i_v3 = 0x74746150;
@@ -9675,9 +10728,12 @@ void show_result(void) {
     } else {
         goto lab_0x2088c;
     }
-  lab_0x2088c:
+lab_0x2088c:
     // 0x2088c
-    memcpy(&i_v3, (int32_t *)"--------------------------------------------------------------------------------------\n", 88);
+    memcpy(&i_v3,
+           (int32_t *)"--------------------------------------------------------"
+                      "------------------------------\n",
+           88);
     int32_t i_v50 = &i_v3; // 0x208a2
     _applog(2, (char *)&i_v3, false);
     i_v46 = &i_g101;
@@ -9685,17 +10741,18 @@ void show_result(void) {
     i_v48 = 0;
     i_v49 = i_v50;
     goto lab_0x208ae;
-  lab_0x208ae:
+lab_0x208ae:
     // 0x208ae
     __asm_nop(i_v46, i_v47, i_v48, i_v49);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x208b8 - 0x209b8
 // Line range:    338 - 362
 void V9_print_lcd(void) {
     char level_str[17]; // bp-48, 0x208b8
-    char str[17]; // bp-28, 0x208b8
+    char str[17];       // bp-28, 0x208b8
     // 0x208b8
     str = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     show_result();
@@ -9726,7 +10783,8 @@ void V9_print_lcd(void) {
     __asm_nop((int32_t)&i_g101, i_v3, 16, i_v3);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x209b8 - 0x20a16
 // Line range:    364 - 374
 void V9_print_lcd_type(int32_t type) {
@@ -9738,7 +10796,7 @@ void V9_print_lcd_type(int32_t type) {
         write_lcd_no_memset(1, "     check      ", 16);
         write_lcd_no_memset(2, " u2 u44 u16 u23 ", 16);
         write_lcd_no_memset(3, " u30            ", 16);
-        i_v1 = (int32_t)" u30            ";
+        i_v1 = (int32_t) " u30            ";
         i_v2 = 16;
     } else {
         // 0x20a0a
@@ -9748,7 +10806,8 @@ void V9_print_lcd_type(int32_t type) {
     __asm_nop((int32_t)&i_g101, i_v1, i_v2, type);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x20a18 - 0x20a2e
 // Line range:    376 - 379
 int32_t is_asic_pass(int32_t index) {
@@ -9756,10 +10815,11 @@ int32_t is_asic_pass(int32_t index) {
     return 1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x20a30 - 0x20b40
 // Line range:    381 - 398
-char * show_stats_func_z15_3chips(void) {
+char *show_stats_func_z15_3chips(void) {
     // 0x20a30
     int32_t i_v1; // bp-40, 0x20a30
     int32_t i_v2 = &i_v1;
@@ -9786,27 +10846,32 @@ char * show_stats_func_z15_3chips(void) {
     }
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x20b48 - 0x20efc
 // Line range:    403 - 447
 int32_t bm1744_hashboard_init(void) {
-    int32_t * p_v1 = (int32_t *)i_g62; // 0x20b5a
+    int32_t *p_v1 = (int32_t *)i_g62; // 0x20b5a
     fan_control(5);
     check_asic_num(p_v1);
-    int32_t * p_v2 = (int32_t *)(i_g62 + 1772);
+    int32_t *p_v2 = (int32_t *)(i_g62 + 1772);
     bool i_v3 = true; // 0x20b78
-    char * p_v4; // bp-1044, 0x20b48
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
-        int32_t i_v5 = *p_v2; // 0x20b9a
+    char *p_v4;       // bp-1044, 0x20b48
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
+        int32_t i_v5 = *p_v2;                                 // 0x20b9a
         int32_t i_v6 = *(int32_t *)(i_g62 + 16 + 144 * i_v5); // 0x20bb6
-        snprintf((char *)&p_v4, 1024, "%s: Check ASIC number: chain %d has %d asic\n", "bm1744_hashboard_init", i_v5, i_v6);
+        snprintf((char *)&p_v4, 1024,
+                 "%s: Check ASIC number: chain %d has %d asic\n",
+                 "bm1744_hashboard_init", i_v5, i_v6);
         _applog(2, (char *)&p_v4, false);
         i_v3 = (*(char *)&opt_log_output | *(char *)&use_syslog) == 0;
     }
     // 0x20be2
     if (i_v3 != opt_log_level < 2) {
         int32_t i_v7 = *(int32_t *)(i_g62 + 20 + 144 * *p_v2); // 0x20c24
-        snprintf((char *)&p_v4, 1024, "%s: Expect ASIC number: %d\n", "bm1744_hashboard_init", i_v7);
+        snprintf((char *)&p_v4, 1024, "%s: Expect ASIC number: %d\n",
+                 "bm1744_hashboard_init", i_v7);
         _applog(2, (char *)&p_v4, false);
     }
     int32_t i_v8 = 144 * *p_v2 + i_g62; // 0x20c62
@@ -9814,9 +10879,11 @@ int32_t bm1744_hashboard_init(void) {
         // 0x20c86
         memset((int32_t *)&x_g100, 32, 64);
         write_lcd(0, "Not enough ASIC!", 16);
-        sprintf((char *)&p_g20, "%d ASIC", *(int32_t *)(i_g62 + 16 + 144 * *p_v2));
+        sprintf((char *)&p_g20, "%d ASIC",
+                *(int32_t *)(i_g62 + 16 + 144 * *p_v2));
         write_lcd_no_memset(1, (char *)&p_g20, 16);
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 0) {
             // 0x20d04
             p_v4 = (char *)0x20746f4e;
             _applog(0, (char *)&p_v4, false);
@@ -9828,7 +10895,8 @@ int32_t bm1744_hashboard_init(void) {
     if (i_g64 != 0) {
         // 0x20d3c
         write_lcd(0, "Find all ASIC!  ", 16);
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x20d76
             p_v4 = (char *)0x646e6946;
             _applog(2, (char *)&p_v4, false);
@@ -9848,7 +10916,8 @@ int32_t bm1744_hashboard_init(void) {
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x20f00 - 0x21332
 // Line range:    449 - 537
 void singleboard_pattern_test(void) {
@@ -9856,15 +10925,15 @@ void singleboard_pattern_test(void) {
     i_g86 = 1;
     sleep(1);
     fan_control(5);
-    int32_t i_v1; // 0x20f00
-    int32_t i_v2; // 0x20f00
-    int32_t i_v3; // 0x20f00
-    int32_t i_v4; // 0x20f00
-    int32_t i_v5; // 0x20f00
-    int32_t i_v6; // 0x20f00
-    int32_t i_v7; // 0x20f00
-    int32_t i_v8; // 0x20f00
-    int32_t i_v9; // 0x20f00
+    int32_t i_v1;  // 0x20f00
+    int32_t i_v2;  // 0x20f00
+    int32_t i_v3;  // 0x20f00
+    int32_t i_v4;  // 0x20f00
+    int32_t i_v5;  // 0x20f00
+    int32_t i_v6;  // 0x20f00
+    int32_t i_v7;  // 0x20f00
+    int32_t i_v8;  // 0x20f00
+    int32_t i_v9;  // 0x20f00
     int32_t i_v10; // 0x20f00
     int32_t i_v11; // 0x20f00
     if (g_patten > 0) {
@@ -9873,31 +10942,31 @@ void singleboard_pattern_test(void) {
         int32_t i_v14 = i_g63; // 0x21208
         int32_t i_v15 = i_g63; // 0x21208
         int32_t i_v16 = i_v13; // 0x21208
-        int32_t i_v17; // 0x20f00
+        int32_t i_v17;         // 0x20f00
         int32_t i_v18 = i_v17; // 0x21208
-        int32_t i_v19; // 0x20f00
-        int32_t i_v20; // 0x20f00
-        int32_t i_v21; // 0x20f00
-        int32_t i_v22; // 0x20f00
-        int32_t i_v23; // 0x20f00
-        int32_t i_v24; // 0x21200
-        int32_t i_v25; // 0x20f00
-        int32_t i_v26; // 0x20f00
-        int32_t i_v27; // 0x20f00
-        int32_t i_v28; // 0x20f00
-        int32_t i_v29; // 0x20f00
-        int32_t i_v30; // 0x20f00
-        int32_t i_v31; // bp-1080, 0x20f00
-        int32_t i_v32; // 0x20f00
-        uint32_t i_v33; // 0x20f00
-        int32_t i_v34; // 0x211f2
-        int32_t i_v35; // 0x21120
-        int32_t i_v36; // 0x20f00
-        int32_t i_v37; // 0x20f00
-        int32_t i_v38; // 0x20f00
-        int32_t i_v39; // 0x20f00
-        int32_t i_v40; // 0x20f00
-        int32_t i_v41; // 0x20f00
+        int32_t i_v19;         // 0x20f00
+        int32_t i_v20;         // 0x20f00
+        int32_t i_v21;         // 0x20f00
+        int32_t i_v22;         // 0x20f00
+        int32_t i_v23;         // 0x20f00
+        int32_t i_v24;         // 0x21200
+        int32_t i_v25;         // 0x20f00
+        int32_t i_v26;         // 0x20f00
+        int32_t i_v27;         // 0x20f00
+        int32_t i_v28;         // 0x20f00
+        int32_t i_v29;         // 0x20f00
+        int32_t i_v30;         // 0x20f00
+        int32_t i_v31;         // bp-1080, 0x20f00
+        int32_t i_v32;         // 0x20f00
+        uint32_t i_v33;        // 0x20f00
+        int32_t i_v34;         // 0x211f2
+        int32_t i_v35;         // 0x21120
+        int32_t i_v36;         // 0x20f00
+        int32_t i_v37;         // 0x20f00
+        int32_t i_v38;         // 0x20f00
+        int32_t i_v39;         // 0x20f00
+        int32_t i_v40;         // 0x20f00
+        int32_t i_v41;         // 0x20f00
         if (i_g63 > 0) {
             // 0x211da
             i_v25 = i_g67;
@@ -9914,7 +10983,10 @@ void singleboard_pattern_test(void) {
                         i_v10 = i_v9;
                         i_v4 = 0;
                         pthread_mutex_lock(&i_g87);
-                        p_g77 = (char *)(((i_g63 * i_v7 + i_v10) * i_g67 + i_v4) * i_v12 + i_g76);
+                        p_g77 =
+                            (char *)(((i_g63 * i_v7 + i_v10) * i_g67 + i_v4) *
+                                         i_v12 +
+                                     i_g76);
                         i_g78 = i_v7;
                         i_g79 = i_v10;
                         i_g80 = i_v4;
@@ -9935,11 +11007,15 @@ void singleboard_pattern_test(void) {
                             i_v32 = i_v33 + 1;
                             if (i_v33 >= i_g66 / 0xc350) {
                                 // 0x21160
-                                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
+                                if ((*(char *)&opt_log_output |
+                                     *(char *)&use_syslog) == 0 ==
+                                    opt_log_level < 2) {
                                     goto lab_0x211ac;
                                 } else {
                                     // 0x2118a
-                                    snprintf((char *)&i_v31, 1024, "pattern id %d receive failed\n", i_v4);
+                                    snprintf((char *)&i_v31, 1024,
+                                             "pattern id %d receive failed\n",
+                                             i_v4);
                                     _applog(2, (char *)&i_v31, false);
                                     goto lab_0x211ac;
                                 }
@@ -9957,9 +11033,12 @@ void singleboard_pattern_test(void) {
                         // 0x20f6e
                         i_v20 = i_v19;
                         i_v26 = i_v17;
-                        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+                        if ((*(char *)&opt_log_output | *(char *)&use_syslog) ==
+                            0 != opt_log_level < 1) {
                             // 0x20f98
-                            snprintf((char *)&i_v31, 1024, "%s hardware error\n", "singleboard_pattern_test");
+                            snprintf((char *)&i_v31, 1024,
+                                     "%s hardware error\n",
+                                     "singleboard_pattern_test");
                             _applog(1, (char *)&i_v31, false);
                             i_v20 = i_g67;
                             i_v26 = &i_v31;
@@ -10002,7 +11081,10 @@ void singleboard_pattern_test(void) {
                             i_v10 = i_v9;
                             i_v4 = 0;
                             pthread_mutex_lock(&i_g87);
-                            p_g77 = (char *)(((i_g63 * i_v7 + i_v10) * i_g67 + i_v4) * i_v12 + i_g76);
+                            p_g77 = (char *)(((i_g63 * i_v7 + i_v10) * i_g67 +
+                                              i_v4) *
+                                                 i_v12 +
+                                             i_g76);
                             i_g78 = i_v7;
                             i_g79 = i_v10;
                             i_g80 = i_v4;
@@ -10023,11 +11105,16 @@ void singleboard_pattern_test(void) {
                                 i_v32 = i_v33 + 1;
                                 if (i_v33 >= i_g66 / 0xc350) {
                                     // 0x21160
-                                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
+                                    if ((*(char *)&opt_log_output |
+                                         *(char *)&use_syslog) == 0 ==
+                                        opt_log_level < 2) {
                                         goto lab_0x211ac;
                                     } else {
                                         // 0x2118a
-                                        snprintf((char *)&i_v31, 1024, "pattern id %d receive failed\n", i_v4);
+                                        snprintf(
+                                            (char *)&i_v31, 1024,
+                                            "pattern id %d receive failed\n",
+                                            i_v4);
                                         _applog(2, (char *)&i_v31, false);
                                         goto lab_0x211ac;
                                     }
@@ -10045,9 +11132,13 @@ void singleboard_pattern_test(void) {
                             // 0x20f6e
                             i_v20 = i_v19;
                             i_v26 = i_v2;
-                            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+                            if ((*(char *)&opt_log_output |
+                                 *(char *)&use_syslog) == 0 !=
+                                opt_log_level < 1) {
                                 // 0x20f98
-                                snprintf((char *)&i_v31, 1024, "%s hardware error\n", "singleboard_pattern_test");
+                                snprintf((char *)&i_v31, 1024,
+                                         "%s hardware error\n",
+                                         "singleboard_pattern_test");
                                 _applog(1, (char *)&i_v31, false);
                                 i_v20 = i_g67;
                                 i_v26 = &i_v31;
@@ -10083,7 +11174,7 @@ void singleboard_pattern_test(void) {
             i_v18 = i_v29;
         }
         int32_t i_v42 = i_v15;
-        int32_t i_v43 = g_patten; // 0x2121e
+        int32_t i_v43 = g_patten;  // 0x2121e
         int32_t i_v44 = i_v16 + 1; // 0x21210
         i_v3 = i_v18;
         while (i_v43 > i_v44) {
@@ -10112,7 +11203,10 @@ void singleboard_pattern_test(void) {
                             i_v10 = i_v9;
                             i_v4 = 0;
                             pthread_mutex_lock(&i_g87);
-                            p_g77 = (char *)(((i_g63 * i_v7 + i_v10) * i_g67 + i_v4) * i_v12 + i_g76);
+                            p_g77 = (char *)(((i_g63 * i_v7 + i_v10) * i_g67 +
+                                              i_v4) *
+                                                 i_v12 +
+                                             i_g76);
                             i_g78 = i_v7;
                             i_g79 = i_v10;
                             i_g80 = i_v4;
@@ -10133,11 +11227,16 @@ void singleboard_pattern_test(void) {
                                 i_v32 = i_v33 + 1;
                                 if (i_v33 >= i_g66 / 0xc350) {
                                     // 0x21160
-                                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
+                                    if ((*(char *)&opt_log_output |
+                                         *(char *)&use_syslog) == 0 ==
+                                        opt_log_level < 2) {
                                         goto lab_0x211ac;
                                     } else {
                                         // 0x2118a
-                                        snprintf((char *)&i_v31, 1024, "pattern id %d receive failed\n", i_v4);
+                                        snprintf(
+                                            (char *)&i_v31, 1024,
+                                            "pattern id %d receive failed\n",
+                                            i_v4);
                                         _applog(2, (char *)&i_v31, false);
                                         goto lab_0x211ac;
                                     }
@@ -10155,9 +11254,13 @@ void singleboard_pattern_test(void) {
                             // 0x20f6e
                             i_v20 = i_v19;
                             i_v26 = i_v2;
-                            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+                            if ((*(char *)&opt_log_output |
+                                 *(char *)&use_syslog) == 0 !=
+                                opt_log_level < 1) {
                                 // 0x20f98
-                                snprintf((char *)&i_v31, 1024, "%s hardware error\n", "singleboard_pattern_test");
+                                snprintf((char *)&i_v31, 1024,
+                                         "%s hardware error\n",
+                                         "singleboard_pattern_test");
                                 _applog(1, (char *)&i_v31, false);
                                 i_v20 = i_g67;
                                 i_v26 = &i_v31;
@@ -10200,7 +11303,11 @@ void singleboard_pattern_test(void) {
                                 i_v10 = i_v9;
                                 i_v4 = 0;
                                 pthread_mutex_lock(&i_g87);
-                                p_g77 = (char *)(((i_g63 * i_v7 + i_v10) * i_g67 + i_v4) * i_v12 + i_g76);
+                                p_g77 =
+                                    (char *)(((i_g63 * i_v7 + i_v10) * i_g67 +
+                                              i_v4) *
+                                                 i_v12 +
+                                             i_g76);
                                 i_g78 = i_v7;
                                 i_g79 = i_v10;
                                 i_g80 = i_v4;
@@ -10221,11 +11328,16 @@ void singleboard_pattern_test(void) {
                                     i_v32 = i_v33 + 1;
                                     if (i_v33 >= i_g66 / 0xc350) {
                                         // 0x21160
-                                        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
+                                        if ((*(char *)&opt_log_output |
+                                             *(char *)&use_syslog) == 0 ==
+                                            opt_log_level < 2) {
                                             goto lab_0x211ac;
                                         } else {
                                             // 0x2118a
-                                            snprintf((char *)&i_v31, 1024, "pattern id %d receive failed\n", i_v4);
+                                            snprintf((char *)&i_v31, 1024,
+                                                     "pattern id %d receive "
+                                                     "failed\n",
+                                                     i_v4);
                                             _applog(2, (char *)&i_v31, false);
                                             goto lab_0x211ac;
                                         }
@@ -10243,9 +11355,13 @@ void singleboard_pattern_test(void) {
                                 // 0x20f6e
                                 i_v20 = i_v19;
                                 i_v26 = i_v2;
-                                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+                                if ((*(char *)&opt_log_output |
+                                     *(char *)&use_syslog) == 0 !=
+                                    opt_log_level < 1) {
                                     // 0x20f98
-                                    snprintf((char *)&i_v31, 1024, "%s hardware error\n", "singleboard_pattern_test");
+                                    snprintf((char *)&i_v31, 1024,
+                                             "%s hardware error\n",
+                                             "singleboard_pattern_test");
                                     _applog(1, (char *)&i_v31, false);
                                     i_v20 = i_g67;
                                     i_v26 = &i_v31;
@@ -10290,18 +11406,18 @@ void singleboard_pattern_test(void) {
     }
     // 0x2122a
     i_g86 = 0;
-    int32_t i_v48 = 0; // 0x21326
+    int32_t i_v48 = 0;        // 0x21326
     int32_t i_v49 = sleep(1); // 0x21326
-    int32_t i_v50 = i_v3; // 0x21326
-    int32_t i_v51 = 0; // 0x21326
+    int32_t i_v50 = i_v3;     // 0x21326
+    int32_t i_v51 = 0;        // 0x21326
     int32_t i_v52 = g_patten; // 0x21326
     if (g_patten > 0) {
         printf("ASIC %d result:\n", i_v48);
         int32_t i_v53 = i_g67 * i_g63;
         int32_t i_v54 = i_v53 * i_v48; // 0x21272
-        int32_t i_v55 = i_v48; // 0x21304
-        int32_t i_v56; // 0x20f00
-        int32_t i_v57; // 0x212e0
+        int32_t i_v55 = i_v48;         // 0x21304
+        int32_t i_v56;                 // 0x20f00
+        int32_t i_v57;                 // 0x212e0
         if (i_v53 > 0) {
             i_v56 = 0;
             printf("%c ", *(char *)(i_v56 + i_v54 + i_g81) == 0 ? 88 : 79);
@@ -10350,7 +11466,8 @@ void singleboard_pattern_test(void) {
                 while (i_g67 * i_g63 > i_v57) {
                     // 0x21282
                     i_v56 = i_v57;
-                    printf("%c ", *(char *)(i_v56 + i_v54 + i_g81) == 0 ? 88 : 79);
+                    printf("%c ",
+                           *(char *)(i_v56 + i_v54 + i_g81) == 0 ? 88 : 79);
                     if (i_v56 % 10 == 9) {
                         // 0x212d6
                         putchar(10);
@@ -10370,9 +11487,9 @@ void singleboard_pattern_test(void) {
     }
     // 0x21328
     __asm_nop(i_v49, i_v50, i_v52, i_v51);
-  lab_0x211d0:;
+lab_0x211d0:;
     int32_t i_v58 = i_v11 + 1; // 0x211d4
-    int32_t i_v59 = i_v58; // 0x211ea
+    int32_t i_v59 = i_v58;     // 0x211ea
     i_v2 = i_v1;
     i_v9 = i_v8;
     i_v6 = i_v5;
@@ -10381,7 +11498,7 @@ void singleboard_pattern_test(void) {
         goto lab_0x211da;
     }
     goto lab_0x20f60;
-  lab_0x211ac:
+lab_0x211ac:
     // 0x211ac
     dump_str((char *)p_g27, NULL, p_g77, i_g64);
     i_v5 = i_v7;
@@ -10391,10 +11508,11 @@ void singleboard_pattern_test(void) {
     goto lab_0x211d0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x21338 - 0x213c4
 // Line range:    539 - 557
-char * check_nonce(char * args) {
+char *check_nonce(char *args) {
     int32_t nonceNum = 0; // bp-1380, 0x21352
     nonce_fifo_num(&nonceNum);
     if (nonceNum == 0) {
@@ -10406,24 +11524,27 @@ char * check_nonce(char * args) {
     int32_t nonce_tmp; // bp-1376, 0x21338
     pop_nonce(&nonce_tmp);
     int32_t i_v1 = *(int32_t *)((int32_t)args + 1776); // 0x21386
-    int32_t i_v2; // bp-24, 0x21338
-    char i_v3; // 0x21338
-    is_patten_match((int32_t)(unsigned char)i_v3 / i_v1, (char *)&i_v2, (char *)&nonce_tmp);
+    int32_t i_v2;                                      // bp-24, 0x21338
+    char i_v3;                                         // 0x21338
+    is_patten_match((int32_t)(unsigned char)i_v3 / i_v1, (char *)&i_v2,
+                    (char *)&nonce_tmp);
     while (nonceNum != 0) {
         // 0x21360
         nonceNum--;
         pop_nonce(&nonce_tmp);
         i_v1 = *(int32_t *)((int32_t)args + 1776);
-        is_patten_match((int32_t)(unsigned char)i_v3 / i_v1, (char *)&i_v2, (char *)&nonce_tmp);
+        is_patten_match((int32_t)(unsigned char)i_v3 / i_v1, (char *)&i_v2,
+                        (char *)&nonce_tmp);
     }
     // 0x213b8
     return NULL;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x213c4 - 0x21410
 // Line range:    559 - 574
-char * check_nonce_loop(char * args) {
+char *check_nonce_loop(char *args) {
     // 0x213c4
     while (true) {
         // 0x213d0
@@ -10433,14 +11554,16 @@ char * check_nonce_loop(char * args) {
         } else {
             // 0x213e8
             int32_t send_id; // bp-16, 0x213c4
-            pthread_create(&send_id, NULL, (int32_t * (*)(int32_t *))0x21339, (int32_t *)args);
+            pthread_create(&send_id, NULL, (int32_t * (*)(int32_t *))0x21339,
+                           (int32_t *)args);
             pthread_join(send_id, NULL);
             usleep(0x1388);
         }
     }
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x21410 - 0x2158e
 // Line range:    579 - 599
 int32_t vol_init(uint16_t vol) {
@@ -10449,29 +11572,38 @@ int32_t vol_init(uint16_t vol) {
         if (vol >= 749 == (vol != 749)) {
             if (vol == 800) {
                 // 0x21494
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x214be
-                    snprintf((char *)&i_v1, 1024, "setting voltage == configed voltage %d\n", 800);
+                    snprintf((char *)&i_v1, 1024,
+                             "setting voltage == configed voltage %d\n", 800);
                     _applog(2, (char *)&i_v1, false);
                 }
                 // 0x21584
                 return 1;
             }
             int32_t i_v2 = 0;
-            int16_t i_v3 = ISL_set_voltage(gChain, 0, *(char *)(i_v2 + (int32_t)"PTX"), vol); // 0x21510
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            int16_t i_v3 = ISL_set_voltage(
+                gChain, 0, *(char *)(i_v2 + (int32_t) "PTX"), vol); // 0x21510
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x21544
-                snprintf((char *)&i_v1, 1024, "asic%d read back voltage = %d\n", i_v2, (int32_t)i_v3);
+                snprintf((char *)&i_v1, 1024, "asic%d read back voltage = %d\n",
+                         i_v2, (int32_t)i_v3);
                 _applog(2, (char *)&i_v1, false);
             }
             int32_t i_v4 = i_v2 + 1; // 0x21574
             while (i_v4 < 3) {
                 // 0x214f0
                 i_v2 = i_v4;
-                i_v3 = ISL_set_voltage(gChain, 0, *(char *)(i_v2 + (int32_t)"PTX"), vol);
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+                i_v3 = ISL_set_voltage(gChain, 0,
+                                       *(char *)(i_v2 + (int32_t) "PTX"), vol);
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 2) {
                     // 0x21544
-                    snprintf((char *)&i_v1, 1024, "asic%d read back voltage = %d\n", i_v2, (int32_t)i_v3);
+                    snprintf((char *)&i_v1, 1024,
+                             "asic%d read back voltage = %d\n", i_v2,
+                             (int32_t)i_v3);
                     _applog(2, (char *)&i_v1, false);
                 }
                 // 0x21570
@@ -10482,34 +11614,38 @@ int32_t vol_init(uint16_t vol) {
         }
     }
     // 0x21434
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x2145e
-        snprintf((char *)&i_v1, 1024, "illeagel setting voltage is %d\n", (int32_t)vol);
+        snprintf((char *)&i_v1, 1024, "illeagel setting voltage is %d\n",
+                 (int32_t)vol);
         _applog(2, (char *)&i_v1, false);
     }
     // 0x21584
     return -1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x21590 - 0x21796
 // Line range:    601 - 635
-void pcba_runtime_init(int32_t * runtime) {
+void pcba_runtime_init(int32_t *runtime) {
     int32_t i_v1 = (int32_t)runtime;
     int32_t i_v2 = 144 * *(int32_t *)(i_v1 + 1772); // 0x215c2
-    int32_t i_v3 = i_v2 + i_v1; // 0x215c4
+    int32_t i_v3 = i_v2 + i_v1;                     // 0x215c4
     *(int32_t *)(i_v3 + 20) = i_g50;
     reg_list_init();
     work_list_init(*(int32_t *)(i_v1 + 1692));
     *(int32_t *)i_v3 = uart_init(*(int32_t *)(i_v3 + 4), 0x1c200);
     sleep(1);
     int32_t i_v4 = *(int32_t *)(i_v1 + 2812); // 0x2161a
-    char * p_v5; // bp-1048, 0x21590
+    char *p_v5;                               // bp-1048, 0x21590
     if (i_v4 != 0x1c200) {
         int32_t i_v6 = baud2bt8d(i_v4); // 0x2162e
         if (i_v6 < 1) {
             // 0x21688
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 2) {
                 // 0x216b2
                 p_v5 = (char *)0x276e6f44;
                 _applog(2, (char *)&p_v5, false);
@@ -10522,12 +11658,15 @@ void pcba_runtime_init(int32_t * runtime) {
         }
     }
     // 0x216e6
-    pthread_create((int32_t *)(i_v1 + 4 + (i_v2 | 8)), NULL, (int32_t * (*)(int32_t *))0x330a5, runtime);
+    pthread_create((int32_t *)(i_v1 + 4 + (i_v2 | 8)), NULL,
+                   (int32_t * (*)(int32_t *))0x330a5, runtime);
     sleep(1);
-    int32_t i_v7 = pthread_create((int32_t *)(i_v1 + 2816), NULL, (int32_t * (*)(int32_t *))0x213c5, runtime); // 0x2172a
+    int32_t i_v7 =
+        pthread_create((int32_t *)(i_v1 + 2816), NULL,
+                       (int32_t * (*)(int32_t *))0x213c5, runtime); // 0x2172a
     *(int32_t *)(i_v1 + 2808) = 1;
-    int32_t i_v8; // 0x21590
-    int32_t i_v9; // 0x21590
+    int32_t i_v8;  // 0x21590
+    int32_t i_v9;  // 0x21590
     int32_t i_v10; // 0x21590
     int32_t i_v11; // 0x21590
     if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0) {
@@ -10544,7 +11683,7 @@ void pcba_runtime_init(int32_t * runtime) {
     } else {
         goto lab_0x21762;
     }
-  lab_0x21762:
+lab_0x21762:
     // 0x21762
     snprintf((char *)&p_v5, 1024, "%s Done!\n", "pcba_runtime_init");
     int32_t i_v12 = (int32_t)&p_v5; // 0x2177e
@@ -10554,22 +11693,23 @@ void pcba_runtime_init(int32_t * runtime) {
     i_v10 = 0;
     i_v11 = i_v12;
     goto lab_0x2178c;
-  lab_0x2178c:
+lab_0x2178c:
     // 0x2178c
     __asm_nop(i_v8, i_v9, i_v10, i_v11);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x21798 - 0x2189e
 // Line range:    637 - 653
-void pcba_runtime_exit(int32_t * runtime) {
+void pcba_runtime_exit(int32_t *runtime) {
     int32_t i_v1 = (int32_t)runtime;
     *(int32_t *)(i_v1 + 2808) = 0;
     usleep((int32_t)&i_g96);
-    int32_t * p_v2 = (int32_t *)(i_v1 + 2816); // 0x217be
+    int32_t *p_v2 = (int32_t *)(i_v1 + 2816); // 0x217be
     pthread_cancel(*p_v2);
     pthread_join(*p_v2, NULL);
-    int32_t * p_v3 = (int32_t *)(i_v1 + 1772); // 0x217dc
+    int32_t *p_v3 = (int32_t *)(i_v1 + 1772); // 0x217dc
     int32_t i_v4 = i_v1 + 12;
     pthread_cancel(*(int32_t *)(144 * *p_v3 + i_v4));
     pthread_join(*(int32_t *)(144 * *p_v3 + i_v4), NULL);
@@ -10594,14 +11734,15 @@ void pcba_runtime_exit(int32_t * runtime) {
     __asm_nop((int32_t)&i_g101, i_v7, 0, i_v7);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x218a0 - 0x218ee
 // Line range:    656 - 672
 void start_single_board_test(void) {
     // 0x218a0
     pcba_runtime_init((int32_t *)i_g62);
     int32_t i_v1 = bm1744_hashboard_init(); // 0x218ba
-    int32_t i_v2; // 0x218a0
+    int32_t i_v2;                           // 0x218a0
     if (i_v1 == 0) {
         // 0x218c6
         start_read_temp();
@@ -10616,15 +11757,18 @@ void start_single_board_test(void) {
     __asm_nop((int32_t)&i_g101, i_v2, i_v2, i_g62);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/bm174x/pcba/board/z15.c
 // Address range: 0x218f0 - 0x21bbe
 // Line range:    674 - 720
 int32_t singleBoardTest_Z15_BM1746(void) {
     // 0x218f0
-    char * p_v1; // bp-1040, 0x218f0
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    char *p_v1; // bp-1040, 0x218f0
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x21922
-        snprintf((char *)&p_v1, 1024, "Start %s[%d]\n", "singleBoardTest_Z15_BM1746", 676);
+        snprintf((char *)&p_v1, 1024, "Start %s[%d]\n",
+                 "singleBoardTest_Z15_BM1746", 676);
         _applog(2, (char *)&p_v1, false);
     }
     // 0x2194e
@@ -10635,7 +11779,8 @@ int32_t singleBoardTest_Z15_BM1746(void) {
     check_chain();
     if (gChain == -1) {
         // 0x21980
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x219aa
             p_v1 = (char *)0x202d2d2d;
             _applog(2, (char *)&p_v1, false);
@@ -10646,13 +11791,14 @@ int32_t singleBoardTest_Z15_BM1746(void) {
     // 0x219d8
     reset_PIC16F1704_pic((int32_t)gChain, gI2c);
     jump_from_loader_to_app_PIC16F1704((int32_t)gChain, gI2c);
-    pthread_create(&i_g51, NULL, (int32_t * (*)(int32_t *))0x1b3e9, (int32_t *)(2 * (int32_t)gChain + (int32_t)&chain_info));
+    pthread_create(&i_g51, NULL, (int32_t * (*)(int32_t *))0x1b3e9,
+                   (int32_t *)(2 * (int32_t)gChain + (int32_t)&chain_info));
     write_axi_fpga(13, 0xffff);
     usleep((int32_t)&i_g33);
     enable_PIC16F1704_dc_dc((int32_t)gChain, gI2c, 1);
     usleep((int32_t)&i_g33);
     write_axi_fpga(13, 0);
-    vol_init((int16_t)*(int32_t *)&nonce_test_asic_result);
+    vol_init((int16_t) * (int32_t *)&nonce_test_asic_result);
     usleep((int32_t)&i_g33);
     start_single_board_test();
     pthread_cancel(i_g50);
@@ -10669,7 +11815,8 @@ int32_t singleBoardTest_Z15_BM1746(void) {
     pthread_mutex_unlock(&i2c_mutex);
     clear_last_test_results();
     fan_control(2);
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x21b8e
         p_v1 = (char *)0x74736554;
         _applog(2, (char *)&p_v1, false);
@@ -10678,18 +11825,18 @@ int32_t singleBoardTest_Z15_BM1746(void) {
     return 1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/app-config.c
-// Address range: 0x21bc8 - 0x21d4e
-// Line range:    10 - 57
-int32_t parse_config_ini_array(char * str, char ** pointer) {
-    char item_str[32]; // bp-80, 0x21bc8
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/app-config.c Address
+// range: 0x21bc8 - 0x21d4e Line range:    10 - 57
+int32_t parse_config_ini_array(char *str, char **pointer) {
+    char item_str[32];           // bp-80, 0x21bc8
     uint32_t i_v1 = strlen(str); // 0x21bd4
-    int32_t i_v2 = 1; // 0x21c1c
-    int32_t i_v3; // 0x21bc8
-    int32_t * p_v4; // 0x21bc8
-    bool i_v5; // 0x21bc8
+    int32_t i_v2 = 1;            // 0x21c1c
+    int32_t i_v3;                // 0x21bc8
+    int32_t *p_v4;               // 0x21bc8
+    bool i_v5;                   // 0x21bc8
     if (i_v1 > 0) {
-        int32_t i_v6 = 0; // 0x21c12
+        int32_t i_v6 = 0;                           // 0x21c12
         char i_v7 = *(char *)(i_v6 + (int32_t)str); // 0x21bf4
         int32_t i_v8 = i_v7 == 46 ? 0 : 1;
         int32_t i_v9 = i_v7 == 44;
@@ -10708,8 +11855,8 @@ int32_t parse_config_ini_array(char * str, char ** pointer) {
         // 0x21c1e
         i_v2 = i_v9 + 1;
         if (i_v8 == 0) {
-            int32_t i_v12 = 8 * i_v2; // 0x21c2c
-            int32_t * p_v13 = malloc(i_v12); // 0x21c30
+            int32_t i_v12 = 8 * i_v2;       // 0x21c2c
+            int32_t *p_v13 = malloc(i_v12); // 0x21c30
             memset(p_v13, 0, i_v12);
             i_v3 = i_v2;
             i_v5 = true;
@@ -10721,43 +11868,43 @@ int32_t parse_config_ini_array(char * str, char ** pointer) {
     } else {
         goto lab_0x21c48;
     }
-  lab_0x21ca4:;
+lab_0x21ca4:;
     // 0x21ca4
-    int32_t i_v14; // 0x21bc8
+    int32_t i_v14;       // 0x21bc8
     unsigned char i_v15; // 0x21c86
-    int32_t i_v16; // 0x21bc8
+    int32_t i_v16;       // 0x21bc8
     *(char *)(i_v16 + i_v14) = i_v15;
-    char * p_v17; // 0x21c86
-    char i_v18 = *p_v17; // 0x21cb8
+    char *p_v17;               // 0x21c86
+    char i_v18 = *p_v17;       // 0x21cb8
     int32_t i_v19 = i_v14 + 1; // 0x21cb8
     goto lab_0x21cbc;
-  lab_0x21cbc:;
+lab_0x21cbc:;
     int32_t i_v20 = i_v19;
     int32_t i_v21 = i_v20; // 0x21bc8
-    int32_t i_v22; // 0x21bc8
+    int32_t i_v22;         // 0x21bc8
     int32_t i_v23 = i_v22; // 0x21bc8
-    int32_t i_v24; // 0x21bc8
+    int32_t i_v24;         // 0x21bc8
     switch (i_v18) {
-        case 44: {
+    case 44: {
+    }
+    case 93: {
+        // 0x21cd4
+        *(char *)(i_v20 + (int32_t)&item_str) = 0;
+        if (i_v5) {
+            // 0x21ce6
+            return (float32_t)atof(item_str);
         }
-        case 93: {
-            // 0x21cd4
-            *(char *)(i_v20 + (int32_t)&item_str) = 0;
-            if (i_v5) {
-                // 0x21ce6
-                return (float32_t)atof(item_str);
-            }
-            // 0x21d02
-            *(int32_t *)(4 * i_v22 + i_v24) = atoi(item_str);
-            memset((int32_t *)&item_str, 32, 32);
-            i_v21 = 0;
-            i_v23 = i_v22 + 1;
-            // break -> 0x21d30
-            break;
-        }
+        // 0x21d02
+        *(int32_t *)(4 * i_v22 + i_v24) = atoi(item_str);
+        memset((int32_t *)&item_str, 32, 32);
+        i_v21 = 0;
+        i_v23 = i_v22 + 1;
+        // break -> 0x21d30
+        break;
+    }
     }
     // 0x21d30
-    int32_t i_v25; // 0x21bc8
+    int32_t i_v25;             // 0x21bc8
     int32_t i_v26 = i_v25 + 1; // 0x21d32
     i_v25 = i_v26;
     int32_t i_v27 = i_v23; // 0x21d3c
@@ -10767,15 +11914,15 @@ int32_t parse_config_ini_array(char * str, char ** pointer) {
         goto lab_0x21d3e;
     }
     goto lab_0x21c80;
-  lab_0x21c48:;
-    int32_t i_v29 = 4 * i_v2; // 0x21c4a
-    int32_t * p_v30 = malloc(i_v29); // 0x21c4e
+lab_0x21c48:;
+    int32_t i_v29 = 4 * i_v2;       // 0x21c4a
+    int32_t *p_v30 = malloc(i_v29); // 0x21c4e
     memset(p_v30, 0, i_v29);
     i_v3 = i_v2;
     i_v5 = false;
     p_v4 = p_v30;
     goto lab_0x21c64;
-  lab_0x21c64:
+lab_0x21c64:
     // 0x21c64
     memset((int32_t *)&item_str, 0, 32);
     if (i_v1 <= 0) {
@@ -10791,7 +11938,7 @@ int32_t parse_config_ini_array(char * str, char ** pointer) {
     i_v27 = 0;
     i_v28 = 0;
     while (true) {
-      lab_0x21c80:
+    lab_0x21c80:
         // 0x21c80
         i_v14 = i_v28;
         i_v22 = i_v27;
@@ -10817,24 +11964,25 @@ int32_t parse_config_ini_array(char * str, char ** pointer) {
             }
         }
     }
-  lab_0x21d3e:
+lab_0x21d3e:
     // 0x21d3e
     *(int32_t *)pointer = i_v24;
     return i_v3;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/app-config.c
-// Address range: 0x21d50 - 0x228d0
-// Line range:    59 - 273
-int32_t app_config_handle(int32_t * m_conf, char * config_filename) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/app-config.c Address
+// range: 0x21d50 - 0x228d0 Line range:    59 - 273
+int32_t app_config_handle(int32_t *m_conf, char *config_filename) {
     char str[1024]; // bp-1056, 0x21d50
     // 0x21d50
     memset((int32_t *)&str, 0, 1024);
-    struct _IO_FILE * p_v1 = fopen(config_filename, "r"); // 0x21d84
-    int32_t i_v2; // bp-2080, 0x21d50
+    struct _IO_FILE *p_v1 = fopen(config_filename, "r"); // 0x21d84
+    int32_t i_v2;                                        // bp-2080, 0x21d50
     if (p_v1 == NULL) {
         // 0x21d96
-        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+            opt_log_level < 2) {
             // 0x21dc2
             snprintf((char *)&i_v2, 1024, "open %s failed\n", config_filename);
             _applog(2, (char *)&i_v2, false);
@@ -10848,297 +11996,666 @@ int32_t app_config_handle(int32_t * m_conf, char * config_filename) {
         return 0;
     }
     int32_t i_v3 = (int32_t)m_conf;
-    char ** p_v4 = (char **)(i_v3 + 36);
-    char ** p_v5 = (char **)(i_v3 + 44);
-    char ** p_v6 = (char **)(i_v3 + 84);
-    char ** p_v7 = (char **)(i_v3 + 88);
-    char ** p_v8 = (char **)(i_v3 + 276);
-    char ** p_v9 = (char **)(i_v3 + 140);
+    char **p_v4 = (char **)(i_v3 + 36);
+    char **p_v5 = (char **)(i_v3 + 44);
+    char **p_v6 = (char **)(i_v3 + 84);
+    char **p_v7 = (char **)(i_v3 + 88);
+    char **p_v8 = (char **)(i_v3 + 276);
+    char **p_v9 = (char **)(i_v3 + 140);
     int32_t i_v10; // 0x21d50
     while (true) {
-      lab_0x21dec:;
+    lab_0x21dec:;
         char i_v11; // 0x21d50
         if (i_v11 == 35) {
             goto lab_0x228a2;
         } else {
             // switch.early.test
             switch (str[0]) {
-                case 35: {
-                    goto lab_0x228a2;
+            case 35: {
+                goto lab_0x228a2;
+            }
+            case 0: {
+                goto lab_0x228a2;
+            }
+            default: {
+                char *p_v12 = strstr(str, "Name="); // 0x21e20
+                if (p_v12 != NULL) {
+                    // 0x21e30
+                    sscanf((char *)((int32_t)p_v12 + 5), "%s",
+                           (char **)(i_v3 + 4));
                 }
-                case 0: {
-                    goto lab_0x228a2;
+                char *p_v13 = strstr(str, "AsicNum="); // 0x21e60
+                if (p_v13 != NULL) {
+                    // 0x21e70
+                    sscanf((char *)((int32_t)p_v13 + 8), "%d",
+                           (int32_t *)(i_v3 + 20));
                 }
-                default: {
-                    char * p_v12 = strstr(str, "Name="); // 0x21e20
-                    if (p_v12 != NULL) {
-                        // 0x21e30
-                        sscanf((char *)((int32_t)p_v12 + 5), "%s", (char **)(i_v3 + 4));
-                    }
-                    char * p_v13 = strstr(str, "AsicNum="); // 0x21e60
-                    if (p_v13 != NULL) {
-                        // 0x21e70
-                        sscanf((char *)((int32_t)p_v13 + 8), "%d", (int32_t *)(i_v3 + 20));
-                    }
-                    char * p_v14 = strstr(str, "CoreNum="); // 0x21ea0
-                    if (p_v14 == NULL) {
-                        char * p_v15 = strstr(str, "WorkMode="); // 0x21ee4
-                        if (p_v15 == NULL) {
-                            char * p_v16 = strstr(str, "Comport="); // 0x21f28
-                            if (p_v16 == NULL) {
-                                char * p_v17 = strstr(str, "SensorPos="); // 0x21f6c
-                                if (p_v17 == NULL) {
-                                    char * p_v18 = strstr(str, "EnableCp210x="); // 0x21fb0
-                                    if (p_v18 == NULL) {
-                                        char * p_v19 = strstr(str, "Baudrate="); // 0x21ff4
-                                        if (p_v19 == NULL) {
-                                            char * p_v20 = strstr(str, "TicketMask="); // 0x22038
-                                            if (p_v20 == NULL) {
-                                                char * p_v21 = strstr(str, "CoreTimeout="); // 0x2207c
-                                                if (p_v21 == NULL) {
-                                                    char * p_v22 = strstr(str, "ChipAlarmTemp="); // 0x220be
-                                                    if (p_v22 == NULL) {
-                                                        char * p_v23 = strstr(str, "BringupFreq="); // 0x22100
-                                                        if (p_v23 == NULL) {
-                                                            char * p_v24 = strstr(str, "BringupVoltage="); // 0x22142
-                                                            if (p_v24 == NULL) {
-                                                                char * p_v25 = strstr(str, "BringupWorkIntervalS="); // 0x22184
-                                                                if (p_v25 == NULL) {
-                                                                    char * p_v26 = strstr(str, "BringupAutoJHVolt="); // 0x221c6
-                                                                    if (p_v26 == NULL) {
-                                                                        char * p_v27 = strstr(str, "BringupAutoJHFreq="); // 0x22262
-                                                                        if (p_v27 == NULL) {
-                                                                            char * p_v28 = strstr(str, "PattenNum="); // 0x222fe
-                                                                            if (p_v28 == NULL) {
-                                                                                char * p_v29 = strstr(str, "SltTestMode="); // 0x22340
-                                                                                if (p_v29 == NULL) {
-                                                                                    char * p_v30 = strstr(str, "SltTunelPath="); // 0x22382
-                                                                                    if (p_v30 == NULL) {
-                                                                                        char * p_v31 = strstr(str, "SltCP210xRuntime="); // 0x223c4
-                                                                                        if (p_v31 == NULL) {
-                                                                                            char * p_v32 = strstr(str, "SltBinRate="); // 0x22406
-                                                                                            if (p_v32 == NULL) {
-                                                                                                char * p_v33 = strstr(str, "SltDelay="); // 0x224a4
-                                                                                                if (p_v33 == NULL) {
-                                                                                                    char * p_v34 = strstr(str, "SltFreq="); // 0x224e8
-                                                                                                    if (p_v34 == NULL) {
-                                                                                                        char * p_v35 = strstr(str, "SltWorkIntervalMs="); // 0x2252c
-                                                                                                        if (p_v35 == NULL) {
-                                                                                                            char * p_v36 = strstr(str, "SltEnableReadTemp="); // 0x22570
-                                                                                                            if (p_v36 == NULL) {
-                                                                                                                char * p_v37 = strstr(str, "PcbaRepeatCtrl="); // 0x225b4
-                                                                                                                if (p_v37 == NULL) {
-                                                                                                                    char * p_v38 = strstr(str, "PcbaFreq="); // 0x225f6
-                                                                                                                    if (p_v38 == NULL) {
-                                                                                                                        char * p_v39 = strstr(str, "PcbaVoltage="); // 0x22638
-                                                                                                                        if (p_v39 == NULL) {
-                                                                                                                            char * p_v40 = strstr(str, "PcbaTemptureHigh="); // 0x2267a
-                                                                                                                            if (p_v40 == NULL) {
-                                                                                                                                char * p_v41 = strstr(str, "PcbaTemptureLow="); // 0x226bc
-                                                                                                                                if (p_v41 == NULL) {
-                                                                                                                                    char * p_v42 = strstr(str, "PcbaOnlyFindASIC="); // 0x226fe
-                                                                                                                                    if (p_v42 == NULL) {
-                                                                                                                                        char * p_v43 = strstr(str, "PcbaPatternPassRate="); // 0x22740
-                                                                                                                                        if (p_v43 == NULL) {
-                                                                                                                                            char * p_v44 = strstr(str, "PcbaSendPtTimeout="); // 0x22782
-                                                                                                                                            if (p_v44 == NULL) {
-                                                                                                                                                char * p_v45 = strstr(str, "PcbaEnableLevel="); // 0x227c4
-                                                                                                                                                if (p_v45 == NULL) {
-                                                                                                                                                    char * p_v46 = strstr(str, "PcbaLevelRate="); // 0x22806
-                                                                                                                                                    if (p_v46 != NULL) {
-                                                                                                                                                        int32_t i_v47 = parse_config_ini_array((char *)((int32_t)p_v46 + 14), p_v9); // 0x2282c
-                                                                                                                                                        if (i_v47 != 3) {
-                                                                                                                                                            // 0x2283c
-                                                                                                                                                            i_v10 = -1;
-                                                                                                                                                            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
-                                                                                                                                                                return i_v10;
-                                                                                                                                                            } else {
-                                                                                                                                                                // 0x22866
-                                                                                                                                                                snprintf((char *)&i_v2, 1024, "PcbaLevelRate number should be 3, but not %d\n", i_v47);
-                                                                                                                                                                _applog(2, (char *)&i_v2, false);
-                                                                                                                                                                i_v10 = -1;
-                                                                                                                                                                return i_v10;
-                                                                                                                                                            }
+                char *p_v14 = strstr(str, "CoreNum="); // 0x21ea0
+                if (p_v14 == NULL) {
+                    char *p_v15 = strstr(str, "WorkMode="); // 0x21ee4
+                    if (p_v15 == NULL) {
+                        char *p_v16 = strstr(str, "Comport="); // 0x21f28
+                        if (p_v16 == NULL) {
+                            char *p_v17 = strstr(str, "SensorPos="); // 0x21f6c
+                            if (p_v17 == NULL) {
+                                char *p_v18 =
+                                    strstr(str, "EnableCp210x="); // 0x21fb0
+                                if (p_v18 == NULL) {
+                                    char *p_v19 =
+                                        strstr(str, "Baudrate="); // 0x21ff4
+                                    if (p_v19 == NULL) {
+                                        char *p_v20 = strstr(
+                                            str, "TicketMask="); // 0x22038
+                                        if (p_v20 == NULL) {
+                                            char *p_v21 = strstr(
+                                                str, "CoreTimeout="); // 0x2207c
+                                            if (p_v21 == NULL) {
+                                                char *p_v22 =
+                                                    strstr(str, "ChipAlarmTemp"
+                                                                "="); // 0x220be
+                                                if (p_v22 == NULL) {
+                                                    char *p_v23 =
+                                                        strstr(
+                                                            str, "BringupFreq"
+                                                                 "="); // 0x22100
+                                                    if (p_v23 == NULL) {
+                                                        char *p_v24 =
+                                                            strstr(
+                                                                str,
+                                                                "BringupVoltage"
+                                                                "="); // 0x22142
+                                                        if (p_v24 == NULL) {
+                                                            char *p_v25 =
+                                                                strstr(
+                                                                    str,
+                                                                    "BringupWor"
+                                                                    "kIntervalS"
+                                                                    "="); // 0x22184
+                                                            if (p_v25 == NULL) {
+                                                                char *p_v26 =
+                                                                    strstr(
+                                                                        str,
+                                                                        "Bringu"
+                                                                        "pAutoJ"
+                                                                        "HVolt"
+                                                                        "="); // 0x221c6
+                                                                if (p_v26 ==
+                                                                    NULL) {
+                                                                    char *p_v27 =
+                                                                        strstr(
+                                                                            str,
+                                                                            "Br"
+                                                                            "in"
+                                                                            "gu"
+                                                                            "pA"
+                                                                            "ut"
+                                                                            "oJ"
+                                                                            "HF"
+                                                                            "re"
+                                                                            "q"
+                                                                            "="); // 0x22262
+                                                                    if (p_v27 ==
+                                                                        NULL) {
+                                                                        char *p_v28 = strstr(
+                                                                            str,
+                                                                            "Pa"
+                                                                            "tt"
+                                                                            "en"
+                                                                            "Nu"
+                                                                            "m"
+                                                                            "="); // 0x222fe
+                                                                        if (p_v28 ==
+                                                                            NULL) {
+                                                                            char *p_v29 = strstr(
+                                                                                str,
+                                                                                "SltTestMode="); // 0x22340
+                                                                            if (p_v29 ==
+                                                                                NULL) {
+                                                                                char *p_v30 = strstr(
+                                                                                    str,
+                                                                                    "SltTunelPath="); // 0x22382
+                                                                                if (p_v30 ==
+                                                                                    NULL) {
+                                                                                    char *p_v31 = strstr(
+                                                                                        str,
+                                                                                        "SltCP210xRuntime="); // 0x223c4
+                                                                                    if (p_v31 ==
+                                                                                        NULL) {
+                                                                                        char *p_v32 = strstr(
+                                                                                            str,
+                                                                                            "SltBinRate="); // 0x22406
+                                                                                        if (p_v32 ==
+                                                                                            NULL) {
+                                                                                            char *p_v33 = strstr(
+                                                                                                str,
+                                                                                                "SltDelay="); // 0x224a4
+                                                                                            if (p_v33 ==
+                                                                                                NULL) {
+                                                                                                char *p_v34 = strstr(
+                                                                                                    str,
+                                                                                                    "SltFreq="); // 0x224e8
+                                                                                                if (p_v34 ==
+                                                                                                    NULL) {
+                                                                                                    char *p_v35 = strstr(
+                                                                                                        str,
+                                                                                                        "SltWorkIntervalMs="); // 0x2252c
+                                                                                                    if (p_v35 ==
+                                                                                                        NULL) {
+                                                                                                        char *p_v36 = strstr(
+                                                                                                            str,
+                                                                                                            "SltEnableReadTemp="); // 0x22570
+                                                                                                        if (p_v36 ==
+                                                                                                            NULL) {
+                                                                                                            char *p_v37 = strstr(
+                                                                                                                str,
+                                                                                                                "PcbaRepeatCtrl="); // 0x225b4
+                                                                                                            if (p_v37 ==
+                                                                                                                NULL) {
+                                                                                                                char *p_v38 = strstr(
+                                                                                                                    str,
+                                                                                                                    "PcbaFreq="); // 0x225f6
+                                                                                                                if (p_v38 ==
+                                                                                                                    NULL) {
+                                                                                                                    char *p_v39 = strstr(
+                                                                                                                        str,
+                                                                                                                        "PcbaVoltage="); // 0x22638
+                                                                                                                    if (p_v39 ==
+                                                                                                                        NULL) {
+                                                                                                                        char *p_v40 = strstr(
+                                                                                                                            str,
+                                                                                                                            "PcbaTemptureHigh="); // 0x2267a
+                                                                                                                        if (p_v40 ==
+                                                                                                                            NULL) {
+                                                                                                                            char *p_v41 = strstr(
+                                                                                                                                str,
+                                                                                                                                "PcbaTemptureLow="); // 0x226bc
+                                                                                                                            if (p_v41 ==
+                                                                                                                                NULL) {
+                                                                                                                                char *p_v42 = strstr(
+                                                                                                                                    str,
+                                                                                                                                    "PcbaOnlyFindASIC="); // 0x226fe
+                                                                                                                                if (p_v42 ==
+                                                                                                                                    NULL) {
+                                                                                                                                    char *p_v43 = strstr(
+                                                                                                                                        str,
+                                                                                                                                        "PcbaPatternPassRate="); // 0x22740
+                                                                                                                                    if (p_v43 ==
+                                                                                                                                        NULL) {
+                                                                                                                                        char *p_v44 = strstr(
+                                                                                                                                            str,
+                                                                                                                                            "PcbaSendPtTimeout="); // 0x22782
+                                                                                                                                        if (p_v44 ==
+                                                                                                                                            NULL) {
+                                                                                                                                            char *p_v45 = strstr(
+                                                                                                                                                str,
+                                                                                                                                                "PcbaEnableLevel="); // 0x227c4
+                                                                                                                                            if (p_v45 ==
+                                                                                                                                                NULL) {
+                                                                                                                                                char *p_v46 = strstr(
+                                                                                                                                                    str,
+                                                                                                                                                    "PcbaLevelRate="); // 0x22806
+                                                                                                                                                if (p_v46 !=
+                                                                                                                                                    NULL) {
+                                                                                                                                                    int32_t i_v47 = parse_config_ini_array(
+                                                                                                                                                        (char
+                                                                                                                                                             *)((int32_t)
+                                                                                                                                                                    p_v46 +
+                                                                                                                                                                14),
+                                                                                                                                                        p_v9); // 0x2282c
+                                                                                                                                                    if (i_v47 !=
+                                                                                                                                                        3) {
+                                                                                                                                                        // 0x2283c
+                                                                                                                                                        i_v10 =
+                                                                                                                                                            -1;
+                                                                                                                                                        if ((*(char
+                                                                                                                                                                   *)&opt_log_output |
+                                                                                                                                                             *(char
+                                                                                                                                                                   *)&use_syslog) ==
+                                                                                                                                                            0 ==
+                                                                                                                                                            opt_log_level <
+                                                                                                                                                                2) {
+                                                                                                                                                            return i_v10;
+                                                                                                                                                        } else {
+                                                                                                                                                            // 0x22866
+                                                                                                                                                            snprintf(
+                                                                                                                                                                (char
+                                                                                                                                                                     *)&i_v2,
+                                                                                                                                                                1024,
+                                                                                                                                                                "PcbaLevelRate number should be 3, but not %d\n",
+                                                                                                                                                                i_v47);
+                                                                                                                                                            _applog(
+                                                                                                                                                                2,
+                                                                                                                                                                (char
+                                                                                                                                                                     *)&i_v2,
+                                                                                                                                                                false);
+                                                                                                                                                            i_v10 =
+                                                                                                                                                                -1;
+                                                                                                                                                            return i_v10;
                                                                                                                                                         }
                                                                                                                                                     }
-                                                                                                                                                } else {
-                                                                                                                                                    // 0x227d4
-                                                                                                                                                    sscanf((char *)((int32_t)p_v45 + 16), "%d", (int32_t *)(i_v3 + 136));
                                                                                                                                                 }
                                                                                                                                             } else {
-                                                                                                                                                // 0x22792
-                                                                                                                                                sscanf((char *)((int32_t)p_v44 + 18), "%d", (int32_t *)(i_v3 + 132));
+                                                                                                                                                // 0x227d4
+                                                                                                                                                sscanf(
+                                                                                                                                                    (char
+                                                                                                                                                         *)((int32_t)
+                                                                                                                                                                p_v45 +
+                                                                                                                                                            16),
+                                                                                                                                                    "%d",
+                                                                                                                                                    (int32_t
+                                                                                                                                                         *)(i_v3 +
+                                                                                                                                                            136));
                                                                                                                                             }
                                                                                                                                         } else {
-                                                                                                                                            // 0x22750
-                                                                                                                                            sscanf((char *)((int32_t)p_v43 + 20), "%d", (int32_t *)(i_v3 + 128));
+                                                                                                                                            // 0x22792
+                                                                                                                                            sscanf(
+                                                                                                                                                (char
+                                                                                                                                                     *)((int32_t)
+                                                                                                                                                            p_v44 +
+                                                                                                                                                        18),
+                                                                                                                                                "%d",
+                                                                                                                                                (int32_t
+                                                                                                                                                     *)(i_v3 +
+                                                                                                                                                        132));
                                                                                                                                         }
                                                                                                                                     } else {
-                                                                                                                                        // 0x2270e
-                                                                                                                                        sscanf((char *)((int32_t)p_v42 + 17), "%d", (int32_t *)(i_v3 + 124));
+                                                                                                                                        // 0x22750
+                                                                                                                                        sscanf(
+                                                                                                                                            (char
+                                                                                                                                                 *)((int32_t)
+                                                                                                                                                        p_v43 +
+                                                                                                                                                    20),
+                                                                                                                                            "%d",
+                                                                                                                                            (int32_t
+                                                                                                                                                 *)(i_v3 +
+                                                                                                                                                    128));
                                                                                                                                     }
                                                                                                                                 } else {
-                                                                                                                                    // 0x226cc
-                                                                                                                                    sscanf((char *)((int32_t)p_v41 + 16), "%d", (int32_t *)(i_v3 + 120));
+                                                                                                                                    // 0x2270e
+                                                                                                                                    sscanf(
+                                                                                                                                        (char
+                                                                                                                                             *)((int32_t)
+                                                                                                                                                    p_v42 +
+                                                                                                                                                17),
+                                                                                                                                        "%d",
+                                                                                                                                        (int32_t
+                                                                                                                                             *)(i_v3 +
+                                                                                                                                                124));
                                                                                                                                 }
                                                                                                                             } else {
-                                                                                                                                // 0x2268a
-                                                                                                                                sscanf((char *)((int32_t)p_v40 + 17), "%d", (int32_t *)(i_v3 + 116));
+                                                                                                                                // 0x226cc
+                                                                                                                                sscanf(
+                                                                                                                                    (char
+                                                                                                                                         *)((int32_t)
+                                                                                                                                                p_v41 +
+                                                                                                                                            16),
+                                                                                                                                    "%d",
+                                                                                                                                    (int32_t
+                                                                                                                                         *)(i_v3 +
+                                                                                                                                            120));
                                                                                                                             }
                                                                                                                         } else {
-                                                                                                                            // 0x22648
-                                                                                                                            sscanf((char *)((int32_t)p_v39 + 12), "%d", (int32_t *)(i_v3 + 112));
+                                                                                                                            // 0x2268a
+                                                                                                                            sscanf(
+                                                                                                                                (char
+                                                                                                                                     *)((int32_t)
+                                                                                                                                            p_v40 +
+                                                                                                                                        17),
+                                                                                                                                "%d",
+                                                                                                                                (int32_t
+                                                                                                                                     *)(i_v3 +
+                                                                                                                                        116));
                                                                                                                         }
                                                                                                                     } else {
-                                                                                                                        // 0x22606
-                                                                                                                        sscanf((char *)((int32_t)p_v38 + 9), "%d", (int32_t *)(i_v3 + 108));
+                                                                                                                        // 0x22648
+                                                                                                                        sscanf(
+                                                                                                                            (char
+                                                                                                                                 *)((int32_t)
+                                                                                                                                        p_v39 +
+                                                                                                                                    12),
+                                                                                                                            "%d",
+                                                                                                                            (int32_t
+                                                                                                                                 *)(i_v3 +
+                                                                                                                                    112));
                                                                                                                     }
                                                                                                                 } else {
-                                                                                                                    // 0x225c4
-                                                                                                                    sscanf((char *)((int32_t)p_v37 + 15), "%s", (char **)(i_v3 + 92));
+                                                                                                                    // 0x22606
+                                                                                                                    sscanf(
+                                                                                                                        (char
+                                                                                                                             *)((int32_t)
+                                                                                                                                    p_v38 +
+                                                                                                                                9),
+                                                                                                                        "%d",
+                                                                                                                        (int32_t
+                                                                                                                             *)(i_v3 +
+                                                                                                                                108));
                                                                                                                 }
                                                                                                             } else {
-                                                                                                                // 0x22580
-                                                                                                                sscanf((char *)((int32_t)p_v36 + 18), "%d", (int32_t *)(i_v3 + 292));
+                                                                                                                // 0x225c4
+                                                                                                                sscanf(
+                                                                                                                    (char
+                                                                                                                         *)((int32_t)
+                                                                                                                                p_v37 +
+                                                                                                                            15),
+                                                                                                                    "%s",
+                                                                                                                    (char *
+                                                                                                                         *)(i_v3 +
+                                                                                                                            92));
                                                                                                             }
                                                                                                         } else {
-                                                                                                            // 0x2253c
-                                                                                                            sscanf((char *)((int32_t)p_v35 + 18), "%d", (int32_t *)(i_v3 + 288));
+                                                                                                            // 0x22580
+                                                                                                            sscanf(
+                                                                                                                (char
+                                                                                                                     *)((int32_t)
+                                                                                                                            p_v36 +
+                                                                                                                        18),
+                                                                                                                "%d",
+                                                                                                                (int32_t
+                                                                                                                     *)(i_v3 +
+                                                                                                                        292));
                                                                                                         }
                                                                                                     } else {
-                                                                                                        // 0x224f8
-                                                                                                        sscanf((char *)((int32_t)p_v34 + 8), "%d", (int32_t *)(i_v3 + 284));
+                                                                                                        // 0x2253c
+                                                                                                        sscanf(
+                                                                                                            (char
+                                                                                                                 *)((int32_t)
+                                                                                                                        p_v35 +
+                                                                                                                    18),
+                                                                                                            "%d",
+                                                                                                            (int32_t
+                                                                                                                 *)(i_v3 +
+                                                                                                                    288));
                                                                                                     }
                                                                                                 } else {
-                                                                                                    // 0x224b4
-                                                                                                    sscanf((char *)((int32_t)p_v33 + 9), "%d", (int32_t *)(i_v3 + 280));
+                                                                                                    // 0x224f8
+                                                                                                    sscanf(
+                                                                                                        (char
+                                                                                                             *)((int32_t)
+                                                                                                                    p_v34 +
+                                                                                                                8),
+                                                                                                        "%d",
+                                                                                                        (int32_t
+                                                                                                             *)(i_v3 +
+                                                                                                                284));
                                                                                                 }
                                                                                             } else {
-                                                                                                int32_t i_v48 = parse_config_ini_array((char *)((int32_t)p_v32 + 11), p_v8); // 0x2242e
-                                                                                                if (i_v48 != 3) {
-                                                                                                    // 0x22440
-                                                                                                    i_v10 = -1;
-                                                                                                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
-                                                                                                        return i_v10;
-                                                                                                    } else {
-                                                                                                        // 0x2246a
-                                                                                                        snprintf((char *)&i_v2, 1024, "SltBinRate number error %d\n", i_v48);
-                                                                                                        _applog(2, (char *)&i_v2, false);
-                                                                                                        i_v10 = -1;
-                                                                                                        return i_v10;
-                                                                                                    }
-                                                                                                }
+                                                                                                // 0x224b4
+                                                                                                sscanf(
+                                                                                                    (char
+                                                                                                         *)((int32_t)
+                                                                                                                p_v33 +
+                                                                                                            9),
+                                                                                                    "%d",
+                                                                                                    (int32_t
+                                                                                                         *)(i_v3 +
+                                                                                                            280));
                                                                                             }
                                                                                         } else {
-                                                                                            // 0x223d4
-                                                                                            sscanf((char *)((int32_t)p_v31 + 17), "%s", (char **)(i_v3 + 212));
+                                                                                            int32_t i_v48 = parse_config_ini_array(
+                                                                                                (char
+                                                                                                     *)((int32_t)
+                                                                                                            p_v32 +
+                                                                                                        11),
+                                                                                                p_v8); // 0x2242e
+                                                                                            if (i_v48 !=
+                                                                                                3) {
+                                                                                                // 0x22440
+                                                                                                i_v10 =
+                                                                                                    -1;
+                                                                                                if ((*(char
+                                                                                                           *)&opt_log_output |
+                                                                                                     *(char
+                                                                                                           *)&use_syslog) ==
+                                                                                                    0 ==
+                                                                                                    opt_log_level <
+                                                                                                        2) {
+                                                                                                    return i_v10;
+                                                                                                } else {
+                                                                                                    // 0x2246a
+                                                                                                    snprintf(
+                                                                                                        (char
+                                                                                                             *)&i_v2,
+                                                                                                        1024,
+                                                                                                        "SltBinRate number error %d\n",
+                                                                                                        i_v48);
+                                                                                                    _applog(
+                                                                                                        2,
+                                                                                                        (char
+                                                                                                             *)&i_v2,
+                                                                                                        false);
+                                                                                                    i_v10 =
+                                                                                                        -1;
+                                                                                                    return i_v10;
+                                                                                                }
+                                                                                            }
                                                                                         }
                                                                                     } else {
-                                                                                        // 0x22392
-                                                                                        sscanf((char *)((int32_t)p_v30 + 13), "%s", (char **)(i_v3 + 148));
+                                                                                        // 0x223d4
+                                                                                        sscanf(
+                                                                                            (char
+                                                                                                 *)((int32_t)
+                                                                                                        p_v31 +
+                                                                                                    17),
+                                                                                            "%s",
+                                                                                            (char *
+                                                                                                 *)(i_v3 +
+                                                                                                    212));
                                                                                     }
                                                                                 } else {
-                                                                                    // 0x22350
-                                                                                    sscanf((char *)((int32_t)p_v29 + 12), "%d", (int32_t *)(i_v3 + 144));
+                                                                                    // 0x22392
+                                                                                    sscanf(
+                                                                                        (char
+                                                                                             *)((int32_t)
+                                                                                                    p_v30 +
+                                                                                                13),
+                                                                                        "%s",
+                                                                                        (char *
+                                                                                             *)(i_v3 +
+                                                                                                148));
                                                                                 }
                                                                             } else {
-                                                                                // 0x2230e
-                                                                                sscanf((char *)((int32_t)p_v28 + 10), "%d", (int32_t *)(i_v3 + 64));
+                                                                                // 0x22350
+                                                                                sscanf(
+                                                                                    (char
+                                                                                         *)((int32_t)
+                                                                                                p_v29 +
+                                                                                            12),
+                                                                                    "%d",
+                                                                                    (int32_t
+                                                                                         *)(i_v3 +
+                                                                                            144));
                                                                             }
                                                                         } else {
-                                                                            int32_t i_v49 = parse_config_ini_array((char *)((int32_t)p_v27 + 18), p_v7); // 0x22288
-                                                                            if (i_v49 != 3) {
-                                                                                // 0x2229a
-                                                                                i_v10 = -1;
-                                                                                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
-                                                                                    return i_v10;
-                                                                                } else {
-                                                                                    // 0x222c4
-                                                                                    snprintf((char *)&i_v2, 1024, "BringupAutoJHFreq number error %d\n", i_v49);
-                                                                                    _applog(2, (char *)&i_v2, false);
-                                                                                    i_v10 = -1;
-                                                                                    return i_v10;
-                                                                                }
-                                                                            }
+                                                                            // 0x2230e
+                                                                            sscanf(
+                                                                                (char
+                                                                                     *)((int32_t)
+                                                                                            p_v28 +
+                                                                                        10),
+                                                                                "%d",
+                                                                                (int32_t
+                                                                                     *)(i_v3 +
+                                                                                        64));
                                                                         }
                                                                     } else {
-                                                                        int32_t i_v50 = parse_config_ini_array((char *)((int32_t)p_v26 + 18), p_v6); // 0x221ec
-                                                                        if (i_v50 != 3) {
-                                                                            // 0x221fe
-                                                                            i_v10 = -1;
-                                                                            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 == opt_log_level < 2) {
+                                                                        int32_t i_v49 = parse_config_ini_array(
+                                                                            (char
+                                                                                 *)((int32_t)
+                                                                                        p_v27 +
+                                                                                    18),
+                                                                            p_v7); // 0x22288
+                                                                        if (i_v49 !=
+                                                                            3) {
+                                                                            // 0x2229a
+                                                                            i_v10 =
+                                                                                -1;
+                                                                            if ((*(char
+                                                                                       *)&opt_log_output |
+                                                                                 *(char
+                                                                                       *)&use_syslog) ==
+                                                                                0 ==
+                                                                                opt_log_level <
+                                                                                    2) {
                                                                                 return i_v10;
                                                                             } else {
-                                                                                // 0x22228
-                                                                                snprintf((char *)&i_v2, 1024, "BringupAutoJHVolt number error %d\n", i_v50);
-                                                                                _applog(2, (char *)&i_v2, false);
-                                                                                i_v10 = -1;
+                                                                                // 0x222c4
+                                                                                snprintf(
+                                                                                    (char
+                                                                                         *)&i_v2,
+                                                                                    1024,
+                                                                                    "BringupAutoJHFreq number error %d\n",
+                                                                                    i_v49);
+                                                                                _applog(
+                                                                                    2,
+                                                                                    (char
+                                                                                         *)&i_v2,
+                                                                                    false);
+                                                                                i_v10 =
+                                                                                    -1;
                                                                                 return i_v10;
                                                                             }
                                                                         }
                                                                     }
                                                                 } else {
-                                                                    // 0x22194
-                                                                    sscanf((char *)((int32_t)p_v25 + 21), "%d", (int32_t *)(i_v3 + 80));
+                                                                    int32_t i_v50 = parse_config_ini_array(
+                                                                        (char
+                                                                             *)((int32_t)
+                                                                                    p_v26 +
+                                                                                18),
+                                                                        p_v6); // 0x221ec
+                                                                    if (i_v50 !=
+                                                                        3) {
+                                                                        // 0x221fe
+                                                                        i_v10 =
+                                                                            -1;
+                                                                        if ((*(char
+                                                                                   *)&opt_log_output |
+                                                                             *(char
+                                                                                   *)&use_syslog) ==
+                                                                            0 ==
+                                                                            opt_log_level <
+                                                                                2) {
+                                                                            return i_v10;
+                                                                        } else {
+                                                                            // 0x22228
+                                                                            snprintf(
+                                                                                (char
+                                                                                     *)&i_v2,
+                                                                                1024,
+                                                                                "BringupAutoJHVolt number error %d\n",
+                                                                                i_v50);
+                                                                            _applog(
+                                                                                2,
+                                                                                (char
+                                                                                     *)&i_v2,
+                                                                                false);
+                                                                            i_v10 =
+                                                                                -1;
+                                                                            return i_v10;
+                                                                        }
+                                                                    }
                                                                 }
                                                             } else {
-                                                                // 0x22152
-                                                                sscanf((char *)((int32_t)p_v24 + 15), "%d", (int32_t *)(i_v3 + 76));
+                                                                // 0x22194
+                                                                sscanf(
+                                                                    (char
+                                                                         *)((int32_t)
+                                                                                p_v25 +
+                                                                            21),
+                                                                    "%d",
+                                                                    (int32_t
+                                                                         *)(i_v3 +
+                                                                            80));
                                                             }
                                                         } else {
-                                                            // 0x22110
-                                                            sscanf((char *)((int32_t)p_v23 + 12), "%d", (int32_t *)(i_v3 + 72));
+                                                            // 0x22152
+                                                            sscanf(
+                                                                (char
+                                                                     *)((int32_t)
+                                                                            p_v24 +
+                                                                        15),
+                                                                "%d",
+                                                                (int32_t
+                                                                     *)(i_v3 +
+                                                                        76));
                                                         }
                                                     } else {
-                                                        // 0x220ce
-                                                        sscanf((char *)((int32_t)p_v22 + 14), "%d", (int32_t *)(i_v3 + 68));
+                                                        // 0x22110
+                                                        sscanf(
+                                                            (char *)((int32_t)
+                                                                         p_v23 +
+                                                                     12),
+                                                            "%d",
+                                                            (int32_t *)(i_v3 +
+                                                                        72));
                                                     }
                                                 } else {
-                                                    // 0x2208c
-                                                    sscanf((char *)((int32_t)p_v21 + 12), "%u", (int32_t *)(i_v3 + 60));
+                                                    // 0x220ce
+                                                    sscanf(
+                                                        (char *)((int32_t)
+                                                                     p_v22 +
+                                                                 14),
+                                                        "%d",
+                                                        (int32_t *)(i_v3 + 68));
                                                 }
                                             } else {
-                                                // 0x22048
-                                                sscanf((char *)((int32_t)p_v20 + 11), "%d", (int32_t *)(i_v3 + 56));
+                                                // 0x2208c
+                                                sscanf((char *)((int32_t)p_v21 +
+                                                                12),
+                                                       "%u",
+                                                       (int32_t *)(i_v3 + 60));
                                             }
                                         } else {
-                                            // 0x22004
-                                            sscanf((char *)((int32_t)p_v19 + 9), "%d", (int32_t *)(i_v3 + 28));
+                                            // 0x22048
+                                            sscanf(
+                                                (char *)((int32_t)p_v20 + 11),
+                                                "%d", (int32_t *)(i_v3 + 56));
                                         }
                                     } else {
-                                        // 0x21fc0
-                                        sscanf((char *)((int32_t)p_v18 + 13), "%d", (int32_t *)(i_v3 + 52));
+                                        // 0x22004
+                                        sscanf((char *)((int32_t)p_v19 + 9),
+                                               "%d", (int32_t *)(i_v3 + 28));
                                     }
                                 } else {
-                                    int32_t i_v51 = parse_config_ini_array((char *)((int32_t)p_v17 + 10), p_v5); // 0x21f92
-                                    *(int32_t *)(i_v3 + 48) = i_v51;
+                                    // 0x21fc0
+                                    sscanf((char *)((int32_t)p_v18 + 13), "%d",
+                                           (int32_t *)(i_v3 + 52));
                                 }
                             } else {
-                                int32_t i_v52 = parse_config_ini_array((char *)((int32_t)p_v16 + 8), p_v4); // 0x21f4e
-                                *(int32_t *)(i_v3 + 40) = i_v52;
+                                int32_t i_v51 = parse_config_ini_array(
+                                    (char *)((int32_t)p_v17 + 10),
+                                    p_v5); // 0x21f92
+                                *(int32_t *)(i_v3 + 48) = i_v51;
                             }
                         } else {
-                            // 0x21ef4
-                            sscanf((char *)((int32_t)p_v15 + 9), "%d", (int32_t *)(i_v3 + 32));
+                            int32_t i_v52 = parse_config_ini_array(
+                                (char *)((int32_t)p_v16 + 8), p_v4); // 0x21f4e
+                            *(int32_t *)(i_v3 + 40) = i_v52;
                         }
                     } else {
-                        // 0x21eb0
-                        sscanf((char *)((int32_t)p_v14 + 8), "%d", (int32_t *)(i_v3 + 24));
+                        // 0x21ef4
+                        sscanf((char *)((int32_t)p_v15 + 9), "%d",
+                               (int32_t *)(i_v3 + 32));
                     }
-                    // 0x22892
-                    memset((int32_t *)&str, 0, 1024);
-                    goto lab_0x228a2;
+                } else {
+                    // 0x21eb0
+                    sscanf((char *)((int32_t)p_v14 + 8), "%d",
+                           (int32_t *)(i_v3 + 24));
                 }
+                // 0x22892
+                memset((int32_t *)&str, 0, 1024);
+                goto lab_0x228a2;
+            }
             }
         }
     }
-  lab_0x228bc:
+lab_0x228bc:
     // 0x228bc
     fclose(p_v1);
     i_v10 = 0;
     // 0x228c6
     return i_v10;
-  lab_0x228a2:
+lab_0x228a2:
     // 0x228a2
     if (fgets(str, 1023, p_v1) == NULL) {
         // break -> 0x228bc
@@ -11147,12 +12664,12 @@ int32_t app_config_handle(int32_t * m_conf, char * config_filename) {
     goto lab_0x21dec;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/app-config.c
-// Address range: 0x228d0 - 0x229ae
-// Line range:    275 - 291
-int32_t * app_config_init(char * config_filename) {
-    char dbg_fname[32]; // bp-44, 0x228d0
-    int32_t * p_v1 = calloc(296, 1); // 0x228e2
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/app-config.c Address
+// range: 0x228d0 - 0x229ae Line range:    275 - 291
+int32_t *app_config_init(char *config_filename) {
+    char dbg_fname[32];             // bp-44, 0x228d0
+    int32_t *p_v1 = calloc(296, 1); // 0x228e2
     if (app_config_handle(p_v1, config_filename) < 0) {
         // 0x229a4
         return NULL;
@@ -11160,14 +12677,15 @@ int32_t * app_config_init(char * config_filename) {
     // 0x22902
     memset((int32_t *)&dbg_fname, 0, 32);
     sprintf(dbg_fname, "%s.log", (char *)((int32_t)p_v1 + 4));
-    struct _IO_FILE * p_v2 = fopen(dbg_fname, "w+"); // 0x22936
+    struct _IO_FILE *p_v2 = fopen(dbg_fname, "w+"); // 0x22936
     *p_v1 = (int32_t)p_v2;
     if (p_v2 != NULL) {
         // 0x229a4
         return p_v1;
     }
     // 0x2294c
-    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 2) {
+    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+        opt_log_level < 2) {
         // 0x22976
         int32_t i_v3; // bp-1068, 0x228d0
         snprintf((char *)&i_v3, 1024, "open %s file error\n", dbg_fname);
@@ -11177,10 +12695,10 @@ int32_t * app_config_init(char * config_filename) {
     return NULL;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/app-config.c
-// Address range: 0x229b0 - 0x22a10
-// Line range:    293 - 303
-void app_config_exit(int32_t * conf) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/app-config.c Address
+// range: 0x229b0 - 0x22a10 Line range:    293 - 303
+void app_config_exit(int32_t *conf) {
     int32_t i_v1 = (int32_t)conf;
     fclose((struct _IO_FILE *)conf);
     free((int32_t *)*(int32_t *)(i_v1 + 36));
@@ -11195,10 +12713,10 @@ void app_config_exit(int32_t * conf) {
     __asm_nop((int32_t)&i_g101, i_v3, i_v3, i_v2);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/logging.c
+// From module: /home/felix/work/share/project/zcash/chip-test/common/logging.c
 // Address range: 0x22a10 - 0x22ae0
 // Line range:    33 - 63
-void my_log_curses(int32_t prio, char * datetime, char * str, bool force) {
+void my_log_curses(int32_t prio, char *datetime, char *str, bool force) {
     // 0x22a10
     if (!((prio == 0 | *(char *)&opt_quiet == 0))) {
         // 0x22ad8
@@ -11235,43 +12753,45 @@ void my_log_curses(int32_t prio, char * datetime, char * str, bool force) {
     pthread_mutex_unlock(&console_lock);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/logging.c
+// From module: /home/felix/work/share/project/zcash/chip-test/common/logging.c
 // Address range: 0x22ae0 - 0x22bf0
 // Line range:    70 - 112
-void _applog(int32_t prio, char * str, bool force) {
+void _applog(int32_t prio, char *str, bool force) {
     int32_t i_v1 = 0; // bp-40, 0x22af0
     gettimeofday((struct timeval *)&i_v1, NULL);
-    int32_t i_v2 = i_v1; // bp-44, 0x22b04
-    struct tm * p_v3 = localtime(&i_v2); // 0x22b22
-    int32_t i_v4 = (int32_t)p_v3; // 0x22b22
+    int32_t i_v2 = i_v1;                    // bp-44, 0x22b04
+    struct tm *p_v3 = localtime(&i_v2);     // 0x22b22
+    int32_t i_v4 = (int32_t)p_v3;           // 0x22b22
     int32_t i_v5 = *(int32_t *)(i_v4 + 20); // 0x22b2a
     int32_t i_v6 = *(int32_t *)(i_v4 + 16); // 0x22b32
     int32_t i_v7 = *(int32_t *)(i_v4 + 12); // 0x22b38
-    int32_t i_v8 = *(int32_t *)(i_v4 + 8); // 0x22b3c
-    int32_t i_v9 = *(int32_t *)(i_v4 + 4); // 0x22b40
-    int32_t i_v10 = p_v3->e0; // 0x22b44
-    int32_t i_v11; // bp-108, 0x22ae0
-    int32_t i_v12 = snprintf((char *)&i_v11, 64, " [%d-%02d-%02d %02d:%02d:%02d.%03d] ", i_v5 + 1900, i_v6 + 1, i_v7, i_v8, i_v9, i_v10, 0); // 0x22b66
-    int32_t i_v13 = i_v12; // 0x22b78
-    int32_t i_v14 = 64; // 0x22b78
-    int32_t i_v15 = (int32_t)" [%d-%02d-%02d %02d:%02d:%02d.%03d] "; // 0x22b78
+    int32_t i_v8 = *(int32_t *)(i_v4 + 8);  // 0x22b3c
+    int32_t i_v9 = *(int32_t *)(i_v4 + 4);  // 0x22b40
+    int32_t i_v10 = p_v3->e0;               // 0x22b44
+    int32_t i_v11;                          // bp-108, 0x22ae0
+    int32_t i_v12 =
+        snprintf((char *)&i_v11, 64, " [%d-%02d-%02d %02d:%02d:%02d.%03d] ",
+                 i_v5 + 1900, i_v6 + 1, i_v7, i_v8, i_v9, i_v10, 0);  // 0x22b66
+    int32_t i_v13 = i_v12;                                            // 0x22b78
+    int32_t i_v14 = 64;                                               // 0x22b78
+    int32_t i_v15 = (int32_t) " [%d-%02d-%02d %02d:%02d:%02d.%03d] "; // 0x22b78
     if (app_conf != NULL) {
         int32_t i_v16 = isatty(fileno((struct _IO_FILE *)app_conf)); // 0x22b90
         i_v13 = i_v16;
         i_v14 = 64;
-        i_v15 = (int32_t)" [%d-%02d-%02d %02d:%02d:%02d.%03d] ";
+        i_v15 = (int32_t) " [%d-%02d-%02d %02d:%02d:%02d.%03d] ";
         if (i_v16 == 0) {
             // 0x22b9a
             fprintf((struct _IO_FILE *)app_conf, "%s%s", &i_v11, str);
             i_v13 = fflush((struct _IO_FILE *)app_conf);
-            i_v14 = (int32_t)"%s%s";
+            i_v14 = (int32_t) "%s%s";
             i_v15 = &i_v11;
         }
     }
     int32_t i_v17 = i_v13; // 0x22bd8
     int32_t i_v18 = i_v14; // 0x22bd8
     int32_t i_v19 = i_v15; // 0x22bd8
-    int32_t i_v20 = 1; // 0x22bd8
+    int32_t i_v20 = 1;     // 0x22bd8
     if (i_g53 != 1) {
         // 0x22bda
         my_log_curses(prio, (char *)&i_v11, str, force);
@@ -11284,10 +12804,10 @@ void _applog(int32_t prio, char * str, bool force) {
     __asm_nop(i_v17, i_v18, i_v19, i_v20);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/logging.c
+// From module: /home/felix/work/share/project/zcash/chip-test/common/logging.c
 // Address range: 0x22bf0 - 0x22c60
 // Line range:    114 - 135
-void _simplelog(int32_t prio, char * str, bool force) {
+void _simplelog(int32_t prio, char *str, bool force) {
     // 0x22bf0
     if (isatty(fileno(p_g27)) == 0) {
         // 0x22c1c
@@ -11296,7 +12816,8 @@ void _simplelog(int32_t prio, char * str, bool force) {
     }
     // 0x22c46
     my_log_curses(prio, (char *)&p_g8, str, force);
-    __asm_nop((int32_t)&i_g101, (int32_t)&p_g8, (int32_t)str, (int32_t)(char)force);
+    __asm_nop((int32_t)&i_g101, (int32_t)&p_g8, (int32_t)str,
+              (int32_t)(char)force);
 }
 
 // From module:   /home/felix/work/share/project/zcash/chip-test/common/patten.c
@@ -11321,7 +12842,7 @@ void patten_info_init(void) {
     i_g66 = 1344;
     int32_t i_v1 = i_g51 * i_g50;
     i_g84 = i_v1 * i_g59;
-    int32_t * p_v2 = malloc(1488 * i_v1 * i_g59); // 0x22dac
+    int32_t *p_v2 = malloc(1488 * i_v1 * i_g59); // 0x22dac
     i_g76 = (int32_t)p_v2;
     if (p_v2 == NULL) {
         // 0x22dcc
@@ -11331,7 +12852,7 @@ void patten_info_init(void) {
     }
     // 0x22de8
     memset(p_v2, 0, 1488 * g_patten * i_g63 * i_g67);
-    int32_t * p_v3 = malloc(i_g63 * g_patten * i_g67); // 0x22e4e
+    int32_t *p_v3 = malloc(i_g63 * g_patten * i_g67); // 0x22e4e
     i_g81 = (int32_t)p_v3;
     if (p_v3 == NULL) {
         // 0x22e6e
@@ -11341,7 +12862,7 @@ void patten_info_init(void) {
     }
     // 0x22e8a
     memset(p_v3, 0, i_g63 * g_patten * i_g67);
-    int32_t * p_v4 = malloc(4 * g_patten); // 0x22ed0
+    int32_t *p_v4 = malloc(4 * g_patten); // 0x22ed0
     i_g83 = (int32_t)p_v4;
     if (p_v4 == NULL) {
         // 0x22ef0
@@ -11381,46 +12902,48 @@ void patten_info_destory(void) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/common/patten.c
 // Address range: 0x22fbc - 0x2331c
 // Line range:    62 - 110
-void patten_load(char * root_path) {
-    int32_t i_v1 = 0; // 0x23300
+void patten_load(char *root_path) {
+    int32_t i_v1 = 0;        // 0x23300
     int32_t i_v2 = g_patten; // 0x23300
-    int32_t i_v3; // 0x22fbc
+    int32_t i_v3;            // 0x22fbc
     if (g_patten <= 0) {
-      lab_0x23304:
+    lab_0x23304:
         // 0x23304
         __asm_nop(puts("Load Patten Done"), i_v3, i_v2, i_v1);
         return;
     }
     int32_t i_v4 = i_g65 + i_g64 + i_g66; // 0x22fec
-    int32_t i_v5 = g_patten; // 0x232f2
-    int32_t i_v6 = i_g63; // 0x22fbc
-    int32_t i_v7 = 0; // 0x232de
-    int32_t i_v8; // bp-4260, 0x22fbc
+    int32_t i_v5 = g_patten;              // 0x232f2
+    int32_t i_v6 = i_g63;                 // 0x22fbc
+    int32_t i_v7 = 0;                     // 0x232de
+    int32_t i_v8;                         // bp-4260, 0x22fbc
     while (true) {
         int32_t i_v9 = i_v7;
         int32_t i_v10 = i_v6; // 0x232c6
         int32_t i_v11 = i_v5; // 0x232d0
         i_v6 = i_v10;
-        int32_t i_v12; // 0x22fbc
+        int32_t i_v12;         // 0x22fbc
         int32_t i_v13 = i_v12; // 0x232d0
         if (i_v10 > 0) {
             int32_t i_v14 = 0;
             memset(&i_v8, 0, 128);
-            sprintf((char *)&i_v8, "%s/%s/%s/%s-0x%02x/%s-0x%02x.txt", root_path, (char *)&p_g68, (char *)&p_g70, (char *)&p_g72, i_v9, (char *)&p_g74, i_v14);
+            sprintf((char *)&i_v8, "%s/%s/%s/%s-0x%02x/%s-0x%02x.txt",
+                    root_path, (char *)&p_g68, (char *)&p_g70, (char *)&p_g72,
+                    i_v9, (char *)&p_g74, i_v14);
             printf("fname %s\n", &i_v8);
-            struct _IO_FILE * p_v15 = fopen((char *)&i_v8, "r"); // 0x23082
+            struct _IO_FILE *p_v15 = fopen((char *)&i_v8, "r"); // 0x23082
             if (p_v15 == NULL) {
                 // break (via goto) -> 0x2309e
                 goto lab_0x2309e;
             }
-            int32_t i_v16 = 0; // 0x2329e
-            int32_t i_v17 = (int32_t)"r"; // 0x2329e
-            int32_t i_v18; // bp-4132, 0x22fbc
-            int32_t i_v19; // 0x23144
-            char * p_v20; // 0x2318e
-            char * p_v21; // 0x231d2
-            int32_t i_v22; // 0x23260
-            int32_t i_v23; // 0x2327c
+            int32_t i_v16 = 0;             // 0x2329e
+            int32_t i_v17 = (int32_t) "r"; // 0x2329e
+            int32_t i_v18;                 // bp-4132, 0x22fbc
+            int32_t i_v19;                 // 0x23144
+            char *p_v20;                   // 0x2318e
+            char *p_v21;                   // 0x231d2
+            int32_t i_v22;                 // 0x23260
+            int32_t i_v23;                 // 0x2327c
             if (i_g67 > 0) {
                 i_v19 = ((i_g63 * i_v9 + i_v14) * i_g67 + i_v16) * i_v4 + i_g76;
                 memset(&i_v18, 0, 0x1000);
@@ -11428,7 +12951,8 @@ void patten_load(char * root_path) {
                 p_v20 = strstr((char *)&i_v18, "work");
                 hex2bin((char *)i_v19, (char *)((int32_t)p_v20 + 5), i_g64);
                 p_v21 = strstr((char *)&i_v18, "nonce");
-                hex2bin((char *)(i_g64 + i_v19), (char *)((int32_t)p_v21 + 6), i_g65);
+                hex2bin((char *)(i_g64 + i_v19), (char *)((int32_t)p_v21 + 6),
+                        i_g65);
                 i_v22 = (int32_t)strstr((char *)&i_v18, "sol") + 4;
                 hex2bin((char *)(i_g64 + i_v19 + i_g65), (char *)i_v22, i_g66);
                 i_v23 = i_v16 + 1;
@@ -11436,15 +12960,18 @@ void patten_load(char * root_path) {
                 i_v17 = i_v22;
                 while (i_g67 > i_v23) {
                     // 0x230c6
-                    i_v19 = ((i_g63 * i_v9 + i_v14) * i_g67 + i_v16) * i_v4 + i_g76;
+                    i_v19 =
+                        ((i_g63 * i_v9 + i_v14) * i_g67 + i_v16) * i_v4 + i_g76;
                     memset(&i_v18, 0, 0x1000);
                     fgets((char *)&i_v18, 0x1000, p_v15);
                     p_v20 = strstr((char *)&i_v18, "work");
                     hex2bin((char *)i_v19, (char *)((int32_t)p_v20 + 5), i_g64);
                     p_v21 = strstr((char *)&i_v18, "nonce");
-                    hex2bin((char *)(i_g64 + i_v19), (char *)((int32_t)p_v21 + 6), i_g65);
+                    hex2bin((char *)(i_g64 + i_v19),
+                            (char *)((int32_t)p_v21 + 6), i_g65);
                     i_v22 = (int32_t)strstr((char *)&i_v18, "sol") + 4;
-                    hex2bin((char *)(i_g64 + i_v19 + i_g65), (char *)i_v22, i_g66);
+                    hex2bin((char *)(i_g64 + i_v19 + i_g65), (char *)i_v22,
+                            i_g66);
                     i_v23 = i_v16 + 1;
                     i_v16 = i_v23;
                     i_v17 = i_v22;
@@ -11457,7 +12984,9 @@ void patten_load(char * root_path) {
                 // 0x23010
                 i_v14 = i_v24;
                 memset(&i_v8, 0, 128);
-                sprintf((char *)&i_v8, "%s/%s/%s/%s-0x%02x/%s-0x%02x.txt", root_path, (char *)&p_g68, (char *)&p_g70, (char *)&p_g72, i_v9, (char *)&p_g74, i_v14);
+                sprintf((char *)&i_v8, "%s/%s/%s/%s-0x%02x/%s-0x%02x.txt",
+                        root_path, (char *)&p_g68, (char *)&p_g70,
+                        (char *)&p_g72, i_v9, (char *)&p_g74, i_v14);
                 printf("fname %s\n", &i_v8);
                 p_v15 = fopen((char *)&i_v8, "r");
                 if (p_v15 == NULL) {
@@ -11466,31 +12995,39 @@ void patten_load(char * root_path) {
                 }
                 // 0x23288
                 i_v16 = 0;
-                i_v17 = (int32_t)"r";
+                i_v17 = (int32_t) "r";
                 if (i_g67 > 0) {
-                    i_v19 = ((i_g63 * i_v9 + i_v14) * i_g67 + i_v16) * i_v4 + i_g76;
+                    i_v19 =
+                        ((i_g63 * i_v9 + i_v14) * i_g67 + i_v16) * i_v4 + i_g76;
                     memset(&i_v18, 0, 0x1000);
                     fgets((char *)&i_v18, 0x1000, p_v15);
                     p_v20 = strstr((char *)&i_v18, "work");
                     hex2bin((char *)i_v19, (char *)((int32_t)p_v20 + 5), i_g64);
                     p_v21 = strstr((char *)&i_v18, "nonce");
-                    hex2bin((char *)(i_g64 + i_v19), (char *)((int32_t)p_v21 + 6), i_g65);
+                    hex2bin((char *)(i_g64 + i_v19),
+                            (char *)((int32_t)p_v21 + 6), i_g65);
                     i_v22 = (int32_t)strstr((char *)&i_v18, "sol") + 4;
-                    hex2bin((char *)(i_g64 + i_v19 + i_g65), (char *)i_v22, i_g66);
+                    hex2bin((char *)(i_g64 + i_v19 + i_g65), (char *)i_v22,
+                            i_g66);
                     i_v23 = i_v16 + 1;
                     i_v16 = i_v23;
                     i_v17 = i_v22;
                     while (i_g67 > i_v23) {
                         // 0x230c6
-                        i_v19 = ((i_g63 * i_v9 + i_v14) * i_g67 + i_v16) * i_v4 + i_g76;
+                        i_v19 =
+                            ((i_g63 * i_v9 + i_v14) * i_g67 + i_v16) * i_v4 +
+                            i_g76;
                         memset(&i_v18, 0, 0x1000);
                         fgets((char *)&i_v18, 0x1000, p_v15);
                         p_v20 = strstr((char *)&i_v18, "work");
-                        hex2bin((char *)i_v19, (char *)((int32_t)p_v20 + 5), i_g64);
+                        hex2bin((char *)i_v19, (char *)((int32_t)p_v20 + 5),
+                                i_g64);
                         p_v21 = strstr((char *)&i_v18, "nonce");
-                        hex2bin((char *)(i_g64 + i_v19), (char *)((int32_t)p_v21 + 6), i_g65);
+                        hex2bin((char *)(i_g64 + i_v19),
+                                (char *)((int32_t)p_v21 + 6), i_g65);
                         i_v22 = (int32_t)strstr((char *)&i_v18, "sol") + 4;
-                        hex2bin((char *)(i_g64 + i_v19 + i_g65), (char *)i_v22, i_g66);
+                        hex2bin((char *)(i_g64 + i_v19 + i_g65), (char *)i_v22,
+                                i_g66);
                         i_v23 = i_v16 + 1;
                         i_v16 = i_v23;
                         i_v17 = i_v22;
@@ -11516,7 +13053,7 @@ void patten_load(char * root_path) {
             goto lab_0x23304;
         }
     }
-  lab_0x2309e:
+lab_0x2309e:
     // 0x2309e
     printf("open %s failed\n", &i_v8);
     exit(1);
@@ -11526,7 +13063,7 @@ void patten_load(char * root_path) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/common/patten.c
 // Address range: 0x2332c - 0x2350a
 // Line range:    112 - 141
-int32_t is_patten_match(int32_t asic_index, char * nonce, char * sol) {
+int32_t is_patten_match(int32_t asic_index, char *nonce, char *sol) {
     // 0x2332c
     if (i_g78 != asic_index) {
         // 0x2334c
@@ -11536,22 +13073,27 @@ int32_t is_patten_match(int32_t asic_index, char * nonce, char * sol) {
     }
     // 0x2336c
     pthread_mutex_lock(&i_g87);
-    int32_t i_v1 = memcmp((int32_t *)(i_g64 + (int32_t)p_g77), (int32_t *)nonce, i_g65); // 0x23396
-    int32_t i_v2; // 0x2332c
-    if ((memcmp((int32_t *)(i_g64 + (int32_t)p_g77 + i_g65), (int32_t *)sol, i_g66) || i_v1) == 0) {
+    int32_t i_v1 = memcmp((int32_t *)(i_g64 + (int32_t)p_g77), (int32_t *)nonce,
+                          i_g65); // 0x23396
+    int32_t i_v2;                 // 0x2332c
+    if ((memcmp((int32_t *)(i_g64 + (int32_t)p_g77 + i_g65), (int32_t *)sol,
+                i_g66) ||
+         i_v1) == 0) {
         // 0x233e0
         *(char *)(i_g67 * (i_g63 * i_g78 + i_g79) + i_g81 + i_g80) = 1;
         int32_t i_v3 = i_g82 + 1; // 0x23438
         i_g82 = i_v3;
         float32_t f_v4 = __asm_vcvt_f32_s32(__asm_vmov(i_v3)); // 0x23452
-        __asm_vstr(__asm_vdiv_f32(f_v4, __asm_vcvt_f32_s32(__asm_vmov(i_g84))), i_g85);
-        int32_t * p_v5 = (int32_t *)(4 * i_g78 + i_g83); // 0x23490
+        __asm_vstr(__asm_vdiv_f32(f_v4, __asm_vcvt_f32_s32(__asm_vmov(i_g84))),
+                   i_g85);
+        int32_t *p_v5 = (int32_t *)(4 * i_g78 + i_g83); // 0x23490
         *p_v5 = *p_v5 + 1;
         i_v2 = 0;
     } else {
         // 0x2349c
         dump_str((char *)p_g27, "Not Match Recv:", nonce, i_g65);
-        dump_str((char *)p_g27, "Not Match Expect:", (char *)(i_g64 + (int32_t)p_g77), i_g65);
+        dump_str((char *)p_g27,
+                 "Not Match Expect:", (char *)(i_g64 + (int32_t)p_g77), i_g65);
         i_v2 = -1;
     }
     // 0x234fa
@@ -11566,7 +13108,8 @@ int32_t is_patten_match(int32_t asic_index, char * nonce, char * sol) {
 void display_single_board_test(void) {
     // 0x23510
     int32_t i_v1; // 0x23510
-    __asm_nop(puts("******************Display Results*******************"), i_v1, i_v1, i_v1);
+    __asm_nop(puts("******************Display Results*******************"),
+              i_v1, i_v1, i_v1);
 }
 
 // From module:   /home/felix/work/share/project/zcash/chip-test/common/patten.c
@@ -11575,96 +13118,98 @@ void display_single_board_test(void) {
 void clear_last_test_results(void) {
     // 0x23524
     memset((int32_t *)i_g81, 0, i_g63 * g_patten * i_g67);
-    int32_t * p_v1 = memset((int32_t *)i_g83, 0, 4 * g_patten); // 0x2357a
+    int32_t *p_v1 = memset((int32_t *)i_g83, 0, 4 * g_patten); // 0x2357a
     i_g82 = 0;
     i_g85 = 0;
     __asm_nop((int32_t)p_v1, 0, 0, (int32_t)&g_patten);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c
-// Address range: 0x2359c - 0x235b4
-// Line range:    14 - 17
-int16_t rt_ringbuffer_get_size(int32_t * rb) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c Address
+// range: 0x2359c - 0x235b4 Line range:    14 - 17
+int16_t rt_ringbuffer_get_size(int32_t *rb) {
     // 0x2359c
     return *(int16_t *)((int32_t)rb + 12);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c
-// Address range: 0x235b4 - 0x23602
-// Line range:    19 - 29
-int32_t rt_ringbuffer_status(int32_t * rb) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c Address
+// range: 0x235b4 - 0x23602 Line range:    19 - 29
+int32_t rt_ringbuffer_status(int32_t *rb) {
     int32_t i_v1 = (int32_t)rb;
-    int32_t i_v2 = i_v1 + 4; // 0x235be
-    int32_t i_v3 = __asm_ubfx((int32_t)*(int16_t *)i_v2, 1, 15); // 0x235c0
-    int32_t i_v4 = i_v1 + 6; // 0x235c8
-    int32_t i_v5 = 2; // 0x235d2
-    if ((__asm_ubfx((int32_t)*(int16_t *)i_v4, 1, 15) ^ i_v3) % 0x10000 == 0) {
-        int32_t i_v6 = __asm_ubfx((int32_t)*(char *)i_v2, 0, 1); // 0x235d8
-        unsigned char i_v7 = *(char *)i_v4; // 0x235e0
+    int32_t i_v2 = i_v1 + 4;                                       // 0x235be
+    int32_t i_v3 = __asm_ubfx((int32_t) * (int16_t *)i_v2, 1, 15); // 0x235c0
+    int32_t i_v4 = i_v1 + 6;                                       // 0x235c8
+    int32_t i_v5 = 2;                                              // 0x235d2
+    if ((__asm_ubfx((int32_t) * (int16_t *)i_v4, 1, 15) ^ i_v3) % 0x10000 ==
+        0) {
+        int32_t i_v6 = __asm_ubfx((int32_t) * (char *)i_v2, 0, 1); // 0x235d8
+        unsigned char i_v7 = *(char *)i_v4;                        // 0x235e0
         i_v5 = (__asm_ubfx((int32_t)i_v7, 0, 1) ^ i_v6) % 256 != 0;
     }
     // 0x235f6
     return i_v5;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c
-// Address range: 0x23604 - 0x23688
-// Line range:    32 - 47
-int16_t rt_ringbuffer_data_len(int32_t * rb) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c Address
+// range: 0x23604 - 0x23688 Line range:    32 - 47
+int16_t rt_ringbuffer_data_len(int32_t *rb) {
     int32_t i_v1 = (int32_t)rb;
     int16_t i_v2 = 0; // 0x23604
     switch (rt_ringbuffer_status(rb)) {
-        case 1: {
-            // 0x23680
-            return *(int16_t *)(i_v1 + 12);
+    case 1: {
+        // 0x23680
+        return *(int16_t *)(i_v1 + 12);
+    }
+    default: {
+        int16_t *p_v3 = (int16_t *)(i_v1 + 6);             // 0x2362a
+        uint32_t i_v4 = __asm_ubfx((int32_t)*p_v3, 1, 15); // 0x2362c
+        int16_t *p_v5 = (int16_t *)(i_v1 + 4);             // 0x23636
+        if (i_v4 % 0x10000 > __asm_ubfx((int32_t)*p_v5, 1, 15) % 0x10000) {
+            int32_t i_v6 = __asm_ubfx((int32_t)*p_v3, 1, 15); // 0x23646
+            i_v2 = i_v6 - __asm_ubfx((int32_t)*p_v5, 1, 15);
+        } else {
+            int16_t i_v7 = *(int16_t *)(i_v1 + 12);           // 0x23660
+            int32_t i_v8 = __asm_ubfx((int32_t)*p_v3, 1, 15); // 0x23666
+            i_v2 = i_v7 + (int16_t)(i_v8 - __asm_ubfx((int32_t)*p_v5, 1, 15));
         }
-        default: {
-            int16_t * p_v3 = (int16_t *)(i_v1 + 6); // 0x2362a
-            uint32_t i_v4 = __asm_ubfx((int32_t)*p_v3, 1, 15); // 0x2362c
-            int16_t * p_v5 = (int16_t *)(i_v1 + 4); // 0x23636
-            if (i_v4 % 0x10000 > __asm_ubfx((int32_t)*p_v5, 1, 15) % 0x10000) {
-                int32_t i_v6 = __asm_ubfx((int32_t)*p_v3, 1, 15); // 0x23646
-                i_v2 = i_v6 - __asm_ubfx((int32_t)*p_v5, 1, 15);
-            } else {
-                int16_t i_v7 = *(int16_t *)(i_v1 + 12); // 0x23660
-                int32_t i_v8 = __asm_ubfx((int32_t)*p_v3, 1, 15); // 0x23666
-                i_v2 = i_v7 + (int16_t)(i_v8 - __asm_ubfx((int32_t)*p_v5, 1, 15));
-            }
-        }
-        case 0: {
-            // 0x23680
-            return i_v2;
-        }
+    }
+    case 0: {
+        // 0x23680
+        return i_v2;
+    }
     }
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c
-// Address range: 0x23688 - 0x23734
-// Line range:    53 - 73
-void rt_ringbuffer_init(int32_t * rb, char * pool, int16_t size, int32_t ringbuffer_type) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c Address
+// range: 0x23688 - 0x23734 Line range:    53 - 73
+void rt_ringbuffer_init(int32_t *rb, char *pool, int16_t size,
+                        int32_t ringbuffer_type) {
     int32_t i_v1 = (int32_t)rb;
-    int32_t i_v2 = i_v1 + 4; // 0x2369a
-    int16_t * p_v3 = (int16_t *)i_v2; // 0x2369a
+    int32_t i_v2 = i_v1 + 4;                          // 0x2369a
+    int16_t *p_v3 = (int16_t *)i_v2;                  // 0x2369a
     uint32_t i_v4 = __asm_bfc((int32_t)*p_v3, 1, 15); // 0x2369c
     *p_v3 = (int16_t)i_v4;
     uint32_t i_v5 = __asm_ubfx(i_v4 % 0x10000, 1, 15); // 0x236a6
-    char * p_v6 = (char *)i_v2; // 0x236b6
+    char *p_v6 = (char *)i_v2;                         // 0x236b6
     *p_v6 = (char)__asm_bfi((int32_t)*p_v6, i_v5 % 2, 0, 1);
-    int32_t i_v7 = i_v1 + 6; // 0x236c0
-    int16_t * p_v8 = (int16_t *)i_v7; // 0x236c0
+    int32_t i_v7 = i_v1 + 6;                          // 0x236c0
+    int16_t *p_v8 = (int16_t *)i_v7;                  // 0x236c0
     uint32_t i_v9 = __asm_bfc((int32_t)*p_v8, 1, 15); // 0x236c2
     *p_v8 = (int16_t)i_v9;
     uint32_t i_v10 = __asm_ubfx(i_v9 % 0x10000, 1, 15); // 0x236cc
-    char * p_v11 = (char *)i_v7; // 0x236dc
+    char *p_v11 = (char *)i_v7;                         // 0x236dc
     *p_v11 = (char)__asm_bfi((int32_t)*p_v11, i_v10 % 2, 0, 1);
     *rb = (int32_t)pool;
     *(int16_t *)(i_v1 + 12) = size & -4;
-    int32_t * p_v12 = (int32_t *)(i_v1 + 136); // 0x236fa
+    int32_t *p_v12 = (int32_t *)(i_v1 + 136); // 0x236fa
     *p_v12 = ringbuffer_type;
     int32_t i_v13 = pthread_mutex_init((int32_t *)(i_v1 + 16), NULL); // 0x23706
-    int32_t i_v14 = *p_v12; // 0x2370c
-    int32_t i_v15 = i_v13; // 0x23712
-    int32_t i_v16 = i_v14; // 0x23712
+    int32_t i_v14 = *p_v12;                                           // 0x2370c
+    int32_t i_v15 = i_v13;                                            // 0x23712
+    int32_t i_v16 = i_v14;                                            // 0x23712
     if (i_v14 == 0) {
         // 0x23714
         pthread_cond_init((int32_t *)(i_v1 + 40), NULL);
@@ -11675,15 +13220,15 @@ void rt_ringbuffer_init(int32_t * rb, char * pool, int16_t size, int32_t ringbuf
     __asm_nop(i_v15, 0, ringbuffer_type, i_v16);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c
-// Address range: 0x23734 - 0x2376c
-// Line range:    75 - 83
-void rt_ringbuffer_lock_destory(int32_t * rb) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c Address
+// range: 0x23734 - 0x2376c Line range:    75 - 83
+void rt_ringbuffer_lock_destory(int32_t *rb) {
     int32_t i_v1 = (int32_t)rb;
     int32_t i_v2 = pthread_mutex_destroy((int32_t *)(i_v1 + 16)); // 0x23742
-    int32_t i_v3 = *(int32_t *)(i_v1 + 136); // 0x23748
-    int32_t i_v4 = i_v2; // 0x2374e
-    int32_t i_v5 = i_v3; // 0x2374e
+    int32_t i_v3 = *(int32_t *)(i_v1 + 136);                      // 0x23748
+    int32_t i_v4 = i_v2;                                          // 0x2374e
+    int32_t i_v5 = i_v3;                                          // 0x2374e
     if (i_v3 == 0) {
         // 0x23750
         pthread_cond_destroy((int32_t *)(i_v1 + 40));
@@ -11695,80 +13240,91 @@ void rt_ringbuffer_lock_destory(int32_t * rb) {
     __asm_nop(i_v4, i_v6, i_v6, i_v5);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c
-// Address range: 0x2376c - 0x2392a
-// Line range:    87 - 146
-int32_t rt_ringbuffer_put(int32_t * rb, char * ptr, uint16_t length) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c Address
+// range: 0x2376c - 0x2392a Line range:    87 - 146
+int32_t rt_ringbuffer_put(int32_t *rb, char *ptr, uint16_t length) {
     int32_t i_v1 = (int32_t)rb;
-    int32_t * p_v2 = (int32_t *)(i_v1 + 16); // 0x23780
+    int32_t *p_v2 = (int32_t *)(i_v1 + 16); // 0x23780
     pthread_mutex_lock(p_v2);
-    int16_t * p_v3 = (int16_t *)(i_v1 + 12); // 0x23786
+    int16_t *p_v3 = (int16_t *)(i_v1 + 12);    // 0x23786
     int16_t i_v4 = rt_ringbuffer_data_len(rb); // 0x2378a
-    int32_t i_v5 = i_v4; // 0x2378a
-    uint16_t i_v6 = *p_v3 - i_v4; // 0x23790
-    int16_t i_v7 = length; // 0x2376c
-    int32_t i_v8 = i_v5; // 0x2376c
+    int32_t i_v5 = i_v4;                       // 0x2378a
+    uint16_t i_v6 = *p_v3 - i_v4;              // 0x23790
+    int16_t i_v7 = length;                     // 0x2376c
+    int32_t i_v8 = i_v5;                       // 0x2376c
     switch (*(int32_t *)(i_v1 + 136)) {
-        case 1: {
-            if (i_v6 == 0) {
-                // 0x237a4
-                pthread_mutex_unlock(p_v2);
-                // 0x23922
-                return 0;
-            }
-            // 0x237b2
-            i_v7 = i_v6 < length ? i_v6 : length;
-            i_v8 = i_v5;
-            // break -> 0x237f6
-            break;
+    case 1: {
+        if (i_v6 == 0) {
+            // 0x237a4
+            pthread_mutex_unlock(p_v2);
+            // 0x23922
+            return 0;
         }
-        case 0: {
+        // 0x237b2
+        i_v7 = i_v6 < length ? i_v6 : length;
+        i_v8 = i_v5;
+        // break -> 0x237f6
+        break;
+    }
+    case 0: {
+        // 0x237ee
+        i_v7 = length;
+        i_v8 = i_v5;
+        if (i_v6 < length) {
+            pthread_cond_wait((int32_t *)(i_v1 + 40), p_v2);
+            int16_t i_v9 = rt_ringbuffer_data_len(rb); // 0x237e4
+            // 0x237cc
+            while (*p_v3 - i_v9 < length) {
+                // 0x237cc
+                pthread_cond_wait((int32_t *)(i_v1 + 40), p_v2);
+                i_v9 = rt_ringbuffer_data_len(rb);
+            }
             // 0x237ee
             i_v7 = length;
-            i_v8 = i_v5;
-            if (i_v6 < length) {
-                pthread_cond_wait((int32_t *)(i_v1 + 40), p_v2);
-                int16_t i_v9 = rt_ringbuffer_data_len(rb); // 0x237e4
-                // 0x237cc
-                while (*p_v3 - i_v9 < length) {
-                    // 0x237cc
-                    pthread_cond_wait((int32_t *)(i_v1 + 40), p_v2);
-                    i_v9 = rt_ringbuffer_data_len(rb);
-                }
-                // 0x237ee
-                i_v7 = length;
-                i_v8 = i_v9;
-            }
-            // break -> 0x237f6
-            break;
+            i_v8 = i_v9;
         }
+        // break -> 0x237f6
+        break;
     }
-    int32_t i_v10 = i_v1 + 6; // 0x237fe
-    int16_t * p_v11 = (int16_t *)i_v10; // 0x237fe
+    }
+    int32_t i_v10 = i_v1 + 6;                            // 0x237fe
+    int16_t *p_v11 = (int16_t *)i_v10;                   // 0x237fe
     uint32_t i_v12 = __asm_ubfx((int32_t)*p_v11, 1, 15); // 0x23800
-    int32_t i_v13 = i_v7; // 0x23808
+    int32_t i_v13 = i_v7;                                // 0x23808
     int32_t i_v14 = __asm_ubfx((int32_t)*p_v11, 1, 15) % 0x10000 + i_v8;
     if ((int32_t)*p_v3 - i_v12 % 0x10000 > i_v13) {
         // 0x2380e
         memcpy((int32_t *)i_v14, (int32_t *)ptr, i_v13);
-        uint32_t i_v15 = __asm_ubfx((__asm_ubfx((int32_t)*p_v11, 1, 15) + i_v13) % 0x10000, 0, 15); // 0x2383a
+        uint32_t i_v15 =
+            __asm_ubfx((__asm_ubfx((int32_t)*p_v11, 1, 15) + i_v13) % 0x10000,
+                       0, 15); // 0x2383a
         *p_v11 = (int16_t)__asm_bfi((int32_t)*p_v11, i_v15 % 0x10000, 1, 15);
         pthread_cond_signal((int32_t *)(i_v1 + 88));
         pthread_mutex_unlock(p_v2);
     } else {
-        uint16_t i_v16 = *p_v3; // 0x23874
+        uint16_t i_v16 = *p_v3;  // 0x23874
         uint16_t i_v17 = *p_v11; // 0x2387a
-        int32_t * p_v18 = memcpy((int32_t *)i_v14, (int32_t *)ptr, (int32_t)i_v16 - __asm_ubfx((int32_t)i_v17, 1, 15) % 0x10000); // 0x23888
-        uint16_t i_v19 = *p_v3; // 0x23892
-        uint32_t i_v20 = __asm_ubfx((int32_t)*p_v11, 1, 15); // 0x2389a
-        uint16_t i_v21 = *p_v3; // 0x238ac
-        uint16_t i_v22 = *p_v11; // 0x238b2
-        memcpy(p_v18, (int32_t *)((int32_t)i_v19 + (int32_t)ptr - i_v20 % 0x10000), i_v13 - (int32_t)i_v21 + __asm_ubfx((int32_t)i_v22, 1, 15) % 0x10000);
-        char * p_v23 = (char *)i_v10; // 0x238c6
-        int32_t i_v24 = __asm_bfi((int32_t)*p_v23, __asm_ubfx((int32_t)*p_v23, 0, 1) % 2 ^ 1, 0, 1); // 0x238dc
+        int32_t *p_v18 =
+            memcpy((int32_t *)i_v14, (int32_t *)ptr,
+                   (int32_t)i_v16 -
+                       __asm_ubfx((int32_t)i_v17, 1, 15) % 0x10000); // 0x23888
+        uint16_t i_v19 = *p_v3;                                      // 0x23892
+        uint32_t i_v20 = __asm_ubfx((int32_t)*p_v11, 1, 15);         // 0x2389a
+        uint16_t i_v21 = *p_v3;                                      // 0x238ac
+        uint16_t i_v22 = *p_v11;                                     // 0x238b2
+        memcpy(p_v18,
+               (int32_t *)((int32_t)i_v19 + (int32_t)ptr - i_v20 % 0x10000),
+               i_v13 - (int32_t)i_v21 +
+                   __asm_ubfx((int32_t)i_v22, 1, 15) % 0x10000);
+        char *p_v23 = (char *)i_v10; // 0x238c6
+        int32_t i_v24 = __asm_bfi((int32_t)*p_v23,
+                                  __asm_ubfx((int32_t)*p_v23, 0, 1) % 2 ^ 1, 0,
+                                  1); // 0x238dc
         *p_v23 = (char)i_v24;
         int32_t i_v25 = __asm_ubfx((int32_t)*p_v11, 1, 15); // 0x238e6
-        uint32_t i_v26 = __asm_ubfx((i_v25 + i_v13 - (int32_t)*p_v3) % 0x10000, 0, 15); // 0x238fc
+        uint32_t i_v26 = __asm_ubfx((i_v25 + i_v13 - (int32_t)*p_v3) % 0x10000,
+                                    0, 15); // 0x238fc
         *p_v11 = (int16_t)__asm_bfi((int32_t)*p_v11, i_v26 % 0x10000, 1, 15);
         pthread_cond_signal((int32_t *)(i_v1 + 88));
         pthread_mutex_unlock(p_v2);
@@ -11777,38 +13333,42 @@ int32_t rt_ringbuffer_put(int32_t * rb, char * ptr, uint16_t length) {
     return i_v7;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c
-// Address range: 0x2392c - 0x23aec
-// Line range:    148 - 196
-int32_t rt_ringbuffer_put_force(int32_t * rb, char * ptr, uint16_t length) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c Address
+// range: 0x2392c - 0x23aec Line range:    148 - 196
+int32_t rt_ringbuffer_put_force(int32_t *rb, char *ptr, uint16_t length) {
     uint32_t i_v1 = (int32_t)length;
     int32_t i_v2 = (int32_t)rb;
-    int32_t * p_v3 = (int32_t *)(i_v2 + 16); // 0x23940
+    int32_t *p_v3 = (int32_t *)(i_v2 + 16); // 0x23940
     pthread_mutex_lock(p_v3);
-    int16_t * p_v4 = (int16_t *)(i_v2 + 12); // 0x23946
+    int16_t *p_v4 = (int16_t *)(i_v2 + 12);    // 0x23946
     int32_t i_v5 = rt_ringbuffer_data_len(rb); // 0x2394a
-    uint32_t i_v6 = (int32_t)*p_v4 - i_v5; // 0x23950
-    uint16_t i_v7 = (int16_t)i_v6; // 0x23952
-    uint32_t i_v8 = i_v6 % 0x10000; // 0x23956
-    bool i_v9 = i_v8 == i_v1 | i_v8 > i_v1; // 0x2395a
+    uint32_t i_v6 = (int32_t)*p_v4 - i_v5;     // 0x23950
+    uint16_t i_v7 = (int16_t)i_v6;             // 0x23952
+    uint32_t i_v8 = i_v6 % 0x10000;            // 0x23956
+    bool i_v9 = i_v8 == i_v1 | i_v8 > i_v1;    // 0x2395a
     uint16_t i_v10 = *p_v4;
     int32_t i_v11 = i_v10;
     int32_t i_v12 = i_v9 ? i_v1 : i_v11;
     uint16_t i_v13 = i_v9 ? length : i_v10;
-    int32_t i_v14 = i_v2 + 6; // 0x2396a
-    int16_t * p_v15 = (int16_t *)i_v14; // 0x2396a
+    int32_t i_v14 = i_v2 + 6;                            // 0x2396a
+    int16_t *p_v15 = (int16_t *)i_v14;                   // 0x2396a
     uint32_t i_v16 = __asm_ubfx((int32_t)*p_v15, 1, 15); // 0x2396c
     int32_t i_v17 = __asm_ubfx((int32_t)*p_v15, 1, 15) % 0x10000 + i_v5;
     if (i_v11 - i_v16 % 0x10000 > i_v12) {
         // 0x2397a
         memcpy((int32_t *)i_v17, (int32_t *)ptr, i_v12);
-        uint32_t i_v18 = __asm_ubfx((__asm_ubfx((int32_t)*p_v15, 1, 15) + i_v12) % 0x10000, 0, 15); // 0x239a6
-        uint32_t i_v19 = __asm_bfi((int32_t)*p_v15, i_v18 % 0x10000, 1, 15); // 0x239b0
+        uint32_t i_v18 =
+            __asm_ubfx((__asm_ubfx((int32_t)*p_v15, 1, 15) + i_v12) % 0x10000,
+                       0, 15); // 0x239a6
+        uint32_t i_v19 =
+            __asm_bfi((int32_t)*p_v15, i_v18 % 0x10000, 1, 15); // 0x239b0
         *p_v15 = (int16_t)i_v19;
         if (i_v13 != i_v7 && i_v13 >= i_v7) {
             uint32_t i_v20 = __asm_ubfx(i_v19 % 0x10000, 1, 15); // 0x239c2
-            int16_t * p_v21 = (int16_t *)(i_v2 + 4); // 0x239ca
-            *p_v21 = (int16_t)__asm_bfi((int32_t)*p_v21, i_v20 % 0x10000, 1, 15);
+            int16_t *p_v21 = (int16_t *)(i_v2 + 4);              // 0x239ca
+            *p_v21 =
+                (int16_t)__asm_bfi((int32_t)*p_v21, i_v20 % 0x10000, 1, 15);
         }
         // 0x239d2
         pthread_cond_signal((int32_t *)(i_v2 + 88));
@@ -11816,27 +13376,36 @@ int32_t rt_ringbuffer_put_force(int32_t * rb, char * ptr, uint16_t length) {
         // 0x23ae4
         return i_v12;
     }
-    uint16_t i_v22 = *p_v4; // 0x239fc
+    uint16_t i_v22 = *p_v4;  // 0x239fc
     uint16_t i_v23 = *p_v15; // 0x23a02
-    int32_t * p_v24 = memcpy((int32_t *)i_v17, (int32_t *)ptr, (int32_t)i_v22 - __asm_ubfx((int32_t)i_v23, 1, 15) % 0x10000); // 0x23a10
-    uint16_t i_v25 = *p_v4; // 0x23a1a
-    uint32_t i_v26 = __asm_ubfx((int32_t)*p_v15, 1, 15); // 0x23a22
-    uint16_t i_v27 = *p_v4; // 0x23a34
-    uint16_t i_v28 = *p_v15; // 0x23a3a
-    memcpy(p_v24, (int32_t *)((int32_t)i_v25 + (int32_t)ptr - i_v26 % 0x10000), i_v12 - (int32_t)i_v27 + __asm_ubfx((int32_t)i_v28, 1, 15) % 0x10000);
-    char * p_v29 = (char *)i_v14; // 0x23a4e
-    int32_t i_v30 = __asm_bfi((int32_t)*p_v29, __asm_ubfx((int32_t)*p_v29, 0, 1) % 2 ^ 1, 0, 1); // 0x23a64
+    int32_t *p_v24 = memcpy((int32_t *)i_v17, (int32_t *)ptr,
+                            (int32_t)i_v22 - __asm_ubfx((int32_t)i_v23, 1, 15) %
+                                                 0x10000); // 0x23a10
+    uint16_t i_v25 = *p_v4;                                // 0x23a1a
+    uint32_t i_v26 = __asm_ubfx((int32_t)*p_v15, 1, 15);   // 0x23a22
+    uint16_t i_v27 = *p_v4;                                // 0x23a34
+    uint16_t i_v28 = *p_v15;                               // 0x23a3a
+    memcpy(p_v24, (int32_t *)((int32_t)i_v25 + (int32_t)ptr - i_v26 % 0x10000),
+           i_v12 - (int32_t)i_v27 +
+               __asm_ubfx((int32_t)i_v28, 1, 15) % 0x10000);
+    char *p_v29 = (char *)i_v14; // 0x23a4e
+    int32_t i_v30 =
+        __asm_bfi((int32_t)*p_v29, __asm_ubfx((int32_t)*p_v29, 0, 1) % 2 ^ 1, 0,
+                  1); // 0x23a64
     *p_v29 = (char)i_v30;
     int32_t i_v31 = __asm_ubfx((int32_t)*p_v15, 1, 15); // 0x23a6e
-    uint32_t i_v32 = __asm_ubfx((i_v31 + i_v12 - (int32_t)*p_v4) % 0x10000, 0, 15); // 0x23a84
+    uint32_t i_v32 = __asm_ubfx((i_v31 + i_v12 - (int32_t)*p_v4) % 0x10000, 0,
+                                15); // 0x23a84
     *p_v15 = (int16_t)__asm_bfi((int32_t)*p_v15, i_v32 % 0x10000, 1, 15);
     if (i_v13 != i_v7 && i_v13 >= i_v7) {
-        int32_t i_v33 = i_v2 + 4; // 0x23a9e
-        char * p_v34 = (char *)i_v33; // 0x23a9e
-        int32_t i_v35 = __asm_bfi((int32_t)*p_v34, __asm_ubfx((int32_t)*p_v34, 0, 1) % 2 ^ 1, 0, 1); // 0x23ab4
+        int32_t i_v33 = i_v2 + 4;    // 0x23a9e
+        char *p_v34 = (char *)i_v33; // 0x23a9e
+        int32_t i_v35 = __asm_bfi((int32_t)*p_v34,
+                                  __asm_ubfx((int32_t)*p_v34, 0, 1) % 2 ^ 1, 0,
+                                  1); // 0x23ab4
         *p_v34 = (char)i_v35;
         uint32_t i_v36 = __asm_ubfx((int32_t)*p_v15, 1, 15); // 0x23abe
-        int16_t * p_v37 = (int16_t *)i_v33; // 0x23ac6
+        int16_t *p_v37 = (int16_t *)i_v33;                   // 0x23ac6
         *p_v37 = (int16_t)__asm_bfi((int32_t)*p_v37, i_v36 % 0x10000, 1, 15);
     }
     // 0x23ace
@@ -11846,78 +13415,87 @@ int32_t rt_ringbuffer_put_force(int32_t * rb, char * ptr, uint16_t length) {
     return i_v12;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c
-// Address range: 0x23aec - 0x23c9e
-// Line range:    201 - 258
-int32_t rt_ringbuffer_get(int32_t * rb, char * ptr, int16_t length) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c Address
+// range: 0x23aec - 0x23c9e Line range:    201 - 258
+int32_t rt_ringbuffer_get(int32_t *rb, char *ptr, int16_t length) {
     int32_t i_v1 = (int32_t)rb;
-    int32_t * p_v2 = (int32_t *)(i_v1 + 16); // 0x23b00
+    int32_t *p_v2 = (int32_t *)(i_v1 + 16); // 0x23b00
     pthread_mutex_lock(p_v2);
     int16_t i_v3 = rt_ringbuffer_data_len(rb); // 0x23b06
-    int32_t i_v4 = i_v3; // 0x23b06
-    int16_t i_v5 = length; // 0x23aec
-    int32_t i_v6 = i_v4; // 0x23aec
+    int32_t i_v4 = i_v3;                       // 0x23b06
+    int16_t i_v5 = length;                     // 0x23aec
+    int32_t i_v6 = i_v4;                       // 0x23aec
     switch (*(int32_t *)(i_v1 + 136)) {
-        case 1: {
-            if (i_v3 == 0) {
-                // 0x23b1e
-                pthread_mutex_unlock(p_v2);
-                // 0x23c96
-                return 0;
-            }
-            uint32_t i_v7 = (int32_t)length; // 0x23b2c
-            i_v5 = i_v4 == i_v7 | i_v4 > i_v7 ? length : i_v3;
-            i_v6 = i_v4;
-            // break -> 0x23b6a
-            break;
+    case 1: {
+        if (i_v3 == 0) {
+            // 0x23b1e
+            pthread_mutex_unlock(p_v2);
+            // 0x23c96
+            return 0;
         }
-        case 0: {
-            uint32_t i_v8 = (int32_t)length; // 0x23b62
+        uint32_t i_v7 = (int32_t)length; // 0x23b2c
+        i_v5 = i_v4 == i_v7 | i_v4 > i_v7 ? length : i_v3;
+        i_v6 = i_v4;
+        // break -> 0x23b6a
+        break;
+    }
+    case 0: {
+        uint32_t i_v8 = (int32_t)length; // 0x23b62
+        i_v5 = length;
+        i_v6 = i_v4;
+        if (i_v4 <= i_v8 == (i_v4 != i_v8)) {
+            pthread_cond_wait((int32_t *)(i_v1 + 88), p_v2);
+            int32_t i_v9 = rt_ringbuffer_data_len(rb); // 0x23b5a
             i_v5 = length;
-            i_v6 = i_v4;
-            if (i_v4 <= i_v8 == (i_v4 != i_v8)) {
+            i_v6 = i_v9;
+            // 0x23b46
+            while (i_v9 <= i_v8 == (i_v9 != i_v8)) {
+                // 0x23b46
                 pthread_cond_wait((int32_t *)(i_v1 + 88), p_v2);
-                int32_t i_v9 = rt_ringbuffer_data_len(rb); // 0x23b5a
+                i_v9 = rt_ringbuffer_data_len(rb);
                 i_v5 = length;
                 i_v6 = i_v9;
-                // 0x23b46
-                while (i_v9 <= i_v8 == (i_v9 != i_v8)) {
-                    // 0x23b46
-                    pthread_cond_wait((int32_t *)(i_v1 + 88), p_v2);
-                    i_v9 = rt_ringbuffer_data_len(rb);
-                    i_v5 = length;
-                    i_v6 = i_v9;
-                }
             }
-            // break -> 0x23b6a
-            break;
         }
+        // break -> 0x23b6a
+        break;
     }
-    int16_t * p_v10 = (int16_t *)(i_v1 + 12); // 0x23b6c
-    int32_t i_v11 = i_v1 + 4; // 0x23b72
-    int16_t * p_v12 = (int16_t *)i_v11; // 0x23b72
+    }
+    int16_t *p_v10 = (int16_t *)(i_v1 + 12);             // 0x23b6c
+    int32_t i_v11 = i_v1 + 4;                            // 0x23b72
+    int16_t *p_v12 = (int16_t *)i_v11;                   // 0x23b72
     uint32_t i_v13 = __asm_ubfx((int32_t)*p_v12, 1, 15); // 0x23b74
-    int32_t i_v14 = i_v5; // 0x23b7c
+    int32_t i_v14 = i_v5;                                // 0x23b7c
     int32_t i_v15 = __asm_ubfx((int32_t)*p_v12, 1, 15) % 0x10000 + i_v6;
     if ((int32_t)*p_v10 - i_v13 % 0x10000 > i_v14) {
         // 0x23b82
         memcpy((int32_t *)ptr, (int32_t *)i_v15, i_v14);
-        uint32_t i_v16 = __asm_ubfx((__asm_ubfx((int32_t)*p_v12, 1, 15) + i_v14) % 0x10000, 0, 15); // 0x23bae
+        uint32_t i_v16 =
+            __asm_ubfx((__asm_ubfx((int32_t)*p_v12, 1, 15) + i_v14) % 0x10000,
+                       0, 15); // 0x23bae
         *p_v12 = (int16_t)__asm_bfi((int32_t)*p_v12, i_v16 % 0x10000, 1, 15);
         pthread_mutex_unlock(p_v2);
         pthread_cond_signal((int32_t *)(i_v1 + 40));
     } else {
         uint16_t i_v17 = *p_v10; // 0x23be8
         uint16_t i_v18 = *p_v12; // 0x23bee
-        memcpy((int32_t *)ptr, (int32_t *)i_v15, (int32_t)i_v17 - __asm_ubfx((int32_t)i_v18, 1, 15) % 0x10000);
+        memcpy((int32_t *)ptr, (int32_t *)i_v15,
+               (int32_t)i_v17 - __asm_ubfx((int32_t)i_v18, 1, 15) % 0x10000);
         uint32_t i_v19 = __asm_ubfx((int32_t)*p_v12, 1, 15); // 0x23c0a
-        int32_t * p_v20 = (int32_t *)((int32_t)*p_v10 + (int32_t)ptr - i_v19 % 0x10000); // 0x23c34
-        memcpy(p_v20, p_v20, i_v14 - (int32_t)*p_v10 + __asm_ubfx((int32_t)*p_v12, 1, 15) % 0x10000);
-        char * p_v21 = (char *)i_v11; // 0x23c3a
-        int32_t i_v22 = __asm_bfi((int32_t)*p_v21, __asm_ubfx((int32_t)*p_v21, 0, 1) % 2 ^ 1, 0, 1); // 0x23c50
+        int32_t *p_v20 = (int32_t *)((int32_t)*p_v10 + (int32_t)ptr -
+                                     i_v19 % 0x10000); // 0x23c34
+        memcpy(p_v20, p_v20,
+               i_v14 - (int32_t)*p_v10 +
+                   __asm_ubfx((int32_t)*p_v12, 1, 15) % 0x10000);
+        char *p_v21 = (char *)i_v11; // 0x23c3a
+        int32_t i_v22 = __asm_bfi((int32_t)*p_v21,
+                                  __asm_ubfx((int32_t)*p_v21, 0, 1) % 2 ^ 1, 0,
+                                  1); // 0x23c50
         *p_v21 = (char)i_v22;
         int32_t i_v23 = __asm_ubfx((int32_t)*p_v12, 1, 15); // 0x23c5a
-        uint32_t i_v24 = __asm_ubfx((i_v23 + i_v14 - (int32_t)*p_v10) % 0x10000, 0, 15); // 0x23c70
+        uint32_t i_v24 = __asm_ubfx((i_v23 + i_v14 - (int32_t)*p_v10) % 0x10000,
+                                    0, 15); // 0x23c70
         *p_v12 = (int16_t)__asm_bfi((int32_t)*p_v12, i_v24 % 0x10000, 1, 15);
         pthread_cond_signal((int32_t *)(i_v1 + 40));
         pthread_mutex_unlock(p_v2);
@@ -11926,22 +13504,23 @@ int32_t rt_ringbuffer_get(int32_t * rb, char * ptr, int16_t length) {
     return i_v5;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c
-// Address range: 0x23ca0 - 0x23d70
-// Line range:    263 - 295
-int32_t rt_ringbuffer_prefetch(int32_t * rb, char * ptr, uint16_t length) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/common/ringbuffer.c Address
+// range: 0x23ca0 - 0x23d70 Line range:    263 - 295
+int32_t rt_ringbuffer_prefetch(int32_t *rb, char *ptr, uint16_t length) {
     int16_t i_v1 = rt_ringbuffer_data_len(rb); // 0x23cb0
     if (i_v1 == 0) {
         // 0x23d68
         return 0;
     }
     int32_t i_v2 = (int32_t)rb;
-    uint32_t i_v3 = (int32_t)i_v1; // 0x23cb0
-    uint32_t i_v4 = (int32_t)length; // 0x23cc2
-    int16_t * p_v5 = (int16_t *)(i_v2 + 12); // 0x23cd0
-    int16_t * p_v6 = (int16_t *)(i_v2 + 4); // 0x23cd6
+    uint32_t i_v3 = (int32_t)i_v1;                     // 0x23cb0
+    uint32_t i_v4 = (int32_t)length;                   // 0x23cc2
+    int16_t *p_v5 = (int16_t *)(i_v2 + 12);            // 0x23cd0
+    int16_t *p_v6 = (int16_t *)(i_v2 + 4);             // 0x23cd6
     uint32_t i_v7 = __asm_ubfx((int32_t)*p_v6, 1, 15); // 0x23cd8
-    int32_t i_v8 = (int32_t)(i_v3 == i_v4 | i_v3 > i_v4 ? length : i_v1); // 0x23ce0
+    int32_t i_v8 =
+        (int32_t)(i_v3 == i_v4 | i_v3 > i_v4 ? length : i_v1); // 0x23ce0
     int32_t i_v9 = __asm_ubfx((int32_t)*p_v6, 1, 15) % 0x10000 + i_v3;
     if ((int32_t)*p_v5 - i_v7 % 0x10000 > i_v8) {
         // 0x23ce6
@@ -11949,10 +13528,14 @@ int32_t rt_ringbuffer_prefetch(int32_t * rb, char * ptr, uint16_t length) {
     } else {
         uint16_t i_v10 = *p_v5; // 0x23d16
         uint16_t i_v11 = *p_v6; // 0x23d1c
-        memcpy((int32_t *)ptr, (int32_t *)i_v9, (int32_t)i_v10 - __asm_ubfx((int32_t)i_v11, 1, 15) % 0x10000);
+        memcpy((int32_t *)ptr, (int32_t *)i_v9,
+               (int32_t)i_v10 - __asm_ubfx((int32_t)i_v11, 1, 15) % 0x10000);
         uint32_t i_v12 = __asm_ubfx((int32_t)*p_v6, 1, 15); // 0x23d38
-        int32_t * p_v13 = (int32_t *)((int32_t)*p_v5 + (int32_t)ptr - i_v12 % 0x10000); // 0x23d62
-        memcpy(p_v13, p_v13, i_v8 - (int32_t)*p_v5 + __asm_ubfx((int32_t)*p_v6, 1, 15) % 0x10000);
+        int32_t *p_v13 = (int32_t *)((int32_t)*p_v5 + (int32_t)ptr -
+                                     i_v12 % 0x10000); // 0x23d62
+        memcpy(p_v13, p_v13,
+               i_v8 - (int32_t)*p_v5 +
+                   __asm_ubfx((int32_t)*p_v6, 1, 15) % 0x10000);
     }
     // 0x23d68
     return i_v8;
@@ -11961,40 +13544,42 @@ int32_t rt_ringbuffer_prefetch(int32_t * rb, char * ptr, uint16_t length) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/common/util.c
 // Address range: 0x23d70 - 0x23e08
 // Line range:    20 - 40
-void get_current_time(char * dtime) {
+void get_current_time(char *dtime) {
     char datetime[64]; // bp-96, 0x23d70
-    int32_t tv = 0; // bp-104, 0x23d7a
+    int32_t tv = 0;    // bp-104, 0x23d7a
     gettimeofday((struct timeval *)&tv, NULL);
-    int32_t tmp_time = tv; // bp-108, 0x23d8e
-    struct tm * p_v1 = localtime(&tmp_time); // 0x23dac
-    int32_t i_v2 = (int32_t)p_v1; // 0x23db2
+    int32_t tmp_time = tv;                  // bp-108, 0x23d8e
+    struct tm *p_v1 = localtime(&tmp_time); // 0x23dac
+    int32_t i_v2 = (int32_t)p_v1;           // 0x23db2
     int32_t i_v3 = *(int32_t *)(i_v2 + 20); // 0x23db4
     int32_t i_v4 = *(int32_t *)(i_v2 + 16); // 0x23dbc
     int32_t i_v5 = *(int32_t *)(i_v2 + 12); // 0x23dc2
-    int32_t i_v6 = *(int32_t *)(i_v2 + 8); // 0x23dc6
-    int32_t i_v7 = *(int32_t *)(i_v2 + 4); // 0x23dca
-    int32_t i_v8 = p_v1->e0; // 0x23dce
-    snprintf(datetime, 64, " [%d-%02d-%02d %02d:%02d:%02d.%03d] ", i_v3 + 1900, i_v4 + 1, i_v5, i_v6, i_v7, i_v8, 0);
-    int32_t i_v9 = (int32_t)&datetime; // 0x23df4
-    char * p_v10 = strcpy(dtime, datetime); // 0x23dfc
-    __asm_nop((int32_t)p_v10, i_v9, (int32_t)" [%d-%02d-%02d %02d:%02d:%02d.%03d] ", i_v9);
+    int32_t i_v6 = *(int32_t *)(i_v2 + 8);  // 0x23dc6
+    int32_t i_v7 = *(int32_t *)(i_v2 + 4);  // 0x23dca
+    int32_t i_v8 = p_v1->e0;                // 0x23dce
+    snprintf(datetime, 64, " [%d-%02d-%02d %02d:%02d:%02d.%03d] ", i_v3 + 1900,
+             i_v4 + 1, i_v5, i_v6, i_v7, i_v8, 0);
+    int32_t i_v9 = (int32_t)&datetime;     // 0x23df4
+    char *p_v10 = strcpy(dtime, datetime); // 0x23dfc
+    __asm_nop((int32_t)p_v10, i_v9,
+              (int32_t) " [%d-%02d-%02d %02d:%02d:%02d.%03d] ", i_v9);
 }
 
 // From module:   /home/felix/work/share/project/zcash/chip-test/common/util.c
 // Address range: 0x23e08 - 0x23e7c
 // Line range:    42 - 53
-void __bin2hex(char * s, char * p, uint32_t len) {
+void __bin2hex(char *s, char *p, uint32_t len) {
     int32_t i_v1 = (int32_t)p;
     int32_t i_v2 = (int32_t)s;
-    int32_t i_v3 = 0; // 0x23e64
-    char * p_v4 = s; // 0x23e64
+    int32_t i_v3 = 0;    // 0x23e64
+    char *p_v4 = s;      // 0x23e64
     int32_t i_v5 = i_v1; // 0x23e64
     int32_t i_v6 = i_v2; // 0x23e64
     if (len > 0) {
-        char * p_v7 = (char *)(i_v3 + i_v1); // 0x23e26
+        char *p_v7 = (char *)(i_v3 + i_v1); // 0x23e26
         *s = *(char *)((int32_t)(*p_v7 / 16) + (int32_t)&p_g9);
-        int32_t i_v8 = i_v2 + 2; // 0x23e3c
-        char * p_v9 = (char *)i_v8; // 0x23e3e
+        int32_t i_v8 = i_v2 + 2;               // 0x23e3c
+        char *p_v9 = (char *)i_v8;             // 0x23e3e
         int32_t i_v10 = (int32_t)(*p_v7 % 16); // 0x23e48
         *(char *)(i_v2 + 1) = *(char *)(i_v10 + (int32_t)&p_g9);
         i_v3++;
@@ -12024,8 +13609,8 @@ void __bin2hex(char * s, char * p, uint32_t len) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/common/util.c
 // Address range: 0x23e7c - 0x23ee2
 // Line range:    58 - 73
-char * bin2hex(char * p, int32_t len) {
-    int32_t * p_v1 = calloc((2 * len | 1) + 4 & -4, 1); // 0x23ea6
+char *bin2hex(char *p, int32_t len) {
+    int32_t *p_v1 = calloc((2 * len | 1) + 4 & -4, 1); // 0x23ea6
     if (p_v1 == NULL) {
         // 0x23eb4
         fwrite((int32_t *)"Failed to calloc", 1, 16, p_g27);
@@ -12038,32 +13623,35 @@ char * bin2hex(char * p, int32_t len) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/common/util.c
 // Address range: 0x23ee4 - 0x23f96
 // Line range:    96 - 126
-int32_t hex2bin(char * p, char * hexstr, int32_t len) {
-    char i_v1 = *hexstr; // 0x23f6a
-    char i_v2 = i_v1; // 0x23f6e
-    int32_t i_v3 = len; // 0x23f6e
-    char * p_v4 = p; // 0x23f6e
+int32_t hex2bin(char *p, char *hexstr, int32_t len) {
+    char i_v1 = *hexstr;   // 0x23f6a
+    char i_v2 = i_v1;      // 0x23f6e
+    int32_t i_v3 = len;    // 0x23f6e
+    char *p_v4 = p;        // 0x23f6e
     bool i_v5 = i_v1 == 0; // 0x23f6e
-    bool i_v6 = len == 0; // 0x23f6e
+    bool i_v6 = len == 0;  // 0x23f6e
     if (len == 0 || i_v1 == 0) {
-      lab_0x23f76:
+    lab_0x23f76:
         // 0x23f76
         if (i_v6) {
             // 0x23f7c
             return i_v5;
         }
     } else {
-        int32_t i_v7 = (int32_t)hexstr; // 0x23ef6
+        int32_t i_v7 = (int32_t)hexstr;           // 0x23ef6
         unsigned char i_v8 = *(char *)(i_v7 + 1); // 0x23efa
         while (i_v8 != 0) {
-            int32_t i_v9 = *(int32_t *)(4 * (int32_t)i_v2 + (int32_t)&hex2bin_tbl); // 0x23f18
-            int32_t i_v10 = *(int32_t *)(4 * (int32_t)i_v8 + (int32_t)&hex2bin_tbl); // 0x23f32
+            int32_t i_v9 = *(int32_t *)(4 * (int32_t)i_v2 +
+                                        (int32_t)&hex2bin_tbl); // 0x23f18
+            int32_t i_v10 = *(int32_t *)(4 * (int32_t)i_v8 +
+                                         (int32_t)&hex2bin_tbl); // 0x23f32
             if (i_v9 < 0 || i_v10 < 0) {
                 // break -> 0x23f8a
                 break;
             }
-            char * p_v11 = (char *)(i_v7 + 2); // 0x23f22
-            *p_v4 = (char)__asm_sxtb(__asm_sxtb(i_v10) | __asm_sxtb(16 * i_v9 & 4080));
+            char *p_v11 = (char *)(i_v7 + 2); // 0x23f22
+            *p_v4 = (char)__asm_sxtb(__asm_sxtb(i_v10) |
+                                     __asm_sxtb(16 * i_v9 & 4080));
             i_v3--;
             i_v2 = *p_v11;
             p_v4 = (char *)((int32_t)p_v4 + 1);
@@ -12087,7 +13675,7 @@ char swap_bit(unsigned char chr) {
     char i_v1 = 0;
     uint32_t i_v2 = 0;
     char i_v3 = i_v1; // 0x23fba
-    int32_t i_v4; // 0x23fc8
+    int32_t i_v4;     // 0x23fc8
     if ((1 << i_v2 & (int32_t)chr) != 0) {
         // 0x23fbc
         i_v4 = __asm_sxtb(1 << 7 - i_v2);
@@ -12116,14 +13704,14 @@ char swap_bit(unsigned char chr) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/common/util.c
 // Address range: 0x23ff0 - 0x24058
 // Line range:    142 - 160
-void dump_str(char * fdp, char * func, char * str, int32_t len) {
+void dump_str(char *fdp, char *func, char *str, int32_t len) {
     if (fdp == NULL) {
         int32_t i_v1 = (int32_t)fdp;
         __asm_nop(i_v1, (int32_t)func, (int32_t)str, i_v1);
         // 0x24052
         return;
     }
-    char * p_v2 = bin2hex(str, len); // 0x2400e
+    char *p_v2 = bin2hex(str, len); // 0x2400e
     if (func == NULL) {
         // 0x2401a
         fprintf((struct _IO_FILE *)fdp, "%s\n");
@@ -12139,8 +13727,8 @@ void dump_str(char * fdp, char * func, char * str, int32_t len) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/common/util.c
 // Address range: 0x24058 - 0x241d8
 // Line range:    162 - 185
-char bit_read(char * y, uint32_t x) {
-    uint32_t i_v1 = -x; // 0x24064
+char bit_read(char *y, uint32_t x) {
+    uint32_t i_v1 = -x;     // 0x24064
     char i_v2 = (int32_t)y; // 0x2406e
     if (i_v1 >= 0) {
         i_v2 = __asm_it();
@@ -12158,7 +13746,7 @@ char bit_read(char * y, uint32_t x) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/common/util.c
 // Address range: 0x241d8 - 0x24262
 // Line range:    187 - 200
-void swab256(char * dest_p, char * src_p) {
+void swab256(char *dest_p, char *src_p) {
     int32_t i_v1 = (int32_t)src_p;
     int32_t i_v2 = (int32_t)dest_p;
     *(int32_t *)dest_p = llvm_bswap_i32(*(int32_t *)(i_v1 + 28));
@@ -12168,24 +13756,24 @@ void swab256(char * dest_p, char * src_p) {
     *(int32_t *)(i_v2 + 16) = llvm_bswap_i32(*(int32_t *)(i_v1 + 12));
     *(int32_t *)(i_v2 + 20) = llvm_bswap_i32(*(int32_t *)(i_v1 + 8));
     *(int32_t *)(i_v2 + 24) = llvm_bswap_i32(*(int32_t *)(i_v1 + 4));
-    int32_t i_v3 = i_v2 + 28; // 0x2424c
+    int32_t i_v3 = i_v2 + 28;            // 0x2424c
     int32_t i_v4 = llvm_bswap_i32(i_v1); // 0x24252
     *(int32_t *)i_v3 = i_v4;
     __asm_nop(i_v2, i_v1, i_v4, i_v3);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2-impl.h
-// Address range: 0x24268 - 0x243cc
-// Line range:    39 - 57
-int64_t load64(int32_t * src) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/crypto/blake2-impl.h Address
+// range: 0x24268 - 0x243cc Line range:    39 - 57
+int64_t load64(int32_t *src) {
     unsigned char i_v1 = *(char *)((int32_t)src + 3); // 0x242de
     return 0x1000000 * (int32_t)i_v1 >> 31;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2-impl.h
-// Address range: 0x243cc - 0x24428
-// Line range:    59 - 70
-void store32(char * dst, uint32_t w) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/crypto/blake2-impl.h Address
+// range: 0x243cc - 0x24428 Line range:    59 - 70
+void store32(char *dst, uint32_t w) {
     int32_t i_v1 = (int32_t)dst;
     *dst = (char)w;
     *(char *)(i_v1 + 1) = (char)(w / 256);
@@ -12196,10 +13784,10 @@ void store32(char * dst, uint32_t w) {
     __asm_nop(i_v1, w, i_v3, i_v2);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2-impl.h
-// Address range: 0x24428 - 0x2454e
-// Line range:    72 - 87
-void store64(char * dst, int64_t w) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/crypto/blake2-impl.h Address
+// range: 0x24428 - 0x2454e Line range:    72 - 87
+void store64(char *dst, int64_t w) {
     int32_t i_v1 = (int32_t)dst;
     int32_t i_v2; // 0x24428
     *dst = (char)i_v2;
@@ -12212,45 +13800,45 @@ void store64(char * dst, int64_t w) {
     *(char *)(i_v1 + 4) = i_v5;
     *(char *)(i_v1 + 5) = i_v5;
     uint32_t i_v6 = i_v4 / 256; // 0x24506
-    int32_t i_v7 = i_v1 + 7; // 0x24518
-    char i_v8 = i_v6; // 0x24520
+    int32_t i_v7 = i_v1 + 7;    // 0x24518
+    char i_v8 = i_v6;           // 0x24520
     *(char *)(i_v1 + 6) = i_v8;
     *(char *)i_v7 = i_v8;
     __asm_nop(i_v1, (int32_t)w, i_v6 % 256, i_v7);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2-impl.h
-// Address range: 0x24550 - 0x245c2
-// Line range:    127 - 130
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/crypto/blake2-impl.h Address
+// range: 0x24550 - 0x245c2 Line range:    127 - 130
 int64_t rotr64(int64_t w, uint32_t c) {
-    uint64_t i_v1 = 0x100000000 * w >> 32; // 0x2455e
-    uint32_t i_v2 = (int32_t)i_v1; // 0x2455e
+    uint64_t i_v1 = 0x100000000 * w >> 32;         // 0x2455e
+    uint32_t i_v2 = (int32_t)i_v1;                 // 0x2455e
     uint32_t i_v3 = (int32_t)(i_v1 / 0x100000000); // 0x2455e
     return i_v2 >> c - 32 | i_v2 << 32 - c | i_v3 >> c | i_v3 << -c % 64;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2-impl.h
-// Address range: 0x245c4 - 0x245e8
-// Line range:    133 - 137
-void secure_zero_memory(char * v, int32_t n) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/crypto/blake2-impl.h Address
+// range: 0x245c4 - 0x245e8 Line range:    133 - 137
+void secure_zero_memory(char *v, int32_t n) {
     // 0x245c4
     __asm_nop((int32_t)memset((int32_t *)v, 0, n), 0, n, i_g26);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x245e8 - 0x2460a
 // Line range:    47 - 51
-int32_t blake2b_set_lastnode(int32_t * S) {
+int32_t blake2b_set_lastnode(int32_t *S) {
     int32_t i_v1 = (int32_t)S;
     *(int32_t *)(i_v1 + 88) = -1;
     *(int32_t *)(i_v1 + 92) = -1;
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x2460c - 0x24630
 // Line range:    60 - 63
-int32_t blake2b_is_lastblock(int32_t * S) {
+int32_t blake2b_is_lastblock(int32_t *S) {
     uint64_t i_v1 = *(int64_t *)((int32_t)S + 80); // 0x24616
     if ((int32_t)(i_v1 / 0x100000000 || i_v1) != 0) {
         __asm_ite();
@@ -12258,10 +13846,10 @@ int32_t blake2b_is_lastblock(int32_t * S) {
     return (int32_t)(i_v1 / 0x100000000 | i_v1) != 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x24630 - 0x24660
 // Line range:    65 - 71
-int32_t blake2b_set_lastblock(int32_t * S) {
+int32_t blake2b_set_lastblock(int32_t *S) {
     int32_t i_v1 = (int32_t)S;
     if (*(char *)(i_v1 + 356) != 0) {
         // 0x24642
@@ -12273,29 +13861,30 @@ int32_t blake2b_set_lastblock(int32_t * S) {
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x24660 - 0x246be
 // Line range:    81 - 86
-int32_t blake2b_increment_counter(int32_t * S, int64_t inc) {
+int32_t blake2b_increment_counter(int32_t *S, int64_t inc) {
     // 0x24660
     int32_t i_v1; // 0x24660
     int32_t i_v2 = i_v1;
     int32_t i_v3 = (int32_t)S;
-    int32_t i_v4 = i_v3 + 64; // 0x2466e
-    int64_t * p_v5 = (int64_t *)i_v4; // 0x2466e
-    uint64_t i_v6 = *p_v5; // 0x2466e
-    uint32_t i_v7 = i_v2 >> 31; // 0x24672
+    int32_t i_v4 = i_v3 + 64;                             // 0x2466e
+    int64_t *p_v5 = (int64_t *)i_v4;                      // 0x2466e
+    uint64_t i_v6 = *p_v5;                                // 0x2466e
+    uint32_t i_v7 = i_v2 >> 31;                           // 0x24672
     uint32_t i_v8 = i_v7 + (int32_t)(i_v6 / 0x100000000); // 0x24676
     *(int32_t *)i_v4 = i_v8;
     *(int32_t *)(i_v3 + 68) = i_v2 + (int32_t)i_v6 + (int32_t)(i_v8 < i_v7);
-    int32_t i_v9 = i_v3 + 72; // 0x24684
+    int32_t i_v9 = i_v3 + 72;          // 0x24684
     uint64_t i_v10 = *(int64_t *)i_v9; // 0x24684
-    uint64_t i_v11 = *p_v5; // 0x2468a
-    uint32_t i_v12 = (int32_t)i_v11; // 0x2468a
+    uint64_t i_v11 = *p_v5;            // 0x2468a
+    uint32_t i_v12 = (int32_t)i_v11;   // 0x2468a
     if (i_v2 == i_v12) {
         __asm_it();
     }
-    bool i_v13 = i_v2 == i_v12 ? i_v7 > (int32_t)(i_v11 / 0x100000000) : i_v2 > i_v12;
+    bool i_v13 =
+        i_v2 == i_v12 ? i_v7 > (int32_t)(i_v11 / 0x100000000) : i_v2 > i_v12;
     if (i_v13) {
         __asm_ite();
     }
@@ -12306,18 +13895,18 @@ int32_t blake2b_increment_counter(int32_t * S, int64_t inc) {
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x246c0 - 0x2470e
 // Line range:    143 - 150
 // Used cryptographic patterns:
 //  - SHA512 (64-bit, little endian)
-int32_t blake2b_init0(int32_t * S) {
+int32_t blake2b_init0(int32_t *S) {
     // 0x246c0
     memset(S, 0, 360);
     for (int32_t i_v1 = 0; i_v1 < 8; i_v1++) {
-        int32_t i_v2 = 8 * i_v1; // 0x246e4
+        int32_t i_v2 = 8 * i_v1;                                   // 0x246e4
         uint64_t i_v3 = *(int64_t *)(i_v2 + (int32_t)&blake2b_IV); // 0x246e8
-        int32_t i_v4 = i_v2 + (int32_t)S; // 0x246f2
+        int32_t i_v4 = i_v2 + (int32_t)S;                          // 0x246f2
         *(int32_t *)i_v4 = (int32_t)(i_v3 / 0x100000000);
         *(int32_t *)(i_v4 + 4) = (int32_t)i_v3;
     }
@@ -12325,17 +13914,17 @@ int32_t blake2b_init0(int32_t * S) {
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x24710 - 0x24772
 // Line range:    153 - 164
-int32_t blake2b_init_param(int32_t * S, int32_t * P) {
+int32_t blake2b_init_param(int32_t *S, int32_t *P) {
     int32_t i_v1 = (int32_t)P;
     blake2b_init0(S);
-    int32_t i_v2 = 0; // 0x2475e
-    int32_t i_v3 = 8 * i_v2; // 0x2472c
+    int32_t i_v2 = 0;                                // 0x2475e
+    int32_t i_v3 = 8 * i_v2;                         // 0x2472c
     int64_t i_v4 = load64((int32_t *)(i_v3 + i_v1)); // 0x24734
-    int32_t i_v5 = i_v3 + i_v1; // 0x24742
-    uint64_t i_v6 = *(int64_t *)i_v5; // 0x24744
+    int32_t i_v5 = i_v3 + i_v1;                      // 0x24742
+    uint64_t i_v6 = *(int64_t *)i_v5;                // 0x24744
     *(int32_t *)i_v5 = (int32_t)(i_v6 / 0x100000000 ^ i_v4);
     *(int32_t *)(i_v5 + 4) = i_v1 ^ (int32_t)i_v6;
     i_v2++;
@@ -12353,10 +13942,10 @@ int32_t blake2b_init_param(int32_t * S, int32_t * P) {
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x24774 - 0x24814
 // Line range:    168 - 186
-int32_t blake2b_init(int32_t * S, unsigned char outlen) {
+int32_t blake2b_init(int32_t *S, unsigned char outlen) {
     // 0x24774
     if (outlen == 0) {
         // 0x2480c
@@ -12365,7 +13954,7 @@ int32_t blake2b_init(int32_t * S, unsigned char outlen) {
     int32_t i_v1 = -1; // 0x2478a
     if (outlen == 64 || outlen < 64) {
         int32_t P = outlen; // bp-72, 0x24794
-        int32_t i_v2; // bp-68, 0x24774
+        int32_t i_v2;       // bp-68, 0x24774
         store32((char *)&i_v2, 0);
         int32_t i_v3; // bp-64, 0x24774
         store64((char *)&i_v3, (int64_t)(int32_t)&i_v3);
@@ -12381,17 +13970,19 @@ int32_t blake2b_init(int32_t * S, unsigned char outlen) {
     return i_v1;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x24814 - 0x24926
 // Line range:    189 - 219
-int32_t blake2b_init_key(int32_t * S, unsigned char outlen, int32_t * key, unsigned char keylen) {
+int32_t blake2b_init_key(int32_t *S, unsigned char outlen, int32_t *key,
+                         unsigned char keylen) {
     // 0x24814
-    if (outlen == 0 || outlen != 64 && outlen >= 64 || key == NULL || keylen == 0 || keylen != 64 && keylen >= 64) {
+    if (outlen == 0 || outlen != 64 && outlen >= 64 || key == NULL ||
+        keylen == 0 || keylen != 64 && keylen >= 64) {
         // 0x2491e
         return -1;
     }
     int32_t P = outlen; // bp-72, 0x24854
-    int32_t i_v1; // bp-68, 0x24814
+    int32_t i_v1;       // bp-68, 0x24814
     store32((char *)&i_v1, 0);
     int32_t i_v2; // bp-64, 0x24814
     store64((char *)&i_v2, (int64_t)(int32_t)&i_v2);
@@ -12402,7 +13993,7 @@ int32_t blake2b_init_key(int32_t * S, unsigned char outlen, int32_t * key, unsig
     int32_t i_v5; // bp-24, 0x24814
     memset(&i_v5, 0, 16);
     uint32_t i_v6 = blake2b_init_param(S, &P); // 0x248d2
-    int32_t i_v7 = -1; // 0x248da
+    int32_t i_v7 = -1;                         // 0x248da
     if (i_v6 >= 0) {
         // 0x248e2
         int32_t i_v8; // bp-200, 0x24814
@@ -12416,20 +14007,20 @@ int32_t blake2b_init_key(int32_t * S, unsigned char outlen, int32_t * key, unsig
     return i_v7;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x24928 - 0x2cdb2
 // Line range:    221 - 282
-int32_t blake2b_compress(int32_t * S, char * block) {
-    int64_t v[16]; // bp-280, 0x24928
-    int64_t x_v1[16]; // 0x2a1ea
-    int64_t x_v2[16]; // 0x2a298
-    int64_t x_v3[16]; // 0x2a75a
-    int64_t x_v4[16]; // 0x250c0
-    int64_t x_v5[16]; // 0x2a808
-    int64_t x_v6[16]; // 0x2acca
-    int64_t x_v7[16]; // 0x2ad78
-    int64_t x_v8[16]; // 0x2b23a
-    int64_t x_v9[16]; // 0x2b2e8
+int32_t blake2b_compress(int32_t *S, char *block) {
+    int64_t v[16];     // bp-280, 0x24928
+    int64_t x_v1[16];  // 0x2a1ea
+    int64_t x_v2[16];  // 0x2a298
+    int64_t x_v3[16];  // 0x2a75a
+    int64_t x_v4[16];  // 0x250c0
+    int64_t x_v5[16];  // 0x2a808
+    int64_t x_v6[16];  // 0x2acca
+    int64_t x_v7[16];  // 0x2ad78
+    int64_t x_v8[16];  // 0x2b23a
+    int64_t x_v9[16];  // 0x2b2e8
     int64_t x_v10[16]; // 0x2b7aa
     int64_t x_v11[16]; // 0x2b858
     int64_t x_v12[16]; // 0x2bd1a
@@ -12473,18 +14064,18 @@ int32_t blake2b_compress(int32_t * S, char * block) {
     int32_t i_v49; // bp-16, 0x24928
     int32_t i_v50 = &i_v49;
     for (int32_t i_v51 = 0; i_v51 < 16; i_v51++) {
-        int32_t i_v52 = 8 * i_v51; // 0x24942
+        int32_t i_v52 = 8 * i_v51;                                   // 0x24942
         int64_t i_v53 = load64((int32_t *)(i_v52 + (int32_t)block)); // 0x2494c
-        int32_t i_v54 = i_v52 + i_v50; // 0x2495e
+        int32_t i_v54 = i_v52 + i_v50;                               // 0x2495e
         *(int32_t *)(i_v54 - 136) = (int32_t)i_v53;
         *(int32_t *)(i_v54 - 132) = i_v50;
     }
     int32_t i_v55 = (int32_t)S;
     int32_t i_v56 = (int32_t)&v;
     for (int32_t i_v57 = 0; i_v57 < 8; i_v57++) {
-        int32_t i_v58 = 8 * i_v57; // 0x24988
+        int32_t i_v58 = 8 * i_v57;                    // 0x24988
         uint64_t i_v59 = *(int64_t *)(i_v58 + i_v55); // 0x2498c
-        int32_t i_v60 = i_v58 + i_v56; // 0x2499a
+        int32_t i_v60 = i_v58 + i_v56;                // 0x2499a
         *(int32_t *)i_v60 = (int32_t)(i_v59 / 0x100000000);
         *(int32_t *)(i_v60 | 4) = (int32_t)i_v59;
     }
@@ -12492,1096 +14083,1628 @@ int32_t blake2b_compress(int32_t * S, char * block) {
     uint64_t i_v62 = *(int64_t *)(i_v55 + 72); // 0x24a16
     uint64_t i_v63 = *(int64_t *)(i_v55 + 80); // 0x24a36
     uint64_t i_v64 = *(int64_t *)(i_v55 + 88); // 0x24a56
-    uint64_t i_v65 = v[0]; // 0x24a76
-    int64_t i_v66; // 0x24928
-    int32_t i_v67 = i_v66 / 0x100000000; // 0x24a7e
-    int64_t * p_v68 = (int64_t *)(i_v50 - 136); // 0x24a94
-    uint64_t i_v69 = *p_v68; // 0x24a94
-    x_v23[0] = (int32_t)(i_v65 / 0x100000000) + i_v67 + (int32_t)(i_v69 / 0x100000000);
+    uint64_t i_v65 = v[0];                     // 0x24a76
+    int64_t i_v66;                             // 0x24928
+    int32_t i_v67 = i_v66 / 0x100000000;       // 0x24a7e
+    int64_t *p_v68 = (int64_t *)(i_v50 - 136); // 0x24a94
+    uint64_t i_v69 = *p_v68;                   // 0x24a94
+    x_v23[0] =
+        (int32_t)(i_v65 / 0x100000000) + i_v67 + (int32_t)(i_v69 / 0x100000000);
     v = x_v23;
     uint64_t i_v70 = v[0]; // 0x24ab2
-    int32_t i_v71 = (int32_t)rotr64((int64_t)((int32_t)(i_v61 / 0x100000000) >> 31 ^ (int32_t)(i_v70 / 0x100000000)), 32) >> 31;
+    int32_t i_v71 =
+        (int32_t)rotr64((int64_t)((int32_t)(i_v61 / 0x100000000) >> 31 ^
+                                  (int32_t)(i_v70 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v72 = i_v71 - 1 >> 31;
-    int64_t i_v73 = rotr64((int64_t)(i_v72 ^ i_v67), 24); // 0x24b10
-    uint64_t i_v74 = v[0]; // 0x24b24
+    int64_t i_v73 = rotr64((int64_t)(i_v72 ^ i_v67), 24);      // 0x24b10
+    uint64_t i_v74 = v[0];                                     // 0x24b24
     int32_t i_v75 = (0x100000000 * i_v73 >> 32) / 0x100000000; // 0x24b2c
-    int64_t * p_v76 = (int64_t *)(i_v50 - 128); // 0x24b42
-    uint64_t i_v77 = *p_v76; // 0x24b42
-    x_v27[0] = i_v75 + (int32_t)(i_v74 / 0x100000000) + (int32_t)(i_v77 / 0x100000000);
+    int64_t *p_v76 = (int64_t *)(i_v50 - 128);                 // 0x24b42
+    uint64_t i_v77 = *p_v76;                                   // 0x24b42
+    x_v27[0] =
+        i_v75 + (int32_t)(i_v74 / 0x100000000) + (int32_t)(i_v77 / 0x100000000);
     v = x_v27;
     uint64_t i_v78 = v[0]; // 0x24b60
-    int32_t i_v79 = rotr64((int64_t)(i_v71 ^ (int32_t)(i_v78 / 0x100000000)), 16); // 0x24b72
+    int32_t i_v79 = rotr64((int64_t)(i_v71 ^ (int32_t)(i_v78 / 0x100000000)),
+                           16); // 0x24b72
     int32_t i_v80 = ((i_v79 >> 31) + i_v72) / 0x80000000;
     int64_t i_v81 = rotr64((int64_t)(i_v80 ^ i_v75), 63); // 0x24bbe
-    int32_t i_v82 = i_v66 / 0x100000000; // 0x24bda
-    int64_t * p_v83 = (int64_t *)(i_v50 - 120); // 0x24bf0
-    int32_t i_v84 = (int32_t)(i_v66 / 0x100000000) + i_v82 + (int32_t)(*p_v83 / 0x100000000); // 0x24bf4
-    int32_t i_v85 = rotr64((int64_t)((i_v84 ^ -(int32_t)(i_v62 / 0x100000000)) >> 31), 32); // 0x24c20
+    int32_t i_v82 = i_v66 / 0x100000000;                  // 0x24bda
+    int64_t *p_v83 = (int64_t *)(i_v50 - 120);            // 0x24bf0
+    int32_t i_v84 = (int32_t)(i_v66 / 0x100000000) + i_v82 +
+                    (int32_t)(*p_v83 / 0x100000000); // 0x24bf4
+    int32_t i_v85 =
+        rotr64((int64_t)((i_v84 ^ -(int32_t)(i_v62 / 0x100000000)) >> 31),
+               32); // 0x24c20
     int32_t i_v86 = ((i_v85 >> 31) - 1) / 0x80000000;
-    int32_t i_v87 = (0x100000000 * rotr64((int64_t)(i_v86 ^ i_v82), 24) >> 32) / 0x100000000; // 0x24c88
-    int64_t * p_v88 = (int64_t *)(i_v50 - 112); // 0x24c9e
-    int32_t i_v89 = (i_v84 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v87; // 0x24ca2
+    int32_t i_v87 = (0x100000000 * rotr64((int64_t)(i_v86 ^ i_v82), 24) >> 32) /
+                    0x100000000;               // 0x24c88
+    int64_t *p_v88 = (int64_t *)(i_v50 - 112); // 0x24c9e
+    int32_t i_v89 =
+        (i_v84 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v87;  // 0x24ca2
     int32_t i_v90 = rotr64((int64_t)((i_v89 ^ i_v85) >> 31), 16); // 0x24cce
     int32_t i_v91 = ((i_v90 >> 31) + i_v86) / 0x80000000;
     int64_t i_v92 = rotr64((int64_t)(i_v91 ^ i_v87), 63); // 0x24d1a
-    int32_t i_v93 = i_v66 / 0x100000000; // 0x24d36
-    int64_t * p_v94 = (int64_t *)(i_v50 - 104); // 0x24d4c
-    int32_t i_v95 = (int32_t)(i_v66 / 0x100000000) + i_v93 + (int32_t)(*p_v94 / 0x100000000); // 0x24d50
-    int32_t i_v96 = rotr64((int64_t)((i_v95 ^ (int32_t)(i_v63 / 0x100000000)) >> 31), 32); // 0x24d7c
+    int32_t i_v93 = i_v66 / 0x100000000;                  // 0x24d36
+    int64_t *p_v94 = (int64_t *)(i_v50 - 104);            // 0x24d4c
+    int32_t i_v95 = (int32_t)(i_v66 / 0x100000000) + i_v93 +
+                    (int32_t)(*p_v94 / 0x100000000); // 0x24d50
+    int32_t i_v96 =
+        rotr64((int64_t)((i_v95 ^ (int32_t)(i_v63 / 0x100000000)) >> 31),
+               32); // 0x24d7c
     int32_t i_v97 = i_v96 >> 31;
-    int32_t i_v98 = (0x100000000 * rotr64((int64_t)(i_v97 ^ i_v93), 24) >> 32) / 0x100000000; // 0x24de4
-    int64_t * p_v99 = (int64_t *)(i_v50 - 96); // 0x24dfa
-    int32_t i_v100 = (i_v95 >> 31) + (int32_t)(*p_v99 / 0x100000000) + i_v98; // 0x24dfe
+    int32_t i_v98 = (0x100000000 * rotr64((int64_t)(i_v97 ^ i_v93), 24) >> 32) /
+                    0x100000000;              // 0x24de4
+    int64_t *p_v99 = (int64_t *)(i_v50 - 96); // 0x24dfa
+    int32_t i_v100 =
+        (i_v95 >> 31) + (int32_t)(*p_v99 / 0x100000000) + i_v98;    // 0x24dfe
     int32_t i_v101 = rotr64((int64_t)((i_v100 ^ i_v96) >> 31), 16); // 0x24e2a
     int32_t i_v102 = ((i_v101 >> 31) + i_v97) / 0x80000000;
     int64_t i_v103 = rotr64((int64_t)(i_v102 ^ i_v98), 63); // 0x24e76
-    int32_t i_v104 = (uint64_t)i_v66 / 0x100000000; // 0x24e92
-    int64_t * p_v105 = (int64_t *)(i_v50 - 88); // 0x24ea8
-    int32_t i_v106 = (int32_t)(i_v66 / 0x100000000) + i_v104 + (int32_t)(*p_v105 / 0x100000000); // 0x24eac
-    int32_t i_v107 = rotr64((int64_t)((i_v106 ^ (int32_t)(i_v64 / 0x100000000)) >> 31), 32); // 0x24ed8
+    int32_t i_v104 = (uint64_t)i_v66 / 0x100000000;         // 0x24e92
+    int64_t *p_v105 = (int64_t *)(i_v50 - 88);              // 0x24ea8
+    int32_t i_v106 = (int32_t)(i_v66 / 0x100000000) + i_v104 +
+                     (int32_t)(*p_v105 / 0x100000000); // 0x24eac
+    int32_t i_v107 =
+        rotr64((int64_t)((i_v106 ^ (int32_t)(i_v64 / 0x100000000)) >> 31),
+               32); // 0x24ed8
     int32_t i_v108 = ((i_v107 >> 31) - 1) / 0x80000000;
-    int32_t i_v109 = (0x100000000 * rotr64((int64_t)(i_v108 ^ i_v104), 24) >> 32) / 0x100000000; // 0x24f40
-    int64_t * p_v110 = (int64_t *)(i_v50 - 80); // 0x24f56
-    int32_t i_v111 = (i_v106 >> 31) + (int32_t)(*p_v110 / 0x100000000) + i_v109; // 0x24f5a
-    int32_t i_v112 = (int32_t)rotr64((int64_t)((i_v111 ^ i_v107) >> 31), 16) >> 31;
+    int32_t i_v109 =
+        (0x100000000 * rotr64((int64_t)(i_v108 ^ i_v104), 24) >> 32) /
+        0x100000000;                           // 0x24f40
+    int64_t *p_v110 = (int64_t *)(i_v50 - 80); // 0x24f56
+    int32_t i_v111 =
+        (i_v106 >> 31) + (int32_t)(*p_v110 / 0x100000000) + i_v109; // 0x24f5a
+    int32_t i_v112 =
+        (int32_t)rotr64((int64_t)((i_v111 ^ i_v107) >> 31), 16) >> 31;
     int32_t i_v113 = i_v112 + i_v108 >> 31;
-    int64_t i_v114 = rotr64((int64_t)(i_v113 ^ i_v109), 63); // 0x24fd2
-    uint64_t i_v115 = v[0]; // 0x24fe6
+    int64_t i_v114 = rotr64((int64_t)(i_v113 ^ i_v109), 63);    // 0x24fd2
+    uint64_t i_v115 = v[0];                                     // 0x24fe6
     int32_t i_v116 = (0x100000000 * i_v92 >> 32) / 0x100000000; // 0x24fee
-    int64_t * p_v117 = (int64_t *)(i_v50 - 72); // 0x25004
-    uint64_t i_v118 = *p_v117; // 0x25004
-    x_v48[0] = (int32_t)(i_v115 / 0x100000000) + i_v116 + (int32_t)(i_v118 / 0x100000000);
+    int64_t *p_v117 = (int64_t *)(i_v50 - 72);                  // 0x25004
+    uint64_t i_v118 = *p_v117;                                  // 0x25004
+    x_v48[0] = (int32_t)(i_v115 / 0x100000000) + i_v116 +
+               (int32_t)(i_v118 / 0x100000000);
     v = x_v48;
     uint64_t i_v119 = v[0]; // 0x25022
-    int32_t i_v120 = (int32_t)rotr64((int64_t)(i_v112 ^ (int32_t)(i_v119 / 0x100000000)), 32) >> 31;
+    int32_t i_v120 =
+        (int32_t)rotr64((int64_t)(i_v112 ^ (int32_t)(i_v119 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v121 = i_v120 + i_v102 >> 31;
-    int64_t i_v122 = rotr64((int64_t)(i_v121 ^ i_v116), 24); // 0x25080
-    uint64_t i_v123 = v[0]; // 0x25094
+    int64_t i_v122 = rotr64((int64_t)(i_v121 ^ i_v116), 24);     // 0x25080
+    uint64_t i_v123 = v[0];                                      // 0x25094
     int32_t i_v124 = (0x100000000 * i_v122 >> 32) / 0x100000000; // 0x2509c
-    int64_t * p_v125 = (int64_t *)(i_v50 - 64); // 0x250b2
-    uint64_t i_v126 = *p_v125; // 0x250b2
-    x_v4[0] = i_v124 + (int32_t)(i_v123 / 0x100000000) + (int32_t)(i_v126 / 0x100000000);
+    int64_t *p_v125 = (int64_t *)(i_v50 - 64);                   // 0x250b2
+    uint64_t i_v126 = *p_v125;                                   // 0x250b2
+    x_v4[0] = i_v124 + (int32_t)(i_v123 / 0x100000000) +
+              (int32_t)(i_v126 / 0x100000000);
     v = x_v4;
-    int64_t i_v127 = rotr64((int64_t)(i_v120 ^ (int32_t)(v[0] / 0x100000000)), 16); // 0x250e2
+    int64_t i_v127 = rotr64((int64_t)(i_v120 ^ (int32_t)(v[0] / 0x100000000)),
+                            16); // 0x250e2
     int32_t i_v128 = (((int32_t)i_v127 >> 31) + i_v121) / 0x80000000;
-    int64_t i_v129 = rotr64((int64_t)(i_v128 ^ i_v124), 63); // 0x2512e
+    int64_t i_v129 = rotr64((int64_t)(i_v128 ^ i_v124), 63);     // 0x2512e
     int32_t i_v130 = (0x100000000 * i_v103 >> 32) / 0x100000000; // 0x2514a
-    int64_t * p_v131 = (int64_t *)(i_v50 - 56); // 0x25160
-    int32_t i_v132 = (i_v89 >> 31) + i_v130 + (int32_t)(*p_v131 / 0x100000000); // 0x25164
+    int64_t *p_v131 = (int64_t *)(i_v50 - 56);                   // 0x25160
+    int32_t i_v132 =
+        (i_v89 >> 31) + i_v130 + (int32_t)(*p_v131 / 0x100000000);  // 0x25164
     int32_t i_v133 = rotr64((int64_t)((i_v132 ^ i_v79) >> 31), 32); // 0x25190
     int32_t i_v134 = ((i_v133 >> 31) + i_v113) / 0x80000000;
-    int32_t i_v135 = (0x100000000 * rotr64((int64_t)(i_v134 ^ i_v130), 24) >> 32) / 0x100000000; // 0x251f8
-    int64_t * p_v136 = (int64_t *)(i_v50 - 48); // 0x2520e
-    int32_t i_v137 = (i_v132 >> 31) + (int32_t)(*p_v136 / 0x100000000) + i_v135; // 0x25212
-    int32_t i_v138 = (int32_t)rotr64((int64_t)((i_v137 ^ i_v133) >> 31), 16) >> 31;
+    int32_t i_v135 =
+        (0x100000000 * rotr64((int64_t)(i_v134 ^ i_v130), 24) >> 32) /
+        0x100000000;                           // 0x251f8
+    int64_t *p_v136 = (int64_t *)(i_v50 - 48); // 0x2520e
+    int32_t i_v137 =
+        (i_v132 >> 31) + (int32_t)(*p_v136 / 0x100000000) + i_v135; // 0x25212
+    int32_t i_v138 =
+        (int32_t)rotr64((int64_t)((i_v137 ^ i_v133) >> 31), 16) >> 31;
     int32_t i_v139 = i_v138 + i_v134 >> 31;
-    int64_t i_v140 = rotr64((int64_t)(i_v139 ^ i_v135), 63); // 0x2528a
+    int64_t i_v140 = rotr64((int64_t)(i_v139 ^ i_v135), 63);     // 0x2528a
     int32_t i_v141 = (0x100000000 * i_v114 >> 32) / 0x100000000; // 0x252a6
-    int64_t * p_v142 = (int64_t *)(i_v50 - 40); // 0x252bc
-    int32_t i_v143 = (i_v100 >> 31) + i_v141 + (int32_t)(*p_v142 / 0x100000000); // 0x252c0
+    int64_t *p_v142 = (int64_t *)(i_v50 - 40);                   // 0x252bc
+    int32_t i_v143 =
+        (i_v100 >> 31) + i_v141 + (int32_t)(*p_v142 / 0x100000000); // 0x252c0
     int32_t i_v144 = rotr64((int64_t)((i_v143 ^ i_v90) >> 31), 32); // 0x252ec
     int32_t i_v145 = ((i_v144 >> 31) + i_v80) / 0x80000000;
-    int32_t i_v146 = (0x100000000 * rotr64((int64_t)(i_v145 ^ i_v141), 24) >> 32) / 0x100000000; // 0x25354
-    int64_t * p_v147 = (int64_t *)(i_v50 - 32); // 0x2536a
-    int32_t i_v148 = (i_v143 >> 31) + (int32_t)(*p_v147 / 0x100000000) + i_v146; // 0x2536e
+    int32_t i_v146 =
+        (0x100000000 * rotr64((int64_t)(i_v145 ^ i_v141), 24) >> 32) /
+        0x100000000;                           // 0x25354
+    int64_t *p_v147 = (int64_t *)(i_v50 - 32); // 0x2536a
+    int32_t i_v148 =
+        (i_v143 >> 31) + (int32_t)(*p_v147 / 0x100000000) + i_v146;  // 0x2536e
     int64_t i_v149 = rotr64((int64_t)((i_v148 ^ i_v144) >> 31), 16); // 0x2539a
     int32_t i_v150 = (((int32_t)i_v149 >> 31) + i_v145) / 0x80000000;
-    int64_t i_v151 = rotr64((int64_t)(i_v150 ^ i_v146), 63); // 0x253e6
+    int64_t i_v151 = rotr64((int64_t)(i_v150 ^ i_v146), 63);    // 0x253e6
     int32_t i_v152 = (0x100000000 * i_v81 >> 32) / 0x100000000; // 0x25402
-    int64_t * p_v153 = (int64_t *)(i_v50 - 24); // 0x25418
-    int32_t i_v154 = (i_v111 >> 31) + i_v152 + (int32_t)(*p_v153 / 0x100000000); // 0x2541c
+    int64_t *p_v153 = (int64_t *)(i_v50 - 24);                  // 0x25418
+    int32_t i_v154 =
+        (i_v111 >> 31) + i_v152 + (int32_t)(*p_v153 / 0x100000000);  // 0x2541c
     int32_t i_v155 = rotr64((int64_t)((i_v154 ^ i_v101) >> 31), 32); // 0x25448
     int32_t i_v156 = ((i_v155 >> 31) + i_v91) / 0x80000000;
-    int32_t i_v157 = (0x100000000 * rotr64((int64_t)(i_v156 ^ i_v152), 24) >> 32) / 0x100000000; // 0x254b0
-    int64_t * p_v158 = (int64_t *)(i_v50 - 16); // 0x254c6
-    int32_t i_v159 = (i_v154 >> 31) + (int32_t)(*p_v158 / 0x100000000) + i_v157; // 0x254ca
+    int32_t i_v157 =
+        (0x100000000 * rotr64((int64_t)(i_v156 ^ i_v152), 24) >> 32) /
+        0x100000000;                           // 0x254b0
+    int64_t *p_v158 = (int64_t *)(i_v50 - 16); // 0x254c6
+    int32_t i_v159 =
+        (i_v154 >> 31) + (int32_t)(*p_v158 / 0x100000000) + i_v157;  // 0x254ca
     int64_t i_v160 = rotr64((int64_t)((i_v159 ^ i_v155) >> 31), 16); // 0x254f6
     int32_t i_v161 = (((int32_t)i_v160 >> 31) + i_v156) / 0x80000000;
-    int64_t i_v162 = rotr64((int64_t)(i_v161 ^ i_v157), 63); // 0x25542
-    uint64_t i_v163 = v[0]; // 0x25556
+    int64_t i_v162 = rotr64((int64_t)(i_v161 ^ i_v157), 63);     // 0x25542
+    uint64_t i_v163 = v[0];                                      // 0x25556
     int32_t i_v164 = (0x100000000 * i_v162 >> 32) / 0x100000000; // 0x2555e
-    uint64_t i_v165 = *p_v153; // 0x25574
-    x_v18[0] = i_v164 + (int32_t)(i_v163 / 0x100000000) + (int32_t)(i_v165 / 0x100000000);
+    uint64_t i_v165 = *p_v153;                                   // 0x25574
+    x_v18[0] = i_v164 + (int32_t)(i_v163 / 0x100000000) +
+               (int32_t)(i_v165 / 0x100000000);
     v = x_v18;
     uint64_t i_v166 = v[0]; // 0x25592
-    int32_t i_v167 = (int32_t)rotr64((int64_t)(i_v138 ^ (int32_t)(i_v166 / 0x100000000)), 32) >> 31;
+    int32_t i_v167 =
+        (int32_t)rotr64((int64_t)(i_v138 ^ (int32_t)(i_v166 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v168 = i_v167 + i_v150 >> 31;
-    int64_t i_v169 = rotr64((int64_t)(i_v168 ^ i_v164), 24); // 0x25638
-    uint64_t i_v170 = v[0]; // 0x2564c
+    int64_t i_v169 = rotr64((int64_t)(i_v168 ^ i_v164), 24);     // 0x25638
+    uint64_t i_v170 = v[0];                                      // 0x2564c
     int32_t i_v171 = (0x100000000 * i_v169 >> 32) / 0x100000000; // 0x25654
-    uint64_t i_v172 = *p_v131; // 0x2566a
-    x_v19[0] = i_v171 + (int32_t)(i_v170 / 0x100000000) + (int32_t)(i_v172 / 0x100000000);
+    uint64_t i_v172 = *p_v131;                                   // 0x2566a
+    x_v19[0] = i_v171 + (int32_t)(i_v170 / 0x100000000) +
+               (int32_t)(i_v172 / 0x100000000);
     v = x_v19;
     uint64_t i_v173 = v[0]; // 0x25688
-    int32_t i_v174 = rotr64((int64_t)(i_v167 ^ (int32_t)(i_v173 / 0x100000000)), 16); // 0x2569a
+    int32_t i_v174 = rotr64((int64_t)(i_v167 ^ (int32_t)(i_v173 / 0x100000000)),
+                            16); // 0x2569a
     int32_t i_v175 = ((i_v174 >> 31) + i_v168) / 0x80000000;
-    int64_t i_v176 = rotr64((int64_t)(i_v175 ^ i_v171), 63); // 0x256e6
+    int64_t i_v176 = rotr64((int64_t)(i_v175 ^ i_v171), 63);     // 0x256e6
     int32_t i_v177 = (0x100000000 * i_v129 >> 32) / 0x100000000; // 0x25702
-    int32_t i_v178 = ((i_v137 >> 31) + i_v177 + (int32_t)(*p_v94 / 0x100000000)) / 0x80000000; // 0x25736
-    int32_t i_v179 = rotr64((int64_t)(i_v178 ^ (int32_t)((0x100000000 * i_v149 >> 32) / 0x100000000)), 32); // 0x25748
+    int32_t i_v178 =
+        ((i_v137 >> 31) + i_v177 + (int32_t)(*p_v94 / 0x100000000)) /
+        0x80000000; // 0x25736
+    int32_t i_v179 =
+        rotr64((int64_t)(i_v178 ^
+                         (int32_t)((0x100000000 * i_v149 >> 32) / 0x100000000)),
+               32); // 0x25748
     int32_t i_v180 = ((i_v179 >> 31) + i_v161) / 0x80000000;
-    int32_t i_v181 = (0x100000000 * rotr64((int64_t)(i_v180 ^ i_v177), 24) >> 32) / 0x100000000; // 0x257b0
-    int32_t i_v182 = i_v178 + (int32_t)(*p_v117 / 0x100000000) + i_v181; // 0x257ca
+    int32_t i_v181 =
+        (0x100000000 * rotr64((int64_t)(i_v180 ^ i_v177), 24) >> 32) /
+        0x100000000; // 0x257b0
+    int32_t i_v182 =
+        i_v178 + (int32_t)(*p_v117 / 0x100000000) + i_v181;          // 0x257ca
     int32_t i_v183 = rotr64((int64_t)((i_v182 ^ i_v179) >> 31), 16); // 0x257f6
     int32_t i_v184 = ((i_v183 >> 31) + i_v180) / 0x80000000;
-    int64_t i_v185 = rotr64((int64_t)(i_v184 ^ i_v181), 63); // 0x25842
+    int64_t i_v185 = rotr64((int64_t)(i_v184 ^ i_v181), 63);     // 0x25842
     int32_t i_v186 = (0x100000000 * i_v140 >> 32) / 0x100000000; // 0x2585e
-    int32_t i_v187 = ((i_v148 >> 31) + i_v186 + (int32_t)(*p_v125 / 0x100000000)) / 0x80000000; // 0x25892
-    int32_t i_v188 = rotr64((int64_t)(i_v187 ^ (int32_t)((0x100000000 * i_v160 >> 32) / 0x100000000)), 32); // 0x258a4
+    int32_t i_v187 =
+        ((i_v148 >> 31) + i_v186 + (int32_t)(*p_v125 / 0x100000000)) /
+        0x80000000; // 0x25892
+    int32_t i_v188 =
+        rotr64((int64_t)(i_v187 ^
+                         (int32_t)((0x100000000 * i_v160 >> 32) / 0x100000000)),
+               32); // 0x258a4
     int32_t i_v189 = ((i_v188 >> 31) + i_v128) / 0x80000000;
-    int32_t i_v190 = (0x100000000 * rotr64((int64_t)(i_v189 ^ i_v186), 24) >> 32) / 0x100000000; // 0x2590c
-    int32_t i_v191 = i_v187 + (int32_t)(*p_v158 / 0x100000000) + i_v190; // 0x25926
+    int32_t i_v190 =
+        (0x100000000 * rotr64((int64_t)(i_v189 ^ i_v186), 24) >> 32) /
+        0x100000000; // 0x2590c
+    int32_t i_v191 =
+        i_v187 + (int32_t)(*p_v158 / 0x100000000) + i_v190;          // 0x25926
     int32_t i_v192 = rotr64((int64_t)((i_v191 ^ i_v188) >> 31), 16); // 0x25952
     int32_t i_v193 = ((i_v192 >> 31) + i_v189) / 0x80000000;
-    int64_t i_v194 = rotr64((int64_t)(i_v193 ^ i_v190), 63); // 0x2599e
+    int64_t i_v194 = rotr64((int64_t)(i_v193 ^ i_v190), 63);     // 0x2599e
     int32_t i_v195 = (0x100000000 * i_v151 >> 32) / 0x100000000; // 0x259ba
-    int32_t i_v196 = ((i_v159 >> 31) + i_v195 + (int32_t)(*p_v147 / 0x100000000)) / 0x80000000; // 0x259ee
-    int32_t i_v197 = rotr64((int64_t)(i_v196 ^ (int32_t)((0x100000000 * i_v127 >> 32) / 0x100000000)), 32); // 0x25a00
+    int32_t i_v196 =
+        ((i_v159 >> 31) + i_v195 + (int32_t)(*p_v147 / 0x100000000)) /
+        0x80000000; // 0x259ee
+    int32_t i_v197 =
+        rotr64((int64_t)(i_v196 ^
+                         (int32_t)((0x100000000 * i_v127 >> 32) / 0x100000000)),
+               32); // 0x25a00
     int32_t i_v198 = ((i_v197 >> 31) + i_v139) / 0x80000000;
-    int32_t i_v199 = (0x100000000 * rotr64((int64_t)(i_v198 ^ i_v195), 24) >> 32) / 0x100000000; // 0x25a68
-    int32_t i_v200 = i_v196 + (int32_t)(*p_v105 / 0x100000000) + i_v199; // 0x25a82
-    int32_t i_v201 = (int32_t)rotr64((int64_t)((i_v200 ^ i_v197) >> 31), 16) >> 31;
+    int32_t i_v199 =
+        (0x100000000 * rotr64((int64_t)(i_v198 ^ i_v195), 24) >> 32) /
+        0x100000000; // 0x25a68
+    int32_t i_v200 =
+        i_v196 + (int32_t)(*p_v105 / 0x100000000) + i_v199; // 0x25a82
+    int32_t i_v201 =
+        (int32_t)rotr64((int64_t)((i_v200 ^ i_v197) >> 31), 16) >> 31;
     int32_t i_v202 = i_v201 + i_v198 >> 31;
-    int64_t i_v203 = rotr64((int64_t)(i_v202 ^ i_v199), 63); // 0x25afa
-    uint64_t i_v204 = v[0]; // 0x25b0e
+    int64_t i_v203 = rotr64((int64_t)(i_v202 ^ i_v199), 63);     // 0x25afa
+    uint64_t i_v204 = v[0];                                      // 0x25b0e
     int32_t i_v205 = (0x100000000 * i_v185 >> 32) / 0x100000000; // 0x25b16
-    uint64_t i_v206 = *p_v76; // 0x25b2c
-    x_v20[0] = (int32_t)(i_v204 / 0x100000000) + i_v205 + (int32_t)(i_v206 / 0x100000000);
+    uint64_t i_v206 = *p_v76;                                    // 0x25b2c
+    x_v20[0] = (int32_t)(i_v204 / 0x100000000) + i_v205 +
+               (int32_t)(i_v206 / 0x100000000);
     v = x_v20;
     uint64_t i_v207 = v[0]; // 0x25b4a
-    int32_t i_v208 = (int32_t)rotr64((int64_t)(i_v201 ^ (int32_t)(i_v207 / 0x100000000)), 32) >> 31;
+    int32_t i_v208 =
+        (int32_t)rotr64((int64_t)(i_v201 ^ (int32_t)(i_v207 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v209 = i_v208 + i_v193 >> 31;
-    int64_t i_v210 = rotr64((int64_t)(i_v209 ^ i_v205), 24); // 0x25ba8
-    uint64_t i_v211 = v[0]; // 0x25bbc
+    int64_t i_v210 = rotr64((int64_t)(i_v209 ^ i_v205), 24);     // 0x25ba8
+    uint64_t i_v211 = v[0];                                      // 0x25bbc
     int32_t i_v212 = (0x100000000 * i_v210 >> 32) / 0x100000000; // 0x25bc4
-    uint64_t i_v213 = *p_v142; // 0x25bda
-    x_v21[0] = i_v212 + (int32_t)(i_v211 / 0x100000000) + (int32_t)(i_v213 / 0x100000000);
+    uint64_t i_v213 = *p_v142;                                   // 0x25bda
+    x_v21[0] = i_v212 + (int32_t)(i_v211 / 0x100000000) +
+               (int32_t)(i_v213 / 0x100000000);
     v = x_v21;
     uint64_t i_v214 = v[0]; // 0x25bf8
-    int32_t i_v215 = rotr64((int64_t)(i_v208 ^ (int32_t)(i_v214 / 0x100000000)), 16); // 0x25c0a
+    int32_t i_v215 = rotr64((int64_t)(i_v208 ^ (int32_t)(i_v214 / 0x100000000)),
+                            16); // 0x25c0a
     int32_t i_v216 = ((i_v215 >> 31) + i_v209) / 0x80000000;
-    int64_t i_v217 = rotr64((int64_t)(i_v216 ^ i_v212), 63); // 0x25c56
+    int64_t i_v217 = rotr64((int64_t)(i_v216 ^ i_v212), 63);     // 0x25c56
     int32_t i_v218 = (0x100000000 * i_v194 >> 32) / 0x100000000; // 0x25c72
-    int32_t i_v219 = (i_v182 >> 31) + i_v218 + (int32_t)(*p_v68 / 0x100000000); // 0x25c8c
+    int32_t i_v219 =
+        (i_v182 >> 31) + i_v218 + (int32_t)(*p_v68 / 0x100000000);   // 0x25c8c
     int32_t i_v220 = rotr64((int64_t)((i_v219 ^ i_v174) >> 31), 32); // 0x25cb8
     int32_t i_v221 = ((i_v220 >> 31) + i_v202) / 0x80000000;
-    int32_t i_v222 = (0x100000000 * rotr64((int64_t)(i_v221 ^ i_v218), 24) >> 32) / 0x100000000; // 0x25d20
-    int32_t i_v223 = (i_v219 >> 31) + (int32_t)(*p_v83 / 0x100000000) + i_v222; // 0x25d3a
-    int32_t i_v224 = (int32_t)rotr64((int64_t)((i_v223 ^ i_v220) >> 31), 16) >> 31;
+    int32_t i_v222 =
+        (0x100000000 * rotr64((int64_t)(i_v221 ^ i_v218), 24) >> 32) /
+        0x100000000; // 0x25d20
+    int32_t i_v223 =
+        (i_v219 >> 31) + (int32_t)(*p_v83 / 0x100000000) + i_v222; // 0x25d3a
+    int32_t i_v224 =
+        (int32_t)rotr64((int64_t)((i_v223 ^ i_v220) >> 31), 16) >> 31;
     int32_t i_v225 = i_v224 + i_v221 >> 31;
-    int64_t i_v226 = rotr64((int64_t)(i_v225 ^ i_v222), 63); // 0x25db2
+    int64_t i_v226 = rotr64((int64_t)(i_v225 ^ i_v222), 63);     // 0x25db2
     int32_t i_v227 = (0x100000000 * i_v203 >> 32) / 0x100000000; // 0x25dce
-    int32_t i_v228 = (i_v191 >> 31) + i_v227 + (int32_t)(*p_v136 / 0x100000000); // 0x25de8
+    int32_t i_v228 =
+        (i_v191 >> 31) + i_v227 + (int32_t)(*p_v136 / 0x100000000);  // 0x25de8
     int32_t i_v229 = rotr64((int64_t)((i_v228 ^ i_v183) >> 31), 32); // 0x25e14
     int32_t i_v230 = ((i_v229 >> 31) + i_v175) / 0x80000000;
-    int32_t i_v231 = (0x100000000 * rotr64((int64_t)(i_v230 ^ i_v227), 24) >> 32) / 0x100000000; // 0x25e7c
-    int32_t i_v232 = (i_v228 >> 31) + (int32_t)(*p_v110 / 0x100000000) + i_v231; // 0x25e96
+    int32_t i_v231 =
+        (0x100000000 * rotr64((int64_t)(i_v230 ^ i_v227), 24) >> 32) /
+        0x100000000; // 0x25e7c
+    int32_t i_v232 =
+        (i_v228 >> 31) + (int32_t)(*p_v110 / 0x100000000) + i_v231;  // 0x25e96
     int32_t i_v233 = rotr64((int64_t)((i_v232 ^ i_v229) >> 31), 16); // 0x25ec2
     int32_t i_v234 = ((i_v233 >> 31) + i_v230) / 0x80000000;
-    int64_t i_v235 = rotr64((int64_t)(i_v234 ^ i_v231), 63); // 0x25f0e
+    int64_t i_v235 = rotr64((int64_t)(i_v234 ^ i_v231), 63);     // 0x25f0e
     int32_t i_v236 = (0x100000000 * i_v176 >> 32) / 0x100000000; // 0x25f2a
-    int32_t i_v237 = (i_v200 >> 31) + i_v236 + (int32_t)(*p_v99 / 0x100000000); // 0x25f44
+    int32_t i_v237 =
+        (i_v200 >> 31) + i_v236 + (int32_t)(*p_v99 / 0x100000000);   // 0x25f44
     int32_t i_v238 = rotr64((int64_t)((i_v237 ^ i_v192) >> 31), 32); // 0x25f70
     int32_t i_v239 = ((i_v238 >> 31) + i_v184) / 0x80000000;
-    int32_t i_v240 = (0x100000000 * rotr64((int64_t)(i_v239 ^ i_v236), 24) >> 32) / 0x100000000; // 0x25fd8
-    int32_t i_v241 = (i_v237 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v240; // 0x25ff2
+    int32_t i_v240 =
+        (0x100000000 * rotr64((int64_t)(i_v239 ^ i_v236), 24) >> 32) /
+        0x100000000; // 0x25fd8
+    int32_t i_v241 =
+        (i_v237 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v240;   // 0x25ff2
     int32_t i_v242 = rotr64((int64_t)((i_v241 ^ i_v238) >> 31), 16); // 0x2601e
     int32_t i_v243 = ((i_v242 >> 31) + i_v239) / 0x80000000;
-    int64_t i_v244 = rotr64((int64_t)(i_v243 ^ i_v240), 63); // 0x2606a
-    uint64_t i_v245 = v[0]; // 0x2607e
+    int64_t i_v244 = rotr64((int64_t)(i_v243 ^ i_v240), 63);     // 0x2606a
+    uint64_t i_v245 = v[0];                                      // 0x2607e
     int32_t i_v246 = (0x100000000 * i_v244 >> 32) / 0x100000000; // 0x26086
-    uint64_t i_v247 = *p_v136; // 0x2609c
-    x_v22[0] = i_v246 + (int32_t)(i_v245 / 0x100000000) + (int32_t)(i_v247 / 0x100000000);
+    uint64_t i_v247 = *p_v136;                                   // 0x2609c
+    x_v22[0] = i_v246 + (int32_t)(i_v245 / 0x100000000) +
+               (int32_t)(i_v247 / 0x100000000);
     v = x_v22;
     uint64_t i_v248 = v[0]; // 0x260ba
-    int32_t i_v249 = (int32_t)rotr64((int64_t)(i_v224 ^ (int32_t)(i_v248 / 0x100000000)), 32) >> 31;
+    int32_t i_v249 =
+        (int32_t)rotr64((int64_t)(i_v224 ^ (int32_t)(i_v248 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v250 = i_v249 + i_v234 >> 31;
-    int64_t i_v251 = rotr64((int64_t)(i_v250 ^ i_v246), 24); // 0x26118
-    uint64_t i_v252 = v[0]; // 0x2612c
+    int64_t i_v251 = rotr64((int64_t)(i_v250 ^ i_v246), 24);     // 0x26118
+    uint64_t i_v252 = v[0];                                      // 0x2612c
     int32_t i_v253 = (0x100000000 * i_v251 >> 32) / 0x100000000; // 0x26134
-    uint64_t i_v254 = *p_v117; // 0x2614a
-    x_v24[0] = i_v253 + (int32_t)(i_v252 / 0x100000000) + (int32_t)(i_v254 / 0x100000000);
+    uint64_t i_v254 = *p_v117;                                   // 0x2614a
+    x_v24[0] = i_v253 + (int32_t)(i_v252 / 0x100000000) +
+               (int32_t)(i_v254 / 0x100000000);
     v = x_v24;
     uint64_t i_v255 = v[0]; // 0x26168
-    int32_t i_v256 = rotr64((int64_t)(i_v249 ^ (int32_t)(i_v255 / 0x100000000)), 16); // 0x2617a
+    int32_t i_v256 = rotr64((int64_t)(i_v249 ^ (int32_t)(i_v255 / 0x100000000)),
+                            16); // 0x2617a
     int32_t i_v257 = ((i_v256 >> 31) + i_v250) / 0x80000000;
-    int64_t i_v258 = rotr64((int64_t)(i_v257 ^ i_v253), 63); // 0x261c6
+    int64_t i_v258 = rotr64((int64_t)(i_v257 ^ i_v253), 63);     // 0x261c6
     int32_t i_v259 = (0x100000000 * i_v217 >> 32) / 0x100000000; // 0x261e2
-    int32_t i_v260 = (i_v223 >> 31) + i_v259 + (int32_t)(*p_v142 / 0x100000000); // 0x261fc
+    int32_t i_v260 =
+        (i_v223 >> 31) + i_v259 + (int32_t)(*p_v142 / 0x100000000);  // 0x261fc
     int32_t i_v261 = rotr64((int64_t)((i_v260 ^ i_v233) >> 31), 32); // 0x26228
     int32_t i_v262 = ((i_v261 >> 31) + i_v243) / 0x80000000;
-    int32_t i_v263 = (0x100000000 * rotr64((int64_t)(i_v262 ^ i_v259), 24) >> 32) / 0x100000000; // 0x26290
-    int32_t i_v264 = (i_v260 >> 31) + (int32_t)(*p_v68 / 0x100000000) + i_v263; // 0x262aa
+    int32_t i_v263 =
+        (0x100000000 * rotr64((int64_t)(i_v262 ^ i_v259), 24) >> 32) /
+        0x100000000; // 0x26290
+    int32_t i_v264 =
+        (i_v260 >> 31) + (int32_t)(*p_v68 / 0x100000000) + i_v263;   // 0x262aa
     int32_t i_v265 = rotr64((int64_t)((i_v264 ^ i_v261) >> 31), 16); // 0x262d6
     int32_t i_v266 = ((i_v265 >> 31) + i_v262) / 0x80000000;
-    int64_t i_v267 = rotr64((int64_t)(i_v266 ^ i_v263), 63); // 0x26322
+    int64_t i_v267 = rotr64((int64_t)(i_v266 ^ i_v263), 63);     // 0x26322
     int32_t i_v268 = (0x100000000 * i_v226 >> 32) / 0x100000000; // 0x2633e
-    int32_t i_v269 = (i_v232 >> 31) + i_v268 + (int32_t)(*p_v99 / 0x100000000); // 0x26358
+    int32_t i_v269 =
+        (i_v232 >> 31) + i_v268 + (int32_t)(*p_v99 / 0x100000000);   // 0x26358
     int32_t i_v270 = rotr64((int64_t)((i_v269 ^ i_v242) >> 31), 32); // 0x26384
     int32_t i_v271 = ((i_v270 >> 31) + i_v216) / 0x80000000;
-    int32_t i_v272 = (0x100000000 * rotr64((int64_t)(i_v271 ^ i_v268), 24) >> 32) / 0x100000000; // 0x263ec
-    int32_t i_v273 = (i_v269 >> 31) + (int32_t)(*p_v83 / 0x100000000) + i_v272; // 0x26406
+    int32_t i_v272 =
+        (0x100000000 * rotr64((int64_t)(i_v271 ^ i_v268), 24) >> 32) /
+        0x100000000; // 0x263ec
+    int32_t i_v273 =
+        (i_v269 >> 31) + (int32_t)(*p_v83 / 0x100000000) + i_v272;   // 0x26406
     int32_t i_v274 = rotr64((int64_t)((i_v273 ^ i_v270) >> 31), 16); // 0x26432
     int32_t i_v275 = ((i_v274 >> 31) + i_v271) / 0x80000000;
-    int64_t i_v276 = rotr64((int64_t)(i_v275 ^ i_v272), 63); // 0x2647e
+    int64_t i_v276 = rotr64((int64_t)(i_v275 ^ i_v272), 63);     // 0x2647e
     int32_t i_v277 = (0x100000000 * i_v235 >> 32) / 0x100000000; // 0x2649a
-    int32_t i_v278 = (i_v241 >> 31) + i_v277 + (int32_t)(*p_v158 / 0x100000000); // 0x264b4
+    int32_t i_v278 =
+        (i_v241 >> 31) + i_v277 + (int32_t)(*p_v158 / 0x100000000);  // 0x264b4
     int32_t i_v279 = rotr64((int64_t)((i_v278 ^ i_v215) >> 31), 32); // 0x264e0
     int32_t i_v280 = ((i_v279 >> 31) + i_v225) / 0x80000000;
-    int32_t i_v281 = (0x100000000 * rotr64((int64_t)(i_v280 ^ i_v277), 24) >> 32) / 0x100000000; // 0x26548
-    int32_t i_v282 = (i_v278 >> 31) + (int32_t)(*p_v147 / 0x100000000) + i_v281; // 0x26562
-    int32_t i_v283 = (int32_t)rotr64((int64_t)((i_v282 ^ i_v279) >> 31), 16) >> 31;
+    int32_t i_v281 =
+        (0x100000000 * rotr64((int64_t)(i_v280 ^ i_v277), 24) >> 32) /
+        0x100000000; // 0x26548
+    int32_t i_v282 =
+        (i_v278 >> 31) + (int32_t)(*p_v147 / 0x100000000) + i_v281; // 0x26562
+    int32_t i_v283 =
+        (int32_t)rotr64((int64_t)((i_v282 ^ i_v279) >> 31), 16) >> 31;
     int32_t i_v284 = i_v283 + i_v280 >> 31;
-    int64_t i_v285 = rotr64((int64_t)(i_v284 ^ i_v281), 63); // 0x265da
-    uint64_t i_v286 = v[0]; // 0x265ee
+    int64_t i_v285 = rotr64((int64_t)(i_v284 ^ i_v281), 63);     // 0x265da
+    uint64_t i_v286 = v[0];                                      // 0x265ee
     int32_t i_v287 = (0x100000000 * i_v267 >> 32) / 0x100000000; // 0x265f6
-    uint64_t i_v288 = *p_v131; // 0x2660c
-    x_v25[0] = (int32_t)(i_v286 / 0x100000000) + i_v287 + (int32_t)(i_v288 / 0x100000000);
+    uint64_t i_v288 = *p_v131;                                   // 0x2660c
+    x_v25[0] = (int32_t)(i_v286 / 0x100000000) + i_v287 +
+               (int32_t)(i_v288 / 0x100000000);
     v = x_v25;
     uint64_t i_v289 = v[0]; // 0x2662a
-    int32_t i_v290 = (int32_t)rotr64((int64_t)(i_v283 ^ (int32_t)(i_v289 / 0x100000000)), 32) >> 31;
+    int32_t i_v290 =
+        (int32_t)rotr64((int64_t)(i_v283 ^ (int32_t)(i_v289 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v291 = i_v290 + i_v275 >> 31;
-    int64_t i_v292 = rotr64((int64_t)(i_v291 ^ i_v287), 24); // 0x26688
-    uint64_t i_v293 = v[0]; // 0x2669c
+    int64_t i_v292 = rotr64((int64_t)(i_v291 ^ i_v287), 24);     // 0x26688
+    uint64_t i_v293 = v[0];                                      // 0x2669c
     int32_t i_v294 = (0x100000000 * i_v292 >> 32) / 0x100000000; // 0x266a4
-    uint64_t i_v295 = *p_v153; // 0x266ba
-    x_v26[0] = i_v294 + (int32_t)(i_v293 / 0x100000000) + (int32_t)(i_v295 / 0x100000000);
+    uint64_t i_v295 = *p_v153;                                   // 0x266ba
+    x_v26[0] = i_v294 + (int32_t)(i_v293 / 0x100000000) +
+               (int32_t)(i_v295 / 0x100000000);
     v = x_v26;
     uint64_t i_v296 = v[0]; // 0x266d8
-    int32_t i_v297 = rotr64((int64_t)(i_v290 ^ (int32_t)(i_v296 / 0x100000000)), 16); // 0x266ea
+    int32_t i_v297 = rotr64((int64_t)(i_v290 ^ (int32_t)(i_v296 / 0x100000000)),
+                            16); // 0x266ea
     int32_t i_v298 = ((i_v297 >> 31) + i_v291) / 0x80000000;
-    int64_t i_v299 = rotr64((int64_t)(i_v298 ^ i_v294), 63); // 0x26736
+    int64_t i_v299 = rotr64((int64_t)(i_v298 ^ i_v294), 63);     // 0x26736
     int32_t i_v300 = (0x100000000 * i_v276 >> 32) / 0x100000000; // 0x26752
-    int32_t i_v301 = (i_v264 >> 31) + i_v300 + (int32_t)(*p_v88 / 0x100000000); // 0x2676c
+    int32_t i_v301 =
+        (i_v264 >> 31) + i_v300 + (int32_t)(*p_v88 / 0x100000000);   // 0x2676c
     int32_t i_v302 = rotr64((int64_t)((i_v301 ^ i_v256) >> 31), 32); // 0x26798
     int32_t i_v303 = ((i_v302 >> 31) + i_v284) / 0x80000000;
-    int32_t i_v304 = (0x100000000 * rotr64((int64_t)(i_v303 ^ i_v300), 24) >> 32) / 0x100000000; // 0x26800
-    int32_t i_v305 = (i_v301 >> 31) + (int32_t)(*p_v105 / 0x100000000) + i_v304; // 0x2681a
-    int32_t i_v306 = (int32_t)rotr64((int64_t)((i_v305 ^ i_v302) >> 31), 16) >> 31;
+    int32_t i_v304 =
+        (0x100000000 * rotr64((int64_t)(i_v303 ^ i_v300), 24) >> 32) /
+        0x100000000; // 0x26800
+    int32_t i_v305 =
+        (i_v301 >> 31) + (int32_t)(*p_v105 / 0x100000000) + i_v304; // 0x2681a
+    int32_t i_v306 =
+        (int32_t)rotr64((int64_t)((i_v305 ^ i_v302) >> 31), 16) >> 31;
     int32_t i_v307 = i_v306 + i_v303 >> 31;
-    int64_t i_v308 = rotr64((int64_t)(i_v307 ^ i_v304), 63); // 0x26892
+    int64_t i_v308 = rotr64((int64_t)(i_v307 ^ i_v304), 63);     // 0x26892
     int32_t i_v309 = (0x100000000 * i_v285 >> 32) / 0x100000000; // 0x268ae
-    int32_t i_v310 = (i_v273 >> 31) + i_v309 + (int32_t)(*p_v110 / 0x100000000); // 0x268c8
+    int32_t i_v310 =
+        (i_v273 >> 31) + i_v309 + (int32_t)(*p_v110 / 0x100000000);  // 0x268c8
     int32_t i_v311 = rotr64((int64_t)((i_v310 ^ i_v265) >> 31), 32); // 0x268f4
     int32_t i_v312 = ((i_v311 >> 31) + i_v257) / 0x80000000;
-    int32_t i_v313 = (0x100000000 * rotr64((int64_t)(i_v312 ^ i_v309), 24) >> 32) / 0x100000000; // 0x2695c
-    int32_t i_v314 = (i_v310 >> 31) + (int32_t)(*p_v76 / 0x100000000) + i_v313; // 0x26976
+    int32_t i_v313 =
+        (0x100000000 * rotr64((int64_t)(i_v312 ^ i_v309), 24) >> 32) /
+        0x100000000; // 0x2695c
+    int32_t i_v314 =
+        (i_v310 >> 31) + (int32_t)(*p_v76 / 0x100000000) + i_v313;   // 0x26976
     int32_t i_v315 = rotr64((int64_t)((i_v314 ^ i_v311) >> 31), 16); // 0x269a2
     int32_t i_v316 = ((i_v315 >> 31) + i_v312) / 0x80000000;
-    int64_t i_v317 = rotr64((int64_t)(i_v316 ^ i_v313), 63); // 0x269ee
+    int64_t i_v317 = rotr64((int64_t)(i_v316 ^ i_v313), 63);     // 0x269ee
     int32_t i_v318 = (0x100000000 * i_v258 >> 32) / 0x100000000; // 0x26a0a
-    int32_t i_v319 = (i_v282 >> 31) + i_v318 + (int32_t)(*p_v125 / 0x100000000); // 0x26a24
+    int32_t i_v319 =
+        (i_v282 >> 31) + i_v318 + (int32_t)(*p_v125 / 0x100000000);  // 0x26a24
     int32_t i_v320 = rotr64((int64_t)((i_v319 ^ i_v274) >> 31), 32); // 0x26a50
     int32_t i_v321 = ((i_v320 >> 31) + i_v266) / 0x80000000;
-    int32_t i_v322 = (0x100000000 * rotr64((int64_t)(i_v321 ^ i_v318), 24) >> 32) / 0x100000000; // 0x26ab8
-    int32_t i_v323 = (i_v319 >> 31) + (int32_t)(*p_v94 / 0x100000000) + i_v322; // 0x26ad2
+    int32_t i_v322 =
+        (0x100000000 * rotr64((int64_t)(i_v321 ^ i_v318), 24) >> 32) /
+        0x100000000; // 0x26ab8
+    int32_t i_v323 =
+        (i_v319 >> 31) + (int32_t)(*p_v94 / 0x100000000) + i_v322;   // 0x26ad2
     int32_t i_v324 = rotr64((int64_t)((i_v323 ^ i_v320) >> 31), 16); // 0x26afe
     int32_t i_v325 = ((i_v324 >> 31) + i_v321) / 0x80000000;
-    int64_t i_v326 = rotr64((int64_t)(i_v325 ^ i_v322), 63); // 0x26b4a
-    uint64_t i_v327 = v[0]; // 0x26b5e
+    int64_t i_v326 = rotr64((int64_t)(i_v325 ^ i_v322), 63);     // 0x26b4a
+    uint64_t i_v327 = v[0];                                      // 0x26b5e
     int32_t i_v328 = (0x100000000 * i_v326 >> 32) / 0x100000000; // 0x26b66
-    uint64_t i_v329 = *p_v110; // 0x26b7c
-    x_v28[0] = i_v328 + (int32_t)(i_v327 / 0x100000000) + (int32_t)(i_v329 / 0x100000000);
+    uint64_t i_v329 = *p_v110;                                   // 0x26b7c
+    x_v28[0] = i_v328 + (int32_t)(i_v327 / 0x100000000) +
+               (int32_t)(i_v329 / 0x100000000);
     v = x_v28;
     uint64_t i_v330 = v[0]; // 0x26b9a
-    int32_t i_v331 = (int32_t)rotr64((int64_t)(i_v306 ^ (int32_t)(i_v330 / 0x100000000)), 32) >> 31;
+    int32_t i_v331 =
+        (int32_t)rotr64((int64_t)(i_v306 ^ (int32_t)(i_v330 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v332 = i_v331 + i_v316 >> 31;
-    int64_t i_v333 = rotr64((int64_t)(i_v332 ^ i_v328), 24); // 0x26bf8
-    uint64_t i_v334 = v[0]; // 0x26c0c
+    int64_t i_v333 = rotr64((int64_t)(i_v332 ^ i_v328), 24);     // 0x26bf8
+    uint64_t i_v334 = v[0];                                      // 0x26c0c
     int32_t i_v335 = (0x100000000 * i_v333 >> 32) / 0x100000000; // 0x26c14
-    uint64_t i_v336 = *p_v125; // 0x26c2a
-    x_v29[0] = i_v335 + (int32_t)(i_v334 / 0x100000000) + (int32_t)(i_v336 / 0x100000000);
+    uint64_t i_v336 = *p_v125;                                   // 0x26c2a
+    x_v29[0] = i_v335 + (int32_t)(i_v334 / 0x100000000) +
+               (int32_t)(i_v336 / 0x100000000);
     v = x_v29;
     uint64_t i_v337 = v[0]; // 0x26c48
-    int32_t i_v338 = rotr64((int64_t)(i_v331 ^ (int32_t)(i_v337 / 0x100000000)), 16); // 0x26c5a
+    int32_t i_v338 = rotr64((int64_t)(i_v331 ^ (int32_t)(i_v337 / 0x100000000)),
+                            16); // 0x26c5a
     int32_t i_v339 = ((i_v338 >> 31) + i_v332) / 0x80000000;
-    int64_t i_v340 = rotr64((int64_t)(i_v339 ^ i_v335), 63); // 0x26ca6
+    int64_t i_v340 = rotr64((int64_t)(i_v339 ^ i_v335), 63);     // 0x26ca6
     int32_t i_v341 = (0x100000000 * i_v299 >> 32) / 0x100000000; // 0x26cc2
-    int32_t i_v342 = (i_v305 >> 31) + i_v341 + (int32_t)(*p_v88 / 0x100000000); // 0x26cdc
+    int32_t i_v342 =
+        (i_v305 >> 31) + i_v341 + (int32_t)(*p_v88 / 0x100000000);   // 0x26cdc
     int32_t i_v343 = rotr64((int64_t)((i_v342 ^ i_v315) >> 31), 32); // 0x26d08
     int32_t i_v344 = ((i_v343 >> 31) + i_v325) / 0x80000000;
-    int32_t i_v345 = (0x100000000 * rotr64((int64_t)(i_v344 ^ i_v341), 24) >> 32) / 0x100000000; // 0x26d70
-    int32_t i_v346 = (i_v342 >> 31) + (int32_t)(*p_v76 / 0x100000000) + i_v345; // 0x26d8a
+    int32_t i_v345 =
+        (0x100000000 * rotr64((int64_t)(i_v344 ^ i_v341), 24) >> 32) /
+        0x100000000; // 0x26d70
+    int32_t i_v346 =
+        (i_v342 >> 31) + (int32_t)(*p_v76 / 0x100000000) + i_v345;   // 0x26d8a
     int32_t i_v347 = rotr64((int64_t)((i_v346 ^ i_v343) >> 31), 16); // 0x26db6
     int32_t i_v348 = ((i_v347 >> 31) + i_v344) / 0x80000000;
-    int64_t i_v349 = rotr64((int64_t)(i_v348 ^ i_v345), 63); // 0x26e02
+    int64_t i_v349 = rotr64((int64_t)(i_v348 ^ i_v345), 63);     // 0x26e02
     int32_t i_v350 = (0x100000000 * i_v308 >> 32) / 0x100000000; // 0x26e1e
-    int32_t i_v351 = (i_v314 >> 31) + i_v350 + (int32_t)(*p_v147 / 0x100000000); // 0x26e38
+    int32_t i_v351 =
+        (i_v314 >> 31) + i_v350 + (int32_t)(*p_v147 / 0x100000000);  // 0x26e38
     int32_t i_v352 = rotr64((int64_t)((i_v351 ^ i_v324) >> 31), 32); // 0x26e64
     int32_t i_v353 = ((i_v352 >> 31) + i_v298) / 0x80000000;
-    int32_t i_v354 = (0x100000000 * rotr64((int64_t)(i_v353 ^ i_v350), 24) >> 32) / 0x100000000; // 0x26ecc
-    int32_t i_v355 = (i_v351 >> 31) + (int32_t)(*p_v142 / 0x100000000) + i_v354; // 0x26ee6
+    int32_t i_v354 =
+        (0x100000000 * rotr64((int64_t)(i_v353 ^ i_v350), 24) >> 32) /
+        0x100000000; // 0x26ecc
+    int32_t i_v355 =
+        (i_v351 >> 31) + (int32_t)(*p_v142 / 0x100000000) + i_v354;  // 0x26ee6
     int32_t i_v356 = rotr64((int64_t)((i_v355 ^ i_v352) >> 31), 16); // 0x26f12
     int32_t i_v357 = ((i_v356 >> 31) + i_v353) / 0x80000000;
-    int64_t i_v358 = rotr64((int64_t)(i_v357 ^ i_v354), 63); // 0x26f5e
+    int64_t i_v358 = rotr64((int64_t)(i_v357 ^ i_v354), 63);     // 0x26f5e
     int32_t i_v359 = (0x100000000 * i_v317 >> 32) / 0x100000000; // 0x26f7a
-    int32_t i_v360 = (i_v323 >> 31) + i_v359 + (int32_t)(*p_v136 / 0x100000000); // 0x26f94
+    int32_t i_v360 =
+        (i_v323 >> 31) + i_v359 + (int32_t)(*p_v136 / 0x100000000);  // 0x26f94
     int32_t i_v361 = rotr64((int64_t)((i_v360 ^ i_v297) >> 31), 32); // 0x26fc0
     int32_t i_v362 = ((i_v361 >> 31) + i_v307) / 0x80000000;
-    int32_t i_v363 = (0x100000000 * rotr64((int64_t)(i_v362 ^ i_v359), 24) >> 32) / 0x100000000; // 0x27028
-    int32_t i_v364 = (i_v360 >> 31) + (int32_t)(*p_v153 / 0x100000000) + i_v363; // 0x27042
-    int32_t i_v365 = (int32_t)rotr64((int64_t)((i_v364 ^ i_v361) >> 31), 16) >> 31;
+    int32_t i_v363 =
+        (0x100000000 * rotr64((int64_t)(i_v362 ^ i_v359), 24) >> 32) /
+        0x100000000; // 0x27028
+    int32_t i_v364 =
+        (i_v360 >> 31) + (int32_t)(*p_v153 / 0x100000000) + i_v363; // 0x27042
+    int32_t i_v365 =
+        (int32_t)rotr64((int64_t)((i_v364 ^ i_v361) >> 31), 16) >> 31;
     int32_t i_v366 = i_v365 + i_v362 >> 31;
-    int64_t i_v367 = rotr64((int64_t)(i_v366 ^ i_v363), 63); // 0x270ba
-    uint64_t i_v368 = v[0]; // 0x270ce
+    int64_t i_v367 = rotr64((int64_t)(i_v366 ^ i_v363), 63);     // 0x270ba
+    uint64_t i_v368 = v[0];                                      // 0x270ce
     int32_t i_v369 = (0x100000000 * i_v349 >> 32) / 0x100000000; // 0x270d6
-    uint64_t i_v370 = *p_v83; // 0x270ec
-    x_v30[0] = (int32_t)(i_v368 / 0x100000000) + i_v369 + (int32_t)(i_v370 / 0x100000000);
+    uint64_t i_v370 = *p_v83;                                    // 0x270ec
+    x_v30[0] = (int32_t)(i_v368 / 0x100000000) + i_v369 +
+               (int32_t)(i_v370 / 0x100000000);
     v = x_v30;
     uint64_t i_v371 = v[0]; // 0x2710a
-    int32_t i_v372 = (int32_t)rotr64((int64_t)(i_v365 ^ (int32_t)(i_v371 / 0x100000000)), 32) >> 31;
+    int32_t i_v372 =
+        (int32_t)rotr64((int64_t)(i_v365 ^ (int32_t)(i_v371 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v373 = i_v372 + i_v357 >> 31;
-    int64_t i_v374 = rotr64((int64_t)(i_v373 ^ i_v369), 24); // 0x27168
-    uint64_t i_v375 = v[0]; // 0x2717c
+    int64_t i_v374 = rotr64((int64_t)(i_v373 ^ i_v369), 24);     // 0x27168
+    uint64_t i_v375 = v[0];                                      // 0x2717c
     int32_t i_v376 = (0x100000000 * i_v374 >> 32) / 0x100000000; // 0x27184
-    uint64_t i_v377 = *p_v105; // 0x2719a
-    x_v31[0] = i_v376 + (int32_t)(i_v375 / 0x100000000) + (int32_t)(i_v377 / 0x100000000);
+    uint64_t i_v377 = *p_v105;                                   // 0x2719a
+    x_v31[0] = i_v376 + (int32_t)(i_v375 / 0x100000000) +
+               (int32_t)(i_v377 / 0x100000000);
     v = x_v31;
     uint64_t i_v378 = v[0]; // 0x271b8
-    int32_t i_v379 = rotr64((int64_t)(i_v372 ^ (int32_t)(i_v378 / 0x100000000)), 16); // 0x271ca
+    int32_t i_v379 = rotr64((int64_t)(i_v372 ^ (int32_t)(i_v378 / 0x100000000)),
+                            16); // 0x271ca
     int32_t i_v380 = ((i_v379 >> 31) + i_v373) / 0x80000000;
-    int64_t i_v381 = rotr64((int64_t)(i_v380 ^ i_v376), 63); // 0x27216
+    int64_t i_v381 = rotr64((int64_t)(i_v380 ^ i_v376), 63);     // 0x27216
     int32_t i_v382 = (0x100000000 * i_v358 >> 32) / 0x100000000; // 0x27232
-    int32_t i_v383 = (i_v346 >> 31) + i_v382 + (int32_t)(*p_v99 / 0x100000000); // 0x2724c
+    int32_t i_v383 =
+        (i_v346 >> 31) + i_v382 + (int32_t)(*p_v99 / 0x100000000);   // 0x2724c
     int32_t i_v384 = rotr64((int64_t)((i_v383 ^ i_v338) >> 31), 32); // 0x27278
     int32_t i_v385 = ((i_v384 >> 31) + i_v366) / 0x80000000;
-    int32_t i_v386 = (0x100000000 * rotr64((int64_t)(i_v385 ^ i_v382), 24) >> 32) / 0x100000000; // 0x272e0
-    int32_t i_v387 = (i_v383 >> 31) + (int32_t)(*p_v131 / 0x100000000) + i_v386; // 0x272fa
-    int32_t i_v388 = (int32_t)rotr64((int64_t)((i_v387 ^ i_v384) >> 31), 16) >> 31;
+    int32_t i_v386 =
+        (0x100000000 * rotr64((int64_t)(i_v385 ^ i_v382), 24) >> 32) /
+        0x100000000; // 0x272e0
+    int32_t i_v387 =
+        (i_v383 >> 31) + (int32_t)(*p_v131 / 0x100000000) + i_v386; // 0x272fa
+    int32_t i_v388 =
+        (int32_t)rotr64((int64_t)((i_v387 ^ i_v384) >> 31), 16) >> 31;
     int32_t i_v389 = i_v388 + i_v385 >> 31;
-    int64_t i_v390 = rotr64((int64_t)(i_v389 ^ i_v386), 63); // 0x27372
+    int64_t i_v390 = rotr64((int64_t)(i_v389 ^ i_v386), 63);     // 0x27372
     int32_t i_v391 = (0x100000000 * i_v367 >> 32) / 0x100000000; // 0x2738e
-    int32_t i_v392 = (i_v355 >> 31) + i_v391 + (int32_t)(*p_v94 / 0x100000000); // 0x273a8
+    int32_t i_v392 =
+        (i_v355 >> 31) + i_v391 + (int32_t)(*p_v94 / 0x100000000);   // 0x273a8
     int32_t i_v393 = rotr64((int64_t)((i_v392 ^ i_v347) >> 31), 32); // 0x273d4
     int32_t i_v394 = ((i_v393 >> 31) + i_v339) / 0x80000000;
-    int32_t i_v395 = (0x100000000 * rotr64((int64_t)(i_v394 ^ i_v391), 24) >> 32) / 0x100000000; // 0x2743c
-    int32_t i_v396 = (i_v392 >> 31) + (int32_t)(*p_v68 / 0x100000000) + i_v395; // 0x27456
+    int32_t i_v395 =
+        (0x100000000 * rotr64((int64_t)(i_v394 ^ i_v391), 24) >> 32) /
+        0x100000000; // 0x2743c
+    int32_t i_v396 =
+        (i_v392 >> 31) + (int32_t)(*p_v68 / 0x100000000) + i_v395;   // 0x27456
     int32_t i_v397 = rotr64((int64_t)((i_v396 ^ i_v393) >> 31), 16); // 0x27482
     int32_t i_v398 = ((i_v397 >> 31) + i_v394) / 0x80000000;
-    int64_t i_v399 = rotr64((int64_t)(i_v398 ^ i_v395), 63); // 0x274ce
+    int64_t i_v399 = rotr64((int64_t)(i_v398 ^ i_v395), 63);     // 0x274ce
     int32_t i_v400 = (0x100000000 * i_v340 >> 32) / 0x100000000; // 0x274ea
-    int32_t i_v401 = (i_v364 >> 31) + i_v400 + (int32_t)(*p_v158 / 0x100000000); // 0x27504
+    int32_t i_v401 =
+        (i_v364 >> 31) + i_v400 + (int32_t)(*p_v158 / 0x100000000);  // 0x27504
     int32_t i_v402 = rotr64((int64_t)((i_v401 ^ i_v356) >> 31), 32); // 0x27530
     int32_t i_v403 = ((i_v402 >> 31) + i_v348) / 0x80000000;
-    int32_t i_v404 = (0x100000000 * rotr64((int64_t)(i_v403 ^ i_v400), 24) >> 32) / 0x100000000; // 0x27598
-    int32_t i_v405 = (i_v401 >> 31) + (int32_t)(*p_v117 / 0x100000000) + i_v404; // 0x275b2
+    int32_t i_v404 =
+        (0x100000000 * rotr64((int64_t)(i_v403 ^ i_v400), 24) >> 32) /
+        0x100000000; // 0x27598
+    int32_t i_v405 =
+        (i_v401 >> 31) + (int32_t)(*p_v117 / 0x100000000) + i_v404;  // 0x275b2
     int32_t i_v406 = rotr64((int64_t)((i_v405 ^ i_v402) >> 31), 16); // 0x275de
     int32_t i_v407 = ((i_v406 >> 31) + i_v403) / 0x80000000;
-    int64_t i_v408 = rotr64((int64_t)(i_v407 ^ i_v404), 63); // 0x2762a
-    uint64_t i_v409 = v[0]; // 0x2763e
+    int64_t i_v408 = rotr64((int64_t)(i_v407 ^ i_v404), 63);     // 0x2762a
+    uint64_t i_v409 = v[0];                                      // 0x2763e
     int32_t i_v410 = (0x100000000 * i_v408 >> 32) / 0x100000000; // 0x27646
-    uint64_t i_v411 = *p_v125; // 0x2765c
-    x_v32[0] = i_v410 + (int32_t)(i_v409 / 0x100000000) + (int32_t)(i_v411 / 0x100000000);
+    uint64_t i_v411 = *p_v125;                                   // 0x2765c
+    x_v32[0] = i_v410 + (int32_t)(i_v409 / 0x100000000) +
+               (int32_t)(i_v411 / 0x100000000);
     v = x_v32;
     uint64_t i_v412 = v[0]; // 0x2767a
-    int32_t i_v413 = (int32_t)rotr64((int64_t)(i_v388 ^ (int32_t)(i_v412 / 0x100000000)), 32) >> 31;
+    int32_t i_v413 =
+        (int32_t)rotr64((int64_t)(i_v388 ^ (int32_t)(i_v412 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v414 = i_v413 + i_v398 >> 31;
-    int64_t i_v415 = rotr64((int64_t)(i_v414 ^ i_v410), 24); // 0x276d8
-    uint64_t i_v416 = v[0]; // 0x276ec
+    int64_t i_v415 = rotr64((int64_t)(i_v414 ^ i_v410), 24);     // 0x276d8
+    uint64_t i_v416 = v[0];                                      // 0x276ec
     int32_t i_v417 = (0x100000000 * i_v415 >> 32) / 0x100000000; // 0x276f4
-    uint64_t i_v418 = *p_v68; // 0x2770a
-    x_v33[0] = i_v417 + (int32_t)(i_v416 / 0x100000000) + (int32_t)(i_v418 / 0x100000000);
+    uint64_t i_v418 = *p_v68;                                    // 0x2770a
+    x_v33[0] = i_v417 + (int32_t)(i_v416 / 0x100000000) +
+               (int32_t)(i_v418 / 0x100000000);
     v = x_v33;
     uint64_t i_v419 = v[0]; // 0x27728
-    int32_t i_v420 = rotr64((int64_t)(i_v413 ^ (int32_t)(i_v419 / 0x100000000)), 16); // 0x2773a
+    int32_t i_v420 = rotr64((int64_t)(i_v413 ^ (int32_t)(i_v419 / 0x100000000)),
+                            16); // 0x2773a
     int32_t i_v421 = ((i_v420 >> 31) + i_v414) / 0x80000000;
-    int64_t i_v422 = rotr64((int64_t)(i_v421 ^ i_v417), 63); // 0x27786
+    int64_t i_v422 = rotr64((int64_t)(i_v421 ^ i_v417), 63);     // 0x27786
     int32_t i_v423 = (0x100000000 * i_v381 >> 32) / 0x100000000; // 0x277a2
-    int32_t i_v424 = (i_v387 >> 31) + i_v423 + (int32_t)(*p_v99 / 0x100000000); // 0x277bc
+    int32_t i_v424 =
+        (i_v387 >> 31) + i_v423 + (int32_t)(*p_v99 / 0x100000000);   // 0x277bc
     int32_t i_v425 = rotr64((int64_t)((i_v424 ^ i_v397) >> 31), 32); // 0x277e8
     int32_t i_v426 = ((i_v425 >> 31) + i_v407) / 0x80000000;
-    int32_t i_v427 = (0x100000000 * rotr64((int64_t)(i_v426 ^ i_v423), 24) >> 32) / 0x100000000; // 0x27850
-    int32_t i_v428 = (i_v424 >> 31) + (int32_t)(*p_v110 / 0x100000000) + i_v427; // 0x2786a
+    int32_t i_v427 =
+        (0x100000000 * rotr64((int64_t)(i_v426 ^ i_v423), 24) >> 32) /
+        0x100000000; // 0x27850
+    int32_t i_v428 =
+        (i_v424 >> 31) + (int32_t)(*p_v110 / 0x100000000) + i_v427;  // 0x2786a
     int32_t i_v429 = rotr64((int64_t)((i_v428 ^ i_v425) >> 31), 16); // 0x27896
     int32_t i_v430 = ((i_v429 >> 31) + i_v426) / 0x80000000;
-    int64_t i_v431 = rotr64((int64_t)(i_v430 ^ i_v427), 63); // 0x278e2
+    int64_t i_v431 = rotr64((int64_t)(i_v430 ^ i_v427), 63);     // 0x278e2
     int32_t i_v432 = (0x100000000 * i_v390 >> 32) / 0x100000000; // 0x278fe
-    int32_t i_v433 = (i_v396 >> 31) + i_v432 + (int32_t)(*p_v83 / 0x100000000); // 0x27918
+    int32_t i_v433 =
+        (i_v396 >> 31) + i_v432 + (int32_t)(*p_v83 / 0x100000000);   // 0x27918
     int32_t i_v434 = rotr64((int64_t)((i_v433 ^ i_v406) >> 31), 32); // 0x27944
     int32_t i_v435 = ((i_v434 >> 31) + i_v380) / 0x80000000;
-    int32_t i_v436 = (0x100000000 * rotr64((int64_t)(i_v435 ^ i_v432), 24) >> 32) / 0x100000000; // 0x279ac
-    int32_t i_v437 = (i_v433 >> 31) + (int32_t)(*p_v94 / 0x100000000) + i_v436; // 0x279c6
+    int32_t i_v436 =
+        (0x100000000 * rotr64((int64_t)(i_v435 ^ i_v432), 24) >> 32) /
+        0x100000000; // 0x279ac
+    int32_t i_v437 =
+        (i_v433 >> 31) + (int32_t)(*p_v94 / 0x100000000) + i_v436;   // 0x279c6
     int32_t i_v438 = rotr64((int64_t)((i_v437 ^ i_v434) >> 31), 16); // 0x279f2
     int32_t i_v439 = ((i_v438 >> 31) + i_v435) / 0x80000000;
-    int64_t i_v440 = rotr64((int64_t)(i_v439 ^ i_v436), 63); // 0x27a3e
+    int64_t i_v440 = rotr64((int64_t)(i_v439 ^ i_v436), 63);     // 0x27a3e
     int32_t i_v441 = (0x100000000 * i_v399 >> 32) / 0x100000000; // 0x27a5a
-    int32_t i_v442 = (i_v405 >> 31) + i_v441 + (int32_t)(*p_v131 / 0x100000000); // 0x27a74
+    int32_t i_v442 =
+        (i_v405 >> 31) + i_v441 + (int32_t)(*p_v131 / 0x100000000);  // 0x27a74
     int32_t i_v443 = rotr64((int64_t)((i_v442 ^ i_v379) >> 31), 32); // 0x27aa0
     int32_t i_v444 = ((i_v443 >> 31) + i_v389) / 0x80000000;
-    int32_t i_v445 = (0x100000000 * rotr64((int64_t)(i_v444 ^ i_v441), 24) >> 32) / 0x100000000; // 0x27b08
-    int32_t i_v446 = (i_v442 >> 31) + (int32_t)(*p_v158 / 0x100000000) + i_v445; // 0x27b22
-    int32_t i_v447 = (int32_t)rotr64((int64_t)((i_v446 ^ i_v443) >> 31), 16) >> 31;
+    int32_t i_v445 =
+        (0x100000000 * rotr64((int64_t)(i_v444 ^ i_v441), 24) >> 32) /
+        0x100000000; // 0x27b08
+    int32_t i_v446 =
+        (i_v442 >> 31) + (int32_t)(*p_v158 / 0x100000000) + i_v445; // 0x27b22
+    int32_t i_v447 =
+        (int32_t)rotr64((int64_t)((i_v446 ^ i_v443) >> 31), 16) >> 31;
     int32_t i_v448 = i_v447 + i_v444 >> 31;
-    int64_t i_v449 = rotr64((int64_t)(i_v448 ^ i_v445), 63); // 0x27b9a
-    uint64_t i_v450 = v[0]; // 0x27bae
+    int64_t i_v449 = rotr64((int64_t)(i_v448 ^ i_v445), 63);     // 0x27b9a
+    uint64_t i_v450 = v[0];                                      // 0x27bae
     int32_t i_v451 = (0x100000000 * i_v431 >> 32) / 0x100000000; // 0x27bb6
-    uint64_t i_v452 = *p_v153; // 0x27bcc
-    x_v34[0] = (int32_t)(i_v450 / 0x100000000) + i_v451 + (int32_t)(i_v452 / 0x100000000);
+    uint64_t i_v452 = *p_v153;                                   // 0x27bcc
+    x_v34[0] = (int32_t)(i_v450 / 0x100000000) + i_v451 +
+               (int32_t)(i_v452 / 0x100000000);
     v = x_v34;
     uint64_t i_v453 = v[0]; // 0x27bea
-    int32_t i_v454 = (int32_t)rotr64((int64_t)(i_v447 ^ (int32_t)(i_v453 / 0x100000000)), 32) >> 31;
+    int32_t i_v454 =
+        (int32_t)rotr64((int64_t)(i_v447 ^ (int32_t)(i_v453 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v455 = i_v454 + i_v439 >> 31;
-    int64_t i_v456 = rotr64((int64_t)(i_v455 ^ i_v451), 24); // 0x27c48
-    uint64_t i_v457 = v[0]; // 0x27c5c
+    int64_t i_v456 = rotr64((int64_t)(i_v455 ^ i_v451), 24);     // 0x27c48
+    uint64_t i_v457 = v[0];                                      // 0x27c5c
     int32_t i_v458 = (0x100000000 * i_v456 >> 32) / 0x100000000; // 0x27c64
-    uint64_t i_v459 = *p_v76; // 0x27c7a
-    x_v35[0] = i_v458 + (int32_t)(i_v457 / 0x100000000) + (int32_t)(i_v459 / 0x100000000);
+    uint64_t i_v459 = *p_v76;                                    // 0x27c7a
+    x_v35[0] = i_v458 + (int32_t)(i_v457 / 0x100000000) +
+               (int32_t)(i_v459 / 0x100000000);
     v = x_v35;
     uint64_t i_v460 = v[0]; // 0x27c98
-    int32_t i_v461 = rotr64((int64_t)(i_v454 ^ (int32_t)(i_v460 / 0x100000000)), 16); // 0x27caa
+    int32_t i_v461 = rotr64((int64_t)(i_v454 ^ (int32_t)(i_v460 / 0x100000000)),
+                            16); // 0x27caa
     int32_t i_v462 = ((i_v461 >> 31) + i_v455) / 0x80000000;
-    int64_t i_v463 = rotr64((int64_t)(i_v462 ^ i_v458), 63); // 0x27cf6
+    int64_t i_v463 = rotr64((int64_t)(i_v462 ^ i_v458), 63);     // 0x27cf6
     int32_t i_v464 = (0x100000000 * i_v440 >> 32) / 0x100000000; // 0x27d12
-    int32_t i_v465 = (i_v428 >> 31) + i_v464 + (int32_t)(*p_v136 / 0x100000000); // 0x27d2c
+    int32_t i_v465 =
+        (i_v428 >> 31) + i_v464 + (int32_t)(*p_v136 / 0x100000000);  // 0x27d2c
     int32_t i_v466 = rotr64((int64_t)((i_v465 ^ i_v420) >> 31), 32); // 0x27d58
     int32_t i_v467 = ((i_v466 >> 31) + i_v448) / 0x80000000;
-    int32_t i_v468 = (0x100000000 * rotr64((int64_t)(i_v467 ^ i_v464), 24) >> 32) / 0x100000000; // 0x27dc0
-    int32_t i_v469 = (i_v465 >> 31) + (int32_t)(*p_v142 / 0x100000000) + i_v468; // 0x27dda
-    int32_t i_v470 = (int32_t)rotr64((int64_t)((i_v469 ^ i_v466) >> 31), 16) >> 31;
+    int32_t i_v468 =
+        (0x100000000 * rotr64((int64_t)(i_v467 ^ i_v464), 24) >> 32) /
+        0x100000000; // 0x27dc0
+    int32_t i_v469 =
+        (i_v465 >> 31) + (int32_t)(*p_v142 / 0x100000000) + i_v468; // 0x27dda
+    int32_t i_v470 =
+        (int32_t)rotr64((int64_t)((i_v469 ^ i_v466) >> 31), 16) >> 31;
     int32_t i_v471 = i_v470 + i_v467 >> 31;
-    int64_t i_v472 = rotr64((int64_t)(i_v471 ^ i_v468), 63); // 0x27e52
+    int64_t i_v472 = rotr64((int64_t)(i_v471 ^ i_v468), 63);     // 0x27e52
     int32_t i_v473 = (0x100000000 * i_v449 >> 32) / 0x100000000; // 0x27e6e
-    int32_t i_v474 = (i_v437 >> 31) + i_v473 + (int32_t)(*p_v105 / 0x100000000); // 0x27e88
+    int32_t i_v474 =
+        (i_v437 >> 31) + i_v473 + (int32_t)(*p_v105 / 0x100000000);  // 0x27e88
     int32_t i_v475 = rotr64((int64_t)((i_v474 ^ i_v429) >> 31), 32); // 0x27eb4
     int32_t i_v476 = ((i_v475 >> 31) + i_v421) / 0x80000000;
-    int32_t i_v477 = (0x100000000 * rotr64((int64_t)(i_v476 ^ i_v473), 24) >> 32) / 0x100000000; // 0x27f1c
-    int32_t i_v478 = (i_v474 >> 31) + (int32_t)(*p_v117 / 0x100000000) + i_v477; // 0x27f36
+    int32_t i_v477 =
+        (0x100000000 * rotr64((int64_t)(i_v476 ^ i_v473), 24) >> 32) /
+        0x100000000; // 0x27f1c
+    int32_t i_v478 =
+        (i_v474 >> 31) + (int32_t)(*p_v117 / 0x100000000) + i_v477;  // 0x27f36
     int32_t i_v479 = rotr64((int64_t)((i_v478 ^ i_v475) >> 31), 16); // 0x27f62
     int32_t i_v480 = ((i_v479 >> 31) + i_v476) / 0x80000000;
-    int64_t i_v481 = rotr64((int64_t)(i_v480 ^ i_v477), 63); // 0x27fae
+    int64_t i_v481 = rotr64((int64_t)(i_v480 ^ i_v477), 63);     // 0x27fae
     int32_t i_v482 = (0x100000000 * i_v422 >> 32) / 0x100000000; // 0x27fca
-    int32_t i_v483 = (i_v446 >> 31) + i_v482 + (int32_t)(*p_v88 / 0x100000000); // 0x27fe4
+    int32_t i_v483 =
+        (i_v446 >> 31) + i_v482 + (int32_t)(*p_v88 / 0x100000000);   // 0x27fe4
     int32_t i_v484 = rotr64((int64_t)((i_v483 ^ i_v438) >> 31), 32); // 0x28010
     int32_t i_v485 = ((i_v484 >> 31) + i_v430) / 0x80000000;
-    int32_t i_v486 = (0x100000000 * rotr64((int64_t)(i_v485 ^ i_v482), 24) >> 32) / 0x100000000; // 0x28078
-    int32_t i_v487 = (i_v483 >> 31) + (int32_t)(*p_v147 / 0x100000000) + i_v486; // 0x28092
+    int32_t i_v486 =
+        (0x100000000 * rotr64((int64_t)(i_v485 ^ i_v482), 24) >> 32) /
+        0x100000000; // 0x28078
+    int32_t i_v487 =
+        (i_v483 >> 31) + (int32_t)(*p_v147 / 0x100000000) + i_v486;  // 0x28092
     int32_t i_v488 = rotr64((int64_t)((i_v487 ^ i_v484) >> 31), 16); // 0x280be
     int32_t i_v489 = ((i_v488 >> 31) + i_v485) / 0x80000000;
-    int64_t i_v490 = rotr64((int64_t)(i_v489 ^ i_v486), 63); // 0x2810a
-    uint64_t i_v491 = v[0]; // 0x2811e
+    int64_t i_v490 = rotr64((int64_t)(i_v489 ^ i_v486), 63);     // 0x2810a
+    uint64_t i_v491 = v[0];                                      // 0x2811e
     int32_t i_v492 = (0x100000000 * i_v490 >> 32) / 0x100000000; // 0x28126
-    uint64_t i_v493 = *p_v83; // 0x2813c
-    x_v36[0] = i_v492 + (int32_t)(i_v491 / 0x100000000) + (int32_t)(i_v493 / 0x100000000);
+    uint64_t i_v493 = *p_v83;                                    // 0x2813c
+    x_v36[0] = i_v492 + (int32_t)(i_v491 / 0x100000000) +
+               (int32_t)(i_v493 / 0x100000000);
     v = x_v36;
     uint64_t i_v494 = v[0]; // 0x2815a
-    int32_t i_v495 = (int32_t)rotr64((int64_t)(i_v470 ^ (int32_t)(i_v494 / 0x100000000)), 32) >> 31;
+    int32_t i_v495 =
+        (int32_t)rotr64((int64_t)(i_v470 ^ (int32_t)(i_v494 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v496 = i_v495 + i_v480 >> 31;
-    int64_t i_v497 = rotr64((int64_t)(i_v496 ^ i_v492), 24); // 0x281b8
-    uint64_t i_v498 = v[0]; // 0x281cc
+    int64_t i_v497 = rotr64((int64_t)(i_v496 ^ i_v492), 24);     // 0x281b8
+    uint64_t i_v498 = v[0];                                      // 0x281cc
     int32_t i_v499 = (0x100000000 * i_v497 >> 32) / 0x100000000; // 0x281d4
-    uint64_t i_v500 = *p_v142; // 0x281ea
-    x_v37[0] = i_v499 + (int32_t)(i_v498 / 0x100000000) + (int32_t)(i_v500 / 0x100000000);
+    uint64_t i_v500 = *p_v142;                                   // 0x281ea
+    x_v37[0] = i_v499 + (int32_t)(i_v498 / 0x100000000) +
+               (int32_t)(i_v500 / 0x100000000);
     v = x_v37;
     uint64_t i_v501 = v[0]; // 0x28208
-    int32_t i_v502 = rotr64((int64_t)(i_v495 ^ (int32_t)(i_v501 / 0x100000000)), 16); // 0x2821a
+    int32_t i_v502 = rotr64((int64_t)(i_v495 ^ (int32_t)(i_v501 / 0x100000000)),
+                            16); // 0x2821a
     int32_t i_v503 = ((i_v502 >> 31) + i_v496) / 0x80000000;
-    int64_t i_v504 = rotr64((int64_t)(i_v503 ^ i_v499), 63); // 0x28266
+    int64_t i_v504 = rotr64((int64_t)(i_v503 ^ i_v499), 63);     // 0x28266
     int32_t i_v505 = (0x100000000 * i_v463 >> 32) / 0x100000000; // 0x28282
-    int32_t i_v506 = (i_v469 >> 31) + i_v505 + (int32_t)(*p_v105 / 0x100000000); // 0x2829c
+    int32_t i_v506 =
+        (i_v469 >> 31) + i_v505 + (int32_t)(*p_v105 / 0x100000000);  // 0x2829c
     int32_t i_v507 = rotr64((int64_t)((i_v506 ^ i_v479) >> 31), 32); // 0x282c8
     int32_t i_v508 = ((i_v507 >> 31) + i_v489) / 0x80000000;
-    int32_t i_v509 = (0x100000000 * rotr64((int64_t)(i_v508 ^ i_v505), 24) >> 32) / 0x100000000; // 0x28330
-    int32_t i_v510 = (i_v506 >> 31) + (int32_t)(*p_v131 / 0x100000000) + i_v509; // 0x2834a
+    int32_t i_v509 =
+        (0x100000000 * rotr64((int64_t)(i_v508 ^ i_v505), 24) >> 32) /
+        0x100000000; // 0x28330
+    int32_t i_v510 =
+        (i_v506 >> 31) + (int32_t)(*p_v131 / 0x100000000) + i_v509;  // 0x2834a
     int32_t i_v511 = rotr64((int64_t)((i_v510 ^ i_v507) >> 31), 16); // 0x28376
     int32_t i_v512 = ((i_v511 >> 31) + i_v508) / 0x80000000;
-    int64_t i_v513 = rotr64((int64_t)(i_v512 ^ i_v509), 63); // 0x283c2
+    int64_t i_v513 = rotr64((int64_t)(i_v512 ^ i_v509), 63);     // 0x283c2
     int32_t i_v514 = (0x100000000 * i_v472 >> 32) / 0x100000000; // 0x283de
-    int32_t i_v515 = (i_v478 >> 31) + i_v514 + (int32_t)(*p_v68 / 0x100000000); // 0x283f8
+    int32_t i_v515 =
+        (i_v478 >> 31) + i_v514 + (int32_t)(*p_v68 / 0x100000000);   // 0x283f8
     int32_t i_v516 = rotr64((int64_t)((i_v515 ^ i_v488) >> 31), 32); // 0x28424
     int32_t i_v517 = ((i_v516 >> 31) + i_v462) / 0x80000000;
-    int32_t i_v518 = (0x100000000 * rotr64((int64_t)(i_v517 ^ i_v514), 24) >> 32) / 0x100000000; // 0x2848c
-    int32_t i_v519 = (i_v515 >> 31) + (int32_t)(*p_v136 / 0x100000000) + i_v518; // 0x284a6
+    int32_t i_v518 =
+        (0x100000000 * rotr64((int64_t)(i_v517 ^ i_v514), 24) >> 32) /
+        0x100000000; // 0x2848c
+    int32_t i_v519 =
+        (i_v515 >> 31) + (int32_t)(*p_v136 / 0x100000000) + i_v518;  // 0x284a6
     int32_t i_v520 = rotr64((int64_t)((i_v519 ^ i_v516) >> 31), 16); // 0x284d2
     int32_t i_v521 = ((i_v520 >> 31) + i_v517) / 0x80000000;
-    int64_t i_v522 = rotr64((int64_t)(i_v521 ^ i_v518), 63); // 0x2851e
+    int64_t i_v522 = rotr64((int64_t)(i_v521 ^ i_v518), 63);     // 0x2851e
     int32_t i_v523 = (0x100000000 * i_v481 >> 32) / 0x100000000; // 0x2853a
-    int32_t i_v524 = (i_v487 >> 31) + i_v523 + (int32_t)(*p_v117 / 0x100000000); // 0x28554
+    int32_t i_v524 =
+        (i_v487 >> 31) + i_v523 + (int32_t)(*p_v117 / 0x100000000);  // 0x28554
     int32_t i_v525 = rotr64((int64_t)((i_v524 ^ i_v461) >> 31), 32); // 0x28580
     int32_t i_v526 = ((i_v525 >> 31) + i_v471) / 0x80000000;
-    int32_t i_v527 = (0x100000000 * rotr64((int64_t)(i_v526 ^ i_v523), 24) >> 32) / 0x100000000; // 0x285e8
-    int32_t i_v528 = (i_v524 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v527; // 0x28602
-    int32_t i_v529 = (int32_t)rotr64((int64_t)((i_v528 ^ i_v525) >> 31), 16) >> 31;
+    int32_t i_v527 =
+        (0x100000000 * rotr64((int64_t)(i_v526 ^ i_v523), 24) >> 32) /
+        0x100000000; // 0x285e8
+    int32_t i_v528 =
+        (i_v524 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v527; // 0x28602
+    int32_t i_v529 =
+        (int32_t)rotr64((int64_t)((i_v528 ^ i_v525) >> 31), 16) >> 31;
     int32_t i_v530 = i_v529 + i_v526 >> 31;
-    int64_t i_v531 = rotr64((int64_t)(i_v530 ^ i_v527), 63); // 0x2867a
-    uint64_t i_v532 = v[0]; // 0x2868e
+    int64_t i_v531 = rotr64((int64_t)(i_v530 ^ i_v527), 63);     // 0x2867a
+    uint64_t i_v532 = v[0];                                      // 0x2868e
     int32_t i_v533 = (0x100000000 * i_v513 >> 32) / 0x100000000; // 0x28696
-    uint64_t i_v534 = *p_v94; // 0x286ac
-    x_v38[0] = (int32_t)(i_v532 / 0x100000000) + i_v533 + (int32_t)(i_v534 / 0x100000000);
+    uint64_t i_v534 = *p_v94;                                    // 0x286ac
+    x_v38[0] = (int32_t)(i_v532 / 0x100000000) + i_v533 +
+               (int32_t)(i_v534 / 0x100000000);
     v = x_v38;
     uint64_t i_v535 = v[0]; // 0x286ca
-    int32_t i_v536 = (int32_t)rotr64((int64_t)(i_v529 ^ (int32_t)(i_v535 / 0x100000000)), 32) >> 31;
+    int32_t i_v536 =
+        (int32_t)rotr64((int64_t)(i_v529 ^ (int32_t)(i_v535 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v537 = i_v536 + i_v521 >> 31;
-    int64_t i_v538 = rotr64((int64_t)(i_v537 ^ i_v533), 24); // 0x28728
-    uint64_t i_v539 = v[0]; // 0x2873c
+    int64_t i_v538 = rotr64((int64_t)(i_v537 ^ i_v533), 24);     // 0x28728
+    uint64_t i_v539 = v[0];                                      // 0x2873c
     int32_t i_v540 = (0x100000000 * i_v538 >> 32) / 0x100000000; // 0x28744
-    uint64_t i_v541 = *p_v147; // 0x2875a
-    x_v39[0] = i_v540 + (int32_t)(i_v539 / 0x100000000) + (int32_t)(i_v541 / 0x100000000);
+    uint64_t i_v541 = *p_v147;                                   // 0x2875a
+    x_v39[0] = i_v540 + (int32_t)(i_v539 / 0x100000000) +
+               (int32_t)(i_v541 / 0x100000000);
     v = x_v39;
     uint64_t i_v542 = v[0]; // 0x28778
-    int32_t i_v543 = rotr64((int64_t)(i_v536 ^ (int32_t)(i_v542 / 0x100000000)), 16); // 0x2878a
+    int32_t i_v543 = rotr64((int64_t)(i_v536 ^ (int32_t)(i_v542 / 0x100000000)),
+                            16); // 0x2878a
     int32_t i_v544 = ((i_v543 >> 31) + i_v537) / 0x80000000;
-    int64_t i_v545 = rotr64((int64_t)(i_v544 ^ i_v540), 63); // 0x287d6
+    int64_t i_v545 = rotr64((int64_t)(i_v544 ^ i_v540), 63);     // 0x287d6
     int32_t i_v546 = (0x100000000 * i_v522 >> 32) / 0x100000000; // 0x287f2
-    int32_t i_v547 = (i_v510 >> 31) + i_v546 + (int32_t)(*p_v110 / 0x100000000); // 0x2880c
+    int32_t i_v547 =
+        (i_v510 >> 31) + i_v546 + (int32_t)(*p_v110 / 0x100000000);  // 0x2880c
     int32_t i_v548 = rotr64((int64_t)((i_v547 ^ i_v502) >> 31), 32); // 0x28838
     int32_t i_v549 = ((i_v548 >> 31) + i_v530) / 0x80000000;
-    int32_t i_v550 = (0x100000000 * rotr64((int64_t)(i_v549 ^ i_v546), 24) >> 32) / 0x100000000; // 0x288a0
-    int32_t i_v551 = (i_v547 >> 31) + (int32_t)(*p_v99 / 0x100000000) + i_v550; // 0x288ba
-    int32_t i_v552 = (int32_t)rotr64((int64_t)((i_v551 ^ i_v548) >> 31), 16) >> 31;
+    int32_t i_v550 =
+        (0x100000000 * rotr64((int64_t)(i_v549 ^ i_v546), 24) >> 32) /
+        0x100000000; // 0x288a0
+    int32_t i_v551 =
+        (i_v547 >> 31) + (int32_t)(*p_v99 / 0x100000000) + i_v550; // 0x288ba
+    int32_t i_v552 =
+        (int32_t)rotr64((int64_t)((i_v551 ^ i_v548) >> 31), 16) >> 31;
     int32_t i_v553 = i_v552 + i_v549 >> 31;
-    int64_t i_v554 = rotr64((int64_t)(i_v553 ^ i_v550), 63); // 0x28932
+    int64_t i_v554 = rotr64((int64_t)(i_v553 ^ i_v550), 63);     // 0x28932
     int32_t i_v555 = (0x100000000 * i_v531 >> 32) / 0x100000000; // 0x2894e
-    int32_t i_v556 = (i_v519 >> 31) + i_v555 + (int32_t)(*p_v158 / 0x100000000); // 0x28968
+    int32_t i_v556 =
+        (i_v519 >> 31) + i_v555 + (int32_t)(*p_v158 / 0x100000000);  // 0x28968
     int32_t i_v557 = rotr64((int64_t)((i_v556 ^ i_v511) >> 31), 32); // 0x28994
     int32_t i_v558 = ((i_v557 >> 31) + i_v503) / 0x80000000;
-    int32_t i_v559 = (0x100000000 * rotr64((int64_t)(i_v558 ^ i_v555), 24) >> 32) / 0x100000000; // 0x289fc
-    int32_t i_v560 = (i_v556 >> 31) + (int32_t)(*p_v153 / 0x100000000) + i_v559; // 0x28a16
+    int32_t i_v559 =
+        (0x100000000 * rotr64((int64_t)(i_v558 ^ i_v555), 24) >> 32) /
+        0x100000000; // 0x289fc
+    int32_t i_v560 =
+        (i_v556 >> 31) + (int32_t)(*p_v153 / 0x100000000) + i_v559;  // 0x28a16
     int32_t i_v561 = rotr64((int64_t)((i_v560 ^ i_v557) >> 31), 16); // 0x28a42
     int32_t i_v562 = ((i_v561 >> 31) + i_v558) / 0x80000000;
-    int64_t i_v563 = rotr64((int64_t)(i_v562 ^ i_v559), 63); // 0x28a8e
+    int64_t i_v563 = rotr64((int64_t)(i_v562 ^ i_v559), 63);     // 0x28a8e
     int32_t i_v564 = (0x100000000 * i_v504 >> 32) / 0x100000000; // 0x28aaa
-    int32_t i_v565 = (i_v528 >> 31) + i_v564 + (int32_t)(*p_v76 / 0x100000000); // 0x28ac4
+    int32_t i_v565 =
+        (i_v528 >> 31) + i_v564 + (int32_t)(*p_v76 / 0x100000000);   // 0x28ac4
     int32_t i_v566 = rotr64((int64_t)((i_v565 ^ i_v520) >> 31), 32); // 0x28af0
     int32_t i_v567 = ((i_v566 >> 31) + i_v512) / 0x80000000;
-    int32_t i_v568 = (0x100000000 * rotr64((int64_t)(i_v567 ^ i_v564), 24) >> 32) / 0x100000000; // 0x28b58
-    int32_t i_v569 = (i_v565 >> 31) + (int32_t)(*p_v125 / 0x100000000) + i_v568; // 0x28b72
+    int32_t i_v568 =
+        (0x100000000 * rotr64((int64_t)(i_v567 ^ i_v564), 24) >> 32) /
+        0x100000000; // 0x28b58
+    int32_t i_v569 =
+        (i_v565 >> 31) + (int32_t)(*p_v125 / 0x100000000) + i_v568;  // 0x28b72
     int32_t i_v570 = rotr64((int64_t)((i_v569 ^ i_v566) >> 31), 16); // 0x28b9e
     int32_t i_v571 = ((i_v570 >> 31) + i_v567) / 0x80000000;
-    int64_t i_v572 = rotr64((int64_t)(i_v571 ^ i_v568), 63); // 0x28bea
-    uint64_t i_v573 = v[0]; // 0x28bfe
+    int64_t i_v572 = rotr64((int64_t)(i_v571 ^ i_v568), 63);     // 0x28bea
+    uint64_t i_v573 = v[0];                                      // 0x28bfe
     int32_t i_v574 = (0x100000000 * i_v572 >> 32) / 0x100000000; // 0x28c06
-    uint64_t i_v575 = *p_v142; // 0x28c1c
-    x_v40[0] = i_v574 + (int32_t)(i_v573 / 0x100000000) + (int32_t)(i_v575 / 0x100000000);
+    uint64_t i_v575 = *p_v142;                                   // 0x28c1c
+    x_v40[0] = i_v574 + (int32_t)(i_v573 / 0x100000000) +
+               (int32_t)(i_v575 / 0x100000000);
     v = x_v40;
     uint64_t i_v576 = v[0]; // 0x28c3a
-    int32_t i_v577 = (int32_t)rotr64((int64_t)(i_v552 ^ (int32_t)(i_v576 / 0x100000000)), 32) >> 31;
+    int32_t i_v577 =
+        (int32_t)rotr64((int64_t)(i_v552 ^ (int32_t)(i_v576 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v578 = i_v577 + i_v562 >> 31;
-    int64_t i_v579 = rotr64((int64_t)(i_v578 ^ i_v574), 24); // 0x28c98
-    uint64_t i_v580 = v[0]; // 0x28cac
+    int64_t i_v579 = rotr64((int64_t)(i_v578 ^ i_v574), 24);     // 0x28c98
+    uint64_t i_v580 = v[0];                                      // 0x28cac
     int32_t i_v581 = (0x100000000 * i_v579 >> 32) / 0x100000000; // 0x28cb4
-    uint64_t i_v582 = *p_v99; // 0x28cca
-    x_v41[0] = i_v581 + (int32_t)(i_v580 / 0x100000000) + (int32_t)(i_v582 / 0x100000000);
+    uint64_t i_v582 = *p_v99;                                    // 0x28cca
+    x_v41[0] = i_v581 + (int32_t)(i_v580 / 0x100000000) +
+               (int32_t)(i_v582 / 0x100000000);
     v = x_v41;
     uint64_t i_v583 = v[0]; // 0x28ce8
-    int32_t i_v584 = rotr64((int64_t)(i_v577 ^ (int32_t)(i_v583 / 0x100000000)), 16); // 0x28cfa
+    int32_t i_v584 = rotr64((int64_t)(i_v577 ^ (int32_t)(i_v583 / 0x100000000)),
+                            16); // 0x28cfa
     int32_t i_v585 = ((i_v584 >> 31) + i_v578) / 0x80000000;
-    int64_t i_v586 = rotr64((int64_t)(i_v585 ^ i_v581), 63); // 0x28d46
+    int64_t i_v586 = rotr64((int64_t)(i_v585 ^ i_v581), 63);     // 0x28d46
     int32_t i_v587 = (0x100000000 * i_v545 >> 32) / 0x100000000; // 0x28d62
-    int32_t i_v588 = (i_v551 >> 31) + i_v587 + (int32_t)(*p_v76 / 0x100000000); // 0x28d7c
+    int32_t i_v588 =
+        (i_v551 >> 31) + i_v587 + (int32_t)(*p_v76 / 0x100000000);   // 0x28d7c
     int32_t i_v589 = rotr64((int64_t)((i_v588 ^ i_v561) >> 31), 32); // 0x28da8
     int32_t i_v590 = ((i_v589 >> 31) + i_v571) / 0x80000000;
-    int32_t i_v591 = (0x100000000 * rotr64((int64_t)(i_v590 ^ i_v587), 24) >> 32) / 0x100000000; // 0x28e10
-    int32_t i_v592 = (i_v588 >> 31) + (int32_t)(*p_v158 / 0x100000000) + i_v591; // 0x28e2a
+    int32_t i_v591 =
+        (0x100000000 * rotr64((int64_t)(i_v590 ^ i_v587), 24) >> 32) /
+        0x100000000; // 0x28e10
+    int32_t i_v592 =
+        (i_v588 >> 31) + (int32_t)(*p_v158 / 0x100000000) + i_v591;  // 0x28e2a
     int32_t i_v593 = rotr64((int64_t)((i_v592 ^ i_v589) >> 31), 16); // 0x28e56
     int32_t i_v594 = ((i_v593 >> 31) + i_v590) / 0x80000000;
-    int64_t i_v595 = rotr64((int64_t)(i_v594 ^ i_v591), 63); // 0x28ea2
+    int64_t i_v595 = rotr64((int64_t)(i_v594 ^ i_v591), 63);     // 0x28ea2
     int32_t i_v596 = (0x100000000 * i_v554 >> 32) / 0x100000000; // 0x28ebe
-    int32_t i_v597 = (i_v560 >> 31) + i_v596 + (int32_t)(*p_v153 / 0x100000000); // 0x28ed8
+    int32_t i_v597 =
+        (i_v560 >> 31) + i_v596 + (int32_t)(*p_v153 / 0x100000000);  // 0x28ed8
     int32_t i_v598 = rotr64((int64_t)((i_v597 ^ i_v570) >> 31), 32); // 0x28f04
     int32_t i_v599 = ((i_v598 >> 31) + i_v544) / 0x80000000;
-    int32_t i_v600 = (0x100000000 * rotr64((int64_t)(i_v599 ^ i_v596), 24) >> 32) / 0x100000000; // 0x28f6c
-    int32_t i_v601 = (i_v597 >> 31) + (int32_t)(*p_v147 / 0x100000000) + i_v600; // 0x28f86
+    int32_t i_v600 =
+        (0x100000000 * rotr64((int64_t)(i_v599 ^ i_v596), 24) >> 32) /
+        0x100000000; // 0x28f6c
+    int32_t i_v601 =
+        (i_v597 >> 31) + (int32_t)(*p_v147 / 0x100000000) + i_v600;  // 0x28f86
     int32_t i_v602 = rotr64((int64_t)((i_v601 ^ i_v598) >> 31), 16); // 0x28fb2
     int32_t i_v603 = ((i_v602 >> 31) + i_v599) / 0x80000000;
-    int64_t i_v604 = rotr64((int64_t)(i_v603 ^ i_v600), 63); // 0x28ffe
+    int64_t i_v604 = rotr64((int64_t)(i_v603 ^ i_v600), 63);     // 0x28ffe
     int32_t i_v605 = (0x100000000 * i_v563 >> 32) / 0x100000000; // 0x2901a
-    int32_t i_v606 = (i_v569 >> 31) + i_v605 + (int32_t)(*p_v94 / 0x100000000); // 0x29034
+    int32_t i_v606 =
+        (i_v569 >> 31) + i_v605 + (int32_t)(*p_v94 / 0x100000000);   // 0x29034
     int32_t i_v607 = rotr64((int64_t)((i_v606 ^ i_v543) >> 31), 32); // 0x29060
     int32_t i_v608 = ((i_v607 >> 31) + i_v553) / 0x80000000;
-    int32_t i_v609 = (0x100000000 * rotr64((int64_t)(i_v608 ^ i_v605), 24) >> 32) / 0x100000000; // 0x290c8
-    int32_t i_v610 = (i_v606 >> 31) + (int32_t)(*p_v131 / 0x100000000) + i_v609; // 0x290e2
-    int32_t i_v611 = (int32_t)rotr64((int64_t)((i_v610 ^ i_v607) >> 31), 16) >> 31;
+    int32_t i_v609 =
+        (0x100000000 * rotr64((int64_t)(i_v608 ^ i_v605), 24) >> 32) /
+        0x100000000; // 0x290c8
+    int32_t i_v610 =
+        (i_v606 >> 31) + (int32_t)(*p_v131 / 0x100000000) + i_v609; // 0x290e2
+    int32_t i_v611 =
+        (int32_t)rotr64((int64_t)((i_v610 ^ i_v607) >> 31), 16) >> 31;
     int32_t i_v612 = i_v611 + i_v608 >> 31;
-    int64_t i_v613 = rotr64((int64_t)(i_v612 ^ i_v609), 63); // 0x2915a
-    uint64_t i_v614 = v[0]; // 0x2916e
+    int64_t i_v613 = rotr64((int64_t)(i_v612 ^ i_v609), 63);     // 0x2915a
+    uint64_t i_v614 = v[0];                                      // 0x2916e
     int32_t i_v615 = (0x100000000 * i_v595 >> 32) / 0x100000000; // 0x29176
-    uint64_t i_v616 = *p_v68; // 0x2918c
-    x_v42[0] = (int32_t)(i_v614 / 0x100000000) + i_v615 + (int32_t)(i_v616 / 0x100000000);
+    uint64_t i_v616 = *p_v68;                                    // 0x2918c
+    x_v42[0] = (int32_t)(i_v614 / 0x100000000) + i_v615 +
+               (int32_t)(i_v616 / 0x100000000);
     v = x_v42;
     uint64_t i_v617 = v[0]; // 0x291aa
-    int32_t i_v618 = (int32_t)rotr64((int64_t)(i_v611 ^ (int32_t)(i_v617 / 0x100000000)), 32) >> 31;
+    int32_t i_v618 =
+        (int32_t)rotr64((int64_t)(i_v611 ^ (int32_t)(i_v617 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v619 = i_v618 + i_v603 >> 31;
-    int64_t i_v620 = rotr64((int64_t)(i_v619 ^ i_v615), 24); // 0x29208
-    uint64_t i_v621 = v[0]; // 0x2921c
+    int64_t i_v620 = rotr64((int64_t)(i_v619 ^ i_v615), 24);     // 0x29208
+    uint64_t i_v621 = v[0];                                      // 0x2921c
     int32_t i_v622 = (0x100000000 * i_v620 >> 32) / 0x100000000; // 0x29224
-    uint64_t i_v623 = *p_v110; // 0x2923a
-    x_v43[0] = i_v622 + (int32_t)(i_v621 / 0x100000000) + (int32_t)(i_v623 / 0x100000000);
+    uint64_t i_v623 = *p_v110;                                   // 0x2923a
+    x_v43[0] = i_v622 + (int32_t)(i_v621 / 0x100000000) +
+               (int32_t)(i_v623 / 0x100000000);
     v = x_v43;
     uint64_t i_v624 = v[0]; // 0x29258
-    int32_t i_v625 = rotr64((int64_t)(i_v618 ^ (int32_t)(i_v624 / 0x100000000)), 16); // 0x2926a
+    int32_t i_v625 = rotr64((int64_t)(i_v618 ^ (int32_t)(i_v624 / 0x100000000)),
+                            16); // 0x2926a
     int32_t i_v626 = ((i_v625 >> 31) + i_v619) / 0x80000000;
-    int64_t i_v627 = rotr64((int64_t)(i_v626 ^ i_v622), 63); // 0x292b6
+    int64_t i_v627 = rotr64((int64_t)(i_v626 ^ i_v622), 63);     // 0x292b6
     int32_t i_v628 = (0x100000000 * i_v604 >> 32) / 0x100000000; // 0x292d2
-    int32_t i_v629 = (i_v592 >> 31) + i_v628 + (int32_t)(*p_v105 / 0x100000000); // 0x292ec
+    int32_t i_v629 =
+        (i_v592 >> 31) + i_v628 + (int32_t)(*p_v105 / 0x100000000);  // 0x292ec
     int32_t i_v630 = rotr64((int64_t)((i_v629 ^ i_v584) >> 31), 32); // 0x29318
     int32_t i_v631 = ((i_v630 >> 31) + i_v612) / 0x80000000;
-    int32_t i_v632 = (0x100000000 * rotr64((int64_t)(i_v631 ^ i_v628), 24) >> 32) / 0x100000000; // 0x29380
-    int32_t i_v633 = (i_v629 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v632; // 0x2939a
-    int32_t i_v634 = (int32_t)rotr64((int64_t)((i_v633 ^ i_v630) >> 31), 16) >> 31;
+    int32_t i_v632 =
+        (0x100000000 * rotr64((int64_t)(i_v631 ^ i_v628), 24) >> 32) /
+        0x100000000; // 0x29380
+    int32_t i_v633 =
+        (i_v629 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v632; // 0x2939a
+    int32_t i_v634 =
+        (int32_t)rotr64((int64_t)((i_v633 ^ i_v630) >> 31), 16) >> 31;
     int32_t i_v635 = i_v634 + i_v631 >> 31;
-    int64_t i_v636 = rotr64((int64_t)(i_v635 ^ i_v632), 63); // 0x29412
+    int64_t i_v636 = rotr64((int64_t)(i_v635 ^ i_v632), 63);     // 0x29412
     int32_t i_v637 = (0x100000000 * i_v613 >> 32) / 0x100000000; // 0x2942e
-    int32_t i_v638 = (i_v601 >> 31) + i_v637 + (int32_t)(*p_v125 / 0x100000000); // 0x29448
+    int32_t i_v638 =
+        (i_v601 >> 31) + i_v637 + (int32_t)(*p_v125 / 0x100000000);  // 0x29448
     int32_t i_v639 = rotr64((int64_t)((i_v638 ^ i_v593) >> 31), 32); // 0x29474
     int32_t i_v640 = ((i_v639 >> 31) + i_v585) / 0x80000000;
-    int32_t i_v641 = (0x100000000 * rotr64((int64_t)(i_v640 ^ i_v637), 24) >> 32) / 0x100000000; // 0x294dc
-    int32_t i_v642 = (i_v638 >> 31) + (int32_t)(*p_v83 / 0x100000000) + i_v641; // 0x294f6
+    int32_t i_v641 =
+        (0x100000000 * rotr64((int64_t)(i_v640 ^ i_v637), 24) >> 32) /
+        0x100000000; // 0x294dc
+    int32_t i_v642 =
+        (i_v638 >> 31) + (int32_t)(*p_v83 / 0x100000000) + i_v641;   // 0x294f6
     int32_t i_v643 = rotr64((int64_t)((i_v642 ^ i_v639) >> 31), 16); // 0x29522
     int32_t i_v644 = ((i_v643 >> 31) + i_v640) / 0x80000000;
-    int64_t i_v645 = rotr64((int64_t)(i_v644 ^ i_v641), 63); // 0x2956e
+    int64_t i_v645 = rotr64((int64_t)(i_v644 ^ i_v641), 63);     // 0x2956e
     int32_t i_v646 = (0x100000000 * i_v586 >> 32) / 0x100000000; // 0x2958a
-    int32_t i_v647 = (i_v610 >> 31) + i_v646 + (int32_t)(*p_v117 / 0x100000000); // 0x295a4
+    int32_t i_v647 =
+        (i_v610 >> 31) + i_v646 + (int32_t)(*p_v117 / 0x100000000);  // 0x295a4
     int32_t i_v648 = rotr64((int64_t)((i_v647 ^ i_v602) >> 31), 32); // 0x295d0
     int32_t i_v649 = ((i_v648 >> 31) + i_v594) / 0x80000000;
-    int32_t i_v650 = (0x100000000 * rotr64((int64_t)(i_v649 ^ i_v646), 24) >> 32) / 0x100000000; // 0x29638
-    int32_t i_v651 = (i_v647 >> 31) + (int32_t)(*p_v136 / 0x100000000) + i_v650; // 0x29652
+    int32_t i_v650 =
+        (0x100000000 * rotr64((int64_t)(i_v649 ^ i_v646), 24) >> 32) /
+        0x100000000; // 0x29638
+    int32_t i_v651 =
+        (i_v647 >> 31) + (int32_t)(*p_v136 / 0x100000000) + i_v650;  // 0x29652
     int32_t i_v652 = rotr64((int64_t)((i_v651 ^ i_v648) >> 31), 16); // 0x2967e
     int32_t i_v653 = ((i_v652 >> 31) + i_v649) / 0x80000000;
-    int64_t i_v654 = rotr64((int64_t)(i_v653 ^ i_v650), 63); // 0x296ca
-    uint64_t i_v655 = v[0]; // 0x296de
+    int64_t i_v654 = rotr64((int64_t)(i_v653 ^ i_v650), 63);     // 0x296ca
+    uint64_t i_v655 = v[0];                                      // 0x296de
     int32_t i_v656 = (0x100000000 * i_v654 >> 32) / 0x100000000; // 0x296e6
-    uint64_t i_v657 = *p_v147; // 0x296fc
-    x_v44[0] = i_v656 + (int32_t)(i_v655 / 0x100000000) + (int32_t)(i_v657 / 0x100000000);
+    uint64_t i_v657 = *p_v147;                                   // 0x296fc
+    x_v44[0] = i_v656 + (int32_t)(i_v655 / 0x100000000) +
+               (int32_t)(i_v657 / 0x100000000);
     v = x_v44;
     uint64_t i_v658 = v[0]; // 0x2971a
-    int32_t i_v659 = (int32_t)rotr64((int64_t)(i_v634 ^ (int32_t)(i_v658 / 0x100000000)), 32) >> 31;
+    int32_t i_v659 =
+        (int32_t)rotr64((int64_t)(i_v634 ^ (int32_t)(i_v658 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v660 = i_v659 + i_v644 >> 31;
-    int64_t i_v661 = rotr64((int64_t)(i_v660 ^ i_v656), 24); // 0x29778
-    uint64_t i_v662 = v[0]; // 0x2978c
+    int64_t i_v661 = rotr64((int64_t)(i_v660 ^ i_v656), 24);     // 0x29778
+    uint64_t i_v662 = v[0];                                      // 0x2978c
     int32_t i_v663 = (0x100000000 * i_v661 >> 32) / 0x100000000; // 0x29794
-    uint64_t i_v664 = *p_v136; // 0x297aa
-    x_v45[0] = i_v663 + (int32_t)(i_v662 / 0x100000000) + (int32_t)(i_v664 / 0x100000000);
+    uint64_t i_v664 = *p_v136;                                   // 0x297aa
+    x_v45[0] = i_v663 + (int32_t)(i_v662 / 0x100000000) +
+               (int32_t)(i_v664 / 0x100000000);
     v = x_v45;
     uint64_t i_v665 = v[0]; // 0x297c8
-    int32_t i_v666 = rotr64((int64_t)(i_v659 ^ (int32_t)(i_v665 / 0x100000000)), 16); // 0x297da
+    int32_t i_v666 = rotr64((int64_t)(i_v659 ^ (int32_t)(i_v665 / 0x100000000)),
+                            16); // 0x297da
     int32_t i_v667 = ((i_v666 >> 31) + i_v660) / 0x80000000;
-    int64_t i_v668 = rotr64((int64_t)(i_v667 ^ i_v663), 63); // 0x29826
+    int64_t i_v668 = rotr64((int64_t)(i_v667 ^ i_v663), 63);     // 0x29826
     int32_t i_v669 = (0x100000000 * i_v627 >> 32) / 0x100000000; // 0x29842
-    int32_t i_v670 = (i_v633 >> 31) + i_v669 + (int32_t)(*p_v110 / 0x100000000); // 0x2985c
+    int32_t i_v670 =
+        (i_v633 >> 31) + i_v669 + (int32_t)(*p_v110 / 0x100000000);  // 0x2985c
     int32_t i_v671 = rotr64((int64_t)((i_v670 ^ i_v643) >> 31), 32); // 0x29888
     int32_t i_v672 = ((i_v671 >> 31) + i_v653) / 0x80000000;
-    int32_t i_v673 = (0x100000000 * rotr64((int64_t)(i_v672 ^ i_v669), 24) >> 32) / 0x100000000; // 0x298f0
-    int32_t i_v674 = (i_v670 >> 31) + (int32_t)(*p_v153 / 0x100000000) + i_v673; // 0x2990a
+    int32_t i_v673 =
+        (0x100000000 * rotr64((int64_t)(i_v672 ^ i_v669), 24) >> 32) /
+        0x100000000; // 0x298f0
+    int32_t i_v674 =
+        (i_v670 >> 31) + (int32_t)(*p_v153 / 0x100000000) + i_v673;  // 0x2990a
     int32_t i_v675 = rotr64((int64_t)((i_v674 ^ i_v671) >> 31), 16); // 0x29936
     int32_t i_v676 = ((i_v675 >> 31) + i_v672) / 0x80000000;
-    int64_t i_v677 = rotr64((int64_t)(i_v676 ^ i_v673), 63); // 0x29982
+    int64_t i_v677 = rotr64((int64_t)(i_v676 ^ i_v673), 63);     // 0x29982
     int32_t i_v678 = (0x100000000 * i_v636 >> 32) / 0x100000000; // 0x2999e
-    int32_t i_v679 = (i_v642 >> 31) + i_v678 + (int32_t)(*p_v142 / 0x100000000); // 0x299b8
+    int32_t i_v679 =
+        (i_v642 >> 31) + i_v678 + (int32_t)(*p_v142 / 0x100000000);  // 0x299b8
     int32_t i_v680 = rotr64((int64_t)((i_v679 ^ i_v652) >> 31), 32); // 0x299e4
     int32_t i_v681 = ((i_v680 >> 31) + i_v626) / 0x80000000;
-    int32_t i_v682 = (0x100000000 * rotr64((int64_t)(i_v681 ^ i_v678), 24) >> 32) / 0x100000000; // 0x29a4c
-    int32_t i_v683 = (i_v679 >> 31) + (int32_t)(*p_v76 / 0x100000000) + i_v682; // 0x29a66
+    int32_t i_v682 =
+        (0x100000000 * rotr64((int64_t)(i_v681 ^ i_v678), 24) >> 32) /
+        0x100000000; // 0x29a4c
+    int32_t i_v683 =
+        (i_v679 >> 31) + (int32_t)(*p_v76 / 0x100000000) + i_v682;   // 0x29a66
     int32_t i_v684 = rotr64((int64_t)((i_v683 ^ i_v680) >> 31), 16); // 0x29a92
     int32_t i_v685 = ((i_v684 >> 31) + i_v681) / 0x80000000;
-    int64_t i_v686 = rotr64((int64_t)(i_v685 ^ i_v682), 63); // 0x29ade
+    int64_t i_v686 = rotr64((int64_t)(i_v685 ^ i_v682), 63);     // 0x29ade
     int32_t i_v687 = (0x100000000 * i_v645 >> 32) / 0x100000000; // 0x29afa
-    int32_t i_v688 = (i_v651 >> 31) + i_v687 + (int32_t)(*p_v88 / 0x100000000); // 0x29b14
+    int32_t i_v688 =
+        (i_v651 >> 31) + i_v687 + (int32_t)(*p_v88 / 0x100000000);   // 0x29b14
     int32_t i_v689 = rotr64((int64_t)((i_v688 ^ i_v625) >> 31), 32); // 0x29b40
     int32_t i_v690 = ((i_v689 >> 31) + i_v635) / 0x80000000;
-    int32_t i_v691 = (0x100000000 * rotr64((int64_t)(i_v690 ^ i_v687), 24) >> 32) / 0x100000000; // 0x29ba8
-    int32_t i_v692 = (i_v688 >> 31) + (int32_t)(*p_v125 / 0x100000000) + i_v691; // 0x29bc2
-    int32_t i_v693 = (int32_t)rotr64((int64_t)((i_v692 ^ i_v689) >> 31), 16) >> 31;
+    int32_t i_v691 =
+        (0x100000000 * rotr64((int64_t)(i_v690 ^ i_v687), 24) >> 32) /
+        0x100000000; // 0x29ba8
+    int32_t i_v692 =
+        (i_v688 >> 31) + (int32_t)(*p_v125 / 0x100000000) + i_v691; // 0x29bc2
+    int32_t i_v693 =
+        (int32_t)rotr64((int64_t)((i_v692 ^ i_v689) >> 31), 16) >> 31;
     int32_t i_v694 = i_v693 + i_v690 >> 31;
-    int64_t i_v695 = rotr64((int64_t)(i_v694 ^ i_v691), 63); // 0x29c3a
-    uint64_t i_v696 = v[0]; // 0x29c4e
+    int64_t i_v695 = rotr64((int64_t)(i_v694 ^ i_v691), 63);     // 0x29c3a
+    uint64_t i_v696 = v[0];                                      // 0x29c4e
     int32_t i_v697 = (0x100000000 * i_v677 >> 32) / 0x100000000; // 0x29c56
-    uint64_t i_v698 = *p_v99; // 0x29c6c
-    x_v46[0] = (int32_t)(i_v696 / 0x100000000) + i_v697 + (int32_t)(i_v698 / 0x100000000);
+    uint64_t i_v698 = *p_v99;                                    // 0x29c6c
+    x_v46[0] = (int32_t)(i_v696 / 0x100000000) + i_v697 +
+               (int32_t)(i_v698 / 0x100000000);
     v = x_v46;
     uint64_t i_v699 = v[0]; // 0x29c8a
-    int32_t i_v700 = (int32_t)rotr64((int64_t)(i_v693 ^ (int32_t)(i_v699 / 0x100000000)), 32) >> 31;
+    int32_t i_v700 =
+        (int32_t)rotr64((int64_t)(i_v693 ^ (int32_t)(i_v699 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v701 = i_v700 + i_v685 >> 31;
-    int64_t i_v702 = rotr64((int64_t)(i_v701 ^ i_v697), 24); // 0x29ce8
-    uint64_t i_v703 = v[0]; // 0x29cfc
+    int64_t i_v702 = rotr64((int64_t)(i_v701 ^ i_v697), 24);     // 0x29ce8
+    uint64_t i_v703 = v[0];                                      // 0x29cfc
     int32_t i_v704 = (0x100000000 * i_v702 >> 32) / 0x100000000; // 0x29d04
-    uint64_t i_v705 = *p_v68; // 0x29d1a
-    x_v47[0] = i_v704 + (int32_t)(i_v703 / 0x100000000) + (int32_t)(i_v705 / 0x100000000);
+    uint64_t i_v705 = *p_v68;                                    // 0x29d1a
+    x_v47[0] = i_v704 + (int32_t)(i_v703 / 0x100000000) +
+               (int32_t)(i_v705 / 0x100000000);
     v = x_v47;
     uint64_t i_v706 = v[0]; // 0x29d38
-    int32_t i_v707 = rotr64((int64_t)(i_v700 ^ (int32_t)(i_v706 / 0x100000000)), 16); // 0x29d4a
+    int32_t i_v707 = rotr64((int64_t)(i_v700 ^ (int32_t)(i_v706 / 0x100000000)),
+                            16); // 0x29d4a
     int32_t i_v708 = ((i_v707 >> 31) + i_v701) / 0x80000000;
-    int64_t i_v709 = rotr64((int64_t)(i_v708 ^ i_v704), 63); // 0x29d96
+    int64_t i_v709 = rotr64((int64_t)(i_v708 ^ i_v704), 63);     // 0x29d96
     int32_t i_v710 = (0x100000000 * i_v686 >> 32) / 0x100000000; // 0x29db2
-    int32_t i_v711 = (i_v674 >> 31) + i_v710 + (int32_t)(*p_v158 / 0x100000000); // 0x29dcc
+    int32_t i_v711 =
+        (i_v674 >> 31) + i_v710 + (int32_t)(*p_v158 / 0x100000000);  // 0x29dcc
     int32_t i_v712 = rotr64((int64_t)((i_v711 ^ i_v666) >> 31), 32); // 0x29df8
     int32_t i_v713 = ((i_v712 >> 31) + i_v694) / 0x80000000;
-    int32_t i_v714 = (0x100000000 * rotr64((int64_t)(i_v713 ^ i_v710), 24) >> 32) / 0x100000000; // 0x29e60
-    int32_t i_v715 = (i_v711 >> 31) + (int32_t)(*p_v94 / 0x100000000) + i_v714; // 0x29e7a
-    int32_t i_v716 = (int32_t)rotr64((int64_t)((i_v715 ^ i_v712) >> 31), 16) >> 31;
+    int32_t i_v714 =
+        (0x100000000 * rotr64((int64_t)(i_v713 ^ i_v710), 24) >> 32) /
+        0x100000000; // 0x29e60
+    int32_t i_v715 =
+        (i_v711 >> 31) + (int32_t)(*p_v94 / 0x100000000) + i_v714; // 0x29e7a
+    int32_t i_v716 =
+        (int32_t)rotr64((int64_t)((i_v715 ^ i_v712) >> 31), 16) >> 31;
     int32_t i_v717 = i_v716 + i_v713 >> 31;
-    int64_t i_v718 = rotr64((int64_t)(i_v717 ^ i_v714), 63); // 0x29ef2
+    int64_t i_v718 = rotr64((int64_t)(i_v717 ^ i_v714), 63);     // 0x29ef2
     int32_t i_v719 = (0x100000000 * i_v695 >> 32) / 0x100000000; // 0x29f0e
-    int32_t i_v720 = (i_v683 >> 31) + i_v719 + (int32_t)(*p_v117 / 0x100000000); // 0x29f28
+    int32_t i_v720 =
+        (i_v683 >> 31) + i_v719 + (int32_t)(*p_v117 / 0x100000000);  // 0x29f28
     int32_t i_v721 = rotr64((int64_t)((i_v720 ^ i_v675) >> 31), 32); // 0x29f54
     int32_t i_v722 = ((i_v721 >> 31) + i_v667) / 0x80000000;
-    int32_t i_v723 = (0x100000000 * rotr64((int64_t)(i_v722 ^ i_v719), 24) >> 32) / 0x100000000; // 0x29fbc
-    int32_t i_v724 = (i_v720 >> 31) + (int32_t)(*p_v105 / 0x100000000) + i_v723; // 0x29fd6
+    int32_t i_v723 =
+        (0x100000000 * rotr64((int64_t)(i_v722 ^ i_v719), 24) >> 32) /
+        0x100000000; // 0x29fbc
+    int32_t i_v724 =
+        (i_v720 >> 31) + (int32_t)(*p_v105 / 0x100000000) + i_v723;  // 0x29fd6
     int32_t i_v725 = rotr64((int64_t)((i_v724 ^ i_v721) >> 31), 16); // 0x2a002
     int32_t i_v726 = ((i_v725 >> 31) + i_v722) / 0x80000000;
-    int64_t i_v727 = rotr64((int64_t)(i_v726 ^ i_v723), 63); // 0x2a04e
+    int64_t i_v727 = rotr64((int64_t)(i_v726 ^ i_v723), 63);     // 0x2a04e
     int32_t i_v728 = (0x100000000 * i_v668 >> 32) / 0x100000000; // 0x2a06a
-    int32_t i_v729 = (i_v692 >> 31) + i_v728 + (int32_t)(*p_v83 / 0x100000000); // 0x2a084
+    int32_t i_v729 =
+        (i_v692 >> 31) + i_v728 + (int32_t)(*p_v83 / 0x100000000);   // 0x2a084
     int32_t i_v730 = rotr64((int64_t)((i_v729 ^ i_v684) >> 31), 32); // 0x2a0b0
     int32_t i_v731 = ((i_v730 >> 31) + i_v676) / 0x80000000;
-    int32_t i_v732 = (0x100000000 * rotr64((int64_t)(i_v731 ^ i_v728), 24) >> 32) / 0x100000000; // 0x2a118
-    int32_t i_v733 = (i_v729 >> 31) + (int32_t)(*p_v131 / 0x100000000) + i_v732; // 0x2a132
+    int32_t i_v732 =
+        (0x100000000 * rotr64((int64_t)(i_v731 ^ i_v728), 24) >> 32) /
+        0x100000000; // 0x2a118
+    int32_t i_v733 =
+        (i_v729 >> 31) + (int32_t)(*p_v131 / 0x100000000) + i_v732;  // 0x2a132
     int32_t i_v734 = rotr64((int64_t)((i_v733 ^ i_v730) >> 31), 16); // 0x2a15e
     int32_t i_v735 = ((i_v734 >> 31) + i_v731) / 0x80000000;
-    int64_t i_v736 = rotr64((int64_t)(i_v735 ^ i_v732), 63); // 0x2a1aa
-    uint64_t i_v737 = v[0]; // 0x2a1be
+    int64_t i_v736 = rotr64((int64_t)(i_v735 ^ i_v732), 63);     // 0x2a1aa
+    uint64_t i_v737 = v[0];                                      // 0x2a1be
     int32_t i_v738 = (0x100000000 * i_v736 >> 32) / 0x100000000; // 0x2a1c6
-    uint64_t i_v739 = *p_v105; // 0x2a1dc
-    x_v1[0] = i_v738 + (int32_t)(i_v737 / 0x100000000) + (int32_t)(i_v739 / 0x100000000);
+    uint64_t i_v739 = *p_v105;                                   // 0x2a1dc
+    x_v1[0] = i_v738 + (int32_t)(i_v737 / 0x100000000) +
+              (int32_t)(i_v739 / 0x100000000);
     v = x_v1;
     uint64_t i_v740 = v[0]; // 0x2a1fa
-    int32_t i_v741 = (int32_t)rotr64((int64_t)(i_v716 ^ (int32_t)(i_v740 / 0x100000000)), 32) >> 31;
+    int32_t i_v741 =
+        (int32_t)rotr64((int64_t)(i_v716 ^ (int32_t)(i_v740 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v742 = i_v741 + i_v726 >> 31;
-    int64_t i_v743 = rotr64((int64_t)(i_v742 ^ i_v738), 24); // 0x2a258
-    uint64_t i_v744 = v[0]; // 0x2a26c
+    int64_t i_v743 = rotr64((int64_t)(i_v742 ^ i_v738), 24);     // 0x2a258
+    uint64_t i_v744 = v[0];                                      // 0x2a26c
     int32_t i_v745 = (0x100000000 * i_v743 >> 32) / 0x100000000; // 0x2a274
-    uint64_t i_v746 = *p_v158; // 0x2a28a
-    x_v2[0] = i_v745 + (int32_t)(i_v744 / 0x100000000) + (int32_t)(i_v746 / 0x100000000);
+    uint64_t i_v746 = *p_v158;                                   // 0x2a28a
+    x_v2[0] = i_v745 + (int32_t)(i_v744 / 0x100000000) +
+              (int32_t)(i_v746 / 0x100000000);
     v = x_v2;
     uint64_t i_v747 = v[0]; // 0x2a2a8
-    int32_t i_v748 = rotr64((int64_t)(i_v741 ^ (int32_t)(i_v747 / 0x100000000)), 16); // 0x2a2ba
+    int32_t i_v748 = rotr64((int64_t)(i_v741 ^ (int32_t)(i_v747 / 0x100000000)),
+                            16); // 0x2a2ba
     int32_t i_v749 = ((i_v748 >> 31) + i_v742) / 0x80000000;
-    int64_t i_v750 = rotr64((int64_t)(i_v749 ^ i_v745), 63); // 0x2a306
+    int64_t i_v750 = rotr64((int64_t)(i_v749 ^ i_v745), 63);     // 0x2a306
     int32_t i_v751 = (0x100000000 * i_v709 >> 32) / 0x100000000; // 0x2a322
-    int32_t i_v752 = (i_v715 >> 31) + i_v751 + (int32_t)(*p_v153 / 0x100000000); // 0x2a33c
+    int32_t i_v752 =
+        (i_v715 >> 31) + i_v751 + (int32_t)(*p_v153 / 0x100000000);  // 0x2a33c
     int32_t i_v753 = rotr64((int64_t)((i_v752 ^ i_v725) >> 31), 32); // 0x2a368
     int32_t i_v754 = ((i_v753 >> 31) + i_v735) / 0x80000000;
-    int32_t i_v755 = (0x100000000 * rotr64((int64_t)(i_v754 ^ i_v751), 24) >> 32) / 0x100000000; // 0x2a3d0
-    int32_t i_v756 = (i_v752 >> 31) + (int32_t)(*p_v125 / 0x100000000) + i_v755; // 0x2a3ea
+    int32_t i_v755 =
+        (0x100000000 * rotr64((int64_t)(i_v754 ^ i_v751), 24) >> 32) /
+        0x100000000; // 0x2a3d0
+    int32_t i_v756 =
+        (i_v752 >> 31) + (int32_t)(*p_v125 / 0x100000000) + i_v755;  // 0x2a3ea
     int32_t i_v757 = rotr64((int64_t)((i_v756 ^ i_v753) >> 31), 16); // 0x2a416
     int32_t i_v758 = ((i_v757 >> 31) + i_v754) / 0x80000000;
-    int64_t i_v759 = rotr64((int64_t)(i_v758 ^ i_v755), 63); // 0x2a462
+    int64_t i_v759 = rotr64((int64_t)(i_v758 ^ i_v755), 63);     // 0x2a462
     int32_t i_v760 = (0x100000000 * i_v718 >> 32) / 0x100000000; // 0x2a47e
-    int32_t i_v761 = (i_v724 >> 31) + i_v760 + (int32_t)(*p_v136 / 0x100000000); // 0x2a498
+    int32_t i_v761 =
+        (i_v724 >> 31) + i_v760 + (int32_t)(*p_v136 / 0x100000000);  // 0x2a498
     int32_t i_v762 = rotr64((int64_t)((i_v761 ^ i_v734) >> 31), 32); // 0x2a4c4
     int32_t i_v763 = ((i_v762 >> 31) + i_v708) / 0x80000000;
-    int32_t i_v764 = (0x100000000 * rotr64((int64_t)(i_v763 ^ i_v760), 24) >> 32) / 0x100000000; // 0x2a52c
-    int32_t i_v765 = (i_v761 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v764; // 0x2a546
+    int32_t i_v764 =
+        (0x100000000 * rotr64((int64_t)(i_v763 ^ i_v760), 24) >> 32) /
+        0x100000000; // 0x2a52c
+    int32_t i_v765 =
+        (i_v761 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v764;   // 0x2a546
     int32_t i_v766 = rotr64((int64_t)((i_v765 ^ i_v762) >> 31), 16); // 0x2a572
     int32_t i_v767 = ((i_v766 >> 31) + i_v763) / 0x80000000;
-    int64_t i_v768 = rotr64((int64_t)(i_v767 ^ i_v764), 63); // 0x2a5be
+    int64_t i_v768 = rotr64((int64_t)(i_v767 ^ i_v764), 63);     // 0x2a5be
     int32_t i_v769 = (0x100000000 * i_v727 >> 32) / 0x100000000; // 0x2a5da
-    int32_t i_v770 = (i_v733 >> 31) + i_v769 + (int32_t)(*p_v68 / 0x100000000); // 0x2a5f4
+    int32_t i_v770 =
+        (i_v733 >> 31) + i_v769 + (int32_t)(*p_v68 / 0x100000000);   // 0x2a5f4
     int32_t i_v771 = rotr64((int64_t)((i_v770 ^ i_v707) >> 31), 32); // 0x2a620
     int32_t i_v772 = ((i_v771 >> 31) + i_v717) / 0x80000000;
-    int32_t i_v773 = (0x100000000 * rotr64((int64_t)(i_v772 ^ i_v769), 24) >> 32) / 0x100000000; // 0x2a688
-    int32_t i_v774 = (i_v770 >> 31) + (int32_t)(*p_v117 / 0x100000000) + i_v773; // 0x2a6a2
-    int32_t i_v775 = (int32_t)rotr64((int64_t)((i_v774 ^ i_v771) >> 31), 16) >> 31;
+    int32_t i_v773 =
+        (0x100000000 * rotr64((int64_t)(i_v772 ^ i_v769), 24) >> 32) /
+        0x100000000; // 0x2a688
+    int32_t i_v774 =
+        (i_v770 >> 31) + (int32_t)(*p_v117 / 0x100000000) + i_v773; // 0x2a6a2
+    int32_t i_v775 =
+        (int32_t)rotr64((int64_t)((i_v774 ^ i_v771) >> 31), 16) >> 31;
     int32_t i_v776 = i_v775 + i_v772 >> 31;
-    int64_t i_v777 = rotr64((int64_t)(i_v776 ^ i_v773), 63); // 0x2a71a
-    uint64_t i_v778 = v[0]; // 0x2a72e
+    int64_t i_v777 = rotr64((int64_t)(i_v776 ^ i_v773), 63);     // 0x2a71a
+    uint64_t i_v778 = v[0];                                      // 0x2a72e
     int32_t i_v779 = (0x100000000 * i_v759 >> 32) / 0x100000000; // 0x2a736
-    uint64_t i_v780 = *p_v142; // 0x2a74c
-    x_v3[0] = (int32_t)(i_v778 / 0x100000000) + i_v779 + (int32_t)(i_v780 / 0x100000000);
+    uint64_t i_v780 = *p_v142;                                   // 0x2a74c
+    x_v3[0] = (int32_t)(i_v778 / 0x100000000) + i_v779 +
+              (int32_t)(i_v780 / 0x100000000);
     v = x_v3;
     uint64_t i_v781 = v[0]; // 0x2a76a
-    int32_t i_v782 = (int32_t)rotr64((int64_t)(i_v775 ^ (int32_t)(i_v781 / 0x100000000)), 32) >> 31;
+    int32_t i_v782 =
+        (int32_t)rotr64((int64_t)(i_v775 ^ (int32_t)(i_v781 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v783 = i_v782 + i_v767 >> 31;
-    int64_t i_v784 = rotr64((int64_t)(i_v783 ^ i_v779), 24); // 0x2a7c8
-    uint64_t i_v785 = v[0]; // 0x2a7dc
+    int64_t i_v784 = rotr64((int64_t)(i_v783 ^ i_v779), 24);     // 0x2a7c8
+    uint64_t i_v785 = v[0];                                      // 0x2a7dc
     int32_t i_v786 = (0x100000000 * i_v784 >> 32) / 0x100000000; // 0x2a7e4
-    uint64_t i_v787 = *p_v83; // 0x2a7fa
-    x_v5[0] = i_v786 + (int32_t)(i_v785 / 0x100000000) + (int32_t)(i_v787 / 0x100000000);
+    uint64_t i_v787 = *p_v83;                                    // 0x2a7fa
+    x_v5[0] = i_v786 + (int32_t)(i_v785 / 0x100000000) +
+              (int32_t)(i_v787 / 0x100000000);
     v = x_v5;
     uint64_t i_v788 = v[0]; // 0x2a818
-    int32_t i_v789 = rotr64((int64_t)(i_v782 ^ (int32_t)(i_v788 / 0x100000000)), 16); // 0x2a82a
+    int32_t i_v789 = rotr64((int64_t)(i_v782 ^ (int32_t)(i_v788 / 0x100000000)),
+                            16); // 0x2a82a
     int32_t i_v790 = ((i_v789 >> 31) + i_v783) / 0x80000000;
-    int64_t i_v791 = rotr64((int64_t)(i_v790 ^ i_v786), 63); // 0x2a876
+    int64_t i_v791 = rotr64((int64_t)(i_v790 ^ i_v786), 63);     // 0x2a876
     int32_t i_v792 = (0x100000000 * i_v768 >> 32) / 0x100000000; // 0x2a892
-    int32_t i_v793 = (i_v756 >> 31) + i_v792 + (int32_t)(*p_v147 / 0x100000000); // 0x2a8ac
+    int32_t i_v793 =
+        (i_v756 >> 31) + i_v792 + (int32_t)(*p_v147 / 0x100000000);  // 0x2a8ac
     int32_t i_v794 = rotr64((int64_t)((i_v793 ^ i_v748) >> 31), 32); // 0x2a8d8
     int32_t i_v795 = ((i_v794 >> 31) + i_v776) / 0x80000000;
-    int32_t i_v796 = (0x100000000 * rotr64((int64_t)(i_v795 ^ i_v792), 24) >> 32) / 0x100000000; // 0x2a940
-    int32_t i_v797 = (i_v793 >> 31) + (int32_t)(*p_v110 / 0x100000000) + i_v796; // 0x2a95a
-    int32_t i_v798 = (int32_t)rotr64((int64_t)((i_v797 ^ i_v794) >> 31), 16) >> 31;
+    int32_t i_v796 =
+        (0x100000000 * rotr64((int64_t)(i_v795 ^ i_v792), 24) >> 32) /
+        0x100000000; // 0x2a940
+    int32_t i_v797 =
+        (i_v793 >> 31) + (int32_t)(*p_v110 / 0x100000000) + i_v796; // 0x2a95a
+    int32_t i_v798 =
+        (int32_t)rotr64((int64_t)((i_v797 ^ i_v794) >> 31), 16) >> 31;
     int32_t i_v799 = i_v798 + i_v795 >> 31;
-    int64_t i_v800 = rotr64((int64_t)(i_v799 ^ i_v796), 63); // 0x2a9d2
+    int64_t i_v800 = rotr64((int64_t)(i_v799 ^ i_v796), 63);     // 0x2a9d2
     int32_t i_v801 = (0x100000000 * i_v777 >> 32) / 0x100000000; // 0x2a9ee
-    int32_t i_v802 = (i_v765 >> 31) + i_v801 + (int32_t)(*p_v76 / 0x100000000); // 0x2aa08
+    int32_t i_v802 =
+        (i_v765 >> 31) + i_v801 + (int32_t)(*p_v76 / 0x100000000);   // 0x2aa08
     int32_t i_v803 = rotr64((int64_t)((i_v802 ^ i_v757) >> 31), 32); // 0x2aa34
     int32_t i_v804 = ((i_v803 >> 31) + i_v749) / 0x80000000;
-    int32_t i_v805 = (0x100000000 * rotr64((int64_t)(i_v804 ^ i_v801), 24) >> 32) / 0x100000000; // 0x2aa9c
-    int32_t i_v806 = (i_v802 >> 31) + (int32_t)(*p_v94 / 0x100000000) + i_v805; // 0x2aab6
+    int32_t i_v805 =
+        (0x100000000 * rotr64((int64_t)(i_v804 ^ i_v801), 24) >> 32) /
+        0x100000000; // 0x2aa9c
+    int32_t i_v806 =
+        (i_v802 >> 31) + (int32_t)(*p_v94 / 0x100000000) + i_v805;   // 0x2aab6
     int32_t i_v807 = rotr64((int64_t)((i_v806 ^ i_v803) >> 31), 16); // 0x2aae2
     int32_t i_v808 = ((i_v807 >> 31) + i_v804) / 0x80000000;
-    int64_t i_v809 = rotr64((int64_t)(i_v808 ^ i_v805), 63); // 0x2ab2e
+    int64_t i_v809 = rotr64((int64_t)(i_v808 ^ i_v805), 63);     // 0x2ab2e
     int32_t i_v810 = (0x100000000 * i_v750 >> 32) / 0x100000000; // 0x2ab4a
-    int32_t i_v811 = (i_v774 >> 31) + i_v810 + (int32_t)(*p_v131 / 0x100000000); // 0x2ab64
+    int32_t i_v811 =
+        (i_v774 >> 31) + i_v810 + (int32_t)(*p_v131 / 0x100000000);  // 0x2ab64
     int32_t i_v812 = rotr64((int64_t)((i_v811 ^ i_v766) >> 31), 32); // 0x2ab90
     int32_t i_v813 = ((i_v812 >> 31) + i_v758) / 0x80000000;
-    int32_t i_v814 = (0x100000000 * rotr64((int64_t)(i_v813 ^ i_v810), 24) >> 32) / 0x100000000; // 0x2abf8
-    int32_t i_v815 = (i_v811 >> 31) + (int32_t)(*p_v99 / 0x100000000) + i_v814; // 0x2ac12
+    int32_t i_v814 =
+        (0x100000000 * rotr64((int64_t)(i_v813 ^ i_v810), 24) >> 32) /
+        0x100000000; // 0x2abf8
+    int32_t i_v815 =
+        (i_v811 >> 31) + (int32_t)(*p_v99 / 0x100000000) + i_v814;   // 0x2ac12
     int32_t i_v816 = rotr64((int64_t)((i_v815 ^ i_v812) >> 31), 16); // 0x2ac3e
     int32_t i_v817 = ((i_v816 >> 31) + i_v813) / 0x80000000;
-    int64_t i_v818 = rotr64((int64_t)(i_v817 ^ i_v814), 63); // 0x2ac8a
-    uint64_t i_v819 = v[0]; // 0x2ac9e
+    int64_t i_v818 = rotr64((int64_t)(i_v817 ^ i_v814), 63);     // 0x2ac8a
+    uint64_t i_v819 = v[0];                                      // 0x2ac9e
     int32_t i_v820 = (0x100000000 * i_v818 >> 32) / 0x100000000; // 0x2aca6
-    uint64_t i_v821 = *p_v131; // 0x2acbc
-    x_v6[0] = i_v820 + (int32_t)(i_v819 / 0x100000000) + (int32_t)(i_v821 / 0x100000000);
+    uint64_t i_v821 = *p_v131;                                   // 0x2acbc
+    x_v6[0] = i_v820 + (int32_t)(i_v819 / 0x100000000) +
+              (int32_t)(i_v821 / 0x100000000);
     v = x_v6;
     uint64_t i_v822 = v[0]; // 0x2acda
-    int32_t i_v823 = (int32_t)rotr64((int64_t)(i_v798 ^ (int32_t)(i_v822 / 0x100000000)), 32) >> 31;
+    int32_t i_v823 =
+        (int32_t)rotr64((int64_t)(i_v798 ^ (int32_t)(i_v822 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v824 = i_v823 + i_v808 >> 31;
-    int64_t i_v825 = rotr64((int64_t)(i_v824 ^ i_v820), 24); // 0x2ad38
-    uint64_t i_v826 = v[0]; // 0x2ad4c
+    int64_t i_v825 = rotr64((int64_t)(i_v824 ^ i_v820), 24);     // 0x2ad38
+    uint64_t i_v826 = v[0];                                      // 0x2ad4c
     int32_t i_v827 = (0x100000000 * i_v825 >> 32) / 0x100000000; // 0x2ad54
-    uint64_t i_v828 = *p_v83; // 0x2ad6a
-    x_v7[0] = i_v827 + (int32_t)(i_v826 / 0x100000000) + (int32_t)(i_v828 / 0x100000000);
+    uint64_t i_v828 = *p_v83;                                    // 0x2ad6a
+    x_v7[0] = i_v827 + (int32_t)(i_v826 / 0x100000000) +
+              (int32_t)(i_v828 / 0x100000000);
     v = x_v7;
     uint64_t i_v829 = v[0]; // 0x2ad88
-    int32_t i_v830 = rotr64((int64_t)(i_v823 ^ (int32_t)(i_v829 / 0x100000000)), 16); // 0x2ad9a
+    int32_t i_v830 = rotr64((int64_t)(i_v823 ^ (int32_t)(i_v829 / 0x100000000)),
+                            16); // 0x2ad9a
     int32_t i_v831 = ((i_v830 >> 31) + i_v824) / 0x80000000;
-    int64_t i_v832 = rotr64((int64_t)(i_v831 ^ i_v827), 63); // 0x2ade6
+    int64_t i_v832 = rotr64((int64_t)(i_v831 ^ i_v827), 63);     // 0x2ade6
     int32_t i_v833 = (0x100000000 * i_v791 >> 32) / 0x100000000; // 0x2ae02
-    int32_t i_v834 = (i_v797 >> 31) + i_v833 + (int32_t)(*p_v117 / 0x100000000); // 0x2ae1c
+    int32_t i_v834 =
+        (i_v797 >> 31) + i_v833 + (int32_t)(*p_v117 / 0x100000000);  // 0x2ae1c
     int32_t i_v835 = rotr64((int64_t)((i_v834 ^ i_v807) >> 31), 32); // 0x2ae48
     int32_t i_v836 = ((i_v835 >> 31) + i_v817) / 0x80000000;
-    int32_t i_v837 = (0x100000000 * rotr64((int64_t)(i_v836 ^ i_v833), 24) >> 32) / 0x100000000; // 0x2aeb0
-    int32_t i_v838 = (i_v834 >> 31) + (int32_t)(*p_v94 / 0x100000000) + i_v837; // 0x2aeca
+    int32_t i_v837 =
+        (0x100000000 * rotr64((int64_t)(i_v836 ^ i_v833), 24) >> 32) /
+        0x100000000; // 0x2aeb0
+    int32_t i_v838 =
+        (i_v834 >> 31) + (int32_t)(*p_v94 / 0x100000000) + i_v837;   // 0x2aeca
     int32_t i_v839 = rotr64((int64_t)((i_v838 ^ i_v835) >> 31), 16); // 0x2aef6
     int32_t i_v840 = ((i_v839 >> 31) + i_v836) / 0x80000000;
-    int64_t i_v841 = rotr64((int64_t)(i_v840 ^ i_v837), 63); // 0x2af42
+    int64_t i_v841 = rotr64((int64_t)(i_v840 ^ i_v837), 63);     // 0x2af42
     int32_t i_v842 = (0x100000000 * i_v800 >> 32) / 0x100000000; // 0x2af5e
-    int32_t i_v843 = (i_v806 >> 31) + i_v842 + (int32_t)(*p_v110 / 0x100000000); // 0x2af78
+    int32_t i_v843 =
+        (i_v806 >> 31) + i_v842 + (int32_t)(*p_v110 / 0x100000000);  // 0x2af78
     int32_t i_v844 = rotr64((int64_t)((i_v843 ^ i_v816) >> 31), 32); // 0x2afa4
     int32_t i_v845 = ((i_v844 >> 31) + i_v790) / 0x80000000;
-    int32_t i_v846 = (0x100000000 * rotr64((int64_t)(i_v845 ^ i_v842), 24) >> 32) / 0x100000000; // 0x2b00c
-    int32_t i_v847 = (i_v843 >> 31) + (int32_t)(*p_v105 / 0x100000000) + i_v846; // 0x2b026
+    int32_t i_v846 =
+        (0x100000000 * rotr64((int64_t)(i_v845 ^ i_v842), 24) >> 32) /
+        0x100000000; // 0x2b00c
+    int32_t i_v847 =
+        (i_v843 >> 31) + (int32_t)(*p_v105 / 0x100000000) + i_v846;  // 0x2b026
     int32_t i_v848 = rotr64((int64_t)((i_v847 ^ i_v844) >> 31), 16); // 0x2b052
     int32_t i_v849 = ((i_v848 >> 31) + i_v845) / 0x80000000;
-    int64_t i_v850 = rotr64((int64_t)(i_v849 ^ i_v846), 63); // 0x2b09e
+    int64_t i_v850 = rotr64((int64_t)(i_v849 ^ i_v846), 63);     // 0x2b09e
     int32_t i_v851 = (0x100000000 * i_v809 >> 32) / 0x100000000; // 0x2b0ba
-    int32_t i_v852 = (i_v815 >> 31) + i_v851 + (int32_t)(*p_v76 / 0x100000000); // 0x2b0d4
+    int32_t i_v852 =
+        (i_v815 >> 31) + i_v851 + (int32_t)(*p_v76 / 0x100000000);   // 0x2b0d4
     int32_t i_v853 = rotr64((int64_t)((i_v852 ^ i_v789) >> 31), 32); // 0x2b100
     int32_t i_v854 = ((i_v853 >> 31) + i_v799) / 0x80000000;
-    int32_t i_v855 = (0x100000000 * rotr64((int64_t)(i_v854 ^ i_v851), 24) >> 32) / 0x100000000; // 0x2b168
-    int32_t i_v856 = (i_v852 >> 31) + (int32_t)(*p_v99 / 0x100000000) + i_v855; // 0x2b182
-    int32_t i_v857 = (int32_t)rotr64((int64_t)((i_v856 ^ i_v853) >> 31), 16) >> 31;
+    int32_t i_v855 =
+        (0x100000000 * rotr64((int64_t)(i_v854 ^ i_v851), 24) >> 32) /
+        0x100000000; // 0x2b168
+    int32_t i_v856 =
+        (i_v852 >> 31) + (int32_t)(*p_v99 / 0x100000000) + i_v855; // 0x2b182
+    int32_t i_v857 =
+        (int32_t)rotr64((int64_t)((i_v856 ^ i_v853) >> 31), 16) >> 31;
     int32_t i_v858 = i_v857 + i_v854 >> 31;
-    int64_t i_v859 = rotr64((int64_t)(i_v858 ^ i_v855), 63); // 0x2b1fa
-    uint64_t i_v860 = v[0]; // 0x2b20e
+    int64_t i_v859 = rotr64((int64_t)(i_v858 ^ i_v855), 63);     // 0x2b1fa
+    uint64_t i_v860 = v[0];                                      // 0x2b20e
     int32_t i_v861 = (0x100000000 * i_v841 >> 32) / 0x100000000; // 0x2b216
-    uint64_t i_v862 = *p_v158; // 0x2b22c
-    x_v8[0] = (int32_t)(i_v860 / 0x100000000) + i_v861 + (int32_t)(i_v862 / 0x100000000);
+    uint64_t i_v862 = *p_v158;                                   // 0x2b22c
+    x_v8[0] = (int32_t)(i_v860 / 0x100000000) + i_v861 +
+              (int32_t)(i_v862 / 0x100000000);
     v = x_v8;
     uint64_t i_v863 = v[0]; // 0x2b24a
-    int32_t i_v864 = (int32_t)rotr64((int64_t)(i_v857 ^ (int32_t)(i_v863 / 0x100000000)), 32) >> 31;
+    int32_t i_v864 =
+        (int32_t)rotr64((int64_t)(i_v857 ^ (int32_t)(i_v863 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v865 = i_v864 + i_v849 >> 31;
-    int64_t i_v866 = rotr64((int64_t)(i_v865 ^ i_v861), 24); // 0x2b2a8
-    uint64_t i_v867 = v[0]; // 0x2b2bc
+    int64_t i_v866 = rotr64((int64_t)(i_v865 ^ i_v861), 24);     // 0x2b2a8
+    uint64_t i_v867 = v[0];                                      // 0x2b2bc
     int32_t i_v868 = (0x100000000 * i_v866 >> 32) / 0x100000000; // 0x2b2c4
-    uint64_t i_v869 = *p_v136; // 0x2b2da
-    x_v9[0] = i_v868 + (int32_t)(i_v867 / 0x100000000) + (int32_t)(i_v869 / 0x100000000);
+    uint64_t i_v869 = *p_v136;                                   // 0x2b2da
+    x_v9[0] = i_v868 + (int32_t)(i_v867 / 0x100000000) +
+              (int32_t)(i_v869 / 0x100000000);
     v = x_v9;
     uint64_t i_v870 = v[0]; // 0x2b2f8
-    int32_t i_v871 = rotr64((int64_t)(i_v864 ^ (int32_t)(i_v870 / 0x100000000)), 16); // 0x2b30a
+    int32_t i_v871 = rotr64((int64_t)(i_v864 ^ (int32_t)(i_v870 / 0x100000000)),
+                            16); // 0x2b30a
     int32_t i_v872 = ((i_v871 >> 31) + i_v865) / 0x80000000;
-    int64_t i_v873 = rotr64((int64_t)(i_v872 ^ i_v868), 63); // 0x2b356
+    int64_t i_v873 = rotr64((int64_t)(i_v872 ^ i_v868), 63);     // 0x2b356
     int32_t i_v874 = (0x100000000 * i_v850 >> 32) / 0x100000000; // 0x2b372
-    int32_t i_v875 = (i_v838 >> 31) + i_v874 + (int32_t)(*p_v125 / 0x100000000); // 0x2b38c
+    int32_t i_v875 =
+        (i_v838 >> 31) + i_v874 + (int32_t)(*p_v125 / 0x100000000);  // 0x2b38c
     int32_t i_v876 = rotr64((int64_t)((i_v875 ^ i_v830) >> 31), 32); // 0x2b3b8
     int32_t i_v877 = ((i_v876 >> 31) + i_v858) / 0x80000000;
-    int32_t i_v878 = (0x100000000 * rotr64((int64_t)(i_v877 ^ i_v874), 24) >> 32) / 0x100000000; // 0x2b420
-    int32_t i_v879 = (i_v875 >> 31) + (int32_t)(*p_v153 / 0x100000000) + i_v878; // 0x2b43a
-    int32_t i_v880 = (int32_t)rotr64((int64_t)((i_v879 ^ i_v876) >> 31), 16) >> 31;
+    int32_t i_v878 =
+        (0x100000000 * rotr64((int64_t)(i_v877 ^ i_v874), 24) >> 32) /
+        0x100000000; // 0x2b420
+    int32_t i_v879 =
+        (i_v875 >> 31) + (int32_t)(*p_v153 / 0x100000000) + i_v878; // 0x2b43a
+    int32_t i_v880 =
+        (int32_t)rotr64((int64_t)((i_v879 ^ i_v876) >> 31), 16) >> 31;
     int32_t i_v881 = i_v880 + i_v877 >> 31;
-    int64_t i_v882 = rotr64((int64_t)(i_v881 ^ i_v878), 63); // 0x2b4b2
+    int64_t i_v882 = rotr64((int64_t)(i_v881 ^ i_v878), 63);     // 0x2b4b2
     int32_t i_v883 = (0x100000000 * i_v859 >> 32) / 0x100000000; // 0x2b4ce
-    int32_t i_v884 = (i_v847 >> 31) + i_v883 + (int32_t)(*p_v88 / 0x100000000); // 0x2b4e8
+    int32_t i_v884 =
+        (i_v847 >> 31) + i_v883 + (int32_t)(*p_v88 / 0x100000000);   // 0x2b4e8
     int32_t i_v885 = rotr64((int64_t)((i_v884 ^ i_v839) >> 31), 32); // 0x2b514
     int32_t i_v886 = ((i_v885 >> 31) + i_v831) / 0x80000000;
-    int32_t i_v887 = (0x100000000 * rotr64((int64_t)(i_v886 ^ i_v883), 24) >> 32) / 0x100000000; // 0x2b57c
-    int32_t i_v888 = (i_v884 >> 31) + (int32_t)(*p_v142 / 0x100000000) + i_v887; // 0x2b596
+    int32_t i_v887 =
+        (0x100000000 * rotr64((int64_t)(i_v886 ^ i_v883), 24) >> 32) /
+        0x100000000; // 0x2b57c
+    int32_t i_v888 =
+        (i_v884 >> 31) + (int32_t)(*p_v142 / 0x100000000) + i_v887;  // 0x2b596
     int32_t i_v889 = rotr64((int64_t)((i_v888 ^ i_v885) >> 31), 16); // 0x2b5c2
     int32_t i_v890 = ((i_v889 >> 31) + i_v886) / 0x80000000;
-    int64_t i_v891 = rotr64((int64_t)(i_v890 ^ i_v887), 63); // 0x2b60e
+    int64_t i_v891 = rotr64((int64_t)(i_v890 ^ i_v887), 63);     // 0x2b60e
     int32_t i_v892 = (0x100000000 * i_v832 >> 32) / 0x100000000; // 0x2b62a
-    int32_t i_v893 = (i_v856 >> 31) + i_v892 + (int32_t)(*p_v147 / 0x100000000); // 0x2b644
+    int32_t i_v893 =
+        (i_v856 >> 31) + i_v892 + (int32_t)(*p_v147 / 0x100000000);  // 0x2b644
     int32_t i_v894 = rotr64((int64_t)((i_v893 ^ i_v848) >> 31), 32); // 0x2b670
     int32_t i_v895 = ((i_v894 >> 31) + i_v840) / 0x80000000;
-    int32_t i_v896 = (0x100000000 * rotr64((int64_t)(i_v895 ^ i_v892), 24) >> 32) / 0x100000000; // 0x2b6d8
-    int32_t i_v897 = (i_v893 >> 31) + (int32_t)(*p_v68 / 0x100000000) + i_v896; // 0x2b6f2
+    int32_t i_v896 =
+        (0x100000000 * rotr64((int64_t)(i_v895 ^ i_v892), 24) >> 32) /
+        0x100000000; // 0x2b6d8
+    int32_t i_v897 =
+        (i_v893 >> 31) + (int32_t)(*p_v68 / 0x100000000) + i_v896;   // 0x2b6f2
     int32_t i_v898 = rotr64((int64_t)((i_v897 ^ i_v894) >> 31), 16); // 0x2b71e
     int32_t i_v899 = ((i_v898 >> 31) + i_v895) / 0x80000000;
-    int64_t i_v900 = rotr64((int64_t)(i_v899 ^ i_v896), 63); // 0x2b76a
-    uint64_t i_v901 = v[0]; // 0x2b77e
+    int64_t i_v900 = rotr64((int64_t)(i_v899 ^ i_v896), 63);     // 0x2b76a
+    uint64_t i_v901 = v[0];                                      // 0x2b77e
     int32_t i_v902 = (0x100000000 * i_v900 >> 32) / 0x100000000; // 0x2b786
-    uint64_t i_v903 = *p_v68; // 0x2b79c
-    x_v10[0] = i_v902 + (int32_t)(i_v901 / 0x100000000) + (int32_t)(i_v903 / 0x100000000);
+    uint64_t i_v903 = *p_v68;                                    // 0x2b79c
+    x_v10[0] = i_v902 + (int32_t)(i_v901 / 0x100000000) +
+               (int32_t)(i_v903 / 0x100000000);
     v = x_v10;
     uint64_t i_v904 = v[0]; // 0x2b7ba
-    int32_t i_v905 = (int32_t)rotr64((int64_t)(i_v880 ^ (int32_t)(i_v904 / 0x100000000)), 32) >> 31;
+    int32_t i_v905 =
+        (int32_t)rotr64((int64_t)(i_v880 ^ (int32_t)(i_v904 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v906 = i_v905 + i_v890 >> 31;
-    int64_t i_v907 = rotr64((int64_t)(i_v906 ^ i_v902), 24); // 0x2b818
-    uint64_t i_v908 = v[0]; // 0x2b82c
+    int64_t i_v907 = rotr64((int64_t)(i_v906 ^ i_v902), 24);     // 0x2b818
+    uint64_t i_v908 = v[0];                                      // 0x2b82c
     int32_t i_v909 = (0x100000000 * i_v907 >> 32) / 0x100000000; // 0x2b834
-    uint64_t i_v910 = *p_v76; // 0x2b84a
-    x_v11[0] = i_v909 + (int32_t)(i_v908 / 0x100000000) + (int32_t)(i_v910 / 0x100000000);
+    uint64_t i_v910 = *p_v76;                                    // 0x2b84a
+    x_v11[0] = i_v909 + (int32_t)(i_v908 / 0x100000000) +
+               (int32_t)(i_v910 / 0x100000000);
     v = x_v11;
     uint64_t i_v911 = v[0]; // 0x2b868
-    int32_t i_v912 = rotr64((int64_t)(i_v905 ^ (int32_t)(i_v911 / 0x100000000)), 16); // 0x2b87a
+    int32_t i_v912 = rotr64((int64_t)(i_v905 ^ (int32_t)(i_v911 / 0x100000000)),
+                            16); // 0x2b87a
     int32_t i_v913 = ((i_v912 >> 31) + i_v906) / 0x80000000;
-    int64_t i_v914 = rotr64((int64_t)(i_v913 ^ i_v909), 63); // 0x2b8c6
+    int64_t i_v914 = rotr64((int64_t)(i_v913 ^ i_v909), 63);     // 0x2b8c6
     int32_t i_v915 = (0x100000000 * i_v873 >> 32) / 0x100000000; // 0x2b8e2
-    int32_t i_v916 = (i_v879 >> 31) + i_v915 + (int32_t)(*p_v83 / 0x100000000); // 0x2b8fc
+    int32_t i_v916 =
+        (i_v879 >> 31) + i_v915 + (int32_t)(*p_v83 / 0x100000000);   // 0x2b8fc
     int32_t i_v917 = rotr64((int64_t)((i_v916 ^ i_v889) >> 31), 32); // 0x2b928
     int32_t i_v918 = ((i_v917 >> 31) + i_v899) / 0x80000000;
-    int32_t i_v919 = (0x100000000 * rotr64((int64_t)(i_v918 ^ i_v915), 24) >> 32) / 0x100000000; // 0x2b990
-    int32_t i_v920 = (i_v916 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v919; // 0x2b9aa
+    int32_t i_v919 =
+        (0x100000000 * rotr64((int64_t)(i_v918 ^ i_v915), 24) >> 32) /
+        0x100000000; // 0x2b990
+    int32_t i_v920 =
+        (i_v916 >> 31) + (int32_t)(*p_v88 / 0x100000000) + i_v919;   // 0x2b9aa
     int32_t i_v921 = rotr64((int64_t)((i_v920 ^ i_v917) >> 31), 16); // 0x2b9d6
     int32_t i_v922 = ((i_v921 >> 31) + i_v918) / 0x80000000;
-    int64_t i_v923 = rotr64((int64_t)(i_v922 ^ i_v919), 63); // 0x2ba22
+    int64_t i_v923 = rotr64((int64_t)(i_v922 ^ i_v919), 63);     // 0x2ba22
     int32_t i_v924 = (0x100000000 * i_v882 >> 32) / 0x100000000; // 0x2ba3e
-    int32_t i_v925 = (i_v888 >> 31) + i_v924 + (int32_t)(*p_v94 / 0x100000000); // 0x2ba58
+    int32_t i_v925 =
+        (i_v888 >> 31) + i_v924 + (int32_t)(*p_v94 / 0x100000000);   // 0x2ba58
     int32_t i_v926 = rotr64((int64_t)((i_v925 ^ i_v898) >> 31), 32); // 0x2ba84
     int32_t i_v927 = ((i_v926 >> 31) + i_v872) / 0x80000000;
-    int32_t i_v928 = (0x100000000 * rotr64((int64_t)(i_v927 ^ i_v924), 24) >> 32) / 0x100000000; // 0x2baec
-    int32_t i_v929 = (i_v925 >> 31) + (int32_t)(*p_v99 / 0x100000000) + i_v928; // 0x2bb06
+    int32_t i_v928 =
+        (0x100000000 * rotr64((int64_t)(i_v927 ^ i_v924), 24) >> 32) /
+        0x100000000; // 0x2baec
+    int32_t i_v929 =
+        (i_v925 >> 31) + (int32_t)(*p_v99 / 0x100000000) + i_v928;   // 0x2bb06
     int32_t i_v930 = rotr64((int64_t)((i_v929 ^ i_v926) >> 31), 16); // 0x2bb32
     int32_t i_v931 = ((i_v930 >> 31) + i_v927) / 0x80000000;
-    int64_t i_v932 = rotr64((int64_t)(i_v931 ^ i_v928), 63); // 0x2bb7e
+    int64_t i_v932 = rotr64((int64_t)(i_v931 ^ i_v928), 63);     // 0x2bb7e
     int32_t i_v933 = (0x100000000 * i_v891 >> 32) / 0x100000000; // 0x2bb9a
-    int32_t i_v934 = (i_v897 >> 31) + i_v933 + (int32_t)(*p_v105 / 0x100000000); // 0x2bbb4
+    int32_t i_v934 =
+        (i_v897 >> 31) + i_v933 + (int32_t)(*p_v105 / 0x100000000);  // 0x2bbb4
     int32_t i_v935 = rotr64((int64_t)((i_v934 ^ i_v871) >> 31), 32); // 0x2bbe0
     int32_t i_v936 = ((i_v935 >> 31) + i_v881) / 0x80000000;
-    int32_t i_v937 = (0x100000000 * rotr64((int64_t)(i_v936 ^ i_v933), 24) >> 32) / 0x100000000; // 0x2bc48
-    int32_t i_v938 = (i_v934 >> 31) + (int32_t)(*p_v110 / 0x100000000) + i_v937; // 0x2bc62
-    int32_t i_v939 = (int32_t)rotr64((int64_t)((i_v938 ^ i_v935) >> 31), 16) >> 31;
+    int32_t i_v937 =
+        (0x100000000 * rotr64((int64_t)(i_v936 ^ i_v933), 24) >> 32) /
+        0x100000000; // 0x2bc48
+    int32_t i_v938 =
+        (i_v934 >> 31) + (int32_t)(*p_v110 / 0x100000000) + i_v937; // 0x2bc62
+    int32_t i_v939 =
+        (int32_t)rotr64((int64_t)((i_v938 ^ i_v935) >> 31), 16) >> 31;
     int32_t i_v940 = i_v939 + i_v936 >> 31;
-    int64_t i_v941 = rotr64((int64_t)(i_v940 ^ i_v937), 63); // 0x2bcda
-    uint64_t i_v942 = v[0]; // 0x2bcee
+    int64_t i_v941 = rotr64((int64_t)(i_v940 ^ i_v937), 63);     // 0x2bcda
+    uint64_t i_v942 = v[0];                                      // 0x2bcee
     int32_t i_v943 = (0x100000000 * i_v923 >> 32) / 0x100000000; // 0x2bcf6
-    uint64_t i_v944 = *p_v117; // 0x2bd0c
-    x_v12[0] = (int32_t)(i_v942 / 0x100000000) + i_v943 + (int32_t)(i_v944 / 0x100000000);
+    uint64_t i_v944 = *p_v117;                                   // 0x2bd0c
+    x_v12[0] = (int32_t)(i_v942 / 0x100000000) + i_v943 +
+               (int32_t)(i_v944 / 0x100000000);
     v = x_v12;
     uint64_t i_v945 = v[0]; // 0x2bd2a
-    int32_t i_v946 = (int32_t)rotr64((int64_t)(i_v939 ^ (int32_t)(i_v945 / 0x100000000)), 32) >> 31;
+    int32_t i_v946 =
+        (int32_t)rotr64((int64_t)(i_v939 ^ (int32_t)(i_v945 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v947 = i_v946 + i_v931 >> 31;
-    int64_t i_v948 = rotr64((int64_t)(i_v947 ^ i_v943), 24); // 0x2bd88
-    uint64_t i_v949 = v[0]; // 0x2bd9c
+    int64_t i_v948 = rotr64((int64_t)(i_v947 ^ i_v943), 24);     // 0x2bd88
+    uint64_t i_v949 = v[0];                                      // 0x2bd9c
     int32_t i_v950 = (0x100000000 * i_v948 >> 32) / 0x100000000; // 0x2bda4
-    uint64_t i_v951 = *p_v125; // 0x2bdba
-    x_v13[0] = i_v950 + (int32_t)(i_v949 / 0x100000000) + (int32_t)(i_v951 / 0x100000000);
+    uint64_t i_v951 = *p_v125;                                   // 0x2bdba
+    x_v13[0] = i_v950 + (int32_t)(i_v949 / 0x100000000) +
+               (int32_t)(i_v951 / 0x100000000);
     v = x_v13;
     uint64_t i_v952 = v[0]; // 0x2bdd8
-    int32_t i_v953 = rotr64((int64_t)(i_v946 ^ (int32_t)(i_v952 / 0x100000000)), 16); // 0x2bdea
+    int32_t i_v953 = rotr64((int64_t)(i_v946 ^ (int32_t)(i_v952 / 0x100000000)),
+                            16); // 0x2bdea
     int32_t i_v954 = ((i_v953 >> 31) + i_v947) / 0x80000000;
-    int64_t i_v955 = rotr64((int64_t)(i_v954 ^ i_v950), 63); // 0x2be36
+    int64_t i_v955 = rotr64((int64_t)(i_v954 ^ i_v950), 63);     // 0x2be36
     int32_t i_v956 = (0x100000000 * i_v932 >> 32) / 0x100000000; // 0x2be52
-    int32_t i_v957 = (i_v920 >> 31) + i_v956 + (int32_t)(*p_v131 / 0x100000000); // 0x2be6c
+    int32_t i_v957 =
+        (i_v920 >> 31) + i_v956 + (int32_t)(*p_v131 / 0x100000000);  // 0x2be6c
     int32_t i_v958 = rotr64((int64_t)((i_v957 ^ i_v912) >> 31), 32); // 0x2be98
     int32_t i_v959 = ((i_v958 >> 31) + i_v940) / 0x80000000;
-    int32_t i_v960 = (0x100000000 * rotr64((int64_t)(i_v959 ^ i_v956), 24) >> 32) / 0x100000000; // 0x2bf00
-    int32_t i_v961 = (i_v957 >> 31) + (int32_t)(*p_v136 / 0x100000000) + i_v960; // 0x2bf1a
-    int32_t i_v962 = (int32_t)rotr64((int64_t)((i_v961 ^ i_v958) >> 31), 16) >> 31;
+    int32_t i_v960 =
+        (0x100000000 * rotr64((int64_t)(i_v959 ^ i_v956), 24) >> 32) /
+        0x100000000; // 0x2bf00
+    int32_t i_v961 =
+        (i_v957 >> 31) + (int32_t)(*p_v136 / 0x100000000) + i_v960; // 0x2bf1a
+    int32_t i_v962 =
+        (int32_t)rotr64((int64_t)((i_v961 ^ i_v958) >> 31), 16) >> 31;
     int32_t i_v963 = i_v962 + i_v959 >> 31;
-    int64_t i_v964 = rotr64((int64_t)(i_v963 ^ i_v960), 63); // 0x2bf92
+    int64_t i_v964 = rotr64((int64_t)(i_v963 ^ i_v960), 63);     // 0x2bf92
     int32_t i_v965 = (0x100000000 * i_v941 >> 32) / 0x100000000; // 0x2bfae
-    int32_t i_v966 = (i_v929 >> 31) + i_v965 + (int32_t)(*p_v142 / 0x100000000); // 0x2bfc8
+    int32_t i_v966 =
+        (i_v929 >> 31) + i_v965 + (int32_t)(*p_v142 / 0x100000000);  // 0x2bfc8
     int32_t i_v967 = rotr64((int64_t)((i_v966 ^ i_v921) >> 31), 32); // 0x2bff4
     int32_t i_v968 = ((i_v967 >> 31) + i_v913) / 0x80000000;
-    int32_t i_v969 = (0x100000000 * rotr64((int64_t)(i_v968 ^ i_v965), 24) >> 32) / 0x100000000; // 0x2c05c
-    int32_t i_v970 = (i_v966 >> 31) + (int32_t)(*p_v147 / 0x100000000) + i_v969; // 0x2c076
+    int32_t i_v969 =
+        (0x100000000 * rotr64((int64_t)(i_v968 ^ i_v965), 24) >> 32) /
+        0x100000000; // 0x2c05c
+    int32_t i_v970 =
+        (i_v966 >> 31) + (int32_t)(*p_v147 / 0x100000000) + i_v969;  // 0x2c076
     int32_t i_v971 = rotr64((int64_t)((i_v970 ^ i_v967) >> 31), 16); // 0x2c0a2
     int32_t i_v972 = ((i_v971 >> 31) + i_v968) / 0x80000000;
-    int64_t i_v973 = rotr64((int64_t)(i_v972 ^ i_v969), 63); // 0x2c0ee
+    int64_t i_v973 = rotr64((int64_t)(i_v972 ^ i_v969), 63);     // 0x2c0ee
     int32_t i_v974 = (0x100000000 * i_v914 >> 32) / 0x100000000; // 0x2c10a
-    int32_t i_v975 = (i_v938 >> 31) + i_v974 + (int32_t)(*p_v153 / 0x100000000); // 0x2c124
+    int32_t i_v975 =
+        (i_v938 >> 31) + i_v974 + (int32_t)(*p_v153 / 0x100000000);  // 0x2c124
     int32_t i_v976 = rotr64((int64_t)((i_v975 ^ i_v930) >> 31), 32); // 0x2c150
     int32_t i_v977 = ((i_v976 >> 31) + i_v922) / 0x80000000;
-    int32_t i_v978 = (0x100000000 * rotr64((int64_t)(i_v977 ^ i_v974), 24) >> 32) / 0x100000000; // 0x2c1b8
-    int32_t i_v979 = (i_v975 >> 31) + (int32_t)(*p_v158 / 0x100000000) + i_v978; // 0x2c1d2
+    int32_t i_v978 =
+        (0x100000000 * rotr64((int64_t)(i_v977 ^ i_v974), 24) >> 32) /
+        0x100000000; // 0x2c1b8
+    int32_t i_v979 =
+        (i_v975 >> 31) + (int32_t)(*p_v158 / 0x100000000) + i_v978;  // 0x2c1d2
     int32_t i_v980 = rotr64((int64_t)((i_v979 ^ i_v976) >> 31), 16); // 0x2c1fe
     int32_t i_v981 = ((i_v980 >> 31) + i_v977) / 0x80000000;
-    int64_t i_v982 = rotr64((int64_t)(i_v981 ^ i_v978), 63); // 0x2c24a
-    uint64_t i_v983 = v[0]; // 0x2c25e
+    int64_t i_v982 = rotr64((int64_t)(i_v981 ^ i_v978), 63);     // 0x2c24a
+    uint64_t i_v983 = v[0];                                      // 0x2c25e
     int32_t i_v984 = (0x100000000 * i_v982 >> 32) / 0x100000000; // 0x2c266
-    uint64_t i_v985 = *p_v153; // 0x2c27c
-    x_v14[0] = i_v984 + (int32_t)(i_v983 / 0x100000000) + (int32_t)(i_v985 / 0x100000000);
+    uint64_t i_v985 = *p_v153;                                   // 0x2c27c
+    x_v14[0] = i_v984 + (int32_t)(i_v983 / 0x100000000) +
+               (int32_t)(i_v985 / 0x100000000);
     v = x_v14;
     uint64_t i_v986 = v[0]; // 0x2c29a
-    int32_t i_v987 = (int32_t)rotr64((int64_t)(i_v962 ^ (int32_t)(i_v986 / 0x100000000)), 32) >> 31;
+    int32_t i_v987 =
+        (int32_t)rotr64((int64_t)(i_v962 ^ (int32_t)(i_v986 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v988 = i_v987 + i_v972 >> 31;
-    int64_t i_v989 = rotr64((int64_t)(i_v988 ^ i_v984), 24); // 0x2c2f8
-    uint64_t i_v990 = v[0]; // 0x2c30c
+    int64_t i_v989 = rotr64((int64_t)(i_v988 ^ i_v984), 24);     // 0x2c2f8
+    uint64_t i_v990 = v[0];                                      // 0x2c30c
     int32_t i_v991 = (0x100000000 * i_v989 >> 32) / 0x100000000; // 0x2c314
-    uint64_t i_v992 = *p_v131; // 0x2c32a
-    x_v15[0] = i_v991 + (int32_t)(i_v990 / 0x100000000) + (int32_t)(i_v992 / 0x100000000);
+    uint64_t i_v992 = *p_v131;                                   // 0x2c32a
+    x_v15[0] = i_v991 + (int32_t)(i_v990 / 0x100000000) +
+               (int32_t)(i_v992 / 0x100000000);
     v = x_v15;
     uint64_t i_v993 = v[0]; // 0x2c348
-    int32_t i_v994 = rotr64((int64_t)(i_v987 ^ (int32_t)(i_v993 / 0x100000000)), 16); // 0x2c35a
+    int32_t i_v994 = rotr64((int64_t)(i_v987 ^ (int32_t)(i_v993 / 0x100000000)),
+                            16); // 0x2c35a
     int32_t i_v995 = ((i_v994 >> 31) + i_v988) / 0x80000000;
-    int64_t i_v996 = rotr64((int64_t)(i_v995 ^ i_v991), 63); // 0x2c3a6
+    int64_t i_v996 = rotr64((int64_t)(i_v995 ^ i_v991), 63);     // 0x2c3a6
     int32_t i_v997 = (0x100000000 * i_v955 >> 32) / 0x100000000; // 0x2c3c2
-    int32_t i_v998 = (i_v961 >> 31) + i_v997 + (int32_t)(*p_v94 / 0x100000000); // 0x2c3dc
+    int32_t i_v998 =
+        (i_v961 >> 31) + i_v997 + (int32_t)(*p_v94 / 0x100000000);   // 0x2c3dc
     int32_t i_v999 = rotr64((int64_t)((i_v998 ^ i_v971) >> 31), 32); // 0x2c408
     int32_t i_v1000 = ((i_v999 >> 31) + i_v981) / 0x80000000;
-    int32_t i_v1001 = (0x100000000 * rotr64((int64_t)(i_v1000 ^ i_v997), 24) >> 32) / 0x100000000; // 0x2c470
-    int32_t i_v1002 = (i_v998 >> 31) + (int32_t)(*p_v117 / 0x100000000) + i_v1001; // 0x2c48a
-    int32_t i_v1003 = rotr64((int64_t)((i_v1002 ^ i_v999) >> 31), 16); // 0x2c4b6
+    int32_t i_v1001 =
+        (0x100000000 * rotr64((int64_t)(i_v1000 ^ i_v997), 24) >> 32) /
+        0x100000000; // 0x2c470
+    int32_t i_v1002 =
+        (i_v998 >> 31) + (int32_t)(*p_v117 / 0x100000000) + i_v1001; // 0x2c48a
+    int32_t i_v1003 =
+        rotr64((int64_t)((i_v1002 ^ i_v999) >> 31), 16); // 0x2c4b6
     int32_t i_v1004 = ((i_v1003 >> 31) + i_v1000) / 0x80000000;
-    int64_t i_v1005 = rotr64((int64_t)(i_v1004 ^ i_v1001), 63); // 0x2c502
+    int64_t i_v1005 = rotr64((int64_t)(i_v1004 ^ i_v1001), 63);   // 0x2c502
     int32_t i_v1006 = (0x100000000 * i_v964 >> 32) / 0x100000000; // 0x2c51e
-    int32_t i_v1007 = (i_v970 >> 31) + i_v1006 + (int32_t)(*p_v125 / 0x100000000); // 0x2c538
-    int32_t i_v1008 = rotr64((int64_t)((i_v1007 ^ i_v980) >> 31), 32); // 0x2c564
+    int32_t i_v1007 =
+        (i_v970 >> 31) + i_v1006 + (int32_t)(*p_v125 / 0x100000000); // 0x2c538
+    int32_t i_v1008 =
+        rotr64((int64_t)((i_v1007 ^ i_v980) >> 31), 32); // 0x2c564
     int32_t i_v1009 = ((i_v1008 >> 31) + i_v954) / 0x80000000;
-    int32_t i_v1010 = (0x100000000 * rotr64((int64_t)(i_v1009 ^ i_v1006), 24) >> 32) / 0x100000000; // 0x2c5cc
-    int32_t i_v1011 = (i_v1007 >> 31) + (int32_t)(*p_v158 / 0x100000000) + i_v1010; // 0x2c5e6
-    int32_t i_v1012 = rotr64((int64_t)((i_v1011 ^ i_v1008) >> 31), 16); // 0x2c612
+    int32_t i_v1010 =
+        (0x100000000 * rotr64((int64_t)(i_v1009 ^ i_v1006), 24) >> 32) /
+        0x100000000; // 0x2c5cc
+    int32_t i_v1011 =
+        (i_v1007 >> 31) + (int32_t)(*p_v158 / 0x100000000) + i_v1010; // 0x2c5e6
+    int32_t i_v1012 =
+        rotr64((int64_t)((i_v1011 ^ i_v1008) >> 31), 16); // 0x2c612
     int32_t i_v1013 = ((i_v1012 >> 31) + i_v1009) / 0x80000000;
-    int64_t i_v1014 = rotr64((int64_t)(i_v1013 ^ i_v1010), 63); // 0x2c65e
+    int64_t i_v1014 = rotr64((int64_t)(i_v1013 ^ i_v1010), 63);   // 0x2c65e
     int32_t i_v1015 = (0x100000000 * i_v973 >> 32) / 0x100000000; // 0x2c67a
-    int32_t i_v1016 = (i_v979 >> 31) + i_v1015 + (int32_t)(*p_v147 / 0x100000000); // 0x2c694
-    int32_t i_v1017 = rotr64((int64_t)((i_v1016 ^ i_v953) >> 31), 32); // 0x2c6c0
+    int32_t i_v1016 =
+        (i_v979 >> 31) + i_v1015 + (int32_t)(*p_v147 / 0x100000000); // 0x2c694
+    int32_t i_v1017 =
+        rotr64((int64_t)((i_v1016 ^ i_v953) >> 31), 32); // 0x2c6c0
     int32_t i_v1018 = ((i_v1017 >> 31) + i_v963) / 0x80000000;
-    int32_t i_v1019 = (0x100000000 * rotr64((int64_t)(i_v1018 ^ i_v1015), 24) >> 32) / 0x100000000; // 0x2c728
-    int32_t i_v1020 = (i_v1016 >> 31) + (int32_t)(*p_v105 / 0x100000000) + i_v1019; // 0x2c742
-    int32_t i_v1021 = (int32_t)rotr64((int64_t)((i_v1020 ^ i_v1017) >> 31), 16) >> 31;
+    int32_t i_v1019 =
+        (0x100000000 * rotr64((int64_t)(i_v1018 ^ i_v1015), 24) >> 32) /
+        0x100000000; // 0x2c728
+    int32_t i_v1020 =
+        (i_v1016 >> 31) + (int32_t)(*p_v105 / 0x100000000) + i_v1019; // 0x2c742
+    int32_t i_v1021 =
+        (int32_t)rotr64((int64_t)((i_v1020 ^ i_v1017) >> 31), 16) >> 31;
     int32_t i_v1022 = i_v1021 + i_v1018 >> 31;
-    int64_t i_v1023 = rotr64((int64_t)(i_v1022 ^ i_v1019), 63); // 0x2c7ba
-    uint64_t i_v1024 = v[0]; // 0x2c7ce
+    int64_t i_v1023 = rotr64((int64_t)(i_v1022 ^ i_v1019), 63);    // 0x2c7ba
+    uint64_t i_v1024 = v[0];                                       // 0x2c7ce
     int32_t i_v1025 = (0x100000000 * i_v1005 >> 32) / 0x100000000; // 0x2c7d6
-    uint64_t i_v1026 = *p_v76; // 0x2c7ec
-    x_v16[0] = (int32_t)(i_v1024 / 0x100000000) + i_v1025 + (int32_t)(i_v1026 / 0x100000000);
+    uint64_t i_v1026 = *p_v76;                                     // 0x2c7ec
+    x_v16[0] = (int32_t)(i_v1024 / 0x100000000) + i_v1025 +
+               (int32_t)(i_v1026 / 0x100000000);
     v = x_v16;
     uint64_t i_v1027 = v[0]; // 0x2c80a
-    int32_t i_v1028 = (int32_t)rotr64((int64_t)(i_v1021 ^ (int32_t)(i_v1027 / 0x100000000)), 32) >> 31;
+    int32_t i_v1028 =
+        (int32_t)rotr64((int64_t)(i_v1021 ^ (int32_t)(i_v1027 / 0x100000000)),
+                        32) >>
+        31;
     int32_t i_v1029 = i_v1028 + i_v1013 >> 31;
-    int64_t i_v1030 = rotr64((int64_t)(i_v1029 ^ i_v1025), 24); // 0x2c868
-    uint64_t i_v1031 = v[0]; // 0x2c87c
+    int64_t i_v1030 = rotr64((int64_t)(i_v1029 ^ i_v1025), 24);    // 0x2c868
+    uint64_t i_v1031 = v[0];                                       // 0x2c87c
     int32_t i_v1032 = (0x100000000 * i_v1030 >> 32) / 0x100000000; // 0x2c884
-    uint64_t i_v1033 = *p_v142; // 0x2c89a
-    x_v17[0] = i_v1032 + (int32_t)(i_v1031 / 0x100000000) + (int32_t)(i_v1033 / 0x100000000);
+    uint64_t i_v1033 = *p_v142;                                    // 0x2c89a
+    x_v17[0] = i_v1032 + (int32_t)(i_v1031 / 0x100000000) +
+               (int32_t)(i_v1033 / 0x100000000);
     v = x_v17;
     uint64_t i_v1034 = v[0]; // 0x2c8b8
-    rotr64((int64_t)(i_v1029 + (int32_t)((0x100000000 * rotr64((int64_t)(i_v1028 ^ (int32_t)(i_v1034 / 0x100000000)), 16) >> 32) / 0x100000000) >> 31 ^ i_v1032), 63);
+    rotr64(
+        (int64_t)(i_v1029 +
+                          (int32_t)((0x100000000 *
+                                         rotr64(
+                                             (int64_t)(i_v1028 ^
+                                                       (int32_t)(i_v1034 /
+                                                                 0x100000000)),
+                                             16) >>
+                                     32) /
+                                    0x100000000) >>
+                      31 ^
+                  i_v1032),
+        63);
     int32_t i_v1035 = (0x100000000 * i_v1014 >> 32) / 0x100000000; // 0x2c932
-    int32_t i_v1036 = (i_v1002 >> 31) + i_v1035 + (int32_t)(*p_v68 / 0x100000000); // 0x2c94c
-    int32_t i_v1037 = rotr64((int64_t)((i_v1036 ^ i_v994) >> 31), 32); // 0x2c978
+    int32_t i_v1036 =
+        (i_v1002 >> 31) + i_v1035 + (int32_t)(*p_v68 / 0x100000000); // 0x2c94c
+    int32_t i_v1037 =
+        rotr64((int64_t)((i_v1036 ^ i_v994) >> 31), 32); // 0x2c978
     int32_t i_v1038 = ((i_v1037 >> 31) + i_v1022) / 0x80000000;
-    int32_t i_v1039 = (0x100000000 * rotr64((int64_t)(i_v1038 ^ i_v1035), 24) >> 32) / 0x100000000; // 0x2c9e0
+    int32_t i_v1039 =
+        (0x100000000 * rotr64((int64_t)(i_v1038 ^ i_v1035), 24) >> 32) /
+        0x100000000;           // 0x2c9e0
     uint64_t i_v1040 = *p_v83; // 0x2c9f6
-    rotr64((int64_t)(i_v1038 + (int32_t)((0x100000000 * rotr64((int64_t)(((i_v1036 >> 31) + (int32_t)(i_v1040 / 0x100000000) + i_v1039 ^ i_v1037) / 0x80000000), 16) >> 32) / 0x100000000) >> 31 ^ i_v1039), 63);
+    rotr64(
+        (int64_t)(i_v1038 +
+                          (int32_t)((0x100000000 *
+                                         rotr64(
+                                             (int64_t)(((i_v1036 >> 31) +
+                                                            (int32_t)(i_v1040 /
+                                                                      0x100000000) +
+                                                            i_v1039 ^
+                                                        i_v1037) /
+                                                       0x80000000),
+                                             16) >>
+                                     32) /
+                                    0x100000000) >>
+                      31 ^
+                  i_v1039),
+        63);
     int32_t i_v1041 = (0x100000000 * i_v1023 >> 32) / 0x100000000; // 0x2ca8e
-    int32_t i_v1042 = (i_v1011 >> 31) + i_v1041 + (int32_t)(*p_v136 / 0x100000000); // 0x2caa8
-    int32_t i_v1043 = rotr64((int64_t)((i_v1042 ^ i_v1003) >> 31), 32); // 0x2cad4
+    int32_t i_v1042 =
+        (i_v1011 >> 31) + i_v1041 + (int32_t)(*p_v136 / 0x100000000); // 0x2caa8
+    int32_t i_v1043 =
+        rotr64((int64_t)((i_v1042 ^ i_v1003) >> 31), 32); // 0x2cad4
     int32_t i_v1044 = ((i_v1043 >> 31) + i_v995) / 0x80000000;
-    int32_t i_v1045 = (0x100000000 * rotr64((int64_t)(i_v1044 ^ i_v1041), 24) >> 32) / 0x100000000; // 0x2cb3c
+    int32_t i_v1045 =
+        (0x100000000 * rotr64((int64_t)(i_v1044 ^ i_v1041), 24) >> 32) /
+        0x100000000;            // 0x2cb3c
     uint64_t i_v1046 = *p_v110; // 0x2cb52
-    rotr64((int64_t)(i_v1044 + (int32_t)((0x100000000 * rotr64((int64_t)(((i_v1042 >> 31) + (int32_t)(i_v1046 / 0x100000000) + i_v1045 ^ i_v1043) / 0x80000000), 16) >> 32) / 0x100000000) >> 31 ^ i_v1045), 63);
+    rotr64(
+        (int64_t)(i_v1044 +
+                          (int32_t)((0x100000000 *
+                                         rotr64(
+                                             (int64_t)(((i_v1042 >> 31) +
+                                                            (int32_t)(i_v1046 /
+                                                                      0x100000000) +
+                                                            i_v1045 ^
+                                                        i_v1043) /
+                                                       0x80000000),
+                                             16) >>
+                                     32) /
+                                    0x100000000) >>
+                      31 ^
+                  i_v1045),
+        63);
     int32_t i_v1047 = (0x100000000 * i_v996 >> 32) / 0x100000000; // 0x2cbea
-    int32_t i_v1048 = (i_v1020 >> 31) + i_v1047 + (int32_t)(*p_v99 / 0x100000000); // 0x2cc04
-    int32_t i_v1049 = rotr64((int64_t)((i_v1048 ^ i_v1012) >> 31), 32); // 0x2cc30
+    int32_t i_v1048 =
+        (i_v1020 >> 31) + i_v1047 + (int32_t)(*p_v99 / 0x100000000); // 0x2cc04
+    int32_t i_v1049 =
+        rotr64((int64_t)((i_v1048 ^ i_v1012) >> 31), 32); // 0x2cc30
     int32_t i_v1050 = ((i_v1049 >> 31) + i_v1004) / 0x80000000;
-    int32_t i_v1051 = (0x100000000 * rotr64((int64_t)(i_v1050 ^ i_v1047), 24) >> 32) / 0x100000000; // 0x2cc98
+    int32_t i_v1051 =
+        (0x100000000 * rotr64((int64_t)(i_v1050 ^ i_v1047), 24) >> 32) /
+        0x100000000;           // 0x2cc98
     uint64_t i_v1052 = *p_v88; // 0x2ccae
-    rotr64((int64_t)(i_v1050 + (int32_t)((0x100000000 * rotr64((int64_t)(((i_v1048 >> 31) + (int32_t)(i_v1052 / 0x100000000) + i_v1051 ^ i_v1049) / 0x80000000), 16) >> 32) / 0x100000000) >> 31 ^ i_v1051), 63);
+    rotr64(
+        (int64_t)(i_v1050 +
+                          (int32_t)((0x100000000 *
+                                         rotr64(
+                                             (int64_t)(((i_v1048 >> 31) +
+                                                            (int32_t)(i_v1052 /
+                                                                      0x100000000) +
+                                                            i_v1051 ^
+                                                        i_v1049) /
+                                                       0x80000000),
+                                             16) >>
+                                     32) /
+                                    0x100000000) >>
+                      31 ^
+                  i_v1051),
+        63);
     for (int32_t i_v1053 = 0; i_v1053 < 8; i_v1053++) {
-        int32_t i_v1054 = 8 * i_v1053; // 0x2cd4a
+        int32_t i_v1054 = 8 * i_v1053;     // 0x2cd4a
         int32_t i_v1055 = i_v1054 + i_v55; // 0x2cd4c
         int32_t i_v1056 = i_v1054 + i_v56;
         int64_t i_v1057 = *(int64_t *)(i_v1056 + 64); // 0x2cd78
@@ -13593,18 +15716,18 @@ int32_t blake2b_compress(int32_t * S, char * block) {
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x2cdb4 - 0x2ceb2
 // Line range:    285 - 313
-int32_t blake2b_update(int32_t * S, char * in, int64_t inlen) {
+int32_t blake2b_update(int32_t *S, char *in, int64_t inlen) {
     uint64_t i_v1 = 0x100000000 * inlen >> 32; // 0x2cdbe
-    uint64_t i_v2 = i_v1 / 0x100000000; // 0x2cea0
+    uint64_t i_v2 = i_v1 / 0x100000000;        // 0x2cea0
     if ((int32_t)(i_v2 || i_v1) == 0) {
         // 0x2cea8
         return 0;
     }
     int32_t i_v3 = (int32_t)S;
-    int32_t * p_v4 = (int32_t *)(i_v3 + 352); // 0x2cdc6
+    int32_t *p_v4 = (int32_t *)(i_v3 + 352); // 0x2cdc6
     int32_t i_v5 = i_v3 + 96;
     int32_t i_v6 = *p_v4; // 0x2cdb4
     int32_t i_v7 = i_v1;
@@ -13645,7 +15768,7 @@ int32_t blake2b_update(int32_t * S, char * in, int64_t inlen) {
     while ((int32_t)(i_v16 || i_v12) != 0) {
         // 0x2cdc4
         i_v7 = i_v12;
-        char * p_v17 = (char *)i_v11;
+        char *p_v17 = (char *)i_v11;
         i_v8 = (int32_t)i_v16;
         if (i_v7 == 0) {
             __asm_it();
@@ -13681,23 +15804,24 @@ int32_t blake2b_update(int32_t * S, char * in, int64_t inlen) {
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x2ceb4 - 0x2cfd8
 // Line range:    316 - 344
-int32_t blake2b_final(int32_t * S, char * out, unsigned char outlen) {
+int32_t blake2b_final(int32_t *S, char *out, unsigned char outlen) {
     char buffer[64]; // bp-84, 0x2ceb4
     // 0x2ceb4
     memset((int32_t *)&buffer, 0, 64);
-    if (out == NULL || outlen == 0 || outlen != 64 && outlen >= 64 || blake2b_is_lastblock(S) != 0) {
+    if (out == NULL || outlen == 0 || outlen != 64 && outlen >= 64 ||
+        blake2b_is_lastblock(S) != 0) {
         // 0x2cfd0
         return -1;
     }
     int32_t i_v1 = (int32_t)S;
-    int32_t * p_v2 = (int32_t *)(i_v1 + 352); // 0x2cefc
-    uint32_t i_v3 = *p_v2; // 0x2cefc
-    char * p_v4; // 0x2ceb4
-    int32_t i_v5; // 0x2ceb4
-    int64_t i_v6; // 0x2ceb4
+    int32_t *p_v2 = (int32_t *)(i_v1 + 352); // 0x2cefc
+    uint32_t i_v3 = *p_v2;                   // 0x2cefc
+    char *p_v4;                              // 0x2ceb4
+    int32_t i_v5;                            // 0x2ceb4
+    int64_t i_v6;                            // 0x2ceb4
     if (i_v3 == 128 || i_v3 < 128) {
         int32_t i_v7 = i_v1 + 96; // 0x2cf64
         p_v4 = (char *)i_v7;
@@ -13707,7 +15831,7 @@ int32_t blake2b_final(int32_t * S, char * out, unsigned char outlen) {
         // 0x2cf04
         blake2b_increment_counter(S, 0);
         int32_t i_v8 = i_v1 + 96;
-        char * p_v9 = (char *)i_v8;
+        char *p_v9 = (char *)i_v8;
         blake2b_compress(S, p_v9);
         int32_t i_v10 = *p_v2 - 128; // 0x2cf24
         *p_v2 = i_v10;
@@ -13733,10 +15857,11 @@ int32_t blake2b_final(int32_t * S, char * out, unsigned char outlen) {
     return 0;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/blake2b.c
 // Address range: 0x2cfd8 - 0x2d0d4
 // Line range:    347 - 374
-int32_t blake2b(char * out, int32_t * in, int32_t * key, unsigned char outlen, int64_t inlen, char keylen) {
+int32_t blake2b(char *out, int32_t *in, int32_t *key, unsigned char outlen,
+                int64_t inlen, char keylen) {
     // 0x2cfd8
     char i_v1; // 0x2cfd8
     unsigned char i_v2 = i_v1;
@@ -13755,7 +15880,8 @@ int32_t blake2b(char * out, int32_t * in, int32_t * key, unsigned char outlen, i
         }
     }
     // 0x2d020
-    if (outlen == 0 || key == NULL && i_v2 != 0 || outlen != 64 && outlen >= 64 || i_v2 != 64 && i_v2 >= 64) {
+    if (outlen == 0 || key == NULL && i_v2 != 0 ||
+        outlen != 64 && outlen >= 64 || i_v2 != 64 && i_v2 >= 64) {
         // 0x2d0ca
         return -1;
     }
@@ -13799,16 +15925,17 @@ int32_t function_2d0d4(void) {
 int16_t crc_itu_t_byte(int16_t crc, unsigned char data) {
     uint32_t i_v1 = (int32_t)crc;
     int32_t i_v2 = __asm_sxth(256 * i_v1 & 0xffff00); // 0x2d0ec
-    uint16_t i_v3 = *(int16_t *)(2 * (i_v1 / 256 % 256 ^ (int32_t)data) + (int32_t)&crc_itu_t_table); // 0x2d104
+    uint16_t i_v3 = *(int16_t *)(2 * (i_v1 / 256 % 256 ^ (int32_t)data) +
+                                 (int32_t)&crc_itu_t_table); // 0x2d104
     return __asm_sxth(__asm_sxth((int32_t)i_v3) ^ i_v2);
 }
 
 // From module:   /home/felix/work/share/project/zcash/chip-test/crypto/crc-v1.c
 // Address range: 0x2d11c - 0x2d158
 // Line range:    45 - 53
-int16_t CRC16_v1(char * buffer, int32_t len) {
-    int16_t i_v1 = -1; // 0x2d14c
-    char * p_v2 = buffer; // 0x2d14c
+int16_t CRC16_v1(char *buffer, int32_t len) {
+    int16_t i_v1 = -1;   // 0x2d14c
+    char *p_v2 = buffer; // 0x2d14c
     if (len == 0) {
         // 0x2d14e
         return -1;
@@ -13830,25 +15957,25 @@ int16_t CRC16_v1(char * buffer, int32_t len) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/crypto/crc-v1.c
 // Address range: 0x2d158 - 0x2d278
 // Line range:    91 - 149
-char CRC5_v1(char * ptr, unsigned char len) {
-    char crcin[5]; // bp-20, 0x2d158
+char CRC5_v1(char *ptr, unsigned char len) {
+    char crcin[5];  // bp-20, 0x2d158
     char crcout[5]; // bp-28, 0x2d158
-    char x_v1[5]; // 0x2d1c2
-    char x_v2[5]; // 0x2d20c
+    char x_v1[5];   // 0x2d1c2
+    char x_v2[5];   // 0x2d20c
     // 0x2d158
     crcin = {1, 0, 0, 0, 0};
     crcout = {1, 0, 0, 0, 0};
     char i_v3 = 16; // 0x2d21e
-    char i_v4; // 0x2d158
+    char i_v4;      // 0x2d158
     if (len != 0) {
-        char i_v5 = 0; // 0x2d214
-        char i_v6 = 0; // 0x2d158
+        char i_v5 = 0;    // 0x2d214
+        char i_v6 = 0;    // 0x2d158
         char i_v7 = -128; // 0x2d158
         x_v1[0] = 1 ^ (char)((*ptr & i_v7) != 0);
         crcout = x_v1;
         char i_v8 = i_v7 / 2; // 0x2d1f0
         char i_v9 = i_v6 + 1; // 0x2d1f0
-        char * p_v10 = ptr; // 0x2d1f0
+        char *p_v10 = ptr;    // 0x2d1f0
         if (i_v6 == 7) {
             // 0x2d1f2
             i_v8 = -128;
@@ -13862,7 +15989,7 @@ char CRC5_v1(char * ptr, unsigned char len) {
         i_v6 = i_v9;
         i_v7 = i_v8;
         while (i_v5 < len) {
-            char * p_v11 = p_v10;
+            char *p_v11 = p_v10;
             x_v1[0] = 1 ^ (char)((*p_v11 & i_v7) != 0);
             crcout = x_v1;
             i_v8 = i_v7 / 2;
@@ -13895,7 +16022,7 @@ char CRC5_v1(char * ptr, unsigned char len) {
 // Line range:    85 - 129
 // Used cryptographic patterns:
 //  - SHA256_Hash_constant_words_K__0x428a2f98_ (32-bit, little endian)
-void sha256_transf(int32_t * ctx, char * message, uint32_t block_nb) {
+void sha256_transf(int32_t *ctx, char *message, uint32_t block_nb) {
     int32_t w[64]; // bp-284, 0x2d278
     int32_t wv[8]; // bp-316, 0x2d278
     int32_t i_v1 = (int32_t)message;
@@ -13909,15 +16036,17 @@ void sha256_transf(int32_t * ctx, char * message, uint32_t block_nb) {
     int32_t i_v4 = (int32_t)&wv;
     int32_t i_v5; // 0x2d278
     while (true) {
-      lab_0x2d296:;
+    lab_0x2d296:;
         int32_t i_v6 = 0; // 0x2d314
         while (true) {
-            int32_t i_v7 = 4 * i_v6; // 0x2d2b6
-            unsigned char i_v8 = *(char *)((i_v7 | 3) + i_v1); // 0x2d2c0
-            unsigned char i_v9 = *(char *)((i_v7 | 2) + i_v1); // 0x2d2d2
+            int32_t i_v7 = 4 * i_v6;                            // 0x2d2b6
+            unsigned char i_v8 = *(char *)((i_v7 | 3) + i_v1);  // 0x2d2c0
+            unsigned char i_v9 = *(char *)((i_v7 | 2) + i_v1);  // 0x2d2d2
             unsigned char i_v10 = *(char *)((i_v7 | 1) + i_v1); // 0x2d2e8
-            unsigned char i_v11 = *(char *)(i_v7 + i_v1); // 0x2d2fc
-            *(int32_t *)(i_v7 + i_v3) = 256 * (int32_t)i_v9 | (int32_t)i_v8 | 0x10000 * (int32_t)i_v10 | 0x1000000 * (int32_t)i_v11;
+            unsigned char i_v11 = *(char *)(i_v7 + i_v1);       // 0x2d2fc
+            *(int32_t *)(i_v7 + i_v3) = 256 * (int32_t)i_v9 | (int32_t)i_v8 |
+                                        0x10000 * (int32_t)i_v10 |
+                                        0x1000000 * (int32_t)i_v11;
             i_v6++;
             i_v5 = 16;
             if (i_v6 >= 16) {
@@ -13925,7 +16054,7 @@ void sha256_transf(int32_t * ctx, char * message, uint32_t block_nb) {
             }
         }
         // 0x2d5ac
-        int32_t i_v12; // 0x2d278
+        int32_t i_v12;             // 0x2d278
         int32_t i_v13 = i_v12 + 1; // 0x2d5b0
         if (i_v13 >= block_nb) {
             // break -> 0x2d5c4
@@ -13933,13 +16062,17 @@ void sha256_transf(int32_t * ctx, char * message, uint32_t block_nb) {
         }
         goto lab_0x2d296;
     }
-  lab_0x2d32a:;
+lab_0x2d32a:;
     int32_t i_v14 = 4 * i_v5 + i_v3;
     uint32_t i_v15 = *(int32_t *)(i_v14 - 8); // 0x2d334
     int32_t i_v16 = *(int32_t *)(i_v14 - 28); // 0x2d36c
     uint32_t i_v17 = *(int32_t *)(i_v14 - 60);
     int32_t i_v18 = *(int32_t *)(i_v14 - 64); // 0x2d3be
-    *(int32_t *)i_v14 = ((i_v15 / 0x80000 | 0x2000 * i_v15) ^ i_v15 / 1024 ^ (i_v15 / 0x20000 | 0x8000 * i_v15)) + i_v16 + i_v18 + ((i_v17 / 128 | 0x2000000 * i_v17) ^ (i_v17 / 0x40000 | 0x4000 * i_v17) ^ i_v17 / 8);
+    *(int32_t *)i_v14 = ((i_v15 / 0x80000 | 0x2000 * i_v15) ^ i_v15 / 1024 ^
+                         (i_v15 / 0x20000 | 0x8000 * i_v15)) +
+                        i_v16 + i_v18 +
+                        ((i_v17 / 128 | 0x2000000 * i_v17) ^
+                         (i_v17 / 0x40000 | 0x4000 * i_v17) ^ i_v17 / 8);
     int32_t i_v19 = i_v5 + 1; // 0x2d3d4
     i_v5 = i_v19;
     if (i_v19 < 64) {
@@ -13953,7 +16086,7 @@ void sha256_transf(int32_t * ctx, char * message, uint32_t block_nb) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha2.c
 // Address range: 0x2d5d4 - 0x2d60c
 // Line range:    131 - 138
-void sha256(char * message, int32_t len, char * digest) {
+void sha256(char *message, int32_t len, char *digest) {
     // 0x2d5d4
     int32_t ctx; // bp-176, 0x2d5d4
     sha256_init(&ctx);
@@ -13967,7 +16100,7 @@ void sha256(char * message, int32_t len, char * digest) {
 // Line range:    140 - 149
 // Used cryptographic patterns:
 //  - SHA256 (32-bit, little endian)
-void sha256_init(int32_t * ctx) {
+void sha256_init(int32_t *ctx) {
     int32_t i_v1 = (int32_t)ctx;
     int32_t i_v2; // 0x2d624
     for (int32_t i_v3 = 0; i_v3 < 8; i_v3++) {
@@ -13984,12 +16117,12 @@ void sha256_init(int32_t * ctx) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha2.c
 // Address range: 0x2d658 - 0x2d710
 // Line range:    151 - 183
-void sha256_update(int32_t * ctx, char * message, uint32_t len) {
+void sha256_update(int32_t *ctx, char *message, uint32_t len) {
     int32_t i_v1 = (int32_t)ctx;
-    int32_t * p_v2 = (int32_t *)(i_v1 + 4); // 0x2d666
-    int32_t i_v3 = *p_v2; // 0x2d666
-    uint32_t i_v4 = 64 - i_v3; // 0x2d668
-    int32_t i_v5 = i_v3; // 0x2d674
+    int32_t *p_v2 = (int32_t *)(i_v1 + 4); // 0x2d666
+    int32_t i_v3 = *p_v2;                  // 0x2d666
+    uint32_t i_v4 = 64 - i_v3;             // 0x2d668
+    int32_t i_v5 = i_v3;                   // 0x2d674
     if (i_v4 <= len) {
         __asm_it();
         i_v5 = *p_v2;
@@ -13999,12 +16132,14 @@ void sha256_update(int32_t * ctx, char * message, uint32_t len) {
     memcpy((int32_t *)(i_v5 + i_v7), (int32_t *)message, i_v6);
     uint32_t i_v8 = *p_v2 + len; // 0x2d694
     if (i_v8 >= 63 == (i_v8 != 63)) {
-        uint32_t i_v9 = len - i_v6; // 0x2d6ac
+        uint32_t i_v9 = len - i_v6;              // 0x2d6ac
         int32_t i_v10 = i_v6 + (int32_t)message; // 0x2d6ba
         sha256_transf(ctx, (char *)i_v7, 1);
         sha256_transf(ctx, (char *)i_v10, i_v9 / 64);
         uint32_t i_v11 = i_v9 % 64; // 0x2d6d8
-        int32_t * p_v12 = memcpy((int32_t *)i_v7, (int32_t *)((i_v9 & -64) + i_v10), i_v11); // 0x2d6f0
+        int32_t *p_v12 =
+            memcpy((int32_t *)i_v7, (int32_t *)((i_v9 & -64) + i_v10),
+                   i_v11); // 0x2d6f0
         *p_v2 = i_v11;
         *ctx = (i_v9 + 64 & -64) + (int32_t)p_v12;
     } else {
@@ -14016,14 +16151,14 @@ void sha256_update(int32_t * ctx, char * message, uint32_t len) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha2.c
 // Address range: 0x2d710 - 0x2d846
 // Line range:    185 - 208
-void sha256_final(int32_t * ctx, char * digest) {
+void sha256_final(int32_t *ctx, char *digest) {
     int32_t i_v1 = (int32_t)ctx;
-    int32_t * p_v2 = (int32_t *)(i_v1 + 4); // 0x2d71c
-    uint32_t i_v3 = *p_v2; // 0x2d71c
-    uint32_t i_v4 = i_v3 % 64; // 0x2d71e
+    int32_t *p_v2 = (int32_t *)(i_v1 + 4); // 0x2d71c
+    uint32_t i_v3 = *p_v2;                 // 0x2d71c
+    uint32_t i_v4 = i_v3 % 64;             // 0x2d71e
     int32_t i_v5 = i_v4 == 55 | i_v4 < 55 ? 1 : 2;
     uint32_t i_v6 = i_v3 + i_v1; // 0x2d736
-    int32_t i_v7 = 64 * i_v5; // 0x2d73e
+    int32_t i_v7 = 64 * i_v5;    // 0x2d73e
     int32_t i_v8 = i_v1 + 8;
     memset((int32_t *)(i_v3 + i_v8), 0, i_v7 - i_v3);
     *(char *)(*p_v2 + i_v8) = -128;
@@ -14034,10 +16169,10 @@ void sha256_final(int32_t * ctx, char * digest) {
     *(char *)(i_v9 + 4) = (char)(i_v6 / 0x200000);
     sha256_transf(ctx, (char *)i_v8, i_v5);
     int32_t i_v10 = (int32_t)digest; // 0x2d7d2
-    uint32_t i_v11; // 0x2d82c
+    uint32_t i_v11;                  // 0x2d82c
     for (int32_t i_v12 = 0; i_v12 < 8; i_v12++) {
         int32_t i_v13 = 4 * i_v12; // 0x2d7ce
-        int32_t * p_v14 = (int32_t *)(i_v1 + 136 + i_v13);
+        int32_t *p_v14 = (int32_t *)(i_v1 + 136 + i_v13);
         *(char *)((i_v13 | 3) + i_v10) = (char)*p_v14;
         *(char *)((i_v13 | 2) + i_v10) = (char)(*p_v14 / 256);
         *(char *)((i_v13 | 1) + i_v10) = (char)(*p_v14 / 0x10000);
@@ -14051,7 +16186,7 @@ void sha256_final(int32_t * ctx, char * digest) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha256.c
 // Address range: 0x2d848 - 0x2d8c8
 // Line range:    17 - 28
-void Sha256_Init(int32_t * p) {
+void Sha256_Init(int32_t *p) {
     int32_t i_v1 = (int32_t)p;
     *p = 0x6a09e667;
     *(int32_t *)(i_v1 + 4) = -0x4498517b;
@@ -14072,12 +16207,12 @@ void Sha256_Init(int32_t * p) {
 // Line range:    98 - 145
 // Used cryptographic patterns:
 //  - SHA256_Hash_constant_words_K__0x428a2f98_ (32-bit, little endian)
-void Sha256_Transform(int32_t * state, int32_t * data) {
+void Sha256_Transform(int32_t *state, int32_t *data) {
     int32_t i_v1 = (int32_t)state;
     int32_t i_v2; // bp-24, 0x2d8c8
     int32_t i_v3 = &i_v2;
     int32_t i_v4 = i_v3 - 104;
-    int32_t i_v5 = 0; // 0x2d8f2
+    int32_t i_v5 = 0;        // 0x2d8f2
     int32_t i_v6 = 4 * i_v5; // 0x2d8da
     *(int32_t *)(i_v6 + i_v4) = *(int32_t *)(i_v6 + i_v1);
     i_v5++;
@@ -14088,21 +16223,21 @@ void Sha256_Transform(int32_t * state, int32_t * data) {
         i_v5++;
     }
     int32_t i_v7 = i_v3 - 72;
-    int32_t i_v8 = 0; // 0x2dc4c
-    int32_t i_v9 = 0; // 0x2dc3e
-    int32_t i_v10 = 4 * i_v9; // 0x2d90a
-    uint32_t i_v11 = *(int32_t *)((16 - i_v10 & 28) + i_v4); // 0x2d91a
-    int32_t i_v12 = *(int32_t *)((24 - i_v10 & 28) + i_v4); // 0x2d96c
-    int32_t i_v13 = *(int32_t *)((20 - i_v10 & 28) + i_v4); // 0x2d998
+    int32_t i_v8 = 0;                                              // 0x2dc4c
+    int32_t i_v9 = 0;                                              // 0x2dc3e
+    int32_t i_v10 = 4 * i_v9;                                      // 0x2d90a
+    uint32_t i_v11 = *(int32_t *)((16 - i_v10 & 28) + i_v4);       // 0x2d91a
+    int32_t i_v12 = *(int32_t *)((24 - i_v10 & 28) + i_v4);        // 0x2d96c
+    int32_t i_v13 = *(int32_t *)((20 - i_v10 & 28) + i_v4);        // 0x2d998
     int32_t i_v14 = *(int32_t *)(4 * (i_v9 + i_v8) + (int32_t)&K); // 0x2d9c8
-    int32_t i_v15; // 0x2d8c8
-    int32_t i_v16; // 0x2dabc
-    int32_t * p_v17; // 0x2d8c8
-    int32_t i_v18; // 0x2d9e8
-    uint32_t i_v19; // 0x2d9fc
-    int32_t i_v20; // 0x2da46
-    uint32_t i_v21; // 0x2da5c
-    int32_t i_v22; // 0x2da98
+    int32_t i_v15;                                                 // 0x2d8c8
+    int32_t i_v16;                                                 // 0x2dabc
+    int32_t *p_v17;                                                // 0x2d8c8
+    int32_t i_v18;                                                 // 0x2d9e8
+    uint32_t i_v19;                                                // 0x2d9fc
+    int32_t i_v20;                                                 // 0x2da46
+    uint32_t i_v21;                                                // 0x2da5c
+    int32_t i_v22;                                                 // 0x2da98
     if (i_v8 == 0) {
         // 0x2dab4
         i_v16 = *(int32_t *)(i_v10 + (int32_t)data);
@@ -14115,21 +16250,31 @@ void Sha256_Transform(int32_t * state, int32_t * data) {
         i_v19 = *(int32_t *)((i_v10 + 56 & 60) + i_v7);
         i_v20 = *(int32_t *)((i_v10 + 36 & 60) + i_v7);
         i_v21 = *(int32_t *)((i_v10 + 4 & 60) + i_v7);
-        i_v22 = i_v20 + i_v18 + ((i_v19 / 0x80000 | 0x2000 * i_v19) ^ i_v19 / 1024 ^ (i_v19 / 0x20000 | 0x8000 * i_v19)) + ((i_v21 / 0x40000 | 0x4000 * i_v21) ^ i_v21 / 8 ^ (i_v21 / 128 | 0x2000000 * i_v21));
+        i_v22 = i_v20 + i_v18 +
+                ((i_v19 / 0x80000 | 0x2000 * i_v19) ^ i_v19 / 1024 ^
+                 (i_v19 / 0x20000 | 0x8000 * i_v19)) +
+                ((i_v21 / 0x40000 | 0x4000 * i_v21) ^ i_v21 / 8 ^
+                 (i_v21 / 128 | 0x2000000 * i_v21));
         *p_v17 = i_v22;
         i_v15 = i_v22;
     }
-    int32_t * p_v23 = (int32_t *)((28 - i_v10 & 28) + i_v4); // 0x2daf8
-    int32_t i_v24 = *p_v23; // 0x2daf8
-    int32_t i_v25 = ((i_v11 / 64 | 0x4000000 * i_v11) ^ (i_v11 / 2048 | 0x200000 * i_v11) ^ (i_v11 / 0x2000000 | 128 * i_v11)) + i_v14 + ((i_v13 ^ i_v12) & i_v11 ^ i_v12) + i_v15 + i_v24; // 0x2dafc
+    int32_t *p_v23 = (int32_t *)((28 - i_v10 & 28) + i_v4); // 0x2daf8
+    int32_t i_v24 = *p_v23;                                 // 0x2daf8
+    int32_t i_v25 =
+        ((i_v11 / 64 | 0x4000000 * i_v11) ^ (i_v11 / 2048 | 0x200000 * i_v11) ^
+         (i_v11 / 0x2000000 | 128 * i_v11)) +
+        i_v14 + ((i_v13 ^ i_v12) & i_v11 ^ i_v12) + i_v15 + i_v24; // 0x2dafc
     *p_v23 = i_v25;
-    int32_t * p_v26 = (int32_t *)((12 - i_v10 & 28) + i_v4); // 0x2db26
+    int32_t *p_v26 = (int32_t *)((12 - i_v10 & 28) + i_v4); // 0x2db26
     *p_v26 = *p_v26 + i_v25;
-    int32_t i_v27 = *p_v23; // 0x2db6a
-    uint32_t i_v28 = *(int32_t *)((-i_v10 & 28) + i_v4); // 0x2db7e
+    int32_t i_v27 = *p_v23;                                // 0x2db6a
+    uint32_t i_v28 = *(int32_t *)((-i_v10 & 28) + i_v4);   // 0x2db7e
     int32_t i_v29 = *(int32_t *)((4 - i_v10 & 28) + i_v4); // 0x2dbe0
     int32_t i_v30 = *(int32_t *)((8 - i_v10 & 28) + i_v4); // 0x2dbf8
-    *p_v23 = ((i_v28 / 4 | 0x40000000 * i_v28) ^ (i_v28 / 0x2000 | 0x80000 * i_v28) ^ (i_v28 / 0x400000 | 1024 * i_v28)) + i_v27 + ((i_v29 | i_v28) & i_v30 | i_v29 & i_v28);
+    *p_v23 =
+        ((i_v28 / 4 | 0x40000000 * i_v28) ^ (i_v28 / 0x2000 | 0x80000 * i_v28) ^
+         (i_v28 / 0x400000 | 1024 * i_v28)) +
+        i_v27 + ((i_v29 | i_v28) & i_v30 | i_v29 & i_v28);
     i_v9++;
     while (i_v9 == 15 || i_v9 < 15) {
         // 0x2d908
@@ -14150,14 +16295,21 @@ void Sha256_Transform(int32_t * state, int32_t * data) {
             i_v19 = *(int32_t *)((i_v10 + 56 & 60) + i_v7);
             i_v20 = *(int32_t *)((i_v10 + 36 & 60) + i_v7);
             i_v21 = *(int32_t *)((i_v10 + 4 & 60) + i_v7);
-            i_v22 = i_v20 + i_v18 + ((i_v19 / 0x80000 | 0x2000 * i_v19) ^ i_v19 / 1024 ^ (i_v19 / 0x20000 | 0x8000 * i_v19)) + ((i_v21 / 0x40000 | 0x4000 * i_v21) ^ i_v21 / 8 ^ (i_v21 / 128 | 0x2000000 * i_v21));
+            i_v22 = i_v20 + i_v18 +
+                    ((i_v19 / 0x80000 | 0x2000 * i_v19) ^ i_v19 / 1024 ^
+                     (i_v19 / 0x20000 | 0x8000 * i_v19)) +
+                    ((i_v21 / 0x40000 | 0x4000 * i_v21) ^ i_v21 / 8 ^
+                     (i_v21 / 128 | 0x2000000 * i_v21));
             *p_v17 = i_v22;
             i_v15 = i_v22;
         }
         // 0x2dada
         p_v23 = (int32_t *)((28 - i_v10 & 28) + i_v4);
         i_v24 = *p_v23;
-        i_v25 = ((i_v11 / 64 | 0x4000000 * i_v11) ^ (i_v11 / 2048 | 0x200000 * i_v11) ^ (i_v11 / 0x2000000 | 128 * i_v11)) + i_v14 + ((i_v13 ^ i_v12) & i_v11 ^ i_v12) + i_v15 + i_v24;
+        i_v25 = ((i_v11 / 64 | 0x4000000 * i_v11) ^
+                 (i_v11 / 2048 | 0x200000 * i_v11) ^
+                 (i_v11 / 0x2000000 | 128 * i_v11)) +
+                i_v14 + ((i_v13 ^ i_v12) & i_v11 ^ i_v12) + i_v15 + i_v24;
         *p_v23 = i_v25;
         p_v26 = (int32_t *)((12 - i_v10 & 28) + i_v4);
         *p_v26 = *p_v26 + i_v25;
@@ -14165,7 +16317,10 @@ void Sha256_Transform(int32_t * state, int32_t * data) {
         i_v28 = *(int32_t *)((-i_v10 & 28) + i_v4);
         i_v29 = *(int32_t *)((4 - i_v10 & 28) + i_v4);
         i_v30 = *(int32_t *)((8 - i_v10 & 28) + i_v4);
-        *p_v23 = ((i_v28 / 4 | 0x40000000 * i_v28) ^ (i_v28 / 0x2000 | 0x80000 * i_v28) ^ (i_v28 / 0x400000 | 1024 * i_v28)) + i_v27 + ((i_v29 | i_v28) & i_v30 | i_v29 & i_v28);
+        *p_v23 = ((i_v28 / 4 | 0x40000000 * i_v28) ^
+                  (i_v28 / 0x2000 | 0x80000 * i_v28) ^
+                  (i_v28 / 0x400000 | 1024 * i_v28)) +
+                 i_v27 + ((i_v29 | i_v28) & i_v30 | i_v29 & i_v28);
         i_v9++;
     }
     // 0x2dc4a
@@ -14191,14 +16346,21 @@ void Sha256_Transform(int32_t * state, int32_t * data) {
             i_v19 = *(int32_t *)((i_v10 + 56 & 60) + i_v7);
             i_v20 = *(int32_t *)((i_v10 + 36 & 60) + i_v7);
             i_v21 = *(int32_t *)((i_v10 + 4 & 60) + i_v7);
-            i_v22 = i_v20 + i_v18 + ((i_v19 / 0x80000 | 0x2000 * i_v19) ^ i_v19 / 1024 ^ (i_v19 / 0x20000 | 0x8000 * i_v19)) + ((i_v21 / 0x40000 | 0x4000 * i_v21) ^ i_v21 / 8 ^ (i_v21 / 128 | 0x2000000 * i_v21));
+            i_v22 = i_v20 + i_v18 +
+                    ((i_v19 / 0x80000 | 0x2000 * i_v19) ^ i_v19 / 1024 ^
+                     (i_v19 / 0x20000 | 0x8000 * i_v19)) +
+                    ((i_v21 / 0x40000 | 0x4000 * i_v21) ^ i_v21 / 8 ^
+                     (i_v21 / 128 | 0x2000000 * i_v21));
             *p_v17 = i_v22;
             i_v15 = i_v22;
         }
         // 0x2dada
         p_v23 = (int32_t *)((28 - i_v10 & 28) + i_v4);
         i_v24 = *p_v23;
-        i_v25 = ((i_v11 / 64 | 0x4000000 * i_v11) ^ (i_v11 / 2048 | 0x200000 * i_v11) ^ (i_v11 / 0x2000000 | 128 * i_v11)) + i_v14 + ((i_v13 ^ i_v12) & i_v11 ^ i_v12) + i_v15 + i_v24;
+        i_v25 = ((i_v11 / 64 | 0x4000000 * i_v11) ^
+                 (i_v11 / 2048 | 0x200000 * i_v11) ^
+                 (i_v11 / 0x2000000 | 128 * i_v11)) +
+                i_v14 + ((i_v13 ^ i_v12) & i_v11 ^ i_v12) + i_v15 + i_v24;
         *p_v23 = i_v25;
         p_v26 = (int32_t *)((12 - i_v10 & 28) + i_v4);
         *p_v26 = *p_v26 + i_v25;
@@ -14206,7 +16368,10 @@ void Sha256_Transform(int32_t * state, int32_t * data) {
         i_v28 = *(int32_t *)((-i_v10 & 28) + i_v4);
         i_v29 = *(int32_t *)((4 - i_v10 & 28) + i_v4);
         i_v30 = *(int32_t *)((8 - i_v10 & 28) + i_v4);
-        *p_v23 = ((i_v28 / 4 | 0x40000000 * i_v28) ^ (i_v28 / 0x2000 | 0x80000 * i_v28) ^ (i_v28 / 0x400000 | 1024 * i_v28)) + i_v27 + ((i_v29 | i_v28) & i_v30 | i_v29 & i_v28);
+        *p_v23 = ((i_v28 / 4 | 0x40000000 * i_v28) ^
+                  (i_v28 / 0x2000 | 0x80000 * i_v28) ^
+                  (i_v28 / 0x400000 | 1024 * i_v28)) +
+                 i_v27 + ((i_v29 | i_v28) & i_v30 | i_v29 & i_v28);
         i_v9++;
         while (i_v9 == 15 || i_v9 < 15) {
             // 0x2d908
@@ -14227,14 +16392,21 @@ void Sha256_Transform(int32_t * state, int32_t * data) {
                 i_v19 = *(int32_t *)((i_v10 + 56 & 60) + i_v7);
                 i_v20 = *(int32_t *)((i_v10 + 36 & 60) + i_v7);
                 i_v21 = *(int32_t *)((i_v10 + 4 & 60) + i_v7);
-                i_v22 = i_v20 + i_v18 + ((i_v19 / 0x80000 | 0x2000 * i_v19) ^ i_v19 / 1024 ^ (i_v19 / 0x20000 | 0x8000 * i_v19)) + ((i_v21 / 0x40000 | 0x4000 * i_v21) ^ i_v21 / 8 ^ (i_v21 / 128 | 0x2000000 * i_v21));
+                i_v22 = i_v20 + i_v18 +
+                        ((i_v19 / 0x80000 | 0x2000 * i_v19) ^ i_v19 / 1024 ^
+                         (i_v19 / 0x20000 | 0x8000 * i_v19)) +
+                        ((i_v21 / 0x40000 | 0x4000 * i_v21) ^ i_v21 / 8 ^
+                         (i_v21 / 128 | 0x2000000 * i_v21));
                 *p_v17 = i_v22;
                 i_v15 = i_v22;
             }
             // 0x2dada
             p_v23 = (int32_t *)((28 - i_v10 & 28) + i_v4);
             i_v24 = *p_v23;
-            i_v25 = ((i_v11 / 64 | 0x4000000 * i_v11) ^ (i_v11 / 2048 | 0x200000 * i_v11) ^ (i_v11 / 0x2000000 | 128 * i_v11)) + i_v14 + ((i_v13 ^ i_v12) & i_v11 ^ i_v12) + i_v15 + i_v24;
+            i_v25 = ((i_v11 / 64 | 0x4000000 * i_v11) ^
+                     (i_v11 / 2048 | 0x200000 * i_v11) ^
+                     (i_v11 / 0x2000000 | 128 * i_v11)) +
+                    i_v14 + ((i_v13 ^ i_v12) & i_v11 ^ i_v12) + i_v15 + i_v24;
             *p_v23 = i_v25;
             p_v26 = (int32_t *)((12 - i_v10 & 28) + i_v4);
             *p_v26 = *p_v26 + i_v25;
@@ -14242,17 +16414,20 @@ void Sha256_Transform(int32_t * state, int32_t * data) {
             i_v28 = *(int32_t *)((-i_v10 & 28) + i_v4);
             i_v29 = *(int32_t *)((4 - i_v10 & 28) + i_v4);
             i_v30 = *(int32_t *)((8 - i_v10 & 28) + i_v4);
-            *p_v23 = ((i_v28 / 4 | 0x40000000 * i_v28) ^ (i_v28 / 0x2000 | 0x80000 * i_v28) ^ (i_v28 / 0x400000 | 1024 * i_v28)) + i_v27 + ((i_v29 | i_v28) & i_v30 | i_v29 & i_v28);
+            *p_v23 = ((i_v28 / 4 | 0x40000000 * i_v28) ^
+                      (i_v28 / 0x2000 | 0x80000 * i_v28) ^
+                      (i_v28 / 0x400000 | 1024 * i_v28)) +
+                     i_v27 + ((i_v29 | i_v28) & i_v30 | i_v29 & i_v28);
             i_v9++;
         }
         // 0x2dc4a
         i_v8 += 16;
         i_v31 = 0;
     }
-    int32_t i_v32 = 4 * i_v31; // 0x2dc60
-    int32_t i_v33 = i_v32 + i_v1; // 0x2dc64
-    int32_t * p_v34 = (int32_t *)i_v33; // 0x2dc6e
-    int32_t i_v35 = *p_v34; // 0x2dc6e
+    int32_t i_v32 = 4 * i_v31;         // 0x2dc60
+    int32_t i_v33 = i_v32 + i_v1;      // 0x2dc64
+    int32_t *p_v34 = (int32_t *)i_v33; // 0x2dc6e
+    int32_t i_v35 = *p_v34;            // 0x2dc6e
     *p_v34 = *(int32_t *)(i_v32 + i_v4) + i_v35;
     int32_t i_v36 = i_v31 + 1; // 0x2dc84
     i_v31 = i_v36;
@@ -14273,19 +16448,21 @@ void Sha256_Transform(int32_t * state, int32_t * data) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha256.c
 // Address range: 0x2dc98 - 0x2dd18
 // Line range:    152 - 163
-void Sha256_WriteByteBlock(int32_t * p) {
+void Sha256_WriteByteBlock(int32_t *p) {
     int32_t data32[16]; // bp-76, 0x2dc98
     int32_t i_v1 = (int32_t)p;
     int32_t i_v2 = i_v1 + 40;
-    int32_t i_v3; // bp-8, 0x2dc98
-    int32_t i_v4 = (int32_t)&i_v3 - 68; // 0x2dcf0
-    int32_t i_v5 = 0; // 0x2dcf8
-    int32_t i_v6 = 4 * i_v5; // 0x2dca8
-    unsigned char i_v7 = *(char *)(i_v6 + i_v2); // 0x2dcae
-    unsigned char i_v8 = *(char *)((i_v6 | 1) + i_v2); // 0x2dcbe
-    unsigned char i_v9 = *(char *)((i_v6 | 2) + i_v2); // 0x2dcd0
+    int32_t i_v3;                                       // bp-8, 0x2dc98
+    int32_t i_v4 = (int32_t)&i_v3 - 68;                 // 0x2dcf0
+    int32_t i_v5 = 0;                                   // 0x2dcf8
+    int32_t i_v6 = 4 * i_v5;                            // 0x2dca8
+    unsigned char i_v7 = *(char *)(i_v6 + i_v2);        // 0x2dcae
+    unsigned char i_v8 = *(char *)((i_v6 | 1) + i_v2);  // 0x2dcbe
+    unsigned char i_v9 = *(char *)((i_v6 | 2) + i_v2);  // 0x2dcd0
     unsigned char i_v10 = *(char *)((i_v6 | 3) + i_v2); // 0x2dce2
-    *(int32_t *)(i_v4 + i_v6) = 0x10000 * (int32_t)i_v8 | 0x1000000 * (int32_t)i_v7 | 256 * (int32_t)i_v9 | (int32_t)i_v10;
+    *(int32_t *)(i_v4 + i_v6) = 0x10000 * (int32_t)i_v8 |
+                                0x1000000 * (int32_t)i_v7 |
+                                256 * (int32_t)i_v9 | (int32_t)i_v10;
     i_v5++;
     while (i_v5 == 15 || i_v5 < 15) {
         // 0x2dca6
@@ -14294,7 +16471,9 @@ void Sha256_WriteByteBlock(int32_t * p) {
         i_v8 = *(char *)((i_v6 | 1) + i_v2);
         i_v9 = *(char *)((i_v6 | 2) + i_v2);
         i_v10 = *(char *)((i_v6 | 3) + i_v2);
-        *(int32_t *)(i_v4 + i_v6) = 0x10000 * (int32_t)i_v8 | 0x1000000 * (int32_t)i_v7 | 256 * (int32_t)i_v9 | (int32_t)i_v10;
+        *(int32_t *)(i_v4 + i_v6) = 0x10000 * (int32_t)i_v8 |
+                                    0x1000000 * (int32_t)i_v7 |
+                                    256 * (int32_t)i_v9 | (int32_t)i_v10;
         i_v5++;
     }
     int32_t i_v11 = (int32_t)&data32; // 0x2dd04
@@ -14305,28 +16484,28 @@ void Sha256_WriteByteBlock(int32_t * p) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha256.c
 // Address range: 0x2dd18 - 0x2dd80
 // Line range:    165 - 179
-void Sha256_Update(int32_t * p, char * data, int32_t size) {
+void Sha256_Update(int32_t *p, char *data, int32_t size) {
     int32_t i_v1 = (int32_t)p;
     if (size == 0) {
         // 0x2dd78
         __asm_nop(i_v1, (int32_t)data, 0, 0);
         return;
     }
-    int32_t i_v2 = i_v1 + 32; // 0x2dd26
-    int64_t * p_v3 = (int64_t *)i_v2; // 0x2dd26
-    int32_t i_v4 = size; // 0x2dd5e
+    int32_t i_v2 = i_v1 + 32;        // 0x2dd26
+    int64_t *p_v3 = (int64_t *)i_v2; // 0x2dd26
+    int32_t i_v4 = size;             // 0x2dd5e
     int32_t i_v5 = i_v1;
     int32_t i_v6 = (int32_t)(*p_v3 / 0x100000000) % 64;
-    int32_t i_v7 = i_v6 + 1; // 0x2dd34
-    char * p_v8 = (char *)((int32_t)data + 1); // 0x2dd3c
-    unsigned char i_v9 = *data; // 0x2dd3e
+    int32_t i_v7 = i_v6 + 1;                  // 0x2dd34
+    char *p_v8 = (char *)((int32_t)data + 1); // 0x2dd3c
+    unsigned char i_v9 = *data;               // 0x2dd3e
     *(char *)(i_v1 + 40 + i_v6) = i_v9;
-    uint64_t i_v10 = *p_v3; // 0x2dd4c
+    uint64_t i_v10 = *p_v3;              // 0x2dd4c
     int32_t i_v11 = i_v10 / 0x100000000; // 0x2dd4c
     *(int32_t *)i_v2 = i_v11 + 1;
     *(int32_t *)(i_v1 + 36) = (int32_t)(i_v11 == -1) + (int32_t)i_v10;
     i_v4--;
-    char * p_v12; // 0x2dd18
+    char *p_v12; // 0x2dd18
     while (i_v7 != 64) {
         // 0x2dd72
         p_v12 = p_v8;
@@ -14384,7 +16563,7 @@ void Sha256_Update(int32_t * p, char * data, int32_t size) {
     }
     // 0x2dd78
     i_v5 = &i_g101;
-  lab_0x2dd78_2:
+lab_0x2dd78_2:
     // 0x2dd78
     __asm_nop(i_v5, (int32_t)i_v9, i_v1, 0);
 }
@@ -14392,7 +16571,7 @@ void Sha256_Update(int32_t * p, char * data, int32_t size) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha256.c
 // Address range: 0x2dd80 - 0x2de9e
 // Line range:    181 - 209
-void Sha256_Final(int32_t * p, char * digest) {
+void Sha256_Final(int32_t *p, char *digest) {
     int32_t i_v1 = (int32_t)p;
     uint64_t i_v2 = *(int64_t *)(i_v1 + 32);
     uint32_t i_v3 = (int32_t)(i_v2 / 0x100000000) % 64; // 0x2dda6
@@ -14420,8 +16599,8 @@ void Sha256_Final(int32_t * p, char * digest) {
             i_v7 = i_v6 + 1;
         }
     }
-    int32_t i_v8 = 0; // 0x2de1e
-    int32_t i_v9 = 56; // 0x2dd80
+    int32_t i_v8 = 0;                                  // 0x2de1e
+    int32_t i_v9 = 56;                                 // 0x2dd80
     int64_t i_v10 = (int32_t)(i_v2 / 0x20000000) & -8; // 0x2dd80
     *(char *)(i_v9 + i_v4) = (char)((int32_t)i_v10 / 0x1000000);
     i_v8++;
@@ -14437,15 +16616,15 @@ void Sha256_Final(int32_t * p, char * digest) {
     // 0x2de28
     Sha256_WriteByteBlock(p);
     int32_t i_v11 = 0;
-    int32_t i_v12 = (int32_t)digest; // 0x2de34
-    int32_t * p_v13 = (int32_t *)(4 * i_v11 + i_v1); // 0x2de3e
+    int32_t i_v12 = (int32_t)digest;                // 0x2de34
+    int32_t *p_v13 = (int32_t *)(4 * i_v11 + i_v1); // 0x2de3e
     *digest = (char)(*p_v13 / 0x1000000);
     *(char *)(i_v12 + 1) = (char)(*p_v13 / 0x10000);
     *(char *)(i_v12 + 2) = (char)(*p_v13 / 256);
     uint32_t i_v14 = *p_v13; // 0x2de7a
     *(char *)(i_v12 + 3) = (char)i_v14;
-    int32_t i_v15 = i_v11 + 1; // 0x2de84
-    char * p_v16 = (char *)(i_v12 + 4); // 0x2de8c
+    int32_t i_v15 = i_v11 + 1;         // 0x2de84
+    char *p_v16 = (char *)(i_v12 + 4); // 0x2de8c
     while (i_v15 == 7 || i_v15 < 7) {
         // 0x2de34
         i_v11 = i_v15;
@@ -14467,7 +16646,7 @@ void Sha256_Final(int32_t * p, char * digest) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha256.c
 // Address range: 0x2dea0 - 0x2ded8
 // Line range:    211 - 217
-void Sha256_Onestep(char * data, int32_t size, char * digest) {
+void Sha256_Onestep(char *data, int32_t size, char *digest) {
     // 0x2dea0
     int32_t p; // bp-112, 0x2dea0
     Sha256_Init(&p);
@@ -14476,10 +16655,10 @@ void Sha256_Onestep(char * data, int32_t size, char * digest) {
     __asm_nop((int32_t)&i_g101, (int32_t)digest, size, (int32_t)&p);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
 // Address range: 0x2ded8 - 0x2df58
 // Line range:    64 - 77
-void sha2_starts(int32_t * ctx) {
+void sha2_starts(int32_t *ctx) {
     int32_t i_v1 = (int32_t)ctx;
     *ctx = 0;
     *(int32_t *)(i_v1 + 4) = 0;
@@ -14495,337 +16674,1064 @@ void sha2_starts(int32_t * ctx) {
     __asm_nop(i_v1, i_v2, i_v1, 0x5be0cd19);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
 // Address range: 0x2df58 - 0x3205e
 // Line range:    79 - 208
-void sha2_process(int32_t * ctx, char * data) {
+void sha2_process(int32_t *ctx, char *data) {
     int32_t x_v1[64]; // 0x2df94
-    int32_t W[64]; // bp-304, 0x2df58
+    int32_t W[64];    // bp-304, 0x2df58
     int32_t i_v2 = (int32_t)ctx;
-    int32_t i_v3 = (int32_t)data; // 0x2df70
+    int32_t i_v3 = (int32_t)data;             // 0x2df70
     unsigned char i_v4 = *(char *)(i_v3 + 1); // 0x2df74
     unsigned char i_v5 = *(char *)(i_v3 + 2); // 0x2df80
     unsigned char i_v6 = *(char *)(i_v3 + 3); // 0x2df8c
-    int32_t i_v7; // 0x2df58
-    x_v1[0] = 0x10000 * (int32_t)i_v4 | 0x1000000 * i_v7 | 256 * (int32_t)i_v5 | (int32_t)i_v6;
+    int32_t i_v7;                             // 0x2df58
+    x_v1[0] = 0x10000 * (int32_t)i_v4 | 0x1000000 * i_v7 | 256 * (int32_t)i_v5 |
+              (int32_t)i_v6;
     W = x_v1;
     unsigned char i_v8 = *(char *)(i_v3 + 4); // 0x2df9c
-    uint32_t i_v9 = 0x10000 * (int32_t)*(char *)(i_v3 + 5) | 0x1000000 * (int32_t)i_v8; // 0x2dfaa
-    int32_t i_v10 = (int32_t)*(char *)(i_v3 + 7); // 0x2dfbe
-    uint32_t i_v11 = 256 * (int32_t)*(char *)(i_v3 + 6) | i_v9 | i_v10; // 0x2dfc0
-    unsigned char i_v12 = *(char *)(i_v3 + 9); // 0x2dfd8
-    uint32_t i_v13 = 0x10000 * (int32_t)i_v12 | 0x1000000 * (int32_t)*(char *)(i_v3 + 8); // 0x2dfdc
-    int32_t i_v14 = (int32_t)*(char *)(i_v3 + 11); // 0x2dff0
-    uint32_t i_v15 = 256 * (int32_t)*(char *)(i_v3 + 10) | i_v13 | i_v14; // 0x2dff2
-    unsigned char i_v16 = *(char *)(i_v3 + 13); // 0x2e00a
-    uint32_t i_v17 = 0x10000 * (int32_t)i_v16 | 0x1000000 * (int32_t)*(char *)(i_v3 + 12); // 0x2e00e
-    int32_t i_v18 = (int32_t)*(char *)(i_v3 + 15); // 0x2e022
-    uint32_t i_v19 = 256 * (int32_t)*(char *)(i_v3 + 14) | i_v17 | i_v18; // 0x2e024
-    unsigned char i_v20 = *(char *)(i_v3 + 17); // 0x2e03c
-    uint32_t i_v21 = 0x10000 * (int32_t)i_v20 | 0x1000000 * (int32_t)*(char *)(i_v3 + 16); // 0x2e040
-    int32_t i_v22 = (int32_t)*(char *)(i_v3 + 19); // 0x2e054
-    uint32_t i_v23 = 256 * (int32_t)*(char *)(i_v3 + 18) | i_v21 | i_v22; // 0x2e056
-    unsigned char i_v24 = *(char *)(i_v3 + 21); // 0x2e06e
-    uint32_t i_v25 = 0x10000 * (int32_t)i_v24 | 0x1000000 * (int32_t)*(char *)(i_v3 + 20); // 0x2e072
-    int32_t i_v26 = (int32_t)*(char *)(i_v3 + 23); // 0x2e086
-    uint32_t i_v27 = 256 * (int32_t)*(char *)(i_v3 + 22) | i_v25 | i_v26; // 0x2e088
-    unsigned char i_v28 = *(char *)(i_v3 + 25); // 0x2e0a0
-    uint32_t i_v29 = 0x10000 * (int32_t)i_v28 | 0x1000000 * (int32_t)*(char *)(i_v3 + 24); // 0x2e0a4
-    int32_t i_v30 = (int32_t)*(char *)(i_v3 + 27); // 0x2e0b8
-    uint32_t i_v31 = 256 * (int32_t)*(char *)(i_v3 + 26) | i_v29 | i_v30; // 0x2e0ba
-    unsigned char i_v32 = *(char *)(i_v3 + 29); // 0x2e0d2
-    uint32_t i_v33 = 0x10000 * (int32_t)i_v32 | 0x1000000 * (int32_t)*(char *)(i_v3 + 28); // 0x2e0d6
-    int32_t i_v34 = (int32_t)*(char *)(i_v3 + 31); // 0x2e0ea
-    uint32_t i_v35 = 256 * (int32_t)*(char *)(i_v3 + 30) | i_v33 | i_v34; // 0x2e0ec
-    unsigned char i_v36 = *(char *)(i_v3 + 33); // 0x2e104
-    uint32_t i_v37 = 0x10000 * (int32_t)i_v36 | 0x1000000 * (int32_t)*(char *)(i_v3 + 32); // 0x2e108
-    int32_t i_v38 = (int32_t)*(char *)(i_v3 + 35); // 0x2e11c
-    uint32_t i_v39 = 256 * (int32_t)*(char *)(i_v3 + 34) | i_v37 | i_v38; // 0x2e11e
-    unsigned char i_v40 = *(char *)(i_v3 + 37); // 0x2e136
-    uint32_t i_v41 = 0x10000 * (int32_t)i_v40 | 0x1000000 * (int32_t)*(char *)(i_v3 + 36); // 0x2e13a
-    int32_t i_v42 = (int32_t)*(char *)(i_v3 + 39); // 0x2e14e
-    uint32_t i_v43 = 256 * (int32_t)*(char *)(i_v3 + 38) | i_v41 | i_v42; // 0x2e150
-    unsigned char i_v44 = *(char *)(i_v3 + 41); // 0x2e168
-    uint32_t i_v45 = 0x10000 * (int32_t)i_v44 | 0x1000000 * (int32_t)*(char *)(i_v3 + 40); // 0x2e16c
-    int32_t i_v46 = (int32_t)*(char *)(i_v3 + 43); // 0x2e180
-    uint32_t i_v47 = 256 * (int32_t)*(char *)(i_v3 + 42) | i_v45 | i_v46; // 0x2e182
-    unsigned char i_v48 = *(char *)(i_v3 + 45); // 0x2e19a
-    uint32_t i_v49 = 0x10000 * (int32_t)i_v48 | 0x1000000 * (int32_t)*(char *)(i_v3 + 44); // 0x2e19e
-    int32_t i_v50 = (int32_t)*(char *)(i_v3 + 47); // 0x2e1b2
-    uint32_t i_v51 = 256 * (int32_t)*(char *)(i_v3 + 46) | i_v49 | i_v50; // 0x2e1b4
-    unsigned char i_v52 = *(char *)(i_v3 + 49); // 0x2e1cc
-    uint32_t i_v53 = 0x10000 * (int32_t)i_v52 | 0x1000000 * (int32_t)*(char *)(i_v3 + 48); // 0x2e1d0
-    int32_t i_v54 = (int32_t)*(char *)(i_v3 + 51); // 0x2e1e4
-    uint32_t i_v55 = 256 * (int32_t)*(char *)(i_v3 + 50) | i_v53 | i_v54; // 0x2e1e6
-    unsigned char i_v56 = *(char *)(i_v3 + 53); // 0x2e1fe
-    uint32_t i_v57 = 0x10000 * (int32_t)i_v56 | 0x1000000 * (int32_t)*(char *)(i_v3 + 52); // 0x2e202
-    int32_t i_v58 = (int32_t)*(char *)(i_v3 + 55); // 0x2e216
-    uint32_t i_v59 = 256 * (int32_t)*(char *)(i_v3 + 54) | i_v57 | i_v58; // 0x2e218
-    unsigned char i_v60 = *(char *)(i_v3 + 57); // 0x2e230
-    uint32_t i_v61 = 0x10000 * (int32_t)i_v60 | 0x1000000 * (int32_t)*(char *)(i_v3 + 56); // 0x2e234
-    uint32_t i_v62 = 256 * (int32_t)*(char *)(i_v3 + 58) | i_v61; // 0x2e240
-    int32_t i_v63 = (int32_t)*(char *)(i_v3 + 59); // 0x2e248
-    uint32_t i_v64 = i_v62 | i_v63; // 0x2e24a
-    unsigned char i_v65 = *(char *)(i_v3 + 61); // 0x2e262
-    uint32_t i_v66 = 0x10000 * (int32_t)i_v65 | 0x1000000 * (int32_t)*(char *)(i_v3 + 60); // 0x2e266
-    uint32_t i_v67 = 256 * (int32_t)*(char *)(i_v3 + 62) | i_v66; // 0x2e272
-    int32_t i_v68 = (int32_t)*(char *)(i_v3 + 63); // 0x2e27a
-    uint32_t i_v69 = i_v67 | i_v68; // 0x2e27c
-    int32_t * p_v70 = (int32_t *)(i_v2 + 8); // 0x2e288
-    uint32_t i_v71 = *p_v70; // 0x2e288
-    int32_t * p_v72 = (int32_t *)(i_v2 + 12); // 0x2e292
-    int32_t i_v73 = *p_v72; // 0x2e292
-    int32_t * p_v74 = (int32_t *)(i_v2 + 16); // 0x2e29c
-    int32_t i_v75 = *p_v74; // 0x2e29c
-    int32_t * p_v76 = (int32_t *)(i_v2 + 20); // 0x2e2a6
-    int32_t * p_v77 = (int32_t *)(i_v2 + 24); // 0x2e2b0
-    uint32_t i_v78 = *p_v77; // 0x2e2b0
-    int32_t * p_v79 = (int32_t *)(i_v2 + 28); // 0x2e2ba
-    int32_t i_v80 = *p_v79; // 0x2e2ba
-    int32_t * p_v81 = (int32_t *)(i_v2 + 32); // 0x2e2c4
-    int32_t i_v82 = *p_v81; // 0x2e2c4
-    int32_t * p_v83 = (int32_t *)(i_v2 + 36); // 0x2e2ce
-    int32_t i_v84 = *p_v83; // 0x2e2ce
-    int32_t i_v85 = W[0]; // 0x2e312
-    int32_t i_v86 = i_v84 + 0x428a2f98 + ((i_v78 / 64 | 0x4000000 * i_v78) ^ (i_v78 / 2048 | 0x200000 * i_v78) ^ (i_v78 / 0x2000000 | 128 * i_v78)) + i_v85 + ((i_v82 ^ i_v80) & i_v78 ^ i_v82); // 0x2e31e
-    uint32_t i_v87 = i_v86 + *p_v76; // 0x2e36a
-    uint32_t i_v88 = (i_v75 & (i_v73 | i_v71) | i_v73 & i_v71) + ((i_v71 / 4 | 0x40000000 * i_v71) ^ (i_v71 / 0x2000 | 0x80000 * i_v71) ^ (i_v71 / 0x400000 | 1024 * i_v71)) + i_v86; // 0x2e378
-    int32_t i_v89 = i_v11 + 0x71374491 + i_v82 + (i_v87 & (i_v80 ^ i_v78) ^ i_v80) + ((i_v87 / 64 | 0x4000000 * i_v87) ^ (i_v87 / 2048 | 0x200000 * i_v87) ^ (i_v87 / 0x2000000 | 128 * i_v87)); // 0x2e3c8
-    uint32_t i_v90 = i_v89 + i_v75; // 0x2e414
-    uint32_t i_v91 = ((i_v88 / 4 | 0x40000000 * i_v88) ^ (i_v88 / 0x2000 | 0x80000 * i_v88) ^ (i_v88 / 0x400000 | 1024 * i_v88)) + ((i_v88 | i_v71) & i_v73 | i_v88 & i_v71) + i_v89; // 0x2e422
-    int32_t i_v92 = i_v15 - 0x4a3f0431 + i_v80 + (i_v90 & (i_v87 ^ i_v78) ^ i_v78) + ((i_v90 / 64 | 0x4000000 * i_v90) ^ (i_v90 / 2048 | 0x200000 * i_v90) ^ (i_v90 / 0x2000000 | 128 * i_v90)); // 0x2e472
-    uint32_t i_v93 = i_v92 + i_v73; // 0x2e4be
-    uint32_t i_v94 = ((i_v91 / 4 | 0x40000000 * i_v91) ^ (i_v91 / 0x2000 | 0x80000 * i_v91) ^ (i_v91 / 0x400000 | 1024 * i_v91)) + ((i_v91 | i_v88) & i_v71 | i_v91 & i_v88) + i_v92; // 0x2e4cc
-    int32_t i_v95 = i_v19 - 0x164a245b + i_v78 + (i_v93 & (i_v90 ^ i_v87) ^ i_v87) + ((i_v93 / 64 | 0x4000000 * i_v93) ^ (i_v93 / 2048 | 0x200000 * i_v93) ^ (i_v93 / 0x2000000 | 128 * i_v93)); // 0x2e51c
-    uint32_t i_v96 = i_v95 + i_v71; // 0x2e568
-    uint32_t i_v97 = ((i_v94 / 4 | 0x40000000 * i_v94) ^ (i_v94 / 0x2000 | 0x80000 * i_v94) ^ (i_v94 / 0x400000 | 1024 * i_v94)) + ((i_v94 | i_v91) & i_v88 | i_v94 & i_v91) + i_v95; // 0x2e576
-    int32_t i_v98 = i_v23 + 0x3956c25b + i_v87 + (i_v96 & (i_v93 ^ i_v90) ^ i_v90) + ((i_v96 / 64 | 0x4000000 * i_v96) ^ (i_v96 / 2048 | 0x200000 * i_v96) ^ (i_v96 / 0x2000000 | 128 * i_v96)); // 0x2e5c6
-    uint32_t i_v99 = i_v98 + i_v88; // 0x2e612
-    uint32_t i_v100 = ((i_v97 / 4 | 0x40000000 * i_v97) ^ (i_v97 / 0x2000 | 0x80000 * i_v97) ^ (i_v97 / 0x400000 | 1024 * i_v97)) + ((i_v97 | i_v94) & i_v91 | i_v97 & i_v94) + i_v98; // 0x2e620
-    int32_t i_v101 = i_v27 + 0x59f111f1 + i_v90 + (i_v99 & (i_v96 ^ i_v93) ^ i_v93) + ((i_v99 / 64 | 0x4000000 * i_v99) ^ (i_v99 / 2048 | 0x200000 * i_v99) ^ (i_v99 / 0x2000000 | 128 * i_v99)); // 0x2e670
-    uint32_t i_v102 = i_v101 + i_v91; // 0x2e6bc
-    uint32_t i_v103 = ((i_v100 / 4 | 0x40000000 * i_v100) ^ (i_v100 / 0x2000 | 0x80000 * i_v100) ^ (i_v100 / 0x400000 | 1024 * i_v100)) + ((i_v100 | i_v97) & i_v94 | i_v100 & i_v97) + i_v101; // 0x2e6ca
-    int32_t i_v104 = i_v31 - 0x6dc07d5c + i_v93 + (i_v102 & (i_v99 ^ i_v96) ^ i_v96) + ((i_v102 / 64 | 0x4000000 * i_v102) ^ (i_v102 / 2048 | 0x200000 * i_v102) ^ (i_v102 / 0x2000000 | 128 * i_v102)); // 0x2e71a
-    uint32_t i_v105 = i_v104 + i_v94; // 0x2e766
-    uint32_t i_v106 = ((i_v103 / 4 | 0x40000000 * i_v103) ^ (i_v103 / 0x2000 | 0x80000 * i_v103) ^ (i_v103 / 0x400000 | 1024 * i_v103)) + ((i_v103 | i_v100) & i_v97 | i_v103 & i_v100) + i_v104; // 0x2e774
-    int32_t i_v107 = i_v35 - 0x54e3a12b + i_v96 + (i_v105 & (i_v102 ^ i_v99) ^ i_v99) + ((i_v105 / 64 | 0x4000000 * i_v105) ^ (i_v105 / 2048 | 0x200000 * i_v105) ^ (i_v105 / 0x2000000 | 128 * i_v105)); // 0x2e7c4
-    uint32_t i_v108 = i_v107 + i_v97; // 0x2e810
-    uint32_t i_v109 = ((i_v106 / 4 | 0x40000000 * i_v106) ^ (i_v106 / 0x2000 | 0x80000 * i_v106) ^ (i_v106 / 0x400000 | 1024 * i_v106)) + ((i_v106 | i_v103) & i_v100 | i_v106 & i_v103) + i_v107; // 0x2e81e
-    int32_t i_v110 = i_v39 - 0x27f85568 + i_v99 + (i_v108 & (i_v105 ^ i_v102) ^ i_v102) + ((i_v108 / 64 | 0x4000000 * i_v108) ^ (i_v108 / 2048 | 0x200000 * i_v108) ^ (i_v108 / 0x2000000 | 128 * i_v108)); // 0x2e86e
-    uint32_t i_v111 = i_v110 + i_v100; // 0x2e8ba
-    uint32_t i_v112 = ((i_v109 / 4 | 0x40000000 * i_v109) ^ (i_v109 / 0x2000 | 0x80000 * i_v109) ^ (i_v109 / 0x400000 | 1024 * i_v109)) + ((i_v109 | i_v106) & i_v103 | i_v109 & i_v106) + i_v110; // 0x2e8c8
-    int32_t i_v113 = i_v43 + 0x12835b01 + i_v102 + (i_v111 & (i_v108 ^ i_v105) ^ i_v105) + ((i_v111 / 64 | 0x4000000 * i_v111) ^ (i_v111 / 2048 | 0x200000 * i_v111) ^ (i_v111 / 0x2000000 | 128 * i_v111)); // 0x2e918
-    uint32_t i_v114 = i_v113 + i_v103; // 0x2e964
-    uint32_t i_v115 = ((i_v112 / 4 | 0x40000000 * i_v112) ^ (i_v112 / 0x2000 | 0x80000 * i_v112) ^ (i_v112 / 0x400000 | 1024 * i_v112)) + ((i_v112 | i_v109) & i_v106 | i_v112 & i_v109) + i_v113; // 0x2e972
-    int32_t i_v116 = i_v47 + 0x243185be + i_v105 + (i_v114 & (i_v111 ^ i_v108) ^ i_v108) + ((i_v114 / 64 | 0x4000000 * i_v114) ^ (i_v114 / 2048 | 0x200000 * i_v114) ^ (i_v114 / 0x2000000 | 128 * i_v114)); // 0x2e9c2
-    uint32_t i_v117 = i_v116 + i_v106; // 0x2ea0e
-    uint32_t i_v118 = ((i_v115 / 4 | 0x40000000 * i_v115) ^ (i_v115 / 0x2000 | 0x80000 * i_v115) ^ (i_v115 / 0x400000 | 1024 * i_v115)) + ((i_v115 | i_v112) & i_v109 | i_v115 & i_v112) + i_v116; // 0x2ea1c
-    int32_t i_v119 = i_v51 + 0x550c7dc3 + i_v108 + (i_v117 & (i_v114 ^ i_v111) ^ i_v111) + ((i_v117 / 64 | 0x4000000 * i_v117) ^ (i_v117 / 2048 | 0x200000 * i_v117) ^ (i_v117 / 0x2000000 | 128 * i_v117)); // 0x2ea6c
-    uint32_t i_v120 = i_v119 + i_v109; // 0x2eab8
-    uint32_t i_v121 = ((i_v118 / 4 | 0x40000000 * i_v118) ^ (i_v118 / 0x2000 | 0x80000 * i_v118) ^ (i_v118 / 0x400000 | 1024 * i_v118)) + ((i_v118 | i_v115) & i_v112 | i_v118 & i_v115) + i_v119; // 0x2eac6
-    int32_t i_v122 = i_v55 + 0x72be5d74 + i_v111 + (i_v120 & (i_v117 ^ i_v114) ^ i_v114) + ((i_v120 / 64 | 0x4000000 * i_v120) ^ (i_v120 / 2048 | 0x200000 * i_v120) ^ (i_v120 / 0x2000000 | 128 * i_v120)); // 0x2eb16
-    uint32_t i_v123 = i_v122 + i_v112; // 0x2eb62
-    uint32_t i_v124 = ((i_v121 / 4 | 0x40000000 * i_v121) ^ (i_v121 / 0x2000 | 0x80000 * i_v121) ^ (i_v121 / 0x400000 | 1024 * i_v121)) + ((i_v121 | i_v118) & i_v115 | i_v121 & i_v118) + i_v122; // 0x2eb70
-    int32_t i_v125 = i_v59 - 0x7f214e02 + i_v114 + (i_v123 & (i_v120 ^ i_v117) ^ i_v117) + ((i_v123 / 64 | 0x4000000 * i_v123) ^ (i_v123 / 2048 | 0x200000 * i_v123) ^ (i_v123 / 0x2000000 | 128 * i_v123)); // 0x2ebc0
-    uint32_t i_v126 = i_v125 + i_v115; // 0x2ec0c
-    uint32_t i_v127 = ((i_v124 / 4 | 0x40000000 * i_v124) ^ (i_v124 / 0x2000 | 0x80000 * i_v124) ^ (i_v124 / 0x400000 | 1024 * i_v124)) + ((i_v124 | i_v121) & i_v118 | i_v124 & i_v121) + i_v125; // 0x2ec1a
-    int32_t i_v128 = i_v64 - 0x6423f959 + i_v117 + (i_v126 & (i_v123 ^ i_v120) ^ i_v120) + ((i_v126 / 64 | 0x4000000 * i_v126) ^ (i_v126 / 2048 | 0x200000 * i_v126) ^ (i_v126 / 0x2000000 | 128 * i_v126)); // 0x2ec6a
-    uint32_t i_v129 = i_v128 + i_v118; // 0x2ecb6
-    uint32_t i_v130 = ((i_v127 / 4 | 0x40000000 * i_v127) ^ (i_v127 / 0x2000 | 0x80000 * i_v127) ^ (i_v127 / 0x400000 | 1024 * i_v127)) + ((i_v127 | i_v124) & i_v121 | i_v127 & i_v124) + i_v128; // 0x2ecc4
-    int32_t i_v131 = i_v69 - 0x3e640e8c + i_v120 + (i_v129 & (i_v126 ^ i_v123) ^ i_v123) + ((i_v129 / 64 | 0x4000000 * i_v129) ^ (i_v129 / 2048 | 0x200000 * i_v129) ^ (i_v129 / 0x2000000 | 128 * i_v129)); // 0x2ed14
-    uint32_t i_v132 = i_v131 + i_v121; // 0x2ed60
-    uint32_t i_v133 = ((i_v130 / 4 | 0x40000000 * i_v130) ^ (i_v130 / 0x2000 | 0x80000 * i_v130) ^ (i_v130 / 0x400000 | 1024 * i_v130)) + ((i_v130 | i_v127) & i_v124 | i_v130 & i_v127) + i_v131; // 0x2ed6e
-    uint32_t i_v134 = i_v43 + ((0x4000 * i_v11 | i_v9 / 0x40000) ^ i_v11 / 8 ^ (i_v11 / 128 | 0x2000000 * i_v10)) + ((0x2000 * i_v64 | i_v61 / 0x80000) ^ i_v62 / 1024 ^ (0x8000 * i_v64 | i_v61 / 0x20000)) + i_v85; // 0x2edfe
-    int32_t i_v135 = i_v134 - 0x1b64963f + i_v123 + (i_v132 & (i_v129 ^ i_v126) ^ i_v126) + ((i_v132 / 64 | 0x4000000 * i_v132) ^ (i_v132 / 2048 | 0x200000 * i_v132) ^ (i_v132 / 0x2000000 | 128 * i_v132)); // 0x2ee16
-    uint32_t i_v136 = i_v135 + i_v124; // 0x2ee62
-    uint32_t i_v137 = ((i_v133 / 4 | 0x40000000 * i_v133) ^ (i_v133 / 0x2000 | 0x80000 * i_v133) ^ (i_v133 / 0x400000 | 1024 * i_v133)) + ((i_v133 | i_v130) & i_v127 | i_v133 & i_v130) + i_v135; // 0x2ee70
-    uint32_t i_v138 = ((0x4000 * i_v15 | i_v13 / 0x40000) ^ i_v15 / 8 ^ (i_v15 / 128 | 0x2000000 * i_v14)) + i_v11 + i_v47 + ((0x2000 * i_v69 | i_v66 / 0x80000) ^ i_v67 / 1024 ^ (0x8000 * i_v69 | i_v66 / 0x20000)); // 0x2ef00
-    int32_t i_v139 = i_v138 - 0x1041b87a + i_v126 + (i_v136 & (i_v132 ^ i_v129) ^ i_v129) + ((i_v136 / 64 | 0x4000000 * i_v136) ^ (i_v136 / 2048 | 0x200000 * i_v136) ^ (i_v136 / 0x2000000 | 128 * i_v136)); // 0x2ef18
-    uint32_t i_v140 = i_v139 + i_v127; // 0x2ef64
-    uint32_t i_v141 = ((i_v137 / 4 | 0x40000000 * i_v137) ^ (i_v137 / 0x2000 | 0x80000 * i_v137) ^ (i_v137 / 0x400000 | 1024 * i_v137)) + ((i_v137 | i_v133) & i_v130 | i_v137 & i_v133) + i_v139; // 0x2ef72
-    uint32_t i_v142 = ((0x4000 * i_v19 | i_v17 / 0x40000) ^ i_v19 / 8 ^ (i_v19 / 128 | 0x2000000 * i_v18)) + i_v15 + i_v51 + ((i_v134 / 0x80000 | 0x2000 * i_v134) ^ i_v134 / 1024 ^ (i_v134 / 0x20000 | 0x8000 * i_v134)); // 0x2f002
-    int32_t i_v143 = i_v142 + 0xfc19dc6 + i_v129 + (i_v140 & (i_v136 ^ i_v132) ^ i_v132) + ((i_v140 / 64 | 0x4000000 * i_v140) ^ (i_v140 / 2048 | 0x200000 * i_v140) ^ (i_v140 / 0x2000000 | 128 * i_v140)); // 0x2f01a
-    uint32_t i_v144 = i_v143 + i_v130; // 0x2f066
-    uint32_t i_v145 = ((i_v141 / 4 | 0x40000000 * i_v141) ^ (i_v141 / 0x2000 | 0x80000 * i_v141) ^ (i_v141 / 0x400000 | 1024 * i_v141)) + ((i_v141 | i_v137) & i_v133 | i_v141 & i_v137) + i_v143; // 0x2f074
-    uint32_t i_v146 = ((0x4000 * i_v23 | i_v21 / 0x40000) ^ i_v23 / 8 ^ (i_v23 / 128 | 0x2000000 * i_v22)) + i_v19 + i_v55 + ((i_v138 / 0x80000 | 0x2000 * i_v138) ^ i_v138 / 1024 ^ (i_v138 / 0x20000 | 0x8000 * i_v138)); // 0x2f104
-    int32_t i_v147 = i_v146 + 0x240ca1cc + i_v132 + (i_v144 & (i_v140 ^ i_v136) ^ i_v136) + ((i_v144 / 64 | 0x4000000 * i_v144) ^ (i_v144 / 2048 | 0x200000 * i_v144) ^ (i_v144 / 0x2000000 | 128 * i_v144)); // 0x2f11c
-    uint32_t i_v148 = i_v147 + i_v133; // 0x2f168
-    uint32_t i_v149 = ((i_v145 / 4 | 0x40000000 * i_v145) ^ (i_v145 / 0x2000 | 0x80000 * i_v145) ^ (i_v145 / 0x400000 | 1024 * i_v145)) + ((i_v145 | i_v141) & i_v137 | i_v145 & i_v141) + i_v147; // 0x2f176
-    uint32_t i_v150 = ((0x4000 * i_v27 | i_v25 / 0x40000) ^ i_v27 / 8 ^ (i_v27 / 128 | 0x2000000 * i_v26)) + i_v23 + i_v59 + ((i_v142 / 0x80000 | 0x2000 * i_v142) ^ i_v142 / 1024 ^ (i_v142 / 0x20000 | 0x8000 * i_v142)); // 0x2f206
-    int32_t i_v151 = i_v150 + 0x2de92c6f + i_v136 + (i_v148 & (i_v144 ^ i_v140) ^ i_v140) + ((i_v148 / 64 | 0x4000000 * i_v148) ^ (i_v148 / 2048 | 0x200000 * i_v148) ^ (i_v148 / 0x2000000 | 128 * i_v148)); // 0x2f21e
-    uint32_t i_v152 = i_v151 + i_v137; // 0x2f26a
-    uint32_t i_v153 = ((i_v149 / 4 | 0x40000000 * i_v149) ^ (i_v149 / 0x2000 | 0x80000 * i_v149) ^ (i_v149 / 0x400000 | 1024 * i_v149)) + ((i_v149 | i_v145) & i_v141 | i_v149 & i_v145) + i_v151; // 0x2f278
-    uint32_t i_v154 = ((0x4000 * i_v31 | i_v29 / 0x40000) ^ i_v31 / 8 ^ (i_v31 / 128 | 0x2000000 * i_v30)) + i_v27 + i_v64 + ((i_v146 / 0x80000 | 0x2000 * i_v146) ^ i_v146 / 1024 ^ (i_v146 / 0x20000 | 0x8000 * i_v146)); // 0x2f308
-    int32_t i_v155 = i_v154 + 0x4a7484aa + i_v140 + (i_v152 & (i_v148 ^ i_v144) ^ i_v144) + ((i_v152 / 64 | 0x4000000 * i_v152) ^ (i_v152 / 2048 | 0x200000 * i_v152) ^ (i_v152 / 0x2000000 | 128 * i_v152)); // 0x2f320
-    uint32_t i_v156 = i_v155 + i_v141; // 0x2f36c
-    uint32_t i_v157 = ((i_v153 / 4 | 0x40000000 * i_v153) ^ (i_v153 / 0x2000 | 0x80000 * i_v153) ^ (i_v153 / 0x400000 | 1024 * i_v153)) + ((i_v153 | i_v149) & i_v145 | i_v153 & i_v149) + i_v155; // 0x2f37a
-    uint32_t i_v158 = ((0x4000 * i_v35 | i_v33 / 0x40000) ^ i_v35 / 8 ^ (i_v35 / 128 | 0x2000000 * i_v34)) + i_v31 + i_v69 + ((i_v150 / 0x80000 | 0x2000 * i_v150) ^ i_v150 / 1024 ^ (i_v150 / 0x20000 | 0x8000 * i_v150)); // 0x2f40a
-    int32_t i_v159 = i_v158 + 0x5cb0a9dc + i_v144 + (i_v156 & (i_v152 ^ i_v148) ^ i_v148) + ((i_v156 / 64 | 0x4000000 * i_v156) ^ (i_v156 / 2048 | 0x200000 * i_v156) ^ (i_v156 / 0x2000000 | 128 * i_v156)); // 0x2f422
-    uint32_t i_v160 = i_v159 + i_v145; // 0x2f46e
-    uint32_t i_v161 = ((i_v157 / 4 | 0x40000000 * i_v157) ^ (i_v157 / 0x2000 | 0x80000 * i_v157) ^ (i_v157 / 0x400000 | 1024 * i_v157)) + ((i_v157 | i_v153) & i_v149 | i_v157 & i_v153) + i_v159; // 0x2f47c
-    uint32_t i_v162 = ((0x4000 * i_v39 | i_v37 / 0x40000) ^ i_v39 / 8 ^ (i_v39 / 128 | 0x2000000 * i_v38)) + i_v35 + i_v134 + ((i_v154 / 0x80000 | 0x2000 * i_v154) ^ i_v154 / 1024 ^ (i_v154 / 0x20000 | 0x8000 * i_v154)); // 0x2f50c
-    int32_t i_v163 = i_v162 + 0x76f988da + i_v148 + (i_v160 & (i_v156 ^ i_v152) ^ i_v152) + ((i_v160 / 64 | 0x4000000 * i_v160) ^ (i_v160 / 2048 | 0x200000 * i_v160) ^ (i_v160 / 0x2000000 | 128 * i_v160)); // 0x2f524
-    uint32_t i_v164 = i_v163 + i_v149; // 0x2f570
-    uint32_t i_v165 = ((i_v161 / 4 | 0x40000000 * i_v161) ^ (i_v161 / 0x2000 | 0x80000 * i_v161) ^ (i_v161 / 0x400000 | 1024 * i_v161)) + ((i_v161 | i_v157) & i_v153 | i_v161 & i_v157) + i_v163; // 0x2f57e
-    uint32_t i_v166 = ((0x4000 * i_v43 | i_v41 / 0x40000) ^ i_v43 / 8 ^ (i_v43 / 128 | 0x2000000 * i_v42)) + i_v39 + i_v138 + ((i_v158 / 0x80000 | 0x2000 * i_v158) ^ i_v158 / 1024 ^ (i_v158 / 0x20000 | 0x8000 * i_v158)); // 0x2f60e
-    int32_t i_v167 = i_v166 - 0x67c1aeae + i_v152 + (i_v164 & (i_v160 ^ i_v156) ^ i_v156) + ((i_v164 / 64 | 0x4000000 * i_v164) ^ (i_v164 / 2048 | 0x200000 * i_v164) ^ (i_v164 / 0x2000000 | 128 * i_v164)); // 0x2f626
-    uint32_t i_v168 = i_v167 + i_v153; // 0x2f672
-    uint32_t i_v169 = ((i_v165 / 4 | 0x40000000 * i_v165) ^ (i_v165 / 0x2000 | 0x80000 * i_v165) ^ (i_v165 / 0x400000 | 1024 * i_v165)) + ((i_v165 | i_v161) & i_v157 | i_v165 & i_v161) + i_v167; // 0x2f680
-    uint32_t i_v170 = ((0x4000 * i_v47 | i_v45 / 0x40000) ^ i_v47 / 8 ^ (i_v47 / 128 | 0x2000000 * i_v46)) + i_v43 + i_v142 + ((i_v162 / 0x80000 | 0x2000 * i_v162) ^ i_v162 / 1024 ^ (i_v162 / 0x20000 | 0x8000 * i_v162)); // 0x2f710
-    int32_t i_v171 = i_v170 - 0x57ce3993 + i_v156 + (i_v168 & (i_v164 ^ i_v160) ^ i_v160) + ((i_v168 / 64 | 0x4000000 * i_v168) ^ (i_v168 / 2048 | 0x200000 * i_v168) ^ (i_v168 / 0x2000000 | 128 * i_v168)); // 0x2f728
-    uint32_t i_v172 = i_v171 + i_v157; // 0x2f774
-    uint32_t i_v173 = ((i_v169 / 4 | 0x40000000 * i_v169) ^ (i_v169 / 0x2000 | 0x80000 * i_v169) ^ (i_v169 / 0x400000 | 1024 * i_v169)) + ((i_v169 | i_v165) & i_v161 | i_v169 & i_v165) + i_v171; // 0x2f782
-    uint32_t i_v174 = ((0x4000 * i_v51 | i_v49 / 0x40000) ^ i_v51 / 8 ^ (i_v51 / 128 | 0x2000000 * i_v50)) + i_v47 + i_v146 + ((i_v166 / 0x80000 | 0x2000 * i_v166) ^ i_v166 / 1024 ^ (i_v166 / 0x20000 | 0x8000 * i_v166)); // 0x2f812
-    int32_t i_v175 = i_v174 - 0x4ffcd838 + i_v160 + (i_v172 & (i_v168 ^ i_v164) ^ i_v164) + ((i_v172 / 64 | 0x4000000 * i_v172) ^ (i_v172 / 2048 | 0x200000 * i_v172) ^ (i_v172 / 0x2000000 | 128 * i_v172)); // 0x2f82a
-    uint32_t i_v176 = i_v175 + i_v161; // 0x2f876
-    uint32_t i_v177 = ((i_v173 / 4 | 0x40000000 * i_v173) ^ (i_v173 / 0x2000 | 0x80000 * i_v173) ^ (i_v173 / 0x400000 | 1024 * i_v173)) + ((i_v173 | i_v169) & i_v165 | i_v173 & i_v169) + i_v175; // 0x2f884
-    uint32_t i_v178 = ((0x4000 * i_v55 | i_v53 / 0x40000) ^ i_v55 / 8 ^ (i_v55 / 128 | 0x2000000 * i_v54)) + i_v51 + i_v150 + ((i_v170 / 0x80000 | 0x2000 * i_v170) ^ i_v170 / 1024 ^ (i_v170 / 0x20000 | 0x8000 * i_v170)); // 0x2f914
-    int32_t i_v179 = i_v178 - 0x40a68039 + i_v164 + (i_v176 & (i_v172 ^ i_v168) ^ i_v168) + ((i_v176 / 64 | 0x4000000 * i_v176) ^ (i_v176 / 2048 | 0x200000 * i_v176) ^ (i_v176 / 0x2000000 | 128 * i_v176)); // 0x2f92c
-    uint32_t i_v180 = i_v179 + i_v165; // 0x2f978
-    uint32_t i_v181 = ((i_v177 / 4 | 0x40000000 * i_v177) ^ (i_v177 / 0x2000 | 0x80000 * i_v177) ^ (i_v177 / 0x400000 | 1024 * i_v177)) + ((i_v177 | i_v173) & i_v169 | i_v177 & i_v173) + i_v179; // 0x2f986
-    uint32_t i_v182 = ((0x4000 * i_v59 | i_v57 / 0x40000) ^ i_v59 / 8 ^ (i_v59 / 128 | 0x2000000 * i_v58)) + i_v55 + i_v154 + ((i_v174 / 0x80000 | 0x2000 * i_v174) ^ i_v174 / 1024 ^ (i_v174 / 0x20000 | 0x8000 * i_v174)); // 0x2fa16
-    int32_t i_v183 = i_v182 - 0x391ff40d + i_v168 + (i_v180 & (i_v176 ^ i_v172) ^ i_v172) + ((i_v180 / 64 | 0x4000000 * i_v180) ^ (i_v180 / 2048 | 0x200000 * i_v180) ^ (i_v180 / 0x2000000 | 128 * i_v180)); // 0x2fa2e
-    uint32_t i_v184 = i_v183 + i_v169; // 0x2fa7a
-    uint32_t i_v185 = ((i_v181 / 4 | 0x40000000 * i_v181) ^ (i_v181 / 0x2000 | 0x80000 * i_v181) ^ (i_v181 / 0x400000 | 1024 * i_v181)) + ((i_v181 | i_v177) & i_v173 | i_v181 & i_v177) + i_v183; // 0x2fa88
-    uint32_t i_v186 = ((0x4000 * i_v64 | i_v61 / 0x40000) ^ i_v64 / 8 ^ (i_v64 / 128 | 0x2000000 * i_v63)) + i_v59 + i_v158 + ((i_v178 / 0x80000 | 0x2000 * i_v178) ^ i_v178 / 1024 ^ (i_v178 / 0x20000 | 0x8000 * i_v178)); // 0x2fb18
-    int32_t i_v187 = i_v186 - 0x2a586eb9 + i_v172 + (i_v184 & (i_v180 ^ i_v176) ^ i_v176) + ((i_v184 / 64 | 0x4000000 * i_v184) ^ (i_v184 / 2048 | 0x200000 * i_v184) ^ (i_v184 / 0x2000000 | 128 * i_v184)); // 0x2fb30
-    uint32_t i_v188 = i_v187 + i_v173; // 0x2fb7c
-    uint32_t i_v189 = ((i_v185 / 4 | 0x40000000 * i_v185) ^ (i_v185 / 0x2000 | 0x80000 * i_v185) ^ (i_v185 / 0x400000 | 1024 * i_v185)) + ((i_v185 | i_v181) & i_v177 | i_v185 & i_v181) + i_v187; // 0x2fb8a
-    uint32_t i_v190 = ((0x4000 * i_v69 | i_v66 / 0x40000) ^ i_v69 / 8 ^ (i_v69 / 128 | 0x2000000 * i_v68)) + i_v64 + i_v162 + ((i_v182 / 0x80000 | 0x2000 * i_v182) ^ i_v182 / 1024 ^ (i_v182 / 0x20000 | 0x8000 * i_v182)); // 0x2fc1a
-    int32_t i_v191 = i_v190 + 0x6ca6351 + i_v176 + (i_v188 & (i_v184 ^ i_v180) ^ i_v180) + ((i_v188 / 64 | 0x4000000 * i_v188) ^ (i_v188 / 2048 | 0x200000 * i_v188) ^ (i_v188 / 0x2000000 | 128 * i_v188)); // 0x2fc32
-    uint32_t i_v192 = i_v191 + i_v177; // 0x2fc7e
-    uint32_t i_v193 = ((i_v189 / 4 | 0x40000000 * i_v189) ^ (i_v189 / 0x2000 | 0x80000 * i_v189) ^ (i_v189 / 0x400000 | 1024 * i_v189)) + ((i_v189 | i_v185) & i_v181 | i_v189 & i_v185) + i_v191; // 0x2fc8c
-    uint32_t i_v194 = ((i_v134 / 0x40000 | 0x4000 * i_v134) ^ i_v134 / 8 ^ (i_v134 / 128 | 0x2000000 * i_v134)) + i_v69 + i_v166 + ((i_v186 / 0x80000 | 0x2000 * i_v186) ^ i_v186 / 1024 ^ (i_v186 / 0x20000 | 0x8000 * i_v186)); // 0x2fd1c
-    int32_t i_v195 = i_v194 + 0x14292967 + i_v180 + (i_v192 & (i_v188 ^ i_v184) ^ i_v184) + ((i_v192 / 64 | 0x4000000 * i_v192) ^ (i_v192 / 2048 | 0x200000 * i_v192) ^ (i_v192 / 0x2000000 | 128 * i_v192)); // 0x2fd34
-    uint32_t i_v196 = i_v195 + i_v181; // 0x2fd80
-    uint32_t i_v197 = ((i_v193 / 4 | 0x40000000 * i_v193) ^ (i_v193 / 0x2000 | 0x80000 * i_v193) ^ (i_v193 / 0x400000 | 1024 * i_v193)) + ((i_v193 | i_v189) & i_v185 | i_v193 & i_v189) + i_v195; // 0x2fd8e
-    uint32_t i_v198 = ((i_v138 / 0x40000 | 0x4000 * i_v138) ^ i_v138 / 8 ^ (i_v138 / 128 | 0x2000000 * i_v138)) + i_v134 + i_v170 + ((i_v190 / 0x80000 | 0x2000 * i_v190) ^ i_v190 / 1024 ^ (i_v190 / 0x20000 | 0x8000 * i_v190)); // 0x2fe1e
-    int32_t i_v199 = i_v198 + 0x27b70a85 + i_v184 + (i_v196 & (i_v192 ^ i_v188) ^ i_v188) + ((i_v196 / 64 | 0x4000000 * i_v196) ^ (i_v196 / 2048 | 0x200000 * i_v196) ^ (i_v196 / 0x2000000 | 128 * i_v196)); // 0x2fe3a
-    uint32_t i_v200 = i_v199 + i_v185; // 0x2fe86
-    uint32_t i_v201 = ((i_v197 / 4 | 0x40000000 * i_v197) ^ (i_v197 / 0x2000 | 0x80000 * i_v197) ^ (i_v197 / 0x400000 | 1024 * i_v197)) + ((i_v197 | i_v193) & i_v189 | i_v197 & i_v193) + i_v199; // 0x2fe94
-    uint32_t i_v202 = ((i_v142 / 0x40000 | 0x4000 * i_v142) ^ i_v142 / 8 ^ (i_v142 / 128 | 0x2000000 * i_v142)) + i_v138 + i_v174 + ((i_v194 / 0x80000 | 0x2000 * i_v194) ^ i_v194 / 1024 ^ (i_v194 / 0x20000 | 0x8000 * i_v194)); // 0x2ff24
-    int32_t i_v203 = i_v202 + 0x2e1b2138 + i_v188 + (i_v200 & (i_v196 ^ i_v192) ^ i_v192) + ((i_v200 / 64 | 0x4000000 * i_v200) ^ (i_v200 / 2048 | 0x200000 * i_v200) ^ (i_v200 / 0x2000000 | 128 * i_v200)); // 0x2ff40
-    uint32_t i_v204 = i_v203 + i_v189; // 0x2ff8c
-    uint32_t i_v205 = ((i_v201 / 4 | 0x40000000 * i_v201) ^ (i_v201 / 0x2000 | 0x80000 * i_v201) ^ (i_v201 / 0x400000 | 1024 * i_v201)) + ((i_v201 | i_v197) & i_v193 | i_v201 & i_v197) + i_v203; // 0x2ff9a
-    uint32_t i_v206 = ((i_v146 / 0x40000 | 0x4000 * i_v146) ^ i_v146 / 8 ^ (i_v146 / 128 | 0x2000000 * i_v146)) + i_v142 + i_v178 + ((i_v198 / 0x80000 | 0x2000 * i_v198) ^ i_v198 / 1024 ^ (i_v198 / 0x20000 | 0x8000 * i_v198)); // 0x30030
-    int32_t i_v207 = i_v206 + 0x4d2c6dfc + i_v192 + (i_v204 & (i_v200 ^ i_v196) ^ i_v196) + ((i_v204 / 64 | 0x4000000 * i_v204) ^ (i_v204 / 2048 | 0x200000 * i_v204) ^ (i_v204 / 0x2000000 | 128 * i_v204)); // 0x3004c
-    uint32_t i_v208 = i_v207 + i_v193; // 0x30098
-    uint32_t i_v209 = ((i_v205 / 4 | 0x40000000 * i_v205) ^ (i_v205 / 0x2000 | 0x80000 * i_v205) ^ (i_v205 / 0x400000 | 1024 * i_v205)) + ((i_v205 | i_v201) & i_v197 | i_v205 & i_v201) + i_v207; // 0x300a6
-    uint32_t i_v210 = ((i_v150 / 0x40000 | 0x4000 * i_v150) ^ i_v150 / 8 ^ (i_v150 / 128 | 0x2000000 * i_v150)) + i_v146 + i_v182 + ((i_v202 / 0x80000 | 0x2000 * i_v202) ^ i_v202 / 1024 ^ (i_v202 / 0x20000 | 0x8000 * i_v202)); // 0x3013c
-    int32_t i_v211 = i_v210 + 0x53380d13 + i_v196 + (i_v208 & (i_v204 ^ i_v200) ^ i_v200) + ((i_v208 / 64 | 0x4000000 * i_v208) ^ (i_v208 / 2048 | 0x200000 * i_v208) ^ (i_v208 / 0x2000000 | 128 * i_v208)); // 0x30158
-    uint32_t i_v212 = i_v211 + i_v197; // 0x301a4
-    uint32_t i_v213 = ((i_v209 / 4 | 0x40000000 * i_v209) ^ (i_v209 / 0x2000 | 0x80000 * i_v209) ^ (i_v209 / 0x400000 | 1024 * i_v209)) + ((i_v209 | i_v205) & i_v201 | i_v209 & i_v205) + i_v211; // 0x301b2
-    uint32_t i_v214 = ((i_v154 / 0x40000 | 0x4000 * i_v154) ^ i_v154 / 8 ^ (i_v154 / 128 | 0x2000000 * i_v154)) + i_v150 + i_v186 + ((i_v206 / 0x80000 | 0x2000 * i_v206) ^ i_v206 / 1024 ^ (i_v206 / 0x20000 | 0x8000 * i_v206)); // 0x30248
-    int32_t i_v215 = i_v214 + 0x650a7354 + i_v200 + (i_v212 & (i_v208 ^ i_v204) ^ i_v204) + ((i_v212 / 64 | 0x4000000 * i_v212) ^ (i_v212 / 2048 | 0x200000 * i_v212) ^ (i_v212 / 0x2000000 | 128 * i_v212)); // 0x30264
-    uint32_t i_v216 = i_v215 + i_v201; // 0x302b0
-    uint32_t i_v217 = ((i_v213 / 4 | 0x40000000 * i_v213) ^ (i_v213 / 0x2000 | 0x80000 * i_v213) ^ (i_v213 / 0x400000 | 1024 * i_v213)) + ((i_v213 | i_v209) & i_v205 | i_v213 & i_v209) + i_v215; // 0x302be
-    uint32_t i_v218 = ((i_v158 / 0x40000 | 0x4000 * i_v158) ^ i_v158 / 8 ^ (i_v158 / 128 | 0x2000000 * i_v158)) + i_v154 + i_v190 + ((i_v210 / 0x80000 | 0x2000 * i_v210) ^ i_v210 / 1024 ^ (i_v210 / 0x20000 | 0x8000 * i_v210)); // 0x30354
-    int32_t i_v219 = i_v218 + 0x766a0abb + i_v204 + (i_v216 & (i_v212 ^ i_v208) ^ i_v208) + ((i_v216 / 64 | 0x4000000 * i_v216) ^ (i_v216 / 2048 | 0x200000 * i_v216) ^ (i_v216 / 0x2000000 | 128 * i_v216)); // 0x30370
-    uint32_t i_v220 = i_v219 + i_v205; // 0x303bc
-    uint32_t i_v221 = ((i_v217 / 4 | 0x40000000 * i_v217) ^ (i_v217 / 0x2000 | 0x80000 * i_v217) ^ (i_v217 / 0x400000 | 1024 * i_v217)) + ((i_v217 | i_v213) & i_v209 | i_v217 & i_v213) + i_v219; // 0x303ca
-    uint32_t i_v222 = ((i_v162 / 0x40000 | 0x4000 * i_v162) ^ i_v162 / 8 ^ (i_v162 / 128 | 0x2000000 * i_v162)) + i_v158 + i_v194 + ((i_v214 / 0x80000 | 0x2000 * i_v214) ^ i_v214 / 1024 ^ (i_v214 / 0x20000 | 0x8000 * i_v214)); // 0x30460
-    int32_t i_v223 = i_v222 - 0x7e3d36d2 + i_v208 + (i_v220 & (i_v216 ^ i_v212) ^ i_v212) + ((i_v220 / 64 | 0x4000000 * i_v220) ^ (i_v220 / 2048 | 0x200000 * i_v220) ^ (i_v220 / 0x2000000 | 128 * i_v220)); // 0x3047c
-    uint32_t i_v224 = i_v223 + i_v209; // 0x304c8
-    uint32_t i_v225 = ((i_v221 / 4 | 0x40000000 * i_v221) ^ (i_v221 / 0x2000 | 0x80000 * i_v221) ^ (i_v221 / 0x400000 | 1024 * i_v221)) + ((i_v221 | i_v217) & i_v213 | i_v221 & i_v217) + i_v223; // 0x304d6
-    uint32_t i_v226 = ((i_v166 / 0x40000 | 0x4000 * i_v166) ^ i_v166 / 8 ^ (i_v166 / 128 | 0x2000000 * i_v166)) + i_v162 + i_v198 + ((i_v218 / 0x80000 | 0x2000 * i_v218) ^ i_v218 / 1024 ^ (i_v218 / 0x20000 | 0x8000 * i_v218)); // 0x3056e
-    int32_t i_v227 = i_v226 - 0x6d8dd37b + i_v212 + (i_v224 & (i_v220 ^ i_v216) ^ i_v216) + ((i_v224 / 64 | 0x4000000 * i_v224) ^ (i_v224 / 2048 | 0x200000 * i_v224) ^ (i_v224 / 0x2000000 | 128 * i_v224)); // 0x3058a
-    uint32_t i_v228 = i_v227 + i_v213; // 0x305d6
-    uint32_t i_v229 = ((i_v225 / 4 | 0x40000000 * i_v225) ^ (i_v225 / 0x2000 | 0x80000 * i_v225) ^ (i_v225 / 0x400000 | 1024 * i_v225)) + ((i_v225 | i_v221) & i_v217 | i_v225 & i_v221) + i_v227; // 0x305e4
-    uint32_t i_v230 = ((i_v170 / 0x40000 | 0x4000 * i_v170) ^ i_v170 / 8 ^ (i_v170 / 128 | 0x2000000 * i_v170)) + i_v166 + i_v202 + ((i_v222 / 0x80000 | 0x2000 * i_v222) ^ i_v222 / 1024 ^ (i_v222 / 0x20000 | 0x8000 * i_v222)); // 0x3067c
-    int32_t i_v231 = i_v230 - 0x5d40175f + i_v216 + (i_v228 & (i_v224 ^ i_v220) ^ i_v220) + ((i_v228 / 64 | 0x4000000 * i_v228) ^ (i_v228 / 2048 | 0x200000 * i_v228) ^ (i_v228 / 0x2000000 | 128 * i_v228)); // 0x30698
-    uint32_t i_v232 = i_v231 + i_v217; // 0x306e4
-    uint32_t i_v233 = ((i_v229 / 4 | 0x40000000 * i_v229) ^ (i_v229 / 0x2000 | 0x80000 * i_v229) ^ (i_v229 / 0x400000 | 1024 * i_v229)) + ((i_v229 | i_v225) & i_v221 | i_v229 & i_v225) + i_v231; // 0x306f2
-    uint32_t i_v234 = ((i_v174 / 0x40000 | 0x4000 * i_v174) ^ i_v174 / 8 ^ (i_v174 / 128 | 0x2000000 * i_v174)) + i_v170 + i_v206 + ((i_v226 / 0x80000 | 0x2000 * i_v226) ^ i_v226 / 1024 ^ (i_v226 / 0x20000 | 0x8000 * i_v226)); // 0x3078a
-    int32_t i_v235 = i_v234 - 0x57e599b5 + i_v220 + (i_v232 & (i_v228 ^ i_v224) ^ i_v224) + ((i_v232 / 64 | 0x4000000 * i_v232) ^ (i_v232 / 2048 | 0x200000 * i_v232) ^ (i_v232 / 0x2000000 | 128 * i_v232)); // 0x307a6
-    uint32_t i_v236 = i_v235 + i_v221; // 0x307f2
-    uint32_t i_v237 = ((i_v233 / 4 | 0x40000000 * i_v233) ^ (i_v233 / 0x2000 | 0x80000 * i_v233) ^ (i_v233 / 0x400000 | 1024 * i_v233)) + ((i_v233 | i_v229) & i_v225 | i_v233 & i_v229) + i_v235; // 0x30800
-    uint32_t i_v238 = ((i_v178 / 0x40000 | 0x4000 * i_v178) ^ i_v178 / 8 ^ (i_v178 / 128 | 0x2000000 * i_v178)) + i_v174 + i_v210 + ((i_v230 / 0x80000 | 0x2000 * i_v230) ^ i_v230 / 1024 ^ (i_v230 / 0x20000 | 0x8000 * i_v230)); // 0x30898
-    int32_t i_v239 = i_v238 - 0x3db47490 + i_v224 + (i_v236 & (i_v232 ^ i_v228) ^ i_v228) + ((i_v236 / 64 | 0x4000000 * i_v236) ^ (i_v236 / 2048 | 0x200000 * i_v236) ^ (i_v236 / 0x2000000 | 128 * i_v236)); // 0x308b4
-    uint32_t i_v240 = i_v239 + i_v225; // 0x30900
-    uint32_t i_v241 = ((i_v237 / 4 | 0x40000000 * i_v237) ^ (i_v237 / 0x2000 | 0x80000 * i_v237) ^ (i_v237 / 0x400000 | 1024 * i_v237)) + ((i_v237 | i_v233) & i_v229 | i_v237 & i_v233) + i_v239; // 0x3090e
-    uint32_t i_v242 = ((i_v182 / 0x40000 | 0x4000 * i_v182) ^ i_v182 / 8 ^ (i_v182 / 128 | 0x2000000 * i_v182)) + i_v178 + i_v214 + ((i_v234 / 0x80000 | 0x2000 * i_v234) ^ i_v234 / 1024 ^ (i_v234 / 0x20000 | 0x8000 * i_v234)); // 0x309a6
-    int32_t i_v243 = i_v242 - 0x3893ae5d + i_v228 + (i_v240 & (i_v236 ^ i_v232) ^ i_v232) + ((i_v240 / 64 | 0x4000000 * i_v240) ^ (i_v240 / 2048 | 0x200000 * i_v240) ^ (i_v240 / 0x2000000 | 128 * i_v240)); // 0x309c2
-    uint32_t i_v244 = i_v243 + i_v229; // 0x30a0e
-    uint32_t i_v245 = ((i_v241 / 4 | 0x40000000 * i_v241) ^ (i_v241 / 0x2000 | 0x80000 * i_v241) ^ (i_v241 / 0x400000 | 1024 * i_v241)) + ((i_v241 | i_v237) & i_v233 | i_v241 & i_v237) + i_v243; // 0x30a1c
-    uint32_t i_v246 = ((i_v186 / 0x40000 | 0x4000 * i_v186) ^ i_v186 / 8 ^ (i_v186 / 128 | 0x2000000 * i_v186)) + i_v182 + i_v218 + ((i_v238 / 0x80000 | 0x2000 * i_v238) ^ i_v238 / 1024 ^ (i_v238 / 0x20000 | 0x8000 * i_v238)); // 0x30ab4
-    int32_t i_v247 = i_v246 - 0x2e6d17e7 + i_v232 + (i_v244 & (i_v240 ^ i_v236) ^ i_v236) + ((i_v244 / 64 | 0x4000000 * i_v244) ^ (i_v244 / 2048 | 0x200000 * i_v244) ^ (i_v244 / 0x2000000 | 128 * i_v244)); // 0x30ad0
-    uint32_t i_v248 = i_v247 + i_v233; // 0x30b1c
-    uint32_t i_v249 = ((i_v245 / 4 | 0x40000000 * i_v245) ^ (i_v245 / 0x2000 | 0x80000 * i_v245) ^ (i_v245 / 0x400000 | 1024 * i_v245)) + ((i_v245 | i_v241) & i_v237 | i_v245 & i_v241) + i_v247; // 0x30b2a
-    uint32_t i_v250 = ((i_v190 / 0x40000 | 0x4000 * i_v190) ^ i_v190 / 8 ^ (i_v190 / 128 | 0x2000000 * i_v190)) + i_v186 + i_v222 + ((i_v242 / 0x80000 | 0x2000 * i_v242) ^ i_v242 / 1024 ^ (i_v242 / 0x20000 | 0x8000 * i_v242)); // 0x30bc2
-    int32_t i_v251 = i_v250 - 0x2966f9dc + i_v236 + (i_v248 & (i_v244 ^ i_v240) ^ i_v240) + ((i_v248 / 64 | 0x4000000 * i_v248) ^ (i_v248 / 2048 | 0x200000 * i_v248) ^ (i_v248 / 0x2000000 | 128 * i_v248)); // 0x30bde
-    uint32_t i_v252 = i_v251 + i_v237; // 0x30c2a
-    uint32_t i_v253 = ((i_v249 / 4 | 0x40000000 * i_v249) ^ (i_v249 / 0x2000 | 0x80000 * i_v249) ^ (i_v249 / 0x400000 | 1024 * i_v249)) + ((i_v249 | i_v245) & i_v241 | i_v249 & i_v245) + i_v251; // 0x30c38
-    uint32_t i_v254 = ((i_v194 / 0x40000 | 0x4000 * i_v194) ^ i_v194 / 8 ^ (i_v194 / 128 | 0x2000000 * i_v194)) + i_v190 + i_v226 + ((i_v246 / 0x80000 | 0x2000 * i_v246) ^ i_v246 / 1024 ^ (i_v246 / 0x20000 | 0x8000 * i_v246)); // 0x30cd0
-    int32_t i_v255 = i_v254 - 0xbf1ca7b + i_v240 + (i_v252 & (i_v248 ^ i_v244) ^ i_v244) + ((i_v252 / 64 | 0x4000000 * i_v252) ^ (i_v252 / 2048 | 0x200000 * i_v252) ^ (i_v252 / 0x2000000 | 128 * i_v252)); // 0x30cec
-    uint32_t i_v256 = i_v255 + i_v241; // 0x30d38
-    uint32_t i_v257 = ((i_v253 / 4 | 0x40000000 * i_v253) ^ (i_v253 / 0x2000 | 0x80000 * i_v253) ^ (i_v253 / 0x400000 | 1024 * i_v253)) + ((i_v253 | i_v249) & i_v245 | i_v253 & i_v249) + i_v255; // 0x30d46
-    uint32_t i_v258 = ((i_v198 / 0x40000 | 0x4000 * i_v198) ^ i_v198 / 8 ^ (i_v198 / 128 | 0x2000000 * i_v198)) + i_v194 + i_v230 + ((i_v250 / 0x80000 | 0x2000 * i_v250) ^ i_v250 / 1024 ^ (i_v250 / 0x20000 | 0x8000 * i_v250)); // 0x30de4
-    int32_t i_v259 = i_v258 + 0x106aa070 + i_v244 + (i_v256 & (i_v252 ^ i_v248) ^ i_v248) + ((i_v256 / 64 | 0x4000000 * i_v256) ^ (i_v256 / 2048 | 0x200000 * i_v256) ^ (i_v256 / 0x2000000 | 128 * i_v256)); // 0x30e00
-    uint32_t i_v260 = i_v259 + i_v245; // 0x30e4c
-    uint32_t i_v261 = ((i_v257 / 4 | 0x40000000 * i_v257) ^ (i_v257 / 0x2000 | 0x80000 * i_v257) ^ (i_v257 / 0x400000 | 1024 * i_v257)) + ((i_v257 | i_v253) & i_v249 | i_v257 & i_v253) + i_v259; // 0x30e5a
-    uint32_t i_v262 = ((i_v202 / 0x40000 | 0x4000 * i_v202) ^ i_v202 / 8 ^ (i_v202 / 128 | 0x2000000 * i_v202)) + i_v198 + i_v234 + ((i_v254 / 0x80000 | 0x2000 * i_v254) ^ i_v254 / 1024 ^ (i_v254 / 0x20000 | 0x8000 * i_v254)); // 0x30efa
-    int32_t i_v263 = i_v262 + 0x19a4c116 + i_v248 + (i_v260 & (i_v256 ^ i_v252) ^ i_v252) + ((i_v260 / 64 | 0x4000000 * i_v260) ^ (i_v260 / 2048 | 0x200000 * i_v260) ^ (i_v260 / 0x2000000 | 128 * i_v260)); // 0x30f16
-    uint32_t i_v264 = i_v263 + i_v249; // 0x30f62
-    uint32_t i_v265 = ((i_v261 / 4 | 0x40000000 * i_v261) ^ (i_v261 / 0x2000 | 0x80000 * i_v261) ^ (i_v261 / 0x400000 | 1024 * i_v261)) + ((i_v261 | i_v257) & i_v253 | i_v261 & i_v257) + i_v263; // 0x30f70
-    uint32_t i_v266 = ((i_v206 / 0x40000 | 0x4000 * i_v206) ^ i_v206 / 8 ^ (i_v206 / 128 | 0x2000000 * i_v206)) + i_v202 + i_v238 + ((i_v258 / 0x80000 | 0x2000 * i_v258) ^ i_v258 / 1024 ^ (i_v258 / 0x20000 | 0x8000 * i_v258)); // 0x31010
-    int32_t i_v267 = i_v266 + 0x1e376c08 + i_v252 + (i_v264 & (i_v260 ^ i_v256) ^ i_v256) + ((i_v264 / 64 | 0x4000000 * i_v264) ^ (i_v264 / 2048 | 0x200000 * i_v264) ^ (i_v264 / 0x2000000 | 128 * i_v264)); // 0x3102c
-    uint32_t i_v268 = i_v267 + i_v253; // 0x31078
-    uint32_t i_v269 = ((i_v265 / 4 | 0x40000000 * i_v265) ^ (i_v265 / 0x2000 | 0x80000 * i_v265) ^ (i_v265 / 0x400000 | 1024 * i_v265)) + ((i_v265 | i_v261) & i_v257 | i_v265 & i_v261) + i_v267; // 0x31086
-    uint32_t i_v270 = ((i_v210 / 0x40000 | 0x4000 * i_v210) ^ i_v210 / 8 ^ (i_v210 / 128 | 0x2000000 * i_v210)) + i_v206 + i_v242 + ((i_v262 / 0x80000 | 0x2000 * i_v262) ^ i_v262 / 1024 ^ (i_v262 / 0x20000 | 0x8000 * i_v262)); // 0x31126
-    int32_t i_v271 = i_v270 + 0x2748774c + i_v256 + (i_v268 & (i_v264 ^ i_v260) ^ i_v260) + ((i_v268 / 64 | 0x4000000 * i_v268) ^ (i_v268 / 2048 | 0x200000 * i_v268) ^ (i_v268 / 0x2000000 | 128 * i_v268)); // 0x31142
-    uint32_t i_v272 = i_v271 + i_v257; // 0x3118e
-    uint32_t i_v273 = ((i_v269 / 4 | 0x40000000 * i_v269) ^ (i_v269 / 0x2000 | 0x80000 * i_v269) ^ (i_v269 / 0x400000 | 1024 * i_v269)) + ((i_v269 | i_v265) & i_v261 | i_v269 & i_v265) + i_v271; // 0x3119c
-    uint32_t i_v274 = ((i_v214 / 0x40000 | 0x4000 * i_v214) ^ i_v214 / 8 ^ (i_v214 / 128 | 0x2000000 * i_v214)) + i_v210 + i_v246 + ((i_v266 / 0x80000 | 0x2000 * i_v266) ^ i_v266 / 1024 ^ (i_v266 / 0x20000 | 0x8000 * i_v266)); // 0x3123c
-    int32_t i_v275 = i_v274 + 0x34b0bcb5 + i_v260 + (i_v272 & (i_v268 ^ i_v264) ^ i_v264) + ((i_v272 / 64 | 0x4000000 * i_v272) ^ (i_v272 / 2048 | 0x200000 * i_v272) ^ (i_v272 / 0x2000000 | 128 * i_v272)); // 0x31258
-    uint32_t i_v276 = i_v275 + i_v261; // 0x312a4
-    uint32_t i_v277 = ((i_v273 / 4 | 0x40000000 * i_v273) ^ (i_v273 / 0x2000 | 0x80000 * i_v273) ^ (i_v273 / 0x400000 | 1024 * i_v273)) + ((i_v273 | i_v269) & i_v265 | i_v273 & i_v269) + i_v275; // 0x312b2
-    uint32_t i_v278 = ((i_v218 / 0x40000 | 0x4000 * i_v218) ^ i_v218 / 8 ^ (i_v218 / 128 | 0x2000000 * i_v218)) + i_v214 + i_v250 + ((i_v270 / 0x80000 | 0x2000 * i_v270) ^ i_v270 / 1024 ^ (i_v270 / 0x20000 | 0x8000 * i_v270)); // 0x31352
-    int32_t i_v279 = i_v278 + 0x391c0cb3 + i_v264 + (i_v276 & (i_v272 ^ i_v268) ^ i_v268) + ((i_v276 / 64 | 0x4000000 * i_v276) ^ (i_v276 / 2048 | 0x200000 * i_v276) ^ (i_v276 / 0x2000000 | 128 * i_v276)); // 0x3136e
-    uint32_t i_v280 = i_v279 + i_v265; // 0x313ba
-    uint32_t i_v281 = ((i_v277 / 4 | 0x40000000 * i_v277) ^ (i_v277 / 0x2000 | 0x80000 * i_v277) ^ (i_v277 / 0x400000 | 1024 * i_v277)) + ((i_v277 | i_v273) & i_v269 | i_v277 & i_v273) + i_v279; // 0x313c8
-    uint32_t i_v282 = ((i_v222 / 0x40000 | 0x4000 * i_v222) ^ i_v222 / 8 ^ (i_v222 / 128 | 0x2000000 * i_v222)) + i_v218 + i_v254 + ((i_v274 / 0x80000 | 0x2000 * i_v274) ^ i_v274 / 1024 ^ (i_v274 / 0x20000 | 0x8000 * i_v274)); // 0x31468
-    int32_t i_v283 = i_v282 + 0x4ed8aa4a + i_v268 + (i_v280 & (i_v276 ^ i_v272) ^ i_v272) + ((i_v280 / 64 | 0x4000000 * i_v280) ^ (i_v280 / 2048 | 0x200000 * i_v280) ^ (i_v280 / 0x2000000 | 128 * i_v280)); // 0x31484
-    uint32_t i_v284 = i_v283 + i_v269; // 0x314d0
-    uint32_t i_v285 = ((i_v281 / 4 | 0x40000000 * i_v281) ^ (i_v281 / 0x2000 | 0x80000 * i_v281) ^ (i_v281 / 0x400000 | 1024 * i_v281)) + ((i_v281 | i_v277) & i_v273 | i_v281 & i_v277) + i_v283; // 0x314de
-    uint32_t i_v286 = ((i_v226 / 0x40000 | 0x4000 * i_v226) ^ i_v226 / 8 ^ (i_v226 / 128 | 0x2000000 * i_v226)) + i_v222 + i_v258 + ((i_v278 / 0x80000 | 0x2000 * i_v278) ^ i_v278 / 1024 ^ (i_v278 / 0x20000 | 0x8000 * i_v278)); // 0x3157e
-    int32_t i_v287 = i_v286 + 0x5b9cca4f + i_v272 + (i_v284 & (i_v280 ^ i_v276) ^ i_v276) + ((i_v284 / 64 | 0x4000000 * i_v284) ^ (i_v284 / 2048 | 0x200000 * i_v284) ^ (i_v284 / 0x2000000 | 128 * i_v284)); // 0x3159a
-    uint32_t i_v288 = i_v287 + i_v273; // 0x315e6
-    uint32_t i_v289 = ((i_v285 / 4 | 0x40000000 * i_v285) ^ (i_v285 / 0x2000 | 0x80000 * i_v285) ^ (i_v285 / 0x400000 | 1024 * i_v285)) + ((i_v285 | i_v281) & i_v277 | i_v285 & i_v281) + i_v287; // 0x315f4
-    uint32_t i_v290 = ((i_v230 / 0x40000 | 0x4000 * i_v230) ^ i_v230 / 8 ^ (i_v230 / 128 | 0x2000000 * i_v230)) + i_v226 + i_v262 + ((i_v282 / 0x80000 | 0x2000 * i_v282) ^ i_v282 / 1024 ^ (i_v282 / 0x20000 | 0x8000 * i_v282)); // 0x31694
-    int32_t i_v291 = i_v290 + 0x682e6ff3 + i_v276 + (i_v288 & (i_v284 ^ i_v280) ^ i_v280) + ((i_v288 / 64 | 0x4000000 * i_v288) ^ (i_v288 / 2048 | 0x200000 * i_v288) ^ (i_v288 / 0x2000000 | 128 * i_v288)); // 0x316b0
-    uint32_t i_v292 = i_v291 + i_v277; // 0x316fc
-    uint32_t i_v293 = ((i_v289 / 4 | 0x40000000 * i_v289) ^ (i_v289 / 0x2000 | 0x80000 * i_v289) ^ (i_v289 / 0x400000 | 1024 * i_v289)) + ((i_v289 | i_v285) & i_v281 | i_v289 & i_v285) + i_v291; // 0x3170a
-    uint32_t i_v294 = ((i_v234 / 0x40000 | 0x4000 * i_v234) ^ i_v234 / 8 ^ (i_v234 / 128 | 0x2000000 * i_v234)) + i_v230 + i_v266 + ((i_v286 / 0x80000 | 0x2000 * i_v286) ^ i_v286 / 1024 ^ (i_v286 / 0x20000 | 0x8000 * i_v286)); // 0x317aa
-    int32_t i_v295 = i_v294 + 0x748f82ee + i_v280 + (i_v292 & (i_v288 ^ i_v284) ^ i_v284) + ((i_v292 / 64 | 0x4000000 * i_v292) ^ (i_v292 / 2048 | 0x200000 * i_v292) ^ (i_v292 / 0x2000000 | 128 * i_v292)); // 0x317c6
-    uint32_t i_v296 = i_v295 + i_v281; // 0x31812
-    uint32_t i_v297 = ((i_v293 / 4 | 0x40000000 * i_v293) ^ (i_v293 / 0x2000 | 0x80000 * i_v293) ^ (i_v293 / 0x400000 | 1024 * i_v293)) + ((i_v293 | i_v289) & i_v285 | i_v293 & i_v289) + i_v295; // 0x31820
-    uint32_t i_v298 = ((i_v238 / 0x40000 | 0x4000 * i_v238) ^ i_v238 / 8 ^ (i_v238 / 128 | 0x2000000 * i_v238)) + i_v234 + i_v270 + ((i_v290 / 0x80000 | 0x2000 * i_v290) ^ i_v290 / 1024 ^ (i_v290 / 0x20000 | 0x8000 * i_v290)); // 0x318c0
-    int32_t i_v299 = i_v298 + 0x78a5636f + i_v284 + (i_v296 & (i_v292 ^ i_v288) ^ i_v288) + ((i_v296 / 64 | 0x4000000 * i_v296) ^ (i_v296 / 2048 | 0x200000 * i_v296) ^ (i_v296 / 0x2000000 | 128 * i_v296)); // 0x318dc
-    uint32_t i_v300 = i_v299 + i_v285; // 0x31928
-    uint32_t i_v301 = ((i_v297 / 4 | 0x40000000 * i_v297) ^ (i_v297 / 0x2000 | 0x80000 * i_v297) ^ (i_v297 / 0x400000 | 1024 * i_v297)) + ((i_v297 | i_v293) & i_v289 | i_v297 & i_v293) + i_v299; // 0x31936
-    uint32_t i_v302 = ((i_v242 / 0x40000 | 0x4000 * i_v242) ^ i_v242 / 8 ^ (i_v242 / 128 | 0x2000000 * i_v242)) + i_v238 + i_v274 + ((i_v294 / 0x80000 | 0x2000 * i_v294) ^ i_v294 / 1024 ^ (i_v294 / 0x20000 | 0x8000 * i_v294)); // 0x319d6
-    int32_t i_v303 = i_v302 - 0x7b3787ec + i_v288 + (i_v300 & (i_v296 ^ i_v292) ^ i_v292) + ((i_v300 / 64 | 0x4000000 * i_v300) ^ (i_v300 / 2048 | 0x200000 * i_v300) ^ (i_v300 / 0x2000000 | 128 * i_v300)); // 0x319f2
-    uint32_t i_v304 = i_v303 + i_v289; // 0x31a3e
-    uint32_t i_v305 = ((i_v301 / 4 | 0x40000000 * i_v301) ^ (i_v301 / 0x2000 | 0x80000 * i_v301) ^ (i_v301 / 0x400000 | 1024 * i_v301)) + ((i_v301 | i_v297) & i_v293 | i_v301 & i_v297) + i_v303; // 0x31a4c
-    uint32_t i_v306 = ((i_v246 / 0x40000 | 0x4000 * i_v246) ^ i_v246 / 8 ^ (i_v246 / 128 | 0x2000000 * i_v246)) + i_v242 + i_v278 + ((i_v298 / 0x80000 | 0x2000 * i_v298) ^ i_v298 / 1024 ^ (i_v298 / 0x20000 | 0x8000 * i_v298)); // 0x31aec
-    int32_t i_v307 = i_v306 - 0x7338fdf8 + i_v292 + (i_v304 & (i_v300 ^ i_v296) ^ i_v296) + ((i_v304 / 64 | 0x4000000 * i_v304) ^ (i_v304 / 2048 | 0x200000 * i_v304) ^ (i_v304 / 0x2000000 | 128 * i_v304)); // 0x31b08
-    uint32_t i_v308 = i_v307 + i_v293; // 0x31b54
-    uint32_t i_v309 = ((i_v305 / 4 | 0x40000000 * i_v305) ^ (i_v305 / 0x2000 | 0x80000 * i_v305) ^ (i_v305 / 0x400000 | 1024 * i_v305)) + ((i_v305 | i_v301) & i_v297 | i_v305 & i_v301) + i_v307; // 0x31b62
-    uint32_t i_v310 = ((i_v250 / 0x40000 | 0x4000 * i_v250) ^ i_v250 / 8 ^ (i_v250 / 128 | 0x2000000 * i_v250)) + i_v246 + i_v282 + ((i_v302 / 0x80000 | 0x2000 * i_v302) ^ i_v302 / 1024 ^ (i_v302 / 0x20000 | 0x8000 * i_v302)); // 0x31c02
-    int32_t i_v311 = i_v310 - 0x6f410006 + i_v296 + (i_v308 & (i_v304 ^ i_v300) ^ i_v300) + ((i_v308 / 64 | 0x4000000 * i_v308) ^ (i_v308 / 2048 | 0x200000 * i_v308) ^ (i_v308 / 0x2000000 | 128 * i_v308)); // 0x31c1e
-    uint32_t i_v312 = i_v311 + i_v297; // 0x31c6a
-    uint32_t i_v313 = ((i_v309 / 4 | 0x40000000 * i_v309) ^ (i_v309 / 0x2000 | 0x80000 * i_v309) ^ (i_v309 / 0x400000 | 1024 * i_v309)) + ((i_v309 | i_v305) & i_v301 | i_v309 & i_v305) + i_v311; // 0x31c78
-    uint32_t i_v314 = ((i_v254 / 0x40000 | 0x4000 * i_v254) ^ i_v254 / 8 ^ (i_v254 / 128 | 0x2000000 * i_v254)) + i_v250 + i_v286 + ((i_v306 / 0x80000 | 0x2000 * i_v306) ^ i_v306 / 1024 ^ (i_v306 / 0x20000 | 0x8000 * i_v306)); // 0x31d18
-    int32_t i_v315 = i_v314 - 0x5baf9315 + i_v300 + (i_v312 & (i_v308 ^ i_v304) ^ i_v304) + ((i_v312 / 64 | 0x4000000 * i_v312) ^ (i_v312 / 2048 | 0x200000 * i_v312) ^ (i_v312 / 0x2000000 | 128 * i_v312)); // 0x31d34
-    uint32_t i_v316 = i_v315 + i_v301; // 0x31d80
-    uint32_t i_v317 = ((i_v313 / 4 | 0x40000000 * i_v313) ^ (i_v313 / 0x2000 | 0x80000 * i_v313) ^ (i_v313 / 0x400000 | 1024 * i_v313)) + ((i_v313 | i_v309) & i_v305 | i_v313 & i_v309) + i_v315; // 0x31d8e
-    int32_t i_v318 = i_v254 - 0x41065c09 + ((i_v258 / 0x40000 | 0x4000 * i_v258) ^ i_v258 / 8 ^ (i_v258 / 128 | 0x2000000 * i_v258)) + i_v290 + ((i_v310 / 0x80000 | 0x2000 * i_v310) ^ i_v310 / 1024 ^ (i_v310 / 0x20000 | 0x8000 * i_v310)) + i_v304 + (i_v316 & (i_v312 ^ i_v308) ^ i_v308) + ((i_v316 / 64 | 0x4000000 * i_v316) ^ (i_v316 / 2048 | 0x200000 * i_v316) ^ (i_v316 / 0x2000000 | 128 * i_v316)); // 0x31e4a
-    uint32_t i_v319 = i_v318 + i_v305; // 0x31e96
-    uint32_t i_v320 = ((i_v317 / 4 | 0x40000000 * i_v317) ^ (i_v317 / 0x2000 | 0x80000 * i_v317) ^ (i_v317 / 0x400000 | 1024 * i_v317)) + ((i_v317 | i_v313) & i_v309 | i_v317 & i_v313) + i_v318; // 0x31ea4
-    int32_t i_v321 = i_v258 - 0x398e870e + ((i_v262 / 0x40000 | 0x4000 * i_v262) ^ i_v262 / 8 ^ (i_v262 / 128 | 0x2000000 * i_v262)) + i_v294 + ((i_v314 / 0x80000 | 0x2000 * i_v314) ^ i_v314 / 1024 ^ (i_v314 / 0x20000 | 0x8000 * i_v314)) + i_v308 + (i_v319 & (i_v316 ^ i_v312) ^ i_v312) + ((i_v319 / 64 | 0x4000000 * i_v319) ^ (i_v319 / 2048 | 0x200000 * i_v319) ^ (i_v319 / 0x2000000 | 128 * i_v319)); // 0x31f60
-    int32_t i_v322 = i_v320 & i_v317; // 0x31f8a
-    int32_t i_v323 = i_v320 | i_v317; // 0x31f94
-    *p_v70 = (i_v323 & i_v313 | i_v322) + i_v71 + ((i_v320 / 4 | 0x40000000 * i_v320) ^ (i_v320 / 0x2000 | 0x80000 * i_v320) ^ (i_v320 / 0x400000 | 1024 * i_v320)) + i_v321;
+    uint32_t i_v9 = 0x10000 * (int32_t) * (char *)(i_v3 + 5) |
+                    0x1000000 * (int32_t)i_v8;      // 0x2dfaa
+    int32_t i_v10 = (int32_t) * (char *)(i_v3 + 7); // 0x2dfbe
+    uint32_t i_v11 =
+        256 * (int32_t) * (char *)(i_v3 + 6) | i_v9 | i_v10; // 0x2dfc0
+    unsigned char i_v12 = *(char *)(i_v3 + 9);               // 0x2dfd8
+    uint32_t i_v13 = 0x10000 * (int32_t)i_v12 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 8); // 0x2dfdc
+    int32_t i_v14 = (int32_t) * (char *)(i_v3 + 11);             // 0x2dff0
+    uint32_t i_v15 =
+        256 * (int32_t) * (char *)(i_v3 + 10) | i_v13 | i_v14; // 0x2dff2
+    unsigned char i_v16 = *(char *)(i_v3 + 13);                // 0x2e00a
+    uint32_t i_v17 = 0x10000 * (int32_t)i_v16 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 12); // 0x2e00e
+    int32_t i_v18 = (int32_t) * (char *)(i_v3 + 15);              // 0x2e022
+    uint32_t i_v19 =
+        256 * (int32_t) * (char *)(i_v3 + 14) | i_v17 | i_v18; // 0x2e024
+    unsigned char i_v20 = *(char *)(i_v3 + 17);                // 0x2e03c
+    uint32_t i_v21 = 0x10000 * (int32_t)i_v20 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 16); // 0x2e040
+    int32_t i_v22 = (int32_t) * (char *)(i_v3 + 19);              // 0x2e054
+    uint32_t i_v23 =
+        256 * (int32_t) * (char *)(i_v3 + 18) | i_v21 | i_v22; // 0x2e056
+    unsigned char i_v24 = *(char *)(i_v3 + 21);                // 0x2e06e
+    uint32_t i_v25 = 0x10000 * (int32_t)i_v24 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 20); // 0x2e072
+    int32_t i_v26 = (int32_t) * (char *)(i_v3 + 23);              // 0x2e086
+    uint32_t i_v27 =
+        256 * (int32_t) * (char *)(i_v3 + 22) | i_v25 | i_v26; // 0x2e088
+    unsigned char i_v28 = *(char *)(i_v3 + 25);                // 0x2e0a0
+    uint32_t i_v29 = 0x10000 * (int32_t)i_v28 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 24); // 0x2e0a4
+    int32_t i_v30 = (int32_t) * (char *)(i_v3 + 27);              // 0x2e0b8
+    uint32_t i_v31 =
+        256 * (int32_t) * (char *)(i_v3 + 26) | i_v29 | i_v30; // 0x2e0ba
+    unsigned char i_v32 = *(char *)(i_v3 + 29);                // 0x2e0d2
+    uint32_t i_v33 = 0x10000 * (int32_t)i_v32 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 28); // 0x2e0d6
+    int32_t i_v34 = (int32_t) * (char *)(i_v3 + 31);              // 0x2e0ea
+    uint32_t i_v35 =
+        256 * (int32_t) * (char *)(i_v3 + 30) | i_v33 | i_v34; // 0x2e0ec
+    unsigned char i_v36 = *(char *)(i_v3 + 33);                // 0x2e104
+    uint32_t i_v37 = 0x10000 * (int32_t)i_v36 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 32); // 0x2e108
+    int32_t i_v38 = (int32_t) * (char *)(i_v3 + 35);              // 0x2e11c
+    uint32_t i_v39 =
+        256 * (int32_t) * (char *)(i_v3 + 34) | i_v37 | i_v38; // 0x2e11e
+    unsigned char i_v40 = *(char *)(i_v3 + 37);                // 0x2e136
+    uint32_t i_v41 = 0x10000 * (int32_t)i_v40 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 36); // 0x2e13a
+    int32_t i_v42 = (int32_t) * (char *)(i_v3 + 39);              // 0x2e14e
+    uint32_t i_v43 =
+        256 * (int32_t) * (char *)(i_v3 + 38) | i_v41 | i_v42; // 0x2e150
+    unsigned char i_v44 = *(char *)(i_v3 + 41);                // 0x2e168
+    uint32_t i_v45 = 0x10000 * (int32_t)i_v44 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 40); // 0x2e16c
+    int32_t i_v46 = (int32_t) * (char *)(i_v3 + 43);              // 0x2e180
+    uint32_t i_v47 =
+        256 * (int32_t) * (char *)(i_v3 + 42) | i_v45 | i_v46; // 0x2e182
+    unsigned char i_v48 = *(char *)(i_v3 + 45);                // 0x2e19a
+    uint32_t i_v49 = 0x10000 * (int32_t)i_v48 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 44); // 0x2e19e
+    int32_t i_v50 = (int32_t) * (char *)(i_v3 + 47);              // 0x2e1b2
+    uint32_t i_v51 =
+        256 * (int32_t) * (char *)(i_v3 + 46) | i_v49 | i_v50; // 0x2e1b4
+    unsigned char i_v52 = *(char *)(i_v3 + 49);                // 0x2e1cc
+    uint32_t i_v53 = 0x10000 * (int32_t)i_v52 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 48); // 0x2e1d0
+    int32_t i_v54 = (int32_t) * (char *)(i_v3 + 51);              // 0x2e1e4
+    uint32_t i_v55 =
+        256 * (int32_t) * (char *)(i_v3 + 50) | i_v53 | i_v54; // 0x2e1e6
+    unsigned char i_v56 = *(char *)(i_v3 + 53);                // 0x2e1fe
+    uint32_t i_v57 = 0x10000 * (int32_t)i_v56 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 52); // 0x2e202
+    int32_t i_v58 = (int32_t) * (char *)(i_v3 + 55);              // 0x2e216
+    uint32_t i_v59 =
+        256 * (int32_t) * (char *)(i_v3 + 54) | i_v57 | i_v58; // 0x2e218
+    unsigned char i_v60 = *(char *)(i_v3 + 57);                // 0x2e230
+    uint32_t i_v61 = 0x10000 * (int32_t)i_v60 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 56);   // 0x2e234
+    uint32_t i_v62 = 256 * (int32_t) * (char *)(i_v3 + 58) | i_v61; // 0x2e240
+    int32_t i_v63 = (int32_t) * (char *)(i_v3 + 59);                // 0x2e248
+    uint32_t i_v64 = i_v62 | i_v63;                                 // 0x2e24a
+    unsigned char i_v65 = *(char *)(i_v3 + 61);                     // 0x2e262
+    uint32_t i_v66 = 0x10000 * (int32_t)i_v65 |
+                     0x1000000 * (int32_t) * (char *)(i_v3 + 60);   // 0x2e266
+    uint32_t i_v67 = 256 * (int32_t) * (char *)(i_v3 + 62) | i_v66; // 0x2e272
+    int32_t i_v68 = (int32_t) * (char *)(i_v3 + 63);                // 0x2e27a
+    uint32_t i_v69 = i_v67 | i_v68;                                 // 0x2e27c
+    int32_t *p_v70 = (int32_t *)(i_v2 + 8);                         // 0x2e288
+    uint32_t i_v71 = *p_v70;                                        // 0x2e288
+    int32_t *p_v72 = (int32_t *)(i_v2 + 12);                        // 0x2e292
+    int32_t i_v73 = *p_v72;                                         // 0x2e292
+    int32_t *p_v74 = (int32_t *)(i_v2 + 16);                        // 0x2e29c
+    int32_t i_v75 = *p_v74;                                         // 0x2e29c
+    int32_t *p_v76 = (int32_t *)(i_v2 + 20);                        // 0x2e2a6
+    int32_t *p_v77 = (int32_t *)(i_v2 + 24);                        // 0x2e2b0
+    uint32_t i_v78 = *p_v77;                                        // 0x2e2b0
+    int32_t *p_v79 = (int32_t *)(i_v2 + 28);                        // 0x2e2ba
+    int32_t i_v80 = *p_v79;                                         // 0x2e2ba
+    int32_t *p_v81 = (int32_t *)(i_v2 + 32);                        // 0x2e2c4
+    int32_t i_v82 = *p_v81;                                         // 0x2e2c4
+    int32_t *p_v83 = (int32_t *)(i_v2 + 36);                        // 0x2e2ce
+    int32_t i_v84 = *p_v83;                                         // 0x2e2ce
+    int32_t i_v85 = W[0];                                           // 0x2e312
+    int32_t i_v86 =
+        i_v84 + 0x428a2f98 +
+        ((i_v78 / 64 | 0x4000000 * i_v78) ^ (i_v78 / 2048 | 0x200000 * i_v78) ^
+         (i_v78 / 0x2000000 | 128 * i_v78)) +
+        i_v85 + ((i_v82 ^ i_v80) & i_v78 ^ i_v82); // 0x2e31e
+    uint32_t i_v87 = i_v86 + *p_v76;               // 0x2e36a
+    uint32_t i_v88 =
+        (i_v75 & (i_v73 | i_v71) | i_v73 & i_v71) +
+        ((i_v71 / 4 | 0x40000000 * i_v71) ^ (i_v71 / 0x2000 | 0x80000 * i_v71) ^
+         (i_v71 / 0x400000 | 1024 * i_v71)) +
+        i_v86; // 0x2e378
+    int32_t i_v89 =
+        i_v11 + 0x71374491 + i_v82 + (i_v87 & (i_v80 ^ i_v78) ^ i_v80) +
+        ((i_v87 / 64 | 0x4000000 * i_v87) ^ (i_v87 / 2048 | 0x200000 * i_v87) ^
+         (i_v87 / 0x2000000 | 128 * i_v87)); // 0x2e3c8
+    uint32_t i_v90 = i_v89 + i_v75;          // 0x2e414
+    uint32_t i_v91 =
+        ((i_v88 / 4 | 0x40000000 * i_v88) ^ (i_v88 / 0x2000 | 0x80000 * i_v88) ^
+         (i_v88 / 0x400000 | 1024 * i_v88)) +
+        ((i_v88 | i_v71) & i_v73 | i_v88 & i_v71) + i_v89; // 0x2e422
+    int32_t i_v92 =
+        i_v15 - 0x4a3f0431 + i_v80 + (i_v90 & (i_v87 ^ i_v78) ^ i_v78) +
+        ((i_v90 / 64 | 0x4000000 * i_v90) ^ (i_v90 / 2048 | 0x200000 * i_v90) ^
+         (i_v90 / 0x2000000 | 128 * i_v90)); // 0x2e472
+    uint32_t i_v93 = i_v92 + i_v73;          // 0x2e4be
+    uint32_t i_v94 =
+        ((i_v91 / 4 | 0x40000000 * i_v91) ^ (i_v91 / 0x2000 | 0x80000 * i_v91) ^
+         (i_v91 / 0x400000 | 1024 * i_v91)) +
+        ((i_v91 | i_v88) & i_v71 | i_v91 & i_v88) + i_v92; // 0x2e4cc
+    int32_t i_v95 =
+        i_v19 - 0x164a245b + i_v78 + (i_v93 & (i_v90 ^ i_v87) ^ i_v87) +
+        ((i_v93 / 64 | 0x4000000 * i_v93) ^ (i_v93 / 2048 | 0x200000 * i_v93) ^
+         (i_v93 / 0x2000000 | 128 * i_v93)); // 0x2e51c
+    uint32_t i_v96 = i_v95 + i_v71;          // 0x2e568
+    uint32_t i_v97 =
+        ((i_v94 / 4 | 0x40000000 * i_v94) ^ (i_v94 / 0x2000 | 0x80000 * i_v94) ^
+         (i_v94 / 0x400000 | 1024 * i_v94)) +
+        ((i_v94 | i_v91) & i_v88 | i_v94 & i_v91) + i_v95; // 0x2e576
+    int32_t i_v98 =
+        i_v23 + 0x3956c25b + i_v87 + (i_v96 & (i_v93 ^ i_v90) ^ i_v90) +
+        ((i_v96 / 64 | 0x4000000 * i_v96) ^ (i_v96 / 2048 | 0x200000 * i_v96) ^
+         (i_v96 / 0x2000000 | 128 * i_v96)); // 0x2e5c6
+    uint32_t i_v99 = i_v98 + i_v88;          // 0x2e612
+    uint32_t i_v100 =
+        ((i_v97 / 4 | 0x40000000 * i_v97) ^ (i_v97 / 0x2000 | 0x80000 * i_v97) ^
+         (i_v97 / 0x400000 | 1024 * i_v97)) +
+        ((i_v97 | i_v94) & i_v91 | i_v97 & i_v94) + i_v98; // 0x2e620
+    int32_t i_v101 =
+        i_v27 + 0x59f111f1 + i_v90 + (i_v99 & (i_v96 ^ i_v93) ^ i_v93) +
+        ((i_v99 / 64 | 0x4000000 * i_v99) ^ (i_v99 / 2048 | 0x200000 * i_v99) ^
+         (i_v99 / 0x2000000 | 128 * i_v99)); // 0x2e670
+    uint32_t i_v102 = i_v101 + i_v91;        // 0x2e6bc
+    uint32_t i_v103 = ((i_v100 / 4 | 0x40000000 * i_v100) ^
+                       (i_v100 / 0x2000 | 0x80000 * i_v100) ^
+                       (i_v100 / 0x400000 | 1024 * i_v100)) +
+                      ((i_v100 | i_v97) & i_v94 | i_v100 & i_v97) +
+                      i_v101; // 0x2e6ca
+    int32_t i_v104 = i_v31 - 0x6dc07d5c + i_v93 +
+                     (i_v102 & (i_v99 ^ i_v96) ^ i_v96) +
+                     ((i_v102 / 64 | 0x4000000 * i_v102) ^
+                      (i_v102 / 2048 | 0x200000 * i_v102) ^
+                      (i_v102 / 0x2000000 | 128 * i_v102)); // 0x2e71a
+    uint32_t i_v105 = i_v104 + i_v94;                       // 0x2e766
+    uint32_t i_v106 = ((i_v103 / 4 | 0x40000000 * i_v103) ^
+                       (i_v103 / 0x2000 | 0x80000 * i_v103) ^
+                       (i_v103 / 0x400000 | 1024 * i_v103)) +
+                      ((i_v103 | i_v100) & i_v97 | i_v103 & i_v100) +
+                      i_v104; // 0x2e774
+    int32_t i_v107 = i_v35 - 0x54e3a12b + i_v96 +
+                     (i_v105 & (i_v102 ^ i_v99) ^ i_v99) +
+                     ((i_v105 / 64 | 0x4000000 * i_v105) ^
+                      (i_v105 / 2048 | 0x200000 * i_v105) ^
+                      (i_v105 / 0x2000000 | 128 * i_v105)); // 0x2e7c4
+    uint32_t i_v108 = i_v107 + i_v97;                       // 0x2e810
+    uint32_t i_v109 = ((i_v106 / 4 | 0x40000000 * i_v106) ^
+                       (i_v106 / 0x2000 | 0x80000 * i_v106) ^
+                       (i_v106 / 0x400000 | 1024 * i_v106)) +
+                      ((i_v106 | i_v103) & i_v100 | i_v106 & i_v103) +
+                      i_v107; // 0x2e81e
+    int32_t i_v110 = i_v39 - 0x27f85568 + i_v99 +
+                     (i_v108 & (i_v105 ^ i_v102) ^ i_v102) +
+                     ((i_v108 / 64 | 0x4000000 * i_v108) ^
+                      (i_v108 / 2048 | 0x200000 * i_v108) ^
+                      (i_v108 / 0x2000000 | 128 * i_v108)); // 0x2e86e
+    uint32_t i_v111 = i_v110 + i_v100;                      // 0x2e8ba
+    uint32_t i_v112 = ((i_v109 / 4 | 0x40000000 * i_v109) ^
+                       (i_v109 / 0x2000 | 0x80000 * i_v109) ^
+                       (i_v109 / 0x400000 | 1024 * i_v109)) +
+                      ((i_v109 | i_v106) & i_v103 | i_v109 & i_v106) +
+                      i_v110; // 0x2e8c8
+    int32_t i_v113 = i_v43 + 0x12835b01 + i_v102 +
+                     (i_v111 & (i_v108 ^ i_v105) ^ i_v105) +
+                     ((i_v111 / 64 | 0x4000000 * i_v111) ^
+                      (i_v111 / 2048 | 0x200000 * i_v111) ^
+                      (i_v111 / 0x2000000 | 128 * i_v111)); // 0x2e918
+    uint32_t i_v114 = i_v113 + i_v103;                      // 0x2e964
+    uint32_t i_v115 = ((i_v112 / 4 | 0x40000000 * i_v112) ^
+                       (i_v112 / 0x2000 | 0x80000 * i_v112) ^
+                       (i_v112 / 0x400000 | 1024 * i_v112)) +
+                      ((i_v112 | i_v109) & i_v106 | i_v112 & i_v109) +
+                      i_v113; // 0x2e972
+    int32_t i_v116 = i_v47 + 0x243185be + i_v105 +
+                     (i_v114 & (i_v111 ^ i_v108) ^ i_v108) +
+                     ((i_v114 / 64 | 0x4000000 * i_v114) ^
+                      (i_v114 / 2048 | 0x200000 * i_v114) ^
+                      (i_v114 / 0x2000000 | 128 * i_v114)); // 0x2e9c2
+    uint32_t i_v117 = i_v116 + i_v106;                      // 0x2ea0e
+    uint32_t i_v118 = ((i_v115 / 4 | 0x40000000 * i_v115) ^
+                       (i_v115 / 0x2000 | 0x80000 * i_v115) ^
+                       (i_v115 / 0x400000 | 1024 * i_v115)) +
+                      ((i_v115 | i_v112) & i_v109 | i_v115 & i_v112) +
+                      i_v116; // 0x2ea1c
+    int32_t i_v119 = i_v51 + 0x550c7dc3 + i_v108 +
+                     (i_v117 & (i_v114 ^ i_v111) ^ i_v111) +
+                     ((i_v117 / 64 | 0x4000000 * i_v117) ^
+                      (i_v117 / 2048 | 0x200000 * i_v117) ^
+                      (i_v117 / 0x2000000 | 128 * i_v117)); // 0x2ea6c
+    uint32_t i_v120 = i_v119 + i_v109;                      // 0x2eab8
+    uint32_t i_v121 = ((i_v118 / 4 | 0x40000000 * i_v118) ^
+                       (i_v118 / 0x2000 | 0x80000 * i_v118) ^
+                       (i_v118 / 0x400000 | 1024 * i_v118)) +
+                      ((i_v118 | i_v115) & i_v112 | i_v118 & i_v115) +
+                      i_v119; // 0x2eac6
+    int32_t i_v122 = i_v55 + 0x72be5d74 + i_v111 +
+                     (i_v120 & (i_v117 ^ i_v114) ^ i_v114) +
+                     ((i_v120 / 64 | 0x4000000 * i_v120) ^
+                      (i_v120 / 2048 | 0x200000 * i_v120) ^
+                      (i_v120 / 0x2000000 | 128 * i_v120)); // 0x2eb16
+    uint32_t i_v123 = i_v122 + i_v112;                      // 0x2eb62
+    uint32_t i_v124 = ((i_v121 / 4 | 0x40000000 * i_v121) ^
+                       (i_v121 / 0x2000 | 0x80000 * i_v121) ^
+                       (i_v121 / 0x400000 | 1024 * i_v121)) +
+                      ((i_v121 | i_v118) & i_v115 | i_v121 & i_v118) +
+                      i_v122; // 0x2eb70
+    int32_t i_v125 = i_v59 - 0x7f214e02 + i_v114 +
+                     (i_v123 & (i_v120 ^ i_v117) ^ i_v117) +
+                     ((i_v123 / 64 | 0x4000000 * i_v123) ^
+                      (i_v123 / 2048 | 0x200000 * i_v123) ^
+                      (i_v123 / 0x2000000 | 128 * i_v123)); // 0x2ebc0
+    uint32_t i_v126 = i_v125 + i_v115;                      // 0x2ec0c
+    uint32_t i_v127 = ((i_v124 / 4 | 0x40000000 * i_v124) ^
+                       (i_v124 / 0x2000 | 0x80000 * i_v124) ^
+                       (i_v124 / 0x400000 | 1024 * i_v124)) +
+                      ((i_v124 | i_v121) & i_v118 | i_v124 & i_v121) +
+                      i_v125; // 0x2ec1a
+    int32_t i_v128 = i_v64 - 0x6423f959 + i_v117 +
+                     (i_v126 & (i_v123 ^ i_v120) ^ i_v120) +
+                     ((i_v126 / 64 | 0x4000000 * i_v126) ^
+                      (i_v126 / 2048 | 0x200000 * i_v126) ^
+                      (i_v126 / 0x2000000 | 128 * i_v126)); // 0x2ec6a
+    uint32_t i_v129 = i_v128 + i_v118;                      // 0x2ecb6
+    uint32_t i_v130 = ((i_v127 / 4 | 0x40000000 * i_v127) ^
+                       (i_v127 / 0x2000 | 0x80000 * i_v127) ^
+                       (i_v127 / 0x400000 | 1024 * i_v127)) +
+                      ((i_v127 | i_v124) & i_v121 | i_v127 & i_v124) +
+                      i_v128; // 0x2ecc4
+    int32_t i_v131 = i_v69 - 0x3e640e8c + i_v120 +
+                     (i_v129 & (i_v126 ^ i_v123) ^ i_v123) +
+                     ((i_v129 / 64 | 0x4000000 * i_v129) ^
+                      (i_v129 / 2048 | 0x200000 * i_v129) ^
+                      (i_v129 / 0x2000000 | 128 * i_v129)); // 0x2ed14
+    uint32_t i_v132 = i_v131 + i_v121;                      // 0x2ed60
+    uint32_t i_v133 = ((i_v130 / 4 | 0x40000000 * i_v130) ^
+                       (i_v130 / 0x2000 | 0x80000 * i_v130) ^
+                       (i_v130 / 0x400000 | 1024 * i_v130)) +
+                      ((i_v130 | i_v127) & i_v124 | i_v130 & i_v127) +
+                      i_v131; // 0x2ed6e
+    uint32_t i_v134 = i_v43 +
+                      ((0x4000 * i_v11 | i_v9 / 0x40000) ^ i_v11 / 8 ^
+                       (i_v11 / 128 | 0x2000000 * i_v10)) +
+                      ((0x2000 * i_v64 | i_v61 / 0x80000) ^ i_v62 / 1024 ^
+                       (0x8000 * i_v64 | i_v61 / 0x20000)) +
+                      i_v85; // 0x2edfe
+    int32_t i_v135 = i_v134 - 0x1b64963f + i_v123 +
+                     (i_v132 & (i_v129 ^ i_v126) ^ i_v126) +
+                     ((i_v132 / 64 | 0x4000000 * i_v132) ^
+                      (i_v132 / 2048 | 0x200000 * i_v132) ^
+                      (i_v132 / 0x2000000 | 128 * i_v132)); // 0x2ee16
+    uint32_t i_v136 = i_v135 + i_v124;                      // 0x2ee62
+    uint32_t i_v137 = ((i_v133 / 4 | 0x40000000 * i_v133) ^
+                       (i_v133 / 0x2000 | 0x80000 * i_v133) ^
+                       (i_v133 / 0x400000 | 1024 * i_v133)) +
+                      ((i_v133 | i_v130) & i_v127 | i_v133 & i_v130) +
+                      i_v135; // 0x2ee70
+    uint32_t i_v138 = ((0x4000 * i_v15 | i_v13 / 0x40000) ^ i_v15 / 8 ^
+                       (i_v15 / 128 | 0x2000000 * i_v14)) +
+                      i_v11 + i_v47 +
+                      ((0x2000 * i_v69 | i_v66 / 0x80000) ^ i_v67 / 1024 ^
+                       (0x8000 * i_v69 | i_v66 / 0x20000)); // 0x2ef00
+    int32_t i_v139 = i_v138 - 0x1041b87a + i_v126 +
+                     (i_v136 & (i_v132 ^ i_v129) ^ i_v129) +
+                     ((i_v136 / 64 | 0x4000000 * i_v136) ^
+                      (i_v136 / 2048 | 0x200000 * i_v136) ^
+                      (i_v136 / 0x2000000 | 128 * i_v136)); // 0x2ef18
+    uint32_t i_v140 = i_v139 + i_v127;                      // 0x2ef64
+    uint32_t i_v141 = ((i_v137 / 4 | 0x40000000 * i_v137) ^
+                       (i_v137 / 0x2000 | 0x80000 * i_v137) ^
+                       (i_v137 / 0x400000 | 1024 * i_v137)) +
+                      ((i_v137 | i_v133) & i_v130 | i_v137 & i_v133) +
+                      i_v139; // 0x2ef72
+    uint32_t i_v142 = ((0x4000 * i_v19 | i_v17 / 0x40000) ^ i_v19 / 8 ^
+                       (i_v19 / 128 | 0x2000000 * i_v18)) +
+                      i_v15 + i_v51 +
+                      ((i_v134 / 0x80000 | 0x2000 * i_v134) ^ i_v134 / 1024 ^
+                       (i_v134 / 0x20000 | 0x8000 * i_v134)); // 0x2f002
+    int32_t i_v143 = i_v142 + 0xfc19dc6 + i_v129 +
+                     (i_v140 & (i_v136 ^ i_v132) ^ i_v132) +
+                     ((i_v140 / 64 | 0x4000000 * i_v140) ^
+                      (i_v140 / 2048 | 0x200000 * i_v140) ^
+                      (i_v140 / 0x2000000 | 128 * i_v140)); // 0x2f01a
+    uint32_t i_v144 = i_v143 + i_v130;                      // 0x2f066
+    uint32_t i_v145 = ((i_v141 / 4 | 0x40000000 * i_v141) ^
+                       (i_v141 / 0x2000 | 0x80000 * i_v141) ^
+                       (i_v141 / 0x400000 | 1024 * i_v141)) +
+                      ((i_v141 | i_v137) & i_v133 | i_v141 & i_v137) +
+                      i_v143; // 0x2f074
+    uint32_t i_v146 = ((0x4000 * i_v23 | i_v21 / 0x40000) ^ i_v23 / 8 ^
+                       (i_v23 / 128 | 0x2000000 * i_v22)) +
+                      i_v19 + i_v55 +
+                      ((i_v138 / 0x80000 | 0x2000 * i_v138) ^ i_v138 / 1024 ^
+                       (i_v138 / 0x20000 | 0x8000 * i_v138)); // 0x2f104
+    int32_t i_v147 = i_v146 + 0x240ca1cc + i_v132 +
+                     (i_v144 & (i_v140 ^ i_v136) ^ i_v136) +
+                     ((i_v144 / 64 | 0x4000000 * i_v144) ^
+                      (i_v144 / 2048 | 0x200000 * i_v144) ^
+                      (i_v144 / 0x2000000 | 128 * i_v144)); // 0x2f11c
+    uint32_t i_v148 = i_v147 + i_v133;                      // 0x2f168
+    uint32_t i_v149 = ((i_v145 / 4 | 0x40000000 * i_v145) ^
+                       (i_v145 / 0x2000 | 0x80000 * i_v145) ^
+                       (i_v145 / 0x400000 | 1024 * i_v145)) +
+                      ((i_v145 | i_v141) & i_v137 | i_v145 & i_v141) +
+                      i_v147; // 0x2f176
+    uint32_t i_v150 = ((0x4000 * i_v27 | i_v25 / 0x40000) ^ i_v27 / 8 ^
+                       (i_v27 / 128 | 0x2000000 * i_v26)) +
+                      i_v23 + i_v59 +
+                      ((i_v142 / 0x80000 | 0x2000 * i_v142) ^ i_v142 / 1024 ^
+                       (i_v142 / 0x20000 | 0x8000 * i_v142)); // 0x2f206
+    int32_t i_v151 = i_v150 + 0x2de92c6f + i_v136 +
+                     (i_v148 & (i_v144 ^ i_v140) ^ i_v140) +
+                     ((i_v148 / 64 | 0x4000000 * i_v148) ^
+                      (i_v148 / 2048 | 0x200000 * i_v148) ^
+                      (i_v148 / 0x2000000 | 128 * i_v148)); // 0x2f21e
+    uint32_t i_v152 = i_v151 + i_v137;                      // 0x2f26a
+    uint32_t i_v153 = ((i_v149 / 4 | 0x40000000 * i_v149) ^
+                       (i_v149 / 0x2000 | 0x80000 * i_v149) ^
+                       (i_v149 / 0x400000 | 1024 * i_v149)) +
+                      ((i_v149 | i_v145) & i_v141 | i_v149 & i_v145) +
+                      i_v151; // 0x2f278
+    uint32_t i_v154 = ((0x4000 * i_v31 | i_v29 / 0x40000) ^ i_v31 / 8 ^
+                       (i_v31 / 128 | 0x2000000 * i_v30)) +
+                      i_v27 + i_v64 +
+                      ((i_v146 / 0x80000 | 0x2000 * i_v146) ^ i_v146 / 1024 ^
+                       (i_v146 / 0x20000 | 0x8000 * i_v146)); // 0x2f308
+    int32_t i_v155 = i_v154 + 0x4a7484aa + i_v140 +
+                     (i_v152 & (i_v148 ^ i_v144) ^ i_v144) +
+                     ((i_v152 / 64 | 0x4000000 * i_v152) ^
+                      (i_v152 / 2048 | 0x200000 * i_v152) ^
+                      (i_v152 / 0x2000000 | 128 * i_v152)); // 0x2f320
+    uint32_t i_v156 = i_v155 + i_v141;                      // 0x2f36c
+    uint32_t i_v157 = ((i_v153 / 4 | 0x40000000 * i_v153) ^
+                       (i_v153 / 0x2000 | 0x80000 * i_v153) ^
+                       (i_v153 / 0x400000 | 1024 * i_v153)) +
+                      ((i_v153 | i_v149) & i_v145 | i_v153 & i_v149) +
+                      i_v155; // 0x2f37a
+    uint32_t i_v158 = ((0x4000 * i_v35 | i_v33 / 0x40000) ^ i_v35 / 8 ^
+                       (i_v35 / 128 | 0x2000000 * i_v34)) +
+                      i_v31 + i_v69 +
+                      ((i_v150 / 0x80000 | 0x2000 * i_v150) ^ i_v150 / 1024 ^
+                       (i_v150 / 0x20000 | 0x8000 * i_v150)); // 0x2f40a
+    int32_t i_v159 = i_v158 + 0x5cb0a9dc + i_v144 +
+                     (i_v156 & (i_v152 ^ i_v148) ^ i_v148) +
+                     ((i_v156 / 64 | 0x4000000 * i_v156) ^
+                      (i_v156 / 2048 | 0x200000 * i_v156) ^
+                      (i_v156 / 0x2000000 | 128 * i_v156)); // 0x2f422
+    uint32_t i_v160 = i_v159 + i_v145;                      // 0x2f46e
+    uint32_t i_v161 = ((i_v157 / 4 | 0x40000000 * i_v157) ^
+                       (i_v157 / 0x2000 | 0x80000 * i_v157) ^
+                       (i_v157 / 0x400000 | 1024 * i_v157)) +
+                      ((i_v157 | i_v153) & i_v149 | i_v157 & i_v153) +
+                      i_v159; // 0x2f47c
+    uint32_t i_v162 = ((0x4000 * i_v39 | i_v37 / 0x40000) ^ i_v39 / 8 ^
+                       (i_v39 / 128 | 0x2000000 * i_v38)) +
+                      i_v35 + i_v134 +
+                      ((i_v154 / 0x80000 | 0x2000 * i_v154) ^ i_v154 / 1024 ^
+                       (i_v154 / 0x20000 | 0x8000 * i_v154)); // 0x2f50c
+    int32_t i_v163 = i_v162 + 0x76f988da + i_v148 +
+                     (i_v160 & (i_v156 ^ i_v152) ^ i_v152) +
+                     ((i_v160 / 64 | 0x4000000 * i_v160) ^
+                      (i_v160 / 2048 | 0x200000 * i_v160) ^
+                      (i_v160 / 0x2000000 | 128 * i_v160)); // 0x2f524
+    uint32_t i_v164 = i_v163 + i_v149;                      // 0x2f570
+    uint32_t i_v165 = ((i_v161 / 4 | 0x40000000 * i_v161) ^
+                       (i_v161 / 0x2000 | 0x80000 * i_v161) ^
+                       (i_v161 / 0x400000 | 1024 * i_v161)) +
+                      ((i_v161 | i_v157) & i_v153 | i_v161 & i_v157) +
+                      i_v163; // 0x2f57e
+    uint32_t i_v166 = ((0x4000 * i_v43 | i_v41 / 0x40000) ^ i_v43 / 8 ^
+                       (i_v43 / 128 | 0x2000000 * i_v42)) +
+                      i_v39 + i_v138 +
+                      ((i_v158 / 0x80000 | 0x2000 * i_v158) ^ i_v158 / 1024 ^
+                       (i_v158 / 0x20000 | 0x8000 * i_v158)); // 0x2f60e
+    int32_t i_v167 = i_v166 - 0x67c1aeae + i_v152 +
+                     (i_v164 & (i_v160 ^ i_v156) ^ i_v156) +
+                     ((i_v164 / 64 | 0x4000000 * i_v164) ^
+                      (i_v164 / 2048 | 0x200000 * i_v164) ^
+                      (i_v164 / 0x2000000 | 128 * i_v164)); // 0x2f626
+    uint32_t i_v168 = i_v167 + i_v153;                      // 0x2f672
+    uint32_t i_v169 = ((i_v165 / 4 | 0x40000000 * i_v165) ^
+                       (i_v165 / 0x2000 | 0x80000 * i_v165) ^
+                       (i_v165 / 0x400000 | 1024 * i_v165)) +
+                      ((i_v165 | i_v161) & i_v157 | i_v165 & i_v161) +
+                      i_v167; // 0x2f680
+    uint32_t i_v170 = ((0x4000 * i_v47 | i_v45 / 0x40000) ^ i_v47 / 8 ^
+                       (i_v47 / 128 | 0x2000000 * i_v46)) +
+                      i_v43 + i_v142 +
+                      ((i_v162 / 0x80000 | 0x2000 * i_v162) ^ i_v162 / 1024 ^
+                       (i_v162 / 0x20000 | 0x8000 * i_v162)); // 0x2f710
+    int32_t i_v171 = i_v170 - 0x57ce3993 + i_v156 +
+                     (i_v168 & (i_v164 ^ i_v160) ^ i_v160) +
+                     ((i_v168 / 64 | 0x4000000 * i_v168) ^
+                      (i_v168 / 2048 | 0x200000 * i_v168) ^
+                      (i_v168 / 0x2000000 | 128 * i_v168)); // 0x2f728
+    uint32_t i_v172 = i_v171 + i_v157;                      // 0x2f774
+    uint32_t i_v173 = ((i_v169 / 4 | 0x40000000 * i_v169) ^
+                       (i_v169 / 0x2000 | 0x80000 * i_v169) ^
+                       (i_v169 / 0x400000 | 1024 * i_v169)) +
+                      ((i_v169 | i_v165) & i_v161 | i_v169 & i_v165) +
+                      i_v171; // 0x2f782
+    uint32_t i_v174 = ((0x4000 * i_v51 | i_v49 / 0x40000) ^ i_v51 / 8 ^
+                       (i_v51 / 128 | 0x2000000 * i_v50)) +
+                      i_v47 + i_v146 +
+                      ((i_v166 / 0x80000 | 0x2000 * i_v166) ^ i_v166 / 1024 ^
+                       (i_v166 / 0x20000 | 0x8000 * i_v166)); // 0x2f812
+    int32_t i_v175 = i_v174 - 0x4ffcd838 + i_v160 +
+                     (i_v172 & (i_v168 ^ i_v164) ^ i_v164) +
+                     ((i_v172 / 64 | 0x4000000 * i_v172) ^
+                      (i_v172 / 2048 | 0x200000 * i_v172) ^
+                      (i_v172 / 0x2000000 | 128 * i_v172)); // 0x2f82a
+    uint32_t i_v176 = i_v175 + i_v161;                      // 0x2f876
+    uint32_t i_v177 = ((i_v173 / 4 | 0x40000000 * i_v173) ^
+                       (i_v173 / 0x2000 | 0x80000 * i_v173) ^
+                       (i_v173 / 0x400000 | 1024 * i_v173)) +
+                      ((i_v173 | i_v169) & i_v165 | i_v173 & i_v169) +
+                      i_v175; // 0x2f884
+    uint32_t i_v178 = ((0x4000 * i_v55 | i_v53 / 0x40000) ^ i_v55 / 8 ^
+                       (i_v55 / 128 | 0x2000000 * i_v54)) +
+                      i_v51 + i_v150 +
+                      ((i_v170 / 0x80000 | 0x2000 * i_v170) ^ i_v170 / 1024 ^
+                       (i_v170 / 0x20000 | 0x8000 * i_v170)); // 0x2f914
+    int32_t i_v179 = i_v178 - 0x40a68039 + i_v164 +
+                     (i_v176 & (i_v172 ^ i_v168) ^ i_v168) +
+                     ((i_v176 / 64 | 0x4000000 * i_v176) ^
+                      (i_v176 / 2048 | 0x200000 * i_v176) ^
+                      (i_v176 / 0x2000000 | 128 * i_v176)); // 0x2f92c
+    uint32_t i_v180 = i_v179 + i_v165;                      // 0x2f978
+    uint32_t i_v181 = ((i_v177 / 4 | 0x40000000 * i_v177) ^
+                       (i_v177 / 0x2000 | 0x80000 * i_v177) ^
+                       (i_v177 / 0x400000 | 1024 * i_v177)) +
+                      ((i_v177 | i_v173) & i_v169 | i_v177 & i_v173) +
+                      i_v179; // 0x2f986
+    uint32_t i_v182 = ((0x4000 * i_v59 | i_v57 / 0x40000) ^ i_v59 / 8 ^
+                       (i_v59 / 128 | 0x2000000 * i_v58)) +
+                      i_v55 + i_v154 +
+                      ((i_v174 / 0x80000 | 0x2000 * i_v174) ^ i_v174 / 1024 ^
+                       (i_v174 / 0x20000 | 0x8000 * i_v174)); // 0x2fa16
+    int32_t i_v183 = i_v182 - 0x391ff40d + i_v168 +
+                     (i_v180 & (i_v176 ^ i_v172) ^ i_v172) +
+                     ((i_v180 / 64 | 0x4000000 * i_v180) ^
+                      (i_v180 / 2048 | 0x200000 * i_v180) ^
+                      (i_v180 / 0x2000000 | 128 * i_v180)); // 0x2fa2e
+    uint32_t i_v184 = i_v183 + i_v169;                      // 0x2fa7a
+    uint32_t i_v185 = ((i_v181 / 4 | 0x40000000 * i_v181) ^
+                       (i_v181 / 0x2000 | 0x80000 * i_v181) ^
+                       (i_v181 / 0x400000 | 1024 * i_v181)) +
+                      ((i_v181 | i_v177) & i_v173 | i_v181 & i_v177) +
+                      i_v183; // 0x2fa88
+    uint32_t i_v186 = ((0x4000 * i_v64 | i_v61 / 0x40000) ^ i_v64 / 8 ^
+                       (i_v64 / 128 | 0x2000000 * i_v63)) +
+                      i_v59 + i_v158 +
+                      ((i_v178 / 0x80000 | 0x2000 * i_v178) ^ i_v178 / 1024 ^
+                       (i_v178 / 0x20000 | 0x8000 * i_v178)); // 0x2fb18
+    int32_t i_v187 = i_v186 - 0x2a586eb9 + i_v172 +
+                     (i_v184 & (i_v180 ^ i_v176) ^ i_v176) +
+                     ((i_v184 / 64 | 0x4000000 * i_v184) ^
+                      (i_v184 / 2048 | 0x200000 * i_v184) ^
+                      (i_v184 / 0x2000000 | 128 * i_v184)); // 0x2fb30
+    uint32_t i_v188 = i_v187 + i_v173;                      // 0x2fb7c
+    uint32_t i_v189 = ((i_v185 / 4 | 0x40000000 * i_v185) ^
+                       (i_v185 / 0x2000 | 0x80000 * i_v185) ^
+                       (i_v185 / 0x400000 | 1024 * i_v185)) +
+                      ((i_v185 | i_v181) & i_v177 | i_v185 & i_v181) +
+                      i_v187; // 0x2fb8a
+    uint32_t i_v190 = ((0x4000 * i_v69 | i_v66 / 0x40000) ^ i_v69 / 8 ^
+                       (i_v69 / 128 | 0x2000000 * i_v68)) +
+                      i_v64 + i_v162 +
+                      ((i_v182 / 0x80000 | 0x2000 * i_v182) ^ i_v182 / 1024 ^
+                       (i_v182 / 0x20000 | 0x8000 * i_v182)); // 0x2fc1a
+    int32_t i_v191 = i_v190 + 0x6ca6351 + i_v176 +
+                     (i_v188 & (i_v184 ^ i_v180) ^ i_v180) +
+                     ((i_v188 / 64 | 0x4000000 * i_v188) ^
+                      (i_v188 / 2048 | 0x200000 * i_v188) ^
+                      (i_v188 / 0x2000000 | 128 * i_v188)); // 0x2fc32
+    uint32_t i_v192 = i_v191 + i_v177;                      // 0x2fc7e
+    uint32_t i_v193 = ((i_v189 / 4 | 0x40000000 * i_v189) ^
+                       (i_v189 / 0x2000 | 0x80000 * i_v189) ^
+                       (i_v189 / 0x400000 | 1024 * i_v189)) +
+                      ((i_v189 | i_v185) & i_v181 | i_v189 & i_v185) +
+                      i_v191; // 0x2fc8c
+    uint32_t i_v194 = ((i_v134 / 0x40000 | 0x4000 * i_v134) ^ i_v134 / 8 ^
+                       (i_v134 / 128 | 0x2000000 * i_v134)) +
+                      i_v69 + i_v166 +
+                      ((i_v186 / 0x80000 | 0x2000 * i_v186) ^ i_v186 / 1024 ^
+                       (i_v186 / 0x20000 | 0x8000 * i_v186)); // 0x2fd1c
+    int32_t i_v195 = i_v194 + 0x14292967 + i_v180 +
+                     (i_v192 & (i_v188 ^ i_v184) ^ i_v184) +
+                     ((i_v192 / 64 | 0x4000000 * i_v192) ^
+                      (i_v192 / 2048 | 0x200000 * i_v192) ^
+                      (i_v192 / 0x2000000 | 128 * i_v192)); // 0x2fd34
+    uint32_t i_v196 = i_v195 + i_v181;                      // 0x2fd80
+    uint32_t i_v197 = ((i_v193 / 4 | 0x40000000 * i_v193) ^
+                       (i_v193 / 0x2000 | 0x80000 * i_v193) ^
+                       (i_v193 / 0x400000 | 1024 * i_v193)) +
+                      ((i_v193 | i_v189) & i_v185 | i_v193 & i_v189) +
+                      i_v195; // 0x2fd8e
+    uint32_t i_v198 = ((i_v138 / 0x40000 | 0x4000 * i_v138) ^ i_v138 / 8 ^
+                       (i_v138 / 128 | 0x2000000 * i_v138)) +
+                      i_v134 + i_v170 +
+                      ((i_v190 / 0x80000 | 0x2000 * i_v190) ^ i_v190 / 1024 ^
+                       (i_v190 / 0x20000 | 0x8000 * i_v190)); // 0x2fe1e
+    int32_t i_v199 = i_v198 + 0x27b70a85 + i_v184 +
+                     (i_v196 & (i_v192 ^ i_v188) ^ i_v188) +
+                     ((i_v196 / 64 | 0x4000000 * i_v196) ^
+                      (i_v196 / 2048 | 0x200000 * i_v196) ^
+                      (i_v196 / 0x2000000 | 128 * i_v196)); // 0x2fe3a
+    uint32_t i_v200 = i_v199 + i_v185;                      // 0x2fe86
+    uint32_t i_v201 = ((i_v197 / 4 | 0x40000000 * i_v197) ^
+                       (i_v197 / 0x2000 | 0x80000 * i_v197) ^
+                       (i_v197 / 0x400000 | 1024 * i_v197)) +
+                      ((i_v197 | i_v193) & i_v189 | i_v197 & i_v193) +
+                      i_v199; // 0x2fe94
+    uint32_t i_v202 = ((i_v142 / 0x40000 | 0x4000 * i_v142) ^ i_v142 / 8 ^
+                       (i_v142 / 128 | 0x2000000 * i_v142)) +
+                      i_v138 + i_v174 +
+                      ((i_v194 / 0x80000 | 0x2000 * i_v194) ^ i_v194 / 1024 ^
+                       (i_v194 / 0x20000 | 0x8000 * i_v194)); // 0x2ff24
+    int32_t i_v203 = i_v202 + 0x2e1b2138 + i_v188 +
+                     (i_v200 & (i_v196 ^ i_v192) ^ i_v192) +
+                     ((i_v200 / 64 | 0x4000000 * i_v200) ^
+                      (i_v200 / 2048 | 0x200000 * i_v200) ^
+                      (i_v200 / 0x2000000 | 128 * i_v200)); // 0x2ff40
+    uint32_t i_v204 = i_v203 + i_v189;                      // 0x2ff8c
+    uint32_t i_v205 = ((i_v201 / 4 | 0x40000000 * i_v201) ^
+                       (i_v201 / 0x2000 | 0x80000 * i_v201) ^
+                       (i_v201 / 0x400000 | 1024 * i_v201)) +
+                      ((i_v201 | i_v197) & i_v193 | i_v201 & i_v197) +
+                      i_v203; // 0x2ff9a
+    uint32_t i_v206 = ((i_v146 / 0x40000 | 0x4000 * i_v146) ^ i_v146 / 8 ^
+                       (i_v146 / 128 | 0x2000000 * i_v146)) +
+                      i_v142 + i_v178 +
+                      ((i_v198 / 0x80000 | 0x2000 * i_v198) ^ i_v198 / 1024 ^
+                       (i_v198 / 0x20000 | 0x8000 * i_v198)); // 0x30030
+    int32_t i_v207 = i_v206 + 0x4d2c6dfc + i_v192 +
+                     (i_v204 & (i_v200 ^ i_v196) ^ i_v196) +
+                     ((i_v204 / 64 | 0x4000000 * i_v204) ^
+                      (i_v204 / 2048 | 0x200000 * i_v204) ^
+                      (i_v204 / 0x2000000 | 128 * i_v204)); // 0x3004c
+    uint32_t i_v208 = i_v207 + i_v193;                      // 0x30098
+    uint32_t i_v209 = ((i_v205 / 4 | 0x40000000 * i_v205) ^
+                       (i_v205 / 0x2000 | 0x80000 * i_v205) ^
+                       (i_v205 / 0x400000 | 1024 * i_v205)) +
+                      ((i_v205 | i_v201) & i_v197 | i_v205 & i_v201) +
+                      i_v207; // 0x300a6
+    uint32_t i_v210 = ((i_v150 / 0x40000 | 0x4000 * i_v150) ^ i_v150 / 8 ^
+                       (i_v150 / 128 | 0x2000000 * i_v150)) +
+                      i_v146 + i_v182 +
+                      ((i_v202 / 0x80000 | 0x2000 * i_v202) ^ i_v202 / 1024 ^
+                       (i_v202 / 0x20000 | 0x8000 * i_v202)); // 0x3013c
+    int32_t i_v211 = i_v210 + 0x53380d13 + i_v196 +
+                     (i_v208 & (i_v204 ^ i_v200) ^ i_v200) +
+                     ((i_v208 / 64 | 0x4000000 * i_v208) ^
+                      (i_v208 / 2048 | 0x200000 * i_v208) ^
+                      (i_v208 / 0x2000000 | 128 * i_v208)); // 0x30158
+    uint32_t i_v212 = i_v211 + i_v197;                      // 0x301a4
+    uint32_t i_v213 = ((i_v209 / 4 | 0x40000000 * i_v209) ^
+                       (i_v209 / 0x2000 | 0x80000 * i_v209) ^
+                       (i_v209 / 0x400000 | 1024 * i_v209)) +
+                      ((i_v209 | i_v205) & i_v201 | i_v209 & i_v205) +
+                      i_v211; // 0x301b2
+    uint32_t i_v214 = ((i_v154 / 0x40000 | 0x4000 * i_v154) ^ i_v154 / 8 ^
+                       (i_v154 / 128 | 0x2000000 * i_v154)) +
+                      i_v150 + i_v186 +
+                      ((i_v206 / 0x80000 | 0x2000 * i_v206) ^ i_v206 / 1024 ^
+                       (i_v206 / 0x20000 | 0x8000 * i_v206)); // 0x30248
+    int32_t i_v215 = i_v214 + 0x650a7354 + i_v200 +
+                     (i_v212 & (i_v208 ^ i_v204) ^ i_v204) +
+                     ((i_v212 / 64 | 0x4000000 * i_v212) ^
+                      (i_v212 / 2048 | 0x200000 * i_v212) ^
+                      (i_v212 / 0x2000000 | 128 * i_v212)); // 0x30264
+    uint32_t i_v216 = i_v215 + i_v201;                      // 0x302b0
+    uint32_t i_v217 = ((i_v213 / 4 | 0x40000000 * i_v213) ^
+                       (i_v213 / 0x2000 | 0x80000 * i_v213) ^
+                       (i_v213 / 0x400000 | 1024 * i_v213)) +
+                      ((i_v213 | i_v209) & i_v205 | i_v213 & i_v209) +
+                      i_v215; // 0x302be
+    uint32_t i_v218 = ((i_v158 / 0x40000 | 0x4000 * i_v158) ^ i_v158 / 8 ^
+                       (i_v158 / 128 | 0x2000000 * i_v158)) +
+                      i_v154 + i_v190 +
+                      ((i_v210 / 0x80000 | 0x2000 * i_v210) ^ i_v210 / 1024 ^
+                       (i_v210 / 0x20000 | 0x8000 * i_v210)); // 0x30354
+    int32_t i_v219 = i_v218 + 0x766a0abb + i_v204 +
+                     (i_v216 & (i_v212 ^ i_v208) ^ i_v208) +
+                     ((i_v216 / 64 | 0x4000000 * i_v216) ^
+                      (i_v216 / 2048 | 0x200000 * i_v216) ^
+                      (i_v216 / 0x2000000 | 128 * i_v216)); // 0x30370
+    uint32_t i_v220 = i_v219 + i_v205;                      // 0x303bc
+    uint32_t i_v221 = ((i_v217 / 4 | 0x40000000 * i_v217) ^
+                       (i_v217 / 0x2000 | 0x80000 * i_v217) ^
+                       (i_v217 / 0x400000 | 1024 * i_v217)) +
+                      ((i_v217 | i_v213) & i_v209 | i_v217 & i_v213) +
+                      i_v219; // 0x303ca
+    uint32_t i_v222 = ((i_v162 / 0x40000 | 0x4000 * i_v162) ^ i_v162 / 8 ^
+                       (i_v162 / 128 | 0x2000000 * i_v162)) +
+                      i_v158 + i_v194 +
+                      ((i_v214 / 0x80000 | 0x2000 * i_v214) ^ i_v214 / 1024 ^
+                       (i_v214 / 0x20000 | 0x8000 * i_v214)); // 0x30460
+    int32_t i_v223 = i_v222 - 0x7e3d36d2 + i_v208 +
+                     (i_v220 & (i_v216 ^ i_v212) ^ i_v212) +
+                     ((i_v220 / 64 | 0x4000000 * i_v220) ^
+                      (i_v220 / 2048 | 0x200000 * i_v220) ^
+                      (i_v220 / 0x2000000 | 128 * i_v220)); // 0x3047c
+    uint32_t i_v224 = i_v223 + i_v209;                      // 0x304c8
+    uint32_t i_v225 = ((i_v221 / 4 | 0x40000000 * i_v221) ^
+                       (i_v221 / 0x2000 | 0x80000 * i_v221) ^
+                       (i_v221 / 0x400000 | 1024 * i_v221)) +
+                      ((i_v221 | i_v217) & i_v213 | i_v221 & i_v217) +
+                      i_v223; // 0x304d6
+    uint32_t i_v226 = ((i_v166 / 0x40000 | 0x4000 * i_v166) ^ i_v166 / 8 ^
+                       (i_v166 / 128 | 0x2000000 * i_v166)) +
+                      i_v162 + i_v198 +
+                      ((i_v218 / 0x80000 | 0x2000 * i_v218) ^ i_v218 / 1024 ^
+                       (i_v218 / 0x20000 | 0x8000 * i_v218)); // 0x3056e
+    int32_t i_v227 = i_v226 - 0x6d8dd37b + i_v212 +
+                     (i_v224 & (i_v220 ^ i_v216) ^ i_v216) +
+                     ((i_v224 / 64 | 0x4000000 * i_v224) ^
+                      (i_v224 / 2048 | 0x200000 * i_v224) ^
+                      (i_v224 / 0x2000000 | 128 * i_v224)); // 0x3058a
+    uint32_t i_v228 = i_v227 + i_v213;                      // 0x305d6
+    uint32_t i_v229 = ((i_v225 / 4 | 0x40000000 * i_v225) ^
+                       (i_v225 / 0x2000 | 0x80000 * i_v225) ^
+                       (i_v225 / 0x400000 | 1024 * i_v225)) +
+                      ((i_v225 | i_v221) & i_v217 | i_v225 & i_v221) +
+                      i_v227; // 0x305e4
+    uint32_t i_v230 = ((i_v170 / 0x40000 | 0x4000 * i_v170) ^ i_v170 / 8 ^
+                       (i_v170 / 128 | 0x2000000 * i_v170)) +
+                      i_v166 + i_v202 +
+                      ((i_v222 / 0x80000 | 0x2000 * i_v222) ^ i_v222 / 1024 ^
+                       (i_v222 / 0x20000 | 0x8000 * i_v222)); // 0x3067c
+    int32_t i_v231 = i_v230 - 0x5d40175f + i_v216 +
+                     (i_v228 & (i_v224 ^ i_v220) ^ i_v220) +
+                     ((i_v228 / 64 | 0x4000000 * i_v228) ^
+                      (i_v228 / 2048 | 0x200000 * i_v228) ^
+                      (i_v228 / 0x2000000 | 128 * i_v228)); // 0x30698
+    uint32_t i_v232 = i_v231 + i_v217;                      // 0x306e4
+    uint32_t i_v233 = ((i_v229 / 4 | 0x40000000 * i_v229) ^
+                       (i_v229 / 0x2000 | 0x80000 * i_v229) ^
+                       (i_v229 / 0x400000 | 1024 * i_v229)) +
+                      ((i_v229 | i_v225) & i_v221 | i_v229 & i_v225) +
+                      i_v231; // 0x306f2
+    uint32_t i_v234 = ((i_v174 / 0x40000 | 0x4000 * i_v174) ^ i_v174 / 8 ^
+                       (i_v174 / 128 | 0x2000000 * i_v174)) +
+                      i_v170 + i_v206 +
+                      ((i_v226 / 0x80000 | 0x2000 * i_v226) ^ i_v226 / 1024 ^
+                       (i_v226 / 0x20000 | 0x8000 * i_v226)); // 0x3078a
+    int32_t i_v235 = i_v234 - 0x57e599b5 + i_v220 +
+                     (i_v232 & (i_v228 ^ i_v224) ^ i_v224) +
+                     ((i_v232 / 64 | 0x4000000 * i_v232) ^
+                      (i_v232 / 2048 | 0x200000 * i_v232) ^
+                      (i_v232 / 0x2000000 | 128 * i_v232)); // 0x307a6
+    uint32_t i_v236 = i_v235 + i_v221;                      // 0x307f2
+    uint32_t i_v237 = ((i_v233 / 4 | 0x40000000 * i_v233) ^
+                       (i_v233 / 0x2000 | 0x80000 * i_v233) ^
+                       (i_v233 / 0x400000 | 1024 * i_v233)) +
+                      ((i_v233 | i_v229) & i_v225 | i_v233 & i_v229) +
+                      i_v235; // 0x30800
+    uint32_t i_v238 = ((i_v178 / 0x40000 | 0x4000 * i_v178) ^ i_v178 / 8 ^
+                       (i_v178 / 128 | 0x2000000 * i_v178)) +
+                      i_v174 + i_v210 +
+                      ((i_v230 / 0x80000 | 0x2000 * i_v230) ^ i_v230 / 1024 ^
+                       (i_v230 / 0x20000 | 0x8000 * i_v230)); // 0x30898
+    int32_t i_v239 = i_v238 - 0x3db47490 + i_v224 +
+                     (i_v236 & (i_v232 ^ i_v228) ^ i_v228) +
+                     ((i_v236 / 64 | 0x4000000 * i_v236) ^
+                      (i_v236 / 2048 | 0x200000 * i_v236) ^
+                      (i_v236 / 0x2000000 | 128 * i_v236)); // 0x308b4
+    uint32_t i_v240 = i_v239 + i_v225;                      // 0x30900
+    uint32_t i_v241 = ((i_v237 / 4 | 0x40000000 * i_v237) ^
+                       (i_v237 / 0x2000 | 0x80000 * i_v237) ^
+                       (i_v237 / 0x400000 | 1024 * i_v237)) +
+                      ((i_v237 | i_v233) & i_v229 | i_v237 & i_v233) +
+                      i_v239; // 0x3090e
+    uint32_t i_v242 = ((i_v182 / 0x40000 | 0x4000 * i_v182) ^ i_v182 / 8 ^
+                       (i_v182 / 128 | 0x2000000 * i_v182)) +
+                      i_v178 + i_v214 +
+                      ((i_v234 / 0x80000 | 0x2000 * i_v234) ^ i_v234 / 1024 ^
+                       (i_v234 / 0x20000 | 0x8000 * i_v234)); // 0x309a6
+    int32_t i_v243 = i_v242 - 0x3893ae5d + i_v228 +
+                     (i_v240 & (i_v236 ^ i_v232) ^ i_v232) +
+                     ((i_v240 / 64 | 0x4000000 * i_v240) ^
+                      (i_v240 / 2048 | 0x200000 * i_v240) ^
+                      (i_v240 / 0x2000000 | 128 * i_v240)); // 0x309c2
+    uint32_t i_v244 = i_v243 + i_v229;                      // 0x30a0e
+    uint32_t i_v245 = ((i_v241 / 4 | 0x40000000 * i_v241) ^
+                       (i_v241 / 0x2000 | 0x80000 * i_v241) ^
+                       (i_v241 / 0x400000 | 1024 * i_v241)) +
+                      ((i_v241 | i_v237) & i_v233 | i_v241 & i_v237) +
+                      i_v243; // 0x30a1c
+    uint32_t i_v246 = ((i_v186 / 0x40000 | 0x4000 * i_v186) ^ i_v186 / 8 ^
+                       (i_v186 / 128 | 0x2000000 * i_v186)) +
+                      i_v182 + i_v218 +
+                      ((i_v238 / 0x80000 | 0x2000 * i_v238) ^ i_v238 / 1024 ^
+                       (i_v238 / 0x20000 | 0x8000 * i_v238)); // 0x30ab4
+    int32_t i_v247 = i_v246 - 0x2e6d17e7 + i_v232 +
+                     (i_v244 & (i_v240 ^ i_v236) ^ i_v236) +
+                     ((i_v244 / 64 | 0x4000000 * i_v244) ^
+                      (i_v244 / 2048 | 0x200000 * i_v244) ^
+                      (i_v244 / 0x2000000 | 128 * i_v244)); // 0x30ad0
+    uint32_t i_v248 = i_v247 + i_v233;                      // 0x30b1c
+    uint32_t i_v249 = ((i_v245 / 4 | 0x40000000 * i_v245) ^
+                       (i_v245 / 0x2000 | 0x80000 * i_v245) ^
+                       (i_v245 / 0x400000 | 1024 * i_v245)) +
+                      ((i_v245 | i_v241) & i_v237 | i_v245 & i_v241) +
+                      i_v247; // 0x30b2a
+    uint32_t i_v250 = ((i_v190 / 0x40000 | 0x4000 * i_v190) ^ i_v190 / 8 ^
+                       (i_v190 / 128 | 0x2000000 * i_v190)) +
+                      i_v186 + i_v222 +
+                      ((i_v242 / 0x80000 | 0x2000 * i_v242) ^ i_v242 / 1024 ^
+                       (i_v242 / 0x20000 | 0x8000 * i_v242)); // 0x30bc2
+    int32_t i_v251 = i_v250 - 0x2966f9dc + i_v236 +
+                     (i_v248 & (i_v244 ^ i_v240) ^ i_v240) +
+                     ((i_v248 / 64 | 0x4000000 * i_v248) ^
+                      (i_v248 / 2048 | 0x200000 * i_v248) ^
+                      (i_v248 / 0x2000000 | 128 * i_v248)); // 0x30bde
+    uint32_t i_v252 = i_v251 + i_v237;                      // 0x30c2a
+    uint32_t i_v253 = ((i_v249 / 4 | 0x40000000 * i_v249) ^
+                       (i_v249 / 0x2000 | 0x80000 * i_v249) ^
+                       (i_v249 / 0x400000 | 1024 * i_v249)) +
+                      ((i_v249 | i_v245) & i_v241 | i_v249 & i_v245) +
+                      i_v251; // 0x30c38
+    uint32_t i_v254 = ((i_v194 / 0x40000 | 0x4000 * i_v194) ^ i_v194 / 8 ^
+                       (i_v194 / 128 | 0x2000000 * i_v194)) +
+                      i_v190 + i_v226 +
+                      ((i_v246 / 0x80000 | 0x2000 * i_v246) ^ i_v246 / 1024 ^
+                       (i_v246 / 0x20000 | 0x8000 * i_v246)); // 0x30cd0
+    int32_t i_v255 = i_v254 - 0xbf1ca7b + i_v240 +
+                     (i_v252 & (i_v248 ^ i_v244) ^ i_v244) +
+                     ((i_v252 / 64 | 0x4000000 * i_v252) ^
+                      (i_v252 / 2048 | 0x200000 * i_v252) ^
+                      (i_v252 / 0x2000000 | 128 * i_v252)); // 0x30cec
+    uint32_t i_v256 = i_v255 + i_v241;                      // 0x30d38
+    uint32_t i_v257 = ((i_v253 / 4 | 0x40000000 * i_v253) ^
+                       (i_v253 / 0x2000 | 0x80000 * i_v253) ^
+                       (i_v253 / 0x400000 | 1024 * i_v253)) +
+                      ((i_v253 | i_v249) & i_v245 | i_v253 & i_v249) +
+                      i_v255; // 0x30d46
+    uint32_t i_v258 = ((i_v198 / 0x40000 | 0x4000 * i_v198) ^ i_v198 / 8 ^
+                       (i_v198 / 128 | 0x2000000 * i_v198)) +
+                      i_v194 + i_v230 +
+                      ((i_v250 / 0x80000 | 0x2000 * i_v250) ^ i_v250 / 1024 ^
+                       (i_v250 / 0x20000 | 0x8000 * i_v250)); // 0x30de4
+    int32_t i_v259 = i_v258 + 0x106aa070 + i_v244 +
+                     (i_v256 & (i_v252 ^ i_v248) ^ i_v248) +
+                     ((i_v256 / 64 | 0x4000000 * i_v256) ^
+                      (i_v256 / 2048 | 0x200000 * i_v256) ^
+                      (i_v256 / 0x2000000 | 128 * i_v256)); // 0x30e00
+    uint32_t i_v260 = i_v259 + i_v245;                      // 0x30e4c
+    uint32_t i_v261 = ((i_v257 / 4 | 0x40000000 * i_v257) ^
+                       (i_v257 / 0x2000 | 0x80000 * i_v257) ^
+                       (i_v257 / 0x400000 | 1024 * i_v257)) +
+                      ((i_v257 | i_v253) & i_v249 | i_v257 & i_v253) +
+                      i_v259; // 0x30e5a
+    uint32_t i_v262 = ((i_v202 / 0x40000 | 0x4000 * i_v202) ^ i_v202 / 8 ^
+                       (i_v202 / 128 | 0x2000000 * i_v202)) +
+                      i_v198 + i_v234 +
+                      ((i_v254 / 0x80000 | 0x2000 * i_v254) ^ i_v254 / 1024 ^
+                       (i_v254 / 0x20000 | 0x8000 * i_v254)); // 0x30efa
+    int32_t i_v263 = i_v262 + 0x19a4c116 + i_v248 +
+                     (i_v260 & (i_v256 ^ i_v252) ^ i_v252) +
+                     ((i_v260 / 64 | 0x4000000 * i_v260) ^
+                      (i_v260 / 2048 | 0x200000 * i_v260) ^
+                      (i_v260 / 0x2000000 | 128 * i_v260)); // 0x30f16
+    uint32_t i_v264 = i_v263 + i_v249;                      // 0x30f62
+    uint32_t i_v265 = ((i_v261 / 4 | 0x40000000 * i_v261) ^
+                       (i_v261 / 0x2000 | 0x80000 * i_v261) ^
+                       (i_v261 / 0x400000 | 1024 * i_v261)) +
+                      ((i_v261 | i_v257) & i_v253 | i_v261 & i_v257) +
+                      i_v263; // 0x30f70
+    uint32_t i_v266 = ((i_v206 / 0x40000 | 0x4000 * i_v206) ^ i_v206 / 8 ^
+                       (i_v206 / 128 | 0x2000000 * i_v206)) +
+                      i_v202 + i_v238 +
+                      ((i_v258 / 0x80000 | 0x2000 * i_v258) ^ i_v258 / 1024 ^
+                       (i_v258 / 0x20000 | 0x8000 * i_v258)); // 0x31010
+    int32_t i_v267 = i_v266 + 0x1e376c08 + i_v252 +
+                     (i_v264 & (i_v260 ^ i_v256) ^ i_v256) +
+                     ((i_v264 / 64 | 0x4000000 * i_v264) ^
+                      (i_v264 / 2048 | 0x200000 * i_v264) ^
+                      (i_v264 / 0x2000000 | 128 * i_v264)); // 0x3102c
+    uint32_t i_v268 = i_v267 + i_v253;                      // 0x31078
+    uint32_t i_v269 = ((i_v265 / 4 | 0x40000000 * i_v265) ^
+                       (i_v265 / 0x2000 | 0x80000 * i_v265) ^
+                       (i_v265 / 0x400000 | 1024 * i_v265)) +
+                      ((i_v265 | i_v261) & i_v257 | i_v265 & i_v261) +
+                      i_v267; // 0x31086
+    uint32_t i_v270 = ((i_v210 / 0x40000 | 0x4000 * i_v210) ^ i_v210 / 8 ^
+                       (i_v210 / 128 | 0x2000000 * i_v210)) +
+                      i_v206 + i_v242 +
+                      ((i_v262 / 0x80000 | 0x2000 * i_v262) ^ i_v262 / 1024 ^
+                       (i_v262 / 0x20000 | 0x8000 * i_v262)); // 0x31126
+    int32_t i_v271 = i_v270 + 0x2748774c + i_v256 +
+                     (i_v268 & (i_v264 ^ i_v260) ^ i_v260) +
+                     ((i_v268 / 64 | 0x4000000 * i_v268) ^
+                      (i_v268 / 2048 | 0x200000 * i_v268) ^
+                      (i_v268 / 0x2000000 | 128 * i_v268)); // 0x31142
+    uint32_t i_v272 = i_v271 + i_v257;                      // 0x3118e
+    uint32_t i_v273 = ((i_v269 / 4 | 0x40000000 * i_v269) ^
+                       (i_v269 / 0x2000 | 0x80000 * i_v269) ^
+                       (i_v269 / 0x400000 | 1024 * i_v269)) +
+                      ((i_v269 | i_v265) & i_v261 | i_v269 & i_v265) +
+                      i_v271; // 0x3119c
+    uint32_t i_v274 = ((i_v214 / 0x40000 | 0x4000 * i_v214) ^ i_v214 / 8 ^
+                       (i_v214 / 128 | 0x2000000 * i_v214)) +
+                      i_v210 + i_v246 +
+                      ((i_v266 / 0x80000 | 0x2000 * i_v266) ^ i_v266 / 1024 ^
+                       (i_v266 / 0x20000 | 0x8000 * i_v266)); // 0x3123c
+    int32_t i_v275 = i_v274 + 0x34b0bcb5 + i_v260 +
+                     (i_v272 & (i_v268 ^ i_v264) ^ i_v264) +
+                     ((i_v272 / 64 | 0x4000000 * i_v272) ^
+                      (i_v272 / 2048 | 0x200000 * i_v272) ^
+                      (i_v272 / 0x2000000 | 128 * i_v272)); // 0x31258
+    uint32_t i_v276 = i_v275 + i_v261;                      // 0x312a4
+    uint32_t i_v277 = ((i_v273 / 4 | 0x40000000 * i_v273) ^
+                       (i_v273 / 0x2000 | 0x80000 * i_v273) ^
+                       (i_v273 / 0x400000 | 1024 * i_v273)) +
+                      ((i_v273 | i_v269) & i_v265 | i_v273 & i_v269) +
+                      i_v275; // 0x312b2
+    uint32_t i_v278 = ((i_v218 / 0x40000 | 0x4000 * i_v218) ^ i_v218 / 8 ^
+                       (i_v218 / 128 | 0x2000000 * i_v218)) +
+                      i_v214 + i_v250 +
+                      ((i_v270 / 0x80000 | 0x2000 * i_v270) ^ i_v270 / 1024 ^
+                       (i_v270 / 0x20000 | 0x8000 * i_v270)); // 0x31352
+    int32_t i_v279 = i_v278 + 0x391c0cb3 + i_v264 +
+                     (i_v276 & (i_v272 ^ i_v268) ^ i_v268) +
+                     ((i_v276 / 64 | 0x4000000 * i_v276) ^
+                      (i_v276 / 2048 | 0x200000 * i_v276) ^
+                      (i_v276 / 0x2000000 | 128 * i_v276)); // 0x3136e
+    uint32_t i_v280 = i_v279 + i_v265;                      // 0x313ba
+    uint32_t i_v281 = ((i_v277 / 4 | 0x40000000 * i_v277) ^
+                       (i_v277 / 0x2000 | 0x80000 * i_v277) ^
+                       (i_v277 / 0x400000 | 1024 * i_v277)) +
+                      ((i_v277 | i_v273) & i_v269 | i_v277 & i_v273) +
+                      i_v279; // 0x313c8
+    uint32_t i_v282 = ((i_v222 / 0x40000 | 0x4000 * i_v222) ^ i_v222 / 8 ^
+                       (i_v222 / 128 | 0x2000000 * i_v222)) +
+                      i_v218 + i_v254 +
+                      ((i_v274 / 0x80000 | 0x2000 * i_v274) ^ i_v274 / 1024 ^
+                       (i_v274 / 0x20000 | 0x8000 * i_v274)); // 0x31468
+    int32_t i_v283 = i_v282 + 0x4ed8aa4a + i_v268 +
+                     (i_v280 & (i_v276 ^ i_v272) ^ i_v272) +
+                     ((i_v280 / 64 | 0x4000000 * i_v280) ^
+                      (i_v280 / 2048 | 0x200000 * i_v280) ^
+                      (i_v280 / 0x2000000 | 128 * i_v280)); // 0x31484
+    uint32_t i_v284 = i_v283 + i_v269;                      // 0x314d0
+    uint32_t i_v285 = ((i_v281 / 4 | 0x40000000 * i_v281) ^
+                       (i_v281 / 0x2000 | 0x80000 * i_v281) ^
+                       (i_v281 / 0x400000 | 1024 * i_v281)) +
+                      ((i_v281 | i_v277) & i_v273 | i_v281 & i_v277) +
+                      i_v283; // 0x314de
+    uint32_t i_v286 = ((i_v226 / 0x40000 | 0x4000 * i_v226) ^ i_v226 / 8 ^
+                       (i_v226 / 128 | 0x2000000 * i_v226)) +
+                      i_v222 + i_v258 +
+                      ((i_v278 / 0x80000 | 0x2000 * i_v278) ^ i_v278 / 1024 ^
+                       (i_v278 / 0x20000 | 0x8000 * i_v278)); // 0x3157e
+    int32_t i_v287 = i_v286 + 0x5b9cca4f + i_v272 +
+                     (i_v284 & (i_v280 ^ i_v276) ^ i_v276) +
+                     ((i_v284 / 64 | 0x4000000 * i_v284) ^
+                      (i_v284 / 2048 | 0x200000 * i_v284) ^
+                      (i_v284 / 0x2000000 | 128 * i_v284)); // 0x3159a
+    uint32_t i_v288 = i_v287 + i_v273;                      // 0x315e6
+    uint32_t i_v289 = ((i_v285 / 4 | 0x40000000 * i_v285) ^
+                       (i_v285 / 0x2000 | 0x80000 * i_v285) ^
+                       (i_v285 / 0x400000 | 1024 * i_v285)) +
+                      ((i_v285 | i_v281) & i_v277 | i_v285 & i_v281) +
+                      i_v287; // 0x315f4
+    uint32_t i_v290 = ((i_v230 / 0x40000 | 0x4000 * i_v230) ^ i_v230 / 8 ^
+                       (i_v230 / 128 | 0x2000000 * i_v230)) +
+                      i_v226 + i_v262 +
+                      ((i_v282 / 0x80000 | 0x2000 * i_v282) ^ i_v282 / 1024 ^
+                       (i_v282 / 0x20000 | 0x8000 * i_v282)); // 0x31694
+    int32_t i_v291 = i_v290 + 0x682e6ff3 + i_v276 +
+                     (i_v288 & (i_v284 ^ i_v280) ^ i_v280) +
+                     ((i_v288 / 64 | 0x4000000 * i_v288) ^
+                      (i_v288 / 2048 | 0x200000 * i_v288) ^
+                      (i_v288 / 0x2000000 | 128 * i_v288)); // 0x316b0
+    uint32_t i_v292 = i_v291 + i_v277;                      // 0x316fc
+    uint32_t i_v293 = ((i_v289 / 4 | 0x40000000 * i_v289) ^
+                       (i_v289 / 0x2000 | 0x80000 * i_v289) ^
+                       (i_v289 / 0x400000 | 1024 * i_v289)) +
+                      ((i_v289 | i_v285) & i_v281 | i_v289 & i_v285) +
+                      i_v291; // 0x3170a
+    uint32_t i_v294 = ((i_v234 / 0x40000 | 0x4000 * i_v234) ^ i_v234 / 8 ^
+                       (i_v234 / 128 | 0x2000000 * i_v234)) +
+                      i_v230 + i_v266 +
+                      ((i_v286 / 0x80000 | 0x2000 * i_v286) ^ i_v286 / 1024 ^
+                       (i_v286 / 0x20000 | 0x8000 * i_v286)); // 0x317aa
+    int32_t i_v295 = i_v294 + 0x748f82ee + i_v280 +
+                     (i_v292 & (i_v288 ^ i_v284) ^ i_v284) +
+                     ((i_v292 / 64 | 0x4000000 * i_v292) ^
+                      (i_v292 / 2048 | 0x200000 * i_v292) ^
+                      (i_v292 / 0x2000000 | 128 * i_v292)); // 0x317c6
+    uint32_t i_v296 = i_v295 + i_v281;                      // 0x31812
+    uint32_t i_v297 = ((i_v293 / 4 | 0x40000000 * i_v293) ^
+                       (i_v293 / 0x2000 | 0x80000 * i_v293) ^
+                       (i_v293 / 0x400000 | 1024 * i_v293)) +
+                      ((i_v293 | i_v289) & i_v285 | i_v293 & i_v289) +
+                      i_v295; // 0x31820
+    uint32_t i_v298 = ((i_v238 / 0x40000 | 0x4000 * i_v238) ^ i_v238 / 8 ^
+                       (i_v238 / 128 | 0x2000000 * i_v238)) +
+                      i_v234 + i_v270 +
+                      ((i_v290 / 0x80000 | 0x2000 * i_v290) ^ i_v290 / 1024 ^
+                       (i_v290 / 0x20000 | 0x8000 * i_v290)); // 0x318c0
+    int32_t i_v299 = i_v298 + 0x78a5636f + i_v284 +
+                     (i_v296 & (i_v292 ^ i_v288) ^ i_v288) +
+                     ((i_v296 / 64 | 0x4000000 * i_v296) ^
+                      (i_v296 / 2048 | 0x200000 * i_v296) ^
+                      (i_v296 / 0x2000000 | 128 * i_v296)); // 0x318dc
+    uint32_t i_v300 = i_v299 + i_v285;                      // 0x31928
+    uint32_t i_v301 = ((i_v297 / 4 | 0x40000000 * i_v297) ^
+                       (i_v297 / 0x2000 | 0x80000 * i_v297) ^
+                       (i_v297 / 0x400000 | 1024 * i_v297)) +
+                      ((i_v297 | i_v293) & i_v289 | i_v297 & i_v293) +
+                      i_v299; // 0x31936
+    uint32_t i_v302 = ((i_v242 / 0x40000 | 0x4000 * i_v242) ^ i_v242 / 8 ^
+                       (i_v242 / 128 | 0x2000000 * i_v242)) +
+                      i_v238 + i_v274 +
+                      ((i_v294 / 0x80000 | 0x2000 * i_v294) ^ i_v294 / 1024 ^
+                       (i_v294 / 0x20000 | 0x8000 * i_v294)); // 0x319d6
+    int32_t i_v303 = i_v302 - 0x7b3787ec + i_v288 +
+                     (i_v300 & (i_v296 ^ i_v292) ^ i_v292) +
+                     ((i_v300 / 64 | 0x4000000 * i_v300) ^
+                      (i_v300 / 2048 | 0x200000 * i_v300) ^
+                      (i_v300 / 0x2000000 | 128 * i_v300)); // 0x319f2
+    uint32_t i_v304 = i_v303 + i_v289;                      // 0x31a3e
+    uint32_t i_v305 = ((i_v301 / 4 | 0x40000000 * i_v301) ^
+                       (i_v301 / 0x2000 | 0x80000 * i_v301) ^
+                       (i_v301 / 0x400000 | 1024 * i_v301)) +
+                      ((i_v301 | i_v297) & i_v293 | i_v301 & i_v297) +
+                      i_v303; // 0x31a4c
+    uint32_t i_v306 = ((i_v246 / 0x40000 | 0x4000 * i_v246) ^ i_v246 / 8 ^
+                       (i_v246 / 128 | 0x2000000 * i_v246)) +
+                      i_v242 + i_v278 +
+                      ((i_v298 / 0x80000 | 0x2000 * i_v298) ^ i_v298 / 1024 ^
+                       (i_v298 / 0x20000 | 0x8000 * i_v298)); // 0x31aec
+    int32_t i_v307 = i_v306 - 0x7338fdf8 + i_v292 +
+                     (i_v304 & (i_v300 ^ i_v296) ^ i_v296) +
+                     ((i_v304 / 64 | 0x4000000 * i_v304) ^
+                      (i_v304 / 2048 | 0x200000 * i_v304) ^
+                      (i_v304 / 0x2000000 | 128 * i_v304)); // 0x31b08
+    uint32_t i_v308 = i_v307 + i_v293;                      // 0x31b54
+    uint32_t i_v309 = ((i_v305 / 4 | 0x40000000 * i_v305) ^
+                       (i_v305 / 0x2000 | 0x80000 * i_v305) ^
+                       (i_v305 / 0x400000 | 1024 * i_v305)) +
+                      ((i_v305 | i_v301) & i_v297 | i_v305 & i_v301) +
+                      i_v307; // 0x31b62
+    uint32_t i_v310 = ((i_v250 / 0x40000 | 0x4000 * i_v250) ^ i_v250 / 8 ^
+                       (i_v250 / 128 | 0x2000000 * i_v250)) +
+                      i_v246 + i_v282 +
+                      ((i_v302 / 0x80000 | 0x2000 * i_v302) ^ i_v302 / 1024 ^
+                       (i_v302 / 0x20000 | 0x8000 * i_v302)); // 0x31c02
+    int32_t i_v311 = i_v310 - 0x6f410006 + i_v296 +
+                     (i_v308 & (i_v304 ^ i_v300) ^ i_v300) +
+                     ((i_v308 / 64 | 0x4000000 * i_v308) ^
+                      (i_v308 / 2048 | 0x200000 * i_v308) ^
+                      (i_v308 / 0x2000000 | 128 * i_v308)); // 0x31c1e
+    uint32_t i_v312 = i_v311 + i_v297;                      // 0x31c6a
+    uint32_t i_v313 = ((i_v309 / 4 | 0x40000000 * i_v309) ^
+                       (i_v309 / 0x2000 | 0x80000 * i_v309) ^
+                       (i_v309 / 0x400000 | 1024 * i_v309)) +
+                      ((i_v309 | i_v305) & i_v301 | i_v309 & i_v305) +
+                      i_v311; // 0x31c78
+    uint32_t i_v314 = ((i_v254 / 0x40000 | 0x4000 * i_v254) ^ i_v254 / 8 ^
+                       (i_v254 / 128 | 0x2000000 * i_v254)) +
+                      i_v250 + i_v286 +
+                      ((i_v306 / 0x80000 | 0x2000 * i_v306) ^ i_v306 / 1024 ^
+                       (i_v306 / 0x20000 | 0x8000 * i_v306)); // 0x31d18
+    int32_t i_v315 = i_v314 - 0x5baf9315 + i_v300 +
+                     (i_v312 & (i_v308 ^ i_v304) ^ i_v304) +
+                     ((i_v312 / 64 | 0x4000000 * i_v312) ^
+                      (i_v312 / 2048 | 0x200000 * i_v312) ^
+                      (i_v312 / 0x2000000 | 128 * i_v312)); // 0x31d34
+    uint32_t i_v316 = i_v315 + i_v301;                      // 0x31d80
+    uint32_t i_v317 = ((i_v313 / 4 | 0x40000000 * i_v313) ^
+                       (i_v313 / 0x2000 | 0x80000 * i_v313) ^
+                       (i_v313 / 0x400000 | 1024 * i_v313)) +
+                      ((i_v313 | i_v309) & i_v305 | i_v313 & i_v309) +
+                      i_v315; // 0x31d8e
+    int32_t i_v318 = i_v254 - 0x41065c09 +
+                     ((i_v258 / 0x40000 | 0x4000 * i_v258) ^ i_v258 / 8 ^
+                      (i_v258 / 128 | 0x2000000 * i_v258)) +
+                     i_v290 +
+                     ((i_v310 / 0x80000 | 0x2000 * i_v310) ^ i_v310 / 1024 ^
+                      (i_v310 / 0x20000 | 0x8000 * i_v310)) +
+                     i_v304 + (i_v316 & (i_v312 ^ i_v308) ^ i_v308) +
+                     ((i_v316 / 64 | 0x4000000 * i_v316) ^
+                      (i_v316 / 2048 | 0x200000 * i_v316) ^
+                      (i_v316 / 0x2000000 | 128 * i_v316)); // 0x31e4a
+    uint32_t i_v319 = i_v318 + i_v305;                      // 0x31e96
+    uint32_t i_v320 = ((i_v317 / 4 | 0x40000000 * i_v317) ^
+                       (i_v317 / 0x2000 | 0x80000 * i_v317) ^
+                       (i_v317 / 0x400000 | 1024 * i_v317)) +
+                      ((i_v317 | i_v313) & i_v309 | i_v317 & i_v313) +
+                      i_v318; // 0x31ea4
+    int32_t i_v321 = i_v258 - 0x398e870e +
+                     ((i_v262 / 0x40000 | 0x4000 * i_v262) ^ i_v262 / 8 ^
+                      (i_v262 / 128 | 0x2000000 * i_v262)) +
+                     i_v294 +
+                     ((i_v314 / 0x80000 | 0x2000 * i_v314) ^ i_v314 / 1024 ^
+                      (i_v314 / 0x20000 | 0x8000 * i_v314)) +
+                     i_v308 + (i_v319 & (i_v316 ^ i_v312) ^ i_v312) +
+                     ((i_v319 / 64 | 0x4000000 * i_v319) ^
+                      (i_v319 / 2048 | 0x200000 * i_v319) ^
+                      (i_v319 / 0x2000000 | 128 * i_v319)); // 0x31f60
+    int32_t i_v322 = i_v320 & i_v317;                       // 0x31f8a
+    int32_t i_v323 = i_v320 | i_v317;                       // 0x31f94
+    *p_v70 = (i_v323 & i_v313 | i_v322) + i_v71 +
+             ((i_v320 / 4 | 0x40000000 * i_v320) ^
+              (i_v320 / 0x2000 | 0x80000 * i_v320) ^
+              (i_v320 / 0x400000 | 1024 * i_v320)) +
+             i_v321;
     *p_v72 = i_v320 + *p_v72;
     *p_v74 = i_v317 + *p_v74;
     *p_v76 = i_v313 + *p_v76;
@@ -14837,10 +17743,10 @@ void sha2_process(int32_t * ctx, char * data) {
     __asm_nop(i_v323, i_v322, i_v324, i_v2);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
 // Address range: 0x32060 - 0x3212e
 // Line range:    213 - 256
-void sha2_update(int32_t * ctx, char * input, int32_t ilen) {
+void sha2_update(int32_t *ctx, char *input, int32_t ilen) {
     uint32_t i_v1 = (int32_t)ctx;
     if (ilen < 1) {
         // 0x32126
@@ -14851,14 +17757,14 @@ void sha2_update(int32_t * ctx, char * input, int32_t ilen) {
     // 0x32072
     *ctx = i_v1;
     if (i_v1 < ilen) {
-        int32_t * p_v2 = (int32_t *)(i_v1 + 4); // 0x320a4
+        int32_t *p_v2 = (int32_t *)(i_v1 + 4); // 0x320a4
         *p_v2 = *p_v2 + 1;
     }
     int32_t i_v3 = i_v1 % 64; // 0x32076
     int32_t i_v4 = 64 - i_v3; // 0x3207e
-    char * p_v5 = input; // 0x320b0
-    int32_t i_v6 = ilen; // 0x320b0
-    int32_t i_v7 = i_v3; // 0x320b0
+    char *p_v5 = input;       // 0x320b0
+    int32_t i_v6 = ilen;      // 0x320b0
+    int32_t i_v7 = i_v3;      // 0x320b0
     if (i_v3 != 0 && i_v4 <= ilen) {
         int32_t i_v8 = i_v1 + 40; // 0x320bc
         memcpy((int32_t *)(i_v3 + i_v8), (int32_t *)input, i_v4);
@@ -14867,9 +17773,9 @@ void sha2_update(int32_t * ctx, char * input, int32_t ilen) {
         i_v6 = ilen - i_v4;
         i_v7 = 0;
     }
-    int32_t i_v9 = i_v6; // 0x32108
-    char * p_v10 = p_v5; // 0x32108
-    char * p_v11 = p_v5; // 0x32108
+    int32_t i_v9 = i_v6;  // 0x32108
+    char *p_v10 = p_v5;   // 0x32108
+    char *p_v11 = p_v5;   // 0x32108
     int32_t i_v12 = i_v6; // 0x32108
     if (i_v6 > 63) {
         sha2_process(ctx, p_v10);
@@ -14893,71 +17799,77 @@ void sha2_update(int32_t * ctx, char * input, int32_t ilen) {
     }
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
 // Address range: 0x32130 - 0x32384
 // Line range:    269 - 297
 // Used cryptographic patterns:
 //  - padding_used_in_hashing_algorithms__0x80_0_____0_ (8-bit)
-void sha2_finish(int32_t * ctx, char * output) {
+void sha2_finish(int32_t *ctx, char *output) {
     char msglen[8]; // bp-32, 0x32130
-    char x_v1[8]; // 0x32158
+    char x_v1[8];   // 0x32158
     uint32_t i_v2 = (int32_t)ctx;
     x_v1[0] = (char)(*(int32_t *)(i_v2 + 4) / 0x200000);
     msglen = x_v1;
     uint32_t i_v3 = i_v2 % 64; // 0x32192
     int32_t i_v4 = i_v3 >= 55 == (i_v3 != 55) ? 120 : 56;
-    sha2_update(ctx, "\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00", i_v4 - i_v3);
+    sha2_update(
+        ctx,
+        "\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+        "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+        "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+        "\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00",
+        i_v4 - i_v3);
     sha2_update(ctx, msglen, 8);
-    int32_t * p_v5 = (int32_t *)(i_v2 + 8); // 0x321d0
+    int32_t *p_v5 = (int32_t *)(i_v2 + 8); // 0x321d0
     *output = (char)(*p_v5 / 0x1000000);
     int32_t i_v6 = (int32_t)output; // 0x321da
     *(char *)(i_v6 + 1) = (char)(*p_v5 / 0x10000);
     *(char *)(i_v6 + 2) = (char)(*p_v5 / 256);
     *(char *)(i_v6 + 3) = (char)*p_v5;
-    int32_t * p_v7 = (int32_t *)(i_v2 + 12); // 0x32208
+    int32_t *p_v7 = (int32_t *)(i_v2 + 12); // 0x32208
     *(char *)(i_v6 + 4) = (char)(*p_v7 / 0x1000000);
     *(char *)(i_v6 + 5) = (char)(*p_v7 / 0x10000);
     *(char *)(i_v6 + 6) = (char)(*p_v7 / 256);
     *(char *)(i_v6 + 7) = (char)*p_v7;
-    int32_t * p_v8 = (int32_t *)(i_v2 + 16); // 0x3223e
+    int32_t *p_v8 = (int32_t *)(i_v2 + 16); // 0x3223e
     *(char *)(i_v6 + 8) = (char)(*p_v8 / 0x1000000);
     *(char *)(i_v6 + 9) = (char)(*p_v8 / 0x10000);
     *(char *)(i_v6 + 10) = (char)(*p_v8 / 256);
     *(char *)(i_v6 + 11) = (char)*p_v8;
-    int32_t * p_v9 = (int32_t *)(i_v2 + 20); // 0x32274
+    int32_t *p_v9 = (int32_t *)(i_v2 + 20); // 0x32274
     *(char *)(i_v6 + 12) = (char)(*p_v9 / 0x1000000);
     *(char *)(i_v6 + 13) = (char)(*p_v9 / 0x10000);
     *(char *)(i_v6 + 14) = (char)(*p_v9 / 256);
     *(char *)(i_v6 + 15) = (char)*p_v9;
-    int32_t * p_v10 = (int32_t *)(i_v2 + 24); // 0x322aa
+    int32_t *p_v10 = (int32_t *)(i_v2 + 24); // 0x322aa
     *(char *)(i_v6 + 16) = (char)(*p_v10 / 0x1000000);
     *(char *)(i_v6 + 17) = (char)(*p_v10 / 0x10000);
     *(char *)(i_v6 + 18) = (char)(*p_v10 / 256);
     *(char *)(i_v6 + 19) = (char)*p_v10;
-    int32_t * p_v11 = (int32_t *)(i_v2 + 28); // 0x322e0
+    int32_t *p_v11 = (int32_t *)(i_v2 + 28); // 0x322e0
     *(char *)(i_v6 + 20) = (char)(*p_v11 / 0x1000000);
     *(char *)(i_v6 + 21) = (char)(*p_v11 / 0x10000);
     *(char *)(i_v6 + 22) = (char)(*p_v11 / 256);
     *(char *)(i_v6 + 23) = (char)*p_v11;
-    int32_t * p_v12 = (int32_t *)(i_v2 + 32); // 0x32316
+    int32_t *p_v12 = (int32_t *)(i_v2 + 32); // 0x32316
     *(char *)(i_v6 + 24) = (char)(*p_v12 / 0x1000000);
     *(char *)(i_v6 + 25) = (char)(*p_v12 / 0x10000);
     *(char *)(i_v6 + 26) = (char)(*p_v12 / 256);
     *(char *)(i_v6 + 27) = (char)*p_v12;
-    int32_t * p_v13 = (int32_t *)(i_v2 + 36); // 0x3234c
+    int32_t *p_v13 = (int32_t *)(i_v2 + 36); // 0x3234c
     *(char *)(i_v6 + 28) = (char)(*p_v13 / 0x1000000);
     *(char *)(i_v6 + 29) = (char)(*p_v13 / 0x10000);
     *(char *)(i_v6 + 30) = (char)(*p_v13 / 256);
     int32_t i_v14 = i_v6 + 31; // 0x32372
-    uint32_t i_v15 = *p_v13; // 0x32376
+    uint32_t i_v15 = *p_v13;   // 0x32376
     *(char *)i_v14 = (char)i_v15;
     __asm_nop((int32_t)&i_g101, (int32_t)&msglen, i_v15 % 256, i_v14);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
 // Address range: 0x32384 - 0x323ca
 // Line range:    302 - 312
-void sha2(char * input, int32_t ilen, char * output) {
+void sha2(char *input, int32_t ilen, char *output) {
     // 0x32384
     int32_t ctx; // bp-240, 0x32384
     sha2_starts(&ctx);
@@ -14966,7 +17878,7 @@ void sha2(char * input, int32_t ilen, char * output) {
     __asm_nop((int32_t)memset(&ctx, 0, 232), 0, 232, (int32_t)&ctx);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
 // Address range: 0x323cc - 0x323e4
 // Line range:    314 - 317
 int32_t swab32(int32_t v) {
@@ -14974,20 +17886,20 @@ int32_t swab32(int32_t v) {
     return llvm_bswap_i32(v);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
 // Address range: 0x323e4 - 0x32432
 // Line range:    319 - 327
-void flip_swab(char * dest_p, int32_t * src_p, uint32_t length) {
+void flip_swab(char *dest_p, int32_t *src_p, uint32_t length) {
     int32_t i_v1 = (int32_t)src_p;
     int32_t i_v2 = (int32_t)dest_p;
     uint32_t i_v3 = length / 4; // 0x32422
-    int32_t i_v4 = 0; // 0x32428
+    int32_t i_v4 = 0;           // 0x32428
     if (length < 4) {
         // 0x3242a
         __asm_nop(i_v2, i_v1, i_v3, 0);
         return;
     }
-    int32_t i_v5 = 4 * i_v4; // 0x32400
+    int32_t i_v5 = 4 * i_v4;                          // 0x32400
     int32_t i_v6 = swab32(*(int32_t *)(i_v5 + i_v1)); // 0x32412
     *(int32_t *)(i_v5 + i_v2) = i_v6;
     i_v4++;
@@ -15006,10 +17918,10 @@ void flip_swab(char * dest_p, int32_t * src_p, uint32_t length) {
     __asm_nop(i_v7, i_v1, i_v3, i_v8);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
+// From module: /home/felix/work/share/project/zcash/chip-test/crypto/sha2_c5.c
 // Address range: 0x32434 - 0x3247c
 // Line range:    329 - 337
-void flip32(char * dest_p, int32_t * src_p) {
+void flip32(char *dest_p, int32_t *src_p) {
     int32_t i_v1 = (int32_t)src_p;
     int32_t i_v2; // 0x32460
     for (int32_t i_v3 = 0; i_v3 < 8; i_v3++) {
@@ -15021,19 +17933,20 @@ void flip32(char * dest_p, int32_t * src_p) {
     __asm_nop(i_v2, i_v1, i_v1, 8);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/nocne-list.c
+// From module: /home/felix/work/share/project/zcash/chip-test/base/nocne-list.c
 // Address range: 0x3247c - 0x32596
 // Line range:    9 - 26
-void push_nonce(int32_t * nonce_item) {
+void push_nonce(int32_t *nonce_item) {
     int32_t i_v1 = (int32_t)nonce_item;
     pthread_mutex_lock(&nonce_mutex);
-    memcpy((int32_t *)(1357 * nonce_fifo + (int32_t)&nonce_fifo + 12), nonce_item, 1357);
+    memcpy((int32_t *)(1357 * nonce_fifo + (int32_t)&nonce_fifo + 12),
+           nonce_item, 1357);
     uint32_t i_v2 = nonce_fifo; // 0x324ca
     nonce_fifo = i_v2 < 510 ? i_v2 + 1 : 0;
     uint32_t i_v3 = i_g89; // 0x324fe
-    int32_t i_v4; // 0x3247c
-    int32_t i_v5; // 0x3247c
-    int32_t i_v6; // 0x3247c
+    int32_t i_v4;          // 0x3247c
+    int32_t i_v5;          // 0x3247c
+    int32_t i_v6;          // 0x3247c
     if (i_v3 >= 510 == (i_v3 != 510)) {
         // 0x3251e
         i_g89 = 511;
@@ -15058,7 +17971,7 @@ void push_nonce(int32_t * nonce_item) {
         i_v6 = &nonce_fifo;
         goto lab_0x32580;
     }
-  lab_0x32556:;
+lab_0x32556:;
     // 0x32556
     int32_t i_v8; // bp-1032, 0x3247c
     snprintf((char *)&i_v8, 1024, "%s: nonce fifo full!!!\n", "push_nonce");
@@ -15068,12 +17981,12 @@ void push_nonce(int32_t * nonce_item) {
     i_v5 = 0;
     i_v6 = i_v9;
     goto lab_0x32580;
-  lab_0x32580:
+lab_0x32580:
     // 0x32580
     __asm_nop(pthread_mutex_unlock(&nonce_mutex), i_v4, i_v5, i_v6);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/nocne-list.c
+// From module: /home/felix/work/share/project/zcash/chip-test/base/nocne-list.c
 // Address range: 0x32598 - 0x325dc
 // Line range:    28 - 35
 void clear_nonce_fifo(void) {
@@ -15083,13 +17996,14 @@ void clear_nonce_fifo(void) {
     i_g88 = 0;
     i_g89 = 0;
     int32_t i_v1; // 0x32598
-    __asm_nop(pthread_mutex_unlock(&nonce_mutex), i_v1, 0, (int32_t)&nonce_fifo);
+    __asm_nop(pthread_mutex_unlock(&nonce_mutex), i_v1, 0,
+              (int32_t)&nonce_fifo);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/nocne-list.c
+// From module: /home/felix/work/share/project/zcash/chip-test/base/nocne-list.c
 // Address range: 0x325dc - 0x3267c
 // Line range:    37 - 48
-void pop_nonce(int32_t * nonce_tmp) {
+void pop_nonce(int32_t *nonce_tmp) {
     // 0x325dc
     pthread_mutex_lock(&nonce_mutex);
     i_g89--;
@@ -15098,13 +18012,14 @@ void pop_nonce(int32_t * nonce_tmp) {
     uint32_t i_v2 = i_g88; // 0x3263c
     int32_t i_v3 = i_v2 < 510 ? i_v2 + 1 : 0;
     i_g88 = i_v3;
-    __asm_nop(pthread_mutex_unlock(&nonce_mutex), i_v1, i_v3, (int32_t)&nonce_fifo);
+    __asm_nop(pthread_mutex_unlock(&nonce_mutex), i_v1, i_v3,
+              (int32_t)&nonce_fifo);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/nocne-list.c
+// From module: /home/felix/work/share/project/zcash/chip-test/base/nocne-list.c
 // Address range: 0x3267c - 0x326b4
 // Line range:    50 - 55
-void nonce_fifo_num(int32_t * num) {
+void nonce_fifo_num(int32_t *num) {
     // 0x3267c
     pthread_mutex_lock(&nonce_mutex);
     *num = i_g89;
@@ -15118,9 +18033,9 @@ void nonce_fifo_num(int32_t * num) {
 int32_t add_reg_item(int32_t item) {
     // 0x326b4
     pthread_mutex_lock(&i_g43);
-    int32_t i_v1 = 0; // 0x32716
+    int32_t i_v1 = 0;              // 0x32716
     int32_t i_v2 = 12 * i_v1 + rs; // 0x326e0
-    int32_t i_v3; // 0x326b4
+    int32_t i_v3;                  // 0x326b4
     while (*(int32_t *)(i_v2 + 8) >= 0) {
         // 0x3271a
         i_v1++;
@@ -15136,7 +18051,7 @@ int32_t add_reg_item(int32_t item) {
     *(int32_t *)i_v2 = item;
     pthread_mutex_unlock(&i_g43);
     i_v3 = 1;
-  lab_0x3272a:
+lab_0x3272a:
     // 0x3272a
     return i_v3;
 }
@@ -15144,7 +18059,7 @@ int32_t add_reg_item(int32_t item) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/base/reg-list.c
 // Address range: 0x32738 - 0x32864
 // Line range:    33 - 54
-int32_t read_reg_item(int32_t * item, uint32_t ms) {
+int32_t read_reg_item(int32_t *item, uint32_t ms) {
     int32_t i_v1 = (int32_t)item;
     uint32_t i_v2 = ms % 50 + ms / 50;
     usleep(0xc350);
@@ -15211,7 +18126,7 @@ int32_t read_reg_item(int32_t * item, uint32_t ms) {
         i_v8 = i_v2 - 1;
         i_v3 = -1;
     }
-  lab_0x3285c:
+lab_0x3285c:
     // 0x3285c
     return i_v3;
 }
@@ -15219,7 +18134,7 @@ int32_t read_reg_item(int32_t * item, uint32_t ms) {
 // From module:   /home/felix/work/share/project/zcash/chip-test/base/reg-list.c
 // Address range: 0x32868 - 0x328f0
 // Line range:    56 - 72
-char * reg_list_aging(void) {
+char *reg_list_aging(void) {
     // 0x32868
     pthread_detach(pthread_self());
     if (i_g45 != 1) {
@@ -15228,7 +18143,7 @@ char * reg_list_aging(void) {
     }
     sleep(1);
     pthread_mutex_lock(&i_g43);
-    int32_t * p_v1; // 0x328a4
+    int32_t *p_v1; // 0x328a4
     uint32_t i_v2; // 0x328a4
     for (int32_t i_v3 = 0; i_v3 < 100; i_v3++) {
         // 0x3288e
@@ -15276,7 +18191,9 @@ void reg_list_init(void) {
         *(int32_t *)(rs + 8 + 12 * i_v2) = -1;
     }
     // 0x32952
-    __asm_nop(pthread_create(&i_g44, NULL, (int32_t * (*)(int32_t *))0x32869, NULL), 0, 0x32869, 0);
+    __asm_nop(
+        pthread_create(&i_g44, NULL, (int32_t * (*)(int32_t *))0x32869, NULL),
+        0, 0x32869, 0);
 }
 
 // From module:   /home/felix/work/share/project/zcash/chip-test/base/reg-list.c
@@ -15292,10 +18209,10 @@ void reg_list_exit(void) {
     __asm_nop(pthread_mutex_destroy(&i_g43), 0, 0, rs);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c
-// Address range: 0x329d0 - 0x3301e
-// Line range:    34 - 108
-char * nonce_scanhash(char * args) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c Address
+// range: 0x329d0 - 0x3301e Line range:    34 - 108
+char *nonce_scanhash(char *args) {
     int32_t nonceNum = 0; // bp-40, 0x329e6
     nonce_fifo_num(&nonceNum);
     if (nonceNum == 0) {
@@ -15307,15 +18224,15 @@ char * nonce_scanhash(char * args) {
     int32_t i_v2 = i_v1;
     int32_t i_v3 = (int32_t)args;
     int32_t i_v4 = i_v3 + 172;
-    char * p_v5 = (char *)(i_v3 + 2821);
+    char *p_v5 = (char *)(i_v3 + 2821);
     int32_t i_v6 = 144 * i_v2 + i_v3;
-    int32_t * p_v7 = (int32_t *)(i_v6 + 20);
-    int32_t * p_v8 = (int32_t *)(i_v3 + 2828);
+    int32_t *p_v7 = (int32_t *)(i_v6 + 20);
+    int32_t *p_v8 = (int32_t *)(i_v3 + 2828);
     int32_t i_v9 = i_v1;
-    int32_t * p_v10 = (int32_t *)(i_v3 + 1776);
+    int32_t *p_v10 = (int32_t *)(i_v3 + 1776);
     int32_t i_v11 = 36 * i_v2;
     int32_t i_v12 = i_v1;
-    int32_t * p_v13 = (int32_t *)(i_v3 + 2824);
+    int32_t *p_v13 = (int32_t *)(i_v3 + 2824);
     nonceNum--;
     int32_t i_v14; // bp-1404, 0x329d0
     pop_nonce(&i_v14);
@@ -15334,22 +18251,22 @@ char * nonce_scanhash(char * args) {
         memset((int32_t *)(i_v6 + 96), 0, 4 * *p_v7);
         memset((int32_t *)(i_v6 + 108), 0, 12 * *p_v7);
     }
-    int32_t i_v17; // bp-2428, 0x329d0
-    int32_t i_v18; // 0x329d0
-    int32_t i_v19; // 0x329d0
-    int32_t i_v20; // 0x329d0
-    int32_t * p_v21; // 0x32bf8
-    int32_t * p_v22; // 0x32c32
-    int32_t i_v23; // 0x32d9a
-    int32_t i_v24; // 0x329d0
-    int32_t * p_v25; // 0x32e64
-    int32_t * p_v26; // 0x32e9e
-    int32_t i_v27; // 0x32ff8
-    int32_t * p_v28; // 0x32eec
-    int32_t * p_v29; // 0x32f44
-    int32_t i_v30; // 0x32cca
-    int32_t i_v31; // 0x32cd0
-    int32_t i_v32; // 0x32fba
+    int32_t i_v17;  // bp-2428, 0x329d0
+    int32_t i_v18;  // 0x329d0
+    int32_t i_v19;  // 0x329d0
+    int32_t i_v20;  // 0x329d0
+    int32_t *p_v21; // 0x32bf8
+    int32_t *p_v22; // 0x32c32
+    int32_t i_v23;  // 0x32d9a
+    int32_t i_v24;  // 0x329d0
+    int32_t *p_v25; // 0x32e64
+    int32_t *p_v26; // 0x32e9e
+    int32_t i_v27;  // 0x32ff8
+    int32_t *p_v28; // 0x32eec
+    int32_t *p_v29; // 0x32f44
+    int32_t i_v30;  // 0x32cca
+    int32_t i_v31;  // 0x32cd0
+    int32_t i_v32;  // 0x32fba
     if (i_v4 == 0) {
         // 0x32b9a
         *p_v13 = *p_v13 + 1;
@@ -15366,19 +18283,26 @@ char * nonce_scanhash(char * args) {
                 is_patten_match(i_v18, (char *)&i_v16, (char *)&i_v14);
             }
             // 0x32c7a
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 1) {
                 // 0x32ca4
                 i_v30 = *p_v21;
                 i_v31 = *(int32_t *)(i_v3 + 2832);
-                snprintf((char *)&i_v17, 1024, "Success:valid nonce: chainid=%d chipaddr=%02x nonces=%d total=%d tm=%d err=%d\n", i_v2, i_v12, i_v30, i_v31, 0, 0);
+                snprintf((char *)&i_v17, 1024,
+                         "Success:valid nonce: chainid=%d chipaddr=%02x "
+                         "nonces=%d total=%d tm=%d err=%d\n",
+                         i_v2, i_v12, i_v30, i_v31, 0, 0);
                 _applog(1, (char *)&i_v17, false);
             }
             // 0x32d0e
             if (*(char *)&opt_debug != 0) {
                 // 0x32d1c
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 4) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 4) {
                     // 0x32d46
-                    snprintf((char *)&i_v17, 1024, "SHA256:%02x%02x%02x%02x\n", (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, (int32_t)(unsigned char)i_v1);
+                    snprintf((char *)&i_v17, 1024, "SHA256:%02x%02x%02x%02x\n",
+                             (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1,
+                             (int32_t)(unsigned char)i_v1);
                     _applog(4, (char *)&i_v17, false);
                 }
             }
@@ -15400,19 +18324,27 @@ char * nonce_scanhash(char * args) {
                     is_patten_match(i_v18, (char *)&i_v16, (char *)&i_v14);
                 }
                 // 0x32c7a
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 1) {
                     // 0x32ca4
                     i_v30 = *p_v21;
                     i_v31 = *(int32_t *)(i_v3 + 2832);
-                    snprintf((char *)&i_v17, 1024, "Success:valid nonce: chainid=%d chipaddr=%02x nonces=%d total=%d tm=%d err=%d\n", i_v2, i_v12, i_v30, i_v31, 0, 0);
+                    snprintf((char *)&i_v17, 1024,
+                             "Success:valid nonce: chainid=%d chipaddr=%02x "
+                             "nonces=%d total=%d tm=%d err=%d\n",
+                             i_v2, i_v12, i_v30, i_v31, 0, 0);
                     _applog(1, (char *)&i_v17, false);
                 }
                 // 0x32d0e
                 if (*(char *)&opt_debug != 0) {
                     // 0x32d1c
-                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 4) {
+                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) ==
+                        0 != opt_log_level < 4) {
                         // 0x32d46
-                        snprintf((char *)&i_v17, 1024, "SHA256:%02x%02x%02x%02x\n", (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, (int32_t)(unsigned char)i_v1);
+                        snprintf((char *)&i_v17, 1024,
+                                 "SHA256:%02x%02x%02x%02x\n", (int32_t)i_v1,
+                                 (int32_t)i_v1, (int32_t)i_v1,
+                                 (int32_t)(unsigned char)i_v1);
                         _applog(4, (char *)&i_v17, false);
                     }
                 }
@@ -15432,26 +18364,30 @@ char * nonce_scanhash(char * args) {
             p_v26 = (int32_t *)(i_v24 + 96);
             *p_v26 = *p_v26 + 1;
             switch (i_v3) {
-                case -171: {
-                    // 0x32ec8
-                    p_v28 = (int32_t *)(i_v6 + 112 + 12 * i_v19);
-                    *p_v28 = *p_v28 + 1;
-                    // break -> 0x32f6e
-                    break;
-                }
-                case -170: {
-                    // 0x32f20
-                    p_v29 = (int32_t *)(i_v6 + 116 + 12 * i_v19);
-                    *p_v29 = *p_v29 + 1;
-                    // break -> 0x32f6e
-                    break;
-                }
+            case -171: {
+                // 0x32ec8
+                p_v28 = (int32_t *)(i_v6 + 112 + 12 * i_v19);
+                *p_v28 = *p_v28 + 1;
+                // break -> 0x32f6e
+                break;
+            }
+            case -170: {
+                // 0x32f20
+                p_v29 = (int32_t *)(i_v6 + 116 + 12 * i_v19);
+                *p_v29 = *p_v29 + 1;
+                // break -> 0x32f6e
+                break;
+            }
             }
             // 0x32f6e
-            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+            if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                opt_log_level < 0) {
                 // 0x32f98
                 i_v32 = *p_v26;
-                snprintf((char *)&i_v17, 1024, "Fail:invalid nonce: chainid=%d chipaddr=%02x nonces=%d tm=%d errtype=%d\n", i_v2, i_v12, i_v32, 0, i_v4);
+                snprintf((char *)&i_v17, 1024,
+                         "Fail:invalid nonce: chainid=%d chipaddr=%02x "
+                         "nonces=%d tm=%d errtype=%d\n",
+                         i_v2, i_v12, i_v32, 0, i_v4);
                 _applog(0, (char *)&i_v17, false);
             }
         }
@@ -15468,26 +18404,30 @@ char * nonce_scanhash(char * args) {
                 p_v26 = (int32_t *)(i_v24 + 96);
                 *p_v26 = *p_v26 + 1;
                 switch (i_v3) {
-                    case -171: {
-                        // 0x32ec8
-                        p_v28 = (int32_t *)(i_v6 + 112 + 12 * i_v19);
-                        *p_v28 = *p_v28 + 1;
-                        // break -> 0x32f6e
-                        break;
-                    }
-                    case -170: {
-                        // 0x32f20
-                        p_v29 = (int32_t *)(i_v6 + 116 + 12 * i_v19);
-                        *p_v29 = *p_v29 + 1;
-                        // break -> 0x32f6e
-                        break;
-                    }
+                case -171: {
+                    // 0x32ec8
+                    p_v28 = (int32_t *)(i_v6 + 112 + 12 * i_v19);
+                    *p_v28 = *p_v28 + 1;
+                    // break -> 0x32f6e
+                    break;
+                }
+                case -170: {
+                    // 0x32f20
+                    p_v29 = (int32_t *)(i_v6 + 116 + 12 * i_v19);
+                    *p_v29 = *p_v29 + 1;
+                    // break -> 0x32f6e
+                    break;
+                }
                 }
                 // 0x32f6e
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 0) {
                     // 0x32f98
                     i_v32 = *p_v26;
-                    snprintf((char *)&i_v17, 1024, "Fail:invalid nonce: chainid=%d chipaddr=%02x nonces=%d tm=%d errtype=%d\n", i_v2, i_v12, i_v32, 0, i_v4);
+                    snprintf((char *)&i_v17, 1024,
+                             "Fail:invalid nonce: chainid=%d chipaddr=%02x "
+                             "nonces=%d tm=%d errtype=%d\n",
+                             i_v2, i_v12, i_v32, 0, i_v4);
                     _applog(0, (char *)&i_v17, false);
                 }
             }
@@ -15529,19 +18469,27 @@ char * nonce_scanhash(char * args) {
                     is_patten_match(i_v18, (char *)&i_v16, (char *)&i_v14);
                 }
                 // 0x32c7a
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 1) {
                     // 0x32ca4
                     i_v30 = *p_v21;
                     i_v31 = *(int32_t *)(i_v3 + 2832);
-                    snprintf((char *)&i_v17, 1024, "Success:valid nonce: chainid=%d chipaddr=%02x nonces=%d total=%d tm=%d err=%d\n", i_v2, i_v12, i_v30, i_v31, 0, 0);
+                    snprintf((char *)&i_v17, 1024,
+                             "Success:valid nonce: chainid=%d chipaddr=%02x "
+                             "nonces=%d total=%d tm=%d err=%d\n",
+                             i_v2, i_v12, i_v30, i_v31, 0, 0);
                     _applog(1, (char *)&i_v17, false);
                 }
                 // 0x32d0e
                 if (*(char *)&opt_debug != 0) {
                     // 0x32d1c
-                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 4) {
+                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) ==
+                        0 != opt_log_level < 4) {
                         // 0x32d46
-                        snprintf((char *)&i_v17, 1024, "SHA256:%02x%02x%02x%02x\n", (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, (int32_t)(unsigned char)i_v1);
+                        snprintf((char *)&i_v17, 1024,
+                                 "SHA256:%02x%02x%02x%02x\n", (int32_t)i_v1,
+                                 (int32_t)i_v1, (int32_t)i_v1,
+                                 (int32_t)(unsigned char)i_v1);
                         _applog(4, (char *)&i_v17, false);
                     }
                 }
@@ -15563,19 +18511,28 @@ char * nonce_scanhash(char * args) {
                         is_patten_match(i_v18, (char *)&i_v16, (char *)&i_v14);
                     }
                     // 0x32c7a
-                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 1) {
+                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) ==
+                        0 != opt_log_level < 1) {
                         // 0x32ca4
                         i_v30 = *p_v21;
                         i_v31 = *(int32_t *)(i_v3 + 2832);
-                        snprintf((char *)&i_v17, 1024, "Success:valid nonce: chainid=%d chipaddr=%02x nonces=%d total=%d tm=%d err=%d\n", i_v2, i_v12, i_v30, i_v31, 0, 0);
+                        snprintf(
+                            (char *)&i_v17, 1024,
+                            "Success:valid nonce: chainid=%d chipaddr=%02x "
+                            "nonces=%d total=%d tm=%d err=%d\n",
+                            i_v2, i_v12, i_v30, i_v31, 0, 0);
                         _applog(1, (char *)&i_v17, false);
                     }
                     // 0x32d0e
                     if (*(char *)&opt_debug != 0) {
                         // 0x32d1c
-                        if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 4) {
+                        if ((*(char *)&opt_log_output | *(char *)&use_syslog) ==
+                            0 != opt_log_level < 4) {
                             // 0x32d46
-                            snprintf((char *)&i_v17, 1024, "SHA256:%02x%02x%02x%02x\n", (int32_t)i_v1, (int32_t)i_v1, (int32_t)i_v1, (int32_t)(unsigned char)i_v1);
+                            snprintf((char *)&i_v17, 1024,
+                                     "SHA256:%02x%02x%02x%02x\n", (int32_t)i_v1,
+                                     (int32_t)i_v1, (int32_t)i_v1,
+                                     (int32_t)(unsigned char)i_v1);
                             _applog(4, (char *)&i_v17, false);
                         }
                     }
@@ -15595,26 +18552,30 @@ char * nonce_scanhash(char * args) {
                 p_v26 = (int32_t *)(i_v24 + 96);
                 *p_v26 = *p_v26 + 1;
                 switch (i_v3) {
-                    case -171: {
-                        // 0x32ec8
-                        p_v28 = (int32_t *)(i_v6 + 112 + 12 * i_v19);
-                        *p_v28 = *p_v28 + 1;
-                        // break -> 0x32f6e
-                        break;
-                    }
-                    case -170: {
-                        // 0x32f20
-                        p_v29 = (int32_t *)(i_v6 + 116 + 12 * i_v19);
-                        *p_v29 = *p_v29 + 1;
-                        // break -> 0x32f6e
-                        break;
-                    }
+                case -171: {
+                    // 0x32ec8
+                    p_v28 = (int32_t *)(i_v6 + 112 + 12 * i_v19);
+                    *p_v28 = *p_v28 + 1;
+                    // break -> 0x32f6e
+                    break;
+                }
+                case -170: {
+                    // 0x32f20
+                    p_v29 = (int32_t *)(i_v6 + 116 + 12 * i_v19);
+                    *p_v29 = *p_v29 + 1;
+                    // break -> 0x32f6e
+                    break;
+                }
                 }
                 // 0x32f6e
-                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+                if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 !=
+                    opt_log_level < 0) {
                     // 0x32f98
                     i_v32 = *p_v26;
-                    snprintf((char *)&i_v17, 1024, "Fail:invalid nonce: chainid=%d chipaddr=%02x nonces=%d tm=%d errtype=%d\n", i_v2, i_v12, i_v32, 0, i_v4);
+                    snprintf((char *)&i_v17, 1024,
+                             "Fail:invalid nonce: chainid=%d chipaddr=%02x "
+                             "nonces=%d tm=%d errtype=%d\n",
+                             i_v2, i_v12, i_v32, 0, i_v4);
                     _applog(0, (char *)&i_v17, false);
                 }
             }
@@ -15631,26 +18592,30 @@ char * nonce_scanhash(char * args) {
                     p_v26 = (int32_t *)(i_v24 + 96);
                     *p_v26 = *p_v26 + 1;
                     switch (i_v3) {
-                        case -171: {
-                            // 0x32ec8
-                            p_v28 = (int32_t *)(i_v6 + 112 + 12 * i_v19);
-                            *p_v28 = *p_v28 + 1;
-                            // break -> 0x32f6e
-                            break;
-                        }
-                        case -170: {
-                            // 0x32f20
-                            p_v29 = (int32_t *)(i_v6 + 116 + 12 * i_v19);
-                            *p_v29 = *p_v29 + 1;
-                            // break -> 0x32f6e
-                            break;
-                        }
+                    case -171: {
+                        // 0x32ec8
+                        p_v28 = (int32_t *)(i_v6 + 112 + 12 * i_v19);
+                        *p_v28 = *p_v28 + 1;
+                        // break -> 0x32f6e
+                        break;
+                    }
+                    case -170: {
+                        // 0x32f20
+                        p_v29 = (int32_t *)(i_v6 + 116 + 12 * i_v19);
+                        *p_v29 = *p_v29 + 1;
+                        // break -> 0x32f6e
+                        break;
+                    }
                     }
                     // 0x32f6e
-                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) == 0 != opt_log_level < 0) {
+                    if ((*(char *)&opt_log_output | *(char *)&use_syslog) ==
+                        0 != opt_log_level < 0) {
                         // 0x32f98
                         i_v32 = *p_v26;
-                        snprintf((char *)&i_v17, 1024, "Fail:invalid nonce: chainid=%d chipaddr=%02x nonces=%d tm=%d errtype=%d\n", i_v2, i_v12, i_v32, 0, i_v4);
+                        snprintf((char *)&i_v17, 1024,
+                                 "Fail:invalid nonce: chainid=%d chipaddr=%02x "
+                                 "nonces=%d tm=%d errtype=%d\n",
+                                 i_v2, i_v12, i_v32, 0, i_v4);
                         _applog(0, (char *)&i_v17, false);
                     }
                 }
@@ -15663,10 +18628,10 @@ char * nonce_scanhash(char * args) {
     return NULL;
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c
-// Address range: 0x33024 - 0x33074
-// Line range:    110 - 126
-char * nonce_scanhash_loop(char * args) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c Address
+// range: 0x33024 - 0x33074 Line range:    110 - 126
+char *nonce_scanhash_loop(char *args) {
     // 0x33024
     while (true) {
         // 0x33030
@@ -15677,42 +18642,46 @@ char * nonce_scanhash_loop(char * args) {
         } else {
             // 0x3304c
             int32_t send_id; // bp-16, 0x33024
-            pthread_create(&send_id, NULL, (int32_t * (*)(int32_t *))0x329d1, (int32_t *)args);
+            pthread_create(&send_id, NULL, (int32_t * (*)(int32_t *))0x329d1,
+                           (int32_t *)args);
             pthread_join(send_id, NULL);
             usleep(1000);
         }
     }
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c
-// Address range: 0x33074 - 0x330a4
-// Line range:    131 - 136
-void add_point(int32_t * point, int32_t MAX_SIZE) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c Address
+// range: 0x33074 - 0x330a4 Line range:    131 - 136
+void add_point(int32_t *point, int32_t MAX_SIZE) {
     int32_t i_v1 = (int32_t)point;
     *point = i_v1 < MAX_SIZE ? i_v1 + 1 : 0;
-    __asm_nop(i_v1, MAX_SIZE, i_v1 < MAX_SIZE ? i_v1 : 0, i_v1 < MAX_SIZE ? MAX_SIZE : i_v1);
+    __asm_nop(i_v1, MAX_SIZE, i_v1 < MAX_SIZE ? i_v1 : 0,
+              i_v1 < MAX_SIZE ? MAX_SIZE : i_v1);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c
-// Address range: 0x330a4 - 0x335c8
-// Line range:    138 - 250
-char * handle_asic_response(char * args) {
-    int32_t i_v1 = (int32_t)args; // 0x330b8
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c Address
+// range: 0x330a4 - 0x335c8 Line range:    138 - 250
+char *handle_asic_response(char *args) {
+    int32_t i_v1 = (int32_t)args;             // 0x330b8
     int32_t i_v2 = *(int32_t *)(i_v1 + 1772); // 0x330bc
-    int32_t i_v3 = *(int32_t *)(i_v1 + 148) * *(int32_t *)(i_v1 + 144); // 0x330da
-    int32_t * p_v4 = calloc(1, i_v3); // 0x330ea
-    int32_t i_v5 = 50 * i_v3; // 0x330fa
-    int32_t * p_v6 = calloc(i_v5, 1); // 0x3310a
-    int32_t data_buf_rp = 0; // bp-60, 0x33116
-    int32_t data_buf_wp = 0; // bp-64, 0x3311c
-    int32_t * p_v7 = calloc(1, *(int32_t *)(i_v1 + 164)); // 0x3312c
+    int32_t i_v3 =
+        *(int32_t *)(i_v1 + 148) * *(int32_t *)(i_v1 + 144); // 0x330da
+    int32_t *p_v4 = calloc(1, i_v3);                         // 0x330ea
+    int32_t i_v5 = 50 * i_v3;                                // 0x330fa
+    int32_t *p_v6 = calloc(i_v5, 1);                         // 0x3310a
+    int32_t data_buf_rp = 0;                                 // bp-60, 0x33116
+    int32_t data_buf_wp = 0;                                 // bp-64, 0x3311c
+    int32_t *p_v7 = calloc(1, *(int32_t *)(i_v1 + 164));     // 0x3312c
     char i_v8 = *(char *)&use_syslog;
     char i_v9 = *(char *)&opt_log_output;
     int32_t i_v10; // bp-1096, 0x330a4
     if (p_v7 == NULL) {
         if ((i_v9 || i_v8) == 0 != opt_log_level < 2) {
             // 0x33168
-            snprintf((char *)&i_v10, 1024, "%s calloc tmp failed\n", "handle_asic_response");
+            snprintf((char *)&i_v10, 1024, "%s calloc tmp failed\n",
+                     "handle_asic_response");
             _applog(2, (char *)&i_v10, false);
         }
         // 0x33192
@@ -15721,14 +18690,15 @@ char * handle_asic_response(char * args) {
     }
     if ((i_v9 || i_v8) == 0 != opt_log_level < 2) {
         // 0x331ca
-        snprintf((char *)&i_v10, 1024, "Start A New Asic Response.Chain Id:[%d]\n", i_v2);
+        snprintf((char *)&i_v10, 1024,
+                 "Start A New Asic Response.Chain Id:[%d]\n", i_v2);
         _applog(2, (char *)&i_v10, false);
     }
     int32_t i_v11 = (int32_t)p_v4;
     int32_t i_v12 = (int32_t)p_v6;
     int32_t i_v13; // bp-72, 0x330a4
     int32_t i_v14 = &i_v13;
-    int32_t * p_v15 = (int32_t *)(i_v1 + 152);
+    int32_t *p_v15 = (int32_t *)(i_v1 + 152);
     while (true) {
         // 0x331f0
         if (*(int32_t *)(i_v1 + 2808) == 0) {
@@ -15739,10 +18709,11 @@ char * handle_asic_response(char * args) {
             // 0x3320e
             usleep(500);
             memset(p_v4, 0, i_v3);
-            int32_t i_v16 = uart_receive((char)*(int32_t *)(144 * i_v2 + i_v1), (char *)p_v4, i_v3); // 0x33246
-            int32_t i_v17 = 0; // 0x33294
-            int32_t i_v18 = i_v16; // 0x33294
-            int32_t i_v19 = i_v11; // 0x33294
+            int32_t i_v16 = uart_receive((char)*(int32_t *)(144 * i_v2 + i_v1),
+                                         (char *)p_v4, i_v3); // 0x33246
+            int32_t i_v17 = 0;                                // 0x33294
+            int32_t i_v18 = i_v16;                            // 0x33294
+            int32_t i_v19 = i_v11;                            // 0x33294
             if (i_v16 > 0) {
                 *(char *)(data_buf_wp + i_v12) = *(char *)(i_v17 + i_v11);
                 add_point(&data_buf_wp, i_v5);
@@ -15786,7 +18757,7 @@ char * handle_asic_response(char * args) {
                         }
                         // 0x3332c
                         int32_t i_v30; // 0x330a4
-                        char i_v31; // 0x330a4
+                        char i_v31;    // 0x330a4
                         if (i_v31 == 85 == i_v13 % 256 == 170) {
                             // 0x33506
                             i_v27 = *p_v15;
@@ -15794,14 +18765,15 @@ char * handle_asic_response(char * args) {
                                 // break -> 0x335c4
                                 break;
                             }
-                            int32_t i_v32 = 0; // 0x3355e
+                            int32_t i_v32 = 0;     // 0x3355e
                             int32_t i_v33 = i_v27; // 0x3355e
                             if (i_v27 > 0) {
-                                char i_v34 = *(char *)(data_buf_rp + i_v12); // 0x33534
+                                char i_v34 =
+                                    *(char *)(data_buf_rp + i_v12); // 0x33534
                                 *(char *)(i_v32 + (int32_t)p_v7) = i_v34;
                                 add_point(&data_buf_rp, i_v5);
                                 int32_t i_v35 = i_v32 + 1; // 0x3354a
-                                uint32_t i_v36 = *p_v15; // 0x33554
+                                uint32_t i_v36 = *p_v15;   // 0x33554
                                 i_v32 = i_v35;
                                 i_v33 = i_v36;
                                 while (i_v36 > i_v35) {
@@ -15835,21 +18807,24 @@ char * handle_asic_response(char * args) {
                 }
             }
         }
-      lab_0x331f0:;
+    lab_0x331f0:;
     }
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c
-// Address range: 0x335c8 - 0x336a2
-// Line range:    255 - 267
-void runtime_init(int32_t * runtime) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c Address
+// range: 0x335c8 - 0x336a2 Line range:    255 - 267
+void runtime_init(int32_t *runtime) {
     int32_t i_v1 = (int32_t)runtime;
     work_list_init(*(int32_t *)(i_v1 + 1692));
     reg_list_init();
     int32_t i_v2 = *(int32_t *)(i_v1 + 1772); // 0x335ea
     sleep(1);
-    pthread_create((int32_t *)(i_v1 + 4 + (144 * i_v2 | 8)), NULL, (int32_t * (*)(int32_t *))0x330a5, runtime);
-    int32_t i_v3 = pthread_create((int32_t *)(i_v1 + 2816), NULL, (int32_t * (*)(int32_t *))0x33025, runtime); // 0x33636
+    pthread_create((int32_t *)(i_v1 + 4 + (144 * i_v2 | 8)), NULL,
+                   (int32_t * (*)(int32_t *))0x330a5, runtime);
+    int32_t i_v3 =
+        pthread_create((int32_t *)(i_v1 + 2816), NULL,
+                       (int32_t * (*)(int32_t *))0x33025, runtime); // 0x33636
     *(int32_t *)(i_v1 + 2808) = 1;
     int32_t i_v4; // 0x335c8
     int32_t i_v5; // 0x335c8
@@ -15869,7 +18844,7 @@ void runtime_init(int32_t * runtime) {
     } else {
         goto lab_0x3366e;
     }
-  lab_0x3366e:;
+lab_0x3366e:;
     // 0x3366e
     int32_t i_v8; // bp-1036, 0x335c8
     snprintf((char *)&i_v8, 1024, "%s Done!\n", "runtime_init");
@@ -15880,23 +18855,23 @@ void runtime_init(int32_t * runtime) {
     i_v6 = 0;
     i_v7 = i_v9;
     goto lab_0x33698;
-  lab_0x33698:
+lab_0x33698:
     // 0x33698
     __asm_nop(i_v4, i_v5, i_v6, i_v7);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c
-// Address range: 0x336a4 - 0x33790
-// Line range:    269 - 285
-void runtime_exit(int32_t * runtime) {
+// From module:
+// /home/felix/work/share/project/zcash/chip-test/base/runtime-base.c Address
+// range: 0x336a4 - 0x33790 Line range:    269 - 285
+void runtime_exit(int32_t *runtime) {
     int32_t i_v1 = (int32_t)runtime;
     *(int32_t *)(i_v1 + 2808) = 0;
     int32_t i_v2 = *(int32_t *)(i_v1 + 1772); // 0x336be
     usleep((int32_t)&i_g33);
-    int32_t * p_v3 = (int32_t *)(i_v1 + 2816); // 0x336d6
+    int32_t *p_v3 = (int32_t *)(i_v1 + 2816); // 0x336d6
     pthread_cancel(*p_v3);
     pthread_join(*p_v3, NULL);
-    int32_t * p_v4 = (int32_t *)(i_v1 + 12 + 144 * i_v2); // 0x33704
+    int32_t *p_v4 = (int32_t *)(i_v1 + 12 + 144 * i_v2); // 0x33704
     pthread_cancel(*p_v4);
     pthread_join(*p_v4, NULL);
     reg_list_exit();
@@ -15918,7 +18893,7 @@ void runtime_exit(int32_t * runtime) {
     __asm_nop((int32_t)&i_g101, i_v6, 0, i_v6);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/work-list.c
+// From module: /home/felix/work/share/project/zcash/chip-test/base/work-list.c
 // Address range: 0x33790 - 0x337f4
 // Line range:    9 - 18
 void work_list_init(int32_t work_len) {
@@ -15936,7 +18911,7 @@ void work_list_init(int32_t work_len) {
     __asm_nop(i_v1, i_v1, (int32_t)&work_list_info, 10);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/work-list.c
+// From module: /home/felix/work/share/project/zcash/chip-test/base/work-list.c
 // Address range: 0x337f8 - 0x33834
 // Line range:    20 - 27
 void work_list_exit(void) {
@@ -15946,17 +18921,19 @@ void work_list_exit(void) {
     }
     // 0x33826
     int32_t i_v2; // 0x337f8
-    __asm_nop(pthread_mutex_destroy(&i_g99), i_v2, (int32_t)&work_list_info, 10);
+    __asm_nop(pthread_mutex_destroy(&i_g99), i_v2, (int32_t)&work_list_info,
+              10);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/work-list.c
+// From module: /home/felix/work/share/project/zcash/chip-test/base/work-list.c
 // Address range: 0x33838 - 0x338ca
 // Line range:    29 - 40
-void work_list_insert(char workid, char * work) {
+void work_list_insert(char workid, char *work) {
     // 0x33838
     pthread_mutex_lock(&i_g99);
     *(char *)(8 * i_g98 + (int32_t)&work_list_info) = workid;
-    int32_t i_v1 = *(int32_t *)(8 * i_g98 + (int32_t)&work_list_info + 4); // 0x33878
+    int32_t i_v1 =
+        *(int32_t *)(8 * i_g98 + (int32_t)&work_list_info + 4); // 0x33878
     memcpy((int32_t *)i_v1, (int32_t *)work, i_g97);
     int32_t i_v2 = i_g98 + 1; // 0x33896
     int32_t i_v3 = i_v2 < 10 ? i_v2 : 0;
@@ -15965,16 +18942,16 @@ void work_list_insert(char workid, char * work) {
     __asm_nop(pthread_mutex_unlock(&i_g99), (int32_t)work, i_v3, i_v4);
 }
 
-// From module:   /home/felix/work/share/project/zcash/chip-test/base/work-list.c
+// From module: /home/felix/work/share/project/zcash/chip-test/base/work-list.c
 // Address range: 0x338d0 - 0x3393a
 // Line range:    42 - 57
-void work_list_find(unsigned char workid, char * work) {
+void work_list_find(unsigned char workid, char *work) {
     int32_t i_v1 = (int32_t)work; // 0x3390a
     pthread_mutex_lock(&i_g99);
-    int32_t i_v2 = 0; // 0x33922
+    int32_t i_v2 = 0;        // 0x33922
     int32_t i_v3 = 8 * i_v2; // 0x338f2
-    int32_t i_v4; // 0x338d0
-    int32_t i_v5; // 0x338d0
+    int32_t i_v4;            // 0x338d0
+    int32_t i_v5;            // 0x338d0
     while (*(char *)(i_v3 + (int32_t)&work_list_info) != workid) {
         // 0x33920
         i_v2++;
@@ -15992,7 +18969,7 @@ void work_list_find(unsigned char workid, char * work) {
     i_v4 = i_g97;
     i_v5 = i_g97;
     goto lab_0x3392c_2;
-  lab_0x3392c_2:
+lab_0x3392c_2:
     // 0x3392c
     __asm_nop(pthread_mutex_unlock(&i_g99), i_v1, i_v4, i_v5);
 }
@@ -16001,14 +18978,14 @@ void work_list_find(unsigned char workid, char * work) {
 int32_t __aeabi_uidiv(uint32_t i_a1, uint32_t i_a2, int32_t i_a3) {
     // 0x33940
     switch (i_a2) {
-        case 1: {
-            // 0x33b92
-            return __asm_it();
-        }
-        case 0: {
-            // 0x33b92
-            return 0;
-        }
+    case 1: {
+        // 0x33b92
+        return __asm_it();
+    }
+    case 0: {
+        // 0x33b92
+        return 0;
+    }
     }
     if (i_a1 == i_a2 || i_a1 < i_a2) {
         if (i_a1 == i_a2) {
@@ -16099,16 +19076,18 @@ int32_t __aeabi_idiv0(int32_t i_a1, int32_t i_a2) {
     return raise(8);
 }
 
-// From module:   /home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/arm-linux-gnueabihf/snapshots/glibc.git~linaro~2.21~master/csu/elf-init.c
+// From module:
+// /home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/arm-linux-gnueabihf/snapshots/glibc.git~linaro~2.21~master/csu/elf-init.c
 // Address range: 0x33e74 - 0x33eac
 // Line range:    67 - 87
-void __libc_csu_init(int32_t argc, char ** argv, char ** envp) {
+void __libc_csu_init(int32_t argc, char **argv, char **envp) {
     // 0x33e74
     int32_t i_v1; // 0x33e74
     _init(argc, (int32_t)argv, (int32_t)envp, i_v1);
 }
 
-// From module:   /home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/arm-linux-gnueabihf/snapshots/glibc.git~linaro~2.21~master/csu/elf-init.c
+// From module:
+// /home/tcwg-buildslave/workspace/tcwg-make-release/builder_arch/amd64/label/tcwg-x86_64-build/target/arm-linux-gnueabihf/snapshots/glibc.git~linaro~2.21~master/csu/elf-init.c
 // Address range: 0x33eb4 - 0x33eb5
 // Line range:    95 - 96
 void __libc_csu_fini(void) {
@@ -16287,4 +19266,3 @@ int32_t function_ffc51a4a(void) {
 
 // Detected compiler/packer: gcc (5.5.0)
 // Detected functions: 387
-

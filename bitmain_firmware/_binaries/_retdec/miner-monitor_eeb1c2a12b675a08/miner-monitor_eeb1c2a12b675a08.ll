@@ -1783,7 +1783,7 @@ dec_label_pc_a224:                                ; preds = %dec_label_pc_a004
   uselistorder i32* %r2.0.reg2mem, { 2, 0, 1 }
   uselistorder i32* %r3.0.reg2mem, { 2, 0, 1 }
   uselistorder i32* %0, { 2, 1, 0 }
-  uselistorder i32 (i32*, i32*, i32* (i32*)*, i32*)* @pthread_create, { 1, 0, 2, 3 }
+  uselistorder i32 (i32*, i32*, i32* (i32*)*, i32*)* @pthread_create, { 0, 2, 1, 3 }
   uselistorder label %dec_label_pc_a188, { 2, 3, 0, 1 }
   uselistorder label %dec_label_pc_a0ec.backedge, { 3, 2, 1, 0 }
   uselistorder label %dec_label_pc_a0f8, { 1, 0 }
@@ -2649,9 +2649,6 @@ dec_label_pc_afe8:
   %3 = call i32 @sigdelset(%_TYPEDEF_sigset_t* nonnull %0, i32 2), !insn.addr !556
   %4 = call i32 @sigdelset(%_TYPEDEF_sigset_t* nonnull %0, i32 13), !insn.addr !557
   ret i32 %4, !insn.addr !558
-
-; uselistorder directives
-  uselistorder i32 (%_TYPEDEF_sigset_t*, i32)* @sigdelset, { 1, 0, 2 }
 }
 
 define i32 @function_b020() local_unnamed_addr {
@@ -2824,9 +2821,10 @@ dec_label_pc_b1c8:                                ; preds = %dec_label_pc_b134
 ; uselistorder directives
   uselistorder i8* %.in.reload, { 1, 0, 2 }
   uselistorder i8* %5, { 1, 0 }
-  uselistorder i32 (i32, i32)* @flock, { 1, 0, 2, 3 }
+  uselistorder i32 (i32, i32)* @flock, { 2, 1, 0, 3 }
   uselistorder %_IO_FILE** @global_var_1c3c8, { 6, 5, 4, 3, 0, 2, 1 }
   uselistorder i32* bitcast (%_IO_FILE** @global_var_1c3c8 to i32*), { 1, 0 }
+  uselistorder i32 (i8*, i32)* @access, { 1, 0, 2 }
   uselistorder label %dec_label_pc_b0f8, { 1, 0 }
 }
 
@@ -7519,7 +7517,7 @@ dec_label_pc_d7dc:                                ; preds = %dec_label_pc_d3f4, 
   uselistorder i8 44, { 1, 2, 3, 4, 0 }
   uselistorder i32 (i32, i32)* @function_c244, { 2, 1, 0 }
   uselistorder double (double)* @__asm_vpop, { 5, 6, 0, 1, 2, 3, 4 }
-  uselistorder i32 (i8*, i8*, i32)* @strncmp, { 4, 1, 2, 3, 0, 5 }
+  uselistorder i32 (i8*, i8*, i32)* @strncmp, { 4, 2, 3, 0, 1, 5 }
   uselistorder double (double)* @__asm_vpush, { 1, 0 }
   uselistorder i32 %arg2, { 3, 4, 5, 2, 6, 8, 0, 1, 7, 9, 10 }
   uselistorder i32 %arg1, { 2, 3, 4, 0, 5, 6, 8, 1, 7 }
@@ -9418,6 +9416,7 @@ dec_label_pc_e420:                                ; preds = %dec_label_pc_e378
 
 ; uselistorder directives
   uselistorder i8* %0, { 5, 4, 3, 2, 1, 0 }
+  uselistorder i32 (i32, i32, ...)* @ioctl, { 1, 0, 2 }
 }
 
 define i32 @function_e444(i32* %arg1, i32* %arg2) local_unnamed_addr {
@@ -10418,8 +10417,8 @@ dec_label_pc_f3a8:                                ; preds = %dec_label_pc_f240
   uselistorder i32* %sl.0.reg2mem, { 1, 0 }
   uselistorder i32* %r1.0.reg2mem, { 3, 0, 2, 1 }
   uselistorder i32* %storemerge.reg2mem, { 2, 0, 1 }
-  uselistorder i32* (i32*, i32, i32)* @memset, { 14, 12, 10, 11, 2, 5, 15, 9, 7, 6, 8, 3, 13, 0, 16, 4, 1, 17 }
-  uselistorder i32 (i8*)* @strlen, { 0, 24, 9, 8, 15, 20, 7, 5, 1, 17, 30, 4, 32, 33, 18, 19, 2, 29, 21, 6, 16, 11, 27, 12, 25, 31, 28, 22, 26, 23, 13, 14, 10, 3, 34 }
+  uselistorder i32* (i32*, i32, i32)* @memset, { 14, 10, 12, 11, 2, 6, 3, 13, 7, 8, 4, 5, 1, 0, 16, 15, 9, 17 }
+  uselistorder i32 (i8*)* @strlen, { 22, 25, 10, 18, 24, 7, 4, 14, 6, 2, 19, 16, 5, 0, 3, 23, 1, 29, 20, 9, 33, 21, 30, 31, 26, 28, 17, 12, 15, 27, 11, 13, 32, 8, 34 }
   uselistorder i32 4096, { 2, 3, 4, 0, 1 }
   uselistorder i32 7, { 3, 1, 0, 4, 2 }
   uselistorder label %dec_label_pc_f27c, { 1, 2, 0 }
@@ -10574,7 +10573,7 @@ dec_label_pc_f660:                                ; preds = %dec_label_pc_f500
   uselistorder i32* %r0.0.reg2mem, { 4, 1, 3, 0, 2 }
   uselistorder i8* (i32)* @strerror, { 4, 3, 2, 1, 0, 6, 5, 7 }
   uselistorder i32* ()* @__errno_location, { 1, 2, 3, 4, 5, 6, 0, 7 }
-  uselistorder i32 (i32)* @close, { 6, 11, 0, 4, 7, 3, 2, 9, 5, 1, 10, 8, 12 }
+  uselistorder i32 (i32)* @close, { 4, 10, 0, 11, 9, 3, 1, 5, 7, 8, 2, 6, 12 }
   uselistorder i32 6, { 0, 9, 2, 1, 3, 10, 11, 12, 13, 4, 8, 5, 6, 7 }
   uselistorder i32 (i32, %sockaddr*, i32)* @connect, { 4, 0, 3, 1, 2, 5 }
   uselistorder i32 (i32, i32, i32)* @__asm_ubfx, { 0, 2, 3, 1, 4 }
@@ -10635,14 +10634,14 @@ dec_label_pc_f764:                                ; preds = %dec_label_pc_f69c
 ; uselistorder directives
   uselistorder i32 %23, { 1, 0 }
   uselistorder i32 %12, { 1, 0 }
-  uselistorder void (i8*)* @perror, { 12, 1, 4, 5, 3, 9, 6, 8, 7, 2, 11, 10, 0, 13 }
+  uselistorder void (i8*)* @perror, { 5, 9, 11, 6, 10, 8, 3, 2, 4, 12, 7, 0, 1, 13 }
   uselistorder i8* getelementptr inbounds ([5 x i8], [5 x i8]* @global_var_11b9c, i32 0, i32 0), { 0, 2, 1, 3, 4, 5 }
   uselistorder i32* @global_var_26f90, { 3, 9, 4, 0, 5, 6, 7, 1, 2, 8 }
   uselistorder i32* @global_var_26f98, { 2, 0, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 16, 17 }
   uselistorder i32 (i32, i32)* @function_ecd0, { 2, 1, 3, 0 }
   uselistorder i8* (i8*, i8*)* @stpcpy, { 8, 7, 6, 4, 3, 2, 1, 0, 5, 9 }
   uselistorder i32 (i32*)* @function_e1f8, { 2, 1, 0 }
-  uselistorder i32* (i32, i32)* @calloc, { 0, 1, 4, 6, 2, 3, 5, 7 }
+  uselistorder i32* (i32, i32)* @calloc, { 1, 0, 5, 6, 2, 3, 4, 7 }
 }
 
 define i32 @function_f798() local_unnamed_addr {
@@ -10673,6 +10672,7 @@ dec_label_pc_f828:                                ; preds = %dec_label_pc_f798
 ; uselistorder directives
   uselistorder i32 (i32)* @curl_easy_cleanup, { 1, 0, 2 }
   uselistorder i8* getelementptr inbounds ([2 x i8], [2 x i8]* @global_var_11e7c, i32 0, i32 0), { 2, 0, 1 }
+  uselistorder i32 (i32, i32, i8*)* @curl_easy_setopt, { 1, 0, 2 }
 }
 
 define i32 @function_f84c() local_unnamed_addr {
@@ -11289,7 +11289,7 @@ dec_label_pc_fff0:                                ; preds = %dec_label_pc_ffa4
   uselistorder i32* %r4.3.reg2mem, { 1, 0, 2 }
   uselistorder i32 44, { 4, 0, 1, 2, 3, 5 }
   uselistorder i8* null, { 4, 5, 6, 7, 3, 8, 9, 10, 0, 11, 1, 12, 13, 14, 2 }
-  uselistorder i8* (i8*, i32)* @strchr, { 2, 3, 9, 10, 11, 7, 4, 8, 5, 12, 6, 0, 1, 13 }
+  uselistorder i8* (i8*, i32)* @strchr, { 7, 4, 3, 12, 2, 10, 1, 8, 6, 9, 5, 0, 11, 13 }
   uselistorder label %dec_label_pc_ff6c, { 3, 0, 1, 2, 4 }
   uselistorder label %32, { 1, 0 }
   uselistorder label %14, { 1, 0 }
@@ -11458,7 +11458,7 @@ dec_label_pc_101d0:                               ; preds = %dec_label_pc_10004
   uselistorder i32 (i32*, i32, i32, %_IO_FILE*)* @fread, { 3, 4, 1, 0, 2, 5 }
   uselistorder i32 100, { 3, 2, 5, 6, 0, 1, 4 }
   uselistorder i32 (%_IO_FILE*)* @ftell, { 3, 4, 1, 0, 2, 5 }
-  uselistorder i32 (%_IO_FILE*, i32, i32)* @fseek, { 3, 2, 0, 4, 7, 9, 5, 6, 8, 1, 10 }
+  uselistorder i32 (%_IO_FILE*, i32, i32)* @fseek, { 1, 0, 4, 2, 9, 6, 8, 5, 3, 7, 10 }
   uselistorder label %dec_label_pc_100a4, { 1, 0 }
 }
 
@@ -12392,7 +12392,7 @@ dec_label_pc_10c70:                               ; preds = %dec_label_pc_10bfc
   uselistorder i8 53, { 1, 0 }
   uselistorder i8 102, { 2, 3, 0, 1, 4, 5, 6, 7 }
   uselistorder %_IO_FILE* null, { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 13, 16 }
-  uselistorder %_IO_FILE* (i8*, i8*)* @fopen, { 10, 2, 3, 8, 11, 14, 7, 12, 6, 13, 9, 1, 0, 4, 5, 15 }
+  uselistorder %_IO_FILE* (i8*, i8*)* @fopen, { 11, 5, 0, 10, 12, 14, 8, 7, 6, 13, 9, 4, 2, 3, 1, 15 }
   uselistorder [3 x i8]* @global_var_11e04, { 1, 0 }
   uselistorder i32 %arg1, { 2, 1, 0 }
 }
@@ -12732,7 +12732,7 @@ dec_label_pc_10f3c:                               ; preds = %dec_label_pc_10ec0
   uselistorder i32 (i8*)* @puts, { 59, 36, 70, 58, 57, 56, 72, 71, 35, 34, 20, 43, 42, 41, 55, 54, 53, 51, 52, 45, 44, 33, 32, 31, 30, 29, 28, 27, 26, 19, 18, 17, 50, 49, 47, 48, 46, 16, 15, 14, 69, 68, 67, 66, 13, 65, 64, 63, 62, 61, 12, 11, 10, 9, 8, 60, 40, 39, 38, 37, 25, 24, 23, 22, 21, 7, 6, 5, 4, 3, 2, 1, 0, 73 }
   uselistorder i32* @global_var_1d440, { 0, 3, 1, 4, 2 }
   uselistorder i32 4104, { 1, 2, 3, 4, 5, 6, 7, 0 }
-  uselistorder i8* (i8*, i8*)* @strcpy, { 105, 104, 25, 39, 41, 40, 75, 74, 85, 84, 87, 86, 89, 88, 95, 94, 1, 0, 3, 2, 16, 15, 18, 17, 38, 37, 45, 44, 49, 48, 51, 50, 73, 72, 47, 46, 93, 92, 91, 90, 99, 98, 7, 6, 22, 21, 28, 27, 30, 29, 43, 42, 59, 58, 71, 70, 77, 76, 79, 78, 53, 52, 81, 80, 83, 82, 101, 100, 103, 102, 24, 23, 32, 31, 34, 33, 36, 35, 55, 54, 57, 56, 61, 5, 4, 9, 8, 26, 19, 14, 13, 11, 10, 12, 62, 65, 64, 69, 67, 66, 68, 97, 96, 20, 60, 63, 106 }
+  uselistorder i8* (i8*, i8*)* @strcpy, { 53, 76, 8, 10, 14, 13, 26, 25, 40, 39, 42, 41, 78, 77, 88, 87, 89, 91, 90, 97, 96, 5, 4, 7, 6, 16, 15, 18, 17, 38, 37, 46, 45, 52, 51, 54, 75, 48, 47, 50, 49, 95, 94, 93, 92, 101, 100, 12, 11, 22, 21, 28, 27, 30, 29, 44, 43, 62, 61, 74, 73, 80, 79, 82, 81, 56, 55, 84, 83, 86, 85, 103, 102, 24, 23, 32, 31, 34, 33, 36, 35, 58, 57, 3, 2, 1, 0, 9, 99, 98, 105, 104, 20, 19, 64, 63, 66, 67, 65, 68, 70, 69, 72, 71, 60, 59, 106 }
   uselistorder i32 3, { 12, 13, 17, 5, 6, 14, 0, 15, 8, 16, 7, 10, 4, 3, 9, 18, 1, 21, 2, 20, 11, 19 }
   uselistorder i32 4111, { 4, 0, 5, 1, 6, 2, 7, 3 }
   uselistorder i32* null, { 3, 4, 2, 5, 6, 8, 10, 11, 12, 9, 7, 13, 14, 15, 16, 17, 18, 19, 20, 1, 0, 21, 22, 23, 24 }

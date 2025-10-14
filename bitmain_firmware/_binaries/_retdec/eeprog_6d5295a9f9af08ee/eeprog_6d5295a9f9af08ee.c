@@ -46,77 +46,79 @@ struct stat {
 
 // ------------------- Function Prototypes --------------------
 
-int32_t * __errno_location2(void);
-int32_t __libc_start_main2(int32_t main, int32_t argc, char ** ubp_av, void (*init)(), void (*fini)(), void (*rtld_fini)());
-int32_t __xstat2(int32_t ver, char * filename, struct stat * stat_buf);
-int32_t _IO_getc2(struct _IO_FILE * fp);
-int32_t _IO_putc2(int32_t c, struct _IO_FILE * fp);
+int32_t *__errno_location2(void);
+int32_t __libc_start_main2(int32_t main, int32_t argc, char **ubp_av,
+                           void (*init)(), void (*fini)(), void (*rtld_fini)());
+int32_t __xstat2(int32_t ver, char *filename, struct stat *stat_buf);
+int32_t _IO_getc2(struct _IO_FILE *fp);
+int32_t _IO_putc2(int32_t c, struct _IO_FILE *fp);
 void abort2(void);
 int32_t close2(int32_t fd);
 int32_t entry_point(int32_t i_a1, int32_t i_a2);
 void exit2(int32_t status);
-int32_t fflush2(struct _IO_FILE * stream);
-int32_t fprintf2(struct _IO_FILE * stream, char * format, ...);
-int32_t fputc2(int32_t c, struct _IO_FILE * stream);
+int32_t fflush2(struct _IO_FILE *stream);
+int32_t fprintf2(struct _IO_FILE *stream, char *format, ...);
+int32_t fputc2(int32_t c, struct _IO_FILE *stream);
 int32_t function_86f4(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 void function_87a4(void);
 int32_t function_8828(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_8858(int32_t i_a1, int32_t i_a2);
 int32_t function_8cb0(void);
 int32_t function_8cd4(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4);
-int32_t function_8d0c(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
+int32_t function_8d0c(int32_t *p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_8d4c(void);
 int32_t function_8d74(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_8da8(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t function_8dbc(int32_t i_a1, char * p_a2, int32_t i_a3, int32_t i_a4);
-int32_t function_8dec(int32_t i_a1, int32_t * p_a2, int32_t * p_a3);
+int32_t function_8dbc(int32_t i_a1, char *p_a2, int32_t i_a3, int32_t i_a4);
+int32_t function_8dec(int32_t i_a1, int32_t *p_a2, int32_t *p_a3);
 int32_t function_8e40(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t function_8e7c(int32_t * p_a1, uint32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t function_8fa4(int32_t * p_a1, int32_t i_a2);
-int32_t function_905c(int32_t i_a1, int32_t * p_a2);
-int32_t function_90ec(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t * p_a4);
-int32_t function_926c(int32_t * p_a1);
+int32_t function_8e7c(int32_t *p_a1, uint32_t i_a2, int32_t i_a3, int32_t i_a4);
+int32_t function_8fa4(int32_t *p_a1, int32_t i_a2);
+int32_t function_905c(int32_t i_a1, int32_t *p_a2);
+int32_t function_90ec(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t *p_a4);
+int32_t function_926c(int32_t *p_a1);
 int32_t function_9298(int32_t i_a1);
 int32_t function_92f0(int32_t i_a1, int32_t i_a2);
 int32_t function_9414(int32_t i_a1, int32_t i_a2, int32_t i_a3);
 int32_t function_94fc(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_9560(void);
 int32_t function_9564(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t fwrite2(int32_t * ptr, int32_t size, int32_t n, struct _IO_FILE * s);
-char * getenv2(char * name);
-int32_t getopt2(int32_t argc, char ** argv, char * shortopts);
+int32_t fwrite2(int32_t *ptr, int32_t size, int32_t n, struct _IO_FILE *s);
+char *getenv2(char *name);
+int32_t getopt2(int32_t argc, char **argv, char *shortopts);
 int32_t ioctl2(int32_t fd, int32_t request, ...);
-int32_t open2(char * file, int32_t oflag, ...);
-int32_t printf2(char * format, ...);
-int32_t puts2(char * s);
-char * strerror2(int32_t errnum);
-int32_t strlen2(char * s);
-int32_t strtoul2(char * nptr, char ** endptr, int32_t base);
+int32_t open2(char *file, int32_t oflag, ...);
+int32_t printf2(char *format, ...);
+int32_t puts2(char *s);
+char *strerror2(int32_t errnum);
+int32_t strlen2(char *s);
+int32_t strtoul2(char *nptr, char **endptr, int32_t base);
 int32_t usleep2(int32_t useconds);
 
 // --------------------- Global Variables ---------------------
 
-int32_t i_g1 = 0; // 0x120a4
-int32_t i_g2 = 0; // 0x121f8
-int32_t i_g3 = 0; // 0x12208
-struct _IO_FILE * p_g4 = NULL; // 0x12210
-struct _IO_FILE * p_g5 = NULL; // 0x12218
-struct _IO_FILE * p_g6 = NULL; // 0x1221c
-char * p_g7; // 0x12220
-char * p_g8; // 0x12224
-int32_t i_g9 = 0; // 0x12228
-int32_t i_g10 = -0x16d2b010; // 0x8858
-int32_t i_g11 = -0x1d72ffe0; // 0x8b78
-int32_t i_g12 = -0x1d72ffe0; // 0x8b84
-void (*p_g13)() = (void (*)())-0x16d2ba08; // 0x94fc
-int32_t i_g14 = -0x1e4f9eba; // 0x9524
-void (*p_g15)() = (void (*)())-0x1ed000e2; // 0x9560
+int32_t i_g1 = 0;                            // 0x120a4
+int32_t i_g2 = 0;                            // 0x121f8
+int32_t i_g3 = 0;                            // 0x12208
+struct _IO_FILE *p_g4 = NULL;                // 0x12210
+struct _IO_FILE *p_g5 = NULL;                // 0x12218
+struct _IO_FILE *p_g6 = NULL;                // 0x1221c
+char *p_g7;                                  // 0x12220
+char *p_g8;                                  // 0x12224
+int32_t i_g9 = 0;                            // 0x12228
+int32_t i_g10 = -0x16d2b010;                 // 0x8858
+int32_t i_g11 = -0x1d72ffe0;                 // 0x8b78
+int32_t i_g12 = -0x1d72ffe0;                 // 0x8b84
+void (*p_g13)() = (void (*)()) - 0x16d2ba08; // 0x94fc
+int32_t i_g14 = -0x1e4f9eba;                 // 0x9524
+void (*p_g15)() = (void (*)()) - 0x1ed000e2; // 0x9560
 int32_t i_g16;
 
 // ------- Dynamically Linked Functions Without Header --------
 
 void __gmon_start__(void);
-int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char ** p_a3, void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
+int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char **p_a3,
+                          void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
 
 // ------------------------ Functions -------------------------
 
@@ -127,37 +129,37 @@ int32_t function_86f4(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x8714 - 0x8720
-int32_t printf2(char * format, ...) {
+int32_t printf2(char *format, ...) {
     // 0x8714
     return printf(format);
 }
 
 // Address range: 0x8720 - 0x872c
-int32_t fflush2(struct _IO_FILE * stream) {
+int32_t fflush2(struct _IO_FILE *stream) {
     // 0x8720
     return fflush(stream);
 }
 
 // Address range: 0x872c - 0x8738
-int32_t _IO_getc2(struct _IO_FILE * fp) {
+int32_t _IO_getc2(struct _IO_FILE *fp) {
     // 0x872c
     return _IO_getc(fp);
 }
 
 // Address range: 0x8738 - 0x8744
-int32_t __xstat2(int32_t ver, char * filename, struct stat * stat_buf) {
+int32_t __xstat2(int32_t ver, char *filename, struct stat *stat_buf) {
     // 0x8738
     return __xstat(ver, filename, stat_buf);
 }
 
 // Address range: 0x8744 - 0x8750
-int32_t _IO_putc2(int32_t c, struct _IO_FILE * fp) {
+int32_t _IO_putc2(int32_t c, struct _IO_FILE *fp) {
     // 0x8744
     return _IO_putc(c, fp);
 }
 
 // Address range: 0x8750 - 0x875c
-int32_t fwrite2(int32_t * ptr, int32_t size, int32_t n, struct _IO_FILE * s) {
+int32_t fwrite2(int32_t *ptr, int32_t size, int32_t n, struct _IO_FILE *s) {
     // 0x8750
     return fwrite(ptr, size, n, s);
 }
@@ -175,25 +177,27 @@ int32_t usleep2(int32_t useconds) {
 }
 
 // Address range: 0x8774 - 0x8780
-char * getenv2(char * name) {
+char *getenv2(char *name) {
     // 0x8774
     return getenv(name);
 }
 
 // Address range: 0x8780 - 0x878c
-int32_t puts2(char * s) {
+int32_t puts2(char *s) {
     // 0x8780
     return puts(s);
 }
 
 // Address range: 0x878c - 0x8798
-int32_t __libc_start_main2(int32_t main, int32_t argc, char ** ubp_av, void (*init)(), void (*fini)(), void (*rtld_fini)()) {
+int32_t __libc_start_main2(int32_t main, int32_t argc, char **ubp_av,
+                           void (*init)(), void (*fini)(),
+                           void (*rtld_fini)()) {
     // 0x878c
     return __libc_start_main(main, argc, ubp_av, init, fini, rtld_fini);
 }
 
 // Address range: 0x8798 - 0x87a4
-char * strerror2(int32_t errnum) {
+char *strerror2(int32_t errnum) {
     // 0x8798
     return strerror(errnum);
 }
@@ -205,7 +209,7 @@ void function_87a4(void) {
 }
 
 // Address range: 0x87b0 - 0x87bc
-int32_t open2(char * file, int32_t oflag, ...) {
+int32_t open2(char *file, int32_t oflag, ...) {
     // 0x87b0
     return open(file, oflag);
 }
@@ -217,37 +221,37 @@ void exit2(int32_t status) {
 }
 
 // Address range: 0x87c8 - 0x87d4
-int32_t strtoul2(char * nptr, char ** endptr, int32_t base) {
+int32_t strtoul2(char *nptr, char **endptr, int32_t base) {
     // 0x87c8
     return strtoul(nptr, endptr, base);
 }
 
 // Address range: 0x87d4 - 0x87e0
-int32_t strlen2(char * s) {
+int32_t strlen2(char *s) {
     // 0x87d4
     return strlen(s);
 }
 
 // Address range: 0x87e0 - 0x87ec
-int32_t getopt2(int32_t argc, char ** argv, char * shortopts) {
+int32_t getopt2(int32_t argc, char **argv, char *shortopts) {
     // 0x87e0
     return getopt(argc, argv, shortopts);
 }
 
 // Address range: 0x87ec - 0x87f8
-int32_t fprintf2(struct _IO_FILE * stream, char * format, ...) {
+int32_t fprintf2(struct _IO_FILE *stream, char *format, ...) {
     // 0x87ec
     return fprintf(stream, format);
 }
 
 // Address range: 0x87f8 - 0x8804
-int32_t * __errno_location2(void) {
+int32_t *__errno_location2(void) {
     // 0x87f8
     return __errno_location();
 }
 
 // Address range: 0x8804 - 0x8810
-int32_t fputc2(int32_t c, struct _IO_FILE * stream) {
+int32_t fputc2(int32_t c, struct _IO_FILE *stream) {
     // 0x8804
     return fputc(c, stream);
 }
@@ -267,7 +271,31 @@ int32_t close2(int32_t fd) {
 // Address range: 0x8828 - 0x884c
 int32_t function_8828(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     // 0x8828
-    fprintf(p_g4, "%s\n[line %d]\n", "eeprog 0.7.5, a 24Cxx EEPROM reader/writer\nCopyright (c) 2003 by Stefano Barbato - All rights reserved.\nUsage: eeprog [-fqxdh] [-16|-8] [ -r addr[:count] | -w addr ]  /dev/i2c-N  i2c-address\n\n  Address modes:\n\t-8\t\tUse 8bit address mode for 24c0x...24C16 [default]\n\t-16\t\tUse 16bit address mode for 24c32...24C256\n  Actions:\n\t-r addr[:count]\tRead [count] (1 if omitted) bytes from [addr]\n\t\t\tand print them to the standard output\n\t-w addr\t\tWrite input (stdin) at address [addr] of the EEPROM\n\t-h\t\tPrint this help\n  Options:\n\t-x\t\tSet hex output mode\n\t-d\t\tDummy mode, display what *would* have been done\n\t-f\t\tDisable warnings and don't ask confirmation\n\t-q\t\tQuiet mode\n\nThe following environment variables could be set instead of the command\nline arguments:\n\tEEPROG_DEV\t\tdevice name(/dev/i2c-N)\n\tEEPROG_I2C_ADDR\t\ti2c-address\n\n\tExamples\n\t1- read 64 bytes from the EEPROM at address 0x54 on bus 0 starting\n\t   at address 123 (decimal)\n\t\teeprog /dev/i2c-0 0x54 -r 123:64\n\t2- prints the hex codes of the first 32 bytes read from bus 1\n\t   at address 0x22\n\t\teeprog /dev/i2c-1 0x51 -x -r 0x22:0x20\n\t3- write the current timestamp at address 0x200 of the EEPROM on\n\t   bus 0 at address 0x33\n\t\tdate | eeprog /dev/i2c-0 0x33 -w 0x200\n", i_a1);
+    fprintf(
+        p_g4, "%s\n[line %d]\n",
+        "eeprog 0.7.5, a 24Cxx EEPROM reader/writer\nCopyright (c) 2003 by "
+        "Stefano Barbato - All rights reserved.\nUsage: eeprog [-fqxdh] "
+        "[-16|-8] [ -r addr[:count] | -w addr ]  /dev/i2c-N  i2c-address\n\n  "
+        "Address modes:\n\t-8\t\tUse 8bit address mode for 24c0x...24C16 "
+        "[default]\n\t-16\t\tUse 16bit address mode for 24c32...24C256\n  "
+        "Actions:\n\t-r addr[:count]\tRead [count] (1 if omitted) bytes from "
+        "[addr]\n\t\t\tand print them to the standard output\n\t-w "
+        "addr\t\tWrite input (stdin) at address [addr] of the "
+        "EEPROM\n\t-h\t\tPrint this help\n  Options:\n\t-x\t\tSet hex output "
+        "mode\n\t-d\t\tDummy mode, display what *would* have been "
+        "done\n\t-f\t\tDisable warnings and don't ask "
+        "confirmation\n\t-q\t\tQuiet mode\n\nThe following environment "
+        "variables could be set instead of the command\nline "
+        "arguments:\n\tEEPROG_DEV\t\tdevice "
+        "name(/dev/"
+        "i2c-N)\n\tEEPROG_I2C_ADDR\t\ti2c-address\n\n\tExamples\n\t1- read 64 "
+        "bytes from the EEPROM at address 0x54 on bus 0 starting\n\t   at "
+        "address 123 (decimal)\n\t\teeprog /dev/i2c-0 0x54 -r 123:64\n\t2- "
+        "prints the hex codes of the first 32 bytes read from bus 1\n\t   at "
+        "address 0x22\n\t\teeprog /dev/i2c-1 0x51 -x -r 0x22:0x20\n\t3- write "
+        "the current timestamp at address 0x200 of the EEPROM on\n\t   bus 0 "
+        "at address 0x33\n\t\tdate | eeprog /dev/i2c-0 0x33 -w 0x200\n",
+        i_a1);
     exit(1);
     return &i_g16;
 }
@@ -282,19 +310,19 @@ int32_t function_8858(int32_t i_a1, int32_t i_a2) {
     int32_t i_v4 = 0; // 0x888c
     int32_t i_v5 = 0; // 0x888c
     int32_t i_v6 = 0; // 0x888c
-    uint32_t i_v7; // 0x8858
-    int32_t i_v8; // 0x8858
+    uint32_t i_v7;    // 0x8858
+    int32_t i_v8;     // 0x8858
     while (true) {
         // 0x8890
         i_v7 = i_v4;
         i_v8 = i_v1;
-        int32_t i_v9 = i_v2; // 0x8858
+        int32_t i_v9 = i_v2;  // 0x8858
         int32_t i_v10 = i_v3; // 0x8858
         while (true) {
             // 0x8890
             i_v2 = i_v9;
             while (true) {
-              lab_0x8890_4:
+            lab_0x8890_4:
                 // 0x8890
                 i_v3 = i_v10;
                 int32_t i_v11 = i_v5; // 0x8858
@@ -303,44 +331,46 @@ int32_t function_8858(int32_t i_a1, int32_t i_a2) {
                     // 0x8890
                     i_v5 = i_v11;
                     while (true) {
-                      lab_0x8890_2:
+                    lab_0x8890_2:
                         // 0x8890
                         i_v6 = i_v12;
                         while (true) {
-                          lab_0x8890:
+                        lab_0x8890:
                             // 0x8890
                             i_v4 = getopt(i_a1, (char **)i_a2, "1:8fr:qhw:xd");
                             switch (i_v4) {
-                                case -1: {
-                                    goto lab_0x898c;
+                            case -1: {
+                                goto lab_0x898c;
+                            }
+                            case 102: {
+                                goto lab_0x8938;
+                            }
+                            default: {
+                                if (i_v4 <= 102) {
+                                    // break -> 0x88b8
+                                    break;
                                 }
-                                case 102: {
-                                    goto lab_0x8938;
+                                switch (i_v4) {
+                                case 113: {
+                                    // 0x8928
+                                    i_g9++;
+                                    goto lab_0x8890;
+                                }
+                                case 120: {
+                                    goto lab_0x8918;
+                                }
+                                case 104: {
+                                    // 0x8910
+                                    function_8828(205, i_a2,
+                                                  (int32_t) "1:8fr:qhw:xd",
+                                                  104);
+                                    // UNREACHABLE
                                 }
                                 default: {
-                                    if (i_v4 <= 102) {
-                                        // break -> 0x88b8
-                                        break;
-                                    }
-                                    switch (i_v4) {
-                                        case 113: {
-                                            // 0x8928
-                                            i_g9++;
-                                            goto lab_0x8890;
-                                        }
-                                        case 120: {
-                                            goto lab_0x8918;
-                                        }
-                                        case 104: {
-                                            // 0x8910
-                                            function_8828(205, i_a2, (int32_t)"1:8fr:qhw:xd", 104);
-                                            // UNREACHABLE
-                                        }
-                                        default: {
-                                            goto lab_0x88d4;
-                                        }
-                                    }
+                                    goto lab_0x88d4;
                                 }
+                                }
+                            }
                             }
                         }
                         if (i_v4 == 56) {
@@ -349,102 +379,108 @@ int32_t function_8858(int32_t i_a1, int32_t i_a2) {
                         }
                         // 0x88c0
                         switch (i_v4) {
-                            case 100: {
-                                goto lab_0x8890_2;
+                        case 100: {
+                            goto lab_0x8890_2;
+                        }
+                        case 49: {
+                            char *p_v13 = p_g7;           // 0x8940
+                            unsigned char i_v14 = *p_v13; // 0x8944
+                            int32_t i_v15 = 1;            // 0x8950
+                            if (i_v14 == 54) {
+                                int32_t i_v16 = strlen(p_v13); // 0x8a60
+                                int32_t i_v17 = i_v16 == 1 ? i_v16 - 1 : 1;
+                                i_v15 = i_v17;
                             }
-                            case 49: {
-                                char * p_v13 = p_g7; // 0x8940
-                                unsigned char i_v14 = *p_v13; // 0x8944
-                                int32_t i_v15 = 1; // 0x8950
-                                if (i_v14 == 54) {
-                                    int32_t i_v16 = strlen(p_v13); // 0x8a60
-                                    int32_t i_v17 = i_v16 == 1 ? i_v16 - 1 : 1;
-                                    i_v15 = i_v17;
-                                }
-                                int32_t i_v18 = i_v14; // 0x8944
-                                int32_t i_v19 = i_v15;
-                                function_8da8(i_v19, 184, (int32_t)"1:8fr:qhw:xd", i_v18);
-                                function_8dbc(i_v3, "EEPROM type switch (-8 or -16) used twice", 185, i_v18);
-                                goto lab_0x8890_4;
-                            }
-                            default: {
-                                goto lab_0x88d4;
-                            }
+                            int32_t i_v18 = i_v14; // 0x8944
+                            int32_t i_v19 = i_v15;
+                            function_8da8(i_v19, 184, (int32_t) "1:8fr:qhw:xd",
+                                          i_v18);
+                            function_8dbc(
+                                i_v3,
+                                "EEPROM type switch (-8 or -16) used twice",
+                                185, i_v18);
+                            goto lab_0x8890_4;
+                        }
+                        default: {
+                            goto lab_0x88d4;
+                        }
                         }
                     }
-                  lab_0x8938:
+                lab_0x8938:
                     // 0x8938
                     i_v11 = i_v5 + 1;
                     i_v12 = i_v6;
                 }
-              lab_0x8974:
+            lab_0x8974:
                 // 0x8974
-                function_8dbc(i_v3, "EEPROM type switch (-8 or -16) used twice", 195, 56);
+                function_8dbc(i_v3, "EEPROM type switch (-8 or -16) used twice",
+                              195, 56);
                 goto lab_0x8890_4;
             }
-          lab_0x8918:
+        lab_0x8918:
             // 0x8918
             i_v9 = i_v2 + 1;
             i_v10 = i_v3;
         }
-      lab_0x88d4:
+    lab_0x88d4:
         // 0x88d4
-        function_8dbc((int32_t)(i_v7 != 0), "Both read and write requested", 208, i_v4);
+        function_8dbc((int32_t)(i_v7 != 0), "Both read and write requested",
+                      208, i_v4);
         i_v1 = (int32_t)p_g7;
     }
-  lab_0x898c:;
+lab_0x898c:;
     int32_t i_v20 = i_v7 > 1 ? i_v7 : 1;
-    function_8da8(i_v20 - i_v7, 216, (int32_t)"1:8fr:qhw:xd", -1);
+    function_8da8(i_v20 - i_v7, 216, (int32_t) "1:8fr:qhw:xd", -1);
     int32_t i_v21 = i_g3; // 0x89a8
-    int32_t i_v22; // 0x8858
-    int32_t i_v23; // 0x8858
-    int32_t i_v24; // 0x8858
-    int32_t i_v25; // 0x8858
+    int32_t i_v22;        // 0x8858
+    int32_t i_v23;        // 0x8858
+    int32_t i_v24;        // 0x8858
+    int32_t i_v25;        // 0x8858
     switch (i_a1 - i_v21) {
-        case 1: {
-            int32_t i_v26 = *(int32_t *)(4 * i_v21 + i_a2); // 0x8ab0
-            int32_t i_v27; // bp-128, 0x8858
-            int32_t i_v28 = &i_v27; // 0x8ab8
-            if (__xstat(3, (char *)i_v26, (struct stat *)&i_v27) == -1) {
-                // 0x8c18
-                i_v22 = i_v28;
-                i_v23 = i_g3;
-                i_v24 = (int32_t)getenv("EEPROG_DEV");
-                i_v25 = *(int32_t *)(4 * i_g3 + i_a2);
-            } else {
-                // 0x8ac8
-                i_v22 = i_v28;
-                i_v23 = i_g3;
-                i_v24 = *(int32_t *)(4 * i_g3 + i_a2);
-                i_v25 = (int32_t)getenv("EEPROG_I2C_ADDR");
-            }
-            // break -> 0x89e0
-            break;
-        }
-        case 2: {
-            int32_t i_v29 = i_v21 + 1; // 0x8a9c
-            i_g3 = i_v29;
-            i_v22 = i_v29;
-            i_v23 = i_v21;
-            i_v24 = *(int32_t *)(4 * i_v21 + i_a2);
-            i_v25 = *(int32_t *)(4 * i_v29 + i_a2);
-            // break -> 0x89e0
-            break;
-        }
-        case 0: {
-            // 0x89c8
-            i_v22 = (int32_t)"1:8fr:qhw:xd";
-            i_v23 = i_v21;
+    case 1: {
+        int32_t i_v26 = *(int32_t *)(4 * i_v21 + i_a2); // 0x8ab0
+        int32_t i_v27;                                  // bp-128, 0x8858
+        int32_t i_v28 = &i_v27;                         // 0x8ab8
+        if (__xstat(3, (char *)i_v26, (struct stat *)&i_v27) == -1) {
+            // 0x8c18
+            i_v22 = i_v28;
+            i_v23 = i_g3;
             i_v24 = (int32_t)getenv("EEPROG_DEV");
+            i_v25 = *(int32_t *)(4 * i_g3 + i_a2);
+        } else {
+            // 0x8ac8
+            i_v22 = i_v28;
+            i_v23 = i_g3;
+            i_v24 = *(int32_t *)(4 * i_g3 + i_a2);
             i_v25 = (int32_t)getenv("EEPROG_I2C_ADDR");
-            // break -> 0x89e0
-            break;
         }
-        default: {
-            // 0x8a70
-            function_8828(240, 216, (int32_t)"1:8fr:qhw:xd", i_v21);
-            // UNREACHABLE
-        }
+        // break -> 0x89e0
+        break;
+    }
+    case 2: {
+        int32_t i_v29 = i_v21 + 1; // 0x8a9c
+        i_g3 = i_v29;
+        i_v22 = i_v29;
+        i_v23 = i_v21;
+        i_v24 = *(int32_t *)(4 * i_v21 + i_a2);
+        i_v25 = *(int32_t *)(4 * i_v29 + i_a2);
+        // break -> 0x89e0
+        break;
+    }
+    case 0: {
+        // 0x89c8
+        i_v22 = (int32_t) "1:8fr:qhw:xd";
+        i_v23 = i_v21;
+        i_v24 = (int32_t)getenv("EEPROG_DEV");
+        i_v25 = (int32_t)getenv("EEPROG_I2C_ADDR");
+        // break -> 0x89e0
+        break;
+    }
+    default: {
+        // 0x8a70
+        function_8828(240, 216, (int32_t) "1:8fr:qhw:xd", i_v21);
+        // UNREACHABLE
+    }
     }
     int32_t i_v30 = i_v3 == 0 ? 1 : i_v3;
     function_8da8((int32_t)(i_v24 == 0 | i_v25 == 0), 242, i_v22, i_v23);
@@ -454,10 +490,13 @@ int32_t function_8858(int32_t i_a1, int32_t i_a2) {
         fprintf(p_g4, "eeprog %s, a 24Cxx EEPROM reader/writer\n", "0.7.5");
         if (i_g9 == 0) {
             // 0x8b08
-            fwrite((int32_t *)"Copyright (c) 2003 by Stefano Barbato - All rights reserved.\n", 1, 61, p_g4);
+            fwrite((int32_t *)"Copyright (c) 2003 by Stefano Barbato - All "
+                              "rights reserved.\n",
+                   1, 61, p_g4);
             if (i_g9 == 0) {
                 int32_t i_v32 = i_v30 == 1 ? 8 : 16;
-                fprintf(p_g4, "  Bus: %s, Address: 0x%x, Mode: %dbit\n", (char *)i_v24, i_v31, i_v32);
+                fprintf(p_g4, "  Bus: %s, Address: 0x%x, Mode: %dbit\n",
+                        (char *)i_v24, i_v31, i_v32);
             }
         }
     }
@@ -468,55 +507,70 @@ int32_t function_8858(int32_t i_a1, int32_t i_a2) {
         return 0;
     }
     // 0x8a24
-    int32_t i_v33; // bp-144, 0x8858
+    int32_t i_v33;          // bp-144, 0x8858
     int32_t i_v34 = &i_v33; // 0x8a2c
     int32_t i_v35 = function_90ec(i_v24, i_v31, i_v30, &i_v33); // 0x8a34
-    int32_t i_v36 = function_8dbc((int32_t)(i_v35 < 0), "unable to open eeprom device file (check that the file exists and that it's readable)", 256, i_v34); // 0x8a44
-    int32_t i_v37; // bp-148, 0x8858
-    int32_t i_v38; // bp-152, 0x8858
+    int32_t i_v36 =
+        function_8dbc((int32_t)(i_v35 < 0),
+                      "unable to open eeprom device file (check that the file "
+                      "exists and that it's readable)",
+                      256, i_v34); // 0x8a44
+    int32_t i_v37;                 // bp-148, 0x8858
+    int32_t i_v38;                 // bp-152, 0x8858
     switch (i_v7) {
-        case 114: {
-            if (i_v5 == 0) {
-                // 0x8bf0
-                function_8e40(i_v36, (int32_t)"unable to open eeprom device file (check that the file exists and that it's readable)", 256, i_v34);
-            }
-            // 0x8b98
-            i_v37 = 1;
-            function_8dec(i_v8, &i_v38, &i_v37);
-            if (i_g9 == 0) {
-                // 0x8bd4
-                fprintf(p_g4, "  Reading %d bytes from 0x%x\n", i_v37, i_v38);
-            }
-            // 0x8bbc
-            function_8e7c(&i_v33, i_v38, i_v37, i_v2);
-            // 0x8b84
-            function_926c(&i_v33);
-            // 0x8a90
-            return 0;
+    case 114: {
+        if (i_v5 == 0) {
+            // 0x8bf0
+            function_8e40(
+                i_v36,
+                (int32_t) "unable to open eeprom device file (check that the "
+                          "file exists and that it's readable)",
+                256, i_v34);
         }
-        case 119: {
-            if (i_v5 == 0) {
-                // 0x8c10
-                function_8e40(i_v36, (int32_t)"unable to open eeprom device file (check that the file exists and that it's readable)", 256, i_v34);
-            }
-            // 0x8b5c
-            function_8dec(i_v8, &i_v38, &i_v37);
-            if (i_g9 == 0) {
-                // 0x8bf8
-                fprintf(p_g4, "  Writing stdin starting at address 0x%x\n", i_v38);
-            }
-            // 0x8b78
-            function_8fa4(&i_v33, i_v38);
-            // 0x8b84
-            function_926c(&i_v33);
-            // 0x8a90
-            return 0;
+        // 0x8b98
+        i_v37 = 1;
+        function_8dec(i_v8, &i_v38, &i_v37);
+        if (i_g9 == 0) {
+            // 0x8bd4
+            fprintf(p_g4, "  Reading %d bytes from 0x%x\n", i_v37, i_v38);
         }
+        // 0x8bbc
+        function_8e7c(&i_v33, i_v38, i_v37, i_v2);
+        // 0x8b84
+        function_926c(&i_v33);
+        // 0x8a90
+        return 0;
+    }
+    case 119: {
+        if (i_v5 == 0) {
+            // 0x8c10
+            function_8e40(
+                i_v36,
+                (int32_t) "unable to open eeprom device file (check that the "
+                          "file exists and that it's readable)",
+                256, i_v34);
+        }
+        // 0x8b5c
+        function_8dec(i_v8, &i_v38, &i_v37);
+        if (i_g9 == 0) {
+            // 0x8bf8
+            fprintf(p_g4, "  Writing stdin starting at address 0x%x\n", i_v38);
+        }
+        // 0x8b78
+        function_8fa4(&i_v33, i_v38);
+        // 0x8b84
+        function_926c(&i_v33);
+        // 0x8a90
+        return 0;
+    }
     }
     // 0x8a58
-    function_8828(276, (int32_t)"unable to open eeprom device file (check that the file exists and that it's readable)", 256, i_v34);
+    function_8828(276,
+                  (int32_t) "unable to open eeprom device file (check that the "
+                            "file exists and that it's readable)",
+                  256, i_v34);
     // UNREACHABLE
-  lab_0x8890_3:
+lab_0x8890_3:
     // 0x8890
     goto lab_0x8890_4;
 }
@@ -525,7 +579,9 @@ int32_t function_8858(int32_t i_a1, int32_t i_a2) {
 int32_t entry_point(int32_t i_a1, int32_t i_a2) {
     // 0x8c74
     int32_t i_v1; // 0x8c74
-    __libc_start_main((int32_t)&i_g10, i_a2, (char **)&i_v1, (void (*)())&p_g13, (void (*)())&p_g15, (void (*)())i_a1);
+    __libc_start_main((int32_t)&i_g10, i_a2, (char **)&i_v1,
+                      (void (*)()) & p_g13, (void (*)()) & p_g15,
+                      (void (*)())i_a1);
     abort();
     return &i_g16;
 }
@@ -549,7 +605,7 @@ int32_t function_8cd4(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4) {
 }
 
 // Address range: 0x8d0c - 0x8d40
-int32_t function_8d0c(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t function_8d0c(int32_t *p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     // 0x8d0c
     return 0x12204;
 }
@@ -582,7 +638,7 @@ int32_t function_8da8(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x8dbc - 0x8de4
-int32_t function_8dbc(int32_t i_a1, char * p_a2, int32_t i_a3, int32_t i_a4) {
+int32_t function_8dbc(int32_t i_a1, char *p_a2, int32_t i_a3, int32_t i_a4) {
     if (i_a1 == 0) {
         return 0;
     }
@@ -593,14 +649,14 @@ int32_t function_8dbc(int32_t i_a1, char * p_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x8dec - 0x8e40
-int32_t function_8dec(int32_t i_a1, int32_t * p_a2, int32_t * p_a3) {
+int32_t function_8dec(int32_t i_a1, int32_t *p_a2, int32_t *p_a3) {
     // 0x8dec
-    char * p_v1; // bp-20, 0x8dec
+    char *p_v1;                                     // bp-20, 0x8dec
     int32_t i_v2 = strtoul((char *)i_a1, &p_v1, 0); // 0x8e04
     *p_a2 = i_v2;
     int32_t i_v3 = i_v2; // 0x8e18
     if (*p_v1 == 58) {
-        char * p_v4 = (char *)((int32_t)p_v1 + 1); // 0x8e30
+        char *p_v4 = (char *)((int32_t)p_v1 + 1); // 0x8e30
         p_v1 = p_v4;
         i_v3 = strtoul(p_v4, NULL, 0);
         *p_a3 = i_v3;
@@ -612,13 +668,27 @@ int32_t function_8dec(int32_t i_a1, int32_t * p_a2, int32_t * p_a3) {
 // Address range: 0x8e40 - 0x8e7c
 int32_t function_8e40(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     // 0x8e40
-    fwrite((int32_t *)((int32_t)"\n____________________________WARNING____________________________\nErroneously writing to a system EEPROM (like DIMM SPD modules)\ncan break your system.  It will NOT boot anymore so you'll not\nbe able to fix it.\n\nReading from 8bit EEPROMs (like that in your DIMM) without using\nthe -8 switch can also UNEXPECTEDLY write to them, so be sure to\nuse the -8 command param when required.\n\nUse -f to disable this warning message\n\nPress ENTER to continue or hit CTRL-C to exit\n\n" & 0xffff), 1, 469, p_g4);
+    fwrite(
+        (int32_t
+             *)((int32_t) "\n____________________________WARNING_______________"
+                          "_____________\nErroneously writing to a system "
+                          "EEPROM (like DIMM SPD modules)\ncan break your "
+                          "system.  It will NOT boot anymore so you'll not\nbe "
+                          "able to fix it.\n\nReading from 8bit EEPROMs (like "
+                          "that in your DIMM) without using\nthe -8 switch can "
+                          "also UNEXPECTEDLY write to them, so be sure to\nuse "
+                          "the -8 command param when required.\n\nUse -f to "
+                          "disable this warning message\n\nPress ENTER to "
+                          "continue or hit CTRL-C to exit\n\n" &
+                0xffff),
+        1, 469, p_g4);
     _IO_getc(p_g5);
     return 1;
 }
 
 // Address range: 0x8e7c - 0x8f88
-int32_t function_8e7c(int32_t * p_a1, uint32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t function_8e7c(int32_t *p_a1, uint32_t i_a2, int32_t i_a3,
+                      int32_t i_a4) {
     int32_t i_v1 = (int32_t)p_a1;
     int32_t i_v2 = function_92f0(i_v1, i_a2 % 0x10000); // 0x8e94
     function_8dbc((int32_t)(i_v2 < 0), "read error", 127, i_a4);
@@ -636,20 +706,20 @@ int32_t function_8e7c(int32_t * p_a1, uint32_t i_a2, int32_t i_a3, int32_t i_a4)
             fflush(p_g6);
             return 0;
         }
-      lab_0x8f30:
+    lab_0x8f30:
         // 0x8f30
         puts("\n");
         // 0x8f38
         fflush(p_g6);
         return 0;
     }
-    int32_t i_v3 = 1; // 0x8e7c
+    int32_t i_v3 = 1;    // 0x8e7c
     int32_t i_v4 = i_a2; // 0x8e7c
     int32_t i_v5 = i_a3 - 1;
     int32_t i_v6 = function_9298(i_v1); // 0x8ed8
     function_8dbc((int32_t)(i_v6 < 0), "read error", 135, i_a4);
     uint32_t i_v7; // 0x8e7c
-    int32_t i_v8; // 0x8efc
+    int32_t i_v8;  // 0x8efc
     while (i_a4 != 0) {
         // 0x8ef8
         i_v7 = i_v3;
@@ -716,10 +786,10 @@ int32_t function_8e7c(int32_t * p_a1, uint32_t i_a2, int32_t i_a3, int32_t i_a4)
 }
 
 // Address range: 0x8fa4 - 0x9044
-int32_t function_8fa4(int32_t * p_a1, int32_t i_a2) {
+int32_t function_8fa4(int32_t *p_a1, int32_t i_a2) {
     int32_t i_v1 = _IO_getc(p_g5); // 0x8ff0
-    int32_t i_v2 = i_a2; // 0x9000
-    bool i_v3 = i_g9 == 0; // 0x9000
+    int32_t i_v2 = i_a2;           // 0x9000
+    bool i_v3 = i_g9 == 0;         // 0x9000
     if (i_v1 != -1) {
         if (i_g9 == 0) {
             // 0x900c
@@ -727,9 +797,10 @@ int32_t function_8fa4(int32_t * p_a1, int32_t i_a2) {
         }
         // 0x8fc4
         fflush(p_g6);
-        function_8dbc(function_9414((int32_t)p_a1, i_v2 % 0x10000, i_v1 % 256), "write error", 162, i_g9);
+        function_8dbc(function_9414((int32_t)p_a1, i_v2 % 0x10000, i_v1 % 256),
+                      "write error", 162, i_g9);
         int32_t i_v4 = _IO_getc(p_g5); // 0x8ff0
-        int32_t i_v5 = i_g9; // 0x8ff4
+        int32_t i_v5 = i_g9;           // 0x8ff4
         i_v2++;
         i_v3 = i_v5 == 0;
         while (i_v4 != -1) {
@@ -740,7 +811,9 @@ int32_t function_8fa4(int32_t * p_a1, int32_t i_a2) {
             }
             // 0x8fc4
             fflush(p_g6);
-            function_8dbc(function_9414((int32_t)p_a1, i_v2 % 0x10000, i_v4 % 256), "write error", 162, i_v5);
+            function_8dbc(
+                function_9414((int32_t)p_a1, i_v2 % 0x10000, i_v4 % 256),
+                "write error", 162, i_v5);
             i_v4 = _IO_getc(p_g5);
             i_v5 = i_g9;
             i_v2++;
@@ -757,11 +830,12 @@ int32_t function_8fa4(int32_t * p_a1, int32_t i_a2) {
 }
 
 // Address range: 0x905c - 0x90e4
-int32_t function_905c(int32_t i_a1, int32_t * p_a2) {
+int32_t function_905c(int32_t i_a1, int32_t *p_a2) {
     int32_t i_v1 = ioctl(*(int32_t *)(i_a1 + 8), 1824); // 0x909c
     if (i_v1 < 0) {
         // 0x90bc
-        fprintf(p_g4, "Error i2c_write_2b: %s\n", strerror(*__errno_location()));
+        fprintf(p_g4, "Error i2c_write_2b: %s\n",
+                strerror(*__errno_location()));
     }
     // 0x90a8
     usleep(10);
@@ -769,11 +843,11 @@ int32_t function_905c(int32_t i_a1, int32_t * p_a2) {
 }
 
 // Address range: 0x90ec - 0x9250
-int32_t function_90ec(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t * p_a4) {
+int32_t function_90ec(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t *p_a4) {
     int32_t i_v1 = (int32_t)p_a4;
-    int32_t * p_v2 = (int32_t *)(i_v1 + 4); // 0x90fc
+    int32_t *p_v2 = (int32_t *)(i_v1 + 4); // 0x90fc
     *p_v2 = 0;
-    int32_t * p_v3 = (int32_t *)(i_v1 + 8); // 0x9104
+    int32_t *p_v3 = (int32_t *)(i_v1 + 8); // 0x9104
     *p_v3 = 0;
     *p_a4 = 0;
     int32_t i_v4 = open((char *)i_a1, O_RDWR); // 0x9118
@@ -789,46 +863,58 @@ int32_t function_90ec(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t * p_a4) 
     int32_t i_v5; // 0x90ec
     if ((i_v5 & 0x20000) == 0) {
         // 0x91d0
-        fwrite((int32_t *)"\nError: I2C_FUNC_SMBUS_READ_BYTE function is required. Program halted.\n\n", 1, 72, p_g4);
+        fwrite((int32_t *)"\nError: I2C_FUNC_SMBUS_READ_BYTE function is "
+                          "required. Program halted.\n\n",
+               1, 72, p_g4);
         exit(1);
         // UNREACHABLE
     }
     if ((i_v5 & 0x40000) == 0) {
         // 0x91b0
-        fwrite((int32_t *)"\nError: I2C_FUNC_SMBUS_WRITE_BYTE function is required. Program halted.\n\n", 1, 73, p_g4);
+        fwrite((int32_t *)"\nError: I2C_FUNC_SMBUS_WRITE_BYTE function is "
+                          "required. Program halted.\n\n",
+               1, 73, p_g4);
         exit(1);
         // UNREACHABLE
     }
     // 0x914c
     if ((i_v5 & 0x80000) == 0) {
         // 0x921c
-        fwrite((int32_t *)(int32_t)"\nError: I2C_FUNC_SMBUS_READ_BYTE_DATA function is required. Program halted.\n\n", 1, 77, p_g4);
+        fwrite((int32_t *)(int32_t) "\nError: I2C_FUNC_SMBUS_READ_BYTE_DATA "
+                                    "function is required. Program halted.\n\n",
+               1, 77, p_g4);
         exit(1);
         // UNREACHABLE
     }
     // 0x9154
     if ((i_v5 & 0x100000) == 0) {
         // 0x91fc
-        fwrite((int32_t *)(int32_t)"\nError: I2C_FUNC_SMBUS_WRITE_BYTE_DATA function is required. Program halted.\n\n", 1, 78, p_g4);
+        fwrite((int32_t *)(int32_t) "\nError: I2C_FUNC_SMBUS_WRITE_BYTE_DATA "
+                                    "function is required. Program halted.\n\n",
+               1, 78, p_g4);
         exit(1);
         // UNREACHABLE
     }
     // 0x915c
     if ((i_v5 & 0x200000) == 0) {
         // 0x921c
-        fwrite((int32_t *)(int32_t)"\nError: I2C_FUNC_SMBUS_READ_WORD_DATA function is required. Program halted.\n\n", 1, 77, p_g4);
+        fwrite((int32_t *)(int32_t) "\nError: I2C_FUNC_SMBUS_READ_WORD_DATA "
+                                    "function is required. Program halted.\n\n",
+               1, 77, p_g4);
         exit(1);
         // UNREACHABLE
     }
     // 0x9164
     if ((i_v5 & 0x400000) == 0) {
         // 0x91fc
-        fwrite((int32_t *)(int32_t)"\nError: I2C_FUNC_SMBUS_WRITE_WORD_DATA function is required. Program halted.\n\n", 1, 78, p_g4);
+        fwrite((int32_t *)(int32_t) "\nError: I2C_FUNC_SMBUS_WRITE_WORD_DATA "
+                                    "function is required. Program halted.\n\n",
+               1, 78, p_g4);
         exit(1);
         // UNREACHABLE
     }
     int32_t i_v6 = ioctl(i_v4, 1795); // 0x9178
-    int32_t i_v7 = i_v6; // 0x9180
+    int32_t i_v7 = i_v6;              // 0x9180
     if (i_v6 >= 0) {
         // 0x9184
         *p_v3 = i_v4;
@@ -842,9 +928,9 @@ int32_t function_90ec(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t * p_a4) 
 }
 
 // Address range: 0x926c - 0x9298
-int32_t function_926c(int32_t * p_a1) {
+int32_t function_926c(int32_t *p_a1) {
     int32_t i_v1 = (int32_t)p_a1;
-    int32_t * p_v2 = (int32_t *)(i_v1 + 8); // 0x9274
+    int32_t *p_v2 = (int32_t *)(i_v1 + 8); // 0x9274
     close(*p_v2);
     *p_a1 = 0;
     *p_v2 = -1;
@@ -854,7 +940,7 @@ int32_t function_926c(int32_t * p_a1) {
 
 // Address range: 0x9298 - 0x92f0
 int32_t function_9298(int32_t i_a1) {
-    int32_t * p_v1 = (int32_t *)(i_a1 + 8); // 0x92a8
+    int32_t *p_v1 = (int32_t *)(i_a1 + 8); // 0x92a8
     ioctl(*p_v1, 0x1261);
     int32_t i_v2; // 0x9298
     return ioctl(*p_v1, 1824) == 0 ? (uint32_t)i_v2 % 256 : -1;
@@ -862,36 +948,37 @@ int32_t function_9298(int32_t i_a1) {
 
 // Address range: 0x92f0 - 0x9408
 int32_t function_92f0(int32_t i_a1, int32_t i_a2) {
-    int32_t * p_v1 = (int32_t *)(i_a1 + 8); // 0x9300
+    int32_t *p_v1 = (int32_t *)(i_a1 + 8); // 0x9300
     ioctl(*p_v1, 0x1261);
     int32_t i_v2; // 0x92f0
     int32_t i_v3; // bp-52, 0x92f0
     switch (*(int32_t *)(i_a1 + 12)) {
-        case 1: {
-            int32_t i_v4 = ioctl(*p_v1, 1824); // 0x93a8
-            if (i_v4 < 0) {
-                // 0x93e0
-                fprintf(p_g4, "Error i2c_write_1b: %s\n", strerror(*__errno_location()));
-            }
-            // 0x93b4
-            usleep(10);
-            i_v2 = i_v4;
-            // break -> 0x933c
-            break;
+    case 1: {
+        int32_t i_v4 = ioctl(*p_v1, 1824); // 0x93a8
+        if (i_v4 < 0) {
+            // 0x93e0
+            fprintf(p_g4, "Error i2c_write_1b: %s\n",
+                    strerror(*__errno_location()));
         }
-        case 2: {
-            // 0x9320
-            i_v3 = 0x10000 * i_a2 >> 24;
-            i_v2 = function_905c(i_a1, &i_v3);
-            // break -> 0x933c
-            break;
-        }
-        default: {
-            // 0x93c0
-            fwrite((int32_t *)"ERR: unknown eeprom type\n", 1, 25, p_g4);
-            // 0x937c
-            return -1;
-        }
+        // 0x93b4
+        usleep(10);
+        i_v2 = i_v4;
+        // break -> 0x933c
+        break;
+    }
+    case 2: {
+        // 0x9320
+        i_v3 = 0x10000 * i_a2 >> 24;
+        i_v2 = function_905c(i_a1, &i_v3);
+        // break -> 0x933c
+        break;
+    }
+    default: {
+        // 0x93c0
+        fwrite((int32_t *)"ERR: unknown eeprom type\n", 1, 25, p_g4);
+        // 0x937c
+        return -1;
+    }
     }
     // 0x933c
     if (i_v2 < 0) {
@@ -908,29 +995,30 @@ int32_t function_9414(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
     int32_t i_v1; // bp-64, 0x9414
     int32_t i_v2; // 0x9470
     switch (*(int32_t *)(i_a1 + 12)) {
-        case 1: {
-            // 0x94b8
-            i_v1 = 0x1000000 * i_a2 >> 24;
-            // 0x9484
-            return function_905c(i_a1, &i_v1);
+    case 1: {
+        // 0x94b8
+        i_v1 = 0x1000000 * i_a2 >> 24;
+        // 0x9484
+        return function_905c(i_a1, &i_v1);
+    }
+    case 2: {
+        // 0x9438
+        i_v1 = 0;
+        i_v2 = ioctl(*(int32_t *)(i_a1 + 8), 1824);
+        if (i_v2 < 0) {
+            // 0x9490
+            fprintf(p_g4, "Error i2c_write_3b: %s\n",
+                    strerror(*__errno_location()));
         }
-        case 2: {
-            // 0x9438
-            i_v1 = 0;
-            i_v2 = ioctl(*(int32_t *)(i_a1 + 8), 1824);
-            if (i_v2 < 0) {
-                // 0x9490
-                fprintf(p_g4, "Error i2c_write_3b: %s\n", strerror(*__errno_location()));
-            }
-            // break -> 0x947c
-            break;
-        }
-        default: {
-            // 0x94d0
-            fwrite((int32_t *)"ERR: unknown eeprom type\n", 1, 25, p_g4);
-            // 0x9484
-            return -1;
-        }
+        // break -> 0x947c
+        break;
+    }
+    default: {
+        // 0x94d0
+        fwrite((int32_t *)"ERR: unknown eeprom type\n", 1, 25, p_g4);
+        // 0x9484
+        return -1;
+    }
     }
     // 0x947c
     usleep(10);
@@ -941,7 +1029,10 @@ int32_t function_9414(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
 // Address range: 0x94fc - 0x9558
 int32_t function_94fc(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     int32_t i_v1 = function_86f4(i_a1, i_a2, i_a3, i_a4); // 0x9518
-    int32_t i_v2 = (int32_t)&i_g12 + 0x951c - ((int32_t)&i_g14 + (int32_t)&i_g11) >> 2 == 0 ? i_v1 : i_a1;
+    int32_t i_v2 =
+        (int32_t)&i_g12 + 0x951c - ((int32_t)&i_g14 + (int32_t)&i_g11) >> 2 == 0
+            ? i_v1
+            : i_a1;
     return i_v2;
 }
 
@@ -962,4 +1053,3 @@ int32_t function_9564(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 
 // Detected compiler/packer: gcc (4.8.x)
 // Detected functions: 47
-

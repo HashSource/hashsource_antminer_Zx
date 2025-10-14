@@ -1432,25 +1432,24 @@ dec_label_pc_11eb8:                               ; preds = %dec_label_pc_11e28,
   uselistorder i32 (i32)* @RSA_free, { 1, 0, 2 }
   uselistorder i32 (i32, i32*, i32, i32, i32, i32)* @RSA_verify, { 1, 0, 2 }
   uselistorder i32 (i32, i32)* @ERR_error_string, { 1, 0, 3, 2, 4 }
-  uselistorder i32 (i32)* @ERR_get_error, { 3, 1, 0, 2, 4 }
-  uselistorder i32 (i32, i32, i32, i32)* @PEM_read_bio_RSA_PUBKEY, { 1, 0, 2 }
+  uselistorder i32 (i32)* @ERR_get_error, { 0, 3, 2, 1, 4 }
   uselistorder i32 (i32, i32)* @BIO_new_mem_buf, { 1, 0, 2 }
   uselistorder i32 (i32, i32, i32, i32, i32, i32)* @function_10de8, { 1, 0 }
   uselistorder i32 32, { 4, 3, 0, 1, 2, 5 }
-  uselistorder i32 (i32*, i32*, i32*, i32*)* @SHA256_Final, { 4, 2, 1, 0, 3, 5 }
-  uselistorder i32 (i32*, i32, i32, i32*)* @SHA256_Update, { 0, 4, 2, 3, 1, 5 }
-  uselistorder i32 (i32*)* @SHA256_Init, { 0, 3, 2, 1, 4 }
+  uselistorder i32 (i32*, i32*, i32*, i32*)* @SHA256_Final, { 1, 3, 2, 0, 4, 5 }
+  uselistorder i32 (i32*, i32, i32, i32*)* @SHA256_Update, { 4, 3, 1, 2, 0, 5 }
+  uselistorder i32 (i32*)* @SHA256_Init, { 3, 2, 1, 0, 4 }
   uselistorder i32 (i32*, i32, i32, %_IO_FILE*)* @fwrite, { 5, 0, 3, 4, 2, 1, 6 }
   uselistorder i8* getelementptr inbounds ([2 x i8], [2 x i8]* @global_var_12894, i32 0, i32 0), { 1, 0 }
   uselistorder i32 1024, { 2, 3, 4, 8, 9, 5, 6, 0, 1, 7 }
   uselistorder i32 16777216, { 0, 2, 1 }
   uselistorder i32 65536, { 0, 2, 1, 3, 4 }
   uselistorder i32 256, { 15, 12, 16, 17, 0, 18, 1, 3, 2, 4, 6, 8, 5, 7, 11, 9, 10, 13, 19, 14, 20 }
-  uselistorder i32 (%_IO_FILE*)* @fclose, { 8, 7, 6, 5, 4, 3, 2, 1, 0, 13, 12, 9, 11, 10, 14 }
-  uselistorder i32 (i32*, i32, i32, %_IO_FILE*)* @fread, { 5, 4, 3, 1, 2, 0, 6 }
+  uselistorder i32 (%_IO_FILE*)* @fclose, { 2, 1, 0, 7, 6, 5, 4, 3, 13, 12, 11, 8, 10, 9, 14 }
+  uselistorder i32 (i32*, i32, i32, %_IO_FILE*)* @fread, { 0, 4, 3, 1, 2, 5, 6 }
   uselistorder %_IO_FILE* null, { 4, 5, 6, 7, 2, 3, 1, 8, 0, 9, 10, 11 }
-  uselistorder %_IO_FILE* (i8*, i8*)* @fopen64, { 2, 1, 0, 5, 4, 3, 7, 6, 8 }
-  uselistorder i32 (i8*, ...)* @printf, { 16, 15, 14, 13, 11, 12, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 17 }
+  uselistorder %_IO_FILE* (i8*, i8*)* @fopen64, { 6, 2, 1, 0, 5, 4, 3, 7, 8 }
+  uselistorder i32 (i8*, ...)* @printf, { 1, 0, 16, 15, 13, 14, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 17 }
   uselistorder i32* %arg3, { 1, 0 }
   uselistorder i32* %arg1, { 1, 0, 3, 2, 4 }
   uselistorder label %dec_label_pc_11eb8, { 1, 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 }
@@ -1666,12 +1665,12 @@ dec_label_pc_12224:                               ; preds = %dec_label_pc_121fc,
   uselistorder i32 8, { 1, 0, 9, 2, 3, 4, 5, 6, 7, 8 }
   uselistorder i32 16, { 2, 0, 1, 5, 3, 4 }
   uselistorder i8* (i8*, i8*)* @strcpy, { 2, 1, 0, 3 }
-  uselistorder i32 (i8*)* @puts, { 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 28 }
+  uselistorder i32 (i8*)* @puts, { 27, 26, 25, 24, 23, 22, 8, 7, 6, 5, 4, 3, 2, 1, 0, 17, 16, 15, 14, 13, 12, 11, 10, 9, 21, 20, 19, 18, 28 }
   uselistorder i1 true, { 2, 3, 4, 5, 6, 7, 8, 9, 0, 1 }
   uselistorder i32 (i8*)* @strlen, { 12, 11, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2, 1, 13 }
   uselistorder i32 12, { 1, 2, 7, 3, 4, 5, 6, 0 }
   uselistorder i32 5, { 0, 1, 4, 3, 2 }
-  uselistorder i32* (i32*, i32, i32)* @memset, { 9, 8, 7, 11, 10, 4, 3, 2, 1, 0, 6, 5, 12 }
+  uselistorder i32* (i32*, i32, i32)* @memset, { 11, 7, 6, 10, 9, 8, 4, 3, 2, 1, 0, 5, 12 }
   uselistorder i32 4, { 0, 2, 13, 12, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1 }
   uselistorder label %dec_label_pc_12224, { 0, 3, 2, 1, 6, 7, 8, 9, 4, 5 }
   uselistorder label %dec_label_pc_120fc, { 1, 2, 0 }

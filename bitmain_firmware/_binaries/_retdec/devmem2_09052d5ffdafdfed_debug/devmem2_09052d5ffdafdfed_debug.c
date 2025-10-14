@@ -29,23 +29,26 @@ int32_t _fini(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t _init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t _start(int32_t i_a1, int32_t i_a2);
 int32_t call_gmon_start(void);
-int32_t deregister_tm_clones(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4);
+int32_t deregister_tm_clones(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                             char i_a4);
 int32_t frame_dummy(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t register_tm_clones(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
+int32_t register_tm_clones(int32_t *p_a1, int32_t i_a2, int32_t i_a3,
+                           int32_t i_a4);
 
 // --------------------- Global Variables ---------------------
 
-int32_t i_g1 = 0x867d; // 0x10b3c
-int32_t i_g2 = 0; // 0x10b44
-int32_t i_g3 = 0; // 0x10c7c
-struct _IO_FILE * p_g4 = NULL; // 0x10c88
-struct _IO_FILE * p_g5 = NULL; // 0x10c8c
-char * p_g6; // 0x10c90
+int32_t i_g1 = 0x867d;        // 0x10b3c
+int32_t i_g2 = 0;             // 0x10b44
+int32_t i_g3 = 0;             // 0x10c7c
+struct _IO_FILE *p_g4 = NULL; // 0x10c88
+struct _IO_FILE *p_g5 = NULL; // 0x10c8c
+char *p_g6;                   // 0x10c90
 int32_t i_g7;
 
 // ------- Dynamically Linked Functions Without Header --------
 
-int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char ** p_a3, void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
+int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char **p_a3,
+                          void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
 
 // ------------------------ Functions -------------------------
 
@@ -66,7 +69,8 @@ int32_t _24_t(void) {
 int32_t _start(int32_t i_a1, int32_t i_a2) {
     // 0x85c4
     int32_t i_v1; // 0x85c4
-    __libc_start_main(0x869d, i_a2, (char **)&i_v1, (void (*)())0x8959, (void (*)())0x869d, (void (*)())i_a1);
+    __libc_start_main(0x869d, i_a2, (char **)&i_v1, (void (*)())0x8959,
+                      (void (*)())0x869d, (void (*)())i_a1);
     abort();
     return &i_g7;
 }
@@ -84,13 +88,15 @@ int32_t call_gmon_start(void) {
 }
 
 // Address range: 0x8614 - 0x862c
-int32_t deregister_tm_clones(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4) {
+int32_t deregister_tm_clones(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                             char i_a4) {
     // 0x8614
     return (int32_t)&p_g4;
 }
 
 // Address range: 0x8638 - 0x8656
-int32_t register_tm_clones(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t register_tm_clones(int32_t *p_a1, int32_t i_a2, int32_t i_a3,
+                           int32_t i_a4) {
     // 0x8638
     return (int32_t)&p_g4;
 }
@@ -101,7 +107,7 @@ int32_t __do_global_dtors_aux(void) {
     int32_t i_v1; // 0x8664
     if (*(char *)&p_g6 == 0) {
         // 0x866c
-        int32_t i_v2; // 0x8664
+        int32_t i_v2;                                             // 0x8664
         int32_t i_v3 = deregister_tm_clones(i_v2, i_v2, i_v2, 0); // 0x866c
         *(char *)&p_g6 = 1;
         i_v1 = i_v3;
@@ -117,15 +123,20 @@ int32_t frame_dummy(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x869c - 0x8956
-int main(int argc, char ** argv) {
+int main(int argc, char **argv) {
     if (argc <= 1) {
         // 0x86b0
-        fprintf(p_g4, "\nUsage:\t%s { address } [ type [ data ] ]\n\taddress : memory address to act upon\n\ttype    : access operation type : [b]yte, [h]alfword, [w]ord\n\tdata    : data to be written\n\n", argv);
+        fprintf(
+            p_g4,
+            "\nUsage:\t%s { address } [ type [ data ] ]\n\taddress : memory "
+            "address to act upon\n\ttype    : access operation type : [b]yte, "
+            "[h]alfword, [w]ord\n\tdata    : data to be written\n\n",
+            argv);
         exit(1);
     }
-    int32_t i_v1 = (int32_t)argv; // 0x86d4
+    int32_t i_v1 = (int32_t)argv;                                    // 0x86d4
     int32_t i_v2 = strtoul((char *)*(int32_t *)(i_v1 + 4), NULL, 0); // 0x86e0
-    char i_v3 = 119; // 0x86ec
+    char i_v3 = 119;                                                 // 0x86ec
     if (argc >= 3) {
         unsigned char i_v4 = *(char *)*(int32_t *)(i_v1 + 8); // 0x86f4
         i_v3 = tolower((int32_t)i_v4);
@@ -134,80 +145,83 @@ int main(int argc, char ** argv) {
     if (i_v5 == -1) {
         int32_t i_v6 = *__errno_location(); // 0x872c
         int32_t i_v7 = *__errno_location(); // 0x8734
-        fprintf(p_g4, "Error at line %d, file %s (%d) [%s]\n", 79, "devmem2.c", i_v6, strerror(i_v7));
+        fprintf(p_g4, "Error at line %d, file %s (%d) [%s]\n", 79, "devmem2.c",
+                i_v6, strerror(i_v7));
         exit(1);
     }
     // 0x8760
     puts("/dev/mem opened.");
     fflush(p_g5);
-    int32_t * p_v8 = mmap(NULL, 0x1000, 3, 1, i_v5, i_v2 & -0x1000); // 0x8796
+    int32_t *p_v8 = mmap(NULL, 0x1000, 3, 1, i_v5, i_v2 & -0x1000); // 0x8796
     if (p_v8 == (int32_t *)-1) {
-        int32_t i_v9 = *__errno_location(); // 0x87b4
+        int32_t i_v9 = *__errno_location();  // 0x87b4
         int32_t i_v10 = *__errno_location(); // 0x87bc
-        fprintf(p_g4, "Error at line %d, file %s (%d) [%s]\n", 85, "devmem2.c", i_v9, strerror(i_v10));
+        fprintf(p_g4, "Error at line %d, file %s (%d) [%s]\n", 85, "devmem2.c",
+                i_v9, strerror(i_v10));
         exit(1);
     }
     // 0x87e8
     printf("Memory mapped at address %p.\n", p_v8);
     fflush(p_g5);
     int32_t i_v11 = __asm_ubfx(i_v2, 0, 12) + (int32_t)p_v8; // 0x880e
-    int32_t i_v12; // 0x869c
+    int32_t i_v12;                                           // 0x869c
     switch (i_v3) {
-        case 104: {
-            // 0x8828
-            i_v12 = (int32_t)*(int16_t *)i_v11;
-            // break -> 0x8858
-            break;
-        }
-        case 119: {
-            // 0x8830
-            i_v12 = *(int32_t *)i_v11;
-            // break -> 0x8858
-            break;
-        }
-        case 98: {
-            // 0x8820
-            i_v12 = (int32_t)*(char *)i_v11;
-            // break -> 0x8858
-            break;
-        }
-        default: {
-            // 0x8838
-            fprintf(p_g4, "Illegal data type '%c'.\n", i_v3);
-            exit(2);
-            // break -> 0x8858
-            break;
-        }
+    case 104: {
+        // 0x8828
+        i_v12 = (int32_t) * (int16_t *)i_v11;
+        // break -> 0x8858
+        break;
     }
-    int32_t * p_v13 = (int32_t *)i_v11; // 0x8866
+    case 119: {
+        // 0x8830
+        i_v12 = *(int32_t *)i_v11;
+        // break -> 0x8858
+        break;
+    }
+    case 98: {
+        // 0x8820
+        i_v12 = (int32_t) * (char *)i_v11;
+        // break -> 0x8858
+        break;
+    }
+    default: {
+        // 0x8838
+        fprintf(p_g4, "Illegal data type '%c'.\n", i_v3);
+        exit(2);
+        // break -> 0x8858
+        break;
+    }
+    }
+    int32_t *p_v13 = (int32_t *)i_v11; // 0x8866
     printf("Value at address 0x%X (%p): 0x%X\n", i_v2, p_v13, i_v12);
     fflush(p_g5);
     if (argc >= 4) {
-        uint32_t i_v14 = strtoul((char *)*(int32_t *)(i_v1 + 12), NULL, 0); // 0x888c
-        int32_t i_v15 = i_v12; // 0x869c
+        uint32_t i_v14 =
+            strtoul((char *)*(int32_t *)(i_v1 + 12), NULL, 0); // 0x888c
+        int32_t i_v15 = i_v12;                                 // 0x869c
         switch (i_v3) {
-            case 104: {
-                // 0x88b0
-                *(int16_t *)i_v11 = (int16_t)i_v14;
-                i_v15 = i_v14 % 0x10000;
-                // break -> 0x88ce
-                break;
-            }
-            case 119: {
-                // 0x88c0
-                *p_v13 = i_v14;
-                __asm_nop(i_v14);
-                i_v15 = i_v14;
-                // break -> 0x88ce
-                break;
-            }
-            case 98: {
-                // 0x88a0
-                *(char *)i_v11 = (char)i_v14;
-                i_v15 = i_v14 % 256;
-                // break -> 0x88ce
-                break;
-            }
+        case 104: {
+            // 0x88b0
+            *(int16_t *)i_v11 = (int16_t)i_v14;
+            i_v15 = i_v14 % 0x10000;
+            // break -> 0x88ce
+            break;
+        }
+        case 119: {
+            // 0x88c0
+            *p_v13 = i_v14;
+            __asm_nop(i_v14);
+            i_v15 = i_v14;
+            // break -> 0x88ce
+            break;
+        }
+        case 98: {
+            // 0x88a0
+            *(char *)i_v11 = (char)i_v14;
+            i_v15 = i_v14 % 256;
+            // break -> 0x88ce
+            break;
+        }
         }
         // 0x88ce
         printf("Written 0x%X; readback 0x%X\n", i_v14, i_v15);
@@ -217,7 +231,8 @@ int main(int argc, char ** argv) {
     if (munmap(p_v8, 0x1000) == -1) {
         int32_t i_v16 = *__errno_location(); // 0x8910
         int32_t i_v17 = *__errno_location(); // 0x8918
-        fprintf(p_g4, "Error at line %d, file %s (%d) [%s]\n", 127, "devmem2.c", i_v16, strerror(i_v17));
+        fprintf(p_g4, "Error at line %d, file %s (%d) [%s]\n", 127, "devmem2.c",
+                i_v16, strerror(i_v17));
         exit(1);
     }
     // 0x8944
@@ -226,7 +241,8 @@ int main(int argc, char ** argv) {
 }
 
 // Address range: 0x8958 - 0x8994
-int32_t __libc_csu_init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t __libc_csu_init(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                        int32_t i_a4) {
     int32_t i_v1 = _init(i_a1, i_a2, i_a3, i_a4); // 0x896a
     return 0xd0e0 - (int32_t)&i_g1 >> 2 == 0 ? i_v1 : i_a1;
 }
@@ -248,4 +264,3 @@ int32_t _fini(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 
 // Detected compiler/packer: gcc (4.7.3)
 // Detected functions: 12
-

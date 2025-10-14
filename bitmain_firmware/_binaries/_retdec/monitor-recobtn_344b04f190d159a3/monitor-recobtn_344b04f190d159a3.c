@@ -47,8 +47,8 @@ int32_t function_10b38(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 // --------------------- Global Variables ---------------------
 
 int32_t i_g1 = 0x1093d; // 0x20f10
-int32_t i_g2 = 0; // 0x21060
-char * p_g3; // 0x2106c
+int32_t i_g2 = 0;       // 0x21060
+char *p_g3;             // 0x2106c
 
 // ------------------------ Functions -------------------------
 
@@ -219,14 +219,14 @@ int32_t function_106a0(int32_t i_a1, int32_t i_a2) {
                 function_10604();
                 if (function_109c0() != 1) {
                     while (true) {
-                      lab_generated_0:
+                    lab_generated_0:
                         function_105f8();
                         // 0x10838
                         function_105ec();
                         goto lab_0x10714;
                     }
                 }
-              lab_0x10814_2:
+            lab_0x10814_2:
                 // 0x10814
                 function_10940(0);
                 if (function_109c0() != 0) {
@@ -238,7 +238,7 @@ int32_t function_106a0(int32_t i_a1, int32_t i_a2) {
         // 0x1082c
         function_105c8();
     }
-  lab_0x10854:
+lab_0x10854:
     // 0x10854
     function_10940(0);
     if (i_a1 < 2) {
@@ -258,7 +258,7 @@ int32_t function_106a0(int32_t i_a1, int32_t i_a2) {
         function_105c8();
         goto lab_0x1086c;
     }
-  lab_0x10714:
+lab_0x10714:
     // 0x10714
     if (function_109c0() == 1) {
         // break -> 0x10814
@@ -307,7 +307,7 @@ int32_t function_10924(void) {
     int32_t i_v1; // 0x10924
     if (*(char *)&p_g3 == 0) {
         // 0x10932
-        int32_t i_v2; // 0x10924
+        int32_t i_v2;                                       // 0x10924
         int32_t i_v3 = function_108d4(i_v2, i_v2, i_v2, 0); // 0x10932
         *(char *)&p_g3 = 1;
         i_v1 = i_v3;
@@ -384,7 +384,8 @@ int32_t function_109c0(void) {
 // Address range: 0x10af8 - 0x10b2c
 int32_t function_10af8(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     int32_t i_v1 = function_10584(i_a1, i_a2, i_a3, i_a4); // 0x10b08
-    int32_t i_v2 = (int32_t)"system" + 0x10b08 - (int32_t)&i_g1 >> 2 == 0 ? i_v1 : i_a1;
+    int32_t i_v2 =
+        (int32_t) "system" + 0x10b08 - (int32_t)&i_g1 >> 2 == 0 ? i_v1 : i_a1;
     return i_v2;
 }
 
@@ -405,4 +406,3 @@ int32_t function_10b38(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 
 // Detected compiler/packer: gcc (4.4.3)
 // Detected functions: 35
-

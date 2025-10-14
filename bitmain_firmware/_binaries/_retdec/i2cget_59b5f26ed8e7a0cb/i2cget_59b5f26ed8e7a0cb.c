@@ -34,28 +34,29 @@ struct dirent {
 
 // ------------------- Function Prototypes --------------------
 
-int32_t * __errno_location2(void);
-int32_t __libc_start_main2(int32_t main, int32_t argc, char ** ubp_av, void (*init)(), void (*fini)(), void (*rtld_fini)());
-char * __strdup2(char * string);
+int32_t *__errno_location2(void);
+int32_t __libc_start_main2(int32_t main, int32_t argc, char **ubp_av,
+                           void (*init)(), void (*fini)(), void (*rtld_fini)());
+char *__strdup2(char *string);
 void abort2(void);
-int32_t * calloc2(int32_t nmemb, int32_t size);
+int32_t *calloc2(int32_t nmemb, int32_t size);
 int32_t close2(int32_t fd);
-int32_t closedir2(struct __dirstream * dirp);
+int32_t closedir2(struct __dirstream *dirp);
 int32_t entry_point(int32_t i_a1, int32_t i_a2);
 void exit2(int32_t status);
-int32_t fclose2(struct _IO_FILE * stream);
-int32_t fflush2(struct _IO_FILE * stream);
-int32_t fgetc2(struct _IO_FILE * stream);
-char * fgets2(char * s, int32_t n, struct _IO_FILE * stream);
-struct _IO_FILE * fopen2(char * filename, char * modes);
-int32_t fprintf2(struct _IO_FILE * stream, char * format, ...);
-void free2(int32_t * ptr);
+int32_t fclose2(struct _IO_FILE *stream);
+int32_t fflush2(struct _IO_FILE *stream);
+int32_t fgetc2(struct _IO_FILE *stream);
+char *fgets2(char *s, int32_t n, struct _IO_FILE *stream);
+struct _IO_FILE *fopen2(char *filename, char *modes);
+int32_t fprintf2(struct _IO_FILE *stream, char *format, ...);
+void free2(int32_t *ptr);
 int32_t function_8928(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 void function_8a14(void);
 int32_t function_8b10(int32_t i_a1, int32_t i_a2);
 int32_t function_9264(void);
 int32_t function_9288(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4);
-int32_t function_92c0(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
+int32_t function_92c0(int32_t *p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_9300(void);
 int32_t function_9328(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_935c(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
@@ -63,7 +64,7 @@ int32_t function_9388(int32_t i_a1);
 int32_t function_93ec(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_9424(int32_t i_a1, int32_t i_a2);
 int32_t function_9468(int32_t i_a1);
-int32_t function_94fc(int32_t i_a1, int32_t * p_a2, int32_t i_a3, uint32_t i_a4);
+int32_t function_94fc(int32_t i_a1, int32_t *p_a2, int32_t i_a3, uint32_t i_a4);
 int32_t function_962c(void);
 int32_t function_9b80(int32_t i_a1);
 int32_t function_9cc8(int32_t i_a1, int32_t i_a2, int32_t i_a3);
@@ -71,60 +72,52 @@ int32_t function_9d38(int32_t i_a1);
 int32_t function_9dd8(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_9e3c(void);
 int32_t function_9e40(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t fwrite2(int32_t * ptr, int32_t size, int32_t n, struct _IO_FILE * s);
+int32_t fwrite2(int32_t *ptr, int32_t size, int32_t n, struct _IO_FILE *s);
 int32_t ioctl2(int32_t fd, int32_t request, ...);
-int32_t * malloc2(int32_t size);
-int32_t * memset2(int32_t * s, int32_t c, int32_t n);
-int32_t open2(char * file, int32_t oflag, ...);
-struct __dirstream * opendir2(char * name);
-int32_t printf2(char * format, ...);
-struct dirent * readdir2(struct __dirstream * dirp);
-int32_t * realloc2(int32_t * ptr, int32_t size);
-int32_t snprintf2(char * s, int32_t maxlen, char * format, ...);
-int32_t sprintf2(char * s, char * format, ...);
-int32_t sscanf2(char * s, char * format, ...);
-int32_t strcasecmp2(char * s1, char * s2);
-char * strchr2(char * s, int32_t c);
-int32_t strcmp2(char * s1, char * s2);
-char * strcpy2(char * dest, char * src);
-char * strerror2(int32_t errnum);
-int32_t strlen2(char * s);
-int32_t strncmp2(char * s1, char * s2, int32_t n);
-char * strrchr2(char * s, int32_t c);
-int32_t strtol2(char * nptr, char ** endptr, int32_t base);
-int32_t strtoul2(char * nptr, char ** endptr, int32_t base);
+int32_t *malloc2(int32_t size);
+int32_t *memset2(int32_t *s, int32_t c, int32_t n);
+int32_t open2(char *file, int32_t oflag, ...);
+struct __dirstream *opendir2(char *name);
+int32_t printf2(char *format, ...);
+struct dirent *readdir2(struct __dirstream *dirp);
+int32_t *realloc2(int32_t *ptr, int32_t size);
+int32_t snprintf2(char *s, int32_t maxlen, char *format, ...);
+int32_t sprintf2(char *s, char *format, ...);
+int32_t sscanf2(char *s, char *format, ...);
+int32_t strcasecmp2(char *s1, char *s2);
+char *strchr2(char *s, int32_t c);
+int32_t strcmp2(char *s1, char *s2);
+char *strcpy2(char *dest, char *src);
+char *strerror2(int32_t errnum);
+int32_t strlen2(char *s);
+int32_t strncmp2(char *s1, char *s2, int32_t n);
+char *strrchr2(char *s, int32_t c);
+int32_t strtol2(char *nptr, char **endptr, int32_t base);
+int32_t strtoul2(char *nptr, char **endptr, int32_t base);
 
 // --------------------- Global Variables ---------------------
 
-int32_t i_g1 = 0; // 0x126ac
-int32_t i_g2 = 0; // 0x1283c
-struct _IO_FILE * p_g3 = NULL; // 0x12848
-struct _IO_FILE * p_g4 = NULL; // 0x12850
-char * p_g5; // 0x12854
-int32_t i_g6 = 0x1716; // 0x88a4
-int32_t i_g7 = 0x12800; // 0x88b0
-void (*p_g8)() = (void (*)())-0x16d2ba08; // 0x9dd8
-int32_t i_g9 = -0x1e4f9eba; // 0x9e00
-void (*p_g10)() = (void (*)())-0x1ed000e2; // 0x9e3c
-char * x_g11[10] = {
-    "dummy",
-    "Dummy bus",
-    "isa",
-    "ISA bus",
-    "i2c",
-    "I2C adapter",
-    "smbus",
-    "SMBus adapter",
-    "unknown",
-    "N/A"
-}; // 0xa3b8
+int32_t i_g1 = 0;                            // 0x126ac
+int32_t i_g2 = 0;                            // 0x1283c
+struct _IO_FILE *p_g3 = NULL;                // 0x12848
+struct _IO_FILE *p_g4 = NULL;                // 0x12850
+char *p_g5;                                  // 0x12854
+int32_t i_g6 = 0x1716;                       // 0x88a4
+int32_t i_g7 = 0x12800;                      // 0x88b0
+void (*p_g8)() = (void (*)()) - 0x16d2ba08;  // 0x9dd8
+int32_t i_g9 = -0x1e4f9eba;                  // 0x9e00
+void (*p_g10)() = (void (*)()) - 0x1ed000e2; // 0x9e3c
+char *x_g11[10] = {"dummy",   "Dummy bus",   "isa",   "ISA bus",
+                   "i2c",     "I2C adapter", "smbus", "SMBus adapter",
+                   "unknown", "N/A"}; // 0xa3b8
 int32_t i_g12;
 
 // ------- Dynamically Linked Functions Without Header --------
 
 void __gmon_start__(void);
-int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char ** p_a3, void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
-char * __strdup(char * p_a1);
+int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char **p_a3,
+                          void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
+char *__strdup(char *p_a1);
 
 // ------------------------ Functions -------------------------
 
@@ -135,67 +128,67 @@ int32_t function_8928(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x8948 - 0x8954
-int32_t * calloc2(int32_t nmemb, int32_t size) {
+int32_t *calloc2(int32_t nmemb, int32_t size) {
     // 0x8948
     return calloc(nmemb, size);
 }
 
 // Address range: 0x8954 - 0x8960
-int32_t strcmp2(char * s1, char * s2) {
+int32_t strcmp2(char *s1, char *s2) {
     // 0x8954
     return strcmp(s1, s2);
 }
 
 // Address range: 0x8960 - 0x896c
-int32_t strtol2(char * nptr, char ** endptr, int32_t base) {
+int32_t strtol2(char *nptr, char **endptr, int32_t base) {
     // 0x8960
     return strtol(nptr, endptr, base);
 }
 
 // Address range: 0x896c - 0x8978
-int32_t printf2(char * format, ...) {
+int32_t printf2(char *format, ...) {
     // 0x896c
     return printf(format);
 }
 
 // Address range: 0x8978 - 0x8984
-struct _IO_FILE * fopen2(char * filename, char * modes) {
+struct _IO_FILE *fopen2(char *filename, char *modes) {
     // 0x8978
     return fopen(filename, modes);
 }
 
 // Address range: 0x8984 - 0x8990
-int32_t fflush2(struct _IO_FILE * stream) {
+int32_t fflush2(struct _IO_FILE *stream) {
     // 0x8984
     return fflush(stream);
 }
 
 // Address range: 0x8990 - 0x899c
-void free2(int32_t * ptr) {
+void free2(int32_t *ptr) {
     // 0x8990
     free(ptr);
 }
 
 // Address range: 0x899c - 0x89a8
-char * fgets2(char * s, int32_t n, struct _IO_FILE * stream) {
+char *fgets2(char *s, int32_t n, struct _IO_FILE *stream) {
     // 0x899c
     return fgets(s, n, stream);
 }
 
 // Address range: 0x89a8 - 0x89b4
-int32_t * realloc2(int32_t * ptr, int32_t size) {
+int32_t *realloc2(int32_t *ptr, int32_t size) {
     // 0x89a8
     return realloc(ptr, size);
 }
 
 // Address range: 0x89b4 - 0x89c0
-int32_t strcasecmp2(char * s1, char * s2) {
+int32_t strcasecmp2(char *s1, char *s2) {
     // 0x89b4
     return strcasecmp(s1, s2);
 }
 
 // Address range: 0x89c0 - 0x89cc
-int32_t fwrite2(int32_t * ptr, int32_t size, int32_t n, struct _IO_FILE * s) {
+int32_t fwrite2(int32_t *ptr, int32_t size, int32_t n, struct _IO_FILE *s) {
     // 0x89c0
     return fwrite(ptr, size, n, s);
 }
@@ -207,31 +200,33 @@ int32_t ioctl2(int32_t fd, int32_t request, ...) {
 }
 
 // Address range: 0x89d8 - 0x89e4
-char * strcpy2(char * dest, char * src) {
+char *strcpy2(char *dest, char *src) {
     // 0x89d8
     return strcpy(dest, src);
 }
 
 // Address range: 0x89e4 - 0x89f0
-struct __dirstream * opendir2(char * name) {
+struct __dirstream *opendir2(char *name) {
     // 0x89e4
     return opendir(name);
 }
 
 // Address range: 0x89f0 - 0x89fc
-int32_t * malloc2(int32_t size) {
+int32_t *malloc2(int32_t size) {
     // 0x89f0
     return malloc(size);
 }
 
 // Address range: 0x89fc - 0x8a08
-int32_t __libc_start_main2(int32_t main, int32_t argc, char ** ubp_av, void (*init)(), void (*fini)(), void (*rtld_fini)()) {
+int32_t __libc_start_main2(int32_t main, int32_t argc, char **ubp_av,
+                           void (*init)(), void (*fini)(),
+                           void (*rtld_fini)()) {
     // 0x89fc
     return __libc_start_main(main, argc, ubp_av, init, fini, rtld_fini);
 }
 
 // Address range: 0x8a08 - 0x8a14
-char * strerror2(int32_t errnum) {
+char *strerror2(int32_t errnum) {
     // 0x8a08
     return strerror(errnum);
 }
@@ -243,7 +238,7 @@ void function_8a14(void) {
 }
 
 // Address range: 0x8a20 - 0x8a2c
-int32_t open2(char * file, int32_t oflag, ...) {
+int32_t open2(char *file, int32_t oflag, ...) {
     // 0x8a20
     return open(file, oflag);
 }
@@ -255,91 +250,91 @@ void exit2(int32_t status) {
 }
 
 // Address range: 0x8a38 - 0x8a44
-int32_t strtoul2(char * nptr, char ** endptr, int32_t base) {
+int32_t strtoul2(char *nptr, char **endptr, int32_t base) {
     // 0x8a38
     return strtoul(nptr, endptr, base);
 }
 
 // Address range: 0x8a44 - 0x8a50
-int32_t strlen2(char * s) {
+int32_t strlen2(char *s) {
     // 0x8a44
     return strlen(s);
 }
 
 // Address range: 0x8a50 - 0x8a5c
-char * strchr2(char * s, int32_t c) {
+char *strchr2(char *s, int32_t c) {
     // 0x8a50
     return strchr(s, c);
 }
 
 // Address range: 0x8a5c - 0x8a68
-int32_t fprintf2(struct _IO_FILE * stream, char * format, ...) {
+int32_t fprintf2(struct _IO_FILE *stream, char *format, ...) {
     // 0x8a5c
     return fprintf(stream, format);
 }
 
 // Address range: 0x8a68 - 0x8a74
-int32_t * __errno_location2(void) {
+int32_t *__errno_location2(void) {
     // 0x8a68
     return __errno_location();
 }
 
 // Address range: 0x8a74 - 0x8a80
-int32_t snprintf2(char * s, int32_t maxlen, char * format, ...) {
+int32_t snprintf2(char *s, int32_t maxlen, char *format, ...) {
     // 0x8a74
     return snprintf(s, maxlen, format);
 }
 
 // Address range: 0x8a80 - 0x8a8c
-int32_t sscanf2(char * s, char * format, ...) {
+int32_t sscanf2(char *s, char *format, ...) {
     // 0x8a80
     return sscanf(s, format);
 }
 
 // Address range: 0x8a8c - 0x8a98
-char * __strdup2(char * string) {
+char *__strdup2(char *string) {
     // 0x8a8c
     return __strdup(string);
 }
 
 // Address range: 0x8a98 - 0x8aa4
-int32_t * memset2(int32_t * s, int32_t c, int32_t n) {
+int32_t *memset2(int32_t *s, int32_t c, int32_t n) {
     // 0x8a98
     return memset(s, c, n);
 }
 
 // Address range: 0x8aa4 - 0x8ab0
-int32_t fgetc2(struct _IO_FILE * stream) {
+int32_t fgetc2(struct _IO_FILE *stream) {
     // 0x8aa4
     return fgetc(stream);
 }
 
 // Address range: 0x8ab0 - 0x8abc
-int32_t fclose2(struct _IO_FILE * stream) {
+int32_t fclose2(struct _IO_FILE *stream) {
     // 0x8ab0
     return fclose(stream);
 }
 
 // Address range: 0x8abc - 0x8ac8
-struct dirent * readdir2(struct __dirstream * dirp) {
+struct dirent *readdir2(struct __dirstream *dirp) {
     // 0x8abc
     return readdir(dirp);
 }
 
 // Address range: 0x8ac8 - 0x8ad4
-char * strrchr2(char * s, int32_t c) {
+char *strrchr2(char *s, int32_t c) {
     // 0x8ac8
     return strrchr(s, c);
 }
 
 // Address range: 0x8ad4 - 0x8ae0
-int32_t sprintf2(char * s, char * format, ...) {
+int32_t sprintf2(char *s, char *format, ...) {
     // 0x8ad4
     return sprintf(s, format);
 }
 
 // Address range: 0x8ae0 - 0x8aec
-int32_t strncmp2(char * s1, char * s2, int32_t n) {
+int32_t strncmp2(char *s1, char *s2, int32_t n) {
     // 0x8ae0
     return strncmp(s1, s2, n);
 }
@@ -357,38 +352,38 @@ int32_t close2(int32_t fd) {
 }
 
 // Address range: 0x8b04 - 0x8b10
-int32_t closedir2(struct __dirstream * dirp) {
+int32_t closedir2(struct __dirstream *dirp) {
     // 0x8b04
     return closedir(dirp);
 }
 
 // Address range: 0x8b10 - 0x91a4
 int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
-    int32_t i_v1 = 0; // 0x8b3c
-    int32_t i_v2 = 0; // 0x8b3c
-    int32_t i_v3 = 0; // 0x8b3c
-    int32_t i_v4 = 1; // 0x8b3c
+    int32_t i_v1 = 0;    // 0x8b3c
+    int32_t i_v2 = 0;    // 0x8b3c
+    int32_t i_v3 = 0;    // 0x8b3c
+    int32_t i_v4 = 1;    // 0x8b3c
     int32_t i_v5 = i_a2; // 0x8b3c
-    int32_t i_v6; // 0x8b10
-    int32_t i_v7; // 0x8b10
-    int32_t i_v8; // 0x8b10
-    int32_t i_v9; // 0x8b10
-    int32_t i_v10; // 0x8b10
-    int32_t i_v11; // 0x8b10
-    int32_t i_v12; // 0x8b10
+    int32_t i_v6;        // 0x8b10
+    int32_t i_v7;        // 0x8b10
+    int32_t i_v8;        // 0x8b10
+    int32_t i_v9;        // 0x8b10
+    int32_t i_v10;       // 0x8b10
+    int32_t i_v11;       // 0x8b10
+    int32_t i_v12;       // 0x8b10
     unsigned char i_v13; // 0x8b50
-    int32_t i_v14; // 0x8b88
+    int32_t i_v14;       // 0x8b88
     if (i_a1 >= 2) {
-        int32_t i_v15 = i_a2 + 4; // 0x8b40
+        int32_t i_v15 = i_a2 + 4;          // 0x8b40
         int32_t i_v16 = *(int32_t *)i_v15; // 0x8b40
-        char * p_v17 = (char *)i_v16; // 0x8b44
-        char * p_v18 = p_v17; // 0x8b4c
-        int32_t i_v19 = i_v16; // 0x8b4c
-        int32_t i_v20 = i_v15; // 0x8b4c
-        int32_t i_v21 = 0; // 0x8b4c
-        int32_t i_v22 = 0; // 0x8b4c
-        int32_t i_v23 = 0; // 0x8b4c
-        int32_t i_v24 = 1; // 0x8b4c
+        char *p_v17 = (char *)i_v16;       // 0x8b44
+        char *p_v18 = p_v17;               // 0x8b4c
+        int32_t i_v19 = i_v16;             // 0x8b4c
+        int32_t i_v20 = i_v15;             // 0x8b4c
+        int32_t i_v21 = 0;                 // 0x8b4c
+        int32_t i_v22 = 0;                 // 0x8b4c
+        int32_t i_v23 = 0;                 // 0x8b4c
+        int32_t i_v24 = 1;                 // 0x8b4c
         i_v1 = 0;
         i_v2 = 0;
         i_v3 = 0;
@@ -406,49 +401,52 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
                 int32_t i_v29 = i_v21;
                 i_v25 = i_v19;
                 i_v13 = *(char *)(i_v25 + 1);
-                int32_t i_v30 = 1; // 0x8b10
+                int32_t i_v30 = 1;     // 0x8b10
                 int32_t i_v31 = i_v28; // 0x8b10
                 int32_t i_v32 = i_v29; // 0x8b10
                 switch (i_v13) {
-                    case 121: {
-                        // 0x8c30
-                        i_v30 = i_v27;
-                        i_v31 = 1;
-                        i_v32 = i_v29;
-                    }
-                    case 102: {
-                      lab_0x8b84:
-                        // 0x8b84
-                        i_v12 = i_v32;
-                        i_v11 = i_v31;
-                        i_v10 = i_v30;
-                        i_v14 = i_v8 + 1;
-                        i_v7 = i_v20;
-                        i_v6 = i_v25;
-                        if (i_v14 >= i_a1) {
-                            goto lab_0x8b94_2;
-                        }
-                        // break -> 0x8b40
-                        break;
-                    }
-                    case 86: {
-                        // 0x8c28
-                        i_v30 = i_v27;
-                        i_v31 = i_v28;
-                        i_v32 = 1;
-                        // branch (via goto) -> 0x8b84
-                        goto lab_0x8b84;
-                    }
-                    default: {
-                        // 0x8b6c
-                        i_v26 = fprintf(p_g3, "Error: Unsupported option \"%s\"!\n", p_v18);
-                        function_935c(i_v26, (int32_t)"Error: Unsupported option \"%s\"!\n", i_v25, (int32_t)&p_g3);
-                        // UNREACHABLE
-                    }
+                case 121: {
+                    // 0x8c30
+                    i_v30 = i_v27;
+                    i_v31 = 1;
+                    i_v32 = i_v29;
                 }
-                int32_t i_v33 = i_v20 + 4; // 0x8b40
+                case 102: {
+                lab_0x8b84:
+                    // 0x8b84
+                    i_v12 = i_v32;
+                    i_v11 = i_v31;
+                    i_v10 = i_v30;
+                    i_v14 = i_v8 + 1;
+                    i_v7 = i_v20;
+                    i_v6 = i_v25;
+                    if (i_v14 >= i_a1) {
+                        goto lab_0x8b94_2;
+                    }
+                    // break -> 0x8b40
+                    break;
+                }
+                case 86: {
+                    // 0x8c28
+                    i_v30 = i_v27;
+                    i_v31 = i_v28;
+                    i_v32 = 1;
+                    // branch (via goto) -> 0x8b84
+                    goto lab_0x8b84;
+                }
+                default: {
+                    // 0x8b6c
+                    i_v26 = fprintf(p_g3, "Error: Unsupported option \"%s\"!\n",
+                                    p_v18);
+                    function_935c(
+                        i_v26, (int32_t) "Error: Unsupported option \"%s\"!\n",
+                        i_v25, (int32_t)&p_g3);
+                    // UNREACHABLE
+                }
+                }
+                int32_t i_v33 = i_v20 + 4;         // 0x8b40
                 int32_t i_v34 = *(int32_t *)i_v33; // 0x8b40
-                char * p_v35 = (char *)i_v34; // 0x8b44
+                char *p_v35 = (char *)i_v34;       // 0x8b44
                 p_v18 = p_v35;
                 i_v19 = i_v34;
                 i_v20 = i_v33;
@@ -464,12 +462,14 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
             }
             // 0x8b6c
             i_v26 = fprintf(p_g3, "Error: Unsupported option \"%s\"!\n", p_v18);
-            function_935c(i_v26, (int32_t)"Error: Unsupported option \"%s\"!\n", i_v25, (int32_t)&p_g3);
+            function_935c(i_v26,
+                          (int32_t) "Error: Unsupported option \"%s\"!\n",
+                          i_v25, (int32_t)&p_g3);
             // UNREACHABLE
         }
     }
     goto lab_0x8b9c;
-  lab_0x8b94_2:
+lab_0x8b94_2:
     // 0x8b94
     i_v1 = i_v8;
     i_v2 = i_v11;
@@ -485,14 +485,14 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
         // UNREACHABLE
     }
     goto lab_0x8b9c;
-  lab_0x8b9c:;
+lab_0x8b9c:;
     int32_t i_v36 = i_v1 + 2; // 0x8b9c
-    int32_t i_v37 = i_v5; // 0x8ba4
-    int32_t i_v38 = i_v4; // 0x8ba4
-    int32_t i_v39 = i_v9; // 0x8ba4
-    int32_t i_v40 = i_v41; // 0x8ba4
-    int32_t i_v42; // 0x8bac
-    int32_t i_v43; // 0x8bbc
+    int32_t i_v37 = i_v5;     // 0x8ba4
+    int32_t i_v38 = i_v4;     // 0x8ba4
+    int32_t i_v39 = i_v9;     // 0x8ba4
+    int32_t i_v40 = i_v41;    // 0x8ba4
+    int32_t i_v42;            // 0x8bac
+    int32_t i_v43;            // 0x8bbc
     if (i_v36 < i_a1) {
         // 0x8ba8
         i_v42 = function_9b80(*(int32_t *)(4 * i_v4 + i_a2));
@@ -515,11 +515,13 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
                 // 0x8bcc
                 if (i_v1 + 3 < i_a1) {
                     // 0x8c70
-                    char * p_v44; // bp-188, 0x8b10
+                    char *p_v44;   // bp-188, 0x8b10
                     int32_t i_v45; // 0x8bcc
-                    int32_t i_v46 = strtol((char *)*(int32_t *)(4 * i_v45 + i_a2), &p_v44, 0); // 0x8c7c
+                    int32_t i_v46 =
+                        strtol((char *)*(int32_t *)(4 * i_v45 + i_a2), &p_v44,
+                               0); // 0x8c7c
                     if (*p_v44 == 0) {
-                        int32_t i_v47 = 2; // 0x8c98
+                        int32_t i_v47 = 2;     // 0x8c98
                         int32_t i_v48 = i_v46; // 0x8c98
                         if (i_v46 >= 255 == (i_v46 != 255)) {
                             goto lab_0x8c54;
@@ -537,46 +539,48 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
     } else {
         goto lab_0x8c6c;
     }
-  lab_0x8c6c:
+lab_0x8c6c:
     // 0x8c6c
     function_935c(i_v37, i_v38, i_v39, i_v40);
     // UNREACHABLE
-  lab_0x8be0:;
+lab_0x8be0:;
     int32_t i_v49 = -1;
     int32_t i_v50 = i_v1 + 4; // 0x8be0
-    int32_t i_v51 = 1; // 0x8be8
-    int32_t i_v52 = 0; // 0x8be8
+    int32_t i_v51 = 1;        // 0x8be8
+    int32_t i_v52 = 0;        // 0x8be8
     if (i_v50 < i_a1) {
         int32_t i_v53 = *(int32_t *)(4 * i_v50 + i_a2); // 0x8bec
-        int32_t i_v54 = 1; // 0x8b10
+        int32_t i_v54 = 1;                              // 0x8b10
         switch (*(char *)i_v53) {
-            case 119: {
-                // 0x8e28
-                i_v54 = 3;
-            }
-            case 99: {
-              lab_0x8e0c:
-                // 0x8e0c
-                i_v51 = i_v54;
-                i_v52 = *(char *)(i_v53 + 1) == 112;
-                // break -> 0x8ca8
-                break;
-            }
-            case 98: {
-                // 0x8e20
-                i_v54 = 2;
-                // branch (via goto) -> 0x8e0c
-                goto lab_0x8e0c;
-            }
-            default: {
-                struct _IO_FILE * p_v55 = p_g3; // 0x8c1c
-                function_935c(fwrite((int32_t *)"Error: Invalid mode!\n", 1, 21, p_v55), 1, 21, (int32_t)p_v55);
-                // UNREACHABLE
-            }
+        case 119: {
+            // 0x8e28
+            i_v54 = 3;
+        }
+        case 99: {
+        lab_0x8e0c:
+            // 0x8e0c
+            i_v51 = i_v54;
+            i_v52 = *(char *)(i_v53 + 1) == 112;
+            // break -> 0x8ca8
+            break;
+        }
+        case 98: {
+            // 0x8e20
+            i_v54 = 2;
+            // branch (via goto) -> 0x8e0c
+            goto lab_0x8e0c;
+        }
+        default: {
+            struct _IO_FILE *p_v55 = p_g3; // 0x8c1c
+            function_935c(
+                fwrite((int32_t *)"Error: Invalid mode!\n", 1, 21, p_v55), 1,
+                21, (int32_t)p_v55);
+            // UNREACHABLE
+        }
         }
     }
     // 0x8ca8
-    int32_t i_v56; // bp-168, 0x8b10
+    int32_t i_v56;                                       // bp-168, 0x8b10
     int32_t i_v57 = function_94fc(i_v42, &i_v56, 20, 0); // 0x8cb8
     if (i_v57 < 0) {
         // 0x8e00
@@ -586,7 +590,9 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
     // 0x8cc4
     if (ioctl(i_v57, 1797) < 0) {
         int32_t i_v58 = *__errno_location(); // 0x9170
-        fprintf(p_g3, "Error: Could not get the adapter functionality matrix: %s\n", strerror(i_v58));
+        fprintf(p_g3,
+                "Error: Could not get the adapter functionality matrix: %s\n",
+                strerror(i_v58));
         // 0x8e00
         exit(1);
         // UNREACHABLE
@@ -594,50 +600,55 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
     // 0x8cd8
     int32_t i_v59; // 0x8b10
     switch (i_v51) {
-        case 2: {
-            if ((i_v59 & 0x80000) == 0) {
-                // 0x8e58
-                fprintf(p_g3, "Error: Adapter does not have %s capability\n", "SMBus read byte");
-                // 0x8e00
-                exit(1);
-                // UNREACHABLE
-            }
-            // break -> 0x8d04
-            break;
+    case 2: {
+        if ((i_v59 & 0x80000) == 0) {
+            // 0x8e58
+            fprintf(p_g3, "Error: Adapter does not have %s capability\n",
+                    "SMBus read byte");
+            // 0x8e00
+            exit(1);
+            // UNREACHABLE
         }
-        case 3: {
-            if ((i_v59 & 0x200000) == 0) {
-                // 0x8e38
-                fprintf(p_g3, "Error: Adapter does not have %s capability\n", "SMBus read word");
-                // 0x8e00
-                exit(1);
-                // UNREACHABLE
-            }
-            // break -> 0x8d04
-            break;
+        // break -> 0x8d04
+        break;
+    }
+    case 3: {
+        if ((i_v59 & 0x200000) == 0) {
+            // 0x8e38
+            fprintf(p_g3, "Error: Adapter does not have %s capability\n",
+                    "SMBus read word");
+            // 0x8e00
+            exit(1);
+            // UNREACHABLE
         }
-        default: {
-            if ((i_v59 & 0x20000) == 0) {
-                // 0x914c
-                fprintf(p_g3, "Error: Adapter does not have %s capability\n", "SMBus receive byte");
-                // 0x8e00
-                exit(1);
-                // UNREACHABLE
-            }
-            if ((i_v59 & 0x40000) == 0 == (i_v49 != -1)) {
-                // 0x918c
-                fprintf(p_g3, "Error: Adapter does not have %s capability\n", "SMBus send byte");
-                // 0x8e00
-                exit(1);
-                // UNREACHABLE
-            }
-            // break -> 0x8d04
-            break;
+        // break -> 0x8d04
+        break;
+    }
+    default: {
+        if ((i_v59 & 0x20000) == 0) {
+            // 0x914c
+            fprintf(p_g3, "Error: Adapter does not have %s capability\n",
+                    "SMBus receive byte");
+            // 0x8e00
+            exit(1);
+            // UNREACHABLE
         }
+        if ((i_v59 & 0x40000) == 0 == (i_v49 != -1)) {
+            // 0x918c
+            fprintf(p_g3, "Error: Adapter does not have %s capability\n",
+                    "SMBus send byte");
+            // 0x8e00
+            exit(1);
+            // UNREACHABLE
+        }
+        // break -> 0x8d04
+        break;
+    }
     }
     if ((i_v59 & 9) == 0 == (i_v52 != 0)) {
         // 0x8d14
-        fwrite((int32_t *)"Warning: Adapter does not seem to support PEC\n", 1, 46, p_g3);
+        fwrite((int32_t *)"Warning: Adapter does not seem to support PEC\n", 1,
+               46, p_g3);
     }
     // 0x8d2c
     if (function_9cc8(i_v57, i_v43, i_v3) != 0) {
@@ -648,7 +659,9 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
     int32_t i_v60; // 0x8b10
     if (i_v2 == 0) {
         // 0x8f30
-        fwrite((int32_t *)"WARNING! This program can confuse your I2C bus, cause data loss and worse!\n", 1, 75, p_g3);
+        fwrite((int32_t *)"WARNING! This program can confuse your I2C bus, "
+                          "cause data loss and worse!\n",
+               1, 75, p_g3);
         uint32_t i_v61 = i_v43 - 80; // 0x8f4c
         if (i_v61 >= 7 == (i_v61 != 7)) {
             // 0x9028
@@ -657,7 +670,13 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
                 i_v60 = 0;
                 if (i_v52 != 0) {
                     // 0x9048
-                    fwrite((int32_t *)"WARNING! All I2C chips and some SMBus chips will interpret a write\nbyte command with PEC as awrite byte data command, effectively writing a\nvalue into a register!\n", 1, 163, p_g3);
+                    fwrite(
+                        (int32_t
+                             *)"WARNING! All I2C chips and some SMBus chips "
+                               "will interpret a write\nbyte command with PEC "
+                               "as awrite byte data command, effectively "
+                               "writing a\nvalue into a register!\n",
+                        1, 163, p_g3);
                     i_v60 = 1;
                 }
                 goto lab_0x8f7c;
@@ -667,7 +686,13 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
         } else {
             if (i_v52 != 0) {
                 // 0x90f0
-                fwrite((int32_t *)"STOP! EEPROMs are I2C devices, not SMBus devices. Using PEC\non I2C devices may result in unexpected results, such as\ntrashing the contents of EEPROMs. We can't let you do that, sorry.\n", 1, 184, p_g3);
+                fwrite(
+                    (int32_t
+                         *)"STOP! EEPROMs are I2C devices, not SMBus devices. "
+                           "Using PEC\non I2C devices may result in unexpected "
+                           "results, such as\ntrashing the contents of "
+                           "EEPROMs. We can't let you do that, sorry.\n",
+                    1, 184, p_g3);
                 // 0x9020
                 exit(0);
                 // UNREACHABLE
@@ -683,19 +708,20 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
     } else {
         goto lab_0x8d4c;
     }
-  lab_0x8c54:
+lab_0x8c54:
     // 0x8c54
     i_v37 = fwrite((int32_t *)"Error: Data address invalid!\n", 1, 29, p_g3);
     i_v38 = 1;
     i_v39 = 29;
     i_v40 = (int32_t)p_g3;
     goto lab_0x8c6c;
-  lab_0x8d4c:
+lab_0x8d4c:
     if (i_v52 != 0) {
         // 0x8dbc
         if (ioctl(i_v57, 1800) < 0) {
             // 0x8dd4
-            fprintf(p_g3, "Error: Could not set PEC: %s\n", strerror(*__errno_location()));
+            fprintf(p_g3, "Error: Could not set PEC: %s\n",
+                    strerror(*__errno_location()));
             close(i_v57);
             // 0x8e00
             exit(1);
@@ -754,9 +780,10 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
     printf("0x%0*x\n", 2, i_v59 % 256);
     exit(0);
     // UNREACHABLE
-  lab_0x9064:
+lab_0x9064:
     // 0x9064
-    fprintf(p_g3, "I will read from device file %s, chip address 0x%02x, ", &i_v56, i_v43);
+    fprintf(p_g3, "I will read from device file %s, chip address 0x%02x, ",
+            &i_v56, i_v43);
     int32_t i_v63; // 0x8b10
     int32_t i_v64; // 0x8b10
     int32_t i_v65; // 0x8b10
@@ -780,7 +807,7 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
         fprintf(p_g3, "data address\n0x%02x", i_v49);
         int32_t i_v70 = (int32_t)p_g3; // 0x90d0
         i_v63 = i_v70;
-        i_v66 = (int32_t)"write byte/read byte";
+        i_v66 = (int32_t) "write byte/read byte";
         i_v67 = 0;
         i_v64 = i_v70;
         if (i_v51 != 1) {
@@ -789,13 +816,14 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
             goto lab_0x8fb0;
         }
     }
-  lab_0x8f7c:
+lab_0x8f7c:
     // 0x8f7c
-    fprintf(p_g3, "I will read from device file %s, chip address 0x%02x, ", &i_v56, i_v43);
+    fprintf(p_g3, "I will read from device file %s, chip address 0x%02x, ",
+            &i_v56, i_v43);
     fprintf(p_g3, "data address\n0x%02x", i_v49);
     int32_t i_v71 = (int32_t)p_g3; // 0x8fa4
     i_v63 = i_v71;
-    i_v66 = (int32_t)"write byte/read byte";
+    i_v66 = (int32_t) "write byte/read byte";
     i_v67 = i_v60;
     i_v65 = i_v71;
     i_v68 = i_v60;
@@ -804,20 +832,20 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
     } else {
         goto lab_0x8fb0;
     }
-  lab_0x90e8:
+lab_0x90e8:
     // 0x90e8
     i_v63 = i_v65;
-    i_v66 = (int32_t)"read byte";
+    i_v66 = (int32_t) "read byte";
     i_v67 = i_v68;
     goto lab_0x8fb0;
-  lab_0x8fb0:
+lab_0x8fb0:
     // 0x8fb0
     fprintf((struct _IO_FILE *)i_v63, ", using %s.\n", (char *)i_v66);
     if (i_v52 != 0) {
         // 0x8fc0
         fwrite((int32_t *)"PEC checking enabled.\n", 1, 22, p_g3);
     }
-    int32_t i_v72 = i_v67 == 0 ? (int32_t)"Y/n" : (int32_t)"y/N";
+    int32_t i_v72 = i_v67 == 0 ? (int32_t) "Y/n" : (int32_t) "y/N";
     fprintf(p_g3, "Continue? [%s] ", (char *)i_v72);
     fflush(p_g3);
     if (function_9d38(i_v67 ^ 1) == 0) {
@@ -828,8 +856,9 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
         // UNREACHABLE
     }
     goto lab_0x8d4c;
-  lab_0x90a4:;
-    int32_t i_v73 = i_v51 == 2 ? (int32_t)"read byte data" : (int32_t)"read word data";
+lab_0x90a4:;
+    int32_t i_v73 =
+        i_v51 == 2 ? (int32_t) "read byte data" : (int32_t) "read word data";
     i_v63 = i_v64;
     i_v66 = i_v73;
     i_v67 = 0;
@@ -840,7 +869,8 @@ int32_t function_8b10(int32_t i_a1, int32_t i_a2) {
 int32_t entry_point(int32_t i_a1, int32_t i_a2) {
     // 0x9228
     int32_t i_v1; // 0x9228
-    __libc_start_main(0x8b10, i_a2, (char **)&i_v1, (void (*)())&p_g8, (void (*)())&p_g10, (void (*)())i_a1);
+    __libc_start_main(0x8b10, i_a2, (char **)&i_v1, (void (*)()) & p_g8,
+                      (void (*)()) & p_g10, (void (*)())i_a1);
     abort();
     return &i_g12;
 }
@@ -864,7 +894,7 @@ int32_t function_9288(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4) {
 }
 
 // Address range: 0x92c0 - 0x92f4
-int32_t function_92c0(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t function_92c0(int32_t *p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     // 0x92c0
     return (int32_t)&p_g3;
 }
@@ -890,7 +920,15 @@ int32_t function_9328(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 // Address range: 0x935c - 0x9388
 int32_t function_935c(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     // 0x935c
-    fwrite((int32_t *)((int32_t)"Usage: i2cget [-f] [-y] I2CBUS CHIP-ADDRESS [DATA-ADDRESS [MODE]]\n  I2CBUS is an integer or an I2C bus name\n  ADDRESS is an integer (0x03 - 0x77)\n  MODE is one of:\n    b (read byte data, default)\n    w (read word data)\n    c (write byte/read byte)\n    Append p for SMBus PEC\n" & 0xffff), 1, 275, p_g3);
+    fwrite((int32_t
+                *)((int32_t) "Usage: i2cget [-f] [-y] I2CBUS CHIP-ADDRESS "
+                             "[DATA-ADDRESS [MODE]]\n  I2CBUS is an integer or "
+                             "an I2C bus name\n  ADDRESS is an integer (0x03 - "
+                             "0x77)\n  MODE is one of:\n    b (read byte data, "
+                             "default)\n    w (read word data)\n    c (write "
+                             "byte/read byte)\n    Append p for SMBus PEC\n" &
+                   0xffff),
+           1, 275, p_g3);
     exit(1);
     // UNREACHABLE
 }
@@ -898,59 +936,59 @@ int32_t function_935c(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 // Address range: 0x9388 - 0x93ec
 int32_t function_9388(int32_t i_a1) {
     int32_t i_v1 = strlen((char *)i_a1); // 0x9390
-    int32_t i_v2 = i_v1 - 1; // 0x9394
+    int32_t i_v2 = i_v1 - 1;             // 0x9394
     if (i_v2 < 0) {
         // 0x93e4
         return i_v2 + 2;
     }
-    char * p_v3 = (char *)(i_v2 + i_a1);
+    char *p_v3 = (char *)(i_v2 + i_a1);
     int32_t i_v4 = i_v2; // 0x9388
-    int32_t i_v5; // 0x9388
-    int32_t i_v6; // 0x9388
+    int32_t i_v5;        // 0x9388
+    int32_t i_v6;        // 0x9388
     switch (*p_v3) {
-        case 32: {
-        }
-        case 10: {
-            // 0x93b0
-            *p_v3 = 0;
-            if (i_v2 == 0) {
-                // 0x93e4
-                return 1;
-            }
-            int32_t i_v7 = i_v1 - 2;
-            i_v5 = i_v7;
-            i_v6 = i_v7 + i_a1;
-            // break -> 0x93c0
-            break;
-        }
-        default: {
+    case 32: {
+    }
+    case 10: {
+        // 0x93b0
+        *p_v3 = 0;
+        if (i_v2 == 0) {
             // 0x93e4
-            return i_v4 + 2;
+            return 1;
         }
+        int32_t i_v7 = i_v1 - 2;
+        i_v5 = i_v7;
+        i_v6 = i_v7 + i_a1;
+        // break -> 0x93c0
+        break;
+    }
+    default: {
+        // 0x93e4
+        return i_v4 + 2;
+    }
     }
     int32_t i_v8; // 0x9388
-    char * p_v9; // 0x9388
+    char *p_v9;   // 0x9388
     while (true) {
-      lab_0x93c0:
+    lab_0x93c0:
         // 0x93c0
         i_v8 = i_v5;
         p_v9 = (char *)i_v6;
         i_v4 = i_v8;
         switch (*p_v9) {
-            case 32: {
-                goto lab_0x93d0;
-            }
-            case 10: {
-                goto lab_0x93d0;
-            }
-            default: {
-                return i_v4 + 2;
-            }
+        case 32: {
+            goto lab_0x93d0;
+        }
+        case 10: {
+            goto lab_0x93d0;
+        }
+        default: {
+            return i_v4 + 2;
+        }
         }
     }
     // 0x93e4
     return i_v4 + 2;
-  lab_0x93d0:
+lab_0x93d0:
     // 0x93d0
     *p_v9 = 0;
     i_v5 = i_v8 - 1;
@@ -965,7 +1003,7 @@ int32_t function_9388(int32_t i_a1) {
 // Address range: 0x93ec - 0x9424
 int32_t function_93ec(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     int32_t i_v1 = *(int32_t *)(i_a1 + 4); // 0x93f4
-    int32_t i_v2 = i_a1; // 0x9400
+    int32_t i_v2 = i_a1;                   // 0x9400
     if (i_v1 == 0) {
         // 0x9418
         free((int32_t *)i_a1);
@@ -987,10 +1025,10 @@ int32_t function_93ec(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 
 // Address range: 0x9424 - 0x9468
 int32_t function_9424(int32_t i_a1, int32_t i_a2) {
-    int32_t i_v1 = 16 * i_a2; // 0x942c
-    int32_t i_v2 = i_v1 + 128; // 0x9434
-    int32_t * p_v3 = realloc((int32_t *)i_a1, i_v2); // 0x9438
-    int32_t i_v4 = (int32_t)p_v3; // 0x9438
+    int32_t i_v1 = 16 * i_a2;                       // 0x942c
+    int32_t i_v2 = i_v1 + 128;                      // 0x9434
+    int32_t *p_v3 = realloc((int32_t *)i_a1, i_v2); // 0x9438
+    int32_t i_v4 = (int32_t)p_v3;                   // 0x9438
     if (p_v3 == NULL) {
         // 0x945c
         int32_t i_v5; // 0x9424
@@ -1006,19 +1044,21 @@ int32_t function_9424(int32_t i_a1, int32_t i_a2) {
 // Address range: 0x9468 - 0x94f0
 int32_t function_9468(int32_t i_a1) {
     // 0x9468
-    char * p_v1; // bp-12, 0x9468
+    char *p_v1;                                    // bp-12, 0x9468
     int32_t i_v2 = strtol((char *)i_a1, &p_v1, 0); // 0x947c
     if ((char)i_v2 == 0 | *p_v1 != 0) {
         // 0x94b0
-        fwrite((int32_t *)"Error: Chip address is not a number!\n", 1, 37, p_g3);
+        fwrite((int32_t *)"Error: Chip address is not a number!\n", 1, 37,
+               p_g3);
         // 0x94a8
         return -1;
     }
     uint32_t i_v3 = i_v2 - 3; // 0x949c
-    int32_t i_v4 = i_v2; // 0x94a4
+    int32_t i_v4 = i_v2;      // 0x94a4
     if (i_v3 >= 116 == (i_v3 != 116)) {
         // 0x94d0
-        fwrite((int32_t *)"Error: Chip address out of range (0x03-0x77)!\n", 1, 46, p_g3);
+        fwrite((int32_t *)"Error: Chip address out of range (0x03-0x77)!\n", 1,
+               46, p_g3);
         i_v4 = -2;
     }
     // 0x94a8
@@ -1026,7 +1066,8 @@ int32_t function_9468(int32_t i_a1) {
 }
 
 // Address range: 0x94fc - 0x9614
-int32_t function_94fc(int32_t i_a1, int32_t * p_a2, int32_t i_a3, uint32_t i_a4) {
+int32_t function_94fc(int32_t i_a1, int32_t *p_a2, int32_t i_a3,
+                      uint32_t i_a4) {
     // 0x94fc
     snprintf((char *)p_a2, i_a3, "/dev/i2c/%d", i_a1);
     *(char *)(i_a3 - 1 + (int32_t)p_a2) = 0;
@@ -1035,18 +1076,18 @@ int32_t function_94fc(int32_t i_a1, int32_t * p_a2, int32_t i_a3, uint32_t i_a4)
         // 0x9548
         return i_v1;
     }
-    int32_t * p_v2 = __errno_location(); // 0x9554
-    int32_t i_v3 = i_v1; // 0x94fc
+    int32_t *p_v2 = __errno_location(); // 0x9554
+    int32_t i_v3 = i_v1;                // 0x94fc
     switch (*p_v2) {
-        case 20: {
-        }
-        case 2: {
-            // 0x95c8
-            sprintf((char *)p_a2, "/dev/i2c-%d", i_a1);
-            i_v3 = open((char *)p_a2, O_RDWR);
-            // break -> 0x956c
-            break;
-        }
+    case 20: {
+    }
+    case 2: {
+        // 0x95c8
+        sprintf((char *)p_a2, "/dev/i2c-%d", i_a1);
+        i_v3 = open((char *)p_a2, O_RDWR);
+        // break -> 0x956c
+        break;
+    }
     }
     // 0x956c
     if (((i_a4 > 1 ? i_a4 : 1) - i_a4 & (int32_t)(i_v3 < 0)) == 0) {
@@ -1054,10 +1095,13 @@ int32_t function_94fc(int32_t i_a1, int32_t * p_a2, int32_t i_a3, uint32_t i_a4)
         return i_v3;
     }
     int32_t i_v4 = *p_v2; // 0x957c
-    char * p_v5 = strerror(i_v4);
+    char *p_v5 = strerror(i_v4);
     if (i_v4 == 2) {
         // 0x95ec
-        fprintf(p_g3, "Error: Could not open file `/dev/i2c-%d' or `/dev/i2c/%d': %s\n", i_a1, i_a1, p_v5);
+        fprintf(
+            p_g3,
+            "Error: Could not open file `/dev/i2c-%d' or `/dev/i2c/%d': %s\n",
+            i_a1, i_a1, p_v5);
         // 0x9548
         return i_v3;
     }
@@ -1076,23 +1120,23 @@ int32_t function_962c(void) {
     // 0x962c
     int32_t i_v1; // 0x962c
     uint32_t i_v2 = i_v1;
-    int32_t * p_v3 = calloc(8, 16); // 0x963c
-    int32_t i_v4 = (int32_t)p_v3; // 0x963c
+    int32_t *p_v3 = calloc(8, 16); // 0x963c
+    int32_t i_v4 = (int32_t)p_v3;  // 0x963c
     if (p_v3 == NULL) {
         // 0x97a0
         return i_v4;
     }
-    struct _IO_FILE * p_v5 = fopen("/proc/bus/i2c", "r"); // 0x9654
-    struct dirent * p_v6; // 0x962c
-    int32_t i_v7; // 0x962c
-    int32_t i_v8; // bp-296, 0x962c
-    int32_t i_v9; // bp-552, 0x962c
-    int32_t i_v10; // 0x962c
-    int32_t i_v11; // 0x962c
-    int32_t i_v12; // 0x962c
-    struct __dirstream * p_v13; // 0x9878
+    struct _IO_FILE *p_v5 = fopen("/proc/bus/i2c", "r"); // 0x9654
+    struct dirent *p_v6;                                 // 0x962c
+    int32_t i_v7;                                        // 0x962c
+    int32_t i_v8;                                        // bp-296, 0x962c
+    int32_t i_v9;                                        // bp-552, 0x962c
+    int32_t i_v10;                                       // 0x962c
+    int32_t i_v11;                                       // 0x962c
+    int32_t i_v12;                                       // 0x962c
+    struct __dirstream *p_v13;                           // 0x9878
     if (p_v5 == NULL) {
-        struct _IO_FILE * p_v14 = fopen("/proc/mounts", "r"); // 0x97e0
+        struct _IO_FILE *p_v14 = fopen("/proc/mounts", "r"); // 0x97e0
         if (p_v14 == NULL) {
             // 0x97a0
             return i_v4;
@@ -1104,7 +1148,8 @@ int32_t function_962c(void) {
             if (strcasecmp((char *)&i_v15, "sysfs") == 0) {
                 // 0x982c
                 fclose(p_v14);
-                int32_t i_v16 = strlen((char *)&i_v9) + (int32_t)&i_v9; // 0x984c
+                int32_t i_v16 =
+                    strlen((char *)&i_v9) + (int32_t)&i_v9; // 0x984c
                 *(int32_t *)i_v16 = 0x616c632f;
                 *(int16_t *)(i_v16 + 12) = 0x7665;
                 *(int32_t *)(i_v16 + 4) = 0x692f7373;
@@ -1115,7 +1160,7 @@ int32_t function_962c(void) {
                 if (p_v13 == NULL) {
                     return i_v10;
                 } else {
-                    struct dirent * p_v17 = readdir(p_v13); // 0x9890
+                    struct dirent *p_v17 = readdir(p_v13); // 0x9890
                     i_v12 = i_v4;
                     if (p_v17 == NULL) {
                         goto lab_0x99b8;
@@ -1135,11 +1180,11 @@ int32_t function_962c(void) {
         return i_v4;
     }
     // 0x9770
-    int32_t i_v18; // bp-928, 0x962c
-    char * p_v19 = fgets((char *)&i_v18, 120, p_v5); // 0x9780
-    int32_t i_v20 = 1; // 0x9790
-    int32_t i_v21 = 0; // 0x9790
-    int32_t i_v22 = i_v4; // 0x9790
+    int32_t i_v18;                                  // bp-928, 0x962c
+    char *p_v19 = fgets((char *)&i_v18, 120, p_v5); // 0x9780
+    int32_t i_v20 = 1;                              // 0x9790
+    int32_t i_v21 = 0;                              // 0x9790
+    int32_t i_v22 = i_v4;                           // 0x9790
     if (p_v19 == NULL) {
         // 0x9794
         fclose(p_v5);
@@ -1150,11 +1195,11 @@ int32_t function_962c(void) {
     while (true) {
         int32_t i_v24 = i_v22;
         uint32_t i_v25 = i_v20;
-        char * p_v26 = strrchr((char *)&i_v18, 9); // 0x9678
+        char *p_v26 = strrchr((char *)&i_v18, 9); // 0x9678
         *p_v26 = 0;
-        char * p_v27 = strrchr((char *)&i_v18, 9); // 0x969c
+        char *p_v27 = strrchr((char *)&i_v18, 9); // 0x969c
         *p_v27 = 0;
-        char * p_v28 = strrchr((char *)&i_v18, 9); // 0x96c0
+        char *p_v28 = strrchr((char *)&i_v18, 9); // 0x96c0
         *p_v28 = 0;
         sscanf((char *)&i_v18, "i2c-%d", &i_v23);
         int32_t i_v29 = i_v24; // 0x9704
@@ -1170,25 +1215,25 @@ int32_t function_962c(void) {
         int32_t i_v30 = (int32_t)p_v26 + 1; // 0x9684
         int32_t i_v31 = (int32_t)p_v27 + 1; // 0x96a8
         int32_t i_v32 = (int32_t)p_v28 + 1; // 0x96cc
-        int32_t i_v33 = i_v32 + i_v31; // 0x96e8
+        int32_t i_v33 = i_v32 + i_v31;      // 0x96e8
         i_v22 = i_v29;
-        int32_t * p_v34 = malloc(i_v33 + i_v30); // 0x9724
+        int32_t *p_v34 = malloc(i_v33 + i_v30); // 0x9724
         if (p_v34 == NULL) {
             // 0x97c0
             function_93ec(i_v22, i_v31, i_v30, i_v33);
             i_v10 = 0;
             return i_v10;
         }
-        int32_t i_v35 = i_v22 + i_v21; // 0x9718
+        int32_t i_v35 = i_v22 + i_v21;  // 0x9718
         int32_t i_v36 = (int32_t)p_v34; // 0x9724
         *(int32_t *)i_v35 = i_v23;
-        char * p_v37 = strcpy((char *)p_v34, (char *)i_v31); // 0x9740
+        char *p_v37 = strcpy((char *)p_v34, (char *)i_v31); // 0x9740
         *(int32_t *)(i_v35 + 4) = (int32_t)p_v37;
-        char * p_v38 = strcpy((char *)(i_v31 + i_v36), (char *)i_v32); // 0x9754
+        char *p_v38 = strcpy((char *)(i_v31 + i_v36), (char *)i_v32); // 0x9754
         *(int32_t *)(i_v35 + 8) = (int32_t)p_v38;
-        char * p_v39 = strcpy((char *)(i_v33 + i_v36), (char *)i_v30); // 0x9768
+        char *p_v39 = strcpy((char *)(i_v33 + i_v36), (char *)i_v30); // 0x9768
         *(int32_t *)(i_v35 + 12) = (int32_t)p_v39;
-        char * p_v40 = fgets((char *)&i_v18, 120, p_v5); // 0x9780
+        char *p_v40 = fgets((char *)&i_v18, 120, p_v5); // 0x9780
         i_v20 = i_v25 + 1;
         i_v21 += 16;
         int32_t i_v41 = i_v22; // 0x9790
@@ -1199,56 +1244,56 @@ int32_t function_962c(void) {
             return i_v41;
         }
     }
-  lab_0x97a0:
+lab_0x97a0:
     // 0x97a0
     return i_v10;
-  lab_0x99b8:
+lab_0x99b8:
     // 0x99b8
     closedir(p_v13);
     i_v10 = i_v12;
     return i_v10;
-  lab_0x989c_2:;
-    int32_t i_v42 = i_v11; // 0x962c
-    struct dirent * p_v43 = p_v6; // 0x962c
-    int32_t i_v44 = i_v7; // 0x962c
+lab_0x989c_2:;
+    int32_t i_v42 = i_v11;       // 0x962c
+    struct dirent *p_v43 = p_v6; // 0x962c
+    int32_t i_v44 = i_v7;        // 0x962c
     goto lab_0x989c_3;
-  lab_0x989c_3:;
+lab_0x989c_3:;
     int32_t i_v45 = i_v44;
     int32_t i_v46 = i_v42;
     int32_t i_v47 = (int32_t)p_v43;
-    char * p_v48 = (char *)(i_v47 + 11); // 0x989c
+    char *p_v48 = (char *)(i_v47 + 11); // 0x989c
     if (*p_v48 == 46) {
         // 0x99c4
         switch (*(char *)(i_v47 + 12)) {
-            case 0: {
+        case 0: {
+            goto lab_0x988c_2;
+        }
+        case 46: {
+            // 0x99d8
+            if (*(char *)(i_v47 + 13) == 0) {
                 goto lab_0x988c_2;
-            }
-            case 46: {
-                // 0x99d8
-                if (*(char *)(i_v47 + 13) == 0) {
-                    goto lab_0x988c_2;
-                } else {
-                    goto lab_0x98a8;
-                }
-            }
-            default: {
+            } else {
                 goto lab_0x98a8;
             }
+        }
+        default: {
+            goto lab_0x98a8;
+        }
         }
     } else {
         goto lab_0x98a8;
     }
-  lab_0x98a8:
+lab_0x98a8:
     // 0x98a8
     sprintf((char *)&i_v8, "%s/%s/name", &i_v9, p_v48);
-    struct _IO_FILE * p_v49 = fopen((char *)&i_v8, "r"); // 0x98c8
-    struct _IO_FILE * p_v50 = p_v49; // 0x98d0
-    struct dirent * p_v51; // 0x962c
-    struct __dirstream * p_v52; // 0x9a94
+    struct _IO_FILE *p_v49 = fopen((char *)&i_v8, "r"); // 0x98c8
+    struct _IO_FILE *p_v50 = p_v49;                     // 0x98d0
+    struct dirent *p_v51;                               // 0x962c
+    struct __dirstream *p_v52;                          // 0x9a94
     if (p_v49 == NULL) {
         // 0x9a54
         sprintf((char *)&i_v8, "%s/%s/device/name", &i_v9, p_v48);
-        struct _IO_FILE * p_v53 = fopen((char *)&i_v8, "r"); // 0x9a70
+        struct _IO_FILE *p_v53 = fopen((char *)&i_v8, "r"); // 0x9a70
         p_v50 = p_v53;
         if (p_v53 == NULL) {
             // 0x9a7c
@@ -1257,7 +1302,7 @@ int32_t function_962c(void) {
             if (p_v52 == NULL) {
                 goto lab_0x988c_2;
             } else {
-                struct dirent * p_v54 = readdir(p_v52); // 0x9aa4
+                struct dirent *p_v54 = readdir(p_v52); // 0x9aa4
                 p_v51 = p_v54;
                 if (p_v54 == NULL) {
                     goto lab_0x988c_2;
@@ -1271,8 +1316,8 @@ int32_t function_962c(void) {
     } else {
         goto lab_0x98d4;
     }
-  lab_0x988c_2:;
-    struct dirent * p_v55 = readdir(p_v13); // 0x9890
+lab_0x988c_2:;
+    struct dirent *p_v55 = readdir(p_v13); // 0x9890
     p_v6 = p_v55;
     i_v7 = i_v45;
     i_v11 = i_v46;
@@ -1282,15 +1327,15 @@ int32_t function_962c(void) {
     } else {
         goto lab_0x989c_2;
     }
-  lab_0x98d4:;
-    char * p_v56 = fgets((char *)&i_v18, 120, p_v50); // 0x98e4
+lab_0x98d4:;
+    char *p_v56 = fgets((char *)&i_v18, 120, p_v50); // 0x98e4
     fclose(p_v50);
     if (p_v56 == NULL) {
         // 0x9b2c
         fprintf(p_g3, "%s: read error\n", &i_v8);
         goto lab_0x988c_2;
     } else {
-        char * p_v57 = strchr((char *)&i_v18, 10); // 0x9904
+        char *p_v57 = strchr((char *)&i_v18, 10); // 0x9904
         if (p_v57 == NULL) {
             goto lab_dec_label_pc_0x9920;
         } else {
@@ -1298,14 +1343,14 @@ int32_t function_962c(void) {
             goto lab_dec_label_pc_0x9920;
         }
     }
-  lab_dec_label_pc_0x9920:;
+lab_dec_label_pc_0x9920:;
     int32_t i_v58; // 0x962c
     int32_t i_v59; // 0x962c
     if (sscanf(p_v48, "i2c-%d", &i_v23) == 0) {
         goto lab_0x988c_2;
     } else {
         int32_t i_v60 = strncmp((char *)&i_v18, "ISA ", 4); // 0x9938
-        i_v58 = (int32_t)"ISA ";
+        i_v58 = (int32_t) "ISA ";
         i_v59 = 8;
         if (i_v60 == 0) {
             goto lab_0x9948;
@@ -1316,7 +1361,10 @@ int32_t function_962c(void) {
             i_v58 = &i_v61;
             i_v59 = 32;
             if (i_v62 >= 0) {
-                int32_t i_v63 = ioctl(i_v62, 1797) >= 0 ? i_v2 % 2 == 0 ? (i_v2 & 0x7e0000) == 0 ? 0 : 24 : 16 : 32;
+                int32_t i_v63 =
+                    ioctl(i_v62, 1797) >= 0
+                        ? i_v2 % 2 == 0 ? (i_v2 & 0x7e0000) == 0 ? 0 : 24 : 16
+                        : 32;
                 close(i_v62);
                 i_v58 = 1797;
                 i_v59 = i_v63;
@@ -1326,36 +1374,36 @@ int32_t function_962c(void) {
             }
         }
     }
-  lab_0x9abc:;
+lab_0x9abc:;
     int32_t i_v64 = (int32_t)p_v51;
-    char * p_v65 = (char *)(i_v64 + 11); // 0x9abc
+    char *p_v65 = (char *)(i_v64 + 11); // 0x9abc
     if (*p_v65 == 46) {
         // 0x9b08
         switch (*(char *)(i_v64 + 12)) {
-            case 0: {
+        case 0: {
+            goto lab_0x9aa0_2;
+        }
+        case 46: {
+            // 0x9b1c
+            if (*(char *)(i_v64 + 13) == 0) {
                 goto lab_0x9aa0_2;
-            }
-            case 46: {
-                // 0x9b1c
-                if (*(char *)(i_v64 + 13) == 0) {
-                    goto lab_0x9aa0_2;
-                } else {
-                    goto lab_0x9acc;
-                }
-            }
-            default: {
+            } else {
                 goto lab_0x9acc;
             }
+        }
+        default: {
+            goto lab_0x9acc;
+        }
         }
     } else {
         goto lab_0x9acc;
     }
-  lab_0x9acc:
+lab_0x9acc:
     // 0x9acc
     if (strncmp(p_v65, "i2c-", 4) == 0) {
         // 0x9ad8
         sprintf((char *)&i_v8, "%s/%s/device/%s/name", &i_v9, p_v48, p_v65);
-        struct _IO_FILE * p_v66 = fopen((char *)&i_v8, "r"); // 0x9af8
+        struct _IO_FILE *p_v66 = fopen((char *)&i_v8, "r"); // 0x9af8
         p_v50 = p_v66;
         if (p_v66 == NULL) {
             goto lab_0x9aa0_2;
@@ -1365,10 +1413,10 @@ int32_t function_962c(void) {
     } else {
         goto lab_0x9aa0_2;
     }
-  lab_0x9948:;
+lab_0x9948:;
     int32_t i_v67 = i_v45 + 1; // 0x9948
-    int32_t i_v68 = i_v46; // 0x9950
-    int32_t i_v69 = i_v58; // 0x9950
+    int32_t i_v68 = i_v46;     // 0x9950
+    int32_t i_v69 = i_v58;     // 0x9950
     if (i_v67 % 8 == 0) {
         int32_t i_v70 = function_9424(i_v46, i_v67); // 0x995c
         i_v10 = 0;
@@ -1382,20 +1430,20 @@ int32_t function_962c(void) {
     } else {
         goto lab_0x996c;
     }
-  lab_0x9aa0_2:;
-    struct dirent * p_v71 = readdir(p_v52); // 0x9aa4
+lab_0x9aa0_2:;
+    struct dirent *p_v71 = readdir(p_v52); // 0x9aa4
     p_v51 = p_v71;
     if (p_v71 == NULL) {
         goto lab_0x988c_2;
     } else {
         goto lab_0x9abc;
     }
-  lab_0x996c:;
+lab_0x996c:;
     int32_t i_v72 = i_v69;
     int32_t i_v73 = i_v68;
     int32_t i_v74 = i_v73 + 16 * i_v45; // 0x9978
     *(int32_t *)i_v74 = i_v23;
-    char * p_v75 = __strdup((char *)&i_v18); // 0x9980
+    char *p_v75 = __strdup((char *)&i_v18); // 0x9980
     *(int32_t *)(i_v74 + 4) = (int32_t)p_v75;
     if (p_v75 == NULL) {
         // 0x97ac
@@ -1403,11 +1451,11 @@ int32_t function_962c(void) {
         i_v10 = 0;
         goto lab_0x97a0;
     } else {
-        int32_t i_v76 = *(int32_t *)(i_v59 + (int32_t)&x_g11); // 0x9994
+        int32_t i_v76 = *(int32_t *)(i_v59 + (int32_t)&x_g11);     // 0x9994
         int32_t i_v77 = *(int32_t *)(i_v59 + (int32_t)&x_g11 + 4); // 0x99a0
         *(int32_t *)(i_v74 + 8) = i_v76;
         *(int32_t *)(i_v74 + 12) = i_v77;
-        struct dirent * p_v78 = readdir(p_v13); // 0x99ac
+        struct dirent *p_v78 = readdir(p_v13); // 0x99ac
         i_v42 = i_v73;
         p_v43 = p_v78;
         i_v44 = i_v67;
@@ -1422,10 +1470,10 @@ int32_t function_962c(void) {
 
 // Address range: 0x9b80 - 0x9cb4
 int32_t function_9b80(int32_t i_a1) {
-    char * p_v1 = (char *)i_a1; // 0x9b94
-    char * p_v2; // bp-28, 0x9b80
+    char *p_v1 = (char *)i_a1;              // 0x9b94
+    char *p_v2;                             // bp-28, 0x9b80
     int32_t i_v3 = strtoul(p_v1, &p_v2, 0); // 0x9b94
-    unsigned char i_v4 = *p_v2; // 0x9b9c
+    unsigned char i_v4 = *p_v2;             // 0x9b9c
     if ((char)i_v3 != 0 && i_v4 == 0) {
         int32_t i_v5 = i_v3; // 0x9bbc
         if (i_v3 >= 0x100000) {
@@ -1444,13 +1492,13 @@ int32_t function_9b80(int32_t i_a1) {
         return -3;
     }
     int32_t i_v7 = *(int32_t *)(i_v6 + 4); // 0x9bd8
-    int32_t i_v8 = i_v7; // 0x9bec
-    int32_t i_v9 = i_v6; // 0x9bec
-    int32_t i_v10 = -1; // 0x9bec
-    int32_t i_v11; // 0x9b80
-    int32_t i_v12; // 0x9b80
-    int32_t i_v13; // 0x9b80
-    int32_t i_v14; // 0x9b80
+    int32_t i_v8 = i_v7;                   // 0x9bec
+    int32_t i_v9 = i_v6;                   // 0x9bec
+    int32_t i_v10 = -1;                    // 0x9bec
+    int32_t i_v11;                         // 0x9b80
+    int32_t i_v12;                         // 0x9b80
+    int32_t i_v13;                         // 0x9b80
+    int32_t i_v14;                         // 0x9b80
     if (i_v7 == 0) {
         goto lab_0x9c54;
     } else {
@@ -1491,15 +1539,16 @@ int32_t function_9b80(int32_t i_a1) {
         i_v14 = -4;
         goto lab_0x9c28;
     }
-  lab_0x9c54:
+lab_0x9c54:
     // 0x9c54
-    fwrite((int32_t *)"Error: I2C bus name doesn't match any bus present!\n", 1, 51, p_g3);
+    fwrite((int32_t *)"Error: I2C bus name doesn't match any bus present!\n", 1,
+           51, p_g3);
     i_v11 = 1;
     i_v12 = 51;
     i_v13 = (int32_t)p_g3;
     i_v14 = -1;
     goto lab_0x9c28;
-  lab_0x9c28:
+lab_0x9c28:
     // 0x9c28
     function_93ec(i_v6, i_v11, i_v12, i_v13);
     // 0x9bc0
@@ -1513,8 +1562,9 @@ int32_t function_9cc8(int32_t i_a1, int32_t i_a2, int32_t i_a3) {
         // 0x9cf0
         return 0;
     }
-    int32_t * p_v1 = __errno_location(); // 0x9d00
-    fprintf(p_g3, "Error: Could not set address to 0x%02x: %s\n", i_a2, strerror(*p_v1));
+    int32_t *p_v1 = __errno_location(); // 0x9d00
+    fprintf(p_g3, "Error: Could not set address to 0x%02x: %s\n", i_a2,
+            strerror(*p_v1));
     return -*p_v1;
 }
 
@@ -1526,10 +1576,10 @@ int32_t function_9d38(int32_t i_a1) {
         // 0x9da8
         return 0;
     }
-    uint32_t i_v2 = i_v1; // 0x9d60
+    uint32_t i_v2 = i_v1;       // 0x9d60
     uint32_t i_v3 = i_v2 % 256; // 0x9d60
-    int32_t i_v4; // 0x9d38
-    int32_t i_v5; // 0x9d38
+    int32_t i_v4;               // 0x9d38
+    int32_t i_v5;               // 0x9d38
     if (i_v3 == 89) {
         // 0x9dc4
         i_v4 = 1;
@@ -1541,43 +1591,43 @@ int32_t function_9d38(int32_t i_a1) {
             i_v4 = i_a1;
             i_v5 = i_a1;
             switch (i_v6) {
-                case 78: {
-                    // 0x9dcc
-                    i_v4 = 0;
-                    goto lab_0x9d90;
-                }
-                case 10: {
-                    return i_v5;
-                }
-                default: {
-                    goto lab_0x9d90;
-                }
+            case 78: {
+                // 0x9dcc
+                i_v4 = 0;
+                goto lab_0x9d90;
+            }
+            case 10: {
+                return i_v5;
+            }
+            default: {
+                goto lab_0x9d90;
+            }
             }
         } else {
             // 0x9db4
             i_v4 = i_a1;
             i_v5 = i_a1;
             switch (i_v6) {
-                case 110: {
-                    // 0x9dcc
-                    i_v4 = 0;
-                    goto lab_0x9d90;
-                }
-                case 121: {
-                    // 0x9dc4
-                    i_v4 = 1;
-                    goto lab_0x9d90;
-                }
-                case 10: {
-                    return i_v5;
-                }
-                default: {
-                    goto lab_0x9d90;
-                }
+            case 110: {
+                // 0x9dcc
+                i_v4 = 0;
+                goto lab_0x9d90;
+            }
+            case 121: {
+                // 0x9dc4
+                i_v4 = 1;
+                goto lab_0x9d90;
+            }
+            case 10: {
+                return i_v5;
+            }
+            default: {
+                goto lab_0x9d90;
+            }
             }
         }
     }
-  lab_0x9d90:
+lab_0x9d90:
     // 0x9d90
     while (true) {
         uint32_t i_v7 = fgetc(p_g4); // 0x9d94
@@ -1601,7 +1651,10 @@ int32_t function_9d38(int32_t i_a1) {
 // Address range: 0x9dd8 - 0x9e34
 int32_t function_9dd8(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     int32_t i_v1 = function_8928(i_a1, i_a2, i_a3, i_a4); // 0x9df4
-    int32_t i_v2 = (int32_t)&i_g7 + 0x9df8 - ((int32_t)&i_g9 + (int32_t)&i_g6) >> 2 == 0 ? i_v1 : i_a1;
+    int32_t i_v2 =
+        (int32_t)&i_g7 + 0x9df8 - ((int32_t)&i_g9 + (int32_t)&i_g6) >> 2 == 0
+            ? i_v1
+            : i_a1;
     return i_v2;
 }
 
@@ -1622,4 +1675,3 @@ int32_t function_9e40(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 
 // Detected compiler/packer: gcc (4.8.x)
 // Detected functions: 59
-

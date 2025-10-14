@@ -22,7 +22,7 @@ int32_t function_84f8(void);
 int32_t function_854c(int32_t i_a1, int32_t i_a2);
 int32_t function_869c(void);
 int32_t function_86c0(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4);
-int32_t function_86f8(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
+int32_t function_86f8(int32_t *p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_8738(void);
 int32_t function_8760(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_8794(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
@@ -39,11 +39,11 @@ int32_t unlink(void);
 
 // --------------------- Global Variables ---------------------
 
-int32_t i_g1 = 0x8760; // 0x108b0
-int32_t i_g2 = 0x8738; // 0x108b4
-int32_t i_g3 = 0; // 0x108b8
-char * p_g4; // 0x109f4
-int32_t i_g5 = 0x8540; // 0x82f8
+int32_t i_g1 = 0x8760;      // 0x108b0
+int32_t i_g2 = 0x8738;      // 0x108b4
+int32_t i_g3 = 0;           // 0x108b8
+char *p_g4;                 // 0x109f4
+int32_t i_g5 = 0x8540;      // 0x82f8
 int32_t i_g6 = -0x1cae0000; // 0x86ac
 
 // ------------------------ Functions -------------------------
@@ -163,7 +163,7 @@ int32_t function_854c(int32_t i_a1, int32_t i_a2) {
         return exit();
     }
     int32_t i_v4 = i_a1 < 2 ? 600 : -1; // 0x8580
-    int32_t i_v5; // 0x854c
+    int32_t i_v5;                       // 0x854c
     if (i_a1 > 1) {
         // 0x8584
         sscanf();
@@ -218,7 +218,7 @@ int32_t function_86c0(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4) {
 }
 
 // Address range: 0x86f8 - 0x872c
-int32_t function_86f8(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t function_86f8(int32_t *p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     // 0x86f8
     return (int32_t)&p_g4;
 }
@@ -291,4 +291,3 @@ int32_t function_8874(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 
 // Detected compiler/packer: gcc (4.8.x)
 // Detected functions: 28
-

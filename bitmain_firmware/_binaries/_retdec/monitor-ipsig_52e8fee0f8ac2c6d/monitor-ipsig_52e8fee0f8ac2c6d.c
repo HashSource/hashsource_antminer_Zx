@@ -53,39 +53,47 @@ struct timezone {
 
 int32_t entry_point(int32_t i_a1, int32_t i_a2);
 int32_t function_10794(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t * function_107b4(int32_t nmemb, int32_t size);
-int32_t function_107c0(int32_t fd, int32_t level, int32_t optname, int32_t * optval, int32_t optlen);
-int32_t function_107cc(char * format, ...);
-int32_t function_107d8(struct _IO_FILE * stream, char * format, ...);
-void function_107e4(int32_t * ptr);
-int32_t * function_107f0(int32_t * dest, int32_t * src, int32_t n);
-char * function_107fc(struct in_addr x_a1);
-int32_t function_10808(int32_t nfds, struct _TYPEDEF_fd_set * readfds, struct _TYPEDEF_fd_set * writefds, struct _TYPEDEF_fd_set * exceptfds, struct timeval * timeout);
-char * function_10814(char * dest, char * src);
-int32_t function_10820(int32_t fd, int32_t * buf, int32_t n, int32_t flags, struct sockaddr * addr, int32_t * addr_len);
-void function_1082c(char * s);
-int32_t function_10838(int32_t * ptr, int32_t size, int32_t n, struct _IO_FILE * s);
-char * function_10844(char * dest, char * src);
+int32_t *function_107b4(int32_t nmemb, int32_t size);
+int32_t function_107c0(int32_t fd, int32_t level, int32_t optname,
+                       int32_t *optval, int32_t optlen);
+int32_t function_107cc(char *format, ...);
+int32_t function_107d8(struct _IO_FILE *stream, char *format, ...);
+void function_107e4(int32_t *ptr);
+int32_t *function_107f0(int32_t *dest, int32_t *src, int32_t n);
+char *function_107fc(struct in_addr x_a1);
+int32_t function_10808(int32_t nfds, struct _TYPEDEF_fd_set *readfds,
+                       struct _TYPEDEF_fd_set *writefds,
+                       struct _TYPEDEF_fd_set *exceptfds,
+                       struct timeval *timeout);
+char *function_10814(char *dest, char *src);
+int32_t function_10820(int32_t fd, int32_t *buf, int32_t n, int32_t flags,
+                       struct sockaddr *addr, int32_t *addr_len);
+void function_1082c(char *s);
+int32_t function_10838(int32_t *ptr, int32_t size, int32_t n,
+                       struct _IO_FILE *s);
+char *function_10844(char *dest, char *src);
 int32_t function_10850(int32_t fd, int32_t request, ...);
 int32_t function_1085c(int32_t useconds);
-char * function_10868(char * dest, char * src);
-int32_t function_10874(struct timeval * tv, struct timezone * tz);
-int32_t function_10880(char * s);
-int32_t function_1088c(int32_t main, int32_t argc, char ** ubp_av, void (*init)(), void (*fini)(), void (*rtld_fini)());
-int32_t function_10898(char * command);
+char *function_10868(char *dest, char *src);
+int32_t function_10874(struct timeval *tv, struct timezone *tz);
+int32_t function_10880(char *s);
+int32_t function_1088c(int32_t main, int32_t argc, char **ubp_av,
+                       void (*init)(), void (*fini)(), void (*rtld_fini)());
+int32_t function_10898(char *command);
 void function_108a4(void);
 void function_108b0(int32_t status);
-int32_t function_108bc(char * s);
-int32_t function_108c8(int32_t fd, struct sockaddr * addr, int32_t len);
-int32_t * function_108d4(int32_t * s, int32_t c, int32_t n);
-char * function_108e0(char * dest, char * src, int32_t n);
-int32_t function_108ec(char * name, int32_t type);
-int32_t function_108f8(struct _IO_FILE * stream);
-int32_t function_10904(int32_t fd, int32_t * buf, int32_t n, int32_t flags, struct sockaddr * addr, int32_t addr_len);
-int32_t function_10910(char * s, char * format, ...);
-struct _IO_FILE * function_1091c(char * filename, char * modes);
+int32_t function_108bc(char *s);
+int32_t function_108c8(int32_t fd, struct sockaddr *addr, int32_t len);
+int32_t *function_108d4(int32_t *s, int32_t c, int32_t n);
+char *function_108e0(char *dest, char *src, int32_t n);
+int32_t function_108ec(char *name, int32_t type);
+int32_t function_108f8(struct _IO_FILE *stream);
+int32_t function_10904(int32_t fd, int32_t *buf, int32_t n, int32_t flags,
+                       struct sockaddr *addr, int32_t addr_len);
+int32_t function_10910(char *s, char *format, ...);
+struct _IO_FILE *function_1091c(char *filename, char *modes);
 int32_t function_10928(int32_t domain, int32_t type, int32_t protocol);
-int32_t function_10934(char * s1, char * s2, int32_t n);
+int32_t function_10934(char *s1, char *s2, int32_t n);
 void function_10940(void);
 int32_t function_1094c(int32_t fd);
 int32_t function_10958(void);
@@ -98,16 +106,16 @@ int32_t function_10a66(void);
 int32_t function_10a68(void);
 int32_t function_10a6c(void);
 int32_t function_10a84(int32_t i_a1);
-int32_t function_10afc(char * p_a1, int32_t * p_a2);
+int32_t function_10afc(char *p_a1, int32_t *p_a2);
 int32_t function_10bbc(int32_t i_a1, int32_t i_a2);
-int32_t function_10cc0(int32_t * p_a1, char * p_a2);
+int32_t function_10cc0(int32_t *p_a1, char *p_a2);
 int32_t function_10da0(int32_t i_a1);
 int32_t function_10e04(void);
 int32_t function_10e1c(void);
 int32_t function_10f58(int32_t i_a1);
 int32_t function_10fe8(void);
 int32_t function_110ec(void);
-int32_t function_1121c(char * p_a1);
+int32_t function_1121c(char *p_a1);
 int32_t function_11274(void);
 int32_t function_114a8(void);
 int32_t function_1153c(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
@@ -118,27 +126,28 @@ int32_t unknown_54c7e(void);
 
 // --------------------- Global Variables ---------------------
 
-int32_t i_g1 = -0x1cae0000; // 0x10a08
-int32_t i_g2 = 0x10a85; // 0x21f10
-int32_t i_g3 = -1; // 0x220a4
-char * p_g4; // 0x220a8
-char * p_g5; // 0x220ac
-int32_t i_g6 = 0; // 0x220cc
-struct timeval * p_g7 = NULL; // 0x220d4
-int32_t i_g8 = 0; // 0x220d8
-int32_t i_g9 = 0; // 0x220dc
-int32_t i_g10 = 0; // 0x220e0
-struct sockaddr * p_g11 = NULL; // 0x220e4
-int32_t i_g12 = 0; // 0x220e8
-int32_t i_g13 = 0; // 0x220ec
-int32_t i_g14 = 0; // 0x220f0
+int32_t i_g1 = -0x1cae0000;    // 0x10a08
+int32_t i_g2 = 0x10a85;        // 0x21f10
+int32_t i_g3 = -1;             // 0x220a4
+char *p_g4;                    // 0x220a8
+char *p_g5;                    // 0x220ac
+int32_t i_g6 = 0;              // 0x220cc
+struct timeval *p_g7 = NULL;   // 0x220d4
+int32_t i_g8 = 0;              // 0x220d8
+int32_t i_g9 = 0;              // 0x220dc
+int32_t i_g10 = 0;             // 0x220e0
+struct sockaddr *p_g11 = NULL; // 0x220e4
+int32_t i_g12 = 0;             // 0x220e8
+int32_t i_g13 = 0;             // 0x220ec
+int32_t i_g14 = 0;             // 0x220f0
 int32_t i_g15;
 
 // ------- Dynamically Linked Functions Without Header --------
 
 void __gmon_start__(void);
-int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char ** p_a3, void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
-struct _IO_FILE * fopen64(char * p_a1, char * p_a2);
+int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char **p_a3,
+                          void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
+struct _IO_FILE *fopen64(char *p_a1, char *p_a2);
 
 // ------------------------ Functions -------------------------
 
@@ -149,79 +158,85 @@ int32_t function_10794(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x107b4 - 0x107c0
-int32_t * function_107b4(int32_t nmemb, int32_t size) {
+int32_t *function_107b4(int32_t nmemb, int32_t size) {
     // 0x107b4
     return calloc(nmemb, size);
 }
 
 // Address range: 0x107c0 - 0x107cc
-int32_t function_107c0(int32_t fd, int32_t level, int32_t optname, int32_t * optval, int32_t optlen) {
+int32_t function_107c0(int32_t fd, int32_t level, int32_t optname,
+                       int32_t *optval, int32_t optlen) {
     // 0x107c0
     return setsockopt(fd, level, optname, optval, optlen);
 }
 
 // Address range: 0x107cc - 0x107d8
-int32_t function_107cc(char * format, ...) {
+int32_t function_107cc(char *format, ...) {
     // 0x107cc
     return printf(format);
 }
 
 // Address range: 0x107d8 - 0x107e4
-int32_t function_107d8(struct _IO_FILE * stream, char * format, ...) {
+int32_t function_107d8(struct _IO_FILE *stream, char *format, ...) {
     // 0x107d8
     return fscanf(stream, format);
 }
 
 // Address range: 0x107e4 - 0x107f0
-void function_107e4(int32_t * ptr) {
+void function_107e4(int32_t *ptr) {
     // 0x107e4
     free(ptr);
 }
 
 // Address range: 0x107f0 - 0x107fc
-int32_t * function_107f0(int32_t * dest, int32_t * src, int32_t n) {
+int32_t *function_107f0(int32_t *dest, int32_t *src, int32_t n) {
     // 0x107f0
     return memcpy(dest, src, n);
 }
 
 // Address range: 0x107fc - 0x10808
-char * function_107fc(struct in_addr x_a1) {
+char *function_107fc(struct in_addr x_a1) {
     // 0x107fc
     return inet_ntoa(x_a1);
 }
 
 // Address range: 0x10808 - 0x10814
-int32_t function_10808(int32_t nfds, struct _TYPEDEF_fd_set * readfds, struct _TYPEDEF_fd_set * writefds, struct _TYPEDEF_fd_set * exceptfds, struct timeval * timeout) {
+int32_t function_10808(int32_t nfds, struct _TYPEDEF_fd_set *readfds,
+                       struct _TYPEDEF_fd_set *writefds,
+                       struct _TYPEDEF_fd_set *exceptfds,
+                       struct timeval *timeout) {
     // 0x10808
     return select(nfds, readfds, writefds, exceptfds, timeout);
 }
 
 // Address range: 0x10814 - 0x10820
-char * function_10814(char * dest, char * src) {
+char *function_10814(char *dest, char *src) {
     // 0x10814
     return stpcpy(dest, src);
 }
 
 // Address range: 0x10820 - 0x1082c
-int32_t function_10820(int32_t fd, int32_t * buf, int32_t n, int32_t flags, struct sockaddr * addr, int32_t * addr_len) {
+int32_t function_10820(int32_t fd, int32_t *buf, int32_t n, int32_t flags,
+                       struct sockaddr *addr, int32_t *addr_len) {
     // 0x10820
     return recvfrom(fd, buf, n, flags, addr, addr_len);
 }
 
 // Address range: 0x1082c - 0x10838
-void function_1082c(char * s) {
+void function_1082c(char *s) {
     // 0x1082c
     perror(s);
 }
 
 // Address range: 0x10838 - 0x10844
-int32_t function_10838(int32_t * ptr, int32_t size, int32_t n, struct _IO_FILE * s) {
+int32_t function_10838(int32_t *ptr, int32_t size, int32_t n,
+                       struct _IO_FILE *s) {
     // 0x10838
     return fwrite(ptr, size, n, s);
 }
 
 // Address range: 0x10844 - 0x10850
-char * function_10844(char * dest, char * src) {
+char *function_10844(char *dest, char *src) {
     // 0x10844
     return strcat(dest, src);
 }
@@ -239,31 +254,32 @@ int32_t function_1085c(int32_t useconds) {
 }
 
 // Address range: 0x10868 - 0x10874
-char * function_10868(char * dest, char * src) {
+char *function_10868(char *dest, char *src) {
     // 0x10868
     return strcpy(dest, src);
 }
 
 // Address range: 0x10874 - 0x10880
-int32_t function_10874(struct timeval * tv, struct timezone * tz) {
+int32_t function_10874(struct timeval *tv, struct timezone *tz) {
     // 0x10874
     return gettimeofday(tv, tz);
 }
 
 // Address range: 0x10880 - 0x1088c
-int32_t function_10880(char * s) {
+int32_t function_10880(char *s) {
     // 0x10880
     return puts(s);
 }
 
 // Address range: 0x1088c - 0x10898
-int32_t function_1088c(int32_t main, int32_t argc, char ** ubp_av, void (*init)(), void (*fini)(), void (*rtld_fini)()) {
+int32_t function_1088c(int32_t main, int32_t argc, char **ubp_av,
+                       void (*init)(), void (*fini)(), void (*rtld_fini)()) {
     // 0x1088c
     return __libc_start_main(main, argc, ubp_av, init, fini, rtld_fini);
 }
 
 // Address range: 0x10898 - 0x108a4
-int32_t function_10898(char * command) {
+int32_t function_10898(char *command) {
     // 0x10898
     return system(command);
 }
@@ -281,55 +297,56 @@ void function_108b0(int32_t status) {
 }
 
 // Address range: 0x108bc - 0x108c8
-int32_t function_108bc(char * s) {
+int32_t function_108bc(char *s) {
     // 0x108bc
     return strlen(s);
 }
 
 // Address range: 0x108c8 - 0x108d4
-int32_t function_108c8(int32_t fd, struct sockaddr * addr, int32_t len) {
+int32_t function_108c8(int32_t fd, struct sockaddr *addr, int32_t len) {
     // 0x108c8
     return bind(fd, addr, len);
 }
 
 // Address range: 0x108d4 - 0x108e0
-int32_t * function_108d4(int32_t * s, int32_t c, int32_t n) {
+int32_t *function_108d4(int32_t *s, int32_t c, int32_t n) {
     // 0x108d4
     return memset(s, c, n);
 }
 
 // Address range: 0x108e0 - 0x108ec
-char * function_108e0(char * dest, char * src, int32_t n) {
+char *function_108e0(char *dest, char *src, int32_t n) {
     // 0x108e0
     return strncpy(dest, src, n);
 }
 
 // Address range: 0x108ec - 0x108f8
-int32_t function_108ec(char * name, int32_t type) {
+int32_t function_108ec(char *name, int32_t type) {
     // 0x108ec
     return access(name, type);
 }
 
 // Address range: 0x108f8 - 0x10904
-int32_t function_108f8(struct _IO_FILE * stream) {
+int32_t function_108f8(struct _IO_FILE *stream) {
     // 0x108f8
     return fclose(stream);
 }
 
 // Address range: 0x10904 - 0x10910
-int32_t function_10904(int32_t fd, int32_t * buf, int32_t n, int32_t flags, struct sockaddr * addr, int32_t addr_len) {
+int32_t function_10904(int32_t fd, int32_t *buf, int32_t n, int32_t flags,
+                       struct sockaddr *addr, int32_t addr_len) {
     // 0x10904
     return sendto(fd, buf, n, flags, addr, addr_len);
 }
 
 // Address range: 0x10910 - 0x1091c
-int32_t function_10910(char * s, char * format, ...) {
+int32_t function_10910(char *s, char *format, ...) {
     // 0x10910
     return sprintf(s, format);
 }
 
 // Address range: 0x1091c - 0x10928
-struct _IO_FILE * function_1091c(char * filename, char * modes) {
+struct _IO_FILE *function_1091c(char *filename, char *modes) {
     // 0x1091c
     return fopen64(filename, modes);
 }
@@ -341,7 +358,7 @@ int32_t function_10928(int32_t domain, int32_t type, int32_t protocol) {
 }
 
 // Address range: 0x10934 - 0x10940
-int32_t function_10934(char * s1, char * s2, int32_t n) {
+int32_t function_10934(char *s1, char *s2, int32_t n) {
     // 0x10934
     return strncmp(s1, s2, n);
 }
@@ -364,7 +381,7 @@ int32_t function_10958(void) {
     printf("monitor-ipsig compile %s--%s\n", "Sep  6 2023", "07:25:44");
     function_10fe8();
     while (true) {
-      lab_0x1098c:
+    lab_0x1098c:
         // 0x1098c
         if (function_114a8() != 1) {
             usleep(0x61a80);
@@ -374,7 +391,7 @@ int32_t function_10958(void) {
             }
         }
         while (true) {
-          lab_0x109ac:
+        lab_0x109ac:
             // 0x109ac
             puts("Key Down!!!!!");
             function_110ec();
@@ -391,7 +408,8 @@ int32_t function_10958(void) {
 int32_t entry_point(int32_t i_a1, int32_t i_a2) {
     // 0x109c8
     int32_t i_v1; // 0x109c8
-    __libc_start_main(0x10958, i_a2, (char **)&i_v1, (void (*)())0x1153d, (void (*)())0x10958, (void (*)())i_a1);
+    __libc_start_main(0x10958, i_a2, (char **)&i_v1, (void (*)())0x1153d,
+                      (void (*)())0x10958, (void (*)())i_a1);
     abort();
     // UNREACHABLE
 }
@@ -404,7 +422,8 @@ int32_t function_109ec(int32_t i_a1) {
 
 // Address range: 0x109f8 - 0x10a14
 int32_t function_109f8(void) {
-    int32_t i_v1 = *(int32_t *)((int32_t)&i_g1 + (int32_t)"o/gpio%d/value" + 152); // 0x10a04
+    int32_t i_v1 = *(int32_t *)((int32_t)&i_g1 + (int32_t) "o/gpio%d/value" +
+                                152); // 0x10a04
     if (i_v1 == 0) {
         int32_t i_v2; // 0x109f8
         return i_v2;
@@ -467,7 +486,7 @@ int32_t function_10a6c(void) {
     int32_t i_v1; // 0x10a6c
     if (*(char *)&p_g4 == 0) {
         // 0x10a7a
-        int32_t i_v2; // 0x10a6c
+        int32_t i_v2;                                    // 0x10a6c
         int32_t i_v3 = function_10a1c(i_v2, i_v2, i_v2); // 0x10a7a
         *(char *)&p_g4 = 1;
         i_v1 = i_v3;
@@ -483,7 +502,7 @@ int32_t function_10a84(int32_t i_a1) {
     int32_t i_v2; // bp-24, 0x10a84
     int32_t i_v3; // 0x10a84
     sprintf((char *)&i_v2, "%ld", i_v3);
-    int32_t * p_v4 = (int32_t *)i_a1; // 0x10abc
+    int32_t *p_v4 = (int32_t *)i_a1; // 0x10abc
     *p_v4 = 0;
     *(int32_t *)(i_a1 + 4) = 0;
     *(int16_t *)(i_a1 + 8) = 0;
@@ -498,8 +517,8 @@ int32_t function_10a84(int32_t i_a1) {
 }
 
 // Address range: 0x10afc - 0x10bbc
-int32_t function_10afc(char * p_a1, int32_t * p_a2) {
-    struct in_addr x_v1; // 0x10b6c
+int32_t function_10afc(char *p_a1, int32_t *p_a2) {
+    struct in_addr x_v1;                                    // 0x10b6c
     int32_t i_v2 = socket(AF_INET, SOCK_DGRAM, IPPROTO_IP); // 0x10b18
     if (i_v2 == -1) {
         // 0x10bac
@@ -517,9 +536,7 @@ int32_t function_10afc(char * p_a1, int32_t * p_a2) {
         i_v4 = -1;
     } else {
         // 0x10b58
-        x_v1 = (struct {int32_t e0;}){
-            .e0 = 0
-        };
+        x_v1 = (struct { int32_t e0; }){.e0 = 0};
         int32_t i_v5; // 0x10afc
         x_v1.e0 = i_v5;
         strcpy((char *)p_a2, inet_ntoa(x_v1));
@@ -532,7 +549,7 @@ int32_t function_10afc(char * p_a1, int32_t * p_a2) {
 
 // Address range: 0x10bbc - 0x10cc0
 int32_t function_10bbc(int32_t i_a1, int32_t i_a2) {
-    int32_t * p_v1 = calloc(40, 1); // 0x10bd4
+    int32_t *p_v1 = calloc(40, 1);                           // 0x10bd4
     int32_t i_v2 = socket(AF_INET, SOCK_STREAM, IPPROTO_IP); // 0x10be8
     if (i_v2 < 0) {
         // 0x10cac
@@ -552,7 +569,9 @@ int32_t function_10bbc(int32_t i_a1, int32_t i_a2) {
     // 0x10c18
     close(i_v2);
     char i_v4; // 0x10bbc
-    sprintf((char *)p_v1, "%02X:%02X:%02X:%02X:%02X:%02X", (int32_t)(unsigned char)i_v4, (int32_t)i_v4, (int32_t)i_v4, (int32_t)i_v4, (int32_t)i_v4, (int32_t)i_v4);
+    sprintf((char *)p_v1, "%02X:%02X:%02X:%02X:%02X:%02X",
+            (int32_t)(unsigned char)i_v4, (int32_t)i_v4, (int32_t)i_v4,
+            (int32_t)i_v4, (int32_t)i_v4, (int32_t)i_v4);
     *(int32_t *)i_a1 = 0x3d43414d;
     *(int16_t *)stpcpy((char *)(i_a1 + 4), (char *)p_v1) = 44;
     free(p_v1);
@@ -560,8 +579,8 @@ int32_t function_10bbc(int32_t i_a1, int32_t i_a2) {
 }
 
 // Address range: 0x10cc0 - 0x10da0
-int32_t function_10cc0(int32_t * p_a1, char * p_a2) {
-    int32_t * p_v1 = calloc(40, 1); // 0x10cd8
+int32_t function_10cc0(int32_t *p_a1, char *p_a2) {
+    int32_t *p_v1 = calloc(40, 1);                           // 0x10cd8
     int32_t i_v2 = socket(AF_INET, SOCK_STREAM, IPPROTO_IP); // 0x10cec
     if (i_v2 < 0) {
         // 0x10d8c
@@ -581,7 +600,9 @@ int32_t function_10cc0(int32_t * p_a1, char * p_a2) {
     // 0x10d1c
     close(i_v2);
     char i_v4; // 0x10cc0
-    sprintf((char *)p_v1, "%02X:%02X:%02X:%02X:%02X:%02X", (int32_t)(unsigned char)i_v4, (int32_t)i_v4, (int32_t)i_v4, (int32_t)i_v4, (int32_t)i_v4, (int32_t)i_v4);
+    sprintf((char *)p_v1, "%02X:%02X:%02X:%02X:%02X:%02X",
+            (int32_t)(unsigned char)i_v4, (int32_t)i_v4, (int32_t)i_v4,
+            (int32_t)i_v4, (int32_t)i_v4, (int32_t)i_v4);
     strcpy((char *)p_a1, (char *)p_v1);
     free(p_v1);
     return (int32_t)p_a1;
@@ -613,7 +634,8 @@ int32_t function_10e1c(void) {
     memset(&i_v1, 0, 64);
     sprintf((char *)&i_v1, "/sys/class/gpio/gpio%d", 943);
     if (access((char *)&i_v1, F_OK) != 0) {
-        struct _IO_FILE * p_v2 = fopen64("/sys/class/gpio/export", "w"); // 0x10e6c
+        struct _IO_FILE *p_v2 =
+            fopen64("/sys/class/gpio/export", "w"); // 0x10e6c
         if (p_v2 == NULL) {
             // 0x10f40
             puts("Open read gpio/export");
@@ -632,7 +654,7 @@ int32_t function_10e1c(void) {
     }
     // 0x10eb8
     sprintf((char *)&i_v1, "/sys/class/gpio/gpio%d/value", 943);
-    struct _IO_FILE * p_v3 = fopen64((char *)&i_v1, "r"); // 0x10ed8
+    struct _IO_FILE *p_v3 = fopen64((char *)&i_v1, "r"); // 0x10ed8
     if (p_v3 == NULL) {
         // 0x10f10
         puts("Open read recovery button failure");
@@ -654,10 +676,12 @@ int32_t function_10f58(int32_t i_a1) {
     int32_t i_v3; // 0x10fd4
     for (int32_t i_v4 = 3; i_v4 > 0; i_v4--) {
         // 0x10f90
-        sprintf((char *)&i_v1, "echo %d > /sys/class/gpio/gpio%d/value", 1, i_v2);
+        sprintf((char *)&i_v1, "echo %d > /sys/class/gpio/gpio%d/value", 1,
+                i_v2);
         system((char *)&i_v1);
         usleep(0xc350);
-        sprintf((char *)&i_v1, "echo %d > /sys/class/gpio/gpio%d/value", 0, i_v2);
+        sprintf((char *)&i_v1, "echo %d > /sys/class/gpio/gpio%d/value", 0,
+                i_v2);
         system((char *)&i_v1);
         i_v3 = usleep(0xc350);
     }
@@ -714,12 +738,13 @@ int32_t function_110ec(void) {
     function_10cc0(&i_v1, "eth0");
     int32_t i_v4 = strlen((char *)&i_v1); // 0x11154
     strncpy((char *)&p_g5, (char *)&i_v1, i_v4);
-    char * p_v5 = stpcpy((char *)&i_v3, (char *)&i_v2); // 0x11178
-    int32_t i_v6 = (int32_t)p_v5; // 0x11178
+    char *p_v5 = stpcpy((char *)&i_v3, (char *)&i_v2); // 0x11178
+    int32_t i_v6 = (int32_t)p_v5;                      // 0x11178
     *p_v5 = 44;
     int32_t i_v7 = i_v4 + 1;
     memcpy((int32_t *)(i_v6 + 1), &i_v1, i_v7);
-    int32_t i_v8 = sendto(i_g3, &i_v3, i_v7 - (int32_t)&i_v3 + i_v6, 0, (struct sockaddr *)&p_g11, 16); // 0x111cc
+    int32_t i_v8 = sendto(i_g3, &i_v3, i_v7 - (int32_t)&i_v3 + i_v6, 0,
+                          (struct sockaddr *)&p_g11, 16); // 0x111cc
     if (i_v8 < 0) {
         // 0x11204
         printf("send error....");
@@ -731,16 +756,17 @@ int32_t function_110ec(void) {
 }
 
 // Address range: 0x1121c - 0x11274
-int32_t function_1121c(char * p_a1) {
-    int32_t i_v1 = sendto(i_g3, (int32_t *)p_a1, 10, 0, (struct sockaddr *)&p_g11, 16); // 0x11250
+int32_t function_1121c(char *p_a1) {
+    int32_t i_v1 = sendto(i_g3, (int32_t *)p_a1, 10, 0,
+                          (struct sockaddr *)&p_g11, 16); // 0x11250
     int32_t i_v2 = i_v1 < 0 ? 0x116fc : i_v1 % 0x10000 | 0x10000;
     return printf(i_v1 >= 0 ? (char *)0x1171c : (char *)i_v2);
 }
 
 // Address range: 0x11274 - 0x114a8
 int32_t function_11274(void) {
-    int32_t i_v1 = 0; // bp-156, 0x11290
-    int32_t i_v2 = 2; // bp-160, 0x11294
+    int32_t i_v1 = 0;     // bp-156, 0x11290
+    int32_t i_v2 = 2;     // bp-160, 0x11294
     int32_t i_v3 = &i_v1; // 0x11294
     i_v3 += 4;
     *(int32_t *)i_v3 = 0;
@@ -750,71 +776,32 @@ int32_t function_11274(void) {
         i_v3 += 4;
         *(int32_t *)i_v3 = 0;
     }
-    int32_t i_v5 = i_g3; // 0x112b4
+    int32_t i_v5 = i_g3;  // 0x112b4
     int32_t i_v6 = -i_v5; // 0x112c8
-    int32_t i_v7; // bp-24, 0x11274
+    int32_t i_v7;         // bp-24, 0x11274
     int32_t i_v8 = (int32_t)&i_v7 - 128;
-    int32_t * p_v9 = (int32_t *)(4 * ((i_v5 < 0 ? i_v5 + 31 : i_v5) >> 5) + i_v8); // 0x112e4
+    int32_t *p_v9 =
+        (int32_t *)(4 * ((i_v5 < 0 ? i_v5 + 31 : i_v5) >> 5) + i_v8); // 0x112e4
     *p_v9 = 1 << (i_v6 < 0 ? i_v5 % 32 : -((i_v6 % 32))) | *p_v9;
-    int32_t * p_v10 = calloc(30, 1); // 0x112f0
-    int32_t i_v11; // bp-152, 0x11274
-    int32_t i_v12 = select(i_v5 + 1, (struct _TYPEDEF_fd_set *)&i_v11, NULL, NULL, (struct timeval *)&i_v2); // 0x11310
+    int32_t *p_v10 = calloc(30, 1); // 0x112f0
+    int32_t i_v11;                  // bp-152, 0x11274
+    int32_t i_v12 = select(i_v5 + 1, (struct _TYPEDEF_fd_set *)&i_v11, NULL,
+                           NULL, (struct timeval *)&i_v2); // 0x11310
     switch (i_v12) {
-        case -1: {
-            // 0x114a4
-            exit(-1);
-            return &i_g15;
-        }
-        default: {
-            int32_t i_v13 = i_g3; // 0x11324
-            int32_t i_v14 = -i_v13; // 0x11334
-            int32_t i_v15 = *(int32_t *)(4 * ((i_v13 < 0 ? i_v13 + 31 : i_v13) >> 5) + i_v8); // 0x11350
-            if ((1 << (i_v14 < 0 ? i_v13 % 32 : -((i_v14 % 32))) & i_v15) == 0) {
-                // 0x1135c
-                if (i_g6 != 5) {
-                    // 0x113c0
-                    free(p_v10);
-                    // 0x113cc
-                    return 0;
-                }
-                // 0x11370
-                *(int32_t *)((int32_t)&p_g5 + 32) = 0;
-                puts("Time Out");
-                free(p_v10);
-                return 1;
-            }
-            int32_t i_v16 = 16; // bp-164, 0x113ec
-            if (recvfrom(i_v13, p_v10, 30, 0, (struct sockaddr *)&p_g7, &i_v16) >= 1) {
-                // 0x11408
-                printf("rev:\n%s\t", p_v10);
-                i_g6 = 0;
-                int32_t i_v17 = strlen((char *)&p_g5); // 0x11428
-                int32_t i_v18; // 0x11274
-                if (strncmp((char *)p_v10, (char *)&p_g5, i_v17) == 0) {
-                    // 0x11444
-                    printf("send_ack(\"1\");");
-                    function_10f58(1);
-                    function_1121c("OK");
-                    free(p_v10);
-                    i_v18 = 1;
-                } else {
-                    // 0x11474
-                    printf("send_ack(\"0\");");
-                    function_10f58(0);
-                    function_1121c("FAILD");
-                    free(p_v10);
-                    i_v18 = 0;
-                }
-                // 0x113cc
-                return i_v18;
-            }
-            // 0x11398
-            printf("read error....");
-        }
-        case 0: {
-            int32_t i_v19 = i_g6 + 1; // 0x113b0
-            i_g6 = i_v19;
-            if (i_v19 != 5) {
+    case -1: {
+        // 0x114a4
+        exit(-1);
+        return &i_g15;
+    }
+    default: {
+        int32_t i_v13 = i_g3;   // 0x11324
+        int32_t i_v14 = -i_v13; // 0x11334
+        int32_t i_v15 =
+            *(int32_t *)(4 * ((i_v13 < 0 ? i_v13 + 31 : i_v13) >> 5) +
+                         i_v8); // 0x11350
+        if ((1 << (i_v14 < 0 ? i_v13 % 32 : -((i_v14 % 32))) & i_v15) == 0) {
+            // 0x1135c
+            if (i_g6 != 5) {
                 // 0x113c0
                 free(p_v10);
                 // 0x113cc
@@ -826,6 +813,50 @@ int32_t function_11274(void) {
             free(p_v10);
             return 1;
         }
+        int32_t i_v16 = 16; // bp-164, 0x113ec
+        if (recvfrom(i_v13, p_v10, 30, 0, (struct sockaddr *)&p_g7, &i_v16) >=
+            1) {
+            // 0x11408
+            printf("rev:\n%s\t", p_v10);
+            i_g6 = 0;
+            int32_t i_v17 = strlen((char *)&p_g5); // 0x11428
+            int32_t i_v18;                         // 0x11274
+            if (strncmp((char *)p_v10, (char *)&p_g5, i_v17) == 0) {
+                // 0x11444
+                printf("send_ack(\"1\");");
+                function_10f58(1);
+                function_1121c("OK");
+                free(p_v10);
+                i_v18 = 1;
+            } else {
+                // 0x11474
+                printf("send_ack(\"0\");");
+                function_10f58(0);
+                function_1121c("FAILD");
+                free(p_v10);
+                i_v18 = 0;
+            }
+            // 0x113cc
+            return i_v18;
+        }
+        // 0x11398
+        printf("read error....");
+    }
+    case 0: {
+        int32_t i_v19 = i_g6 + 1; // 0x113b0
+        i_g6 = i_v19;
+        if (i_v19 != 5) {
+            // 0x113c0
+            free(p_v10);
+            // 0x113cc
+            return 0;
+        }
+        // 0x11370
+        *(int32_t *)((int32_t)&p_g5 + 32) = 0;
+        puts("Time Out");
+        free(p_v10);
+        return 1;
+    }
     }
 }
 
@@ -895,4 +926,3 @@ int32_t function_250e5e(void) {
 
 // Detected compiler/packer: gcc (4.4.3)
 // Detected functions: 63
-

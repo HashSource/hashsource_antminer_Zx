@@ -598,7 +598,6 @@ dec_label_pc_7dc:                                 ; preds = %dec_label_pc_7c4
   uselistorder i32 (i32, i32, i32)* @set_sclk, { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }
   uselistorder i32 (i32, i32, i32)* @set_cs, { 2, 1, 0 }
   uselistorder i32 %arg3, { 0, 9, 8, 7, 6, 5, 4, 3, 2, 1 }
-  uselistorder i32 %arg2, { 0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 7 }
 }
 
 define i32 @lcd_display_init(i32 %arg1, i32 %arg2, i32 %arg3, i32 %arg4) local_unnamed_addr {

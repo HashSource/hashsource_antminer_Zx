@@ -21,21 +21,24 @@ int32_t _fini(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t _init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t _start(int32_t i_a1, int32_t i_a2);
 int32_t call_gmon_start(void);
-int32_t deregister_tm_clones(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4);
+int32_t deregister_tm_clones(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                             char i_a4);
 int32_t frame_dummy(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t register_tm_clones(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
+int32_t register_tm_clones(int32_t *p_a1, int32_t i_a2, int32_t i_a3,
+                           int32_t i_a4);
 
 // --------------------- Global Variables ---------------------
 
 int32_t i_g1 = 0x84d1; // 0x1068c
-int32_t i_g2 = 0; // 0x10694
-int32_t i_g3 = 0; // 0x107b4
-char * p_g4; // 0x107c0
+int32_t i_g2 = 0;      // 0x10694
+int32_t i_g3 = 0;      // 0x107b4
+char *p_g4;            // 0x107c0
 int32_t i_g5;
 
 // ------- Dynamically Linked Functions Without Header --------
 
-int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char ** p_a3, void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
+int32_t __libc_start_main(int32_t i_a1, int32_t i_a2, char **p_a3,
+                          void (*p_a4)(), void (*p_a5)(), void (*p_a6)());
 
 // ------------------------ Functions -------------------------
 
@@ -56,7 +59,8 @@ int32_t _24_t(void) {
 int32_t _start(int32_t i_a1, int32_t i_a2) {
     // 0x8418
     int32_t i_v1; // 0x8418
-    __libc_start_main(0x84f1, i_a2, (char **)&i_v1, (void (*)())0x85ad, (void (*)())0x84f1, (void (*)())i_a1);
+    __libc_start_main(0x84f1, i_a2, (char **)&i_v1, (void (*)())0x85ad,
+                      (void (*)())0x84f1, (void (*)())i_a1);
     abort();
     int32_t i_v2; // 0x8418
     *(int16_t *)(i_v2 + 46) = (int16_t)i_a2;
@@ -76,13 +80,15 @@ int32_t call_gmon_start(void) {
 }
 
 // Address range: 0x8468 - 0x8480
-int32_t deregister_tm_clones(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4) {
+int32_t deregister_tm_clones(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                             char i_a4) {
     // 0x8468
     return (int32_t)&p_g4;
 }
 
 // Address range: 0x848c - 0x84aa
-int32_t register_tm_clones(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t register_tm_clones(int32_t *p_a1, int32_t i_a2, int32_t i_a3,
+                           int32_t i_a4) {
     // 0x848c
     return (int32_t)&p_g4;
 }
@@ -93,7 +99,7 @@ int32_t __do_global_dtors_aux(void) {
     int32_t i_v1; // 0x84b8
     if (*(char *)&p_g4 == 0) {
         // 0x84c0
-        int32_t i_v2; // 0x84b8
+        int32_t i_v2;                                             // 0x84b8
         int32_t i_v3 = deregister_tm_clones(i_v2, i_v2, i_v2, 0); // 0x84c0
         *(char *)&p_g4 = 1;
         i_v1 = i_v3;
@@ -109,7 +115,7 @@ int32_t frame_dummy(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x84f0 - 0x85ac
-int main(int argc, char ** argv) {
+int main(int argc, char **argv) {
     int32_t i_v1 = open("/dev/bitmain-lcd", 0x101002); // 0x850a
     if (i_v1 < 0) {
         // 0x8516
@@ -134,7 +140,8 @@ int main(int argc, char ** argv) {
 }
 
 // Address range: 0x85ac - 0x85e8
-int32_t __libc_csu_init(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t __libc_csu_init(int32_t i_a1, int32_t i_a2, int32_t i_a3,
+                        int32_t i_a4) {
     int32_t i_v1 = _init(i_a1, i_a2, i_a3, i_a4); // 0x85be
     return 0xcd34 - (int32_t)&i_g1 >> 2 == 0 ? i_v1 : i_a1;
 }
@@ -156,4 +163,3 @@ int32_t _fini(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 
 // Detected compiler/packer: gcc (4.7.3)
 // Detected functions: 12
-

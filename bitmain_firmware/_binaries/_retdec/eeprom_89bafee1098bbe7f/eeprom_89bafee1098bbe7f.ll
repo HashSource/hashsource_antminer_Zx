@@ -842,7 +842,7 @@ dec_label_pc_8db0:                                ; preds = %dec_label_pc_8be0
   uselistorder i32* %r1.0.reg2mem, { 0, 2, 1, 3 }
   uselistorder i32 (i32)* @close, { 1, 0, 2 }
   uselistorder i32 (i8*, i32, ...)* @open, { 2, 1, 0, 3 }
-  uselistorder void (i32)* @exit, { 6, 5, 4, 3, 2, 1, 0, 7, 8 }
+  uselistorder void (i32)* @exit, { 4, 3, 2, 1, 0, 7, 6, 5, 8 }
   uselistorder i32 (i8*, i8*, ...)* @sscanf, { 1, 0, 2 }
   uselistorder i8** @global_var_11d48, { 5, 4, 3, 2, 1, 0 }
   uselistorder i32 (i32, i8**, i8*)* @getopt, { 2, 4, 5, 3, 1, 0, 6 }
@@ -1090,10 +1090,9 @@ dec_label_pc_9210:                                ; preds = %dec_label_pc_9188
   uselistorder i32 %0, { 2, 1, 0 }
   uselistorder i32* %r0.0.reg2mem, { 3, 4, 0, 2, 1 }
   uselistorder void (i8*)* @perror, { 3, 2, 1, 0, 4 }
-  uselistorder i32 (i32*, i32, i32, %_IO_FILE*)* @fwrite, { 23, 18, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 17, 16, 22, 21, 20, 19, 28, 27, 26, 25, 24, 15, 29 }
+  uselistorder i32 (i32*, i32, i32, %_IO_FILE*)* @fwrite, { 24, 28, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 27, 26, 25, 23, 22, 21, 20, 19, 18, 17, 16, 15, 29 }
   uselistorder i32 (%_IO_FILE*, i8*, ...)* @fprintf, { 17, 19, 16, 18, 15, 14, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 13, 12, 11, 20 }
   uselistorder %_IO_FILE** @global_var_11d38, { 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 0, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 }
-  uselistorder i32 (i32, i32, ...)* @ioctl, { 1, 0, 2 }
   uselistorder i32 -1, { 1, 2, 0, 3, 5, 4, 8, 10, 9, 11, 12, 7, 6, 13 }
   uselistorder i32 (i32, i32, i32, i32, i32)* @function_8ff0, { 1, 0 }
   uselistorder i1 true, { 1, 2, 3, 4, 5, 6, 7, 8, 0 }

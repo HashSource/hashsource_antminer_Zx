@@ -24,12 +24,12 @@ int32_t function_8600(void);
 int32_t function_8654(int32_t i_a1, int32_t i_a2);
 int32_t function_8850(void);
 int32_t function_8874(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4);
-int32_t function_88ac(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
+int32_t function_88ac(int32_t *p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_88ec(void);
 int32_t function_8914(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_8948(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_8968(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
-int32_t function_8988(char * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
+int32_t function_8988(char *p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_89a0(void);
 int32_t function_8a84(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4);
 int32_t function_8ae8(void);
@@ -45,11 +45,11 @@ int32_t wait(void);
 
 // --------------------- Global Variables ---------------------
 
-int32_t i_g1 = 0; // 0x10d44
-int32_t i_g2 = 0; // 0x10e88
-char * p_g3; // 0x10e94
-int32_t i_g4 = 0; // 0x8290
-int32_t i_g5 = 0x8570; // 0x829c
+int32_t i_g1 = 0;           // 0x10d44
+int32_t i_g2 = 0;           // 0x10e88
+char *p_g3;                 // 0x10e94
+int32_t i_g4 = 0;           // 0x8290
+int32_t i_g5 = 0x8570;      // 0x829c
 int32_t i_g6 = -0x1e4f9eba; // 0x8aac
 
 // ------------------------ Functions -------------------------
@@ -198,13 +198,13 @@ int32_t function_8654(int32_t i_a1, int32_t i_a2) {
     // 0x8654
     printf();
     int32_t i_v1 = 0;
-    int32_t i_v2 = (int32_t)"11:08:51"; // 0x8670
-    int32_t i_v3; // 0x8654
-    int32_t i_v4; // 0x8654
-    int32_t i_v5; // 0x8654
+    int32_t i_v2 = (int32_t) "11:08:51"; // 0x8670
+    int32_t i_v3;                        // 0x8654
+    int32_t i_v4;                        // 0x8654
+    int32_t i_v5;                        // 0x8654
     while (true) {
         int32_t i_v6 = i_v2; // 0x8680
-        int32_t i_v7; // 0x8654
+        int32_t i_v7;        // 0x8654
         int32_t i_v8 = i_v7; // 0x8680
         int32_t i_v9 = i_v7; // 0x8680
         if (function_89a0() == 0) {
@@ -216,7 +216,7 @@ int32_t function_8654(int32_t i_a1, int32_t i_a2) {
                 i_v4 = i_v8;
                 if (function_89a0() != 1) {
                     while (true) {
-                      lab_generated_0:
+                    lab_generated_0:
                         gettimeofday();
                         while (i_v1 >= 0x2dc6c1) {
                             // 0x86e8
@@ -228,7 +228,8 @@ int32_t function_8654(int32_t i_a1, int32_t i_a2) {
                                 while (function_89a0() == 0) {
                                     // 0x86f4
                                     function_8948(0, i_v5, i_v1, 0x2dc6c0);
-                                    function_8968(sleep(), i_v5, i_v1, 0x2dc6c0);
+                                    function_8968(sleep(), i_v5, i_v1,
+                                                  0x2dc6c0);
                                     sleep();
                                 }
                             }
@@ -275,7 +276,7 @@ int32_t function_8654(int32_t i_a1, int32_t i_a2) {
                         goto lab_0x86a0;
                     }
                 }
-              lab_0x8788_2:
+            lab_0x8788_2:
                 // 0x8788
                 function_8968(1, 0, i_v3, i_v4);
                 i_v6 = i_v3;
@@ -292,10 +293,18 @@ int32_t function_8654(int32_t i_a1, int32_t i_a2) {
         sleep();
         i_v7 = i_v9;
     }
-  lab_0x87c4:
+lab_0x87c4:
     // 0x87c4
     function_8968(0, i_v5, i_v1, 0x2dc6c0);
     if (i_a1 < 2) {
+        // 0x87e4
+        sleep();
+        // 0x87dc
+        exit();
+        // 0x87e4
+        sleep();
+        // 0x87dc
+        exit();
         // 0x87e4
         sleep();
         // 0x87dc
@@ -310,9 +319,13 @@ int32_t function_8654(int32_t i_a1, int32_t i_a2) {
         exit();
         // 0x87e4
         sleep();
+        // 0x87dc
+        exit();
+        // 0x87e4
+        sleep();
         goto lab_0x87dc;
     }
-  lab_0x86a0:
+lab_0x86a0:
     // 0x86a0
     i_v3 = i_v1;
     i_v4 = 0x2dc6c0;
@@ -348,7 +361,7 @@ int32_t function_8874(int32_t i_a1, int32_t i_a2, int32_t i_a3, char i_a4) {
 }
 
 // Address range: 0x88ac - 0x88e0
-int32_t function_88ac(int32_t * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t function_88ac(int32_t *p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     // 0x88ac
     return (int32_t)&p_g3;
 }
@@ -386,7 +399,7 @@ int32_t function_8968(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 }
 
 // Address range: 0x8988 - 0x89a0
-int32_t function_8988(char * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
+int32_t function_8988(char *p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     uint32_t i_v1 = access(); // 0x8990
     return (i_v1 > 1 ? i_v1 : 1) - i_v1;
 }
@@ -395,7 +408,8 @@ int32_t function_8988(char * p_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 int32_t function_89a0(void) {
     // 0x89a0
     int32_t i_v1; // 0x89a0
-    int32_t i_v2 = function_8988("/sys/class/gpio/gpio921", i_v1, i_v1, i_v1); // 0x89ac
+    int32_t i_v2 =
+        function_8988("/sys/class/gpio/gpio921", i_v1, i_v1, i_v1); // 0x89ac
     int32_t i_v3 = fopen();
     if (i_v2 != 0) {
         int32_t i_v4; // 0x89a0
@@ -432,7 +446,10 @@ int32_t function_89a0(void) {
 // Address range: 0x8a84 - 0x8ae0
 int32_t function_8a84(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
     int32_t i_v1 = function_8550(i_a1, i_a2, i_a3, i_a4); // 0x8aa0
-    int32_t i_v2 = (int32_t)&i_g5 + 0x8aa4 - ((int32_t)&i_g6 + (int32_t)&i_g4) >> 2 == 0 ? i_v1 : i_a1;
+    int32_t i_v2 =
+        (int32_t)&i_g5 + 0x8aa4 - ((int32_t)&i_g6 + (int32_t)&i_g4) >> 2 == 0
+            ? i_v1
+            : i_a1;
     return i_v2;
 }
 
@@ -453,4 +470,3 @@ int32_t function_8aec(int32_t i_a1, int32_t i_a2, int32_t i_a3, int32_t i_a4) {
 
 // Detected compiler/packer: gcc (4.8.x)
 // Detected functions: 34
-

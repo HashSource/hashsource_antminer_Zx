@@ -1,0 +1,137 @@
+int __fastcall sub_19BF8(int a1)
+{
+  _DWORD *v2; // r6
+  int v3; // r7
+  int v4; // r12
+  int *v5; // r3
+  int v6; // r0
+  int v7; // r1
+  int v8; // t1
+  int v9; // r2
+  bool v10; // cc
+  int v11; // r2
+  char v12; // r3
+  int v13; // r3
+  int v14; // r4
+  int v15; // r0
+  int v16; // r0
+  int v17; // r4
+  int v19; // r3
+  int v20; // r2
+  int v21; // r0
+  char s[4100]; // [sp+8h] [bp-1004h] BYREF
+
+  if ( pthread_mutex_lock(&stru_7BA10) )
+    sub_B414("switch_pools", 5101);
+  if ( pthread_rwlock_wrlock(&stru_7BA28) )
+    sub_B480("switch_pools", 5101);
+  v2 = (_DWORD *)dword_7705C;
+  v3 = *(_DWORD *)dword_7705C;
+  if ( a1 && (v4 = *(_DWORD *)(a1 + 4)) != 0 )
+  {
+    if ( dword_7B198 > 0 )
+    {
+      v5 = (int *)dword_7B438;
+      v6 = dword_7B438 + 4 * dword_7B198;
+      while ( 1 )
+      {
+        v8 = *v5++;
+        v7 = v8;
+        v9 = *(_DWORD *)(v8 + 4);
+        v10 = v9 < v4;
+        v11 = v9 + 1;
+        if ( v10 )
+          *(_DWORD *)(v7 + 4) = v11;
+        if ( v5 == (int *)v6 )
+          break;
+        v4 = *(_DWORD *)(a1 + 4);
+      }
+    }
+    *(_DWORD *)(a1 + 4) = 0;
+    v12 = dword_76EFC;
+    if ( (unsigned int)dword_76EFC > 4 )
+      goto LABEL_37;
+  }
+  else
+  {
+    v12 = dword_76EFC;
+    if ( (unsigned int)dword_76EFC > 4 )
+      goto LABEL_37;
+  }
+  v13 = 1 << v12;
+  if ( (v13 & 0x19) != 0 )
+  {
+    if ( dword_7B198 > 0 )
+    {
+      v14 = 0;
+      while ( 1 )
+      {
+        v15 = v14++;
+        v16 = sub_12038(v15);
+        if ( !*(_BYTE *)(v16 + 129) && *(_DWORD *)(v16 + 132) == 1 )
+          break;
+        if ( dword_7B198 <= v14 )
+          goto LABEL_37;
+      }
+      v17 = *(_DWORD *)(dword_7B438 + 4 * *(_DWORD *)v16);
+      goto LABEL_21;
+    }
+LABEL_37:
+    v17 = *(_DWORD *)(dword_7B438 + 4 * v3);
+    goto LABEL_21;
+  }
+  if ( (v13 & 6) == 0 )
+    goto LABEL_37;
+  if ( a1 && !*(_BYTE *)(a1 + 129) )
+  {
+    v17 = *(_DWORD *)(dword_7B438 + 4 * *(_DWORD *)a1);
+    goto LABEL_21;
+  }
+  if ( dword_7B198 <= 1 )
+    goto LABEL_37;
+  v19 = v3;
+  v20 = 1;
+  while ( 1 )
+  {
+    ++v19;
+    ++v20;
+    v21 = 4 * v19;
+    if ( v19 >= dword_7B198 )
+    {
+      v19 = 0;
+      v21 = 0;
+    }
+    v17 = *(_DWORD *)(dword_7B438 + v21);
+    if ( !*(_BYTE *)(v17 + 129) && *(_DWORD *)(v17 + 132) == 1 )
+      break;
+    if ( v20 == dword_7B198 )
+    {
+      v17 = *(_DWORD *)(dword_7B438 + 4 * v3);
+      break;
+    }
+  }
+LABEL_21:
+  dword_7705C = v17;
+  if ( pthread_rwlock_unlock(&stru_7BA28) )
+    sub_B630("switch_pools", 5163);
+  if ( pthread_mutex_unlock(&stru_7BA10) )
+    sub_B5C4("switch_pools", 5163);
+  off_75ED8();
+  if ( byte_7B625 )
+    sub_18834(v17, (_BYTE *)(v17 + 130));
+  if ( v2 != (_DWORD *)v17 && dword_76EFC != 3 && dword_76EFC != 4 )
+  {
+    if ( byte_7AD48 || byte_78E08 || dword_766C4 > 3 )
+    {
+      snprintf(s, 0x1000u, "Switching to pool %d %s", *(_DWORD *)v17, *(const char **)(v17 + 196));
+      sub_38730(4, s, 0);
+    }
+    sub_185C8(v2);
+  }
+  if ( pthread_mutex_lock(&stru_77060) )
+    sub_B414("switch_pools", 5178);
+  pthread_cond_broadcast(&stru_77078);
+  if ( pthread_mutex_unlock(&stru_77060) )
+    sub_B5C4("switch_pools", 5180);
+  return off_75ED8();
+}

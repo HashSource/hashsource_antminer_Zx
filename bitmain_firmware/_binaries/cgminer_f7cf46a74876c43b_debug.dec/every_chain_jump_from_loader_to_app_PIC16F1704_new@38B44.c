@@ -1,0 +1,27 @@
+void every_chain_jump_from_loader_to_app_PIC16F1704_new()
+{
+  uint8_t *chain_exist; // r5
+  int i; // r4
+  int v2; // t1
+  char tmp42[4100]; // [sp+8h] [bp-1004h] BYREF
+
+  chain_exist = dev.chain_exist;
+  for ( i = 0; i != 4; ++i )
+  {
+    v2 = *chain_exist++;
+    if ( v2 == 1 )
+    {
+      if ( use_syslog || opt_log_output || opt_log_level > 4 )
+      {
+        snprintf(tmp42, 0x1000u, "chain%d %s", i, "every_chain_jump_from_loader_to_app_PIC16F1704_new");
+        applog(5, tmp42, 0);
+      }
+      pthread_mutex_lock(&iic_mutex);
+      i2c_slave_addr = i;
+      jump_from_loader_to_app_PIC16F1704_new();
+      cgsleep_ms(100);
+      pthread_mutex_unlock(&iic_mutex);
+    }
+  }
+  cgsleep_ms(500);
+}

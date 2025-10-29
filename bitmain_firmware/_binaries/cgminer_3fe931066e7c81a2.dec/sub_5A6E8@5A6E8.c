@@ -1,0 +1,26 @@
+int __fastcall sub_5A6E8(int *a1, void **a2)
+{
+  int v4; // r3
+  int v6; // r3
+  int v7; // r3
+
+  if ( a2 )
+  {
+    if ( a1 && *a1 == 1 && a1 != (int *)a2 && sub_59D20(a1, 1, *a1) )
+    {
+      v4 = a1[3];
+      *(_DWORD *)(a1[4] + 4 * v4) = a2;
+      a1[3] = v4 + 1;
+      return 0;
+    }
+    v6 = (int)a2[1];
+    if ( v6 != -1 )
+    {
+      v7 = v6 - 1;
+      a2[1] = (void *)v7;
+      if ( !v7 )
+        sub_5A3E4(a2);
+    }
+  }
+  return -1;
+}

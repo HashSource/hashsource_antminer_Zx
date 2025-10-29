@@ -1,0 +1,34 @@
+int __fastcall sub_579F4(_DWORD *a1)
+{
+  char *v2; // r2
+  _DWORD *v3; // r1
+  int v4; // r0
+  int v5; // r12
+  int v6; // r12
+  int v7; // r3
+
+  *a1 = 0;
+  a1[2] = 0;
+  v2 = (char *)sub_5956C(0x28u);
+  a1[1] = v2;
+  if ( !v2 )
+    return -1;
+  v3 = a1 + 3;
+  v4 = a1[2];
+  a1[4] = a1 + 3;
+  a1[3] = a1 + 3;
+  v5 = dword_6CB74[v4];
+  if ( v5 )
+  {
+    v6 = 8 * v5;
+    v7 = 0;
+    do
+    {
+      *(_DWORD *)&v2[v7 + 4] = v3;
+      *(_DWORD *)&v2[v7] = v3;
+      v7 += 8;
+    }
+    while ( v7 != v6 );
+  }
+  return 0;
+}

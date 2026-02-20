@@ -1,0 +1,94 @@
+Feb 19 23:01:12 (none) local0.err cgminer: Miner compile time: Fri Jul  3 11:39:06 CST 2020 type: Antminer Z15
+Feb 19 23:01:12 (none) local0.warn cgminer: Started cgminer 4.9.0
+Feb 19 23:01:12 (none) local0.notice cgminer[967]: z15 init...
+Feb 19 23:01:12 (none) local0.notice cgminer[967]: httpListenThread start ret=0
+Feb 19 23:01:13 (none) local0.notice cgminer[967]: FPGA version: B031
+Feb 19 23:01:14 (none) local0.notice cgminer[967]: No 2 Fan find, check again
+Feb 19 23:01:15 (none) local0.notice cgminer[967]: No 2 Fan find, check again
+Feb 19 23:01:16 (none) local0.notice cgminer[967]: No 2 Fan find, check again
+Feb 19 23:01:18 (none) local0.notice cgminer[967]: fan-num 2 fan-map 12
+Feb 19 23:01:18 (none) local0.notice cgminer[967]: check_chain
+Feb 19 23:01:18 (none) local0.notice cgminer[967]: Chain 0 existed!
+Feb 19 23:01:18 (none) local0.notice cgminer[967]: Chain 1 existed!
+Feb 19 23:01:18 (none) local0.notice cgminer[967]: Chain 2 existed!
+Feb 19 23:01:18 (none) local0.notice cgminer[967]: chain0 every_chain_reset_PIC16F1704_pic_new
+Feb 19 23:01:19 (none) local0.notice cgminer[967]: reset_PIC16F1704_pic_new ok
+Feb 19 23:01:19 (none) local0.notice cgminer[967]: chain1 every_chain_reset_PIC16F1704_pic_new
+Feb 19 23:01:20 (none) local0.notice cgminer[967]: reset_PIC16F1704_pic_new ok
+Feb 19 23:01:20 (none) local0.notice cgminer[967]: chain2 every_chain_reset_PIC16F1704_pic_new
+Feb 19 23:01:21 (none) local0.notice cgminer[967]: reset_PIC16F1704_pic_new ok
+Feb 19 23:01:22 (none) local0.notice cgminer[967]: chain0 every_chain_jump_from_loader_to_app_PIC16F1704_new
+Feb 19 23:01:22 (none) local0.notice cgminer[967]: jump_from_loader_to_app_PIC16F1704_new ok
+Feb 19 23:01:22 (none) local0.notice cgminer[967]: chain1 every_chain_jump_from_loader_to_app_PIC16F1704_new
+Feb 19 23:01:23 (none) local0.notice cgminer[967]: jump_from_loader_to_app_PIC16F1704_new ok
+Feb 19 23:01:23 (none) local0.notice cgminer[967]: chain2 every_chain_jump_from_loader_to_app_PIC16F1704_new
+Feb 19 23:01:23 (none) local0.notice cgminer[967]: jump_from_loader_to_app_PIC16F1704_new ok
+Feb 19 23:01:25 (none) local0.notice cgminer[967]: reset_all_hash_board_low 4386
+Feb 19 23:01:25 (none) local0.notice cgminer[967]: pic_heart_beat_func_new
+Feb 19 23:01:25 (none) local0.notice cgminer[967]: every_chain_disable_PIC16F1704_dc_dc_new
+Feb 19 23:01:25 (none) local0.notice cgminer[967]: disable_PIC16F1704_dc_dc_new ok
+Feb 19 23:01:25 (none) local0.notice cgminer[967]: disable_PIC16F1704_dc_dc_new ok
+Feb 19 23:01:26 (none) local0.notice cgminer[967]: disable_PIC16F1704_dc_dc_new ok
+Feb 19 23:01:27 (none) local0.notice cgminer[967]: every_chain_enable_PIC16F1704_dc_dc_new
+Feb 19 23:01:27 (none) local0.notice cgminer[967]: enable_PIC16F1704_dc_dc_new ok
+Feb 19 23:01:27 (none) local0.notice cgminer[967]: enable_PIC16F1704_dc_dc_new ok
+Feb 19 23:01:28 (none) local0.notice cgminer[967]: enable_PIC16F1704_dc_dc_new ok
+Feb 19 23:01:28 (none) local0.notice cgminer[967]: reset_all_hash_board_high 4392
+Feb 19 23:01:28 (none) local0.notice cgminer[967]: tty_init
+Feb 19 23:01:28 (none) local0.notice cgminer[967]: tty_init_chain chainid = 0
+Feb 19 23:01:28 (none) local0.err cgminer[967]: create rx read thread for chain 0 ok
+Feb 19 23:01:28 (none) local0.notice cgminer[967]: Start A New Asic Response.Chain Id:[0]
+Feb 19 23:01:28 (none) local0.err cgminer[967]: create tx read thread for chain 0 ok
+Feb 19 23:01:28 (none) local0.notice cgminer[967]: open device over
+Feb 19 23:01:28 (none) local0.notice cgminer[967]: tty_init_chain chainid = 1
+Feb 19 23:01:28 (none) local0.err cgminer[967]: create rx read thread for chain 1 ok
+Feb 19 23:01:28 (none) local0.notice cgminer[967]: Start A New Asic Response.Chain Id:[1]
+Feb 19 23:01:28 (none) local0.err cgminer[967]: create tx read thread for chain 1 ok
+Feb 19 23:01:28 (none) local0.notice cgminer[967]: open device over
+Feb 19 23:01:28 (none) local0.notice cgminer[967]: tty_init_chain chainid = 2
+Feb 19 23:01:28 (none) local0.err cgminer[967]: create rx read thread for chain 2 ok
+Feb 19 23:01:28 (none) local0.notice cgminer[967]: Start A New Asic Response.Chain Id:[2]
+Feb 19 23:01:29 (none) local0.err cgminer[967]: create tx read thread for chain 2 ok
+Feb 19 23:01:29 (none) local0.notice cgminer[967]: open device over
+Feb 19 23:01:33 (none) local0.notice cgminer[967]: calculate_address_interval:addrInterval = 64
+Feb 19 23:01:35 (none) local0.notice cgminer[967]: check_every_chain_asic_number
+Feb 19 23:01:36 (none) local0.notice cgminer[967]: check_asic_reg: chain J0 has 3 ASIC
+Feb 19 23:01:38 (none) local0.notice cgminer[967]: check_asic_reg: chain J1 has 3 ASIC
+Feb 19 23:01:40 (none) local0.notice cgminer[967]: check_asic_reg: chain J2 has 3 ASIC
+Feb 19 23:01:41 (none) local0.notice cgminer[967]: chain0 pic version 04
+Feb 19 23:01:41 (none) local0.notice cgminer[967]: chain1 pic version 04
+Feb 19 23:01:42 (none) local0.notice cgminer[967]: chain2 pic version 04
+Feb 19 23:01:42 (none) local0.notice cgminer[967]: start listen on 6060 ...
+Feb 19 23:01:43 (none) local0.notice cgminer[967]: pic read chain0 asic0 freq 675
+Feb 19 23:01:43 (none) local0.notice cgminer[967]: pic read chain0 asic1 freq 1646281545
+Feb 19 23:01:43 (none) local0.notice cgminer[967]: pic read chain0 asic2 freq 1702194273
+Feb 19 23:01:43 (none) local0.notice cgminer[967]: pic read chain1 asic0 freq 225
+Feb 19 23:01:43 (none) local0.notice cgminer[967]: pic read chain1 asic1 freq 443
+Feb 19 23:01:43 (none) local0.notice cgminer[967]: pic read chain1 asic2 freq 1936614771
+Feb 19 23:01:43 (none) local0.notice cgminer[967]: pic read chain2 asic0 freq 508
+Feb 19 23:01:43 (none) local0.notice cgminer[967]: pic read chain2 asic1 freq 1763734309
+Feb 19 23:01:43 (none) local0.notice cgminer[967]: pic read chain2 asic2 freq 1601463667
+Feb 19 23:01:43 (none) local0.notice cgminer[967]: 1 Goto turbo mode
+Feb 19 23:01:44 (none) local0.notice cgminer[967]: set_ticket_mask_chain chainID0 ticket_mask = 0x00000010
+Feb 19 23:01:44 (none) local0.notice cgminer[967]: set_ticket_mask_chain chainID1 ticket_mask = 0x00000010
+Feb 19 23:01:44 (none) local0.notice cgminer[967]: set_ticket_mask_chain chainID2 ticket_mask = 0x00000010
+Feb 19 23:01:44 (none) local0.notice cgminer[967]: software_set_address_chain chainID0 asics 3 addrInterval 64
+Feb 19 23:01:44 (none) local0.notice cgminer[967]: software_set_address_chain chainID1 asics 3 addrInterval 64
+Feb 19 23:01:44 (none) local0.notice cgminer[967]: software_set_address_chain chainID2 asics 3 addrInterval 64
+Feb 19 23:01:45 (none) local0.notice cgminer[967]: enable_read_temperature_from_asic_chain: reg_value=0x07006061 chainid 0
+Feb 19 23:01:45 (none) local0.notice cgminer[967]: enable_read_temperature_from_asic_chain: reg_value=0x07006061 chainid 1
+Feb 19 23:01:45 (none) local0.notice cgminer[967]: enable_read_temperature_from_asic_chain: reg_value=0x07006061 chainid 2
+Feb 19 23:01:46 (none) local0.notice cgminer[967]: chainid0 set_analog_mux_control_chain: analog mux = 00000000
+Feb 19 23:01:46 (none) local0.notice cgminer[967]: chainid1 set_analog_mux_control_chain: analog mux = 00000000
+Feb 19 23:01:46 (none) local0.notice cgminer[967]: chainid2 set_analog_mux_control_chain: analog mux = 00000000
+Feb 19 23:01:46 (none) local0.notice cgminer[967]: dev.timeout = 100000000 us
+Feb 19 23:01:46 (none) local0.notice cgminer[967]: bitmain_ZCASH_init: fan_eft : 0  fan_pwm : 50
+Feb 19 23:01:49 (none) local0.notice cgminer[967]: bitmain_ZCASH_init done
+Feb 19 23:01:49 (none) local0.err cgminer[967]: cgminer time error total_secs = 1771542109.025043 last_total_secs = 1.000000
+Feb 19 23:01:49 (none) local0.warn cgminer[967]: Failed to resolve (?wrong URL) stratum+tcp://:(null)
+Feb 19 23:01:49 (none) local0.warn cgminer[967]: Failed to resolve (?wrong URL) stratum+tcp://:(null)
+Feb 19 23:01:49 (none) local0.info cgminer[967]: Pool 0 extranonce set to 8e4800071d41
+Feb 19 23:01:49 (none) local0.notice cgminer[967]: stime.tv_sec 1771542109, block_ntime 1771542106
+Feb 19 23:01:55 (none) local0.warn cgminer[967]: API running in IP access mode on port 4028 (9)
+Feb 19 23:01:56 (none) local0.notice cgminer[967]: All asics arrive target freq
+Feb 19 23:07:52 (none) local0.notice cgminer[967]: low freq[1-0]: cur freq 800, [775, 815], invalid nonce 1, ox status 1

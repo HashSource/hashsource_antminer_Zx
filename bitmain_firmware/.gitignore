@@ -14,3 +14,7 @@ _decompile.log
 
 # Binary Ninja
 *.bndb
+
+# Ida Export
+*.c
+*.h
